@@ -347,7 +347,36 @@ let activeMarker = null;
 let activeFood   = null;
 let currentFilter = '';
 
-// 마커 생성 (복수 유튜버 추천 장소는 별 마커로 구분)
+// 마커 클러스터러 (줌아웃 시 지역별로 숫자 뱃지로 뭉쳐 보임, 녹색 톤 통일)
+const clusterer = new kakao.maps.MarkerClusterer({
+  map,
+  averageCenter: true,
+  minLevel: 6,
+  disableClickZoom: false,
+  calculator: [15, 50],
+  styles: [
+    { // ~15개: 연한 녹색
+      width: '32px', height: '32px', lineHeight: '32px',
+      background: 'rgba(34,197,94,.88)', border: '3px solid #fff',
+      borderRadius: '50%', color: '#fff', textAlign: 'center',
+      fontSize: '12px', fontWeight: '700', boxShadow: '0 2px 8px rgba(22,163,74,.4)',
+    },
+    { // 15~50개: 중간 녹색
+      width: '42px', height: '42px', lineHeight: '42px',
+      background: 'rgba(22,163,74,.90)', border: '3px solid #fff',
+      borderRadius: '50%', color: '#fff', textAlign: 'center',
+      fontSize: '13px', fontWeight: '700', boxShadow: '0 2px 10px rgba(22,163,74,.45)',
+    },
+    { // 50개 초과: 진한 녹색
+      width: '52px', height: '52px', lineHeight: '52px',
+      background: 'rgba(21,128,61,.92)', border: '3px solid #fff',
+      borderRadius: '50%', color: '#fff', textAlign: 'center',
+      fontSize: '14px', fontWeight: '700', boxShadow: '0 2px 12px rgba(21,128,61,.5)',
+    },
+  ],
+});
+
+// 마커 생성 (복수 유튜버 추천 장소는 별 마커로 구분, map은 클러스터러가 관리)
 CURATED_FOOD.forEach(food => {
   if (!food.lat || !food.lng) return;
   const isMulti = food.youtubers.length > 1;
@@ -355,7 +384,6 @@ CURATED_FOOD.forEach(food => {
   const aImg = isMulti ? multiActiveImg : activeImg;
   const marker = new kakao.maps.Marker({
     position: new kakao.maps.LatLng(food.lat, food.lng),
-    map,
     image: nImg,
     title: food.name,
   });
@@ -364,6 +392,8 @@ CURATED_FOOD.forEach(food => {
   food.marker = marker;
   kakao.maps.event.addListener(marker, 'click', () => select(food, marker));
 });
+
+clusterer.addMarkers(CURATED_FOOD.filter(f => f.marker).map(f => f.marker));
 
 // 채널 필터 버튼 동적 생성
 (function buildFilters() {
@@ -396,11 +426,11 @@ function updateCount() {
 
 function applyFilter(youtuber) {
   currentFilter = youtuber;
-  CURATED_FOOD.forEach(f => {
-    if (!f.marker) return;
-    const match = !youtuber || f.youtubers.some(y => y.name === youtuber);
-    f.marker.setMap(match ? map : null);
-  });
+  const visibleMarkers = CURATED_FOOD
+    .filter(f => f.marker && (!youtuber || f.youtubers.some(y => y.name === youtuber)))
+    .map(f => f.marker);
+  clusterer.clear();
+  clusterer.addMarkers(visibleMarkers);
   document.querySelectorAll('#channel-filter-btns .filter-btn').forEach(btn => {
     const isAll = !btn.dataset.channel;
     btn.classList.toggle('on', (!youtuber && isAll) || (!!youtuber && btn.dataset.channel === youtuber));
