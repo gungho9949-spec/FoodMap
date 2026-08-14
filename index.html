@@ -144,6 +144,11 @@ header {
   border: 1px solid #fecdd3; border-radius: 99px;
   padding: 3px 10px; font-size: 11px; font-weight: 600;
 }
+.badge-multi {
+  background: #fffbeb; color: #b45309;
+  border: 1px solid #fde68a; border-radius: 99px;
+  padding: 3px 10px; font-size: 11px; font-weight: 700;
+}
 .info-row {
   display: flex; align-items: flex-start; gap: 7px;
   font-size: 13px; color: #374151; margin-bottom: 5px;
@@ -330,26 +335,39 @@ const mkSvg = (fill, size) =>
 const normalImg = new kakao.maps.MarkerImage(mkSvg('#22c55e', 16), new kakao.maps.Size(16,16), { offset: new kakao.maps.Point(8,8) });
 const activeImg  = new kakao.maps.MarkerImage(mkSvg('#16a34a', 22), new kakao.maps.Size(22,22), { offset: new kakao.maps.Point(11,11) });
 
+// 여러 유튜버가 추천한 곳은 별 모양 마커로 구분
+const mkStarSvg = (fill, size) =>
+  'data:image/svg+xml;charset=utf-8,' + encodeURIComponent(
+    `<svg xmlns="http://www.w3.org/2000/svg" width="${size}" height="${size}" viewBox="0 0 24 24"><path d="M12 1.5l3.09 6.26 6.91 1-5 4.87 1.18 6.88L12 17.13l-6.18 3.38L7 13.63l-5-4.87 6.91-1z" fill="${fill}" stroke="#fff" stroke-width="1.3" stroke-linejoin="round"/></svg>`
+  );
+const multiImg       = new kakao.maps.MarkerImage(mkStarSvg('#f59e0b', 24), new kakao.maps.Size(24,24), { offset: new kakao.maps.Point(12,12) });
+const multiActiveImg = new kakao.maps.MarkerImage(mkStarSvg('#d97706', 30), new kakao.maps.Size(30,30), { offset: new kakao.maps.Point(15,15) });
+
 let activeMarker = null;
 let activeFood   = null;
 let currentFilter = '';
 
-// 마커 생성
+// 마커 생성 (복수 유튜버 추천 장소는 별 마커로 구분)
 CURATED_FOOD.forEach(food => {
   if (!food.lat || !food.lng) return;
+  const isMulti = food.youtubers.length > 1;
+  const nImg = isMulti ? multiImg : normalImg;
+  const aImg = isMulti ? multiActiveImg : activeImg;
   const marker = new kakao.maps.Marker({
     position: new kakao.maps.LatLng(food.lat, food.lng),
     map,
-    image: normalImg,
+    image: nImg,
     title: food.name,
   });
+  marker.normalImg = nImg;
+  marker.activeImg = aImg;
   food.marker = marker;
   kakao.maps.event.addListener(marker, 'click', () => select(food, marker));
 });
 
 // 채널 필터 버튼 동적 생성
 (function buildFilters() {
-  const channels = [...new Set(CURATED_FOOD.map(f => f.youtuber))];
+  const channels = [...new Set(CURATED_FOOD.flatMap(f => f.youtubers.map(y => y.name)))];
   const wrap = document.getElementById('channel-filter-btns');
 
   const allBtn = document.createElement('button');
@@ -372,7 +390,7 @@ CURATED_FOOD.forEach(food => {
 })();
 
 function updateCount() {
-  const n = CURATED_FOOD.filter(f => !currentFilter || f.youtuber === currentFilter).length;
+  const n = CURATED_FOOD.filter(f => !currentFilter || f.youtubers.some(y => y.name === currentFilter)).length;
   document.getElementById('cnt').textContent = n + '곳';
 }
 
@@ -380,18 +398,19 @@ function applyFilter(youtuber) {
   currentFilter = youtuber;
   CURATED_FOOD.forEach(f => {
     if (!f.marker) return;
-    f.marker.setMap((!youtuber || f.youtuber === youtuber) ? map : null);
+    const match = !youtuber || f.youtubers.some(y => y.name === youtuber);
+    f.marker.setMap(match ? map : null);
   });
   document.querySelectorAll('#channel-filter-btns .filter-btn').forEach(btn => {
     const isAll = !btn.dataset.channel;
     btn.classList.toggle('on', (!youtuber && isAll) || (!!youtuber && btn.dataset.channel === youtuber));
   });
   updateCount();
-  if (activeFood && youtuber && activeFood.youtuber !== youtuber) deselect();
+  if (activeFood && youtuber && !activeFood.youtubers.some(y => y.name === youtuber)) deselect();
 }
 
 function deselect() {
-  if (activeMarker) { activeMarker.setImage(normalImg); activeMarker = null; }
+  if (activeMarker) { activeMarker.setImage(activeMarker.normalImg); activeMarker = null; }
   activeFood = null;
   document.getElementById('welcome').style.display = 'flex';
   document.getElementById('detail').style.display = 'none';
@@ -399,9 +418,9 @@ function deselect() {
 }
 
 function select(food, marker) {
-  if (activeMarker) activeMarker.setImage(normalImg);
+  if (activeMarker) activeMarker.setImage(activeMarker.normalImg);
   activeMarker = marker;
-  marker.setImage(activeImg);
+  marker.setImage(marker.activeImg);
   map.setCenter(new kakao.maps.LatLng(food.lat, food.lng));
   map.setLevel(4);
   activeFood = food;
@@ -426,13 +445,16 @@ function esc(str) {
 function fillPanel(prefix, food) {
   const headId = prefix === 'd' ? 'd-head' : 's-head';
   const bodyId = prefix === 'd' ? 'd-body' : 's-body';
+  const isMulti = food.youtubers.length > 1;
 
   // 헤더: 이름·배지·주소·전화·평점
   let headHtml = `
     <div class="d-name">${esc(food.name)}</div>
     <div class="d-badges">
       <span class="badge-cat">${esc(food.category)}</span>
-      <span class="badge-yt">▶ ${esc(food.youtuber)}</span>
+      ${isMulti
+        ? `<span class="badge-multi">🌟 ${food.youtubers.length}명의 유튜버가 추천했어요</span>`
+        : `<span class="badge-yt">▶ ${esc(food.youtubers[0].name)}</span>`}
     </div>
     <div class="info-row">
       <span class="info-icon">📍</span>
@@ -457,29 +479,27 @@ function fillPanel(prefix, food) {
   }
   document.getElementById(headId).innerHTML = headHtml;
 
-  // 본문: 유튜브·추천이유·길찾기·카카오맵
-  let bodyHtml = `
+  // 본문: 유튜버별 카드(채널·영상·추천이유)를 순서대로 나열
+  let bodyHtml = food.youtubers.map(yt => `
     <div class="yt-section">
       <div class="yt-channel-row">
         <span style="font-size:20px;line-height:1;">▶️</span>
         <div class="yt-channel-info">
           <div class="yt-channel-label">추천 채널</div>
-          <div class="yt-channel-name">${esc(food.youtuber)}</div>
+          <div class="yt-channel-name">${esc(yt.name)}</div>
         </div>
       </div>
-      <a class="yt-video-link" href="${esc(food.videoUrl)}" target="_blank" rel="noopener">
+      ${yt.videoUrl ? `
+      <a class="yt-video-link" href="${esc(yt.videoUrl)}" target="_blank" rel="noopener">
         <span class="yt-play-icon">▶</span>
-        <span class="yt-video-title">${esc(food.videoTitle)}</span>
-      </a>
-    </div>`;
-
-  if (food.recommendNote) {
-    bodyHtml += `
-    <div class="note-section">
-      <div class="note-label">추천 이유</div>
-      ${esc(food.recommendNote)}
-    </div>`;
-  }
+        <span class="yt-video-title">${esc(yt.videoTitle || '영상 보러가기')}</span>
+      </a>` : ''}
+      ${yt.recommendNote ? `
+      <div class="note-section" style="margin-top:8px;">
+        <div class="note-label">추천 이유</div>
+        ${esc(yt.recommendNote)}
+      </div>` : ''}
+    </div>`).join('');
 
   bodyHtml += `
     <div class="nav-section">
@@ -522,7 +542,7 @@ function openNavApp(app, name, lat, lng) {
 }
 
 function goHome() {
-  if (activeMarker) { activeMarker.setImage(normalImg); activeMarker = null; }
+  if (activeMarker) { activeMarker.setImage(activeMarker.normalImg); activeMarker = null; }
   activeFood = null;
   map.setCenter(new kakao.maps.LatLng(36.2, 127.8));
   map.setLevel(13);
@@ -534,7 +554,7 @@ function closeSheet() {
   document.getElementById('sheet').classList.remove('open');
   document.getElementById('home-fab').classList.remove('visible');
   document.querySelectorAll('.locate-btn').forEach(b => b.style.display = 'flex');
-  if (activeMarker) { activeMarker.setImage(normalImg); activeMarker = null; }
+  if (activeMarker) { activeMarker.setImage(activeMarker.normalImg); activeMarker = null; }
   activeFood = null;
 }
 
@@ -558,7 +578,7 @@ searchInput.addEventListener('input', function() {
   if (!q) { searchDropdown.classList.remove('open'); return; }
 
   const results = CURATED_FOOD
-    .filter(f => !currentFilter || f.youtuber === currentFilter)
+    .filter(f => !currentFilter || f.youtubers.some(y => y.name === currentFilter))
     .filter(f => f.name.includes(q) || f.address.includes(q) || f.category.includes(q))
     .slice(0, 5);
 
@@ -567,7 +587,7 @@ searchInput.addEventListener('input', function() {
   } else {
     searchDropdown.innerHTML = results.map(f =>
       `<div class="search-item" data-id="${esc(f.id)}">
-        <div class="search-item-name">${esc(f.name)}</div>
+        <div class="search-item-name">${esc(f.name)}${f.youtubers.length > 1 ? ' <span style="color:#f59e0b;">🌟' + f.youtubers.length + '</span>' : ''}</div>
         <div class="search-item-sub">${esc(f.category)} · ${esc(f.address.split(' ').slice(0,3).join(' '))}</div>
       </div>`
     ).join('');

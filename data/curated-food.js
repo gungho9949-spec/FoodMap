@@ -1,1416 +1,7 @@
-// 유튜버 추천 맛집 데이터 - 성시경의 먹을텐데
-// 출처: 다이닝코드 / 카카오 로컬 API
-// videoTitle · videoUrl · recommendNote 는 추후 직접 입력
+// 유튜버 추천 맛집 데이터 (통합 스키마: youtubers 배열)
+// 여러 유튜버가 같은 곳을 추천한 경우 youtubers 배열에 여러 항목이 들어감
 
 const CURATED_FOOD = [
-  {
-    id: "sc-001",
-    name: "현대순대국",
-    category: "순대",
-    address: "서울 강남구 강남대로124길 20",
-    phone: null,
-    lat: 37.5090641197919,
-    lng: 127.024235773746,
-    kakaoUrl: "http://place.map.kakao.com/11831548",
-    rating: null,
-    reviewCount: null,
-    youtuber: "성시경의 먹을텐데",
-    videoTitle: null,
-    videoUrl: null,
-    recommendNote: null
-  },
-  {
-    id: "sc-002",
-    name: "육개옥",
-    category: "국밥",
-    address: "서울 강남구 봉은사로 167",
-    phone: "02-516-9181",
-    lat: 37.507238568097,
-    lng: 127.032256273604,
-    kakaoUrl: "http://place.map.kakao.com/1808543028",
-    rating: null,
-    reviewCount: null,
-    youtuber: "성시경의 먹을텐데",
-    videoTitle: null,
-    videoUrl: null,
-    recommendNote: null
-  },
-  {
-    id: "sc-003",
-    name: "안동국시",
-    category: "국수",
-    address: "서울 강남구 언주로167길 46",
-    phone: "02-548-4986",
-    lat: 37.5265964750989,
-    lng: 127.029391111084,
-    kakaoUrl: "http://place.map.kakao.com/10583440",
-    rating: null,
-    reviewCount: null,
-    youtuber: "성시경의 먹을텐데",
-    videoTitle: null,
-    videoUrl: null,
-    recommendNote: null
-  },
-  {
-    id: "sc-004",
-    name: "신미식당",
-    category: "육류,고기",
-    address: "서울 강남구 압구정로 214",
-    phone: "02-516-4900",
-    lat: 37.52793498570478,
-    lng: 127.03087366251374,
-    kakaoUrl: "http://place.map.kakao.com/11892123",
-    rating: null,
-    reviewCount: null,
-    youtuber: "성시경의 먹을텐데",
-    videoTitle: null,
-    videoUrl: null,
-    recommendNote: null
-  },
-  {
-    id: "sc-005",
-    name: "부흥왕족발",
-    category: "족발,보쌈",
-    address: "서울 강남구 삼성로146길 8",
-    phone: "02-546-3727",
-    lat: 37.52309327329298,
-    lng: 127.04876908841662,
-    kakaoUrl: "http://place.map.kakao.com/10466580",
-    rating: null,
-    reviewCount: null,
-    youtuber: "성시경의 먹을텐데",
-    videoTitle: null,
-    videoUrl: null,
-    recommendNote: null
-  },
-  {
-    id: "sc-006",
-    name: "이남장 삼성점",
-    category: "설렁탕",
-    address: "서울 강남구 봉은사로108길 21",
-    phone: "02-569-8726",
-    lat: 37.5135684607614,
-    lng: 127.064450126559,
-    kakaoUrl: "http://place.map.kakao.com/16649489",
-    rating: null,
-    reviewCount: null,
-    youtuber: "성시경의 먹을텐데",
-    videoTitle: null,
-    videoUrl: null,
-    recommendNote: null
-  },
-  {
-    id: "sc-007",
-    name: "강남진해장",
-    category: "찌개,전골",
-    address: "서울 강남구 테헤란로5길 11",
-    phone: "02-557-2662",
-    lat: 37.499584393000326,
-    lng: 127.02930814350843,
-    kakaoUrl: "http://place.map.kakao.com/1428481536",
-    rating: null,
-    reviewCount: null,
-    youtuber: "성시경의 먹을텐데",
-    videoTitle: null,
-    videoUrl: null,
-    recommendNote: null
-  },
-  {
-    id: "sc-008",
-    name: "대우부대찌개",
-    category: "찌개,전골",
-    address: "서울 강남구 테헤란로25길 34",
-    phone: "02-552-1663",
-    lat: 37.502696655575825,
-    lng: 127.03521737405278,
-    kakaoUrl: "http://place.map.kakao.com/7819490",
-    rating: null,
-    reviewCount: null,
-    youtuber: "성시경의 먹을텐데",
-    videoTitle: null,
-    videoUrl: null,
-    recommendNote: null
-  },
-  {
-    id: "sc-009",
-    name: "도명골청국장",
-    category: "한식",
-    address: "서울 강남구 봉은사로114길 38",
-    phone: "02-569-6999",
-    lat: 37.51262098003945,
-    lng: 127.06540621093926,
-    kakaoUrl: "http://place.map.kakao.com/2130836465",
-    rating: null,
-    reviewCount: null,
-    youtuber: "성시경의 먹을텐데",
-    videoTitle: null,
-    videoUrl: null,
-    recommendNote: null
-  },
-  {
-    id: "sc-010",
-    name: "왕스덕",
-    category: "중식",
-    address: "경기 성남시 분당구 대왕판교로645번길 36",
-    phone: "031-606-8517",
-    lat: 37.4004108231145,
-    lng: 127.102084009388,
-    kakaoUrl: "http://place.map.kakao.com/1379913602",
-    rating: null,
-    reviewCount: null,
-    youtuber: "성시경의 먹을텐데",
-    videoTitle: null,
-    videoUrl: null,
-    recommendNote: null
-  },
-  {
-    id: "sc-011",
-    name: "진미평양냉면 별관",
-    category: "냉면",
-    address: "서울 강남구 학동로 305-3",
-    phone: "02-515-3469",
-    lat: 37.5161357904841,
-    lng: 127.036047158128,
-    kakaoUrl: "http://place.map.kakao.com/27584230",
-    rating: null,
-    reviewCount: null,
-    youtuber: "성시경의 먹을텐데",
-    videoTitle: null,
-    videoUrl: null,
-    recommendNote: null
-  },
-  {
-    id: "sc-012",
-    name: "영동장어",
-    category: "장어",
-    address: "서울 강남구 언주로148길 8",
-    phone: "02-3448-9991",
-    lat: 37.5203166598331,
-    lng: 127.035338774027,
-    kakaoUrl: "http://place.map.kakao.com/1257441291",
-    rating: null,
-    reviewCount: null,
-    youtuber: "성시경의 먹을텐데",
-    videoTitle: null,
-    videoUrl: null,
-    recommendNote: null
-  },
-  {
-    id: "sc-013",
-    name: "미남옥",
-    category: "곰탕",
-    address: "서울 강남구 언주로153길 12",
-    phone: "02-549-5553",
-    lat: 37.52294578490738,
-    lng: 127.03219063516923,
-    kakaoUrl: "http://place.map.kakao.com/940697725",
-    rating: null,
-    reviewCount: null,
-    youtuber: "성시경의 먹을텐데",
-    videoTitle: null,
-    videoUrl: null,
-    recommendNote: null
-  },
-  {
-    id: "sc-014",
-    name: "삼호짱뚱이",
-    category: "해물,생선",
-    address: "서울 강남구 도산대로34길 11",
-    phone: "02-547-1416",
-    lat: 37.51963671546776,
-    lng: 127.03101729816763,
-    kakaoUrl: "http://place.map.kakao.com/7929136",
-    rating: null,
-    reviewCount: null,
-    youtuber: "성시경의 먹을텐데",
-    videoTitle: null,
-    videoUrl: null,
-    recommendNote: null
-  },
-  {
-    id: "sc-015",
-    name: "방화동교동짬뽕",
-    category: "중국요리",
-    address: "서울 강서구 금낭화로24나길 21",
-    phone: "02-2665-5778",
-    lat: 37.57725372854616,
-    lng: 126.81575560825779,
-    kakaoUrl: "http://place.map.kakao.com/25858128",
-    rating: null,
-    reviewCount: null,
-    youtuber: "성시경의 먹을텐데",
-    videoTitle: null,
-    videoUrl: null,
-    recommendNote: null
-  },
-  {
-    id: "sc-016",
-    name: "영미오리탕",
-    category: "오리",
-    address: "전남광주통합특별시 북구 경양로 126",
-    phone: "062-527-0248",
-    lat: 35.16138362196164,
-    lng: 126.90552043216846,
-    kakaoUrl: "http://place.map.kakao.com/8441874",
-    rating: null,
-    reviewCount: null,
-    youtuber: "성시경의 먹을텐데",
-    videoTitle: null,
-    videoUrl: null,
-    recommendNote: null
-  },
-  {
-    id: "sc-017",
-    name: "맛좋은순대국",
-    category: "순대",
-    address: "서울 광진구 자양번영로1길 22",
-    phone: "02-458-5737",
-    lat: 37.530865017051845,
-    lng: 127.07367768605853,
-    kakaoUrl: "http://place.map.kakao.com/10346328",
-    rating: null,
-    reviewCount: null,
-    youtuber: "성시경의 먹을텐데",
-    videoTitle: null,
-    videoUrl: null,
-    recommendNote: null
-  },
-  {
-    id: "sc-018",
-    name: "일광",
-    category: "갈비",
-    address: "서울 동대문구 전농로 48",
-    phone: null,
-    lat: 37.56910075976985,
-    lng: 127.05729314767052,
-    kakaoUrl: "http://place.map.kakao.com/15597468",
-    rating: null,
-    reviewCount: null,
-    youtuber: "성시경의 먹을텐데",
-    videoTitle: null,
-    videoUrl: null,
-    recommendNote: null
-  },
-  {
-    id: "sc-019",
-    name: "어머니대성집",
-    category: "해장국",
-    address: "서울 동대문구 왕산로11길 4",
-    phone: "02-923-1718",
-    lat: 37.57741837425039,
-    lng: 127.02858466713235,
-    kakaoUrl: "http://place.map.kakao.com/907979960",
-    rating: null,
-    reviewCount: null,
-    youtuber: "성시경의 먹을텐데",
-    videoTitle: null,
-    videoUrl: null,
-    recommendNote: null
-  },
-  {
-    id: "sc-020",
-    name: "안동집",
-    category: "국수",
-    address: "서울 동대문구 고산자로36길 3",
-    phone: "02-965-3948",
-    lat: 37.579393796655545,
-    lng: 127.03953845008229,
-    kakaoUrl: "http://place.map.kakao.com/15629433",
-    rating: null,
-    reviewCount: null,
-    youtuber: "성시경의 먹을텐데",
-    videoTitle: null,
-    videoUrl: null,
-    recommendNote: null
-  },
-  {
-    id: "sc-021",
-    name: "권영수대가전골",
-    category: "찌개,전골",
-    address: "서울 동대문구 고산자로36길 3",
-    phone: "02-960-6043",
-    lat: 37.57945802812345,
-    lng: 127.03875167673729,
-    kakaoUrl: "http://place.map.kakao.com/1910019452",
-    rating: null,
-    reviewCount: null,
-    youtuber: "성시경의 먹을텐데",
-    videoTitle: null,
-    videoUrl: null,
-    recommendNote: null
-  },
-  {
-    id: "sc-022",
-    name: "부영각",
-    category: "중국요리",
-    address: "서울 마포구 토정로 268",
-    phone: "02-715-7095",
-    lat: 37.5425107266566,
-    lng: 126.939503454631,
-    kakaoUrl: "http://place.map.kakao.com/10470081",
-    rating: null,
-    reviewCount: null,
-    youtuber: "성시경의 먹을텐데",
-    videoTitle: null,
-    videoUrl: null,
-    recommendNote: null
-  },
-  {
-    id: "sc-023",
-    name: "원조신촌설렁탕",
-    category: "설렁탕",
-    address: "서울 마포구 마포대로14길 16",
-    phone: "02-712-3300",
-    lat: 37.5482809161142,
-    lng: 126.956269475672,
-    kakaoUrl: "http://place.map.kakao.com/16044683",
-    rating: null,
-    reviewCount: null,
-    youtuber: "성시경의 먹을텐데",
-    videoTitle: null,
-    videoUrl: null,
-    recommendNote: null
-  },
-  {
-    id: "sc-024",
-    name: "길상양꼬치",
-    category: "양꼬치",
-    address: "서울 서대문구 연세로5가길 17",
-    phone: "02-336-8018",
-    lat: 37.5571877488669,
-    lng: 126.935639080919,
-    kakaoUrl: "http://place.map.kakao.com/25799235",
-    rating: null,
-    reviewCount: null,
-    youtuber: "성시경의 먹을텐데",
-    videoTitle: null,
-    videoUrl: null,
-    recommendNote: null
-  },
-  {
-    id: "sc-025",
-    name: "청실홍실",
-    category: "감자탕",
-    address: "서울 서초구 서래로10길 9",
-    phone: "02-535-2544",
-    lat: 37.4995663995735,
-    lng: 126.998927916588,
-    kakaoUrl: "http://place.map.kakao.com/16470308",
-    rating: null,
-    reviewCount: null,
-    youtuber: "성시경의 먹을텐데",
-    videoTitle: null,
-    videoUrl: null,
-    recommendNote: null
-  },
-  {
-    id: "sc-026",
-    name: "성천막국수 논현점",
-    category: "국수",
-    address: "서울 서초구 강남대로 545-12",
-    phone: "02-548-5529",
-    lat: 37.510370368086654,
-    lng: 127.02058515818821,
-    kakaoUrl: "http://place.map.kakao.com/862508200",
-    rating: null,
-    reviewCount: null,
-    youtuber: "성시경의 먹을텐데",
-    videoTitle: null,
-    videoUrl: null,
-    recommendNote: null
-  },
-  {
-    id: "sc-027",
-    name: "서이축산",
-    category: "정육점",
-    address: "서울 서초구 서래로 29",
-    phone: "02-535-1145",
-    lat: 37.497564353887654,
-    lng: 126.99815217560459,
-    kakaoUrl: "http://place.map.kakao.com/1238960275",
-    rating: null,
-    reviewCount: null,
-    youtuber: "성시경의 먹을텐데",
-    videoTitle: null,
-    videoUrl: null,
-    recommendNote: null
-  },
-  {
-    id: "sc-028",
-    name: "영동설렁탕",
-    category: "설렁탕",
-    address: "서울 서초구 강남대로101안길 24",
-    phone: "02-543-4716",
-    lat: 37.51615082556445,
-    lng: 127.01737204634458,
-    kakaoUrl: "http://place.map.kakao.com/8008344",
-    rating: null,
-    reviewCount: null,
-    youtuber: "성시경의 먹을텐데",
-    videoTitle: null,
-    videoUrl: null,
-    recommendNote: null
-  },
-  {
-    id: "sc-029",
-    name: "화목순대국",
-    category: "순대",
-    address: "서울 영등포구 여의대방로 383",
-    phone: "02-780-8191",
-    lat: 37.51925139233756,
-    lng: 126.93129172468807,
-    kakaoUrl: "http://place.map.kakao.com/21423297",
-    rating: null,
-    reviewCount: null,
-    youtuber: "성시경의 먹을텐데",
-    videoTitle: null,
-    videoUrl: null,
-    recommendNote: null
-  },
-  {
-    id: "sc-030",
-    name: "산동교자",
-    category: "중국요리",
-    address: "서울 중구 남대문로 52-13",
-    phone: "02-778-4150",
-    lat: 37.56213783919516,
-    lng: 126.98240562832072,
-    kakaoUrl: "http://place.map.kakao.com/7912905",
-    rating: null,
-    reviewCount: null,
-    youtuber: "성시경의 먹을텐데",
-    videoTitle: null,
-    videoUrl: null,
-    recommendNote: null
-  },
-  {
-    id: "sc-031",
-    name: "필동면옥",
-    category: "냉면",
-    address: "서울 중구 서애로 26",
-    phone: "02-2266-2611",
-    lat: 37.5603983847784,
-    lng: 126.99693958989,
-    kakaoUrl: "http://place.map.kakao.com/11231325",
-    rating: null,
-    reviewCount: null,
-    youtuber: "성시경의 먹을텐데",
-    videoTitle: null,
-    videoUrl: null,
-    recommendNote: null
-  },
-  {
-    id: "sc-032",
-    name: "진미식당",
-    category: "한식",
-    address: "서울 용산구 백범로90길 38",
-    phone: "02-703-6842",
-    lat: 37.53673789215872,
-    lng: 126.96960923245895,
-    kakaoUrl: "http://place.map.kakao.com/16526880",
-    rating: null,
-    reviewCount: null,
-    youtuber: "성시경의 먹을텐데",
-    videoTitle: null,
-    videoUrl: null,
-    recommendNote: null
-  },
-  {
-    id: "sc-033",
-    name: "약수순대국",
-    category: "순대",
-    address: "서울 중구 동호로7길 14",
-    phone: "02-2236-5926",
-    lat: 37.55328275350285,
-    lng: 127.01080321635617,
-    kakaoUrl: "http://place.map.kakao.com/13499817",
-    rating: null,
-    reviewCount: null,
-    youtuber: "성시경의 먹을텐데",
-    videoTitle: null,
-    videoUrl: null,
-    recommendNote: null
-  },
-  {
-    id: "sc-034",
-    name: "완도전복",
-    category: "굴,전복",
-    address: "서울 중구 동호로5길 2",
-    phone: "02-2234-8538",
-    lat: 37.552657345381775,
-    lng: 127.01199932388397,
-    kakaoUrl: "http://place.map.kakao.com/10616945",
-    rating: null,
-    reviewCount: null,
-    youtuber: "성시경의 먹을텐데",
-    videoTitle: null,
-    videoUrl: null,
-    recommendNote: null
-  },
-  {
-    id: "sc-035",
-    name: "이태원숯불구이",
-    category: "육류,고기",
-    address: "서울 용산구 녹사평대로32길 41-5",
-    phone: "02-797-7777",
-    lat: 37.53306807193163,
-    lng: 126.9909013187132,
-    kakaoUrl: "http://place.map.kakao.com/27510733",
-    rating: null,
-    reviewCount: null,
-    youtuber: "성시경의 먹을텐데",
-    videoTitle: null,
-    videoUrl: null,
-    recommendNote: null
-  },
-  {
-    id: "sc-036",
-    name: "버거스낵",
-    category: "햄버거",
-    address: "서울 용산구 녹사평대로46길 13",
-    phone: null,
-    lat: 37.53731779421355,
-    lng: 126.9876218326533,
-    kakaoUrl: "http://place.map.kakao.com/1927045218",
-    rating: null,
-    reviewCount: null,
-    youtuber: "성시경의 먹을텐데",
-    videoTitle: null,
-    videoUrl: null,
-    recommendNote: null
-  },
-  {
-    id: "sc-037",
-    name: "소문난성수감자탕",
-    category: "감자탕",
-    address: "서울 성동구 연무장길 45",
-    phone: "02-465-6580",
-    lat: 37.5428308422967,
-    lng: 127.05440457812,
-    kakaoUrl: "http://place.map.kakao.com/13289056",
-    rating: null,
-    reviewCount: null,
-    youtuber: "성시경의 먹을텐데",
-    videoTitle: null,
-    videoUrl: null,
-    recommendNote: null
-  },
-  {
-    id: "sc-038",
-    name: "명동함흥면옥 본점",
-    category: "냉면",
-    address: "서울 중구 명동10길 35-19",
-    phone: "02-776-8430",
-    lat: 37.562769881012464,
-    lng: 126.98568556457165,
-    kakaoUrl: "http://place.map.kakao.com/7871208",
-    rating: null,
-    reviewCount: null,
-    youtuber: "성시경의 먹을텐데",
-    videoTitle: null,
-    videoUrl: null,
-    recommendNote: null
-  },
-  {
-    id: "mns-001",
-    name: "꼬끄더그릴",
-    category: "닭요리",
-    address: "서울 강남구 강남대로154길 10",
-    phone: "02-6338-3838",
-    lat: 37.517521712393965,
-    lng: 127.02014596984124,
-    kakaoUrl: "http://place.map.kakao.com/705044236",
-    rating: null,
-    reviewCount: null,
-    youtuber: "맛있는 녀석들",
-    videoTitle: null,
-    videoUrl: null,
-    recommendNote: "전직 래퍼 출신 사장이 운영하는 퓨전 닭요리 전문점으로, 방송에 식당 사장님 자격으로 직접 출연하기도 했다."
-  },
-  {
-    id: "mns-002",
-    name: "빈해원",
-    category: "중국요리",
-    address: "전북특별자치도 군산시 동령길 57",
-    phone: "063-445-2429",
-    lat: 35.988834779577,
-    lng: 126.713983172674,
-    kakaoUrl: "http://place.map.kakao.com/11053604",
-    rating: null,
-    reviewCount: null,
-    youtuber: "맛있는 녀석들",
-    videoTitle: null,
-    videoUrl: null,
-    recommendNote: "등록문화재로 지정된 군산의 대표 명소로, 영화 '타짜'의 촬영지로도 알려진 짬뽕 맛집이다."
-  },
-  {
-    id: "swab-001",
-    name: "베수비오",
-    category: "이탈리안",
-    address: "서울 중구 다산로24길 28",
-    phone: null,
-    lat: 37.5575180130319,
-    lng: 127.01395466125,
-    kakaoUrl: "http://place.map.kakao.com/279218433",
-    rating: null,
-    reviewCount: null,
-    youtuber: "승우아빠",
-    videoTitle: null,
-    videoUrl: null,
-    recommendNote: "나폴리 피자 전문점 '나폴리 맛피아'가 새롭게 선보인 레스토랑으로, 기존보다 한층 업그레이드된 메뉴 구성으로 소개됐다."
-  },
-  {
-    id: "swab-002",
-    name: "이타닉가든",
-    category: "한식",
-    address: "서울 강남구 테헤란로 231",
-    phone: "02-727-7610",
-    lat: 37.5028641154494,
-    lng: 127.04118315776,
-    kakaoUrl: "http://place.map.kakao.com/2044587542",
-    rating: null,
-    reviewCount: null,
-    youtuber: "승우아빠",
-    videoTitle: null,
-    videoUrl: null,
-    recommendNote: "예약이 매달 순식간에 마감될 정도로 인기가 높은 손종원 셰프의 파인다이닝 레스토랑으로 소개됐다."
-  },
-  {
-    id: "swab-003",
-    name: "노뜨르",
-    category: "양식",
-    address: "서울 강남구 선릉로155길 13",
-    phone: null,
-    lat: 37.5253297256905,
-    lng: 127.03857772608,
-    kakaoUrl: "http://place.map.kakao.com/709646921",
-    rating: null,
-    reviewCount: null,
-    youtuber: "승우아빠",
-    videoTitle: null,
-    videoUrl: null,
-    recommendNote: "윤남노 셰프가 새롭게 시작한 레스토랑으로 소개됐다."
-  },
-  {
-    id: "swab-004",
-    name: "카나르",
-    category: "일본식라면",
-    address: "서울 종로구 돈화문로11가길 65",
-    phone: "0502-5552-9113",
-    lat: 37.5755356548706,
-    lng: 126.99029617426,
-    kakaoUrl: "http://place.map.kakao.com/673601993",
-    rating: null,
-    reviewCount: null,
-    youtuber: "승우아빠",
-    videoTitle: null,
-    videoUrl: null,
-    recommendNote: "오리 한 마리를 통째로 끓여낸 육수를 사용하는 독특한 오리라멘 전문점으로 소개됐다."
-  },
-  {
-    id: "swab-005",
-    name: "SMT차이나룸 몬드리안호텔점",
-    category: "중국요리",
-    address: "서울 용산구 장문로 23",
-    phone: "02-749-3396",
-    lat: 37.528534382013,
-    lng: 126.993104562807,
-    kakaoUrl: "http://place.map.kakao.com/734566080",
-    rating: null,
-    reviewCount: null,
-    youtuber: "승우아빠",
-    videoTitle: null,
-    videoUrl: null,
-    recommendNote: "호텔에 위치한 중식당으로 다양한 신기한 요리 구성이 인상적이라고 소개됐다."
-  },
-  {
-    id: "swab-006",
-    name: "코우짱라멘",
-    category: "일본식라면",
-    address: "서울 관악구 봉천로 227",
-    phone: null,
-    lat: 37.4900319940447,
-    lng: 126.927117776911,
-    kakaoUrl: "http://place.map.kakao.com/942986693",
-    rating: null,
-    reviewCount: null,
-    youtuber: "승우아빠",
-    videoTitle: null,
-    videoUrl: null,
-    recommendNote: "돈코츠라멘과 함께 나오는 볶음밥이 특히 인상적이라고 소개된 라멘 전문점."
-  },
-  {
-    id: "swab-007",
-    name: "신세카이",
-    category: "일식",
-    address: "서울 마포구 월드컵로13길 22-8",
-    phone: null,
-    lat: 37.5558115164214,
-    lng: 126.908996869161,
-    kakaoUrl: "http://place.map.kakao.com/1215753799",
-    rating: null,
-    reviewCount: null,
-    youtuber: "승우아빠",
-    videoTitle: null,
-    videoUrl: null,
-    recommendNote: "진한 토리파이탄(닭백숙) 육수의 라멘으로 소개된 일식당."
-  },
-  {
-    id: "swab-008",
-    name: "멘야수",
-    category: "일본식라면",
-    address: "서울 마포구 양화로 56",
-    phone: "010-3481-5250",
-    lat: 37.54966314168434,
-    lng: 126.91509033581866,
-    kakaoUrl: "http://place.map.kakao.com/1937381710",
-    rating: null,
-    reviewCount: null,
-    youtuber: "승우아빠",
-    videoTitle: null,
-    videoUrl: null,
-    recommendNote: "담백한 오리라멘을 선보이는 전문점으로 소개됐다."
-  },
-  {
-    id: "swab-009",
-    name: "맛스구라멘",
-    category: "일본식라면",
-    address: "서울 은평구 은평로3길 4",
-    phone: null,
-    lat: 37.5992402017266,
-    lng: 126.914866432736,
-    kakaoUrl: "http://place.map.kakao.com/741956418",
-    rating: null,
-    reviewCount: null,
-    youtuber: "승우아빠",
-    videoTitle: null,
-    videoUrl: null,
-    recommendNote: "매운맛의 돈코츠라멘을 선보이는 라멘 전문점으로 소개됐다."
-  },
-  {
-    id: "swab-010",
-    name: "라멘롱시즌",
-    category: "일본식라면",
-    address: "서울 마포구 동교로34길 21",
-    phone: null,
-    lat: 37.5608542931865,
-    lng: 126.925568431297,
-    kakaoUrl: "http://place.map.kakao.com/432903250",
-    rating: null,
-    reviewCount: null,
-    youtuber: "승우아빠",
-    videoTitle: null,
-    videoUrl: null,
-    recommendNote: "진한 맛의 시오라멘으로 소개된 라멘 맛집."
-  },
-  {
-    id: "swab-011",
-    name: "레귬",
-    category: "양식",
-    address: "서울 강남구 강남대로 652",
-    phone: "0507-1365-1567",
-    lat: 37.5194581390938,
-    lng: 127.019119370109,
-    kakaoUrl: "http://place.map.kakao.com/335870716",
-    rating: null,
-    reviewCount: null,
-    youtuber: "승우아빠",
-    videoTitle: null,
-    videoUrl: null,
-    recommendNote: "고기 없이도 미슐랭 1스타를 받을 만큼 완성도 있는 요리를 선보이는 레스토랑으로 소개됐다."
-  },
-  {
-    id: "swab-012",
-    name: "레스토랑 산",
-    category: "양식",
-    address: "서울 강남구 언주로168길 6",
-    phone: "02-540-1729",
-    lat: 37.5263564954611,
-    lng: 127.033920717797,
-    kakaoUrl: "http://place.map.kakao.com/1828674706",
-    rating: null,
-    reviewCount: null,
-    youtuber: "승우아빠",
-    videoTitle: null,
-    videoUrl: null,
-    recommendNote: "최근 새롭게 떠오른 최고의 레스토랑 중 하나로 소개됐다."
-  },
-  {
-    id: "swab-013",
-    name: "오프닝",
-    category: "양식",
-    address: "서울 강남구 도산대로34길 22",
-    phone: "02-2088-5844",
-    lat: 37.5188924866535,
-    lng: 127.031018121292,
-    kakaoUrl: "http://place.map.kakao.com/2010673091",
-    rating: null,
-    reviewCount: null,
-    youtuber: "승우아빠",
-    videoTitle: null,
-    videoUrl: null,
-    recommendNote: "남이 사준 밥이 제일 맛있다는 리뷰와 함께 소개된 레스토랑."
-  },
-  {
-    id: "swab-014",
-    name: "기와강",
-    category: "한식",
-    address: "서울 강남구 논현로152길 9",
-    phone: "02-517-2511",
-    lat: 37.5211392152627,
-    lng: 127.028937615467,
-    kakaoUrl: "http://place.map.kakao.com/1522281632",
-    rating: null,
-    reviewCount: null,
-    youtuber: "승우아빠",
-    videoTitle: null,
-    videoUrl: null,
-    recommendNote: "미슐랭 1스타를 받은 한식 다이닝으로 소개됐다."
-  },
-  {
-    id: "swab-015",
-    name: "아키야라멘",
-    category: "일본식라면",
-    address: "서울 마포구 토정로 39-3",
-    phone: "070-7636-0326",
-    lat: 37.5457466795839,
-    lng: 126.915339200849,
-    kakaoUrl: "http://place.map.kakao.com/604742224",
-    rating: null,
-    reviewCount: null,
-    youtuber: "승우아빠",
-    videoTitle: null,
-    videoUrl: null,
-    recommendNote: "전문점이 드문 미소라멘을 선보이는 라멘집으로 소개됐다."
-  },
-  {
-    id: "swab-016",
-    name: "누와",
-    category: "중식",
-    address: "서울 강남구 강남대로 652",
-    phone: "02-518-2003",
-    lat: 37.5195662640323,
-    lng: 127.019091117912,
-    kakaoUrl: "http://place.map.kakao.com/1915805569",
-    rating: null,
-    reviewCount: null,
-    youtuber: "승우아빠",
-    videoTitle: null,
-    videoUrl: null,
-    recommendNote: "박은영 셰프가 선보이는 중식 레스토랑으로 소개됐다."
-  },
-  {
-    id: "swab-017",
-    name: "신멘",
-    category: "일본식라면",
-    address: "경기 안양시 동안구 호성로 20",
-    phone: "070-8836-9268",
-    lat: 37.36351636620172,
-    lng: 126.9637866595994,
-    kakaoUrl: "http://place.map.kakao.com/1796608709",
-    rating: null,
-    reviewCount: null,
-    youtuber: "승우아빠",
-    videoTitle: null,
-    videoUrl: null,
-    recommendNote: "니보시(멸치) 육수 라멘을 선보이는 안양의 라멘 맛집으로, 색다른 라멘 경험을 준다고 소개됐다."
-  },
-  {
-    id: "swab-018",
-    name: "소바키리 스즈",
-    category: "일식집",
-    address: "서울 중구 동호로12길 98",
-    phone: "02-2256-6986",
-    lat: 37.5594931690156,
-    lng: 127.012431633842,
-    kakaoUrl: "http://place.map.kakao.com/59179379",
-    rating: null,
-    reviewCount: null,
-    youtuber: "승우아빠",
-    videoTitle: null,
-    videoUrl: null,
-    recommendNote: "깔끔한 맛의 소바 전문점으로 소개됐다."
-  },
-  {
-    id: "swab-019",
-    name: "요아케",
-    category: "일본식라면",
-    address: "서울 중구 퇴계로74길 9",
-    phone: "0502-5553-0817",
-    lat: 37.56462496452258,
-    lng: 127.014864880365,
-    kakaoUrl: "http://place.map.kakao.com/961759416",
-    rating: null,
-    reviewCount: null,
-    youtuber: "승우아빠",
-    videoTitle: null,
-    videoUrl: null,
-    recommendNote: "라멘에 진심인 오너가 만든 라멘집으로 소개됐다."
-  },
-  {
-    id: "swab-020",
-    name: "조광201",
-    category: "중국요리",
-    address: "서울 송파구 새말로8길 13",
-    phone: "010-2459-0503",
-    lat: 37.4815503071785,
-    lng: 127.126787485897,
-    kakaoUrl: "http://place.map.kakao.com/1579261014",
-    rating: null,
-    reviewCount: null,
-    youtuber: "승우아빠",
-    videoTitle: null,
-    videoUrl: null,
-    recommendNote: "흑백요리사 출신 셰프가 운영하는 중식당으로, 센스 있는 구성이 여전히 돋보인다고 소개됐다."
-  },
-  {
-    id: "swab-021",
-    name: "후제",
-    category: "양식",
-    address: "서울 강남구 논현로24길 21",
-    phone: "070-4837-4997",
-    lat: 37.4821261304299,
-    lng: 127.044768296392,
-    kakaoUrl: "http://place.map.kakao.com/1625504597",
-    rating: null,
-    reviewCount: null,
-    youtuber: "승우아빠",
-    videoTitle: null,
-    videoUrl: null,
-    recommendNote: "조만간 미슐랭에 오를 만한 실력이라는 평과 함께 소개된 레스토랑."
-  },
-  {
-    id: "swab-022",
-    name: "쵸이닷",
-    category: "양식",
-    address: "서울 강남구 도산대로 457",
-    phone: "02-518-0318",
-    lat: 37.524415938697466,
-    lng: 127.04655153958882,
-    kakaoUrl: "http://place.map.kakao.com/1565367501",
-    rating: null,
-    reviewCount: null,
-    youtuber: "승우아빠",
-    videoTitle: null,
-    videoUrl: null,
-    recommendNote: "흑백요리사 출신 셰프가 운영하는 레스토랑으로, 도파민이 터지는 구성이라고 소개됐다."
-  },
-  {
-    id: "swab-023",
-    name: "밍글스",
-    category: "한식",
-    address: "서울 강남구 도산대로67길 19",
-    phone: "02-515-7306",
-    lat: 37.52541969265465,
-    lng: 127.04410633651611,
-    kakaoUrl: "http://place.map.kakao.com/24073852",
-    rating: null,
-    reviewCount: null,
-    youtuber: "승우아빠",
-    videoTitle: null,
-    videoUrl: null,
-    recommendNote: "국내 유일 미슐랭 3스타를 보유한 한식 파인다이닝으로 소개됐다."
-  },
-  {
-    id: "swab-024",
-    name: "솔밤",
-    category: "양식",
-    address: "서울 강남구 학동로 231",
-    phone: "070-4405-7788",
-    lat: 37.515714726279604,
-    lng: 127.03400526007886,
-    kakaoUrl: "http://place.map.kakao.com/2007100531",
-    rating: null,
-    reviewCount: null,
-    youtuber: "승우아빠",
-    videoTitle: null,
-    videoUrl: null,
-    recommendNote: "흑백요리사 출신 셰프가 운영하는 레스토랑으로 소개됐다."
-  },
-  {
-    id: "swab-025",
-    name: "이목스모크다이닝",
-    category: "육류,고기",
-    address: "서울 강남구 압구정로2길 6",
-    phone: null,
-    lat: 37.52114839011912,
-    lng: 127.01930758314055,
-    kakaoUrl: "http://place.map.kakao.com/485505101",
-    rating: null,
-    reviewCount: null,
-    youtuber: "승우아빠",
-    videoTitle: null,
-    videoUrl: null,
-    recommendNote: "흑백요리사 출신 바베큐 전문 셰프가 운영하는 스모크 다이닝으로 소개됐다."
-  },
-  {
-    id: "swab-026",
-    name: "호루몬",
-    category: "일식집",
-    address: "서울 강남구 언주로152길 11-5",
-    phone: "010-2893-7873",
-    lat: 37.5230451598482,
-    lng: 127.034446378235,
-    kakaoUrl: "http://place.map.kakao.com/2035856429",
-    rating: null,
-    reviewCount: null,
-    youtuber: "승우아빠",
-    videoTitle: null,
-    videoUrl: null,
-    recommendNote: "내장 오마카세를 전문으로 하는 일식당으로 소개됐다."
-  },
-  {
-    id: "swab-027",
-    name: "수퍼판",
-    category: "퓨전한식",
-    address: "서울 강남구 논현로167길 15",
-    phone: "02-515-3848",
-    lat: 37.52443828157013,
-    lng: 127.02683813063683,
-    kakaoUrl: "http://place.map.kakao.com/26457126",
-    rating: null,
-    reviewCount: null,
-    youtuber: "승우아빠",
-    videoTitle: null,
-    videoUrl: null,
-    recommendNote: "흑백요리사 출신 셰프의 모던한식 레스토랑으로 소개됐다."
-  },
-  {
-    id: "swab-028",
-    name: "에그앤플라워",
-    category: "이탈리안",
-    address: "서울 용산구 신흥로26길 35",
-    phone: null,
-    lat: 37.5453543271454,
-    lng: 126.984372866559,
-    kakaoUrl: "http://place.map.kakao.com/1838545503",
-    rating: null,
-    reviewCount: null,
-    youtuber: "승우아빠",
-    videoTitle: null,
-    videoUrl: null,
-    recommendNote: "생면 파스타를 전문으로 하는 이탈리안 레스토랑으로, 흑백요리사 출신 셰프가 운영한다고 소개됐다."
-  },
-  {
-    id: "swab-029",
-    name: "스와니예",
-    category: "양식",
-    address: "서울 강남구 강남대로 652",
-    phone: "02-3477-9386",
-    lat: 37.5195103994699,
-    lng: 127.019105809157,
-    kakaoUrl: "http://place.map.kakao.com/1469290862",
-    rating: null,
-    reviewCount: null,
-    youtuber: "승우아빠",
-    videoTitle: null,
-    videoUrl: null,
-    recommendNote: "미슐랭 2스타를 보유한 파인다이닝 레스토랑으로 소개됐다."
-  },
-  {
-    id: "swab-030",
-    name: "황성집",
-    category: "순대",
-    address: "서울 중구 청파로 447-15",
-    phone: "02-392-6926",
-    lat: 37.559294949155,
-    lng: 126.968287194687,
-    kakaoUrl: "http://place.map.kakao.com/14686414",
-    rating: null,
-    reviewCount: null,
-    youtuber: "승우아빠",
-    videoTitle: null,
-    videoUrl: null,
-    recommendNote: "지금까지 접해보지 못한 스타일의 순대국밥을 선보이는 노포로 소개됐다."
-  },
-  {
-    id: "swab-031",
-    name: "탉",
-    category: "닭요리",
-    address: "경기 파주시 소리천로 29",
-    phone: null,
-    lat: 37.7158542045619,
-    lng: 126.761301814598,
-    kakaoUrl: "http://place.map.kakao.com/488815129",
-    rating: null,
-    reviewCount: null,
-    youtuber: "승우아빠",
-    videoTitle: null,
-    videoUrl: null,
-    recommendNote: "다양한 부위의 닭 요리를 한자리에서 즐길 수 있는 닭 요리 전문점으로 소개됐다."
-  },
-  {
-    id: "swab-032",
-    name: "야키토리키유",
-    category: "일식",
-    address: "서울 마포구 도화4길 31",
-    phone: "02-702-1120",
-    lat: 37.54057550667603,
-    lng: 126.95149222069634,
-    kakaoUrl: "http://place.map.kakao.com/1766791669",
-    rating: null,
-    reviewCount: null,
-    youtuber: "승우아빠",
-    videoTitle: null,
-    videoUrl: null,
-    recommendNote: "닭꼬치(야키토리) 전문점으로, 술과 곁들이기 좋다고 소개됐다."
-  },
-  {
-    id: "swab-033",
-    name: "라멘바 시코우",
-    category: "일본식라면",
-    address: "서울 마포구 와우산로7길 33",
-    phone: "0502-5554-5032",
-    lat: 37.5473471965062,
-    lng: 126.921036182831,
-    kakaoUrl: "http://place.map.kakao.com/2140098172",
-    rating: null,
-    reviewCount: null,
-    youtuber: "승우아빠",
-    videoTitle: null,
-    videoUrl: null,
-    recommendNote: "오픈한 지 두 달 만에 입소문이 난 라멘집으로 소개됐다."
-  },
-  {
-    id: "swab-034",
-    name: "소바쥬",
-    category: "일식",
-    address: "서울 마포구 큰우물로 75",
-    phone: null,
-    lat: 37.541265225109,
-    lng: 126.946294706761,
-    kakaoUrl: "http://place.map.kakao.com/619030447",
-    rating: null,
-    reviewCount: null,
-    youtuber: "승우아빠",
-    videoTitle: null,
-    videoUrl: null,
-    recommendNote: "흑백요리사 출신 셰프가 선보이는 메밀 오마카세 전문점으로 소개됐다."
-  },
-  {
-    id: "swab-035",
-    name: "하루",
-    category: "일식",
-    address: "경기 성남시 분당구 판교역로 231",
-    phone: "031-696-7588",
-    lat: 37.40122995226371,
-    lng: 127.10805405111144,
-    kakaoUrl: "http://place.map.kakao.com/670256293",
-    rating: null,
-    reviewCount: null,
-    youtuber: "승우아빠",
-    videoTitle: null,
-    videoUrl: null,
-    recommendNote: "판교에 위치한 튀김과 소바를 함께 즐길 수 있는 오마카세 전문점으로 소개됐다."
-  },
-  {
-    id: "swab-036",
-    name: "봉자마라탕",
-    category: "중식",
-    address: "서울 광진구 동일로18길 22",
-    phone: "02-499-8889",
-    lat: 37.5396724802267,
-    lng: 127.064096932094,
-    kakaoUrl: "http://place.map.kakao.com/21312920",
-    rating: null,
-    reviewCount: null,
-    youtuber: "승우아빠",
-    videoTitle: null,
-    videoUrl: null,
-    recommendNote: "간판은 마라탕이지만 실제로는 볶음밥이 더 유명하다고 소개된 건대입구의 맛집."
-  },
-  {
-    id: "swab-037",
-    name: "야키토리야키준",
-    category: "일식",
-    address: "경기 성남시 분당구 판교역로 178",
-    phone: "031-707-6447",
-    lat: 37.3965076599573,
-    lng: 127.110051847933,
-    kakaoUrl: "http://place.map.kakao.com/566578267",
-    rating: null,
-    reviewCount: null,
-    youtuber: "승우아빠",
-    videoTitle: null,
-    videoUrl: null,
-    recommendNote: "가성비 좋은 야키토리(닭꼬치) 전문점으로 소개됐다."
-  },
-  {
-    id: "swab-038",
-    name: "라디치",
-    category: "이탈리안",
-    address: "서울 서초구 동광로39길 79",
-    phone: "02-6449-6755",
-    lat: 37.4984960080116,
-    lng: 126.999520509622,
-    kakaoUrl: "http://place.map.kakao.com/2029266116",
-    rating: null,
-    reviewCount: null,
-    youtuber: "승우아빠",
-    videoTitle: null,
-    videoUrl: null,
-    recommendNote: "현지의 맛을 그대로 재현했다는 평과 함께 소개된 이탈리안 레스토랑."
-  },
-  {
-    id: "swab-039",
-    name: "일베키오",
-    category: "이탈리안",
-    address: "서울 마포구 월드컵북로 332-12",
-    phone: "02-302-0944",
-    lat: 37.57637747278064,
-    lng: 126.89470235864977,
-    kakaoUrl: "http://place.map.kakao.com/222224201",
-    rating: null,
-    reviewCount: null,
-    youtuber: "승우아빠",
-    videoTitle: null,
-    videoUrl: null,
-    recommendNote: "한 해를 대표할 만한 이탈리안 레스토랑으로 꼽히며 소개됐다."
-  },
-  {
-    id: "swab-040",
-    name: "강동원",
-    category: "중국요리",
-    address: "서울 마포구 망원로 3",
-    phone: "02-335-0202",
-    lat: 37.5559172623921,
-    lng: 126.897314917439,
-    kakaoUrl: "http://place.map.kakao.com/16471669",
-    rating: null,
-    reviewCount: null,
-    youtuber: "승우아빠",
-    videoTitle: null,
-    videoUrl: null,
-    recommendNote: "자극적이지 않고 담백한 중화요리를 선보이는 중식당으로 소개됐다."
-  },
-  {
-    id: "swab-041",
-    name: "피테일",
-    category: "양식",
-    address: "경기 남양주시 다산중앙로123번길 22-8",
-    phone: "070-8691-0504",
-    lat: 37.6242893194726,
-    lng: 127.151030775171,
-    kakaoUrl: "http://place.map.kakao.com/1510096064",
-    rating: null,
-    reviewCount: null,
-    youtuber: "승우아빠",
-    videoTitle: null,
-    videoUrl: null,
-    recommendNote: "다른 요리 유튜버의 추천으로 소개된 파스타 바."
-  },
-  {
-    id: "swab-042",
-    name: "덕이짬뽕",
-    category: "중식",
-    address: "경기 고양시 일산서구 덕이로 186",
-    phone: "031-971-8280",
-    lat: 37.69458345153691,
-    lng: 126.74054814047305,
-    kakaoUrl: "http://place.map.kakao.com/1626062978",
-    rating: null,
-    reviewCount: null,
-    youtuber: "승우아빠",
-    videoTitle: null,
-    videoUrl: null,
-    recommendNote: "일산 덕이동에 위치한 짬뽕 맛집으로 소개됐다."
-  },
-  {
-    id: "swab-043",
-    name: "멘큐단",
-    category: "일본식라면",
-    address: "경기 안양시 동안구 관평로69번길 19",
-    phone: null,
-    lat: 37.3832389881529,
-    lng: 126.964036879545,
-    kakaoUrl: "http://place.map.kakao.com/475644301",
-    rating: null,
-    reviewCount: null,
-    youtuber: "승우아빠",
-    videoTitle: null,
-    videoUrl: null,
-    recommendNote: "단순한 구성이지만 계속 생각나는 맛이라는 평과 함께 소개된 라멘집."
-  },
-  {
-    id: "swab-044",
-    name: "멕시타이거",
-    category: "호프,요리주점",
-    address: "서울 강남구 테헤란로1길 42",
-    phone: null,
-    lat: 37.501130134367,
-    lng: 127.027148703417,
-    kakaoUrl: "http://place.map.kakao.com/1232109211",
-    rating: null,
-    reviewCount: null,
-    youtuber: "승우아빠",
-    videoTitle: null,
-    videoUrl: null,
-    recommendNote: "멕시칸 몰레 소스와 폴로 아사도(구운 치킨)를 전문으로 하는 요즘 뜨는 맛집으로 소개됐다."
-  },
-  {
-    id: "swab-045",
-    name: "유니드라멘",
-    category: "일본식라면",
-    address: "서울 광진구 능동로37길 44",
-    phone: "070-8835-3737",
-    lat: 37.5588375979018,
-    lng: 127.077640435526,
-    kakaoUrl: "http://place.map.kakao.com/988572179",
-    rating: null,
-    reviewCount: null,
-    youtuber: "승우아빠",
-    videoTitle: null,
-    videoUrl: null,
-    recommendNote: "닭가슴살 토핑이 특징인 토리파이탄 라멘 전문점으로 소개됐다."
-  },
-  {
-    id: "swab-046",
-    name: "아트와떵",
-    category: "양식",
-    address: "서울 마포구 동교로50길 25",
-    phone: "010-3249-5325",
-    lat: 37.5633376632533,
-    lng: 126.927374661302,
-    kakaoUrl: "http://place.map.kakao.com/1745240335",
-    rating: null,
-    reviewCount: null,
-    youtuber: "승우아빠",
-    videoTitle: null,
-    videoUrl: null,
-    recommendNote: "심플하면서도 맛있는 치킨 요리를 즐길 수 있는 곳으로 소개됐다."
-  },
-  {
-    id: "swab-047",
-    name: "기댈빙",
-    category: "디저트카페",
-    address: "서울 성동구 서울숲2길 19-8",
-    phone: "010-5016-3531",
-    lat: 37.54722139096443,
-    lng: 127.04108420321187,
-    kakaoUrl: "http://place.map.kakao.com/332229378",
-    rating: null,
-    reviewCount: null,
-    youtuber: "승우아빠",
-    videoTitle: null,
-    videoUrl: null,
-    recommendNote: "평양냉면과 빙수를 접목한 평냉빙수, 햄빙수 등 독특한 메뉴로 소개된 디저트 카페."
-  },
-  {
-    id: "swab-048",
-    name: "고덕",
-    category: "중식",
-    address: "서울 마포구 동교로27길 61",
-    phone: "02-2135-7578",
-    lat: 37.5604042603845,
-    lng: 126.920746243827,
-    kakaoUrl: "http://place.map.kakao.com/2067014398",
-    rating: null,
-    reviewCount: null,
-    youtuber: "승우아빠",
-    videoTitle: null,
-    videoUrl: null,
-    recommendNote: "가성비 좋은 베이징덕을 선보이는 중식당으로 소개됐다."
-  },
   {
     id: "jjy-001",
     name: "스시린 신불당본점",
@@ -1422,10 +13,14 @@ const CURATED_FOOD = [
     kakaoUrl: "http://place.map.kakao.com/376240132",
     rating: null,
     reviewCount: null,
-    youtuber: "쯔양",
-    videoTitle: null,
-    videoUrl: null,
-    recommendNote: "쯔양 팬 커뮤니티 지도 '쯔동여지도'에서 처음 방문해도 실패 없는 인기 TOP5 맛집으로 꼽힌 초밥 전문점."
+    youtubers: [
+      {
+        name: "쯔양",
+        videoTitle: null,
+        videoUrl: null,
+        recommendNote: "쯔양 팬 커뮤니티 지도 '쯔동여지도'에서 처음 방문해도 실패 없는 인기 TOP5 맛집으로 꼽힌 초밥 전문점."
+      }
+    ]
   },
   {
     id: "jjy-002",
@@ -1438,10 +33,14 @@ const CURATED_FOOD = [
     kakaoUrl: "http://place.map.kakao.com/12250697",
     rating: null,
     reviewCount: null,
-    youtuber: "쯔양",
-    videoTitle: null,
-    videoUrl: null,
-    recommendNote: "쯔동여지도에서 '한추'라는 애칭으로 불리며 인기 TOP5에 오른 강남 논현동의 요리주점."
+    youtubers: [
+      {
+        name: "쯔양",
+        videoTitle: null,
+        videoUrl: null,
+        recommendNote: "쯔동여지도에서 '한추'라는 애칭으로 불리며 인기 TOP5에 오른 강남 논현동의 요리주점."
+      }
+    ]
   },
   {
     id: "jjy-003",
@@ -1454,10 +53,14 @@ const CURATED_FOOD = [
     kakaoUrl: "http://place.map.kakao.com/9316895",
     rating: null,
     reviewCount: null,
-    youtuber: "쯔양",
-    videoTitle: null,
-    videoUrl: null,
-    recommendNote: "쯔동여지도 인기 TOP5에 오른 동대문구의 중식당."
+    youtubers: [
+      {
+        name: "쯔양",
+        videoTitle: null,
+        videoUrl: null,
+        recommendNote: "쯔동여지도 인기 TOP5에 오른 동대문구의 중식당."
+      }
+    ]
   },
   {
     id: "jjy-004",
@@ -1470,10 +73,14 @@ const CURATED_FOOD = [
     kakaoUrl: "http://place.map.kakao.com/1480779674",
     rating: null,
     reviewCount: null,
-    youtuber: "쯔양",
-    videoTitle: null,
-    videoUrl: null,
-    recommendNote: "압구정에 위치한 냉면 전문점으로, 쯔동여지도 인기 TOP5 맛집으로 꼽혔다."
+    youtubers: [
+      {
+        name: "쯔양",
+        videoTitle: null,
+        videoUrl: null,
+        recommendNote: "압구정에 위치한 냉면 전문점으로, 쯔동여지도 인기 TOP5 맛집으로 꼽혔다."
+      }
+    ]
   },
   {
     id: "jjy-005",
@@ -1486,10 +93,14 @@ const CURATED_FOOD = [
     kakaoUrl: "http://place.map.kakao.com/27276847",
     rating: null,
     reviewCount: null,
-    youtuber: "쯔양",
-    videoTitle: null,
-    videoUrl: null,
-    recommendNote: "서울로7017 인근에 위치한 닭요리 전문점으로, 팬들 사이에서 대표 방문 맛집으로 회자된다."
+    youtubers: [
+      {
+        name: "쯔양",
+        videoTitle: null,
+        videoUrl: null,
+        recommendNote: "서울로7017 인근에 위치한 닭요리 전문점으로, 팬들 사이에서 대표 방문 맛집으로 회자된다."
+      }
+    ]
   },
   {
     id: "jjy-006",
@@ -1502,10 +113,14 @@ const CURATED_FOOD = [
     kakaoUrl: "http://place.map.kakao.com/530101305",
     rating: null,
     reviewCount: null,
-    youtuber: "쯔양",
-    videoTitle: null,
-    videoUrl: null,
-    recommendNote: "을지로 노포 상권을 대표하는 고기 맛집으로 알려졌다."
+    youtubers: [
+      {
+        name: "쯔양",
+        videoTitle: null,
+        videoUrl: null,
+        recommendNote: "을지로 노포 상권을 대표하는 고기 맛집으로 알려졌다."
+      }
+    ]
   },
   {
     id: "jjy-007",
@@ -1518,266 +133,14 @@ const CURATED_FOOD = [
     kakaoUrl: "http://place.map.kakao.com/19183006",
     rating: null,
     reviewCount: null,
-    youtuber: "쯔양",
-    videoTitle: null,
-    videoUrl: null,
-    recommendNote: "세종대 후문 인근에 위치한 김치볶음밥 전문점으로 알려졌다."
-  },
-  {
-    id: "swab-049",
-    name: "이츠야",
-    category: "돈까스,우동",
-    address: "서울 마포구 양화로6길 99-9",
-    phone: "02-336-9244",
-    lat: 37.5487592205416,
-    lng: 126.919934746818,
-    kakaoUrl: "http://place.map.kakao.com/1709251572",
-    rating: null,
-    reviewCount: null,
-    youtuber: "승우아빠",
-    videoTitle: null,
-    videoUrl: null,
-    recommendNote: "인생 돈까스로 꼽힐 만큼 만족도가 높다고 소개된 돈카츠 전문점."
-  },
-  {
-    id: "swab-050",
-    name: "미토우",
-    category: "일식",
-    address: "서울 강남구 도산대로70길 24",
-    phone: null,
-    lat: 37.52211896630903,
-    lng: 127.04504557668946,
-    kakaoUrl: "http://place.map.kakao.com/1375080913",
-    rating: null,
-    reviewCount: null,
-    youtuber: "승우아빠",
-    videoTitle: null,
-    videoUrl: null,
-    recommendNote: "미슐랭 2스타에 걸맞은 완성도라는 평과 함께 소개된 오마카세 전문점."
-  },
-  {
-    id: "swab-051",
-    name: "모수 서울",
-    category: "양식",
-    address: "서울 용산구 회나무로41길 4",
-    phone: "02-6272-5678",
-    lat: 37.5411971867086,
-    lng: 126.996181126207,
-    kakaoUrl: "http://place.map.kakao.com/1791830911",
-    rating: null,
-    reviewCount: null,
-    youtuber: "승우아빠",
-    videoTitle: null,
-    videoUrl: null,
-    recommendNote: "파인다이닝 업계 종사자 출신이 직접 평가한 파인다이닝 레스토랑으로 소개됐다."
-  },
-  {
-    id: "swab-052",
-    name: "스시한다",
-    category: "초밥,롤",
-    address: "서울 강남구 선릉로148길 52-5",
-    phone: null,
-    lat: 37.5226815829034,
-    lng: 127.044008569338,
-    kakaoUrl: "http://place.map.kakao.com/1844475944",
-    rating: null,
-    reviewCount: null,
-    youtuber: "승우아빠",
-    videoTitle: null,
-    videoUrl: null,
-    recommendNote: "만화 '초밥왕'에 나올 법한 초밥 표현을 실제로 이해하게 됐다는 평과 함께 소개된 초밥집."
-  },
-  {
-    id: "swab-053",
-    name: "덴푸라키이로",
-    category: "일식",
-    address: "서울 강남구 강남대로 652",
-    phone: null,
-    lat: 37.519567166315,
-    lng: 127.019083199802,
-    kakaoUrl: "http://place.map.kakao.com/1013923338",
-    rating: null,
-    reviewCount: null,
-    youtuber: "승우아빠",
-    videoTitle: null,
-    videoUrl: null,
-    recommendNote: "내년까지 예약이 꽉 찼다는 튀김(덴푸라) 오마카세 전문점으로 소개됐다."
-  },
-  {
-    id: "swab-054",
-    name: "온지음",
-    category: "한식",
-    address: "서울 종로구 효자로 49",
-    phone: "02-6952-0024",
-    lat: 37.580494739542516,
-    lng: 126.97339071212892,
-    kakaoUrl: "http://place.map.kakao.com/27050439",
-    rating: null,
-    reviewCount: null,
-    youtuber: "승우아빠",
-    videoTitle: null,
-    videoUrl: null,
-    recommendNote: "22가지 코스로 구성된 미슐랭 1스타 한식 파인다이닝으로 소개됐다."
-  },
-  {
-    id: "swab-055",
-    name: "이리에라멘",
-    category: "일본식라면",
-    address: "서울 마포구 성지1길 18",
-    phone: "02-332-3370",
-    lat: 37.5480723676712,
-    lng: 126.914381481829,
-    kakaoUrl: "http://place.map.kakao.com/906556987",
-    rating: null,
-    reviewCount: null,
-    youtuber: "승우아빠",
-    videoTitle: null,
-    videoUrl: null,
-    recommendNote: "원래도 줄서서 먹던 도미라멘 맛집으로 소개됐다."
-  },
-  {
-    id: "swab-056",
-    name: "희옥",
-    category: "일본식라면",
-    address: "서울 마포구 월드컵로19길 74",
-    phone: "010-4083-2666",
-    lat: 37.55433769867013,
-    lng: 126.9069593083376,
-    kakaoUrl: "http://place.map.kakao.com/291532086",
-    rating: null,
-    reviewCount: null,
-    youtuber: "승우아빠",
-    videoTitle: null,
-    videoUrl: null,
-    recommendNote: "깔끔한 맛의 시오라멘을 선보이는 라멘집으로 소개됐다."
-  },
-  {
-    id: "swab-057",
-    name: "슈보카가리",
-    category: "일식집",
-    address: "서울 강남구 선릉로148길 52-5",
-    phone: "02-512-9588",
-    lat: 37.5226815858538,
-    lng: 127.044000650671,
-    kakaoUrl: "http://place.map.kakao.com/138470789",
-    rating: null,
-    reviewCount: null,
-    youtuber: "승우아빠",
-    videoTitle: null,
-    videoUrl: null,
-    recommendNote: "SNS 화제성 1위에 오른 레스토랑으로 소개됐다."
-  },
-  {
-    id: "swab-058",
-    name: "스시오마주",
-    category: "일식집",
-    address: "서울 강남구 강남대로152길 67",
-    phone: "02-515-1836",
-    lat: 37.51899852994263,
-    lng: 127.02452404450847,
-    kakaoUrl: "http://place.map.kakao.com/88230451",
-    rating: null,
-    reviewCount: null,
-    youtuber: "승우아빠",
-    videoTitle: null,
-    videoUrl: null,
-    recommendNote: "미들급 가격대에서 뛰어난 가성비를 보여주는 오마카세 스시로 소개됐다."
-  },
-  {
-    id: "swab-059",
-    name: "캐비스트리",
-    category: "한식",
-    address: "서울 강남구 도산대로37길 21",
-    phone: "02-548-2248",
-    lat: 37.52248384253077,
-    lng: 127.0311768497404,
-    kakaoUrl: "http://place.map.kakao.com/346207534",
-    rating: null,
-    reviewCount: null,
-    youtuber: "승우아빠",
-    videoTitle: null,
-    videoUrl: null,
-    recommendNote: "일식의 끝판왕으로 불리는 셰프가 새롭게 선보인 스페인 요리 레스토랑으로 소개됐다."
-  },
-  {
-    id: "swab-060",
-    name: "티엔미미 홍대점",
-    category: "중식",
-    address: "서울 마포구 양화로 144",
-    phone: "010-8823-1070",
-    lat: 37.555339944118,
-    lng: 126.92238582799,
-    kakaoUrl: "http://place.map.kakao.com/1940227088",
-    rating: null,
-    reviewCount: null,
-    youtuber: "승우아빠",
-    videoTitle: null,
-    videoUrl: null,
-    recommendNote: "흑백요리사 출신 딤섬 전문 셰프가 운영하는 중식당으로 소개됐다."
-  },
-  {
-    id: "swab-061",
-    name: "산동포자",
-    category: "중국요리",
-    address: "인천 부평구 마장로 75",
-    phone: "032-431-8885",
-    lat: 37.4854519475591,
-    lng: 126.707738447374,
-    kakaoUrl: "http://place.map.kakao.com/25044266",
-    rating: null,
-    reviewCount: null,
-    youtuber: "승우아빠",
-    videoTitle: null,
-    videoUrl: null,
-    recommendNote: "노포 감성의 중식 주점으로 소개됐다."
-  },
-  {
-    id: "swab-062",
-    name: "트리드",
-    category: "양식",
-    address: "서울 강남구 선릉로162길 16",
-    phone: "02-512-8312",
-    lat: 37.526706300862216,
-    lng: 127.0416883763941,
-    kakaoUrl: "http://place.map.kakao.com/744607127",
-    rating: null,
-    reviewCount: null,
-    youtuber: "승우아빠",
-    videoTitle: null,
-    videoUrl: null,
-    recommendNote: "흑백요리사 출신 셰프의 완벽한 디테일이 돋보이는 파인다이닝으로 소개됐다."
-  },
-  {
-    id: "swab-063",
-    name: "히키니쿠토코메 도산",
-    category: "일식",
-    address: "서울 강남구 선릉로155길 21",
-    phone: "02-545-1129",
-    lat: 37.5254957171217,
-    lng: 127.037938637846,
-    kakaoUrl: "http://place.map.kakao.com/1803076723",
-    rating: null,
-    reviewCount: null,
-    youtuber: "승우아빠",
-    videoTitle: null,
-    videoUrl: null,
-    recommendNote: "시부야 스타일 숯불 함박스테이크를 선보이며 한국에 새롭게 문을 연 곳으로 소개됐다."
-  },
-  {
-    id: "swab-064",
-    name: "라까예",
-    category: "멕시칸,브라질",
-    address: "서울 중구 퇴계로85길 42",
-    phone: "0507-1478-8780",
-    lat: 37.5676263667282,
-    lng: 127.019751965992,
-    kakaoUrl: "http://place.map.kakao.com/1763319426",
-    rating: null,
-    reviewCount: null,
-    youtuber: "승우아빠",
-    videoTitle: null,
-    videoUrl: null,
-    recommendNote: "가성비가 뛰어난 타코 전문점으로 소개됐다."
+    youtubers: [
+      {
+        name: "쯔양",
+        videoTitle: null,
+        videoUrl: null,
+        recommendNote: "세종대 후문 인근에 위치한 김치볶음밥 전문점으로 알려졌다."
+      }
+    ]
   },
   {
     id: "jjy-008",
@@ -1790,10 +153,14 @@ const CURATED_FOOD = [
     kakaoUrl: "http://place.map.kakao.com/524565876",
     rating: null,
     reviewCount: null,
-    youtuber: "쯔양",
-    videoTitle: null,
-    videoUrl: null,
-    recommendNote: "쯔양이 방문해 리뷰한 돈까스·회 전문점."
+    youtubers: [
+      {
+        name: "쯔양",
+        videoTitle: null,
+        videoUrl: null,
+        recommendNote: "쯔양이 방문해 리뷰한 돈까스·회 전문점."
+      }
+    ]
   },
   {
     id: "jjy-009",
@@ -1806,10 +173,14 @@ const CURATED_FOOD = [
     kakaoUrl: "http://place.map.kakao.com/21330187",
     rating: null,
     reviewCount: null,
-    youtuber: "쯔양",
-    videoTitle: null,
-    videoUrl: null,
-    recommendNote: "쯔양이 방문해 리뷰한 한식 맛집."
+    youtubers: [
+      {
+        name: "쯔양",
+        videoTitle: null,
+        videoUrl: null,
+        recommendNote: "쯔양이 방문해 리뷰한 한식 맛집."
+      }
+    ]
   },
   {
     id: "jjy-010",
@@ -1822,10 +193,14 @@ const CURATED_FOOD = [
     kakaoUrl: "http://place.map.kakao.com/1838820758",
     rating: null,
     reviewCount: null,
-    youtuber: "쯔양",
-    videoTitle: null,
-    videoUrl: null,
-    recommendNote: "쯔양이 방문해 리뷰한 한식 맛집."
+    youtubers: [
+      {
+        name: "쯔양",
+        videoTitle: null,
+        videoUrl: null,
+        recommendNote: "쯔양이 방문해 리뷰한 한식 맛집."
+      }
+    ]
   },
   {
     id: "jjy-011",
@@ -1838,10 +213,14 @@ const CURATED_FOOD = [
     kakaoUrl: "http://place.map.kakao.com/21552691",
     rating: null,
     reviewCount: null,
-    youtuber: "쯔양",
-    videoTitle: null,
-    videoUrl: null,
-    recommendNote: "쯔양이 방문해 리뷰한 한식 맛집."
+    youtubers: [
+      {
+        name: "쯔양",
+        videoTitle: null,
+        videoUrl: null,
+        recommendNote: "쯔양이 방문해 리뷰한 한식 맛집."
+      }
+    ]
   },
   {
     id: "jjy-012",
@@ -1854,10 +233,14 @@ const CURATED_FOOD = [
     kakaoUrl: "http://place.map.kakao.com/21346744",
     rating: null,
     reviewCount: null,
-    youtuber: "쯔양",
-    videoTitle: null,
-    videoUrl: null,
-    recommendNote: "쯔양이 방문해 리뷰한 분식 맛집."
+    youtubers: [
+      {
+        name: "쯔양",
+        videoTitle: null,
+        videoUrl: null,
+        recommendNote: "쯔양이 방문해 리뷰한 분식 맛집."
+      }
+    ]
   },
   {
     id: "jjy-013",
@@ -1870,10 +253,14 @@ const CURATED_FOOD = [
     kakaoUrl: "http://place.map.kakao.com/1403631289",
     rating: null,
     reviewCount: null,
-    youtuber: "쯔양",
-    videoTitle: null,
-    videoUrl: null,
-    recommendNote: "쯔양이 방문해 리뷰한 치킨 전문점."
+    youtubers: [
+      {
+        name: "쯔양",
+        videoTitle: null,
+        videoUrl: null,
+        recommendNote: "쯔양이 방문해 리뷰한 치킨 전문점."
+      }
+    ]
   },
   {
     id: "jjy-014",
@@ -1886,10 +273,14 @@ const CURATED_FOOD = [
     kakaoUrl: "http://place.map.kakao.com/11505752",
     rating: null,
     reviewCount: null,
-    youtuber: "쯔양",
-    videoTitle: null,
-    videoUrl: null,
-    recommendNote: "쯔양이 방문해 리뷰한 치킨 전문점."
+    youtubers: [
+      {
+        name: "쯔양",
+        videoTitle: null,
+        videoUrl: null,
+        recommendNote: "쯔양이 방문해 리뷰한 치킨 전문점."
+      }
+    ]
   },
   {
     id: "jjy-015",
@@ -1902,10 +293,14 @@ const CURATED_FOOD = [
     kakaoUrl: "http://place.map.kakao.com/129438233",
     rating: null,
     reviewCount: null,
-    youtuber: "쯔양",
-    videoTitle: null,
-    videoUrl: null,
-    recommendNote: "쯔양이 방문해 리뷰한 분식 맛집."
+    youtubers: [
+      {
+        name: "쯔양",
+        videoTitle: null,
+        videoUrl: null,
+        recommendNote: "쯔양이 방문해 리뷰한 분식 맛집."
+      }
+    ]
   },
   {
     id: "jjy-016",
@@ -1918,10 +313,14 @@ const CURATED_FOOD = [
     kakaoUrl: "http://place.map.kakao.com/8079815",
     rating: null,
     reviewCount: null,
-    youtuber: "쯔양",
-    videoTitle: null,
-    videoUrl: null,
-    recommendNote: "쯔양이 방문해 리뷰한 양식 맛집."
+    youtubers: [
+      {
+        name: "쯔양",
+        videoTitle: null,
+        videoUrl: null,
+        recommendNote: "쯔양이 방문해 리뷰한 양식 맛집."
+      }
+    ]
   },
   {
     id: "jjy-017",
@@ -1934,10 +333,14 @@ const CURATED_FOOD = [
     kakaoUrl: "http://place.map.kakao.com/1744813047",
     rating: null,
     reviewCount: null,
-    youtuber: "쯔양",
-    videoTitle: null,
-    videoUrl: null,
-    recommendNote: "쯔양이 방문해 리뷰한 중식 맛집."
+    youtubers: [
+      {
+        name: "쯔양",
+        videoTitle: null,
+        videoUrl: null,
+        recommendNote: "쯔양이 방문해 리뷰한 중식 맛집."
+      }
+    ]
   },
   {
     id: "jjy-018",
@@ -1950,10 +353,14 @@ const CURATED_FOOD = [
     kakaoUrl: "http://place.map.kakao.com/8734699",
     rating: null,
     reviewCount: null,
-    youtuber: "쯔양",
-    videoTitle: null,
-    videoUrl: null,
-    recommendNote: "쯔양이 방문해 리뷰한 한식 맛집."
+    youtubers: [
+      {
+        name: "쯔양",
+        videoTitle: null,
+        videoUrl: null,
+        recommendNote: "쯔양이 방문해 리뷰한 한식 맛집."
+      }
+    ]
   },
   {
     id: "jjy-019",
@@ -1966,10 +373,20 @@ const CURATED_FOOD = [
     kakaoUrl: "http://place.map.kakao.com/20746242",
     rating: null,
     reviewCount: null,
-    youtuber: "쯔양",
-    videoTitle: null,
-    videoUrl: null,
-    recommendNote: "쯔양이 방문해 리뷰한 찜·탕 맛집."
+    youtubers: [
+      {
+        name: "쯔양",
+        videoTitle: null,
+        videoUrl: null,
+        recommendNote: "쯔양이 방문해 리뷰한 찜·탕 맛집."
+      },
+      {
+        name: "또간집(풍자)",
+        videoTitle: null,
+        videoUrl: null,
+        recommendNote: "여의도 맛집으로 소개됐으며, 버섯매운탕을 곁들인 가양칼국수가 또갈집으로 선정됐다."
+      }
+    ]
   },
   {
     id: "jjy-020",
@@ -1982,10 +399,14 @@ const CURATED_FOOD = [
     kakaoUrl: "http://place.map.kakao.com/494870660",
     rating: null,
     reviewCount: null,
-    youtuber: "쯔양",
-    videoTitle: null,
-    videoUrl: null,
-    recommendNote: "쯔양이 방문해 리뷰한 한식 맛집."
+    youtubers: [
+      {
+        name: "쯔양",
+        videoTitle: null,
+        videoUrl: null,
+        recommendNote: "쯔양이 방문해 리뷰한 한식 맛집."
+      }
+    ]
   },
   {
     id: "jjy-021",
@@ -1998,10 +419,14 @@ const CURATED_FOOD = [
     kakaoUrl: "http://place.map.kakao.com/8725439",
     rating: null,
     reviewCount: null,
-    youtuber: "쯔양",
-    videoTitle: null,
-    videoUrl: null,
-    recommendNote: "쯔양이 방문해 리뷰한 고기 맛집."
+    youtubers: [
+      {
+        name: "쯔양",
+        videoTitle: null,
+        videoUrl: null,
+        recommendNote: "쯔양이 방문해 리뷰한 고기 맛집."
+      }
+    ]
   },
   {
     id: "jjy-022",
@@ -2014,10 +439,14 @@ const CURATED_FOOD = [
     kakaoUrl: "http://place.map.kakao.com/27470378",
     rating: null,
     reviewCount: null,
-    youtuber: "쯔양",
-    videoTitle: null,
-    videoUrl: null,
-    recommendNote: "쯔양이 방문해 리뷰한 중식 맛집."
+    youtubers: [
+      {
+        name: "쯔양",
+        videoTitle: null,
+        videoUrl: null,
+        recommendNote: "쯔양이 방문해 리뷰한 중식 맛집."
+      }
+    ]
   },
   {
     id: "jjy-023",
@@ -2030,10 +459,14 @@ const CURATED_FOOD = [
     kakaoUrl: "http://place.map.kakao.com/11051453",
     rating: null,
     reviewCount: null,
-    youtuber: "쯔양",
-    videoTitle: null,
-    videoUrl: null,
-    recommendNote: "쯔양이 방문해 리뷰한 한식 맛집."
+    youtubers: [
+      {
+        name: "쯔양",
+        videoTitle: null,
+        videoUrl: null,
+        recommendNote: "쯔양이 방문해 리뷰한 한식 맛집."
+      }
+    ]
   },
   {
     id: "jjy-024",
@@ -2046,10 +479,14 @@ const CURATED_FOOD = [
     kakaoUrl: "http://place.map.kakao.com/11039136",
     rating: null,
     reviewCount: null,
-    youtuber: "쯔양",
-    videoTitle: null,
-    videoUrl: null,
-    recommendNote: "쯔양이 방문해 리뷰한 중식 맛집."
+    youtubers: [
+      {
+        name: "쯔양",
+        videoTitle: null,
+        videoUrl: null,
+        recommendNote: "쯔양이 방문해 리뷰한 중식 맛집."
+      }
+    ]
   },
   {
     id: "jjy-025",
@@ -2062,10 +499,14 @@ const CURATED_FOOD = [
     kakaoUrl: "http://place.map.kakao.com/15332394",
     rating: null,
     reviewCount: null,
-    youtuber: "쯔양",
-    videoTitle: null,
-    videoUrl: null,
-    recommendNote: "쯔양이 방문해 리뷰한 돈까스·회 전문점."
+    youtubers: [
+      {
+        name: "쯔양",
+        videoTitle: null,
+        videoUrl: null,
+        recommendNote: "쯔양이 방문해 리뷰한 돈까스·회 전문점."
+      }
+    ]
   },
   {
     id: "jjy-026",
@@ -2078,10 +519,14 @@ const CURATED_FOOD = [
     kakaoUrl: "http://place.map.kakao.com/2029330312",
     rating: null,
     reviewCount: null,
-    youtuber: "쯔양",
-    videoTitle: null,
-    videoUrl: null,
-    recommendNote: "쯔양이 방문해 리뷰한 고기 맛집."
+    youtubers: [
+      {
+        name: "쯔양",
+        videoTitle: null,
+        videoUrl: null,
+        recommendNote: "쯔양이 방문해 리뷰한 고기 맛집."
+      }
+    ]
   },
   {
     id: "jjy-027",
@@ -2094,10 +539,14 @@ const CURATED_FOOD = [
     kakaoUrl: "http://place.map.kakao.com/27405754",
     rating: null,
     reviewCount: null,
-    youtuber: "쯔양",
-    videoTitle: null,
-    videoUrl: null,
-    recommendNote: "쯔양이 방문해 리뷰한 분식 맛집."
+    youtubers: [
+      {
+        name: "쯔양",
+        videoTitle: null,
+        videoUrl: null,
+        recommendNote: "쯔양이 방문해 리뷰한 분식 맛집."
+      }
+    ]
   },
   {
     id: "jjy-028",
@@ -2110,10 +559,14 @@ const CURATED_FOOD = [
     kakaoUrl: "http://place.map.kakao.com/1285128655",
     rating: null,
     reviewCount: null,
-    youtuber: "쯔양",
-    videoTitle: null,
-    videoUrl: null,
-    recommendNote: "쯔양이 방문해 리뷰한 고기 맛집."
+    youtubers: [
+      {
+        name: "쯔양",
+        videoTitle: null,
+        videoUrl: null,
+        recommendNote: "쯔양이 방문해 리뷰한 고기 맛집."
+      }
+    ]
   },
   {
     id: "jjy-029",
@@ -2126,10 +579,14 @@ const CURATED_FOOD = [
     kakaoUrl: "http://place.map.kakao.com/1475914998",
     rating: null,
     reviewCount: null,
-    youtuber: "쯔양",
-    videoTitle: null,
-    videoUrl: null,
-    recommendNote: "쯔양이 방문해 리뷰한 양식 맛집."
+    youtubers: [
+      {
+        name: "쯔양",
+        videoTitle: null,
+        videoUrl: null,
+        recommendNote: "쯔양이 방문해 리뷰한 양식 맛집."
+      }
+    ]
   },
   {
     id: "jjy-030",
@@ -2142,10 +599,14 @@ const CURATED_FOOD = [
     kakaoUrl: "http://place.map.kakao.com/356763550",
     rating: null,
     reviewCount: null,
-    youtuber: "쯔양",
-    videoTitle: null,
-    videoUrl: null,
-    recommendNote: "쯔양이 방문해 리뷰한 양식 맛집."
+    youtubers: [
+      {
+        name: "쯔양",
+        videoTitle: null,
+        videoUrl: null,
+        recommendNote: "쯔양이 방문해 리뷰한 양식 맛집."
+      }
+    ]
   },
   {
     id: "jjy-031",
@@ -2158,10 +619,14 @@ const CURATED_FOOD = [
     kakaoUrl: "http://place.map.kakao.com/16678373",
     rating: null,
     reviewCount: null,
-    youtuber: "쯔양",
-    videoTitle: null,
-    videoUrl: null,
-    recommendNote: "쯔양이 방문해 리뷰한 고기 맛집."
+    youtubers: [
+      {
+        name: "쯔양",
+        videoTitle: null,
+        videoUrl: null,
+        recommendNote: "쯔양이 방문해 리뷰한 고기 맛집."
+      }
+    ]
   },
   {
     id: "jjy-032",
@@ -2174,10 +639,14 @@ const CURATED_FOOD = [
     kakaoUrl: "http://place.map.kakao.com/21479267",
     rating: null,
     reviewCount: null,
-    youtuber: "쯔양",
-    videoTitle: null,
-    videoUrl: null,
-    recommendNote: "쯔양이 방문해 리뷰한 한식 맛집."
+    youtubers: [
+      {
+        name: "쯔양",
+        videoTitle: null,
+        videoUrl: null,
+        recommendNote: "쯔양이 방문해 리뷰한 한식 맛집."
+      }
+    ]
   },
   {
     id: "jjy-033",
@@ -2190,10 +659,14 @@ const CURATED_FOOD = [
     kakaoUrl: "http://place.map.kakao.com/8697587",
     rating: null,
     reviewCount: null,
-    youtuber: "쯔양",
-    videoTitle: null,
-    videoUrl: null,
-    recommendNote: "쯔양이 방문해 리뷰한 분식 맛집."
+    youtubers: [
+      {
+        name: "쯔양",
+        videoTitle: null,
+        videoUrl: null,
+        recommendNote: "쯔양이 방문해 리뷰한 분식 맛집."
+      }
+    ]
   },
   {
     id: "jjy-034",
@@ -2206,10 +679,14 @@ const CURATED_FOOD = [
     kakaoUrl: "http://place.map.kakao.com/11831381",
     rating: null,
     reviewCount: null,
-    youtuber: "쯔양",
-    videoTitle: null,
-    videoUrl: null,
-    recommendNote: "쯔양이 방문해 리뷰한 분식 맛집."
+    youtubers: [
+      {
+        name: "쯔양",
+        videoTitle: null,
+        videoUrl: null,
+        recommendNote: "쯔양이 방문해 리뷰한 분식 맛집."
+      }
+    ]
   },
   {
     id: "jjy-035",
@@ -2222,10 +699,14 @@ const CURATED_FOOD = [
     kakaoUrl: "http://place.map.kakao.com/151847027",
     rating: null,
     reviewCount: null,
-    youtuber: "쯔양",
-    videoTitle: null,
-    videoUrl: null,
-    recommendNote: "쯔양이 방문해 리뷰한 고기 맛집."
+    youtubers: [
+      {
+        name: "쯔양",
+        videoTitle: null,
+        videoUrl: null,
+        recommendNote: "쯔양이 방문해 리뷰한 고기 맛집."
+      }
+    ]
   },
   {
     id: "jjy-037",
@@ -2238,10 +719,14 @@ const CURATED_FOOD = [
     kakaoUrl: "http://place.map.kakao.com/18314447",
     rating: null,
     reviewCount: null,
-    youtuber: "쯔양",
-    videoTitle: null,
-    videoUrl: null,
-    recommendNote: "쯔양이 방문해 리뷰한 중식 맛집."
+    youtubers: [
+      {
+        name: "쯔양",
+        videoTitle: null,
+        videoUrl: null,
+        recommendNote: "쯔양이 방문해 리뷰한 중식 맛집."
+      }
+    ]
   },
   {
     id: "jjy-038",
@@ -2254,10 +739,14 @@ const CURATED_FOOD = [
     kakaoUrl: "http://place.map.kakao.com/2067482324",
     rating: null,
     reviewCount: null,
-    youtuber: "쯔양",
-    videoTitle: null,
-    videoUrl: null,
-    recommendNote: "쯔양이 방문해 리뷰한 맛집."
+    youtubers: [
+      {
+        name: "쯔양",
+        videoTitle: null,
+        videoUrl: null,
+        recommendNote: "쯔양이 방문해 리뷰한 맛집."
+      }
+    ]
   },
   {
     id: "jjy-039",
@@ -2270,10 +759,14 @@ const CURATED_FOOD = [
     kakaoUrl: "http://place.map.kakao.com/11932900",
     rating: null,
     reviewCount: null,
-    youtuber: "쯔양",
-    videoTitle: null,
-    videoUrl: null,
-    recommendNote: "쯔양이 방문해 리뷰한 한식 맛집."
+    youtubers: [
+      {
+        name: "쯔양",
+        videoTitle: null,
+        videoUrl: null,
+        recommendNote: "쯔양이 방문해 리뷰한 한식 맛집."
+      }
+    ]
   },
   {
     id: "jjy-040",
@@ -2286,10 +779,14 @@ const CURATED_FOOD = [
     kakaoUrl: "http://place.map.kakao.com/8667158",
     rating: null,
     reviewCount: null,
-    youtuber: "쯔양",
-    videoTitle: null,
-    videoUrl: null,
-    recommendNote: "쯔양이 방문해 리뷰한 한식 맛집."
+    youtubers: [
+      {
+        name: "쯔양",
+        videoTitle: null,
+        videoUrl: null,
+        recommendNote: "쯔양이 방문해 리뷰한 한식 맛집."
+      }
+    ]
   },
   {
     id: "jjy-041",
@@ -2302,10 +799,14 @@ const CURATED_FOOD = [
     kakaoUrl: "http://place.map.kakao.com/455388326",
     rating: null,
     reviewCount: null,
-    youtuber: "쯔양",
-    videoTitle: null,
-    videoUrl: null,
-    recommendNote: "쯔양이 방문해 리뷰한 한식 맛집."
+    youtubers: [
+      {
+        name: "쯔양",
+        videoTitle: null,
+        videoUrl: null,
+        recommendNote: "쯔양이 방문해 리뷰한 한식 맛집."
+      }
+    ]
   },
   {
     id: "jjy-042",
@@ -2318,10 +819,14 @@ const CURATED_FOOD = [
     kakaoUrl: "http://place.map.kakao.com/1020151813",
     rating: null,
     reviewCount: null,
-    youtuber: "쯔양",
-    videoTitle: null,
-    videoUrl: null,
-    recommendNote: "쯔양이 방문해 리뷰한 한식 맛집."
+    youtubers: [
+      {
+        name: "쯔양",
+        videoTitle: null,
+        videoUrl: null,
+        recommendNote: "쯔양이 방문해 리뷰한 한식 맛집."
+      }
+    ]
   },
   {
     id: "jjy-043",
@@ -2334,10 +839,14 @@ const CURATED_FOOD = [
     kakaoUrl: "http://place.map.kakao.com/8673547",
     rating: null,
     reviewCount: null,
-    youtuber: "쯔양",
-    videoTitle: null,
-    videoUrl: null,
-    recommendNote: "쯔양이 방문해 리뷰한 한식 맛집."
+    youtubers: [
+      {
+        name: "쯔양",
+        videoTitle: null,
+        videoUrl: null,
+        recommendNote: "쯔양이 방문해 리뷰한 한식 맛집."
+      }
+    ]
   },
   {
     id: "jjy-044",
@@ -2350,10 +859,14 @@ const CURATED_FOOD = [
     kakaoUrl: "http://place.map.kakao.com/644351777",
     rating: null,
     reviewCount: null,
-    youtuber: "쯔양",
-    videoTitle: null,
-    videoUrl: null,
-    recommendNote: "쯔양이 방문해 리뷰한 고기 맛집."
+    youtubers: [
+      {
+        name: "쯔양",
+        videoTitle: null,
+        videoUrl: null,
+        recommendNote: "쯔양이 방문해 리뷰한 고기 맛집."
+      }
+    ]
   },
   {
     id: "jjy-045",
@@ -2366,10 +879,14 @@ const CURATED_FOOD = [
     kakaoUrl: "http://place.map.kakao.com/27209120",
     rating: null,
     reviewCount: null,
-    youtuber: "쯔양",
-    videoTitle: null,
-    videoUrl: null,
-    recommendNote: "쯔양이 방문해 리뷰한 중식 맛집."
+    youtubers: [
+      {
+        name: "쯔양",
+        videoTitle: null,
+        videoUrl: null,
+        recommendNote: "쯔양이 방문해 리뷰한 중식 맛집."
+      }
+    ]
   },
   {
     id: "jjy-046",
@@ -2382,10 +899,14 @@ const CURATED_FOOD = [
     kakaoUrl: "http://place.map.kakao.com/1701535637",
     rating: null,
     reviewCount: null,
-    youtuber: "쯔양",
-    videoTitle: null,
-    videoUrl: null,
-    recommendNote: "쯔양이 방문해 리뷰한 양식 맛집."
+    youtubers: [
+      {
+        name: "쯔양",
+        videoTitle: null,
+        videoUrl: null,
+        recommendNote: "쯔양이 방문해 리뷰한 양식 맛집."
+      }
+    ]
   },
   {
     id: "jjy-047",
@@ -2398,10 +919,14 @@ const CURATED_FOOD = [
     kakaoUrl: "http://place.map.kakao.com/1528475971",
     rating: null,
     reviewCount: null,
-    youtuber: "쯔양",
-    videoTitle: null,
-    videoUrl: null,
-    recommendNote: "쯔양이 방문해 리뷰한 찜·탕 맛집."
+    youtubers: [
+      {
+        name: "쯔양",
+        videoTitle: null,
+        videoUrl: null,
+        recommendNote: "쯔양이 방문해 리뷰한 찜·탕 맛집."
+      }
+    ]
   },
   {
     id: "jjy-048",
@@ -2414,10 +939,14 @@ const CURATED_FOOD = [
     kakaoUrl: "http://place.map.kakao.com/10136734",
     rating: null,
     reviewCount: null,
-    youtuber: "쯔양",
-    videoTitle: null,
-    videoUrl: null,
-    recommendNote: "쯔양이 방문해 리뷰한 한식 맛집."
+    youtubers: [
+      {
+        name: "쯔양",
+        videoTitle: null,
+        videoUrl: null,
+        recommendNote: "쯔양이 방문해 리뷰한 한식 맛집."
+      }
+    ]
   },
   {
     id: "jjy-049",
@@ -2430,10 +959,14 @@ const CURATED_FOOD = [
     kakaoUrl: "http://place.map.kakao.com/846439834",
     rating: null,
     reviewCount: null,
-    youtuber: "쯔양",
-    videoTitle: null,
-    videoUrl: null,
-    recommendNote: "쯔양이 방문해 리뷰한 분식 맛집."
+    youtubers: [
+      {
+        name: "쯔양",
+        videoTitle: null,
+        videoUrl: null,
+        recommendNote: "쯔양이 방문해 리뷰한 분식 맛집."
+      }
+    ]
   },
   {
     id: "jjy-050",
@@ -2446,10 +979,14 @@ const CURATED_FOOD = [
     kakaoUrl: "http://place.map.kakao.com/15278736",
     rating: null,
     reviewCount: null,
-    youtuber: "쯔양",
-    videoTitle: null,
-    videoUrl: null,
-    recommendNote: "쯔양이 방문해 리뷰한 한식 맛집."
+    youtubers: [
+      {
+        name: "쯔양",
+        videoTitle: null,
+        videoUrl: null,
+        recommendNote: "쯔양이 방문해 리뷰한 한식 맛집."
+      }
+    ]
   },
   {
     id: "jjy-051",
@@ -2462,10 +999,14 @@ const CURATED_FOOD = [
     kakaoUrl: "http://place.map.kakao.com/15928968",
     rating: null,
     reviewCount: null,
-    youtuber: "쯔양",
-    videoTitle: null,
-    videoUrl: null,
-    recommendNote: "쯔양이 방문해 리뷰한 찜·탕 맛집."
+    youtubers: [
+      {
+        name: "쯔양",
+        videoTitle: null,
+        videoUrl: null,
+        recommendNote: "쯔양이 방문해 리뷰한 찜·탕 맛집."
+      }
+    ]
   },
   {
     id: "jjy-052",
@@ -2478,10 +1019,14 @@ const CURATED_FOOD = [
     kakaoUrl: "http://place.map.kakao.com/1253348263",
     rating: null,
     reviewCount: null,
-    youtuber: "쯔양",
-    videoTitle: null,
-    videoUrl: null,
-    recommendNote: "쯔양이 방문해 리뷰한 치킨 전문점."
+    youtubers: [
+      {
+        name: "쯔양",
+        videoTitle: null,
+        videoUrl: null,
+        recommendNote: "쯔양이 방문해 리뷰한 치킨 전문점."
+      }
+    ]
   },
   {
     id: "jjy-053",
@@ -2494,10 +1039,14 @@ const CURATED_FOOD = [
     kakaoUrl: "http://place.map.kakao.com/21325321",
     rating: null,
     reviewCount: null,
-    youtuber: "쯔양",
-    videoTitle: null,
-    videoUrl: null,
-    recommendNote: "쯔양이 방문해 리뷰한 한식 맛집."
+    youtubers: [
+      {
+        name: "쯔양",
+        videoTitle: null,
+        videoUrl: null,
+        recommendNote: "쯔양이 방문해 리뷰한 한식 맛집."
+      }
+    ]
   },
   {
     id: "jjy-054",
@@ -2510,10 +1059,14 @@ const CURATED_FOOD = [
     kakaoUrl: "http://place.map.kakao.com/358997687",
     rating: null,
     reviewCount: null,
-    youtuber: "쯔양",
-    videoTitle: null,
-    videoUrl: null,
-    recommendNote: "쯔양이 방문해 리뷰한 찜·탕 맛집."
+    youtubers: [
+      {
+        name: "쯔양",
+        videoTitle: null,
+        videoUrl: null,
+        recommendNote: "쯔양이 방문해 리뷰한 찜·탕 맛집."
+      }
+    ]
   },
   {
     id: "jjy-055",
@@ -2526,10 +1079,14 @@ const CURATED_FOOD = [
     kakaoUrl: "http://place.map.kakao.com/1782126780",
     rating: null,
     reviewCount: null,
-    youtuber: "쯔양",
-    videoTitle: null,
-    videoUrl: null,
-    recommendNote: "쯔양이 방문해 리뷰한 찜·탕 맛집."
+    youtubers: [
+      {
+        name: "쯔양",
+        videoTitle: null,
+        videoUrl: null,
+        recommendNote: "쯔양이 방문해 리뷰한 찜·탕 맛집."
+      }
+    ]
   },
   {
     id: "jjy-056",
@@ -2542,10 +1099,14 @@ const CURATED_FOOD = [
     kakaoUrl: "http://place.map.kakao.com/518689703",
     rating: null,
     reviewCount: null,
-    youtuber: "쯔양",
-    videoTitle: null,
-    videoUrl: null,
-    recommendNote: "쯔양이 방문해 리뷰한 카페·디저트 맛집."
+    youtubers: [
+      {
+        name: "쯔양",
+        videoTitle: null,
+        videoUrl: null,
+        recommendNote: "쯔양이 방문해 리뷰한 카페·디저트 맛집."
+      }
+    ]
   },
   {
     id: "jjy-057",
@@ -2558,10 +1119,14 @@ const CURATED_FOOD = [
     kakaoUrl: "http://place.map.kakao.com/20534938",
     rating: null,
     reviewCount: null,
-    youtuber: "쯔양",
-    videoTitle: null,
-    videoUrl: null,
-    recommendNote: "쯔양이 방문해 리뷰한 한식 맛집."
+    youtubers: [
+      {
+        name: "쯔양",
+        videoTitle: null,
+        videoUrl: null,
+        recommendNote: "쯔양이 방문해 리뷰한 한식 맛집."
+      }
+    ]
   },
   {
     id: "jjy-058",
@@ -2574,10 +1139,14 @@ const CURATED_FOOD = [
     kakaoUrl: "http://place.map.kakao.com/21224205",
     rating: null,
     reviewCount: null,
-    youtuber: "쯔양",
-    videoTitle: null,
-    videoUrl: null,
-    recommendNote: "쯔양이 방문해 리뷰한 한식 맛집."
+    youtubers: [
+      {
+        name: "쯔양",
+        videoTitle: null,
+        videoUrl: null,
+        recommendNote: "쯔양이 방문해 리뷰한 한식 맛집."
+      }
+    ]
   },
   {
     id: "jjy-059",
@@ -2590,10 +1159,14 @@ const CURATED_FOOD = [
     kakaoUrl: "http://place.map.kakao.com/16779100",
     rating: null,
     reviewCount: null,
-    youtuber: "쯔양",
-    videoTitle: null,
-    videoUrl: null,
-    recommendNote: "쯔양이 방문해 리뷰한 한식 맛집."
+    youtubers: [
+      {
+        name: "쯔양",
+        videoTitle: null,
+        videoUrl: null,
+        recommendNote: "쯔양이 방문해 리뷰한 한식 맛집."
+      }
+    ]
   },
   {
     id: "jjy-060",
@@ -2606,10 +1179,14 @@ const CURATED_FOOD = [
     kakaoUrl: "http://place.map.kakao.com/1515963409",
     rating: null,
     reviewCount: null,
-    youtuber: "쯔양",
-    videoTitle: null,
-    videoUrl: null,
-    recommendNote: "쯔양이 방문해 리뷰한 한식 맛집."
+    youtubers: [
+      {
+        name: "쯔양",
+        videoTitle: null,
+        videoUrl: null,
+        recommendNote: "쯔양이 방문해 리뷰한 한식 맛집."
+      }
+    ]
   },
   {
     id: "jjy-061",
@@ -2622,10 +1199,14 @@ const CURATED_FOOD = [
     kakaoUrl: "http://place.map.kakao.com/24481979",
     rating: null,
     reviewCount: null,
-    youtuber: "쯔양",
-    videoTitle: null,
-    videoUrl: null,
-    recommendNote: "쯔양이 방문해 리뷰한 중식 맛집."
+    youtubers: [
+      {
+        name: "쯔양",
+        videoTitle: null,
+        videoUrl: null,
+        recommendNote: "쯔양이 방문해 리뷰한 중식 맛집."
+      }
+    ]
   },
   {
     id: "jjy-062",
@@ -2638,10 +1219,14 @@ const CURATED_FOOD = [
     kakaoUrl: "http://place.map.kakao.com/15907104",
     rating: null,
     reviewCount: null,
-    youtuber: "쯔양",
-    videoTitle: null,
-    videoUrl: null,
-    recommendNote: "쯔양이 방문해 리뷰한 분식 맛집."
+    youtubers: [
+      {
+        name: "쯔양",
+        videoTitle: null,
+        videoUrl: null,
+        recommendNote: "쯔양이 방문해 리뷰한 분식 맛집."
+      }
+    ]
   },
   {
     id: "jjy-063",
@@ -2654,10 +1239,14 @@ const CURATED_FOOD = [
     kakaoUrl: "http://place.map.kakao.com/219304883",
     rating: null,
     reviewCount: null,
-    youtuber: "쯔양",
-    videoTitle: null,
-    videoUrl: null,
-    recommendNote: "쯔양이 방문해 리뷰한 한식 맛집."
+    youtubers: [
+      {
+        name: "쯔양",
+        videoTitle: null,
+        videoUrl: null,
+        recommendNote: "쯔양이 방문해 리뷰한 한식 맛집."
+      }
+    ]
   },
   {
     id: "jjy-064",
@@ -2670,10 +1259,14 @@ const CURATED_FOOD = [
     kakaoUrl: "http://place.map.kakao.com/16586486",
     rating: null,
     reviewCount: null,
-    youtuber: "쯔양",
-    videoTitle: null,
-    videoUrl: null,
-    recommendNote: "쯔양이 방문해 리뷰한 한식 맛집."
+    youtubers: [
+      {
+        name: "쯔양",
+        videoTitle: null,
+        videoUrl: null,
+        recommendNote: "쯔양이 방문해 리뷰한 한식 맛집."
+      }
+    ]
   },
   {
     id: "jjy-065",
@@ -2686,10 +1279,14 @@ const CURATED_FOOD = [
     kakaoUrl: "http://place.map.kakao.com/23878877",
     rating: null,
     reviewCount: null,
-    youtuber: "쯔양",
-    videoTitle: null,
-    videoUrl: null,
-    recommendNote: "쯔양이 방문해 리뷰한 분식 맛집."
+    youtubers: [
+      {
+        name: "쯔양",
+        videoTitle: null,
+        videoUrl: null,
+        recommendNote: "쯔양이 방문해 리뷰한 분식 맛집."
+      }
+    ]
   },
   {
     id: "jjy-066",
@@ -2702,10 +1299,14 @@ const CURATED_FOOD = [
     kakaoUrl: "http://place.map.kakao.com/17304590",
     rating: null,
     reviewCount: null,
-    youtuber: "쯔양",
-    videoTitle: null,
-    videoUrl: null,
-    recommendNote: "쯔양이 방문해 리뷰한 분식 맛집."
+    youtubers: [
+      {
+        name: "쯔양",
+        videoTitle: null,
+        videoUrl: null,
+        recommendNote: "쯔양이 방문해 리뷰한 분식 맛집."
+      }
+    ]
   },
   {
     id: "jjy-067",
@@ -2718,10 +1319,14 @@ const CURATED_FOOD = [
     kakaoUrl: "http://place.map.kakao.com/2141404953",
     rating: null,
     reviewCount: null,
-    youtuber: "쯔양",
-    videoTitle: null,
-    videoUrl: null,
-    recommendNote: "쯔양이 방문해 리뷰한 한식 맛집."
+    youtubers: [
+      {
+        name: "쯔양",
+        videoTitle: null,
+        videoUrl: null,
+        recommendNote: "쯔양이 방문해 리뷰한 한식 맛집."
+      }
+    ]
   },
   {
     id: "jjy-068",
@@ -2734,10 +1339,14 @@ const CURATED_FOOD = [
     kakaoUrl: "http://place.map.kakao.com/16588301",
     rating: null,
     reviewCount: null,
-    youtuber: "쯔양",
-    videoTitle: null,
-    videoUrl: null,
-    recommendNote: "쯔양이 방문해 리뷰한 분식 맛집."
+    youtubers: [
+      {
+        name: "쯔양",
+        videoTitle: null,
+        videoUrl: null,
+        recommendNote: "쯔양이 방문해 리뷰한 분식 맛집."
+      }
+    ]
   },
   {
     id: "jjy-069",
@@ -2750,10 +1359,14 @@ const CURATED_FOOD = [
     kakaoUrl: "http://place.map.kakao.com/10201781",
     rating: null,
     reviewCount: null,
-    youtuber: "쯔양",
-    videoTitle: null,
-    videoUrl: null,
-    recommendNote: "쯔양이 방문해 리뷰한 분식 맛집."
+    youtubers: [
+      {
+        name: "쯔양",
+        videoTitle: null,
+        videoUrl: null,
+        recommendNote: "쯔양이 방문해 리뷰한 분식 맛집."
+      }
+    ]
   },
   {
     id: "jjy-070",
@@ -2766,10 +1379,14 @@ const CURATED_FOOD = [
     kakaoUrl: "http://place.map.kakao.com/10201006",
     rating: null,
     reviewCount: null,
-    youtuber: "쯔양",
-    videoTitle: null,
-    videoUrl: null,
-    recommendNote: "쯔양이 방문해 리뷰한 돈까스·회 전문점."
+    youtubers: [
+      {
+        name: "쯔양",
+        videoTitle: null,
+        videoUrl: null,
+        recommendNote: "쯔양이 방문해 리뷰한 돈까스·회 전문점."
+      }
+    ]
   },
   {
     id: "jjy-071",
@@ -2782,10 +1399,14 @@ const CURATED_FOOD = [
     kakaoUrl: "http://place.map.kakao.com/27328740",
     rating: null,
     reviewCount: null,
-    youtuber: "쯔양",
-    videoTitle: null,
-    videoUrl: null,
-    recommendNote: "쯔양이 방문해 리뷰한 돈까스·회 전문점."
+    youtubers: [
+      {
+        name: "쯔양",
+        videoTitle: null,
+        videoUrl: null,
+        recommendNote: "쯔양이 방문해 리뷰한 돈까스·회 전문점."
+      }
+    ]
   },
   {
     id: "jjy-072",
@@ -2798,10 +1419,14 @@ const CURATED_FOOD = [
     kakaoUrl: "http://place.map.kakao.com/8819283",
     rating: null,
     reviewCount: null,
-    youtuber: "쯔양",
-    videoTitle: null,
-    videoUrl: null,
-    recommendNote: "쯔양이 방문해 리뷰한 찜·탕 맛집."
+    youtubers: [
+      {
+        name: "쯔양",
+        videoTitle: null,
+        videoUrl: null,
+        recommendNote: "쯔양이 방문해 리뷰한 찜·탕 맛집."
+      }
+    ]
   },
   {
     id: "jjy-073",
@@ -2814,10 +1439,14 @@ const CURATED_FOOD = [
     kakaoUrl: "http://place.map.kakao.com/25968685",
     rating: null,
     reviewCount: null,
-    youtuber: "쯔양",
-    videoTitle: null,
-    videoUrl: null,
-    recommendNote: "쯔양이 방문해 리뷰한 돈까스·회 전문점."
+    youtubers: [
+      {
+        name: "쯔양",
+        videoTitle: null,
+        videoUrl: null,
+        recommendNote: "쯔양이 방문해 리뷰한 돈까스·회 전문점."
+      }
+    ]
   },
   {
     id: "jjy-074",
@@ -2830,10 +1459,14 @@ const CURATED_FOOD = [
     kakaoUrl: "http://place.map.kakao.com/2088745005",
     rating: null,
     reviewCount: null,
-    youtuber: "쯔양",
-    videoTitle: null,
-    videoUrl: null,
-    recommendNote: "쯔양이 방문해 리뷰한 돈까스·회 전문점."
+    youtubers: [
+      {
+        name: "쯔양",
+        videoTitle: null,
+        videoUrl: null,
+        recommendNote: "쯔양이 방문해 리뷰한 돈까스·회 전문점."
+      }
+    ]
   },
   {
     id: "jjy-075",
@@ -2846,10 +1479,14 @@ const CURATED_FOOD = [
     kakaoUrl: "http://place.map.kakao.com/10200737",
     rating: null,
     reviewCount: null,
-    youtuber: "쯔양",
-    videoTitle: null,
-    videoUrl: null,
-    recommendNote: "쯔양이 방문해 리뷰한 중식 맛집."
+    youtubers: [
+      {
+        name: "쯔양",
+        videoTitle: null,
+        videoUrl: null,
+        recommendNote: "쯔양이 방문해 리뷰한 중식 맛집."
+      }
+    ]
   },
   {
     id: "jjy-076",
@@ -2862,10 +1499,14 @@ const CURATED_FOOD = [
     kakaoUrl: "http://place.map.kakao.com/15971668",
     rating: null,
     reviewCount: null,
-    youtuber: "쯔양",
-    videoTitle: null,
-    videoUrl: null,
-    recommendNote: "쯔양이 방문해 리뷰한 찜·탕 맛집."
+    youtubers: [
+      {
+        name: "쯔양",
+        videoTitle: null,
+        videoUrl: null,
+        recommendNote: "쯔양이 방문해 리뷰한 찜·탕 맛집."
+      }
+    ]
   },
   {
     id: "jjy-077",
@@ -2878,10 +1519,14 @@ const CURATED_FOOD = [
     kakaoUrl: "http://place.map.kakao.com/16846910",
     rating: null,
     reviewCount: null,
-    youtuber: "쯔양",
-    videoTitle: null,
-    videoUrl: null,
-    recommendNote: "쯔양이 방문해 리뷰한 한식 맛집."
+    youtubers: [
+      {
+        name: "쯔양",
+        videoTitle: null,
+        videoUrl: null,
+        recommendNote: "쯔양이 방문해 리뷰한 한식 맛집."
+      }
+    ]
   },
   {
     id: "jjy-078",
@@ -2894,10 +1539,14 @@ const CURATED_FOOD = [
     kakaoUrl: "http://place.map.kakao.com/8234310",
     rating: null,
     reviewCount: null,
-    youtuber: "쯔양",
-    videoTitle: null,
-    videoUrl: null,
-    recommendNote: "쯔양이 방문해 리뷰한 한식 맛집."
+    youtubers: [
+      {
+        name: "쯔양",
+        videoTitle: null,
+        videoUrl: null,
+        recommendNote: "쯔양이 방문해 리뷰한 한식 맛집."
+      }
+    ]
   },
   {
     id: "jjy-079",
@@ -2910,10 +1559,14 @@ const CURATED_FOOD = [
     kakaoUrl: "http://place.map.kakao.com/1228257268",
     rating: null,
     reviewCount: null,
-    youtuber: "쯔양",
-    videoTitle: null,
-    videoUrl: null,
-    recommendNote: "쯔양이 방문해 리뷰한 고기 맛집."
+    youtubers: [
+      {
+        name: "쯔양",
+        videoTitle: null,
+        videoUrl: null,
+        recommendNote: "쯔양이 방문해 리뷰한 고기 맛집."
+      }
+    ]
   },
   {
     id: "jjy-081",
@@ -2926,10 +1579,14 @@ const CURATED_FOOD = [
     kakaoUrl: "http://place.map.kakao.com/20536942",
     rating: null,
     reviewCount: null,
-    youtuber: "쯔양",
-    videoTitle: null,
-    videoUrl: null,
-    recommendNote: "쯔양이 방문해 리뷰한 분식 맛집."
+    youtubers: [
+      {
+        name: "쯔양",
+        videoTitle: null,
+        videoUrl: null,
+        recommendNote: "쯔양이 방문해 리뷰한 분식 맛집."
+      }
+    ]
   },
   {
     id: "jjy-082",
@@ -2942,10 +1599,14 @@ const CURATED_FOOD = [
     kakaoUrl: "http://place.map.kakao.com/11597189",
     rating: null,
     reviewCount: null,
-    youtuber: "쯔양",
-    videoTitle: null,
-    videoUrl: null,
-    recommendNote: "쯔양이 방문해 리뷰한 돈까스·회 전문점."
+    youtubers: [
+      {
+        name: "쯔양",
+        videoTitle: null,
+        videoUrl: null,
+        recommendNote: "쯔양이 방문해 리뷰한 돈까스·회 전문점."
+      }
+    ]
   },
   {
     id: "jjy-084",
@@ -2958,10 +1619,14 @@ const CURATED_FOOD = [
     kakaoUrl: "http://place.map.kakao.com/27245494",
     rating: null,
     reviewCount: null,
-    youtuber: "쯔양",
-    videoTitle: null,
-    videoUrl: null,
-    recommendNote: "쯔양이 방문해 리뷰한 한식 맛집."
+    youtubers: [
+      {
+        name: "쯔양",
+        videoTitle: null,
+        videoUrl: null,
+        recommendNote: "쯔양이 방문해 리뷰한 한식 맛집."
+      }
+    ]
   },
   {
     id: "jjy-085",
@@ -2974,10 +1639,14 @@ const CURATED_FOOD = [
     kakaoUrl: "http://place.map.kakao.com/8205369",
     rating: null,
     reviewCount: null,
-    youtuber: "쯔양",
-    videoTitle: null,
-    videoUrl: null,
-    recommendNote: "쯔양이 방문해 리뷰한 돈까스·회 전문점."
+    youtubers: [
+      {
+        name: "쯔양",
+        videoTitle: null,
+        videoUrl: null,
+        recommendNote: "쯔양이 방문해 리뷰한 돈까스·회 전문점."
+      }
+    ]
   },
   {
     id: "jjy-086",
@@ -2990,10 +1659,14 @@ const CURATED_FOOD = [
     kakaoUrl: "http://place.map.kakao.com/9704834",
     rating: null,
     reviewCount: null,
-    youtuber: "쯔양",
-    videoTitle: null,
-    videoUrl: null,
-    recommendNote: "쯔양이 방문해 리뷰한 한식 맛집."
+    youtubers: [
+      {
+        name: "쯔양",
+        videoTitle: null,
+        videoUrl: null,
+        recommendNote: "쯔양이 방문해 리뷰한 한식 맛집."
+      }
+    ]
   },
   {
     id: "jjy-087",
@@ -3006,10 +1679,14 @@ const CURATED_FOOD = [
     kakaoUrl: "http://place.map.kakao.com/16063288",
     rating: null,
     reviewCount: null,
-    youtuber: "쯔양",
-    videoTitle: null,
-    videoUrl: null,
-    recommendNote: "쯔양이 방문해 리뷰한 분식 맛집."
+    youtubers: [
+      {
+        name: "쯔양",
+        videoTitle: null,
+        videoUrl: null,
+        recommendNote: "쯔양이 방문해 리뷰한 분식 맛집."
+      }
+    ]
   },
   {
     id: "jjy-088",
@@ -3022,10 +1699,14 @@ const CURATED_FOOD = [
     kakaoUrl: "http://place.map.kakao.com/1483741259",
     rating: null,
     reviewCount: null,
-    youtuber: "쯔양",
-    videoTitle: null,
-    videoUrl: null,
-    recommendNote: "쯔양이 방문해 리뷰한 카페·디저트 맛집."
+    youtubers: [
+      {
+        name: "쯔양",
+        videoTitle: null,
+        videoUrl: null,
+        recommendNote: "쯔양이 방문해 리뷰한 카페·디저트 맛집."
+      }
+    ]
   },
   {
     id: "jjy-089",
@@ -3038,10 +1719,14 @@ const CURATED_FOOD = [
     kakaoUrl: "http://place.map.kakao.com/8193918",
     rating: null,
     reviewCount: null,
-    youtuber: "쯔양",
-    videoTitle: null,
-    videoUrl: null,
-    recommendNote: "쯔양이 방문해 리뷰한 한식 맛집."
+    youtubers: [
+      {
+        name: "쯔양",
+        videoTitle: null,
+        videoUrl: null,
+        recommendNote: "쯔양이 방문해 리뷰한 한식 맛집."
+      }
+    ]
   },
   {
     id: "jjy-090",
@@ -3054,10 +1739,14 @@ const CURATED_FOOD = [
     kakaoUrl: "http://place.map.kakao.com/1198457054",
     rating: null,
     reviewCount: null,
-    youtuber: "쯔양",
-    videoTitle: null,
-    videoUrl: null,
-    recommendNote: "쯔양이 방문해 리뷰한 고기 맛집."
+    youtubers: [
+      {
+        name: "쯔양",
+        videoTitle: null,
+        videoUrl: null,
+        recommendNote: "쯔양이 방문해 리뷰한 고기 맛집."
+      }
+    ]
   },
   {
     id: "jjy-091",
@@ -3070,10 +1759,14 @@ const CURATED_FOOD = [
     kakaoUrl: "http://place.map.kakao.com/16380488",
     rating: null,
     reviewCount: null,
-    youtuber: "쯔양",
-    videoTitle: null,
-    videoUrl: null,
-    recommendNote: "쯔양이 방문해 리뷰한 양식 맛집."
+    youtubers: [
+      {
+        name: "쯔양",
+        videoTitle: null,
+        videoUrl: null,
+        recommendNote: "쯔양이 방문해 리뷰한 양식 맛집."
+      }
+    ]
   },
   {
     id: "jjy-092",
@@ -3086,10 +1779,14 @@ const CURATED_FOOD = [
     kakaoUrl: "http://place.map.kakao.com/8849564",
     rating: null,
     reviewCount: null,
-    youtuber: "쯔양",
-    videoTitle: null,
-    videoUrl: null,
-    recommendNote: "쯔양이 방문해 리뷰한 분식 맛집."
+    youtubers: [
+      {
+        name: "쯔양",
+        videoTitle: null,
+        videoUrl: null,
+        recommendNote: "쯔양이 방문해 리뷰한 분식 맛집."
+      }
+    ]
   },
   {
     id: "jjy-093",
@@ -3102,10 +1799,14 @@ const CURATED_FOOD = [
     kakaoUrl: "http://place.map.kakao.com/1395737067",
     rating: null,
     reviewCount: null,
-    youtuber: "쯔양",
-    videoTitle: null,
-    videoUrl: null,
-    recommendNote: "쯔양이 방문해 리뷰한 치킨 전문점."
+    youtubers: [
+      {
+        name: "쯔양",
+        videoTitle: null,
+        videoUrl: null,
+        recommendNote: "쯔양이 방문해 리뷰한 치킨 전문점."
+      }
+    ]
   },
   {
     id: "jjy-094",
@@ -3118,10 +1819,14 @@ const CURATED_FOOD = [
     kakaoUrl: "http://place.map.kakao.com/46948751",
     rating: null,
     reviewCount: null,
-    youtuber: "쯔양",
-    videoTitle: null,
-    videoUrl: null,
-    recommendNote: "쯔양이 방문해 리뷰한 한식 맛집."
+    youtubers: [
+      {
+        name: "쯔양",
+        videoTitle: null,
+        videoUrl: null,
+        recommendNote: "쯔양이 방문해 리뷰한 한식 맛집."
+      }
+    ]
   },
   {
     id: "jjy-095",
@@ -3134,10 +1839,14 @@ const CURATED_FOOD = [
     kakaoUrl: "http://place.map.kakao.com/20644347",
     rating: null,
     reviewCount: null,
-    youtuber: "쯔양",
-    videoTitle: null,
-    videoUrl: null,
-    recommendNote: "쯔양이 방문해 리뷰한 한식 맛집."
+    youtubers: [
+      {
+        name: "쯔양",
+        videoTitle: null,
+        videoUrl: null,
+        recommendNote: "쯔양이 방문해 리뷰한 한식 맛집."
+      }
+    ]
   },
   {
     id: "jjy-096",
@@ -3150,10 +1859,14 @@ const CURATED_FOOD = [
     kakaoUrl: "http://place.map.kakao.com/15724336",
     rating: null,
     reviewCount: null,
-    youtuber: "쯔양",
-    videoTitle: null,
-    videoUrl: null,
-    recommendNote: "쯔양이 방문해 리뷰한 고기 맛집."
+    youtubers: [
+      {
+        name: "쯔양",
+        videoTitle: null,
+        videoUrl: null,
+        recommendNote: "쯔양이 방문해 리뷰한 고기 맛집."
+      }
+    ]
   },
   {
     id: "jjy-097",
@@ -3166,10 +1879,14 @@ const CURATED_FOOD = [
     kakaoUrl: "http://place.map.kakao.com/18495699",
     rating: null,
     reviewCount: null,
-    youtuber: "쯔양",
-    videoTitle: null,
-    videoUrl: null,
-    recommendNote: "쯔양이 방문해 리뷰한 한식 맛집."
+    youtubers: [
+      {
+        name: "쯔양",
+        videoTitle: null,
+        videoUrl: null,
+        recommendNote: "쯔양이 방문해 리뷰한 한식 맛집."
+      }
+    ]
   },
   {
     id: "jjy-098",
@@ -3182,10 +1899,14 @@ const CURATED_FOOD = [
     kakaoUrl: "http://place.map.kakao.com/15751431",
     rating: null,
     reviewCount: null,
-    youtuber: "쯔양",
-    videoTitle: null,
-    videoUrl: null,
-    recommendNote: "쯔양이 방문해 리뷰한 한식 맛집."
+    youtubers: [
+      {
+        name: "쯔양",
+        videoTitle: null,
+        videoUrl: null,
+        recommendNote: "쯔양이 방문해 리뷰한 한식 맛집."
+      }
+    ]
   },
   {
     id: "jjy-099",
@@ -3198,10 +1919,14 @@ const CURATED_FOOD = [
     kakaoUrl: "http://place.map.kakao.com/21506143",
     rating: null,
     reviewCount: null,
-    youtuber: "쯔양",
-    videoTitle: null,
-    videoUrl: null,
-    recommendNote: "쯔양이 방문해 리뷰한 분식 맛집."
+    youtubers: [
+      {
+        name: "쯔양",
+        videoTitle: null,
+        videoUrl: null,
+        recommendNote: "쯔양이 방문해 리뷰한 분식 맛집."
+      }
+    ]
   },
   {
     id: "jjy-100",
@@ -3214,10 +1939,20 @@ const CURATED_FOOD = [
     kakaoUrl: "http://place.map.kakao.com/14663453",
     rating: null,
     reviewCount: null,
-    youtuber: "쯔양",
-    videoTitle: null,
-    videoUrl: null,
-    recommendNote: "쯔양이 방문해 리뷰한 고기 맛집."
+    youtubers: [
+      {
+        name: "쯔양",
+        videoTitle: null,
+        videoUrl: null,
+        recommendNote: "쯔양이 방문해 리뷰한 고기 맛집."
+      },
+      {
+        name: "또간집(풍자)",
+        videoTitle: null,
+        videoUrl: null,
+        recommendNote: "건대 맛집으로 소개됐으며, 양다리 바베큐와 꿔바로우가 또갈집으로 선정됐다."
+      }
+    ]
   },
   {
     id: "jjy-101",
@@ -3230,10 +1965,14 @@ const CURATED_FOOD = [
     kakaoUrl: "http://place.map.kakao.com/702878329",
     rating: null,
     reviewCount: null,
-    youtuber: "쯔양",
-    videoTitle: null,
-    videoUrl: null,
-    recommendNote: "쯔양이 방문해 리뷰한 양식 맛집."
+    youtubers: [
+      {
+        name: "쯔양",
+        videoTitle: null,
+        videoUrl: null,
+        recommendNote: "쯔양이 방문해 리뷰한 양식 맛집."
+      }
+    ]
   },
   {
     id: "jjy-102",
@@ -3246,10 +1985,14 @@ const CURATED_FOOD = [
     kakaoUrl: "http://place.map.kakao.com/8891473",
     rating: null,
     reviewCount: null,
-    youtuber: "쯔양",
-    videoTitle: null,
-    videoUrl: null,
-    recommendNote: "쯔양이 방문해 리뷰한 한식 맛집."
+    youtubers: [
+      {
+        name: "쯔양",
+        videoTitle: null,
+        videoUrl: null,
+        recommendNote: "쯔양이 방문해 리뷰한 한식 맛집."
+      }
+    ]
   },
   {
     id: "jjy-103",
@@ -3262,10 +2005,20 @@ const CURATED_FOOD = [
     kakaoUrl: "http://place.map.kakao.com/1013923338",
     rating: null,
     reviewCount: null,
-    youtuber: "쯔양",
-    videoTitle: null,
-    videoUrl: null,
-    recommendNote: "쯔양이 방문해 리뷰한 돈까스·회 전문점."
+    youtubers: [
+      {
+        name: "쯔양",
+        videoTitle: null,
+        videoUrl: null,
+        recommendNote: "쯔양이 방문해 리뷰한 돈까스·회 전문점."
+      },
+      {
+        name: "승우아빠",
+        videoTitle: null,
+        videoUrl: null,
+        recommendNote: "내년까지 예약이 꽉 찼다는 튀김(덴푸라) 오마카세 전문점으로 소개됐다."
+      }
+    ]
   },
   {
     id: "jjy-104",
@@ -3278,10 +2031,14 @@ const CURATED_FOOD = [
     kakaoUrl: "http://place.map.kakao.com/864103404",
     rating: null,
     reviewCount: null,
-    youtuber: "쯔양",
-    videoTitle: null,
-    videoUrl: null,
-    recommendNote: "쯔양이 방문해 리뷰한 고기 맛집."
+    youtubers: [
+      {
+        name: "쯔양",
+        videoTitle: null,
+        videoUrl: null,
+        recommendNote: "쯔양이 방문해 리뷰한 고기 맛집."
+      }
+    ]
   },
   {
     id: "jjy-105",
@@ -3294,10 +2051,14 @@ const CURATED_FOOD = [
     kakaoUrl: "http://place.map.kakao.com/1330892374",
     rating: null,
     reviewCount: null,
-    youtuber: "쯔양",
-    videoTitle: null,
-    videoUrl: null,
-    recommendNote: "쯔양이 방문해 리뷰한 중식 맛집."
+    youtubers: [
+      {
+        name: "쯔양",
+        videoTitle: null,
+        videoUrl: null,
+        recommendNote: "쯔양이 방문해 리뷰한 중식 맛집."
+      }
+    ]
   },
   {
     id: "jjy-106",
@@ -3310,10 +2071,14 @@ const CURATED_FOOD = [
     kakaoUrl: "http://place.map.kakao.com/12460195",
     rating: null,
     reviewCount: null,
-    youtuber: "쯔양",
-    videoTitle: null,
-    videoUrl: null,
-    recommendNote: "쯔양이 방문해 리뷰한 돈까스·회 전문점."
+    youtubers: [
+      {
+        name: "쯔양",
+        videoTitle: null,
+        videoUrl: null,
+        recommendNote: "쯔양이 방문해 리뷰한 돈까스·회 전문점."
+      }
+    ]
   },
   {
     id: "jjy-107",
@@ -3326,10 +2091,14 @@ const CURATED_FOOD = [
     kakaoUrl: "http://place.map.kakao.com/13096291",
     rating: null,
     reviewCount: null,
-    youtuber: "쯔양",
-    videoTitle: null,
-    videoUrl: null,
-    recommendNote: "쯔양이 방문해 리뷰한 돈까스·회 전문점."
+    youtubers: [
+      {
+        name: "쯔양",
+        videoTitle: null,
+        videoUrl: null,
+        recommendNote: "쯔양이 방문해 리뷰한 돈까스·회 전문점."
+      }
+    ]
   },
   {
     id: "jjy-108",
@@ -3342,10 +2111,14 @@ const CURATED_FOOD = [
     kakaoUrl: "http://place.map.kakao.com/1298842981",
     rating: null,
     reviewCount: null,
-    youtuber: "쯔양",
-    videoTitle: null,
-    videoUrl: null,
-    recommendNote: "쯔양이 방문해 리뷰한 돈까스·회 전문점."
+    youtubers: [
+      {
+        name: "쯔양",
+        videoTitle: null,
+        videoUrl: null,
+        recommendNote: "쯔양이 방문해 리뷰한 돈까스·회 전문점."
+      }
+    ]
   },
   {
     id: "jjy-109",
@@ -3358,10 +2131,14 @@ const CURATED_FOOD = [
     kakaoUrl: "http://place.map.kakao.com/12639198",
     rating: null,
     reviewCount: null,
-    youtuber: "쯔양",
-    videoTitle: null,
-    videoUrl: null,
-    recommendNote: "쯔양이 방문해 리뷰한 고기 맛집."
+    youtubers: [
+      {
+        name: "쯔양",
+        videoTitle: null,
+        videoUrl: null,
+        recommendNote: "쯔양이 방문해 리뷰한 고기 맛집."
+      }
+    ]
   },
   {
     id: "jjy-110",
@@ -3374,10 +2151,14 @@ const CURATED_FOOD = [
     kakaoUrl: "http://place.map.kakao.com/8916213",
     rating: null,
     reviewCount: null,
-    youtuber: "쯔양",
-    videoTitle: null,
-    videoUrl: null,
-    recommendNote: "쯔양이 방문해 리뷰한 고기 맛집."
+    youtubers: [
+      {
+        name: "쯔양",
+        videoTitle: null,
+        videoUrl: null,
+        recommendNote: "쯔양이 방문해 리뷰한 고기 맛집."
+      }
+    ]
   },
   {
     id: "jjy-111",
@@ -3390,10 +2171,14 @@ const CURATED_FOOD = [
     kakaoUrl: "http://place.map.kakao.com/1624572111",
     rating: null,
     reviewCount: null,
-    youtuber: "쯔양",
-    videoTitle: null,
-    videoUrl: null,
-    recommendNote: "쯔양이 방문해 리뷰한 분식 맛집."
+    youtubers: [
+      {
+        name: "쯔양",
+        videoTitle: null,
+        videoUrl: null,
+        recommendNote: "쯔양이 방문해 리뷰한 분식 맛집."
+      }
+    ]
   },
   {
     id: "jjy-112",
@@ -3406,10 +2191,14 @@ const CURATED_FOOD = [
     kakaoUrl: "http://place.map.kakao.com/17764441",
     rating: null,
     reviewCount: null,
-    youtuber: "쯔양",
-    videoTitle: null,
-    videoUrl: null,
-    recommendNote: "쯔양이 방문해 리뷰한 분식 맛집."
+    youtubers: [
+      {
+        name: "쯔양",
+        videoTitle: null,
+        videoUrl: null,
+        recommendNote: "쯔양이 방문해 리뷰한 분식 맛집."
+      }
+    ]
   },
   {
     id: "jjy-113",
@@ -3422,10 +2211,14 @@ const CURATED_FOOD = [
     kakaoUrl: "http://place.map.kakao.com/549977021",
     rating: null,
     reviewCount: null,
-    youtuber: "쯔양",
-    videoTitle: null,
-    videoUrl: null,
-    recommendNote: "쯔양이 방문해 리뷰한 분식 맛집."
+    youtubers: [
+      {
+        name: "쯔양",
+        videoTitle: null,
+        videoUrl: null,
+        recommendNote: "쯔양이 방문해 리뷰한 분식 맛집."
+      }
+    ]
   },
   {
     id: "jjy-114",
@@ -3438,10 +2231,14 @@ const CURATED_FOOD = [
     kakaoUrl: "http://place.map.kakao.com/8914478",
     rating: null,
     reviewCount: null,
-    youtuber: "쯔양",
-    videoTitle: null,
-    videoUrl: null,
-    recommendNote: "쯔양이 방문해 리뷰한 한식 맛집."
+    youtubers: [
+      {
+        name: "쯔양",
+        videoTitle: null,
+        videoUrl: null,
+        recommendNote: "쯔양이 방문해 리뷰한 한식 맛집."
+      }
+    ]
   },
   {
     id: "jjy-115",
@@ -3454,10 +2251,14 @@ const CURATED_FOOD = [
     kakaoUrl: "http://place.map.kakao.com/19041717",
     rating: null,
     reviewCount: null,
-    youtuber: "쯔양",
-    videoTitle: null,
-    videoUrl: null,
-    recommendNote: "쯔양이 방문해 리뷰한 중식 맛집."
+    youtubers: [
+      {
+        name: "쯔양",
+        videoTitle: null,
+        videoUrl: null,
+        recommendNote: "쯔양이 방문해 리뷰한 중식 맛집."
+      }
+    ]
   },
   {
     id: "jjy-116",
@@ -3470,10 +2271,14 @@ const CURATED_FOOD = [
     kakaoUrl: "http://place.map.kakao.com/27361254",
     rating: null,
     reviewCount: null,
-    youtuber: "쯔양",
-    videoTitle: null,
-    videoUrl: null,
-    recommendNote: "쯔양이 방문해 리뷰한 분식 맛집."
+    youtubers: [
+      {
+        name: "쯔양",
+        videoTitle: null,
+        videoUrl: null,
+        recommendNote: "쯔양이 방문해 리뷰한 분식 맛집."
+      }
+    ]
   },
   {
     id: "jjy-117",
@@ -3486,10 +2291,14 @@ const CURATED_FOOD = [
     kakaoUrl: "http://place.map.kakao.com/17948208",
     rating: null,
     reviewCount: null,
-    youtuber: "쯔양",
-    videoTitle: null,
-    videoUrl: null,
-    recommendNote: "쯔양이 방문해 리뷰한 한식 맛집."
+    youtubers: [
+      {
+        name: "쯔양",
+        videoTitle: null,
+        videoUrl: null,
+        recommendNote: "쯔양이 방문해 리뷰한 한식 맛집."
+      }
+    ]
   },
   {
     id: "jjy-118",
@@ -3502,10 +2311,14 @@ const CURATED_FOOD = [
     kakaoUrl: "http://place.map.kakao.com/1895181104",
     rating: null,
     reviewCount: null,
-    youtuber: "쯔양",
-    videoTitle: null,
-    videoUrl: null,
-    recommendNote: "쯔양이 방문해 리뷰한 찜·탕 맛집."
+    youtubers: [
+      {
+        name: "쯔양",
+        videoTitle: null,
+        videoUrl: null,
+        recommendNote: "쯔양이 방문해 리뷰한 찜·탕 맛집."
+      }
+    ]
   },
   {
     id: "jjy-119",
@@ -3518,10 +2331,14 @@ const CURATED_FOOD = [
     kakaoUrl: "http://place.map.kakao.com/144873563",
     rating: null,
     reviewCount: null,
-    youtuber: "쯔양",
-    videoTitle: null,
-    videoUrl: null,
-    recommendNote: "쯔양이 방문해 리뷰한 고기 맛집."
+    youtubers: [
+      {
+        name: "쯔양",
+        videoTitle: null,
+        videoUrl: null,
+        recommendNote: "쯔양이 방문해 리뷰한 고기 맛집."
+      }
+    ]
   },
   {
     id: "jjy-120",
@@ -3534,10 +2351,14 @@ const CURATED_FOOD = [
     kakaoUrl: "http://place.map.kakao.com/8958913",
     rating: null,
     reviewCount: null,
-    youtuber: "쯔양",
-    videoTitle: null,
-    videoUrl: null,
-    recommendNote: "쯔양이 방문해 리뷰한 돈까스·회 전문점."
+    youtubers: [
+      {
+        name: "쯔양",
+        videoTitle: null,
+        videoUrl: null,
+        recommendNote: "쯔양이 방문해 리뷰한 돈까스·회 전문점."
+      }
+    ]
   },
   {
     id: "jjy-121",
@@ -3550,10 +2371,14 @@ const CURATED_FOOD = [
     kakaoUrl: "http://place.map.kakao.com/21423018",
     rating: null,
     reviewCount: null,
-    youtuber: "쯔양",
-    videoTitle: null,
-    videoUrl: null,
-    recommendNote: "쯔양이 방문해 리뷰한 족발·보쌈 맛집."
+    youtubers: [
+      {
+        name: "쯔양",
+        videoTitle: null,
+        videoUrl: null,
+        recommendNote: "쯔양이 방문해 리뷰한 족발·보쌈 맛집."
+      }
+    ]
   },
   {
     id: "jjy-122",
@@ -3566,10 +2391,14 @@ const CURATED_FOOD = [
     kakaoUrl: "http://place.map.kakao.com/21343398",
     rating: null,
     reviewCount: null,
-    youtuber: "쯔양",
-    videoTitle: null,
-    videoUrl: null,
-    recommendNote: "쯔양이 방문해 리뷰한 분식 맛집."
+    youtubers: [
+      {
+        name: "쯔양",
+        videoTitle: null,
+        videoUrl: null,
+        recommendNote: "쯔양이 방문해 리뷰한 분식 맛집."
+      }
+    ]
   },
   {
     id: "jjy-123",
@@ -3582,10 +2411,14 @@ const CURATED_FOOD = [
     kakaoUrl: "http://place.map.kakao.com/7857098",
     rating: null,
     reviewCount: null,
-    youtuber: "쯔양",
-    videoTitle: null,
-    videoUrl: null,
-    recommendNote: "쯔양이 방문해 리뷰한 고기 맛집."
+    youtubers: [
+      {
+        name: "쯔양",
+        videoTitle: null,
+        videoUrl: null,
+        recommendNote: "쯔양이 방문해 리뷰한 고기 맛집."
+      }
+    ]
   },
   {
     id: "jjy-124",
@@ -3598,10 +2431,14 @@ const CURATED_FOOD = [
     kakaoUrl: "http://place.map.kakao.com/26547556",
     rating: null,
     reviewCount: null,
-    youtuber: "쯔양",
-    videoTitle: null,
-    videoUrl: null,
-    recommendNote: "쯔양이 방문해 리뷰한 한식 맛집."
+    youtubers: [
+      {
+        name: "쯔양",
+        videoTitle: null,
+        videoUrl: null,
+        recommendNote: "쯔양이 방문해 리뷰한 한식 맛집."
+      }
+    ]
   },
   {
     id: "jjy-125",
@@ -3614,10 +2451,14 @@ const CURATED_FOOD = [
     kakaoUrl: "http://place.map.kakao.com/1566501996",
     rating: null,
     reviewCount: null,
-    youtuber: "쯔양",
-    videoTitle: null,
-    videoUrl: null,
-    recommendNote: "쯔양이 방문해 리뷰한 분식 맛집."
+    youtubers: [
+      {
+        name: "쯔양",
+        videoTitle: null,
+        videoUrl: null,
+        recommendNote: "쯔양이 방문해 리뷰한 분식 맛집."
+      }
+    ]
   },
   {
     id: "jjy-126",
@@ -3630,10 +2471,14 @@ const CURATED_FOOD = [
     kakaoUrl: "http://place.map.kakao.com/217809792",
     rating: null,
     reviewCount: null,
-    youtuber: "쯔양",
-    videoTitle: null,
-    videoUrl: null,
-    recommendNote: "쯔양이 방문해 리뷰한 고기 맛집."
+    youtubers: [
+      {
+        name: "쯔양",
+        videoTitle: null,
+        videoUrl: null,
+        recommendNote: "쯔양이 방문해 리뷰한 고기 맛집."
+      }
+    ]
   },
   {
     id: "jjy-127",
@@ -3646,10 +2491,14 @@ const CURATED_FOOD = [
     kakaoUrl: "http://place.map.kakao.com/25090873",
     rating: null,
     reviewCount: null,
-    youtuber: "쯔양",
-    videoTitle: null,
-    videoUrl: null,
-    recommendNote: "쯔양이 방문해 리뷰한 고기 맛집."
+    youtubers: [
+      {
+        name: "쯔양",
+        videoTitle: null,
+        videoUrl: null,
+        recommendNote: "쯔양이 방문해 리뷰한 고기 맛집."
+      }
+    ]
   },
   {
     id: "jjy-128",
@@ -3662,10 +2511,14 @@ const CURATED_FOOD = [
     kakaoUrl: "http://place.map.kakao.com/10372376",
     rating: null,
     reviewCount: null,
-    youtuber: "쯔양",
-    videoTitle: null,
-    videoUrl: null,
-    recommendNote: "쯔양이 방문해 리뷰한 양식 맛집."
+    youtubers: [
+      {
+        name: "쯔양",
+        videoTitle: null,
+        videoUrl: null,
+        recommendNote: "쯔양이 방문해 리뷰한 양식 맛집."
+      }
+    ]
   },
   {
     id: "jjy-129",
@@ -3678,10 +2531,14 @@ const CURATED_FOOD = [
     kakaoUrl: "http://place.map.kakao.com/21327910",
     rating: null,
     reviewCount: null,
-    youtuber: "쯔양",
-    videoTitle: null,
-    videoUrl: null,
-    recommendNote: "쯔양이 방문해 리뷰한 분식 맛집."
+    youtubers: [
+      {
+        name: "쯔양",
+        videoTitle: null,
+        videoUrl: null,
+        recommendNote: "쯔양이 방문해 리뷰한 분식 맛집."
+      }
+    ]
   },
   {
     id: "jjy-130",
@@ -3694,10 +2551,14 @@ const CURATED_FOOD = [
     kakaoUrl: "http://place.map.kakao.com/7856782",
     rating: null,
     reviewCount: null,
-    youtuber: "쯔양",
-    videoTitle: null,
-    videoUrl: null,
-    recommendNote: "쯔양이 방문해 리뷰한 패스트푸드 맛집."
+    youtubers: [
+      {
+        name: "쯔양",
+        videoTitle: null,
+        videoUrl: null,
+        recommendNote: "쯔양이 방문해 리뷰한 패스트푸드 맛집."
+      }
+    ]
   },
   {
     id: "jjy-131",
@@ -3710,10 +2571,14 @@ const CURATED_FOOD = [
     kakaoUrl: "http://place.map.kakao.com/21852012",
     rating: null,
     reviewCount: null,
-    youtuber: "쯔양",
-    videoTitle: null,
-    videoUrl: null,
-    recommendNote: "쯔양이 방문해 리뷰한 맛집."
+    youtubers: [
+      {
+        name: "쯔양",
+        videoTitle: null,
+        videoUrl: null,
+        recommendNote: "쯔양이 방문해 리뷰한 맛집."
+      }
+    ]
   },
   {
     id: "jjy-132",
@@ -3726,10 +2591,14 @@ const CURATED_FOOD = [
     kakaoUrl: "http://place.map.kakao.com/16644589",
     rating: null,
     reviewCount: null,
-    youtuber: "쯔양",
-    videoTitle: null,
-    videoUrl: null,
-    recommendNote: "쯔양이 방문해 리뷰한 중식 맛집."
+    youtubers: [
+      {
+        name: "쯔양",
+        videoTitle: null,
+        videoUrl: null,
+        recommendNote: "쯔양이 방문해 리뷰한 중식 맛집."
+      }
+    ]
   },
   {
     id: "jjy-133",
@@ -3742,10 +2611,14 @@ const CURATED_FOOD = [
     kakaoUrl: "http://place.map.kakao.com/8997244",
     rating: null,
     reviewCount: null,
-    youtuber: "쯔양",
-    videoTitle: null,
-    videoUrl: null,
-    recommendNote: "쯔양이 방문해 리뷰한 돈까스·회 전문점."
+    youtubers: [
+      {
+        name: "쯔양",
+        videoTitle: null,
+        videoUrl: null,
+        recommendNote: "쯔양이 방문해 리뷰한 돈까스·회 전문점."
+      }
+    ]
   },
   {
     id: "jjy-134",
@@ -3758,10 +2631,14 @@ const CURATED_FOOD = [
     kakaoUrl: "http://place.map.kakao.com/27341415",
     rating: null,
     reviewCount: null,
-    youtuber: "쯔양",
-    videoTitle: null,
-    videoUrl: null,
-    recommendNote: "쯔양이 방문해 리뷰한 분식 맛집."
+    youtubers: [
+      {
+        name: "쯔양",
+        videoTitle: null,
+        videoUrl: null,
+        recommendNote: "쯔양이 방문해 리뷰한 분식 맛집."
+      }
+    ]
   },
   {
     id: "jjy-135",
@@ -3774,10 +2651,14 @@ const CURATED_FOOD = [
     kakaoUrl: "http://place.map.kakao.com/832721235",
     rating: null,
     reviewCount: null,
-    youtuber: "쯔양",
-    videoTitle: null,
-    videoUrl: null,
-    recommendNote: "쯔양이 방문해 리뷰한 분식 맛집."
+    youtubers: [
+      {
+        name: "쯔양",
+        videoTitle: null,
+        videoUrl: null,
+        recommendNote: "쯔양이 방문해 리뷰한 분식 맛집."
+      }
+    ]
   },
   {
     id: "jjy-136",
@@ -3790,10 +2671,14 @@ const CURATED_FOOD = [
     kakaoUrl: "http://place.map.kakao.com/12447799",
     rating: null,
     reviewCount: null,
-    youtuber: "쯔양",
-    videoTitle: null,
-    videoUrl: null,
-    recommendNote: "쯔양이 방문해 리뷰한 한식 맛집."
+    youtubers: [
+      {
+        name: "쯔양",
+        videoTitle: null,
+        videoUrl: null,
+        recommendNote: "쯔양이 방문해 리뷰한 한식 맛집."
+      }
+    ]
   },
   {
     id: "jjy-137",
@@ -3806,10 +2691,14 @@ const CURATED_FOOD = [
     kakaoUrl: "http://place.map.kakao.com/21420131",
     rating: null,
     reviewCount: null,
-    youtuber: "쯔양",
-    videoTitle: null,
-    videoUrl: null,
-    recommendNote: "쯔양이 방문해 리뷰한 분식 맛집."
+    youtubers: [
+      {
+        name: "쯔양",
+        videoTitle: null,
+        videoUrl: null,
+        recommendNote: "쯔양이 방문해 리뷰한 분식 맛집."
+      }
+    ]
   },
   {
     id: "jjy-138",
@@ -3822,10 +2711,14 @@ const CURATED_FOOD = [
     kakaoUrl: "http://place.map.kakao.com/21722308",
     rating: null,
     reviewCount: null,
-    youtuber: "쯔양",
-    videoTitle: null,
-    videoUrl: null,
-    recommendNote: "쯔양이 방문해 리뷰한 한식 맛집."
+    youtubers: [
+      {
+        name: "쯔양",
+        videoTitle: null,
+        videoUrl: null,
+        recommendNote: "쯔양이 방문해 리뷰한 한식 맛집."
+      }
+    ]
   },
   {
     id: "jjy-139",
@@ -3838,10 +2731,14 @@ const CURATED_FOOD = [
     kakaoUrl: "http://place.map.kakao.com/1885694872",
     rating: null,
     reviewCount: null,
-    youtuber: "쯔양",
-    videoTitle: null,
-    videoUrl: null,
-    recommendNote: "쯔양이 방문해 리뷰한 한식 맛집."
+    youtubers: [
+      {
+        name: "쯔양",
+        videoTitle: null,
+        videoUrl: null,
+        recommendNote: "쯔양이 방문해 리뷰한 한식 맛집."
+      }
+    ]
   },
   {
     id: "jjy-140",
@@ -3854,10 +2751,14 @@ const CURATED_FOOD = [
     kakaoUrl: "http://place.map.kakao.com/333510712",
     rating: null,
     reviewCount: null,
-    youtuber: "쯔양",
-    videoTitle: null,
-    videoUrl: null,
-    recommendNote: "쯔양이 방문해 리뷰한 맛집."
+    youtubers: [
+      {
+        name: "쯔양",
+        videoTitle: null,
+        videoUrl: null,
+        recommendNote: "쯔양이 방문해 리뷰한 맛집."
+      }
+    ]
   },
   {
     id: "jjy-141",
@@ -3870,10 +2771,14 @@ const CURATED_FOOD = [
     kakaoUrl: "http://place.map.kakao.com/15526158",
     rating: null,
     reviewCount: null,
-    youtuber: "쯔양",
-    videoTitle: null,
-    videoUrl: null,
-    recommendNote: "쯔양이 방문해 리뷰한 돈까스·회 전문점."
+    youtubers: [
+      {
+        name: "쯔양",
+        videoTitle: null,
+        videoUrl: null,
+        recommendNote: "쯔양이 방문해 리뷰한 돈까스·회 전문점."
+      }
+    ]
   },
   {
     id: "jjy-142",
@@ -3886,10 +2791,14 @@ const CURATED_FOOD = [
     kakaoUrl: "http://place.map.kakao.com/27316244",
     rating: null,
     reviewCount: null,
-    youtuber: "쯔양",
-    videoTitle: null,
-    videoUrl: null,
-    recommendNote: "쯔양이 방문해 리뷰한 패스트푸드 맛집."
+    youtubers: [
+      {
+        name: "쯔양",
+        videoTitle: null,
+        videoUrl: null,
+        recommendNote: "쯔양이 방문해 리뷰한 패스트푸드 맛집."
+      }
+    ]
   },
   {
     id: "jjy-143",
@@ -3902,10 +2811,14 @@ const CURATED_FOOD = [
     kakaoUrl: "http://place.map.kakao.com/21373373",
     rating: null,
     reviewCount: null,
-    youtuber: "쯔양",
-    videoTitle: null,
-    videoUrl: null,
-    recommendNote: "쯔양이 방문해 리뷰한 분식 맛집."
+    youtubers: [
+      {
+        name: "쯔양",
+        videoTitle: null,
+        videoUrl: null,
+        recommendNote: "쯔양이 방문해 리뷰한 분식 맛집."
+      }
+    ]
   },
   {
     id: "jjy-144",
@@ -3918,10 +2831,14 @@ const CURATED_FOOD = [
     kakaoUrl: "http://place.map.kakao.com/7870369",
     rating: null,
     reviewCount: null,
-    youtuber: "쯔양",
-    videoTitle: null,
-    videoUrl: null,
-    recommendNote: "쯔양이 방문해 리뷰한 한식 맛집."
+    youtubers: [
+      {
+        name: "쯔양",
+        videoTitle: null,
+        videoUrl: null,
+        recommendNote: "쯔양이 방문해 리뷰한 한식 맛집."
+      }
+    ]
   },
   {
     id: "jjy-145",
@@ -3934,10 +2851,14 @@ const CURATED_FOOD = [
     kakaoUrl: "http://place.map.kakao.com/2061262308",
     rating: null,
     reviewCount: null,
-    youtuber: "쯔양",
-    videoTitle: null,
-    videoUrl: null,
-    recommendNote: "쯔양이 방문해 리뷰한 돈까스·회 전문점."
+    youtubers: [
+      {
+        name: "쯔양",
+        videoTitle: null,
+        videoUrl: null,
+        recommendNote: "쯔양이 방문해 리뷰한 돈까스·회 전문점."
+      }
+    ]
   },
   {
     id: "jjy-146",
@@ -3950,10 +2871,14 @@ const CURATED_FOOD = [
     kakaoUrl: "http://place.map.kakao.com/848905473",
     rating: null,
     reviewCount: null,
-    youtuber: "쯔양",
-    videoTitle: null,
-    videoUrl: null,
-    recommendNote: "쯔양이 방문해 리뷰한 한식 맛집."
+    youtubers: [
+      {
+        name: "쯔양",
+        videoTitle: null,
+        videoUrl: null,
+        recommendNote: "쯔양이 방문해 리뷰한 한식 맛집."
+      }
+    ]
   },
   {
     id: "jjy-147",
@@ -3966,10 +2891,14 @@ const CURATED_FOOD = [
     kakaoUrl: "http://place.map.kakao.com/11684688",
     rating: null,
     reviewCount: null,
-    youtuber: "쯔양",
-    videoTitle: null,
-    videoUrl: null,
-    recommendNote: "쯔양이 방문해 리뷰한 한식 맛집."
+    youtubers: [
+      {
+        name: "쯔양",
+        videoTitle: null,
+        videoUrl: null,
+        recommendNote: "쯔양이 방문해 리뷰한 한식 맛집."
+      }
+    ]
   },
   {
     id: "jjy-148",
@@ -3982,10 +2911,14 @@ const CURATED_FOOD = [
     kakaoUrl: "http://place.map.kakao.com/1484187628",
     rating: null,
     reviewCount: null,
-    youtuber: "쯔양",
-    videoTitle: null,
-    videoUrl: null,
-    recommendNote: "쯔양이 방문해 리뷰한 한식 맛집."
+    youtubers: [
+      {
+        name: "쯔양",
+        videoTitle: null,
+        videoUrl: null,
+        recommendNote: "쯔양이 방문해 리뷰한 한식 맛집."
+      }
+    ]
   },
   {
     id: "jjy-149",
@@ -3998,10 +2931,14 @@ const CURATED_FOOD = [
     kakaoUrl: "http://place.map.kakao.com/15188115",
     rating: null,
     reviewCount: null,
-    youtuber: "쯔양",
-    videoTitle: null,
-    videoUrl: null,
-    recommendNote: "쯔양이 방문해 리뷰한 분식 맛집."
+    youtubers: [
+      {
+        name: "쯔양",
+        videoTitle: null,
+        videoUrl: null,
+        recommendNote: "쯔양이 방문해 리뷰한 분식 맛집."
+      }
+    ]
   },
   {
     id: "jjy-150",
@@ -4014,10 +2951,14 @@ const CURATED_FOOD = [
     kakaoUrl: "http://place.map.kakao.com/16513914",
     rating: null,
     reviewCount: null,
-    youtuber: "쯔양",
-    videoTitle: null,
-    videoUrl: null,
-    recommendNote: "쯔양이 방문해 리뷰한 분식 맛집."
+    youtubers: [
+      {
+        name: "쯔양",
+        videoTitle: null,
+        videoUrl: null,
+        recommendNote: "쯔양이 방문해 리뷰한 분식 맛집."
+      }
+    ]
   },
   {
     id: "jjy-151",
@@ -4030,10 +2971,14 @@ const CURATED_FOOD = [
     kakaoUrl: "http://place.map.kakao.com/10333833",
     rating: null,
     reviewCount: null,
-    youtuber: "쯔양",
-    videoTitle: null,
-    videoUrl: null,
-    recommendNote: "쯔양이 방문해 리뷰한 중식 맛집."
+    youtubers: [
+      {
+        name: "쯔양",
+        videoTitle: null,
+        videoUrl: null,
+        recommendNote: "쯔양이 방문해 리뷰한 중식 맛집."
+      }
+    ]
   },
   {
     id: "jjy-152",
@@ -4046,10 +2991,14 @@ const CURATED_FOOD = [
     kakaoUrl: "http://place.map.kakao.com/220597413",
     rating: null,
     reviewCount: null,
-    youtuber: "쯔양",
-    videoTitle: null,
-    videoUrl: null,
-    recommendNote: "쯔양이 방문해 리뷰한 고기 맛집."
+    youtubers: [
+      {
+        name: "쯔양",
+        videoTitle: null,
+        videoUrl: null,
+        recommendNote: "쯔양이 방문해 리뷰한 고기 맛집."
+      }
+    ]
   },
   {
     id: "jjy-153",
@@ -4062,10 +3011,14 @@ const CURATED_FOOD = [
     kakaoUrl: "http://place.map.kakao.com/119302602",
     rating: null,
     reviewCount: null,
-    youtuber: "쯔양",
-    videoTitle: null,
-    videoUrl: null,
-    recommendNote: "쯔양이 방문해 리뷰한 돈까스·회 전문점."
+    youtubers: [
+      {
+        name: "쯔양",
+        videoTitle: null,
+        videoUrl: null,
+        recommendNote: "쯔양이 방문해 리뷰한 돈까스·회 전문점."
+      }
+    ]
   },
   {
     id: "jjy-154",
@@ -4078,10 +3031,14 @@ const CURATED_FOOD = [
     kakaoUrl: "http://place.map.kakao.com/747666847",
     rating: null,
     reviewCount: null,
-    youtuber: "쯔양",
-    videoTitle: null,
-    videoUrl: null,
-    recommendNote: "쯔양이 방문해 리뷰한 분식 맛집."
+    youtubers: [
+      {
+        name: "쯔양",
+        videoTitle: null,
+        videoUrl: null,
+        recommendNote: "쯔양이 방문해 리뷰한 분식 맛집."
+      }
+    ]
   },
   {
     id: "jjy-155",
@@ -4094,10 +3051,14 @@ const CURATED_FOOD = [
     kakaoUrl: "http://place.map.kakao.com/1722921495",
     rating: null,
     reviewCount: null,
-    youtuber: "쯔양",
-    videoTitle: null,
-    videoUrl: null,
-    recommendNote: "쯔양이 방문해 리뷰한 맛집."
+    youtubers: [
+      {
+        name: "쯔양",
+        videoTitle: null,
+        videoUrl: null,
+        recommendNote: "쯔양이 방문해 리뷰한 맛집."
+      }
+    ]
   },
   {
     id: "jjy-156",
@@ -4110,10 +3071,14 @@ const CURATED_FOOD = [
     kakaoUrl: "http://place.map.kakao.com/24188406",
     rating: null,
     reviewCount: null,
-    youtuber: "쯔양",
-    videoTitle: null,
-    videoUrl: null,
-    recommendNote: "쯔양이 방문해 리뷰한 한식 맛집."
+    youtubers: [
+      {
+        name: "쯔양",
+        videoTitle: null,
+        videoUrl: null,
+        recommendNote: "쯔양이 방문해 리뷰한 한식 맛집."
+      }
+    ]
   },
   {
     id: "jjy-157",
@@ -4126,10 +3091,14 @@ const CURATED_FOOD = [
     kakaoUrl: "http://place.map.kakao.com/1626559942",
     rating: null,
     reviewCount: null,
-    youtuber: "쯔양",
-    videoTitle: null,
-    videoUrl: null,
-    recommendNote: "쯔양이 방문해 리뷰한 야식 맛집."
+    youtubers: [
+      {
+        name: "쯔양",
+        videoTitle: null,
+        videoUrl: null,
+        recommendNote: "쯔양이 방문해 리뷰한 야식 맛집."
+      }
+    ]
   },
   {
     id: "jjy-158",
@@ -4142,10 +3111,14 @@ const CURATED_FOOD = [
     kakaoUrl: "http://place.map.kakao.com/222726140",
     rating: null,
     reviewCount: null,
-    youtuber: "쯔양",
-    videoTitle: null,
-    videoUrl: null,
-    recommendNote: "쯔양이 방문해 리뷰한 돈까스·회 전문점."
+    youtubers: [
+      {
+        name: "쯔양",
+        videoTitle: null,
+        videoUrl: null,
+        recommendNote: "쯔양이 방문해 리뷰한 돈까스·회 전문점."
+      }
+    ]
   },
   {
     id: "jjy-159",
@@ -4158,10 +3131,14 @@ const CURATED_FOOD = [
     kakaoUrl: "http://place.map.kakao.com/2077534128",
     rating: null,
     reviewCount: null,
-    youtuber: "쯔양",
-    videoTitle: null,
-    videoUrl: null,
-    recommendNote: "쯔양이 방문해 리뷰한 아시안 맛집."
+    youtubers: [
+      {
+        name: "쯔양",
+        videoTitle: null,
+        videoUrl: null,
+        recommendNote: "쯔양이 방문해 리뷰한 아시안 맛집."
+      }
+    ]
   },
   {
     id: "jjy-160",
@@ -4174,10 +3151,14 @@ const CURATED_FOOD = [
     kakaoUrl: "http://place.map.kakao.com/95562205",
     rating: null,
     reviewCount: null,
-    youtuber: "쯔양",
-    videoTitle: null,
-    videoUrl: null,
-    recommendNote: "쯔양이 방문해 리뷰한 한식 맛집."
+    youtubers: [
+      {
+        name: "쯔양",
+        videoTitle: null,
+        videoUrl: null,
+        recommendNote: "쯔양이 방문해 리뷰한 한식 맛집."
+      }
+    ]
   },
   {
     id: "jjy-161",
@@ -4190,10 +3171,14 @@ const CURATED_FOOD = [
     kakaoUrl: "http://place.map.kakao.com/21236775",
     rating: null,
     reviewCount: null,
-    youtuber: "쯔양",
-    videoTitle: null,
-    videoUrl: null,
-    recommendNote: "쯔양이 방문해 리뷰한 분식 맛집."
+    youtubers: [
+      {
+        name: "쯔양",
+        videoTitle: null,
+        videoUrl: null,
+        recommendNote: "쯔양이 방문해 리뷰한 분식 맛집."
+      }
+    ]
   },
   {
     id: "jjy-162",
@@ -4206,10 +3191,14 @@ const CURATED_FOOD = [
     kakaoUrl: "http://place.map.kakao.com/20549279",
     rating: null,
     reviewCount: null,
-    youtuber: "쯔양",
-    videoTitle: null,
-    videoUrl: null,
-    recommendNote: "쯔양이 방문해 리뷰한 분식 맛집."
+    youtubers: [
+      {
+        name: "쯔양",
+        videoTitle: null,
+        videoUrl: null,
+        recommendNote: "쯔양이 방문해 리뷰한 분식 맛집."
+      }
+    ]
   },
   {
     id: "jjy-163",
@@ -4222,10 +3211,14 @@ const CURATED_FOOD = [
     kakaoUrl: "http://place.map.kakao.com/1179137932",
     rating: null,
     reviewCount: null,
-    youtuber: "쯔양",
-    videoTitle: null,
-    videoUrl: null,
-    recommendNote: "쯔양이 방문해 리뷰한 고기 맛집."
+    youtubers: [
+      {
+        name: "쯔양",
+        videoTitle: null,
+        videoUrl: null,
+        recommendNote: "쯔양이 방문해 리뷰한 고기 맛집."
+      }
+    ]
   },
   {
     id: "jjy-164",
@@ -4238,10 +3231,14 @@ const CURATED_FOOD = [
     kakaoUrl: "http://place.map.kakao.com/1897956251",
     rating: null,
     reviewCount: null,
-    youtuber: "쯔양",
-    videoTitle: null,
-    videoUrl: null,
-    recommendNote: "쯔양이 방문해 리뷰한 돈까스·회 전문점."
+    youtubers: [
+      {
+        name: "쯔양",
+        videoTitle: null,
+        videoUrl: null,
+        recommendNote: "쯔양이 방문해 리뷰한 돈까스·회 전문점."
+      }
+    ]
   },
   {
     id: "jjy-165",
@@ -4254,10 +3251,14 @@ const CURATED_FOOD = [
     kakaoUrl: "http://place.map.kakao.com/11298129",
     rating: null,
     reviewCount: null,
-    youtuber: "쯔양",
-    videoTitle: null,
-    videoUrl: null,
-    recommendNote: "쯔양이 방문해 리뷰한 찜·탕 맛집."
+    youtubers: [
+      {
+        name: "쯔양",
+        videoTitle: null,
+        videoUrl: null,
+        recommendNote: "쯔양이 방문해 리뷰한 찜·탕 맛집."
+      }
+    ]
   },
   {
     id: "jjy-166",
@@ -4270,10 +3271,14 @@ const CURATED_FOOD = [
     kakaoUrl: "http://place.map.kakao.com/10406311",
     rating: null,
     reviewCount: null,
-    youtuber: "쯔양",
-    videoTitle: null,
-    videoUrl: null,
-    recommendNote: "쯔양이 방문해 리뷰한 한식 맛집."
+    youtubers: [
+      {
+        name: "쯔양",
+        videoTitle: null,
+        videoUrl: null,
+        recommendNote: "쯔양이 방문해 리뷰한 한식 맛집."
+      }
+    ]
   },
   {
     id: "jjy-167",
@@ -4286,10 +3291,14 @@ const CURATED_FOOD = [
     kakaoUrl: "http://place.map.kakao.com/343205408",
     rating: null,
     reviewCount: null,
-    youtuber: "쯔양",
-    videoTitle: null,
-    videoUrl: null,
-    recommendNote: "쯔양이 방문해 리뷰한 한식 맛집."
+    youtubers: [
+      {
+        name: "쯔양",
+        videoTitle: null,
+        videoUrl: null,
+        recommendNote: "쯔양이 방문해 리뷰한 한식 맛집."
+      }
+    ]
   },
   {
     id: "jjy-168",
@@ -4302,10 +3311,14 @@ const CURATED_FOOD = [
     kakaoUrl: "http://place.map.kakao.com/1004412633",
     rating: null,
     reviewCount: null,
-    youtuber: "쯔양",
-    videoTitle: null,
-    videoUrl: null,
-    recommendNote: "쯔양이 방문해 리뷰한 한식 맛집."
+    youtubers: [
+      {
+        name: "쯔양",
+        videoTitle: null,
+        videoUrl: null,
+        recommendNote: "쯔양이 방문해 리뷰한 한식 맛집."
+      }
+    ]
   },
   {
     id: "jjy-169",
@@ -4318,10 +3331,14 @@ const CURATED_FOOD = [
     kakaoUrl: "http://place.map.kakao.com/21254192",
     rating: null,
     reviewCount: null,
-    youtuber: "쯔양",
-    videoTitle: null,
-    videoUrl: null,
-    recommendNote: "쯔양이 방문해 리뷰한 돈까스·회 전문점."
+    youtubers: [
+      {
+        name: "쯔양",
+        videoTitle: null,
+        videoUrl: null,
+        recommendNote: "쯔양이 방문해 리뷰한 돈까스·회 전문점."
+      }
+    ]
   },
   {
     id: "jjy-170",
@@ -4334,10 +3351,14 @@ const CURATED_FOOD = [
     kakaoUrl: "http://place.map.kakao.com/18310200",
     rating: null,
     reviewCount: null,
-    youtuber: "쯔양",
-    videoTitle: null,
-    videoUrl: null,
-    recommendNote: "쯔양이 방문해 리뷰한 카페·디저트 맛집."
+    youtubers: [
+      {
+        name: "쯔양",
+        videoTitle: null,
+        videoUrl: null,
+        recommendNote: "쯔양이 방문해 리뷰한 카페·디저트 맛집."
+      }
+    ]
   },
   {
     id: "jjy-171",
@@ -4350,10 +3371,14 @@ const CURATED_FOOD = [
     kakaoUrl: "http://place.map.kakao.com/26967162",
     rating: null,
     reviewCount: null,
-    youtuber: "쯔양",
-    videoTitle: null,
-    videoUrl: null,
-    recommendNote: "쯔양이 방문해 리뷰한 한식 맛집."
+    youtubers: [
+      {
+        name: "쯔양",
+        videoTitle: null,
+        videoUrl: null,
+        recommendNote: "쯔양이 방문해 리뷰한 한식 맛집."
+      }
+    ]
   },
   {
     id: "jjy-172",
@@ -4366,10 +3391,14 @@ const CURATED_FOOD = [
     kakaoUrl: "http://place.map.kakao.com/411994481",
     rating: null,
     reviewCount: null,
-    youtuber: "쯔양",
-    videoTitle: null,
-    videoUrl: null,
-    recommendNote: "쯔양이 방문해 리뷰한 양식 맛집."
+    youtubers: [
+      {
+        name: "쯔양",
+        videoTitle: null,
+        videoUrl: null,
+        recommendNote: "쯔양이 방문해 리뷰한 양식 맛집."
+      }
+    ]
   },
   {
     id: "jjy-173",
@@ -4382,10 +3411,14 @@ const CURATED_FOOD = [
     kakaoUrl: "http://place.map.kakao.com/669970863",
     rating: null,
     reviewCount: null,
-    youtuber: "쯔양",
-    videoTitle: null,
-    videoUrl: null,
-    recommendNote: "쯔양이 방문해 리뷰한 고기 맛집."
+    youtubers: [
+      {
+        name: "쯔양",
+        videoTitle: null,
+        videoUrl: null,
+        recommendNote: "쯔양이 방문해 리뷰한 고기 맛집."
+      }
+    ]
   },
   {
     id: "jjy-174",
@@ -4398,10 +3431,14 @@ const CURATED_FOOD = [
     kakaoUrl: "http://place.map.kakao.com/26884184",
     rating: null,
     reviewCount: null,
-    youtuber: "쯔양",
-    videoTitle: null,
-    videoUrl: null,
-    recommendNote: "쯔양이 방문해 리뷰한 한식 맛집."
+    youtubers: [
+      {
+        name: "쯔양",
+        videoTitle: null,
+        videoUrl: null,
+        recommendNote: "쯔양이 방문해 리뷰한 한식 맛집."
+      }
+    ]
   },
   {
     id: "jjy-175",
@@ -4414,10 +3451,14 @@ const CURATED_FOOD = [
     kakaoUrl: "http://place.map.kakao.com/1233001797",
     rating: null,
     reviewCount: null,
-    youtuber: "쯔양",
-    videoTitle: null,
-    videoUrl: null,
-    recommendNote: "쯔양이 방문해 리뷰한 찜·탕 맛집."
+    youtubers: [
+      {
+        name: "쯔양",
+        videoTitle: null,
+        videoUrl: null,
+        recommendNote: "쯔양이 방문해 리뷰한 찜·탕 맛집."
+      }
+    ]
   },
   {
     id: "jjy-176",
@@ -4430,10 +3471,14 @@ const CURATED_FOOD = [
     kakaoUrl: "http://place.map.kakao.com/620066371",
     rating: null,
     reviewCount: null,
-    youtuber: "쯔양",
-    videoTitle: null,
-    videoUrl: null,
-    recommendNote: "쯔양이 방문해 리뷰한 분식 맛집."
+    youtubers: [
+      {
+        name: "쯔양",
+        videoTitle: null,
+        videoUrl: null,
+        recommendNote: "쯔양이 방문해 리뷰한 분식 맛집."
+      }
+    ]
   },
   {
     id: "jjy-177",
@@ -4446,10 +3491,14 @@ const CURATED_FOOD = [
     kakaoUrl: "http://place.map.kakao.com/10379033",
     rating: null,
     reviewCount: null,
-    youtuber: "쯔양",
-    videoTitle: null,
-    videoUrl: null,
-    recommendNote: "쯔양이 방문해 리뷰한 중식 맛집."
+    youtubers: [
+      {
+        name: "쯔양",
+        videoTitle: null,
+        videoUrl: null,
+        recommendNote: "쯔양이 방문해 리뷰한 중식 맛집."
+      }
+    ]
   },
   {
     id: "jjy-178",
@@ -4462,10 +3511,14 @@ const CURATED_FOOD = [
     kakaoUrl: "http://place.map.kakao.com/10379849",
     rating: null,
     reviewCount: null,
-    youtuber: "쯔양",
-    videoTitle: null,
-    videoUrl: null,
-    recommendNote: "쯔양이 방문해 리뷰한 중식 맛집."
+    youtubers: [
+      {
+        name: "쯔양",
+        videoTitle: null,
+        videoUrl: null,
+        recommendNote: "쯔양이 방문해 리뷰한 중식 맛집."
+      }
+    ]
   },
   {
     id: "jjy-179",
@@ -4478,10 +3531,14 @@ const CURATED_FOOD = [
     kakaoUrl: "http://place.map.kakao.com/9803823",
     rating: null,
     reviewCount: null,
-    youtuber: "쯔양",
-    videoTitle: null,
-    videoUrl: null,
-    recommendNote: "쯔양이 방문해 리뷰한 맛집."
+    youtubers: [
+      {
+        name: "쯔양",
+        videoTitle: null,
+        videoUrl: null,
+        recommendNote: "쯔양이 방문해 리뷰한 맛집."
+      }
+    ]
   },
   {
     id: "jjy-180",
@@ -4494,10 +3551,14 @@ const CURATED_FOOD = [
     kakaoUrl: "http://place.map.kakao.com/17296779",
     rating: null,
     reviewCount: null,
-    youtuber: "쯔양",
-    videoTitle: null,
-    videoUrl: null,
-    recommendNote: "쯔양이 방문해 리뷰한 한식 맛집."
+    youtubers: [
+      {
+        name: "쯔양",
+        videoTitle: null,
+        videoUrl: null,
+        recommendNote: "쯔양이 방문해 리뷰한 한식 맛집."
+      }
+    ]
   },
   {
     id: "jjy-181",
@@ -4510,10 +3571,14 @@ const CURATED_FOOD = [
     kakaoUrl: "http://place.map.kakao.com/11909225",
     rating: null,
     reviewCount: null,
-    youtuber: "쯔양",
-    videoTitle: null,
-    videoUrl: null,
-    recommendNote: "쯔양이 방문해 리뷰한 찜·탕 맛집."
+    youtubers: [
+      {
+        name: "쯔양",
+        videoTitle: null,
+        videoUrl: null,
+        recommendNote: "쯔양이 방문해 리뷰한 찜·탕 맛집."
+      }
+    ]
   },
   {
     id: "jjy-182",
@@ -4526,10 +3591,14 @@ const CURATED_FOOD = [
     kakaoUrl: "http://place.map.kakao.com/1572329399",
     rating: null,
     reviewCount: null,
-    youtuber: "쯔양",
-    videoTitle: null,
-    videoUrl: null,
-    recommendNote: "쯔양이 방문해 리뷰한 고기 맛집."
+    youtubers: [
+      {
+        name: "쯔양",
+        videoTitle: null,
+        videoUrl: null,
+        recommendNote: "쯔양이 방문해 리뷰한 고기 맛집."
+      }
+    ]
   },
   {
     id: "jjy-183",
@@ -4542,10 +3611,14 @@ const CURATED_FOOD = [
     kakaoUrl: "http://place.map.kakao.com/9031463",
     rating: null,
     reviewCount: null,
-    youtuber: "쯔양",
-    videoTitle: null,
-    videoUrl: null,
-    recommendNote: "쯔양이 방문해 리뷰한 찜·탕 맛집."
+    youtubers: [
+      {
+        name: "쯔양",
+        videoTitle: null,
+        videoUrl: null,
+        recommendNote: "쯔양이 방문해 리뷰한 찜·탕 맛집."
+      }
+    ]
   },
   {
     id: "jjy-184",
@@ -4558,10 +3631,14 @@ const CURATED_FOOD = [
     kakaoUrl: "http://place.map.kakao.com/16047151",
     rating: null,
     reviewCount: null,
-    youtuber: "쯔양",
-    videoTitle: null,
-    videoUrl: null,
-    recommendNote: "쯔양이 방문해 리뷰한 한식 맛집."
+    youtubers: [
+      {
+        name: "쯔양",
+        videoTitle: null,
+        videoUrl: null,
+        recommendNote: "쯔양이 방문해 리뷰한 한식 맛집."
+      }
+    ]
   },
   {
     id: "jjy-185",
@@ -4574,10 +3651,14 @@ const CURATED_FOOD = [
     kakaoUrl: "http://place.map.kakao.com/12150208",
     rating: null,
     reviewCount: null,
-    youtuber: "쯔양",
-    videoTitle: null,
-    videoUrl: null,
-    recommendNote: "쯔양이 방문해 리뷰한 분식 맛집."
+    youtubers: [
+      {
+        name: "쯔양",
+        videoTitle: null,
+        videoUrl: null,
+        recommendNote: "쯔양이 방문해 리뷰한 분식 맛집."
+      }
+    ]
   },
   {
     id: "jjy-186",
@@ -4590,10 +3671,14 @@ const CURATED_FOOD = [
     kakaoUrl: "http://place.map.kakao.com/350312322",
     rating: null,
     reviewCount: null,
-    youtuber: "쯔양",
-    videoTitle: null,
-    videoUrl: null,
-    recommendNote: "쯔양이 방문해 리뷰한 고기 맛집."
+    youtubers: [
+      {
+        name: "쯔양",
+        videoTitle: null,
+        videoUrl: null,
+        recommendNote: "쯔양이 방문해 리뷰한 고기 맛집."
+      }
+    ]
   },
   {
     id: "jjy-187",
@@ -4606,10 +3691,20 @@ const CURATED_FOOD = [
     kakaoUrl: "http://place.map.kakao.com/11053604",
     rating: null,
     reviewCount: null,
-    youtuber: "쯔양",
-    videoTitle: null,
-    videoUrl: null,
-    recommendNote: "쯔양이 방문해 리뷰한 중식 맛집."
+    youtubers: [
+      {
+        name: "쯔양",
+        videoTitle: null,
+        videoUrl: null,
+        recommendNote: "쯔양이 방문해 리뷰한 중식 맛집."
+      },
+      {
+        name: "맛있는 녀석들",
+        videoTitle: null,
+        videoUrl: null,
+        recommendNote: "등록문화재로 지정된 군산의 대표 명소로, 영화 '타짜'의 촬영지로도 알려진 짬뽕 맛집이다."
+      }
+    ]
   },
   {
     id: "jjy-189",
@@ -4622,10 +3717,14 @@ const CURATED_FOOD = [
     kakaoUrl: "http://place.map.kakao.com/20522414",
     rating: null,
     reviewCount: null,
-    youtuber: "쯔양",
-    videoTitle: null,
-    videoUrl: null,
-    recommendNote: "쯔양이 방문해 리뷰한 분식 맛집."
+    youtubers: [
+      {
+        name: "쯔양",
+        videoTitle: null,
+        videoUrl: null,
+        recommendNote: "쯔양이 방문해 리뷰한 분식 맛집."
+      }
+    ]
   },
   {
     id: "jjy-190",
@@ -4638,10 +3737,14 @@ const CURATED_FOOD = [
     kakaoUrl: "http://place.map.kakao.com/1827236569",
     rating: null,
     reviewCount: null,
-    youtuber: "쯔양",
-    videoTitle: null,
-    videoUrl: null,
-    recommendNote: "쯔양이 방문해 리뷰한 분식 맛집."
+    youtubers: [
+      {
+        name: "쯔양",
+        videoTitle: null,
+        videoUrl: null,
+        recommendNote: "쯔양이 방문해 리뷰한 분식 맛집."
+      }
+    ]
   },
   {
     id: "jjy-191",
@@ -4654,10 +3757,14 @@ const CURATED_FOOD = [
     kakaoUrl: "http://place.map.kakao.com/1606118061",
     rating: null,
     reviewCount: null,
-    youtuber: "쯔양",
-    videoTitle: null,
-    videoUrl: null,
-    recommendNote: "쯔양이 방문해 리뷰한 분식 맛집."
+    youtubers: [
+      {
+        name: "쯔양",
+        videoTitle: null,
+        videoUrl: null,
+        recommendNote: "쯔양이 방문해 리뷰한 분식 맛집."
+      }
+    ]
   },
   {
     id: "jjy-192",
@@ -4670,10 +3777,14 @@ const CURATED_FOOD = [
     kakaoUrl: "http://place.map.kakao.com/19162981",
     rating: null,
     reviewCount: null,
-    youtuber: "쯔양",
-    videoTitle: null,
-    videoUrl: null,
-    recommendNote: "쯔양이 방문해 리뷰한 찜·탕 맛집."
+    youtubers: [
+      {
+        name: "쯔양",
+        videoTitle: null,
+        videoUrl: null,
+        recommendNote: "쯔양이 방문해 리뷰한 찜·탕 맛집."
+      }
+    ]
   },
   {
     id: "jjy-193",
@@ -4686,10 +3797,14 @@ const CURATED_FOOD = [
     kakaoUrl: "http://place.map.kakao.com/2038295536",
     rating: null,
     reviewCount: null,
-    youtuber: "쯔양",
-    videoTitle: null,
-    videoUrl: null,
-    recommendNote: "쯔양이 방문해 리뷰한 중식 맛집."
+    youtubers: [
+      {
+        name: "쯔양",
+        videoTitle: null,
+        videoUrl: null,
+        recommendNote: "쯔양이 방문해 리뷰한 중식 맛집."
+      }
+    ]
   },
   {
     id: "jjy-194",
@@ -4702,10 +3817,14 @@ const CURATED_FOOD = [
     kakaoUrl: "http://place.map.kakao.com/25049472",
     rating: null,
     reviewCount: null,
-    youtuber: "쯔양",
-    videoTitle: null,
-    videoUrl: null,
-    recommendNote: "쯔양이 방문해 리뷰한 한식 맛집."
+    youtubers: [
+      {
+        name: "쯔양",
+        videoTitle: null,
+        videoUrl: null,
+        recommendNote: "쯔양이 방문해 리뷰한 한식 맛집."
+      }
+    ]
   },
   {
     id: "jjy-195",
@@ -4718,10 +3837,14 @@ const CURATED_FOOD = [
     kakaoUrl: "http://place.map.kakao.com/12653535",
     rating: null,
     reviewCount: null,
-    youtuber: "쯔양",
-    videoTitle: null,
-    videoUrl: null,
-    recommendNote: "쯔양이 방문해 리뷰한 한식 맛집."
+    youtubers: [
+      {
+        name: "쯔양",
+        videoTitle: null,
+        videoUrl: null,
+        recommendNote: "쯔양이 방문해 리뷰한 한식 맛집."
+      }
+    ]
   },
   {
     id: "jjy-196",
@@ -4734,10 +3857,14 @@ const CURATED_FOOD = [
     kakaoUrl: "http://place.map.kakao.com/526361801",
     rating: null,
     reviewCount: null,
-    youtuber: "쯔양",
-    videoTitle: null,
-    videoUrl: null,
-    recommendNote: "쯔양이 방문해 리뷰한 아시안 맛집."
+    youtubers: [
+      {
+        name: "쯔양",
+        videoTitle: null,
+        videoUrl: null,
+        recommendNote: "쯔양이 방문해 리뷰한 아시안 맛집."
+      }
+    ]
   },
   {
     id: "jjy-197",
@@ -4750,10 +3877,14 @@ const CURATED_FOOD = [
     kakaoUrl: "http://place.map.kakao.com/2088172966",
     rating: null,
     reviewCount: null,
-    youtuber: "쯔양",
-    videoTitle: null,
-    videoUrl: null,
-    recommendNote: "쯔양이 방문해 리뷰한 고기 맛집."
+    youtubers: [
+      {
+        name: "쯔양",
+        videoTitle: null,
+        videoUrl: null,
+        recommendNote: "쯔양이 방문해 리뷰한 고기 맛집."
+      }
+    ]
   },
   {
     id: "jjy-198",
@@ -4766,10 +3897,14 @@ const CURATED_FOOD = [
     kakaoUrl: "http://place.map.kakao.com/14091104",
     rating: null,
     reviewCount: null,
-    youtuber: "쯔양",
-    videoTitle: null,
-    videoUrl: null,
-    recommendNote: "쯔양이 방문해 리뷰한 한식 맛집."
+    youtubers: [
+      {
+        name: "쯔양",
+        videoTitle: null,
+        videoUrl: null,
+        recommendNote: "쯔양이 방문해 리뷰한 한식 맛집."
+      }
+    ]
   },
   {
     id: "jjy-199",
@@ -4782,10 +3917,14 @@ const CURATED_FOOD = [
     kakaoUrl: "http://place.map.kakao.com/9809733",
     rating: null,
     reviewCount: null,
-    youtuber: "쯔양",
-    videoTitle: null,
-    videoUrl: null,
-    recommendNote: "쯔양이 방문해 리뷰한 고기 맛집."
+    youtubers: [
+      {
+        name: "쯔양",
+        videoTitle: null,
+        videoUrl: null,
+        recommendNote: "쯔양이 방문해 리뷰한 고기 맛집."
+      }
+    ]
   },
   {
     id: "jjy-200",
@@ -4798,10 +3937,14 @@ const CURATED_FOOD = [
     kakaoUrl: "http://place.map.kakao.com/21843973",
     rating: null,
     reviewCount: null,
-    youtuber: "쯔양",
-    videoTitle: null,
-    videoUrl: null,
-    recommendNote: "쯔양이 방문해 리뷰한 한식 맛집."
+    youtubers: [
+      {
+        name: "쯔양",
+        videoTitle: null,
+        videoUrl: null,
+        recommendNote: "쯔양이 방문해 리뷰한 한식 맛집."
+      }
+    ]
   },
   {
     id: "jjy-201",
@@ -4814,10 +3957,14 @@ const CURATED_FOOD = [
     kakaoUrl: "http://place.map.kakao.com/24159571",
     rating: null,
     reviewCount: null,
-    youtuber: "쯔양",
-    videoTitle: null,
-    videoUrl: null,
-    recommendNote: "쯔양이 방문해 리뷰한 한식 맛집."
+    youtubers: [
+      {
+        name: "쯔양",
+        videoTitle: null,
+        videoUrl: null,
+        recommendNote: "쯔양이 방문해 리뷰한 한식 맛집."
+      }
+    ]
   },
   {
     id: "jjy-202",
@@ -4830,10 +3977,14 @@ const CURATED_FOOD = [
     kakaoUrl: "http://place.map.kakao.com/1401694289",
     rating: null,
     reviewCount: null,
-    youtuber: "쯔양",
-    videoTitle: null,
-    videoUrl: null,
-    recommendNote: "쯔양이 방문해 리뷰한 분식 맛집."
+    youtubers: [
+      {
+        name: "쯔양",
+        videoTitle: null,
+        videoUrl: null,
+        recommendNote: "쯔양이 방문해 리뷰한 분식 맛집."
+      }
+    ]
   },
   {
     id: "jjy-203",
@@ -4846,10 +3997,14 @@ const CURATED_FOOD = [
     kakaoUrl: "http://place.map.kakao.com/9089301",
     rating: null,
     reviewCount: null,
-    youtuber: "쯔양",
-    videoTitle: null,
-    videoUrl: null,
-    recommendNote: "쯔양이 방문해 리뷰한 분식 맛집."
+    youtubers: [
+      {
+        name: "쯔양",
+        videoTitle: null,
+        videoUrl: null,
+        recommendNote: "쯔양이 방문해 리뷰한 분식 맛집."
+      }
+    ]
   },
   {
     id: "jjy-204",
@@ -4862,10 +4017,14 @@ const CURATED_FOOD = [
     kakaoUrl: "http://place.map.kakao.com/12614097",
     rating: null,
     reviewCount: null,
-    youtuber: "쯔양",
-    videoTitle: null,
-    videoUrl: null,
-    recommendNote: "쯔양이 방문해 리뷰한 고기 맛집."
+    youtubers: [
+      {
+        name: "쯔양",
+        videoTitle: null,
+        videoUrl: null,
+        recommendNote: "쯔양이 방문해 리뷰한 고기 맛집."
+      }
+    ]
   },
   {
     id: "jjy-205",
@@ -4878,10 +4037,14 @@ const CURATED_FOOD = [
     kakaoUrl: "http://place.map.kakao.com/8361352",
     rating: null,
     reviewCount: null,
-    youtuber: "쯔양",
-    videoTitle: null,
-    videoUrl: null,
-    recommendNote: "쯔양이 방문해 리뷰한 한식 맛집."
+    youtubers: [
+      {
+        name: "쯔양",
+        videoTitle: null,
+        videoUrl: null,
+        recommendNote: "쯔양이 방문해 리뷰한 한식 맛집."
+      }
+    ]
   },
   {
     id: "jjy-206",
@@ -4894,10 +4057,14 @@ const CURATED_FOOD = [
     kakaoUrl: "http://place.map.kakao.com/7943585",
     rating: null,
     reviewCount: null,
-    youtuber: "쯔양",
-    videoTitle: null,
-    videoUrl: null,
-    recommendNote: "쯔양이 방문해 리뷰한 고기 맛집."
+    youtubers: [
+      {
+        name: "쯔양",
+        videoTitle: null,
+        videoUrl: null,
+        recommendNote: "쯔양이 방문해 리뷰한 고기 맛집."
+      }
+    ]
   },
   {
     id: "jjy-207",
@@ -4910,10 +4077,14 @@ const CURATED_FOOD = [
     kakaoUrl: "http://place.map.kakao.com/12582103",
     rating: null,
     reviewCount: null,
-    youtuber: "쯔양",
-    videoTitle: null,
-    videoUrl: null,
-    recommendNote: "쯔양이 방문해 리뷰한 분식 맛집."
+    youtubers: [
+      {
+        name: "쯔양",
+        videoTitle: null,
+        videoUrl: null,
+        recommendNote: "쯔양이 방문해 리뷰한 분식 맛집."
+      }
+    ]
   },
   {
     id: "jjy-208",
@@ -4926,10 +4097,14 @@ const CURATED_FOOD = [
     kakaoUrl: "http://place.map.kakao.com/12659868",
     rating: null,
     reviewCount: null,
-    youtuber: "쯔양",
-    videoTitle: null,
-    videoUrl: null,
-    recommendNote: "쯔양이 방문해 리뷰한 한식 맛집."
+    youtubers: [
+      {
+        name: "쯔양",
+        videoTitle: null,
+        videoUrl: null,
+        recommendNote: "쯔양이 방문해 리뷰한 한식 맛집."
+      }
+    ]
   },
   {
     id: "jjy-209",
@@ -4942,10 +4117,14 @@ const CURATED_FOOD = [
     kakaoUrl: "http://place.map.kakao.com/1598787020",
     rating: null,
     reviewCount: null,
-    youtuber: "쯔양",
-    videoTitle: null,
-    videoUrl: null,
-    recommendNote: "쯔양이 방문해 리뷰한 중식 맛집."
+    youtubers: [
+      {
+        name: "쯔양",
+        videoTitle: null,
+        videoUrl: null,
+        recommendNote: "쯔양이 방문해 리뷰한 중식 맛집."
+      }
+    ]
   },
   {
     id: "jjy-210",
@@ -4958,10 +4137,14 @@ const CURATED_FOOD = [
     kakaoUrl: "http://place.map.kakao.com/1548676412",
     rating: null,
     reviewCount: null,
-    youtuber: "쯔양",
-    videoTitle: null,
-    videoUrl: null,
-    recommendNote: "쯔양이 방문해 리뷰한 한식 맛집."
+    youtubers: [
+      {
+        name: "쯔양",
+        videoTitle: null,
+        videoUrl: null,
+        recommendNote: "쯔양이 방문해 리뷰한 한식 맛집."
+      }
+    ]
   },
   {
     id: "jjy-211",
@@ -4974,10 +4157,14 @@ const CURATED_FOOD = [
     kakaoUrl: "http://place.map.kakao.com/8952970",
     rating: null,
     reviewCount: null,
-    youtuber: "쯔양",
-    videoTitle: null,
-    videoUrl: null,
-    recommendNote: "쯔양이 방문해 리뷰한 고기 맛집."
+    youtubers: [
+      {
+        name: "쯔양",
+        videoTitle: null,
+        videoUrl: null,
+        recommendNote: "쯔양이 방문해 리뷰한 고기 맛집."
+      }
+    ]
   },
   {
     id: "jjy-212",
@@ -4990,10 +4177,14 @@ const CURATED_FOOD = [
     kakaoUrl: "http://place.map.kakao.com/168909374",
     rating: null,
     reviewCount: null,
-    youtuber: "쯔양",
-    videoTitle: null,
-    videoUrl: null,
-    recommendNote: "쯔양이 방문해 리뷰한 한식 맛집."
+    youtubers: [
+      {
+        name: "쯔양",
+        videoTitle: null,
+        videoUrl: null,
+        recommendNote: "쯔양이 방문해 리뷰한 한식 맛집."
+      }
+    ]
   },
   {
     id: "jjy-213",
@@ -5006,10 +4197,14 @@ const CURATED_FOOD = [
     kakaoUrl: "http://place.map.kakao.com/10479275",
     rating: null,
     reviewCount: null,
-    youtuber: "쯔양",
-    videoTitle: null,
-    videoUrl: null,
-    recommendNote: "쯔양이 방문해 리뷰한 고기 맛집."
+    youtubers: [
+      {
+        name: "쯔양",
+        videoTitle: null,
+        videoUrl: null,
+        recommendNote: "쯔양이 방문해 리뷰한 고기 맛집."
+      }
+    ]
   },
   {
     id: "jjy-214",
@@ -5022,10 +4217,14 @@ const CURATED_FOOD = [
     kakaoUrl: "http://place.map.kakao.com/15409073",
     rating: null,
     reviewCount: null,
-    youtuber: "쯔양",
-    videoTitle: null,
-    videoUrl: null,
-    recommendNote: "쯔양이 방문해 리뷰한 한식 맛집."
+    youtubers: [
+      {
+        name: "쯔양",
+        videoTitle: null,
+        videoUrl: null,
+        recommendNote: "쯔양이 방문해 리뷰한 한식 맛집."
+      }
+    ]
   },
   {
     id: "jjy-215",
@@ -5038,10 +4237,14 @@ const CURATED_FOOD = [
     kakaoUrl: "http://place.map.kakao.com/8416853",
     rating: null,
     reviewCount: null,
-    youtuber: "쯔양",
-    videoTitle: null,
-    videoUrl: null,
-    recommendNote: "쯔양이 방문해 리뷰한 족발·보쌈 맛집."
+    youtubers: [
+      {
+        name: "쯔양",
+        videoTitle: null,
+        videoUrl: null,
+        recommendNote: "쯔양이 방문해 리뷰한 족발·보쌈 맛집."
+      }
+    ]
   },
   {
     id: "jjy-216",
@@ -5054,10 +4257,14 @@ const CURATED_FOOD = [
     kakaoUrl: "http://place.map.kakao.com/698990184",
     rating: null,
     reviewCount: null,
-    youtuber: "쯔양",
-    videoTitle: null,
-    videoUrl: null,
-    recommendNote: "쯔양이 방문해 리뷰한 분식 맛집."
+    youtubers: [
+      {
+        name: "쯔양",
+        videoTitle: null,
+        videoUrl: null,
+        recommendNote: "쯔양이 방문해 리뷰한 분식 맛집."
+      }
+    ]
   },
   {
     id: "jjy-217",
@@ -5070,10 +4277,14 @@ const CURATED_FOOD = [
     kakaoUrl: "http://place.map.kakao.com/10564559",
     rating: null,
     reviewCount: null,
-    youtuber: "쯔양",
-    videoTitle: null,
-    videoUrl: null,
-    recommendNote: "쯔양이 방문해 리뷰한 한식 맛집."
+    youtubers: [
+      {
+        name: "쯔양",
+        videoTitle: null,
+        videoUrl: null,
+        recommendNote: "쯔양이 방문해 리뷰한 한식 맛집."
+      }
+    ]
   },
   {
     id: "jjy-218",
@@ -5086,10 +4297,14 @@ const CURATED_FOOD = [
     kakaoUrl: "http://place.map.kakao.com/2121791662",
     rating: null,
     reviewCount: null,
-    youtuber: "쯔양",
-    videoTitle: null,
-    videoUrl: null,
-    recommendNote: "쯔양이 방문해 리뷰한 고기 맛집."
+    youtubers: [
+      {
+        name: "쯔양",
+        videoTitle: null,
+        videoUrl: null,
+        recommendNote: "쯔양이 방문해 리뷰한 고기 맛집."
+      }
+    ]
   },
   {
     id: "jjy-219",
@@ -5102,10 +4317,14 @@ const CURATED_FOOD = [
     kakaoUrl: "http://place.map.kakao.com/799869189",
     rating: null,
     reviewCount: null,
-    youtuber: "쯔양",
-    videoTitle: null,
-    videoUrl: null,
-    recommendNote: "쯔양이 방문해 리뷰한 한식 맛집."
+    youtubers: [
+      {
+        name: "쯔양",
+        videoTitle: null,
+        videoUrl: null,
+        recommendNote: "쯔양이 방문해 리뷰한 한식 맛집."
+      }
+    ]
   },
   {
     id: "jjy-220",
@@ -5118,10 +4337,14 @@ const CURATED_FOOD = [
     kakaoUrl: "http://place.map.kakao.com/578560649",
     rating: null,
     reviewCount: null,
-    youtuber: "쯔양",
-    videoTitle: null,
-    videoUrl: null,
-    recommendNote: "쯔양이 방문해 리뷰한 양식 맛집."
+    youtubers: [
+      {
+        name: "쯔양",
+        videoTitle: null,
+        videoUrl: null,
+        recommendNote: "쯔양이 방문해 리뷰한 양식 맛집."
+      }
+    ]
   },
   {
     id: "jjy-221",
@@ -5134,10 +4357,14 @@ const CURATED_FOOD = [
     kakaoUrl: "http://place.map.kakao.com/1203921667",
     rating: null,
     reviewCount: null,
-    youtuber: "쯔양",
-    videoTitle: null,
-    videoUrl: null,
-    recommendNote: "쯔양이 방문해 리뷰한 분식 맛집."
+    youtubers: [
+      {
+        name: "쯔양",
+        videoTitle: null,
+        videoUrl: null,
+        recommendNote: "쯔양이 방문해 리뷰한 분식 맛집."
+      }
+    ]
   },
   {
     id: "jjy-222",
@@ -5150,10 +4377,20 @@ const CURATED_FOOD = [
     kakaoUrl: "http://place.map.kakao.com/13289056",
     rating: null,
     reviewCount: null,
-    youtuber: "쯔양",
-    videoTitle: null,
-    videoUrl: null,
-    recommendNote: "쯔양이 방문해 리뷰한 찜·탕 맛집."
+    youtubers: [
+      {
+        name: "쯔양",
+        videoTitle: null,
+        videoUrl: null,
+        recommendNote: "쯔양이 방문해 리뷰한 찜·탕 맛집."
+      },
+      {
+        name: "성시경의 먹을텐데",
+        videoTitle: null,
+        videoUrl: null,
+        recommendNote: null
+      }
+    ]
   },
   {
     id: "jjy-223",
@@ -5166,10 +4403,14 @@ const CURATED_FOOD = [
     kakaoUrl: "http://place.map.kakao.com/10563611",
     rating: null,
     reviewCount: null,
-    youtuber: "쯔양",
-    videoTitle: null,
-    videoUrl: null,
-    recommendNote: "쯔양이 방문해 리뷰한 한식 맛집."
+    youtubers: [
+      {
+        name: "쯔양",
+        videoTitle: null,
+        videoUrl: null,
+        recommendNote: "쯔양이 방문해 리뷰한 한식 맛집."
+      }
+    ]
   },
   {
     id: "jjy-224",
@@ -5182,10 +4423,14 @@ const CURATED_FOOD = [
     kakaoUrl: "http://place.map.kakao.com/18513961",
     rating: null,
     reviewCount: null,
-    youtuber: "쯔양",
-    videoTitle: null,
-    videoUrl: null,
-    recommendNote: "쯔양이 방문해 리뷰한 분식 맛집."
+    youtubers: [
+      {
+        name: "쯔양",
+        videoTitle: null,
+        videoUrl: null,
+        recommendNote: "쯔양이 방문해 리뷰한 분식 맛집."
+      }
+    ]
   },
   {
     id: "jjy-225",
@@ -5198,10 +4443,14 @@ const CURATED_FOOD = [
     kakaoUrl: "http://place.map.kakao.com/1159889320",
     rating: null,
     reviewCount: null,
-    youtuber: "쯔양",
-    videoTitle: null,
-    videoUrl: null,
-    recommendNote: "쯔양이 방문해 리뷰한 중식 맛집."
+    youtubers: [
+      {
+        name: "쯔양",
+        videoTitle: null,
+        videoUrl: null,
+        recommendNote: "쯔양이 방문해 리뷰한 중식 맛집."
+      }
+    ]
   },
   {
     id: "jjy-226",
@@ -5214,10 +4463,14 @@ const CURATED_FOOD = [
     kakaoUrl: "http://place.map.kakao.com/12502472",
     rating: null,
     reviewCount: null,
-    youtuber: "쯔양",
-    videoTitle: null,
-    videoUrl: null,
-    recommendNote: "쯔양이 방문해 리뷰한 고기 맛집."
+    youtubers: [
+      {
+        name: "쯔양",
+        videoTitle: null,
+        videoUrl: null,
+        recommendNote: "쯔양이 방문해 리뷰한 고기 맛집."
+      }
+    ]
   },
   {
     id: "jjy-227",
@@ -5230,10 +4483,14 @@ const CURATED_FOOD = [
     kakaoUrl: "http://place.map.kakao.com/548498659",
     rating: null,
     reviewCount: null,
-    youtuber: "쯔양",
-    videoTitle: null,
-    videoUrl: null,
-    recommendNote: "쯔양이 방문해 리뷰한 한식 맛집."
+    youtubers: [
+      {
+        name: "쯔양",
+        videoTitle: null,
+        videoUrl: null,
+        recommendNote: "쯔양이 방문해 리뷰한 한식 맛집."
+      }
+    ]
   },
   {
     id: "jjy-228",
@@ -5246,10 +4503,14 @@ const CURATED_FOOD = [
     kakaoUrl: "http://place.map.kakao.com/10553650",
     rating: null,
     reviewCount: null,
-    youtuber: "쯔양",
-    videoTitle: null,
-    videoUrl: null,
-    recommendNote: "쯔양이 방문해 리뷰한 한식 맛집."
+    youtubers: [
+      {
+        name: "쯔양",
+        videoTitle: null,
+        videoUrl: null,
+        recommendNote: "쯔양이 방문해 리뷰한 한식 맛집."
+      }
+    ]
   },
   {
     id: "jjy-229",
@@ -5262,10 +4523,14 @@ const CURATED_FOOD = [
     kakaoUrl: "http://place.map.kakao.com/15758579",
     rating: null,
     reviewCount: null,
-    youtuber: "쯔양",
-    videoTitle: null,
-    videoUrl: null,
-    recommendNote: "쯔양이 방문해 리뷰한 한식 맛집."
+    youtubers: [
+      {
+        name: "쯔양",
+        videoTitle: null,
+        videoUrl: null,
+        recommendNote: "쯔양이 방문해 리뷰한 한식 맛집."
+      }
+    ]
   },
   {
     id: "jjy-230",
@@ -5278,10 +4543,14 @@ const CURATED_FOOD = [
     kakaoUrl: "http://place.map.kakao.com/17174682",
     rating: null,
     reviewCount: null,
-    youtuber: "쯔양",
-    videoTitle: null,
-    videoUrl: null,
-    recommendNote: "쯔양이 방문해 리뷰한 한식 맛집."
+    youtubers: [
+      {
+        name: "쯔양",
+        videoTitle: null,
+        videoUrl: null,
+        recommendNote: "쯔양이 방문해 리뷰한 한식 맛집."
+      }
+    ]
   },
   {
     id: "jjy-231",
@@ -5294,10 +4563,14 @@ const CURATED_FOOD = [
     kakaoUrl: "http://place.map.kakao.com/1467670437",
     rating: null,
     reviewCount: null,
-    youtuber: "쯔양",
-    videoTitle: null,
-    videoUrl: null,
-    recommendNote: "쯔양이 방문해 리뷰한 중식 맛집."
+    youtubers: [
+      {
+        name: "쯔양",
+        videoTitle: null,
+        videoUrl: null,
+        recommendNote: "쯔양이 방문해 리뷰한 중식 맛집."
+      }
+    ]
   },
   {
     id: "jjy-232",
@@ -5310,10 +4583,14 @@ const CURATED_FOOD = [
     kakaoUrl: "http://place.map.kakao.com/1959091192",
     rating: null,
     reviewCount: null,
-    youtuber: "쯔양",
-    videoTitle: null,
-    videoUrl: null,
-    recommendNote: "쯔양이 방문해 리뷰한 양식 맛집."
+    youtubers: [
+      {
+        name: "쯔양",
+        videoTitle: null,
+        videoUrl: null,
+        recommendNote: "쯔양이 방문해 리뷰한 양식 맛집."
+      }
+    ]
   },
   {
     id: "jjy-233",
@@ -5326,10 +4603,14 @@ const CURATED_FOOD = [
     kakaoUrl: "http://place.map.kakao.com/266293133",
     rating: null,
     reviewCount: null,
-    youtuber: "쯔양",
-    videoTitle: null,
-    videoUrl: null,
-    recommendNote: "쯔양이 방문해 리뷰한 한식 맛집."
+    youtubers: [
+      {
+        name: "쯔양",
+        videoTitle: null,
+        videoUrl: null,
+        recommendNote: "쯔양이 방문해 리뷰한 한식 맛집."
+      }
+    ]
   },
   {
     id: "jjy-234",
@@ -5342,10 +4623,14 @@ const CURATED_FOOD = [
     kakaoUrl: "http://place.map.kakao.com/14635779",
     rating: null,
     reviewCount: null,
-    youtuber: "쯔양",
-    videoTitle: null,
-    videoUrl: null,
-    recommendNote: "쯔양이 방문해 리뷰한 한식 맛집."
+    youtubers: [
+      {
+        name: "쯔양",
+        videoTitle: null,
+        videoUrl: null,
+        recommendNote: "쯔양이 방문해 리뷰한 한식 맛집."
+      }
+    ]
   },
   {
     id: "jjy-235",
@@ -5358,10 +4643,14 @@ const CURATED_FOOD = [
     kakaoUrl: "http://place.map.kakao.com/21826841",
     rating: null,
     reviewCount: null,
-    youtuber: "쯔양",
-    videoTitle: null,
-    videoUrl: null,
-    recommendNote: "쯔양이 방문해 리뷰한 중식 맛집."
+    youtubers: [
+      {
+        name: "쯔양",
+        videoTitle: null,
+        videoUrl: null,
+        recommendNote: "쯔양이 방문해 리뷰한 중식 맛집."
+      }
+    ]
   },
   {
     id: "jjy-236",
@@ -5374,10 +4663,14 @@ const CURATED_FOOD = [
     kakaoUrl: "http://place.map.kakao.com/9850779",
     rating: null,
     reviewCount: null,
-    youtuber: "쯔양",
-    videoTitle: null,
-    videoUrl: null,
-    recommendNote: "쯔양이 방문해 리뷰한 맛집."
+    youtubers: [
+      {
+        name: "쯔양",
+        videoTitle: null,
+        videoUrl: null,
+        recommendNote: "쯔양이 방문해 리뷰한 맛집."
+      }
+    ]
   },
   {
     id: "jjy-237",
@@ -5390,10 +4683,14 @@ const CURATED_FOOD = [
     kakaoUrl: "http://place.map.kakao.com/2048083640",
     rating: null,
     reviewCount: null,
-    youtuber: "쯔양",
-    videoTitle: null,
-    videoUrl: null,
-    recommendNote: "쯔양이 방문해 리뷰한 돈까스·회 전문점."
+    youtubers: [
+      {
+        name: "쯔양",
+        videoTitle: null,
+        videoUrl: null,
+        recommendNote: "쯔양이 방문해 리뷰한 돈까스·회 전문점."
+      }
+    ]
   },
   {
     id: "jjy-238",
@@ -5406,10 +4703,14 @@ const CURATED_FOOD = [
     kakaoUrl: "http://place.map.kakao.com/413620947",
     rating: null,
     reviewCount: null,
-    youtuber: "쯔양",
-    videoTitle: null,
-    videoUrl: null,
-    recommendNote: "쯔양이 방문해 리뷰한 한식 맛집."
+    youtubers: [
+      {
+        name: "쯔양",
+        videoTitle: null,
+        videoUrl: null,
+        recommendNote: "쯔양이 방문해 리뷰한 한식 맛집."
+      }
+    ]
   },
   {
     id: "jjy-239",
@@ -5422,10 +4723,14 @@ const CURATED_FOOD = [
     kakaoUrl: "http://place.map.kakao.com/2091412504",
     rating: null,
     reviewCount: null,
-    youtuber: "쯔양",
-    videoTitle: null,
-    videoUrl: null,
-    recommendNote: "쯔양이 방문해 리뷰한 고기 맛집."
+    youtubers: [
+      {
+        name: "쯔양",
+        videoTitle: null,
+        videoUrl: null,
+        recommendNote: "쯔양이 방문해 리뷰한 고기 맛집."
+      }
+    ]
   },
   {
     id: "jjy-240",
@@ -5438,10 +4743,14 @@ const CURATED_FOOD = [
     kakaoUrl: "http://place.map.kakao.com/1917598552",
     rating: null,
     reviewCount: null,
-    youtuber: "쯔양",
-    videoTitle: null,
-    videoUrl: null,
-    recommendNote: "쯔양이 방문해 리뷰한 돈까스·회 전문점."
+    youtubers: [
+      {
+        name: "쯔양",
+        videoTitle: null,
+        videoUrl: null,
+        recommendNote: "쯔양이 방문해 리뷰한 돈까스·회 전문점."
+      }
+    ]
   },
   {
     id: "jjy-241",
@@ -5454,10 +4763,14 @@ const CURATED_FOOD = [
     kakaoUrl: "http://place.map.kakao.com/21656813",
     rating: null,
     reviewCount: null,
-    youtuber: "쯔양",
-    videoTitle: null,
-    videoUrl: null,
-    recommendNote: "쯔양이 방문해 리뷰한 돈까스·회 전문점."
+    youtubers: [
+      {
+        name: "쯔양",
+        videoTitle: null,
+        videoUrl: null,
+        recommendNote: "쯔양이 방문해 리뷰한 돈까스·회 전문점."
+      }
+    ]
   },
   {
     id: "jjy-242",
@@ -5470,10 +4783,14 @@ const CURATED_FOOD = [
     kakaoUrl: "http://place.map.kakao.com/51661598",
     rating: null,
     reviewCount: null,
-    youtuber: "쯔양",
-    videoTitle: null,
-    videoUrl: null,
-    recommendNote: "쯔양이 방문해 리뷰한 돈까스·회 전문점."
+    youtubers: [
+      {
+        name: "쯔양",
+        videoTitle: null,
+        videoUrl: null,
+        recommendNote: "쯔양이 방문해 리뷰한 돈까스·회 전문점."
+      }
+    ]
   },
   {
     id: "jjy-243",
@@ -5486,10 +4803,14 @@ const CURATED_FOOD = [
     kakaoUrl: "http://place.map.kakao.com/24637464",
     rating: null,
     reviewCount: null,
-    youtuber: "쯔양",
-    videoTitle: null,
-    videoUrl: null,
-    recommendNote: "쯔양이 방문해 리뷰한 돈까스·회 전문점."
+    youtubers: [
+      {
+        name: "쯔양",
+        videoTitle: null,
+        videoUrl: null,
+        recommendNote: "쯔양이 방문해 리뷰한 돈까스·회 전문점."
+      }
+    ]
   },
   {
     id: "jjy-244",
@@ -5502,10 +4823,14 @@ const CURATED_FOOD = [
     kakaoUrl: "http://place.map.kakao.com/21409927",
     rating: null,
     reviewCount: null,
-    youtuber: "쯔양",
-    videoTitle: null,
-    videoUrl: null,
-    recommendNote: "쯔양이 방문해 리뷰한 한식 맛집."
+    youtubers: [
+      {
+        name: "쯔양",
+        videoTitle: null,
+        videoUrl: null,
+        recommendNote: "쯔양이 방문해 리뷰한 한식 맛집."
+      }
+    ]
   },
   {
     id: "jjy-245",
@@ -5518,10 +4843,14 @@ const CURATED_FOOD = [
     kakaoUrl: "http://place.map.kakao.com/27300574",
     rating: null,
     reviewCount: null,
-    youtuber: "쯔양",
-    videoTitle: null,
-    videoUrl: null,
-    recommendNote: "쯔양이 방문해 리뷰한 한식 맛집."
+    youtubers: [
+      {
+        name: "쯔양",
+        videoTitle: null,
+        videoUrl: null,
+        recommendNote: "쯔양이 방문해 리뷰한 한식 맛집."
+      }
+    ]
   },
   {
     id: "jjy-246",
@@ -5534,10 +4863,14 @@ const CURATED_FOOD = [
     kakaoUrl: "http://place.map.kakao.com/11962368",
     rating: null,
     reviewCount: null,
-    youtuber: "쯔양",
-    videoTitle: null,
-    videoUrl: null,
-    recommendNote: "쯔양이 방문해 리뷰한 중식 맛집."
+    youtubers: [
+      {
+        name: "쯔양",
+        videoTitle: null,
+        videoUrl: null,
+        recommendNote: "쯔양이 방문해 리뷰한 중식 맛집."
+      }
+    ]
   },
   {
     id: "jjy-248",
@@ -5550,10 +4883,14 @@ const CURATED_FOOD = [
     kakaoUrl: "http://place.map.kakao.com/27134327",
     rating: null,
     reviewCount: null,
-    youtuber: "쯔양",
-    videoTitle: null,
-    videoUrl: null,
-    recommendNote: "쯔양이 방문해 리뷰한 고기 맛집."
+    youtubers: [
+      {
+        name: "쯔양",
+        videoTitle: null,
+        videoUrl: null,
+        recommendNote: "쯔양이 방문해 리뷰한 고기 맛집."
+      }
+    ]
   },
   {
     id: "jjy-249",
@@ -5566,10 +4903,14 @@ const CURATED_FOOD = [
     kakaoUrl: "http://place.map.kakao.com/10523660",
     rating: null,
     reviewCount: null,
-    youtuber: "쯔양",
-    videoTitle: null,
-    videoUrl: null,
-    recommendNote: "쯔양이 방문해 리뷰한 한식 맛집."
+    youtubers: [
+      {
+        name: "쯔양",
+        videoTitle: null,
+        videoUrl: null,
+        recommendNote: "쯔양이 방문해 리뷰한 한식 맛집."
+      }
+    ]
   },
   {
     id: "jjy-250",
@@ -5582,10 +4923,14 @@ const CURATED_FOOD = [
     kakaoUrl: "http://place.map.kakao.com/20623675",
     rating: null,
     reviewCount: null,
-    youtuber: "쯔양",
-    videoTitle: null,
-    videoUrl: null,
-    recommendNote: "쯔양이 방문해 리뷰한 찜·탕 맛집."
+    youtubers: [
+      {
+        name: "쯔양",
+        videoTitle: null,
+        videoUrl: null,
+        recommendNote: "쯔양이 방문해 리뷰한 찜·탕 맛집."
+      }
+    ]
   },
   {
     id: "jjy-251",
@@ -5598,10 +4943,14 @@ const CURATED_FOOD = [
     kakaoUrl: "http://place.map.kakao.com/27305864",
     rating: null,
     reviewCount: null,
-    youtuber: "쯔양",
-    videoTitle: null,
-    videoUrl: null,
-    recommendNote: "쯔양이 방문해 리뷰한 분식 맛집."
+    youtubers: [
+      {
+        name: "쯔양",
+        videoTitle: null,
+        videoUrl: null,
+        recommendNote: "쯔양이 방문해 리뷰한 분식 맛집."
+      }
+    ]
   },
   {
     id: "jjy-252",
@@ -5614,10 +4963,14 @@ const CURATED_FOOD = [
     kakaoUrl: "http://place.map.kakao.com/14533981",
     rating: null,
     reviewCount: null,
-    youtuber: "쯔양",
-    videoTitle: null,
-    videoUrl: null,
-    recommendNote: "쯔양이 방문해 리뷰한 분식 맛집."
+    youtubers: [
+      {
+        name: "쯔양",
+        videoTitle: null,
+        videoUrl: null,
+        recommendNote: "쯔양이 방문해 리뷰한 분식 맛집."
+      }
+    ]
   },
   {
     id: "jjy-253",
@@ -5630,10 +4983,14 @@ const CURATED_FOOD = [
     kakaoUrl: "http://place.map.kakao.com/1756080110",
     rating: null,
     reviewCount: null,
-    youtuber: "쯔양",
-    videoTitle: null,
-    videoUrl: null,
-    recommendNote: "쯔양이 방문해 리뷰한 한식 맛집."
+    youtubers: [
+      {
+        name: "쯔양",
+        videoTitle: null,
+        videoUrl: null,
+        recommendNote: "쯔양이 방문해 리뷰한 한식 맛집."
+      }
+    ]
   },
   {
     id: "jjy-254",
@@ -5646,10 +5003,14 @@ const CURATED_FOOD = [
     kakaoUrl: "http://place.map.kakao.com/885020597",
     rating: null,
     reviewCount: null,
-    youtuber: "쯔양",
-    videoTitle: null,
-    videoUrl: null,
-    recommendNote: "쯔양이 방문해 리뷰한 중식 맛집."
+    youtubers: [
+      {
+        name: "쯔양",
+        videoTitle: null,
+        videoUrl: null,
+        recommendNote: "쯔양이 방문해 리뷰한 중식 맛집."
+      }
+    ]
   },
   {
     id: "jjy-255",
@@ -5662,10 +5023,14 @@ const CURATED_FOOD = [
     kakaoUrl: "http://place.map.kakao.com/7988170",
     rating: null,
     reviewCount: null,
-    youtuber: "쯔양",
-    videoTitle: null,
-    videoUrl: null,
-    recommendNote: "쯔양이 방문해 리뷰한 중식 맛집."
+    youtubers: [
+      {
+        name: "쯔양",
+        videoTitle: null,
+        videoUrl: null,
+        recommendNote: "쯔양이 방문해 리뷰한 중식 맛집."
+      }
+    ]
   },
   {
     id: "jjy-256",
@@ -5678,10 +5043,20 @@ const CURATED_FOOD = [
     kakaoUrl: "http://place.map.kakao.com/15629433",
     rating: null,
     reviewCount: null,
-    youtuber: "쯔양",
-    videoTitle: null,
-    videoUrl: null,
-    recommendNote: "쯔양이 방문해 리뷰한 한식 맛집."
+    youtubers: [
+      {
+        name: "쯔양",
+        videoTitle: null,
+        videoUrl: null,
+        recommendNote: "쯔양이 방문해 리뷰한 한식 맛집."
+      },
+      {
+        name: "성시경의 먹을텐데",
+        videoTitle: null,
+        videoUrl: null,
+        recommendNote: null
+      }
+    ]
   },
   {
     id: "jjy-257",
@@ -5694,10 +5069,14 @@ const CURATED_FOOD = [
     kakaoUrl: "http://place.map.kakao.com/27402317",
     rating: null,
     reviewCount: null,
-    youtuber: "쯔양",
-    videoTitle: null,
-    videoUrl: null,
-    recommendNote: "쯔양이 방문해 리뷰한 고기 맛집."
+    youtubers: [
+      {
+        name: "쯔양",
+        videoTitle: null,
+        videoUrl: null,
+        recommendNote: "쯔양이 방문해 리뷰한 고기 맛집."
+      }
+    ]
   },
   {
     id: "jjy-258",
@@ -5710,10 +5089,14 @@ const CURATED_FOOD = [
     kakaoUrl: "http://place.map.kakao.com/204368427",
     rating: null,
     reviewCount: null,
-    youtuber: "쯔양",
-    videoTitle: null,
-    videoUrl: null,
-    recommendNote: "쯔양이 방문해 리뷰한 아시안 맛집."
+    youtubers: [
+      {
+        name: "쯔양",
+        videoTitle: null,
+        videoUrl: null,
+        recommendNote: "쯔양이 방문해 리뷰한 아시안 맛집."
+      }
+    ]
   },
   {
     id: "jjy-259",
@@ -5726,10 +5109,14 @@ const CURATED_FOOD = [
     kakaoUrl: "http://place.map.kakao.com/1701611733",
     rating: null,
     reviewCount: null,
-    youtuber: "쯔양",
-    videoTitle: null,
-    videoUrl: null,
-    recommendNote: "쯔양이 방문해 리뷰한 야식 맛집."
+    youtubers: [
+      {
+        name: "쯔양",
+        videoTitle: null,
+        videoUrl: null,
+        recommendNote: "쯔양이 방문해 리뷰한 야식 맛집."
+      }
+    ]
   },
   {
     id: "jjy-260",
@@ -5742,10 +5129,14 @@ const CURATED_FOOD = [
     kakaoUrl: "http://place.map.kakao.com/207440691",
     rating: null,
     reviewCount: null,
-    youtuber: "쯔양",
-    videoTitle: null,
-    videoUrl: null,
-    recommendNote: "쯔양이 방문해 리뷰한 고기 맛집."
+    youtubers: [
+      {
+        name: "쯔양",
+        videoTitle: null,
+        videoUrl: null,
+        recommendNote: "쯔양이 방문해 리뷰한 고기 맛집."
+      }
+    ]
   },
   {
     id: "jjy-261",
@@ -5758,10 +5149,14 @@ const CURATED_FOOD = [
     kakaoUrl: "http://place.map.kakao.com/2002885918",
     rating: null,
     reviewCount: null,
-    youtuber: "쯔양",
-    videoTitle: null,
-    videoUrl: null,
-    recommendNote: "쯔양이 방문해 리뷰한 한식 맛집."
+    youtubers: [
+      {
+        name: "쯔양",
+        videoTitle: null,
+        videoUrl: null,
+        recommendNote: "쯔양이 방문해 리뷰한 한식 맛집."
+      }
+    ]
   },
   {
     id: "jjy-262",
@@ -5774,10 +5169,14 @@ const CURATED_FOOD = [
     kakaoUrl: "http://place.map.kakao.com/10579219",
     rating: null,
     reviewCount: null,
-    youtuber: "쯔양",
-    videoTitle: null,
-    videoUrl: null,
-    recommendNote: "쯔양이 방문해 리뷰한 한식 맛집."
+    youtubers: [
+      {
+        name: "쯔양",
+        videoTitle: null,
+        videoUrl: null,
+        recommendNote: "쯔양이 방문해 리뷰한 한식 맛집."
+      }
+    ]
   },
   {
     id: "jjy-263",
@@ -5790,10 +5189,14 @@ const CURATED_FOOD = [
     kakaoUrl: "http://place.map.kakao.com/7876866",
     rating: null,
     reviewCount: null,
-    youtuber: "쯔양",
-    videoTitle: null,
-    videoUrl: null,
-    recommendNote: "쯔양이 방문해 리뷰한 분식 맛집."
+    youtubers: [
+      {
+        name: "쯔양",
+        videoTitle: null,
+        videoUrl: null,
+        recommendNote: "쯔양이 방문해 리뷰한 분식 맛집."
+      }
+    ]
   },
   {
     id: "jjy-264",
@@ -5806,10 +5209,14 @@ const CURATED_FOOD = [
     kakaoUrl: "http://place.map.kakao.com/1883680407",
     rating: null,
     reviewCount: null,
-    youtuber: "쯔양",
-    videoTitle: null,
-    videoUrl: null,
-    recommendNote: "쯔양이 방문해 리뷰한 고기 맛집."
+    youtubers: [
+      {
+        name: "쯔양",
+        videoTitle: null,
+        videoUrl: null,
+        recommendNote: "쯔양이 방문해 리뷰한 고기 맛집."
+      }
+    ]
   },
   {
     id: "jjy-265",
@@ -5822,10 +5229,14 @@ const CURATED_FOOD = [
     kakaoUrl: "http://place.map.kakao.com/840444376",
     rating: null,
     reviewCount: null,
-    youtuber: "쯔양",
-    videoTitle: null,
-    videoUrl: null,
-    recommendNote: "쯔양이 방문해 리뷰한 분식 맛집."
+    youtubers: [
+      {
+        name: "쯔양",
+        videoTitle: null,
+        videoUrl: null,
+        recommendNote: "쯔양이 방문해 리뷰한 분식 맛집."
+      }
+    ]
   },
   {
     id: "jjy-266",
@@ -5838,10 +5249,14 @@ const CURATED_FOOD = [
     kakaoUrl: "http://place.map.kakao.com/1067831271",
     rating: null,
     reviewCount: null,
-    youtuber: "쯔양",
-    videoTitle: null,
-    videoUrl: null,
-    recommendNote: "쯔양이 방문해 리뷰한 돈까스·회 전문점."
+    youtubers: [
+      {
+        name: "쯔양",
+        videoTitle: null,
+        videoUrl: null,
+        recommendNote: "쯔양이 방문해 리뷰한 돈까스·회 전문점."
+      }
+    ]
   },
   {
     id: "jjy-267",
@@ -5854,10 +5269,14 @@ const CURATED_FOOD = [
     kakaoUrl: "http://place.map.kakao.com/11949640",
     rating: null,
     reviewCount: null,
-    youtuber: "쯔양",
-    videoTitle: null,
-    videoUrl: null,
-    recommendNote: "쯔양이 방문해 리뷰한 한식 맛집."
+    youtubers: [
+      {
+        name: "쯔양",
+        videoTitle: null,
+        videoUrl: null,
+        recommendNote: "쯔양이 방문해 리뷰한 한식 맛집."
+      }
+    ]
   },
   {
     id: "jjy-268",
@@ -5870,10 +5289,14 @@ const CURATED_FOOD = [
     kakaoUrl: "http://place.map.kakao.com/10653477",
     rating: null,
     reviewCount: null,
-    youtuber: "쯔양",
-    videoTitle: null,
-    videoUrl: null,
-    recommendNote: "쯔양이 방문해 리뷰한 한식 맛집."
+    youtubers: [
+      {
+        name: "쯔양",
+        videoTitle: null,
+        videoUrl: null,
+        recommendNote: "쯔양이 방문해 리뷰한 한식 맛집."
+      }
+    ]
   },
   {
     id: "jjy-269",
@@ -5886,10 +5309,20 @@ const CURATED_FOOD = [
     kakaoUrl: "http://place.map.kakao.com/1257441291",
     rating: null,
     reviewCount: null,
-    youtuber: "쯔양",
-    videoTitle: null,
-    videoUrl: null,
-    recommendNote: "쯔양이 방문해 리뷰한 한식 맛집."
+    youtubers: [
+      {
+        name: "쯔양",
+        videoTitle: null,
+        videoUrl: null,
+        recommendNote: "쯔양이 방문해 리뷰한 한식 맛집."
+      },
+      {
+        name: "성시경의 먹을텐데",
+        videoTitle: null,
+        videoUrl: null,
+        recommendNote: null
+      }
+    ]
   },
   {
     id: "jjy-270",
@@ -5902,10 +5335,14 @@ const CURATED_FOOD = [
     kakaoUrl: "http://place.map.kakao.com/9252005",
     rating: null,
     reviewCount: null,
-    youtuber: "쯔양",
-    videoTitle: null,
-    videoUrl: null,
-    recommendNote: "쯔양이 방문해 리뷰한 중식 맛집."
+    youtubers: [
+      {
+        name: "쯔양",
+        videoTitle: null,
+        videoUrl: null,
+        recommendNote: "쯔양이 방문해 리뷰한 중식 맛집."
+      }
+    ]
   },
   {
     id: "jjy-271",
@@ -5918,10 +5355,14 @@ const CURATED_FOOD = [
     kakaoUrl: "http://place.map.kakao.com/16060241",
     rating: null,
     reviewCount: null,
-    youtuber: "쯔양",
-    videoTitle: null,
-    videoUrl: null,
-    recommendNote: "쯔양이 방문해 리뷰한 한식 맛집."
+    youtubers: [
+      {
+        name: "쯔양",
+        videoTitle: null,
+        videoUrl: null,
+        recommendNote: "쯔양이 방문해 리뷰한 한식 맛집."
+      }
+    ]
   },
   {
     id: "jjy-272",
@@ -5934,10 +5375,14 @@ const CURATED_FOOD = [
     kakaoUrl: "http://place.map.kakao.com/2015360199",
     rating: null,
     reviewCount: null,
-    youtuber: "쯔양",
-    videoTitle: null,
-    videoUrl: null,
-    recommendNote: "쯔양이 방문해 리뷰한 분식 맛집."
+    youtubers: [
+      {
+        name: "쯔양",
+        videoTitle: null,
+        videoUrl: null,
+        recommendNote: "쯔양이 방문해 리뷰한 분식 맛집."
+      }
+    ]
   },
   {
     id: "jjy-273",
@@ -5950,10 +5395,14 @@ const CURATED_FOOD = [
     kakaoUrl: "http://place.map.kakao.com/20944335",
     rating: null,
     reviewCount: null,
-    youtuber: "쯔양",
-    videoTitle: null,
-    videoUrl: null,
-    recommendNote: "쯔양이 방문해 리뷰한 중식 맛집."
+    youtubers: [
+      {
+        name: "쯔양",
+        videoTitle: null,
+        videoUrl: null,
+        recommendNote: "쯔양이 방문해 리뷰한 중식 맛집."
+      }
+    ]
   },
   {
     id: "jjy-274",
@@ -5966,10 +5415,14 @@ const CURATED_FOOD = [
     kakaoUrl: "http://place.map.kakao.com/1994421978",
     rating: null,
     reviewCount: null,
-    youtuber: "쯔양",
-    videoTitle: null,
-    videoUrl: null,
-    recommendNote: "쯔양이 방문해 리뷰한 한식 맛집."
+    youtubers: [
+      {
+        name: "쯔양",
+        videoTitle: null,
+        videoUrl: null,
+        recommendNote: "쯔양이 방문해 리뷰한 한식 맛집."
+      }
+    ]
   },
   {
     id: "jjy-275",
@@ -5982,10 +5435,14 @@ const CURATED_FOOD = [
     kakaoUrl: "http://place.map.kakao.com/16268657",
     rating: null,
     reviewCount: null,
-    youtuber: "쯔양",
-    videoTitle: null,
-    videoUrl: null,
-    recommendNote: "쯔양이 방문해 리뷰한 중식 맛집."
+    youtubers: [
+      {
+        name: "쯔양",
+        videoTitle: null,
+        videoUrl: null,
+        recommendNote: "쯔양이 방문해 리뷰한 중식 맛집."
+      }
+    ]
   },
   {
     id: "jjy-276",
@@ -5998,10 +5455,14 @@ const CURATED_FOOD = [
     kakaoUrl: "http://place.map.kakao.com/698283938",
     rating: null,
     reviewCount: null,
-    youtuber: "쯔양",
-    videoTitle: null,
-    videoUrl: null,
-    recommendNote: "쯔양이 방문해 리뷰한 고기 맛집."
+    youtubers: [
+      {
+        name: "쯔양",
+        videoTitle: null,
+        videoUrl: null,
+        recommendNote: "쯔양이 방문해 리뷰한 고기 맛집."
+      }
+    ]
   },
   {
     id: "jjy-277",
@@ -6014,10 +5475,14 @@ const CURATED_FOOD = [
     kakaoUrl: "http://place.map.kakao.com/10639247",
     rating: null,
     reviewCount: null,
-    youtuber: "쯔양",
-    videoTitle: null,
-    videoUrl: null,
-    recommendNote: "쯔양이 방문해 리뷰한 한식 맛집."
+    youtubers: [
+      {
+        name: "쯔양",
+        videoTitle: null,
+        videoUrl: null,
+        recommendNote: "쯔양이 방문해 리뷰한 한식 맛집."
+      }
+    ]
   },
   {
     id: "jjy-278",
@@ -6030,10 +5495,14 @@ const CURATED_FOOD = [
     kakaoUrl: "http://place.map.kakao.com/17167851",
     rating: null,
     reviewCount: null,
-    youtuber: "쯔양",
-    videoTitle: null,
-    videoUrl: null,
-    recommendNote: "쯔양이 방문해 리뷰한 한식 맛집."
+    youtubers: [
+      {
+        name: "쯔양",
+        videoTitle: null,
+        videoUrl: null,
+        recommendNote: "쯔양이 방문해 리뷰한 한식 맛집."
+      }
+    ]
   },
   {
     id: "jjy-279",
@@ -6046,10 +5515,14 @@ const CURATED_FOOD = [
     kakaoUrl: "http://place.map.kakao.com/13320353",
     rating: null,
     reviewCount: null,
-    youtuber: "쯔양",
-    videoTitle: null,
-    videoUrl: null,
-    recommendNote: "쯔양이 방문해 리뷰한 한식 맛집."
+    youtubers: [
+      {
+        name: "쯔양",
+        videoTitle: null,
+        videoUrl: null,
+        recommendNote: "쯔양이 방문해 리뷰한 한식 맛집."
+      }
+    ]
   },
   {
     id: "jjy-280",
@@ -6062,10 +5535,14 @@ const CURATED_FOOD = [
     kakaoUrl: "http://place.map.kakao.com/27269085",
     rating: null,
     reviewCount: null,
-    youtuber: "쯔양",
-    videoTitle: null,
-    videoUrl: null,
-    recommendNote: "쯔양이 방문해 리뷰한 한식 맛집."
+    youtubers: [
+      {
+        name: "쯔양",
+        videoTitle: null,
+        videoUrl: null,
+        recommendNote: "쯔양이 방문해 리뷰한 한식 맛집."
+      }
+    ]
   },
   {
     id: "jjy-281",
@@ -6078,10 +5555,14 @@ const CURATED_FOOD = [
     kakaoUrl: "http://place.map.kakao.com/1822883618",
     rating: null,
     reviewCount: null,
-    youtuber: "쯔양",
-    videoTitle: null,
-    videoUrl: null,
-    recommendNote: "쯔양이 방문해 리뷰한 돈까스·회 전문점."
+    youtubers: [
+      {
+        name: "쯔양",
+        videoTitle: null,
+        videoUrl: null,
+        recommendNote: "쯔양이 방문해 리뷰한 돈까스·회 전문점."
+      }
+    ]
   },
   {
     id: "jjy-282",
@@ -6094,10 +5575,14 @@ const CURATED_FOOD = [
     kakaoUrl: "http://place.map.kakao.com/24528418",
     rating: null,
     reviewCount: null,
-    youtuber: "쯔양",
-    videoTitle: null,
-    videoUrl: null,
-    recommendNote: "쯔양이 방문해 리뷰한 분식 맛집."
+    youtubers: [
+      {
+        name: "쯔양",
+        videoTitle: null,
+        videoUrl: null,
+        recommendNote: "쯔양이 방문해 리뷰한 분식 맛집."
+      }
+    ]
   },
   {
     id: "jjy-283",
@@ -6110,10 +5595,14 @@ const CURATED_FOOD = [
     kakaoUrl: "http://place.map.kakao.com/9262805",
     rating: null,
     reviewCount: null,
-    youtuber: "쯔양",
-    videoTitle: null,
-    videoUrl: null,
-    recommendNote: "쯔양이 방문해 리뷰한 돈까스·회 전문점."
+    youtubers: [
+      {
+        name: "쯔양",
+        videoTitle: null,
+        videoUrl: null,
+        recommendNote: "쯔양이 방문해 리뷰한 돈까스·회 전문점."
+      }
+    ]
   },
   {
     id: "jjy-284",
@@ -6126,10 +5615,14 @@ const CURATED_FOOD = [
     kakaoUrl: "http://place.map.kakao.com/180526534",
     rating: null,
     reviewCount: null,
-    youtuber: "쯔양",
-    videoTitle: null,
-    videoUrl: null,
-    recommendNote: "쯔양이 방문해 리뷰한 돈까스·회 전문점."
+    youtubers: [
+      {
+        name: "쯔양",
+        videoTitle: null,
+        videoUrl: null,
+        recommendNote: "쯔양이 방문해 리뷰한 돈까스·회 전문점."
+      }
+    ]
   },
   {
     id: "jjy-285",
@@ -6142,10 +5635,14 @@ const CURATED_FOOD = [
     kakaoUrl: "http://place.map.kakao.com/33773654",
     rating: null,
     reviewCount: null,
-    youtuber: "쯔양",
-    videoTitle: null,
-    videoUrl: null,
-    recommendNote: "쯔양이 방문해 리뷰한 한식 맛집."
+    youtubers: [
+      {
+        name: "쯔양",
+        videoTitle: null,
+        videoUrl: null,
+        recommendNote: "쯔양이 방문해 리뷰한 한식 맛집."
+      }
+    ]
   },
   {
     id: "jjy-286",
@@ -6158,10 +5655,14 @@ const CURATED_FOOD = [
     kakaoUrl: "http://place.map.kakao.com/8174854",
     rating: null,
     reviewCount: null,
-    youtuber: "쯔양",
-    videoTitle: null,
-    videoUrl: null,
-    recommendNote: "쯔양이 방문해 리뷰한 한식 맛집."
+    youtubers: [
+      {
+        name: "쯔양",
+        videoTitle: null,
+        videoUrl: null,
+        recommendNote: "쯔양이 방문해 리뷰한 한식 맛집."
+      }
+    ]
   },
   {
     id: "jjy-287",
@@ -6174,10 +5675,14 @@ const CURATED_FOOD = [
     kakaoUrl: "http://place.map.kakao.com/203032568",
     rating: null,
     reviewCount: null,
-    youtuber: "쯔양",
-    videoTitle: null,
-    videoUrl: null,
-    recommendNote: "쯔양이 방문해 리뷰한 돈까스·회 전문점."
+    youtubers: [
+      {
+        name: "쯔양",
+        videoTitle: null,
+        videoUrl: null,
+        recommendNote: "쯔양이 방문해 리뷰한 돈까스·회 전문점."
+      }
+    ]
   },
   {
     id: "jjy-288",
@@ -6190,10 +5695,14 @@ const CURATED_FOOD = [
     kakaoUrl: "http://place.map.kakao.com/22618131",
     rating: null,
     reviewCount: null,
-    youtuber: "쯔양",
-    videoTitle: null,
-    videoUrl: null,
-    recommendNote: "쯔양이 방문해 리뷰한 한식 맛집."
+    youtubers: [
+      {
+        name: "쯔양",
+        videoTitle: null,
+        videoUrl: null,
+        recommendNote: "쯔양이 방문해 리뷰한 한식 맛집."
+      }
+    ]
   },
   {
     id: "jjy-289",
@@ -6206,10 +5715,14 @@ const CURATED_FOOD = [
     kakaoUrl: "http://place.map.kakao.com/27508076",
     rating: null,
     reviewCount: null,
-    youtuber: "쯔양",
-    videoTitle: null,
-    videoUrl: null,
-    recommendNote: "쯔양이 방문해 리뷰한 돈까스·회 전문점."
+    youtubers: [
+      {
+        name: "쯔양",
+        videoTitle: null,
+        videoUrl: null,
+        recommendNote: "쯔양이 방문해 리뷰한 돈까스·회 전문점."
+      }
+    ]
   },
   {
     id: "jjy-290",
@@ -6222,10 +5735,14 @@ const CURATED_FOOD = [
     kakaoUrl: "http://place.map.kakao.com/10620868",
     rating: null,
     reviewCount: null,
-    youtuber: "쯔양",
-    videoTitle: null,
-    videoUrl: null,
-    recommendNote: "쯔양이 방문해 리뷰한 카페·디저트 맛집."
+    youtubers: [
+      {
+        name: "쯔양",
+        videoTitle: null,
+        videoUrl: null,
+        recommendNote: "쯔양이 방문해 리뷰한 카페·디저트 맛집."
+      }
+    ]
   },
   {
     id: "jjy-291",
@@ -6238,10 +5755,14 @@ const CURATED_FOOD = [
     kakaoUrl: "http://place.map.kakao.com/18768435",
     rating: null,
     reviewCount: null,
-    youtuber: "쯔양",
-    videoTitle: null,
-    videoUrl: null,
-    recommendNote: "쯔양이 방문해 리뷰한 분식 맛집."
+    youtubers: [
+      {
+        name: "쯔양",
+        videoTitle: null,
+        videoUrl: null,
+        recommendNote: "쯔양이 방문해 리뷰한 분식 맛집."
+      }
+    ]
   },
   {
     id: "jjy-292",
@@ -6254,10 +5775,14 @@ const CURATED_FOOD = [
     kakaoUrl: "http://place.map.kakao.com/148260882",
     rating: null,
     reviewCount: null,
-    youtuber: "쯔양",
-    videoTitle: null,
-    videoUrl: null,
-    recommendNote: "쯔양이 방문해 리뷰한 카페·디저트 맛집."
+    youtubers: [
+      {
+        name: "쯔양",
+        videoTitle: null,
+        videoUrl: null,
+        recommendNote: "쯔양이 방문해 리뷰한 카페·디저트 맛집."
+      }
+    ]
   },
   {
     id: "jjy-293",
@@ -6270,10 +5795,14 @@ const CURATED_FOOD = [
     kakaoUrl: "http://place.map.kakao.com/26849792",
     rating: null,
     reviewCount: null,
-    youtuber: "쯔양",
-    videoTitle: null,
-    videoUrl: null,
-    recommendNote: "쯔양이 방문해 리뷰한 카페·디저트 맛집."
+    youtubers: [
+      {
+        name: "쯔양",
+        videoTitle: null,
+        videoUrl: null,
+        recommendNote: "쯔양이 방문해 리뷰한 카페·디저트 맛집."
+      }
+    ]
   },
   {
     id: "jjy-294",
@@ -6286,10 +5815,14 @@ const CURATED_FOOD = [
     kakaoUrl: "http://place.map.kakao.com/21482912",
     rating: null,
     reviewCount: null,
-    youtuber: "쯔양",
-    videoTitle: null,
-    videoUrl: null,
-    recommendNote: "쯔양이 방문해 리뷰한 한식 맛집."
+    youtubers: [
+      {
+        name: "쯔양",
+        videoTitle: null,
+        videoUrl: null,
+        recommendNote: "쯔양이 방문해 리뷰한 한식 맛집."
+      }
+    ]
   },
   {
     id: "jjy-295",
@@ -6302,10 +5835,14 @@ const CURATED_FOOD = [
     kakaoUrl: "http://place.map.kakao.com/1453370999",
     rating: null,
     reviewCount: null,
-    youtuber: "쯔양",
-    videoTitle: null,
-    videoUrl: null,
-    recommendNote: "쯔양이 방문해 리뷰한 고기 맛집."
+    youtubers: [
+      {
+        name: "쯔양",
+        videoTitle: null,
+        videoUrl: null,
+        recommendNote: "쯔양이 방문해 리뷰한 고기 맛집."
+      }
+    ]
   },
   {
     id: "jjy-296",
@@ -6318,10 +5855,14 @@ const CURATED_FOOD = [
     kakaoUrl: "http://place.map.kakao.com/10706114",
     rating: null,
     reviewCount: null,
-    youtuber: "쯔양",
-    videoTitle: null,
-    videoUrl: null,
-    recommendNote: "쯔양이 방문해 리뷰한 한식 맛집."
+    youtubers: [
+      {
+        name: "쯔양",
+        videoTitle: null,
+        videoUrl: null,
+        recommendNote: "쯔양이 방문해 리뷰한 한식 맛집."
+      }
+    ]
   },
   {
     id: "jjy-297",
@@ -6334,10 +5875,14 @@ const CURATED_FOOD = [
     kakaoUrl: "http://place.map.kakao.com/9281591",
     rating: null,
     reviewCount: null,
-    youtuber: "쯔양",
-    videoTitle: null,
-    videoUrl: null,
-    recommendNote: "쯔양이 방문해 리뷰한 분식 맛집."
+    youtubers: [
+      {
+        name: "쯔양",
+        videoTitle: null,
+        videoUrl: null,
+        recommendNote: "쯔양이 방문해 리뷰한 분식 맛집."
+      }
+    ]
   },
   {
     id: "jjy-298",
@@ -6350,10 +5895,14 @@ const CURATED_FOOD = [
     kakaoUrl: "http://place.map.kakao.com/9947605",
     rating: null,
     reviewCount: null,
-    youtuber: "쯔양",
-    videoTitle: null,
-    videoUrl: null,
-    recommendNote: "쯔양이 방문해 리뷰한 고기 맛집."
+    youtubers: [
+      {
+        name: "쯔양",
+        videoTitle: null,
+        videoUrl: null,
+        recommendNote: "쯔양이 방문해 리뷰한 고기 맛집."
+      }
+    ]
   },
   {
     id: "jjy-299",
@@ -6366,10 +5915,14 @@ const CURATED_FOOD = [
     kakaoUrl: "http://place.map.kakao.com/13093421",
     rating: null,
     reviewCount: null,
-    youtuber: "쯔양",
-    videoTitle: null,
-    videoUrl: null,
-    recommendNote: "쯔양이 방문해 리뷰한 찜·탕 맛집."
+    youtubers: [
+      {
+        name: "쯔양",
+        videoTitle: null,
+        videoUrl: null,
+        recommendNote: "쯔양이 방문해 리뷰한 찜·탕 맛집."
+      }
+    ]
   },
   {
     id: "jjy-300",
@@ -6382,10 +5935,14 @@ const CURATED_FOOD = [
     kakaoUrl: "http://place.map.kakao.com/106301747",
     rating: null,
     reviewCount: null,
-    youtuber: "쯔양",
-    videoTitle: null,
-    videoUrl: null,
-    recommendNote: "쯔양이 방문해 리뷰한 분식 맛집."
+    youtubers: [
+      {
+        name: "쯔양",
+        videoTitle: null,
+        videoUrl: null,
+        recommendNote: "쯔양이 방문해 리뷰한 분식 맛집."
+      }
+    ]
   },
   {
     id: "jjy-301",
@@ -6398,10 +5955,14 @@ const CURATED_FOOD = [
     kakaoUrl: "http://place.map.kakao.com/10707829",
     rating: null,
     reviewCount: null,
-    youtuber: "쯔양",
-    videoTitle: null,
-    videoUrl: null,
-    recommendNote: "쯔양이 방문해 리뷰한 한식 맛집."
+    youtubers: [
+      {
+        name: "쯔양",
+        videoTitle: null,
+        videoUrl: null,
+        recommendNote: "쯔양이 방문해 리뷰한 한식 맛집."
+      }
+    ]
   },
   {
     id: "jjy-302",
@@ -6414,10 +5975,14 @@ const CURATED_FOOD = [
     kakaoUrl: "http://place.map.kakao.com/384441682",
     rating: null,
     reviewCount: null,
-    youtuber: "쯔양",
-    videoTitle: null,
-    videoUrl: null,
-    recommendNote: "쯔양이 방문해 리뷰한 고기 맛집."
+    youtubers: [
+      {
+        name: "쯔양",
+        videoTitle: null,
+        videoUrl: null,
+        recommendNote: "쯔양이 방문해 리뷰한 고기 맛집."
+      }
+    ]
   },
   {
     id: "jjy-303",
@@ -6430,10 +5995,14 @@ const CURATED_FOOD = [
     kakaoUrl: "http://place.map.kakao.com/1088815991",
     rating: null,
     reviewCount: null,
-    youtuber: "쯔양",
-    videoTitle: null,
-    videoUrl: null,
-    recommendNote: "쯔양이 방문해 리뷰한 한식 맛집."
+    youtubers: [
+      {
+        name: "쯔양",
+        videoTitle: null,
+        videoUrl: null,
+        recommendNote: "쯔양이 방문해 리뷰한 한식 맛집."
+      }
+    ]
   },
   {
     id: "jjy-304",
@@ -6446,10 +6015,14 @@ const CURATED_FOOD = [
     kakaoUrl: "http://place.map.kakao.com/579485501",
     rating: null,
     reviewCount: null,
-    youtuber: "쯔양",
-    videoTitle: null,
-    videoUrl: null,
-    recommendNote: "쯔양이 방문해 리뷰한 한식 맛집."
+    youtubers: [
+      {
+        name: "쯔양",
+        videoTitle: null,
+        videoUrl: null,
+        recommendNote: "쯔양이 방문해 리뷰한 한식 맛집."
+      }
+    ]
   },
   {
     id: "jjy-305",
@@ -6462,10 +6035,14 @@ const CURATED_FOOD = [
     kakaoUrl: "http://place.map.kakao.com/26572124",
     rating: null,
     reviewCount: null,
-    youtuber: "쯔양",
-    videoTitle: null,
-    videoUrl: null,
-    recommendNote: "쯔양이 방문해 리뷰한 양식 맛집."
+    youtubers: [
+      {
+        name: "쯔양",
+        videoTitle: null,
+        videoUrl: null,
+        recommendNote: "쯔양이 방문해 리뷰한 양식 맛집."
+      }
+    ]
   },
   {
     id: "jjy-306",
@@ -6478,10 +6055,14 @@ const CURATED_FOOD = [
     kakaoUrl: "http://place.map.kakao.com/11181285",
     rating: null,
     reviewCount: null,
-    youtuber: "쯔양",
-    videoTitle: null,
-    videoUrl: null,
-    recommendNote: "쯔양이 방문해 리뷰한 고기 맛집."
+    youtubers: [
+      {
+        name: "쯔양",
+        videoTitle: null,
+        videoUrl: null,
+        recommendNote: "쯔양이 방문해 리뷰한 고기 맛집."
+      }
+    ]
   },
   {
     id: "jjy-307",
@@ -6494,10 +6075,14 @@ const CURATED_FOOD = [
     kakaoUrl: "http://place.map.kakao.com/10688418",
     rating: null,
     reviewCount: null,
-    youtuber: "쯔양",
-    videoTitle: null,
-    videoUrl: null,
-    recommendNote: "쯔양이 방문해 리뷰한 고기 맛집."
+    youtubers: [
+      {
+        name: "쯔양",
+        videoTitle: null,
+        videoUrl: null,
+        recommendNote: "쯔양이 방문해 리뷰한 고기 맛집."
+      }
+    ]
   },
   {
     id: "jjy-308",
@@ -6510,10 +6095,14 @@ const CURATED_FOOD = [
     kakaoUrl: "http://place.map.kakao.com/864785263",
     rating: null,
     reviewCount: null,
-    youtuber: "쯔양",
-    videoTitle: null,
-    videoUrl: null,
-    recommendNote: "쯔양이 방문해 리뷰한 한식 맛집."
+    youtubers: [
+      {
+        name: "쯔양",
+        videoTitle: null,
+        videoUrl: null,
+        recommendNote: "쯔양이 방문해 리뷰한 한식 맛집."
+      }
+    ]
   },
   {
     id: "jjy-309",
@@ -6526,10 +6115,14 @@ const CURATED_FOOD = [
     kakaoUrl: "http://place.map.kakao.com/1525701535",
     rating: null,
     reviewCount: null,
-    youtuber: "쯔양",
-    videoTitle: null,
-    videoUrl: null,
-    recommendNote: "쯔양이 방문해 리뷰한 중식 맛집."
+    youtubers: [
+      {
+        name: "쯔양",
+        videoTitle: null,
+        videoUrl: null,
+        recommendNote: "쯔양이 방문해 리뷰한 중식 맛집."
+      }
+    ]
   },
   {
     id: "jjy-310",
@@ -6542,10 +6135,14 @@ const CURATED_FOOD = [
     kakaoUrl: "http://place.map.kakao.com/10686549",
     rating: null,
     reviewCount: null,
-    youtuber: "쯔양",
-    videoTitle: null,
-    videoUrl: null,
-    recommendNote: "쯔양이 방문해 리뷰한 한식 맛집."
+    youtubers: [
+      {
+        name: "쯔양",
+        videoTitle: null,
+        videoUrl: null,
+        recommendNote: "쯔양이 방문해 리뷰한 한식 맛집."
+      }
+    ]
   },
   {
     id: "jjy-311",
@@ -6558,10 +6155,14 @@ const CURATED_FOOD = [
     kakaoUrl: "http://place.map.kakao.com/13571397",
     rating: null,
     reviewCount: null,
-    youtuber: "쯔양",
-    videoTitle: null,
-    videoUrl: null,
-    recommendNote: "쯔양이 방문해 리뷰한 한식 맛집."
+    youtubers: [
+      {
+        name: "쯔양",
+        videoTitle: null,
+        videoUrl: null,
+        recommendNote: "쯔양이 방문해 리뷰한 한식 맛집."
+      }
+    ]
   },
   {
     id: "jjy-312",
@@ -6574,10 +6175,14 @@ const CURATED_FOOD = [
     kakaoUrl: "http://place.map.kakao.com/24122781",
     rating: null,
     reviewCount: null,
-    youtuber: "쯔양",
-    videoTitle: null,
-    videoUrl: null,
-    recommendNote: "쯔양이 방문해 리뷰한 한식 맛집."
+    youtubers: [
+      {
+        name: "쯔양",
+        videoTitle: null,
+        videoUrl: null,
+        recommendNote: "쯔양이 방문해 리뷰한 한식 맛집."
+      }
+    ]
   },
   {
     id: "jjy-313",
@@ -6590,10 +6195,14 @@ const CURATED_FOOD = [
     kakaoUrl: "http://place.map.kakao.com/8029579",
     rating: null,
     reviewCount: null,
-    youtuber: "쯔양",
-    videoTitle: null,
-    videoUrl: null,
-    recommendNote: "쯔양이 방문해 리뷰한 족발·보쌈 맛집."
+    youtubers: [
+      {
+        name: "쯔양",
+        videoTitle: null,
+        videoUrl: null,
+        recommendNote: "쯔양이 방문해 리뷰한 족발·보쌈 맛집."
+      }
+    ]
   },
   {
     id: "jjy-314",
@@ -6606,10 +6215,14 @@ const CURATED_FOOD = [
     kakaoUrl: "http://place.map.kakao.com/1554604357",
     rating: null,
     reviewCount: null,
-    youtuber: "쯔양",
-    videoTitle: null,
-    videoUrl: null,
-    recommendNote: "쯔양이 방문해 리뷰한 한식 맛집."
+    youtubers: [
+      {
+        name: "쯔양",
+        videoTitle: null,
+        videoUrl: null,
+        recommendNote: "쯔양이 방문해 리뷰한 한식 맛집."
+      }
+    ]
   },
   {
     id: "jjy-315",
@@ -6622,10 +6235,14 @@ const CURATED_FOOD = [
     kakaoUrl: "http://place.map.kakao.com/10252143",
     rating: null,
     reviewCount: null,
-    youtuber: "쯔양",
-    videoTitle: null,
-    videoUrl: null,
-    recommendNote: "쯔양이 방문해 리뷰한 고기 맛집."
+    youtubers: [
+      {
+        name: "쯔양",
+        videoTitle: null,
+        videoUrl: null,
+        recommendNote: "쯔양이 방문해 리뷰한 고기 맛집."
+      }
+    ]
   },
   {
     id: "jjy-316",
@@ -6638,10 +6255,14 @@ const CURATED_FOOD = [
     kakaoUrl: "http://place.map.kakao.com/9363354",
     rating: null,
     reviewCount: null,
-    youtuber: "쯔양",
-    videoTitle: null,
-    videoUrl: null,
-    recommendNote: "쯔양이 방문해 리뷰한 중식 맛집."
+    youtubers: [
+      {
+        name: "쯔양",
+        videoTitle: null,
+        videoUrl: null,
+        recommendNote: "쯔양이 방문해 리뷰한 중식 맛집."
+      }
+    ]
   },
   {
     id: "jjy-317",
@@ -6654,10 +6275,14 @@ const CURATED_FOOD = [
     kakaoUrl: "http://place.map.kakao.com/104532017",
     rating: null,
     reviewCount: null,
-    youtuber: "쯔양",
-    videoTitle: null,
-    videoUrl: null,
-    recommendNote: "쯔양이 방문해 리뷰한 분식 맛집."
+    youtubers: [
+      {
+        name: "쯔양",
+        videoTitle: null,
+        videoUrl: null,
+        recommendNote: "쯔양이 방문해 리뷰한 분식 맛집."
+      }
+    ]
   },
   {
     id: "jjy-318",
@@ -6670,10 +6295,14 @@ const CURATED_FOOD = [
     kakaoUrl: "http://place.map.kakao.com/912315911",
     rating: null,
     reviewCount: null,
-    youtuber: "쯔양",
-    videoTitle: null,
-    videoUrl: null,
-    recommendNote: "쯔양이 방문해 리뷰한 아시안 맛집."
+    youtubers: [
+      {
+        name: "쯔양",
+        videoTitle: null,
+        videoUrl: null,
+        recommendNote: "쯔양이 방문해 리뷰한 아시안 맛집."
+      }
+    ]
   },
   {
     id: "jjy-319",
@@ -6686,10 +6315,14 @@ const CURATED_FOOD = [
     kakaoUrl: "http://place.map.kakao.com/8050105",
     rating: null,
     reviewCount: null,
-    youtuber: "쯔양",
-    videoTitle: null,
-    videoUrl: null,
-    recommendNote: "쯔양이 방문해 리뷰한 한식 맛집."
+    youtubers: [
+      {
+        name: "쯔양",
+        videoTitle: null,
+        videoUrl: null,
+        recommendNote: "쯔양이 방문해 리뷰한 한식 맛집."
+      }
+    ]
   },
   {
     id: "jjy-320",
@@ -6702,10 +6335,14 @@ const CURATED_FOOD = [
     kakaoUrl: "http://place.map.kakao.com/18636567",
     rating: null,
     reviewCount: null,
-    youtuber: "쯔양",
-    videoTitle: null,
-    videoUrl: null,
-    recommendNote: "쯔양이 방문해 리뷰한 한식 맛집."
+    youtubers: [
+      {
+        name: "쯔양",
+        videoTitle: null,
+        videoUrl: null,
+        recommendNote: "쯔양이 방문해 리뷰한 한식 맛집."
+      }
+    ]
   },
   {
     id: "jjy-321",
@@ -6718,10 +6355,14 @@ const CURATED_FOOD = [
     kakaoUrl: "http://place.map.kakao.com/8547125",
     rating: null,
     reviewCount: null,
-    youtuber: "쯔양",
-    videoTitle: null,
-    videoUrl: null,
-    recommendNote: "쯔양이 방문해 리뷰한 한식 맛집."
+    youtubers: [
+      {
+        name: "쯔양",
+        videoTitle: null,
+        videoUrl: null,
+        recommendNote: "쯔양이 방문해 리뷰한 한식 맛집."
+      }
+    ]
   },
   {
     id: "jjy-322",
@@ -6734,10 +6375,14 @@ const CURATED_FOOD = [
     kakaoUrl: "http://place.map.kakao.com/10748217",
     rating: null,
     reviewCount: null,
-    youtuber: "쯔양",
-    videoTitle: null,
-    videoUrl: null,
-    recommendNote: "쯔양이 방문해 리뷰한 카페·디저트 맛집."
+    youtubers: [
+      {
+        name: "쯔양",
+        videoTitle: null,
+        videoUrl: null,
+        recommendNote: "쯔양이 방문해 리뷰한 카페·디저트 맛집."
+      }
+    ]
   },
   {
     id: "jjy-323",
@@ -6750,10 +6395,14 @@ const CURATED_FOOD = [
     kakaoUrl: "http://place.map.kakao.com/11182424",
     rating: null,
     reviewCount: null,
-    youtuber: "쯔양",
-    videoTitle: null,
-    videoUrl: null,
-    recommendNote: "쯔양이 방문해 리뷰한 맛집."
+    youtubers: [
+      {
+        name: "쯔양",
+        videoTitle: null,
+        videoUrl: null,
+        recommendNote: "쯔양이 방문해 리뷰한 맛집."
+      }
+    ]
   },
   {
     id: "jjy-324",
@@ -6766,10 +6415,14 @@ const CURATED_FOOD = [
     kakaoUrl: "http://place.map.kakao.com/532272836",
     rating: null,
     reviewCount: null,
-    youtuber: "쯔양",
-    videoTitle: null,
-    videoUrl: null,
-    recommendNote: "쯔양이 방문해 리뷰한 패스트푸드 맛집."
+    youtubers: [
+      {
+        name: "쯔양",
+        videoTitle: null,
+        videoUrl: null,
+        recommendNote: "쯔양이 방문해 리뷰한 패스트푸드 맛집."
+      }
+    ]
   },
   {
     id: "jjy-325",
@@ -6782,10 +6435,14 @@ const CURATED_FOOD = [
     kakaoUrl: "http://place.map.kakao.com/1316094610",
     rating: null,
     reviewCount: null,
-    youtuber: "쯔양",
-    videoTitle: null,
-    videoUrl: null,
-    recommendNote: "쯔양이 방문해 리뷰한 고기 맛집."
+    youtubers: [
+      {
+        name: "쯔양",
+        videoTitle: null,
+        videoUrl: null,
+        recommendNote: "쯔양이 방문해 리뷰한 고기 맛집."
+      }
+    ]
   },
   {
     id: "jjy-326",
@@ -6798,10 +6455,14 @@ const CURATED_FOOD = [
     kakaoUrl: "http://place.map.kakao.com/27243872",
     rating: null,
     reviewCount: null,
-    youtuber: "쯔양",
-    videoTitle: null,
-    videoUrl: null,
-    recommendNote: "쯔양이 방문해 리뷰한 한식 맛집."
+    youtubers: [
+      {
+        name: "쯔양",
+        videoTitle: null,
+        videoUrl: null,
+        recommendNote: "쯔양이 방문해 리뷰한 한식 맛집."
+      }
+    ]
   },
   {
     id: "jjy-327",
@@ -6814,10 +6475,14 @@ const CURATED_FOOD = [
     kakaoUrl: "http://place.map.kakao.com/23791683",
     rating: null,
     reviewCount: null,
-    youtuber: "쯔양",
-    videoTitle: null,
-    videoUrl: null,
-    recommendNote: "쯔양이 방문해 리뷰한 중식 맛집."
+    youtubers: [
+      {
+        name: "쯔양",
+        videoTitle: null,
+        videoUrl: null,
+        recommendNote: "쯔양이 방문해 리뷰한 중식 맛집."
+      }
+    ]
   },
   {
     id: "jjy-328",
@@ -6830,10 +6495,14 @@ const CURATED_FOOD = [
     kakaoUrl: "http://place.map.kakao.com/11162975",
     rating: null,
     reviewCount: null,
-    youtuber: "쯔양",
-    videoTitle: null,
-    videoUrl: null,
-    recommendNote: "쯔양이 방문해 리뷰한 한식 맛집."
+    youtubers: [
+      {
+        name: "쯔양",
+        videoTitle: null,
+        videoUrl: null,
+        recommendNote: "쯔양이 방문해 리뷰한 한식 맛집."
+      }
+    ]
   },
   {
     id: "jjy-329",
@@ -6846,10 +6515,14 @@ const CURATED_FOOD = [
     kakaoUrl: "http://place.map.kakao.com/25839584",
     rating: null,
     reviewCount: null,
-    youtuber: "쯔양",
-    videoTitle: null,
-    videoUrl: null,
-    recommendNote: "쯔양이 방문해 리뷰한 분식 맛집."
+    youtubers: [
+      {
+        name: "쯔양",
+        videoTitle: null,
+        videoUrl: null,
+        recommendNote: "쯔양이 방문해 리뷰한 분식 맛집."
+      }
+    ]
   },
   {
     id: "jjy-330",
@@ -6862,10 +6535,20 @@ const CURATED_FOOD = [
     kakaoUrl: "http://place.map.kakao.com/15597468",
     rating: null,
     reviewCount: null,
-    youtuber: "쯔양",
-    videoTitle: null,
-    videoUrl: null,
-    recommendNote: "쯔양이 방문해 리뷰한 고기 맛집."
+    youtubers: [
+      {
+        name: "쯔양",
+        videoTitle: null,
+        videoUrl: null,
+        recommendNote: "쯔양이 방문해 리뷰한 고기 맛집."
+      },
+      {
+        name: "성시경의 먹을텐데",
+        videoTitle: null,
+        videoUrl: null,
+        recommendNote: null
+      }
+    ]
   },
   {
     id: "jjy-331",
@@ -6878,10 +6561,14 @@ const CURATED_FOOD = [
     kakaoUrl: "http://place.map.kakao.com/21360025",
     rating: null,
     reviewCount: null,
-    youtuber: "쯔양",
-    videoTitle: null,
-    videoUrl: null,
-    recommendNote: "쯔양이 방문해 리뷰한 한식 맛집."
+    youtubers: [
+      {
+        name: "쯔양",
+        videoTitle: null,
+        videoUrl: null,
+        recommendNote: "쯔양이 방문해 리뷰한 한식 맛집."
+      }
+    ]
   },
   {
     id: "jjy-333",
@@ -6894,10 +6581,14 @@ const CURATED_FOOD = [
     kakaoUrl: "http://place.map.kakao.com/16825778",
     rating: null,
     reviewCount: null,
-    youtuber: "쯔양",
-    videoTitle: null,
-    videoUrl: null,
-    recommendNote: "쯔양이 방문해 리뷰한 한식 맛집."
+    youtubers: [
+      {
+        name: "쯔양",
+        videoTitle: null,
+        videoUrl: null,
+        recommendNote: "쯔양이 방문해 리뷰한 한식 맛집."
+      }
+    ]
   },
   {
     id: "jjy-334",
@@ -6910,10 +6601,14 @@ const CURATED_FOOD = [
     kakaoUrl: "http://place.map.kakao.com/117414142",
     rating: null,
     reviewCount: null,
-    youtuber: "쯔양",
-    videoTitle: null,
-    videoUrl: null,
-    recommendNote: "쯔양이 방문해 리뷰한 한식 맛집."
+    youtubers: [
+      {
+        name: "쯔양",
+        videoTitle: null,
+        videoUrl: null,
+        recommendNote: "쯔양이 방문해 리뷰한 한식 맛집."
+      }
+    ]
   },
   {
     id: "jjy-335",
@@ -6926,10 +6621,14 @@ const CURATED_FOOD = [
     kakaoUrl: "http://place.map.kakao.com/1069592544",
     rating: null,
     reviewCount: null,
-    youtuber: "쯔양",
-    videoTitle: null,
-    videoUrl: null,
-    recommendNote: "쯔양이 방문해 리뷰한 치킨 전문점."
+    youtubers: [
+      {
+        name: "쯔양",
+        videoTitle: null,
+        videoUrl: null,
+        recommendNote: "쯔양이 방문해 리뷰한 치킨 전문점."
+      }
+    ]
   },
   {
     id: "jjy-336",
@@ -6942,10 +6641,14 @@ const CURATED_FOOD = [
     kakaoUrl: "http://place.map.kakao.com/114375270",
     rating: null,
     reviewCount: null,
-    youtuber: "쯔양",
-    videoTitle: null,
-    videoUrl: null,
-    recommendNote: "쯔양이 방문해 리뷰한 분식 맛집."
+    youtubers: [
+      {
+        name: "쯔양",
+        videoTitle: null,
+        videoUrl: null,
+        recommendNote: "쯔양이 방문해 리뷰한 분식 맛집."
+      }
+    ]
   },
   {
     id: "jjy-337",
@@ -6958,10 +6661,14 @@ const CURATED_FOOD = [
     kakaoUrl: "http://place.map.kakao.com/26974119",
     rating: null,
     reviewCount: null,
-    youtuber: "쯔양",
-    videoTitle: null,
-    videoUrl: null,
-    recommendNote: "쯔양이 방문해 리뷰한 분식 맛집."
+    youtubers: [
+      {
+        name: "쯔양",
+        videoTitle: null,
+        videoUrl: null,
+        recommendNote: "쯔양이 방문해 리뷰한 분식 맛집."
+      }
+    ]
   },
   {
     id: "jjy-338",
@@ -6974,10 +6681,14 @@ const CURATED_FOOD = [
     kakaoUrl: "http://place.map.kakao.com/1320546155",
     rating: null,
     reviewCount: null,
-    youtuber: "쯔양",
-    videoTitle: null,
-    videoUrl: null,
-    recommendNote: "쯔양이 방문해 리뷰한 맛집."
+    youtubers: [
+      {
+        name: "쯔양",
+        videoTitle: null,
+        videoUrl: null,
+        recommendNote: "쯔양이 방문해 리뷰한 맛집."
+      }
+    ]
   },
   {
     id: "jjy-339",
@@ -6990,10 +6701,14 @@ const CURATED_FOOD = [
     kakaoUrl: "http://place.map.kakao.com/8051506",
     rating: null,
     reviewCount: null,
-    youtuber: "쯔양",
-    videoTitle: null,
-    videoUrl: null,
-    recommendNote: "쯔양이 방문해 리뷰한 한식 맛집."
+    youtubers: [
+      {
+        name: "쯔양",
+        videoTitle: null,
+        videoUrl: null,
+        recommendNote: "쯔양이 방문해 리뷰한 한식 맛집."
+      }
+    ]
   },
   {
     id: "jjy-340",
@@ -7006,10 +6721,14 @@ const CURATED_FOOD = [
     kakaoUrl: "http://place.map.kakao.com/770500774",
     rating: null,
     reviewCount: null,
-    youtuber: "쯔양",
-    videoTitle: null,
-    videoUrl: null,
-    recommendNote: "쯔양이 방문해 리뷰한 맛집."
+    youtubers: [
+      {
+        name: "쯔양",
+        videoTitle: null,
+        videoUrl: null,
+        recommendNote: "쯔양이 방문해 리뷰한 맛집."
+      }
+    ]
   },
   {
     id: "jjy-341",
@@ -7022,10 +6741,14 @@ const CURATED_FOOD = [
     kakaoUrl: "http://place.map.kakao.com/11170449",
     rating: null,
     reviewCount: null,
-    youtuber: "쯔양",
-    videoTitle: null,
-    videoUrl: null,
-    recommendNote: "쯔양이 방문해 리뷰한 고기 맛집."
+    youtubers: [
+      {
+        name: "쯔양",
+        videoTitle: null,
+        videoUrl: null,
+        recommendNote: "쯔양이 방문해 리뷰한 고기 맛집."
+      }
+    ]
   },
   {
     id: "jjy-342",
@@ -7038,10 +6761,14 @@ const CURATED_FOOD = [
     kakaoUrl: "http://place.map.kakao.com/9930398",
     rating: null,
     reviewCount: null,
-    youtuber: "쯔양",
-    videoTitle: null,
-    videoUrl: null,
-    recommendNote: "쯔양이 방문해 리뷰한 고기 맛집."
+    youtubers: [
+      {
+        name: "쯔양",
+        videoTitle: null,
+        videoUrl: null,
+        recommendNote: "쯔양이 방문해 리뷰한 고기 맛집."
+      }
+    ]
   },
   {
     id: "jjy-343",
@@ -7054,10 +6781,14 @@ const CURATED_FOOD = [
     kakaoUrl: "http://place.map.kakao.com/18936696",
     rating: null,
     reviewCount: null,
-    youtuber: "쯔양",
-    videoTitle: null,
-    videoUrl: null,
-    recommendNote: "쯔양이 방문해 리뷰한 한식 맛집."
+    youtubers: [
+      {
+        name: "쯔양",
+        videoTitle: null,
+        videoUrl: null,
+        recommendNote: "쯔양이 방문해 리뷰한 한식 맛집."
+      }
+    ]
   },
   {
     id: "jjy-344",
@@ -7070,10 +6801,14 @@ const CURATED_FOOD = [
     kakaoUrl: "http://place.map.kakao.com/12998369",
     rating: null,
     reviewCount: null,
-    youtuber: "쯔양",
-    videoTitle: null,
-    videoUrl: null,
-    recommendNote: "쯔양이 방문해 리뷰한 한식 맛집."
+    youtubers: [
+      {
+        name: "쯔양",
+        videoTitle: null,
+        videoUrl: null,
+        recommendNote: "쯔양이 방문해 리뷰한 한식 맛집."
+      }
+    ]
   },
   {
     id: "jjy-345",
@@ -7086,10 +6821,14 @@ const CURATED_FOOD = [
     kakaoUrl: "http://place.map.kakao.com/283087337",
     rating: null,
     reviewCount: null,
-    youtuber: "쯔양",
-    videoTitle: null,
-    videoUrl: null,
-    recommendNote: "쯔양이 방문해 리뷰한 분식 맛집."
+    youtubers: [
+      {
+        name: "쯔양",
+        videoTitle: null,
+        videoUrl: null,
+        recommendNote: "쯔양이 방문해 리뷰한 분식 맛집."
+      }
+    ]
   },
   {
     id: "jjy-346",
@@ -7102,10 +6841,14 @@ const CURATED_FOOD = [
     kakaoUrl: "http://place.map.kakao.com/9934784",
     rating: null,
     reviewCount: null,
-    youtuber: "쯔양",
-    videoTitle: null,
-    videoUrl: null,
-    recommendNote: "쯔양이 방문해 리뷰한 한식 맛집."
+    youtubers: [
+      {
+        name: "쯔양",
+        videoTitle: null,
+        videoUrl: null,
+        recommendNote: "쯔양이 방문해 리뷰한 한식 맛집."
+      }
+    ]
   },
   {
     id: "jjy-347",
@@ -7118,10 +6861,14 @@ const CURATED_FOOD = [
     kakaoUrl: "http://place.map.kakao.com/682548398",
     rating: null,
     reviewCount: null,
-    youtuber: "쯔양",
-    videoTitle: null,
-    videoUrl: null,
-    recommendNote: "쯔양이 방문해 리뷰한 한식 맛집."
+    youtubers: [
+      {
+        name: "쯔양",
+        videoTitle: null,
+        videoUrl: null,
+        recommendNote: "쯔양이 방문해 리뷰한 한식 맛집."
+      }
+    ]
   },
   {
     id: "jjy-348",
@@ -7134,10 +6881,14 @@ const CURATED_FOOD = [
     kakaoUrl: "http://place.map.kakao.com/8078768",
     rating: null,
     reviewCount: null,
-    youtuber: "쯔양",
-    videoTitle: null,
-    videoUrl: null,
-    recommendNote: "쯔양이 방문해 리뷰한 맛집."
+    youtubers: [
+      {
+        name: "쯔양",
+        videoTitle: null,
+        videoUrl: null,
+        recommendNote: "쯔양이 방문해 리뷰한 맛집."
+      }
+    ]
   },
   {
     id: "jjy-349",
@@ -7150,10 +6901,14 @@ const CURATED_FOOD = [
     kakaoUrl: "http://place.map.kakao.com/9934552",
     rating: null,
     reviewCount: null,
-    youtuber: "쯔양",
-    videoTitle: null,
-    videoUrl: null,
-    recommendNote: "쯔양이 방문해 리뷰한 한식 맛집."
+    youtubers: [
+      {
+        name: "쯔양",
+        videoTitle: null,
+        videoUrl: null,
+        recommendNote: "쯔양이 방문해 리뷰한 한식 맛집."
+      }
+    ]
   },
   {
     id: "jjy-350",
@@ -7166,10 +6921,14 @@ const CURATED_FOOD = [
     kakaoUrl: "http://place.map.kakao.com/20617331",
     rating: null,
     reviewCount: null,
-    youtuber: "쯔양",
-    videoTitle: null,
-    videoUrl: null,
-    recommendNote: "쯔양이 방문해 리뷰한 고기 맛집."
+    youtubers: [
+      {
+        name: "쯔양",
+        videoTitle: null,
+        videoUrl: null,
+        recommendNote: "쯔양이 방문해 리뷰한 고기 맛집."
+      }
+    ]
   },
   {
     id: "jjy-351",
@@ -7182,10 +6941,14 @@ const CURATED_FOOD = [
     kakaoUrl: "http://place.map.kakao.com/23699720",
     rating: null,
     reviewCount: null,
-    youtuber: "쯔양",
-    videoTitle: null,
-    videoUrl: null,
-    recommendNote: "쯔양이 방문해 리뷰한 한식 맛집."
+    youtubers: [
+      {
+        name: "쯔양",
+        videoTitle: null,
+        videoUrl: null,
+        recommendNote: "쯔양이 방문해 리뷰한 한식 맛집."
+      }
+    ]
   },
   {
     id: "jjy-352",
@@ -7198,10 +6961,14 @@ const CURATED_FOOD = [
     kakaoUrl: "http://place.map.kakao.com/2130406169",
     rating: null,
     reviewCount: null,
-    youtuber: "쯔양",
-    videoTitle: null,
-    videoUrl: null,
-    recommendNote: "쯔양이 방문해 리뷰한 패스트푸드 맛집."
+    youtubers: [
+      {
+        name: "쯔양",
+        videoTitle: null,
+        videoUrl: null,
+        recommendNote: "쯔양이 방문해 리뷰한 패스트푸드 맛집."
+      }
+    ]
   },
   {
     id: "jjy-353",
@@ -7214,10 +6981,14 @@ const CURATED_FOOD = [
     kakaoUrl: "http://place.map.kakao.com/8068165",
     rating: null,
     reviewCount: null,
-    youtuber: "쯔양",
-    videoTitle: null,
-    videoUrl: null,
-    recommendNote: "쯔양이 방문해 리뷰한 치킨 전문점."
+    youtubers: [
+      {
+        name: "쯔양",
+        videoTitle: null,
+        videoUrl: null,
+        recommendNote: "쯔양이 방문해 리뷰한 치킨 전문점."
+      }
+    ]
   },
   {
     id: "jjy-354",
@@ -7230,10 +7001,14 @@ const CURATED_FOOD = [
     kakaoUrl: "http://place.map.kakao.com/407522227",
     rating: null,
     reviewCount: null,
-    youtuber: "쯔양",
-    videoTitle: null,
-    videoUrl: null,
-    recommendNote: "쯔양이 방문해 리뷰한 고기 맛집."
+    youtubers: [
+      {
+        name: "쯔양",
+        videoTitle: null,
+        videoUrl: null,
+        recommendNote: "쯔양이 방문해 리뷰한 고기 맛집."
+      }
+    ]
   },
   {
     id: "jjy-355",
@@ -7246,10 +7021,14 @@ const CURATED_FOOD = [
     kakaoUrl: "http://place.map.kakao.com/16624169",
     rating: null,
     reviewCount: null,
-    youtuber: "쯔양",
-    videoTitle: null,
-    videoUrl: null,
-    recommendNote: "쯔양이 방문해 리뷰한 분식 맛집."
+    youtubers: [
+      {
+        name: "쯔양",
+        videoTitle: null,
+        videoUrl: null,
+        recommendNote: "쯔양이 방문해 리뷰한 분식 맛집."
+      }
+    ]
   },
   {
     id: "jjy-358",
@@ -7262,10 +7041,14 @@ const CURATED_FOOD = [
     kakaoUrl: "http://place.map.kakao.com/334649458",
     rating: null,
     reviewCount: null,
-    youtuber: "쯔양",
-    videoTitle: null,
-    videoUrl: null,
-    recommendNote: "쯔양이 방문해 리뷰한 한식 맛집."
+    youtubers: [
+      {
+        name: "쯔양",
+        videoTitle: null,
+        videoUrl: null,
+        recommendNote: "쯔양이 방문해 리뷰한 한식 맛집."
+      }
+    ]
   },
   {
     id: "jjy-359",
@@ -7278,10 +7061,14 @@ const CURATED_FOOD = [
     kakaoUrl: "http://place.map.kakao.com/353997698",
     rating: null,
     reviewCount: null,
-    youtuber: "쯔양",
-    videoTitle: null,
-    videoUrl: null,
-    recommendNote: "쯔양이 방문해 리뷰한 분식 맛집."
+    youtubers: [
+      {
+        name: "쯔양",
+        videoTitle: null,
+        videoUrl: null,
+        recommendNote: "쯔양이 방문해 리뷰한 분식 맛집."
+      }
+    ]
   },
   {
     id: "jjy-360",
@@ -7294,10 +7081,14 @@ const CURATED_FOOD = [
     kakaoUrl: "http://place.map.kakao.com/1930777703",
     rating: null,
     reviewCount: null,
-    youtuber: "쯔양",
-    videoTitle: null,
-    videoUrl: null,
-    recommendNote: "쯔양이 방문해 리뷰한 족발·보쌈 맛집."
+    youtubers: [
+      {
+        name: "쯔양",
+        videoTitle: null,
+        videoUrl: null,
+        recommendNote: "쯔양이 방문해 리뷰한 족발·보쌈 맛집."
+      }
+    ]
   },
   {
     id: "jjy-361",
@@ -7310,10 +7101,14 @@ const CURATED_FOOD = [
     kakaoUrl: "http://place.map.kakao.com/15960884",
     rating: null,
     reviewCount: null,
-    youtuber: "쯔양",
-    videoTitle: null,
-    videoUrl: null,
-    recommendNote: "쯔양이 방문해 리뷰한 돈까스·회 전문점."
+    youtubers: [
+      {
+        name: "쯔양",
+        videoTitle: null,
+        videoUrl: null,
+        recommendNote: "쯔양이 방문해 리뷰한 돈까스·회 전문점."
+      }
+    ]
   },
   {
     id: "jjy-362",
@@ -7326,10 +7121,14 @@ const CURATED_FOOD = [
     kakaoUrl: "http://place.map.kakao.com/1361454624",
     rating: null,
     reviewCount: null,
-    youtuber: "쯔양",
-    videoTitle: null,
-    videoUrl: null,
-    recommendNote: "쯔양이 방문해 리뷰한 족발·보쌈 맛집."
+    youtubers: [
+      {
+        name: "쯔양",
+        videoTitle: null,
+        videoUrl: null,
+        recommendNote: "쯔양이 방문해 리뷰한 족발·보쌈 맛집."
+      }
+    ]
   },
   {
     id: "jjy-363",
@@ -7342,10 +7141,14 @@ const CURATED_FOOD = [
     kakaoUrl: "http://place.map.kakao.com/27376903",
     rating: null,
     reviewCount: null,
-    youtuber: "쯔양",
-    videoTitle: null,
-    videoUrl: null,
-    recommendNote: "쯔양이 방문해 리뷰한 야식 맛집."
+    youtubers: [
+      {
+        name: "쯔양",
+        videoTitle: null,
+        videoUrl: null,
+        recommendNote: "쯔양이 방문해 리뷰한 야식 맛집."
+      }
+    ]
   },
   {
     id: "jjy-364",
@@ -7358,10 +7161,14 @@ const CURATED_FOOD = [
     kakaoUrl: "http://place.map.kakao.com/8081393",
     rating: null,
     reviewCount: null,
-    youtuber: "쯔양",
-    videoTitle: null,
-    videoUrl: null,
-    recommendNote: "쯔양이 방문해 리뷰한 한식 맛집."
+    youtubers: [
+      {
+        name: "쯔양",
+        videoTitle: null,
+        videoUrl: null,
+        recommendNote: "쯔양이 방문해 리뷰한 한식 맛집."
+      }
+    ]
   },
   {
     id: "jjy-365",
@@ -7374,10 +7181,14 @@ const CURATED_FOOD = [
     kakaoUrl: "http://place.map.kakao.com/27531028",
     rating: null,
     reviewCount: null,
-    youtuber: "쯔양",
-    videoTitle: null,
-    videoUrl: null,
-    recommendNote: "쯔양이 방문해 리뷰한 한식 맛집."
+    youtubers: [
+      {
+        name: "쯔양",
+        videoTitle: null,
+        videoUrl: null,
+        recommendNote: "쯔양이 방문해 리뷰한 한식 맛집."
+      }
+    ]
   },
   {
     id: "jjy-366",
@@ -7390,10 +7201,14 @@ const CURATED_FOOD = [
     kakaoUrl: "http://place.map.kakao.com/15810574",
     rating: null,
     reviewCount: null,
-    youtuber: "쯔양",
-    videoTitle: null,
-    videoUrl: null,
-    recommendNote: "쯔양이 방문해 리뷰한 중식 맛집."
+    youtubers: [
+      {
+        name: "쯔양",
+        videoTitle: null,
+        videoUrl: null,
+        recommendNote: "쯔양이 방문해 리뷰한 중식 맛집."
+      }
+    ]
   },
   {
     id: "jjy-367",
@@ -7406,10 +7221,14 @@ const CURATED_FOOD = [
     kakaoUrl: "http://place.map.kakao.com/26989775",
     rating: null,
     reviewCount: null,
-    youtuber: "쯔양",
-    videoTitle: null,
-    videoUrl: null,
-    recommendNote: "쯔양이 방문해 리뷰한 고기 맛집."
+    youtubers: [
+      {
+        name: "쯔양",
+        videoTitle: null,
+        videoUrl: null,
+        recommendNote: "쯔양이 방문해 리뷰한 고기 맛집."
+      }
+    ]
   },
   {
     id: "jjy-368",
@@ -7422,10 +7241,14 @@ const CURATED_FOOD = [
     kakaoUrl: "http://place.map.kakao.com/14550110",
     rating: null,
     reviewCount: null,
-    youtuber: "쯔양",
-    videoTitle: null,
-    videoUrl: null,
-    recommendNote: "쯔양이 방문해 리뷰한 고기 맛집."
+    youtubers: [
+      {
+        name: "쯔양",
+        videoTitle: null,
+        videoUrl: null,
+        recommendNote: "쯔양이 방문해 리뷰한 고기 맛집."
+      }
+    ]
   },
   {
     id: "jjy-369",
@@ -7438,10 +7261,14 @@ const CURATED_FOOD = [
     kakaoUrl: "http://place.map.kakao.com/27245818",
     rating: null,
     reviewCount: null,
-    youtuber: "쯔양",
-    videoTitle: null,
-    videoUrl: null,
-    recommendNote: "쯔양이 방문해 리뷰한 분식 맛집."
+    youtubers: [
+      {
+        name: "쯔양",
+        videoTitle: null,
+        videoUrl: null,
+        recommendNote: "쯔양이 방문해 리뷰한 분식 맛집."
+      }
+    ]
   },
   {
     id: "jjy-370",
@@ -7454,10 +7281,14 @@ const CURATED_FOOD = [
     kakaoUrl: "http://place.map.kakao.com/421048086",
     rating: null,
     reviewCount: null,
-    youtuber: "쯔양",
-    videoTitle: null,
-    videoUrl: null,
-    recommendNote: "쯔양이 방문해 리뷰한 중식 맛집."
+    youtubers: [
+      {
+        name: "쯔양",
+        videoTitle: null,
+        videoUrl: null,
+        recommendNote: "쯔양이 방문해 리뷰한 중식 맛집."
+      }
+    ]
   },
   {
     id: "jjy-371",
@@ -7470,10 +7301,14 @@ const CURATED_FOOD = [
     kakaoUrl: "http://place.map.kakao.com/937173939",
     rating: null,
     reviewCount: null,
-    youtuber: "쯔양",
-    videoTitle: null,
-    videoUrl: null,
-    recommendNote: "쯔양이 방문해 리뷰한 패스트푸드 맛집."
+    youtubers: [
+      {
+        name: "쯔양",
+        videoTitle: null,
+        videoUrl: null,
+        recommendNote: "쯔양이 방문해 리뷰한 패스트푸드 맛집."
+      }
+    ]
   },
   {
     id: "jjy-372",
@@ -7486,10 +7321,14 @@ const CURATED_FOOD = [
     kakaoUrl: "http://place.map.kakao.com/8584787",
     rating: null,
     reviewCount: null,
-    youtuber: "쯔양",
-    videoTitle: null,
-    videoUrl: null,
-    recommendNote: "쯔양이 방문해 리뷰한 중식 맛집."
+    youtubers: [
+      {
+        name: "쯔양",
+        videoTitle: null,
+        videoUrl: null,
+        recommendNote: "쯔양이 방문해 리뷰한 중식 맛집."
+      }
+    ]
   },
   {
     id: "jjy-373",
@@ -7502,10 +7341,14 @@ const CURATED_FOOD = [
     kakaoUrl: "http://place.map.kakao.com/99607938",
     rating: null,
     reviewCount: null,
-    youtuber: "쯔양",
-    videoTitle: null,
-    videoUrl: null,
-    recommendNote: "쯔양이 방문해 리뷰한 찜·탕 맛집."
+    youtubers: [
+      {
+        name: "쯔양",
+        videoTitle: null,
+        videoUrl: null,
+        recommendNote: "쯔양이 방문해 리뷰한 찜·탕 맛집."
+      }
+    ]
   },
   {
     id: "jjy-374",
@@ -7518,10 +7361,14 @@ const CURATED_FOOD = [
     kakaoUrl: "http://place.map.kakao.com/9986937",
     rating: null,
     reviewCount: null,
-    youtuber: "쯔양",
-    videoTitle: null,
-    videoUrl: null,
-    recommendNote: "쯔양이 방문해 리뷰한 고기 맛집."
+    youtubers: [
+      {
+        name: "쯔양",
+        videoTitle: null,
+        videoUrl: null,
+        recommendNote: "쯔양이 방문해 리뷰한 고기 맛집."
+      }
+    ]
   },
   {
     id: "jjy-375",
@@ -7534,10 +7381,14 @@ const CURATED_FOOD = [
     kakaoUrl: "http://place.map.kakao.com/10082639",
     rating: null,
     reviewCount: null,
-    youtuber: "쯔양",
-    videoTitle: null,
-    videoUrl: null,
-    recommendNote: "쯔양이 방문해 리뷰한 고기 맛집."
+    youtubers: [
+      {
+        name: "쯔양",
+        videoTitle: null,
+        videoUrl: null,
+        recommendNote: "쯔양이 방문해 리뷰한 고기 맛집."
+      }
+    ]
   },
   {
     id: "jjy-376",
@@ -7550,10 +7401,20 @@ const CURATED_FOOD = [
     kakaoUrl: "http://place.map.kakao.com/27584230",
     rating: null,
     reviewCount: null,
-    youtuber: "쯔양",
-    videoTitle: null,
-    videoUrl: null,
-    recommendNote: "쯔양이 방문해 리뷰한 한식 맛집."
+    youtubers: [
+      {
+        name: "쯔양",
+        videoTitle: null,
+        videoUrl: null,
+        recommendNote: "쯔양이 방문해 리뷰한 한식 맛집."
+      },
+      {
+        name: "성시경의 먹을텐데",
+        videoTitle: null,
+        videoUrl: null,
+        recommendNote: null
+      }
+    ]
   },
   {
     id: "jjy-377",
@@ -7566,10 +7427,14 @@ const CURATED_FOOD = [
     kakaoUrl: "http://place.map.kakao.com/20745508",
     rating: null,
     reviewCount: null,
-    youtuber: "쯔양",
-    videoTitle: null,
-    videoUrl: null,
-    recommendNote: "쯔양이 방문해 리뷰한 분식 맛집."
+    youtubers: [
+      {
+        name: "쯔양",
+        videoTitle: null,
+        videoUrl: null,
+        recommendNote: "쯔양이 방문해 리뷰한 분식 맛집."
+      }
+    ]
   },
   {
     id: "jjy-378",
@@ -7582,10 +7447,14 @@ const CURATED_FOOD = [
     kakaoUrl: "http://place.map.kakao.com/21330749",
     rating: null,
     reviewCount: null,
-    youtuber: "쯔양",
-    videoTitle: null,
-    videoUrl: null,
-    recommendNote: "쯔양이 방문해 리뷰한 야식 맛집."
+    youtubers: [
+      {
+        name: "쯔양",
+        videoTitle: null,
+        videoUrl: null,
+        recommendNote: "쯔양이 방문해 리뷰한 야식 맛집."
+      }
+    ]
   },
   {
     id: "jjy-379",
@@ -7598,10 +7467,14 @@ const CURATED_FOOD = [
     kakaoUrl: "http://place.map.kakao.com/144542448",
     rating: null,
     reviewCount: null,
-    youtuber: "쯔양",
-    videoTitle: null,
-    videoUrl: null,
-    recommendNote: "쯔양이 방문해 리뷰한 중식 맛집."
+    youtubers: [
+      {
+        name: "쯔양",
+        videoTitle: null,
+        videoUrl: null,
+        recommendNote: "쯔양이 방문해 리뷰한 중식 맛집."
+      }
+    ]
   },
   {
     id: "jjy-380",
@@ -7614,10 +7487,14 @@ const CURATED_FOOD = [
     kakaoUrl: "http://place.map.kakao.com/1141143764",
     rating: null,
     reviewCount: null,
-    youtuber: "쯔양",
-    videoTitle: null,
-    videoUrl: null,
-    recommendNote: "쯔양이 방문해 리뷰한 찜·탕 맛집."
+    youtubers: [
+      {
+        name: "쯔양",
+        videoTitle: null,
+        videoUrl: null,
+        recommendNote: "쯔양이 방문해 리뷰한 찜·탕 맛집."
+      }
+    ]
   },
   {
     id: "jjy-381",
@@ -7630,10 +7507,14 @@ const CURATED_FOOD = [
     kakaoUrl: "http://place.map.kakao.com/2041008961",
     rating: null,
     reviewCount: null,
-    youtuber: "쯔양",
-    videoTitle: null,
-    videoUrl: null,
-    recommendNote: "쯔양이 방문해 리뷰한 한식 맛집."
+    youtubers: [
+      {
+        name: "쯔양",
+        videoTitle: null,
+        videoUrl: null,
+        recommendNote: "쯔양이 방문해 리뷰한 한식 맛집."
+      }
+    ]
   },
   {
     id: "jjy-382",
@@ -7646,10 +7527,14 @@ const CURATED_FOOD = [
     kakaoUrl: "http://place.map.kakao.com/15746761",
     rating: null,
     reviewCount: null,
-    youtuber: "쯔양",
-    videoTitle: null,
-    videoUrl: null,
-    recommendNote: "쯔양이 방문해 리뷰한 분식 맛집."
+    youtubers: [
+      {
+        name: "쯔양",
+        videoTitle: null,
+        videoUrl: null,
+        recommendNote: "쯔양이 방문해 리뷰한 분식 맛집."
+      }
+    ]
   },
   {
     id: "jjy-383",
@@ -7662,10 +7547,14 @@ const CURATED_FOOD = [
     kakaoUrl: "http://place.map.kakao.com/12637040",
     rating: null,
     reviewCount: null,
-    youtuber: "쯔양",
-    videoTitle: null,
-    videoUrl: null,
-    recommendNote: "쯔양이 방문해 리뷰한 분식 맛집."
+    youtubers: [
+      {
+        name: "쯔양",
+        videoTitle: null,
+        videoUrl: null,
+        recommendNote: "쯔양이 방문해 리뷰한 분식 맛집."
+      }
+    ]
   },
   {
     id: "jjy-384",
@@ -7678,10 +7567,14 @@ const CURATED_FOOD = [
     kakaoUrl: "http://place.map.kakao.com/10848372",
     rating: null,
     reviewCount: null,
-    youtuber: "쯔양",
-    videoTitle: null,
-    videoUrl: null,
-    recommendNote: "쯔양이 방문해 리뷰한 족발·보쌈 맛집."
+    youtubers: [
+      {
+        name: "쯔양",
+        videoTitle: null,
+        videoUrl: null,
+        recommendNote: "쯔양이 방문해 리뷰한 족발·보쌈 맛집."
+      }
+    ]
   },
   {
     id: "jjy-385",
@@ -7694,10 +7587,14 @@ const CURATED_FOOD = [
     kakaoUrl: "http://place.map.kakao.com/8536307",
     rating: null,
     reviewCount: null,
-    youtuber: "쯔양",
-    videoTitle: null,
-    videoUrl: null,
-    recommendNote: "쯔양이 방문해 리뷰한 한식 맛집."
+    youtubers: [
+      {
+        name: "쯔양",
+        videoTitle: null,
+        videoUrl: null,
+        recommendNote: "쯔양이 방문해 리뷰한 한식 맛집."
+      }
+    ]
   },
   {
     id: "jjy-386",
@@ -7710,10 +7607,14 @@ const CURATED_FOOD = [
     kakaoUrl: "http://place.map.kakao.com/9458545",
     rating: null,
     reviewCount: null,
-    youtuber: "쯔양",
-    videoTitle: null,
-    videoUrl: null,
-    recommendNote: "쯔양이 방문해 리뷰한 한식 맛집."
+    youtubers: [
+      {
+        name: "쯔양",
+        videoTitle: null,
+        videoUrl: null,
+        recommendNote: "쯔양이 방문해 리뷰한 한식 맛집."
+      }
+    ]
   },
   {
     id: "jjy-387",
@@ -7726,10 +7627,14 @@ const CURATED_FOOD = [
     kakaoUrl: "http://place.map.kakao.com/1688975890",
     rating: null,
     reviewCount: null,
-    youtuber: "쯔양",
-    videoTitle: null,
-    videoUrl: null,
-    recommendNote: "쯔양이 방문해 리뷰한 분식 맛집."
+    youtubers: [
+      {
+        name: "쯔양",
+        videoTitle: null,
+        videoUrl: null,
+        recommendNote: "쯔양이 방문해 리뷰한 분식 맛집."
+      }
+    ]
   },
   {
     id: "jjy-388",
@@ -7742,10 +7647,14 @@ const CURATED_FOOD = [
     kakaoUrl: "http://place.map.kakao.com/20746105",
     rating: null,
     reviewCount: null,
-    youtuber: "쯔양",
-    videoTitle: null,
-    videoUrl: null,
-    recommendNote: "쯔양이 방문해 리뷰한 한식 맛집."
+    youtubers: [
+      {
+        name: "쯔양",
+        videoTitle: null,
+        videoUrl: null,
+        recommendNote: "쯔양이 방문해 리뷰한 한식 맛집."
+      }
+    ]
   },
   {
     id: "jjy-389",
@@ -7758,10 +7667,14 @@ const CURATED_FOOD = [
     kakaoUrl: "http://place.map.kakao.com/838893716",
     rating: null,
     reviewCount: null,
-    youtuber: "쯔양",
-    videoTitle: null,
-    videoUrl: null,
-    recommendNote: "쯔양이 방문해 리뷰한 돈까스·회 전문점."
+    youtubers: [
+      {
+        name: "쯔양",
+        videoTitle: null,
+        videoUrl: null,
+        recommendNote: "쯔양이 방문해 리뷰한 돈까스·회 전문점."
+      }
+    ]
   },
   {
     id: "jjy-390",
@@ -7774,10 +7687,14 @@ const CURATED_FOOD = [
     kakaoUrl: "http://place.map.kakao.com/1572181856",
     rating: null,
     reviewCount: null,
-    youtuber: "쯔양",
-    videoTitle: null,
-    videoUrl: null,
-    recommendNote: "쯔양이 방문해 리뷰한 양식 맛집."
+    youtubers: [
+      {
+        name: "쯔양",
+        videoTitle: null,
+        videoUrl: null,
+        recommendNote: "쯔양이 방문해 리뷰한 양식 맛집."
+      }
+    ]
   },
   {
     id: "jjy-391",
@@ -7790,10 +7707,14 @@ const CURATED_FOOD = [
     kakaoUrl: "http://place.map.kakao.com/27384429",
     rating: null,
     reviewCount: null,
-    youtuber: "쯔양",
-    videoTitle: null,
-    videoUrl: null,
-    recommendNote: "쯔양이 방문해 리뷰한 돈까스·회 전문점."
+    youtubers: [
+      {
+        name: "쯔양",
+        videoTitle: null,
+        videoUrl: null,
+        recommendNote: "쯔양이 방문해 리뷰한 돈까스·회 전문점."
+      }
+    ]
   },
   {
     id: "jjy-392",
@@ -7806,10 +7727,14 @@ const CURATED_FOOD = [
     kakaoUrl: "http://place.map.kakao.com/2098373141",
     rating: null,
     reviewCount: null,
-    youtuber: "쯔양",
-    videoTitle: null,
-    videoUrl: null,
-    recommendNote: "쯔양이 방문해 리뷰한 고기 맛집."
+    youtubers: [
+      {
+        name: "쯔양",
+        videoTitle: null,
+        videoUrl: null,
+        recommendNote: "쯔양이 방문해 리뷰한 고기 맛집."
+      }
+    ]
   },
   {
     id: "jjy-393",
@@ -7822,10 +7747,14 @@ const CURATED_FOOD = [
     kakaoUrl: "http://place.map.kakao.com/606972245",
     rating: null,
     reviewCount: null,
-    youtuber: "쯔양",
-    videoTitle: null,
-    videoUrl: null,
-    recommendNote: "쯔양이 방문해 리뷰한 분식 맛집."
+    youtubers: [
+      {
+        name: "쯔양",
+        videoTitle: null,
+        videoUrl: null,
+        recommendNote: "쯔양이 방문해 리뷰한 분식 맛집."
+      }
+    ]
   },
   {
     id: "jjy-394",
@@ -7838,10 +7767,14 @@ const CURATED_FOOD = [
     kakaoUrl: "http://place.map.kakao.com/259752996",
     rating: null,
     reviewCount: null,
-    youtuber: "쯔양",
-    videoTitle: null,
-    videoUrl: null,
-    recommendNote: "쯔양이 방문해 리뷰한 돈까스·회 전문점."
+    youtubers: [
+      {
+        name: "쯔양",
+        videoTitle: null,
+        videoUrl: null,
+        recommendNote: "쯔양이 방문해 리뷰한 돈까스·회 전문점."
+      }
+    ]
   },
   {
     id: "jjy-395",
@@ -7854,10 +7787,14 @@ const CURATED_FOOD = [
     kakaoUrl: "http://place.map.kakao.com/12753570",
     rating: null,
     reviewCount: null,
-    youtuber: "쯔양",
-    videoTitle: null,
-    videoUrl: null,
-    recommendNote: "쯔양이 방문해 리뷰한 돈까스·회 전문점."
+    youtubers: [
+      {
+        name: "쯔양",
+        videoTitle: null,
+        videoUrl: null,
+        recommendNote: "쯔양이 방문해 리뷰한 돈까스·회 전문점."
+      }
+    ]
   },
   {
     id: "jjy-396",
@@ -7870,10 +7807,14 @@ const CURATED_FOOD = [
     kakaoUrl: "http://place.map.kakao.com/88370014",
     rating: null,
     reviewCount: null,
-    youtuber: "쯔양",
-    videoTitle: null,
-    videoUrl: null,
-    recommendNote: "쯔양이 방문해 리뷰한 중식 맛집."
+    youtubers: [
+      {
+        name: "쯔양",
+        videoTitle: null,
+        videoUrl: null,
+        recommendNote: "쯔양이 방문해 리뷰한 중식 맛집."
+      }
+    ]
   },
   {
     id: "jjy-397",
@@ -7886,10 +7827,14 @@ const CURATED_FOOD = [
     kakaoUrl: "http://place.map.kakao.com/16441755",
     rating: null,
     reviewCount: null,
-    youtuber: "쯔양",
-    videoTitle: null,
-    videoUrl: null,
-    recommendNote: "쯔양이 방문해 리뷰한 한식 맛집."
+    youtubers: [
+      {
+        name: "쯔양",
+        videoTitle: null,
+        videoUrl: null,
+        recommendNote: "쯔양이 방문해 리뷰한 한식 맛집."
+      }
+    ]
   },
   {
     id: "jjy-398",
@@ -7902,10 +7847,14 @@ const CURATED_FOOD = [
     kakaoUrl: "http://place.map.kakao.com/1958942457",
     rating: null,
     reviewCount: null,
-    youtuber: "쯔양",
-    videoTitle: null,
-    videoUrl: null,
-    recommendNote: "쯔양이 방문해 리뷰한 한식 맛집."
+    youtubers: [
+      {
+        name: "쯔양",
+        videoTitle: null,
+        videoUrl: null,
+        recommendNote: "쯔양이 방문해 리뷰한 한식 맛집."
+      }
+    ]
   },
   {
     id: "jjy-399",
@@ -7918,10 +7867,14 @@ const CURATED_FOOD = [
     kakaoUrl: "http://place.map.kakao.com/27243642",
     rating: null,
     reviewCount: null,
-    youtuber: "쯔양",
-    videoTitle: null,
-    videoUrl: null,
-    recommendNote: "쯔양이 방문해 리뷰한 돈까스·회 전문점."
+    youtubers: [
+      {
+        name: "쯔양",
+        videoTitle: null,
+        videoUrl: null,
+        recommendNote: "쯔양이 방문해 리뷰한 돈까스·회 전문점."
+      }
+    ]
   },
   {
     id: "jjy-400",
@@ -7934,10 +7887,14 @@ const CURATED_FOOD = [
     kakaoUrl: "http://place.map.kakao.com/1430064311",
     rating: null,
     reviewCount: null,
-    youtuber: "쯔양",
-    videoTitle: null,
-    videoUrl: null,
-    recommendNote: "쯔양이 방문해 리뷰한 치킨 전문점."
+    youtubers: [
+      {
+        name: "쯔양",
+        videoTitle: null,
+        videoUrl: null,
+        recommendNote: "쯔양이 방문해 리뷰한 치킨 전문점."
+      }
+    ]
   },
   {
     id: "jjy-401",
@@ -7950,10 +7907,14 @@ const CURATED_FOOD = [
     kakaoUrl: "http://place.map.kakao.com/373369422",
     rating: null,
     reviewCount: null,
-    youtuber: "쯔양",
-    videoTitle: null,
-    videoUrl: null,
-    recommendNote: "쯔양이 방문해 리뷰한 치킨 전문점."
+    youtubers: [
+      {
+        name: "쯔양",
+        videoTitle: null,
+        videoUrl: null,
+        recommendNote: "쯔양이 방문해 리뷰한 치킨 전문점."
+      }
+    ]
   },
   {
     id: "jjy-402",
@@ -7966,10 +7927,14 @@ const CURATED_FOOD = [
     kakaoUrl: "http://place.map.kakao.com/606514277",
     rating: null,
     reviewCount: null,
-    youtuber: "쯔양",
-    videoTitle: null,
-    videoUrl: null,
-    recommendNote: "쯔양이 방문해 리뷰한 분식 맛집."
+    youtubers: [
+      {
+        name: "쯔양",
+        videoTitle: null,
+        videoUrl: null,
+        recommendNote: "쯔양이 방문해 리뷰한 분식 맛집."
+      }
+    ]
   },
   {
     id: "jjy-403",
@@ -7982,10 +7947,14 @@ const CURATED_FOOD = [
     kakaoUrl: "http://place.map.kakao.com/675761155",
     rating: null,
     reviewCount: null,
-    youtuber: "쯔양",
-    videoTitle: null,
-    videoUrl: null,
-    recommendNote: "쯔양이 방문해 리뷰한 아시안 맛집."
+    youtubers: [
+      {
+        name: "쯔양",
+        videoTitle: null,
+        videoUrl: null,
+        recommendNote: "쯔양이 방문해 리뷰한 아시안 맛집."
+      }
+    ]
   },
   {
     id: "jjy-404",
@@ -7998,10 +7967,14 @@ const CURATED_FOOD = [
     kakaoUrl: "http://place.map.kakao.com/17297647",
     rating: null,
     reviewCount: null,
-    youtuber: "쯔양",
-    videoTitle: null,
-    videoUrl: null,
-    recommendNote: "쯔양이 방문해 리뷰한 한식 맛집."
+    youtubers: [
+      {
+        name: "쯔양",
+        videoTitle: null,
+        videoUrl: null,
+        recommendNote: "쯔양이 방문해 리뷰한 한식 맛집."
+      }
+    ]
   },
   {
     id: "jjy-405",
@@ -8014,10 +7987,14 @@ const CURATED_FOOD = [
     kakaoUrl: "http://place.map.kakao.com/1379297755",
     rating: null,
     reviewCount: null,
-    youtuber: "쯔양",
-    videoTitle: null,
-    videoUrl: null,
-    recommendNote: "쯔양이 방문해 리뷰한 돈까스·회 전문점."
+    youtubers: [
+      {
+        name: "쯔양",
+        videoTitle: null,
+        videoUrl: null,
+        recommendNote: "쯔양이 방문해 리뷰한 돈까스·회 전문점."
+      }
+    ]
   },
   {
     id: "jjy-406",
@@ -8030,10 +8007,14 @@ const CURATED_FOOD = [
     kakaoUrl: "http://place.map.kakao.com/20849769",
     rating: null,
     reviewCount: null,
-    youtuber: "쯔양",
-    videoTitle: null,
-    videoUrl: null,
-    recommendNote: "쯔양이 방문해 리뷰한 분식 맛집."
+    youtubers: [
+      {
+        name: "쯔양",
+        videoTitle: null,
+        videoUrl: null,
+        recommendNote: "쯔양이 방문해 리뷰한 분식 맛집."
+      }
+    ]
   },
   {
     id: "jjy-407",
@@ -8046,10 +8027,14 @@ const CURATED_FOOD = [
     kakaoUrl: "http://place.map.kakao.com/1301441791",
     rating: null,
     reviewCount: null,
-    youtuber: "쯔양",
-    videoTitle: null,
-    videoUrl: null,
-    recommendNote: "쯔양이 방문해 리뷰한 분식 맛집."
+    youtubers: [
+      {
+        name: "쯔양",
+        videoTitle: null,
+        videoUrl: null,
+        recommendNote: "쯔양이 방문해 리뷰한 분식 맛집."
+      }
+    ]
   },
   {
     id: "jjy-408",
@@ -8062,10 +8047,14 @@ const CURATED_FOOD = [
     kakaoUrl: "http://place.map.kakao.com/9433427",
     rating: null,
     reviewCount: null,
-    youtuber: "쯔양",
-    videoTitle: null,
-    videoUrl: null,
-    recommendNote: "쯔양이 방문해 리뷰한 중식 맛집."
+    youtubers: [
+      {
+        name: "쯔양",
+        videoTitle: null,
+        videoUrl: null,
+        recommendNote: "쯔양이 방문해 리뷰한 중식 맛집."
+      }
+    ]
   },
   {
     id: "jjy-409",
@@ -8078,10 +8067,14 @@ const CURATED_FOOD = [
     kakaoUrl: "http://place.map.kakao.com/10898044",
     rating: null,
     reviewCount: null,
-    youtuber: "쯔양",
-    videoTitle: null,
-    videoUrl: null,
-    recommendNote: "쯔양이 방문해 리뷰한 한식 맛집."
+    youtubers: [
+      {
+        name: "쯔양",
+        videoTitle: null,
+        videoUrl: null,
+        recommendNote: "쯔양이 방문해 리뷰한 한식 맛집."
+      }
+    ]
   },
   {
     id: "jjy-410",
@@ -8094,10 +8087,14 @@ const CURATED_FOOD = [
     kakaoUrl: "http://place.map.kakao.com/1248615345",
     rating: null,
     reviewCount: null,
-    youtuber: "쯔양",
-    videoTitle: null,
-    videoUrl: null,
-    recommendNote: "쯔양이 방문해 리뷰한 양식 맛집."
+    youtubers: [
+      {
+        name: "쯔양",
+        videoTitle: null,
+        videoUrl: null,
+        recommendNote: "쯔양이 방문해 리뷰한 양식 맛집."
+      }
+    ]
   },
   {
     id: "jjy-411",
@@ -8110,10 +8107,14 @@ const CURATED_FOOD = [
     kakaoUrl: "http://place.map.kakao.com/1142199883",
     rating: null,
     reviewCount: null,
-    youtuber: "쯔양",
-    videoTitle: null,
-    videoUrl: null,
-    recommendNote: "쯔양이 방문해 리뷰한 한식 맛집."
+    youtubers: [
+      {
+        name: "쯔양",
+        videoTitle: null,
+        videoUrl: null,
+        recommendNote: "쯔양이 방문해 리뷰한 한식 맛집."
+      }
+    ]
   },
   {
     id: "jjy-412",
@@ -8126,10 +8127,14 @@ const CURATED_FOOD = [
     kakaoUrl: "http://place.map.kakao.com/877084488",
     rating: null,
     reviewCount: null,
-    youtuber: "쯔양",
-    videoTitle: null,
-    videoUrl: null,
-    recommendNote: "쯔양이 방문해 리뷰한 고기 맛집."
+    youtubers: [
+      {
+        name: "쯔양",
+        videoTitle: null,
+        videoUrl: null,
+        recommendNote: "쯔양이 방문해 리뷰한 고기 맛집."
+      }
+    ]
   },
   {
     id: "jjy-413",
@@ -8142,10 +8147,14 @@ const CURATED_FOOD = [
     kakaoUrl: "http://place.map.kakao.com/1725176424",
     rating: null,
     reviewCount: null,
-    youtuber: "쯔양",
-    videoTitle: null,
-    videoUrl: null,
-    recommendNote: "쯔양이 방문해 리뷰한 패스트푸드 맛집."
+    youtubers: [
+      {
+        name: "쯔양",
+        videoTitle: null,
+        videoUrl: null,
+        recommendNote: "쯔양이 방문해 리뷰한 패스트푸드 맛집."
+      }
+    ]
   },
   {
     id: "jjy-414",
@@ -8158,10 +8167,14 @@ const CURATED_FOOD = [
     kakaoUrl: "http://place.map.kakao.com/1127126120",
     rating: null,
     reviewCount: null,
-    youtuber: "쯔양",
-    videoTitle: null,
-    videoUrl: null,
-    recommendNote: "쯔양이 방문해 리뷰한 고기 맛집."
+    youtubers: [
+      {
+        name: "쯔양",
+        videoTitle: null,
+        videoUrl: null,
+        recommendNote: "쯔양이 방문해 리뷰한 고기 맛집."
+      }
+    ]
   },
   {
     id: "jjy-415",
@@ -8174,10 +8187,14 @@ const CURATED_FOOD = [
     kakaoUrl: "http://place.map.kakao.com/115984648",
     rating: null,
     reviewCount: null,
-    youtuber: "쯔양",
-    videoTitle: null,
-    videoUrl: null,
-    recommendNote: "쯔양이 방문해 리뷰한 한식 맛집."
+    youtubers: [
+      {
+        name: "쯔양",
+        videoTitle: null,
+        videoUrl: null,
+        recommendNote: "쯔양이 방문해 리뷰한 한식 맛집."
+      }
+    ]
   },
   {
     id: "jjy-416",
@@ -8190,10 +8207,14 @@ const CURATED_FOOD = [
     kakaoUrl: "http://place.map.kakao.com/269850048",
     rating: null,
     reviewCount: null,
-    youtuber: "쯔양",
-    videoTitle: null,
-    videoUrl: null,
-    recommendNote: "쯔양이 방문해 리뷰한 고기 맛집."
+    youtubers: [
+      {
+        name: "쯔양",
+        videoTitle: null,
+        videoUrl: null,
+        recommendNote: "쯔양이 방문해 리뷰한 고기 맛집."
+      }
+    ]
   },
   {
     id: "jjy-417",
@@ -8206,10 +8227,14 @@ const CURATED_FOOD = [
     kakaoUrl: "http://place.map.kakao.com/24287260",
     rating: null,
     reviewCount: null,
-    youtuber: "쯔양",
-    videoTitle: null,
-    videoUrl: null,
-    recommendNote: "쯔양이 방문해 리뷰한 분식 맛집."
+    youtubers: [
+      {
+        name: "쯔양",
+        videoTitle: null,
+        videoUrl: null,
+        recommendNote: "쯔양이 방문해 리뷰한 분식 맛집."
+      }
+    ]
   },
   {
     id: "jjy-418",
@@ -8222,10 +8247,14 @@ const CURATED_FOOD = [
     kakaoUrl: "http://place.map.kakao.com/21410532",
     rating: null,
     reviewCount: null,
-    youtuber: "쯔양",
-    videoTitle: null,
-    videoUrl: null,
-    recommendNote: "쯔양이 방문해 리뷰한 고기 맛집."
+    youtubers: [
+      {
+        name: "쯔양",
+        videoTitle: null,
+        videoUrl: null,
+        recommendNote: "쯔양이 방문해 리뷰한 고기 맛집."
+      }
+    ]
   },
   {
     id: "jjy-419",
@@ -8238,10 +8267,14 @@ const CURATED_FOOD = [
     kakaoUrl: "http://place.map.kakao.com/21261719",
     rating: null,
     reviewCount: null,
-    youtuber: "쯔양",
-    videoTitle: null,
-    videoUrl: null,
-    recommendNote: "쯔양이 방문해 리뷰한 중식 맛집."
+    youtubers: [
+      {
+        name: "쯔양",
+        videoTitle: null,
+        videoUrl: null,
+        recommendNote: "쯔양이 방문해 리뷰한 중식 맛집."
+      }
+    ]
   },
   {
     id: "jjy-420",
@@ -8254,10 +8287,14 @@ const CURATED_FOOD = [
     kakaoUrl: "http://place.map.kakao.com/9536499",
     rating: null,
     reviewCount: null,
-    youtuber: "쯔양",
-    videoTitle: null,
-    videoUrl: null,
-    recommendNote: "쯔양이 방문해 리뷰한 분식 맛집."
+    youtubers: [
+      {
+        name: "쯔양",
+        videoTitle: null,
+        videoUrl: null,
+        recommendNote: "쯔양이 방문해 리뷰한 분식 맛집."
+      }
+    ]
   },
   {
     id: "jjy-421",
@@ -8270,10 +8307,14 @@ const CURATED_FOOD = [
     kakaoUrl: "http://place.map.kakao.com/1889857724",
     rating: null,
     reviewCount: null,
-    youtuber: "쯔양",
-    videoTitle: null,
-    videoUrl: null,
-    recommendNote: "쯔양이 방문해 리뷰한 치킨 전문점."
+    youtubers: [
+      {
+        name: "쯔양",
+        videoTitle: null,
+        videoUrl: null,
+        recommendNote: "쯔양이 방문해 리뷰한 치킨 전문점."
+      }
+    ]
   },
   {
     id: "jjy-422",
@@ -8286,10 +8327,14 @@ const CURATED_FOOD = [
     kakaoUrl: "http://place.map.kakao.com/1721305124",
     rating: null,
     reviewCount: null,
-    youtuber: "쯔양",
-    videoTitle: null,
-    videoUrl: null,
-    recommendNote: "쯔양이 방문해 리뷰한 패스트푸드 맛집."
+    youtubers: [
+      {
+        name: "쯔양",
+        videoTitle: null,
+        videoUrl: null,
+        recommendNote: "쯔양이 방문해 리뷰한 패스트푸드 맛집."
+      }
+    ]
   },
   {
     id: "jjy-423",
@@ -8302,10 +8347,14 @@ const CURATED_FOOD = [
     kakaoUrl: "http://place.map.kakao.com/384134146",
     rating: null,
     reviewCount: null,
-    youtuber: "쯔양",
-    videoTitle: null,
-    videoUrl: null,
-    recommendNote: "쯔양이 방문해 리뷰한 야식 맛집."
+    youtubers: [
+      {
+        name: "쯔양",
+        videoTitle: null,
+        videoUrl: null,
+        recommendNote: "쯔양이 방문해 리뷰한 야식 맛집."
+      }
+    ]
   },
   {
     id: "jjy-424",
@@ -8318,10 +8367,14 @@ const CURATED_FOOD = [
     kakaoUrl: "http://place.map.kakao.com/1925571407",
     rating: null,
     reviewCount: null,
-    youtuber: "쯔양",
-    videoTitle: null,
-    videoUrl: null,
-    recommendNote: "쯔양이 방문해 리뷰한 고기 맛집."
+    youtubers: [
+      {
+        name: "쯔양",
+        videoTitle: null,
+        videoUrl: null,
+        recommendNote: "쯔양이 방문해 리뷰한 고기 맛집."
+      }
+    ]
   },
   {
     id: "jjy-425",
@@ -8334,10 +8387,14 @@ const CURATED_FOOD = [
     kakaoUrl: "http://place.map.kakao.com/1292182006",
     rating: null,
     reviewCount: null,
-    youtuber: "쯔양",
-    videoTitle: null,
-    videoUrl: null,
-    recommendNote: "쯔양이 방문해 리뷰한 피자 맛집."
+    youtubers: [
+      {
+        name: "쯔양",
+        videoTitle: null,
+        videoUrl: null,
+        recommendNote: "쯔양이 방문해 리뷰한 피자 맛집."
+      }
+    ]
   },
   {
     id: "jjy-426",
@@ -8350,10 +8407,14 @@ const CURATED_FOOD = [
     kakaoUrl: "http://place.map.kakao.com/1282659967",
     rating: null,
     reviewCount: null,
-    youtuber: "쯔양",
-    videoTitle: null,
-    videoUrl: null,
-    recommendNote: "쯔양이 방문해 리뷰한 한식 맛집."
+    youtubers: [
+      {
+        name: "쯔양",
+        videoTitle: null,
+        videoUrl: null,
+        recommendNote: "쯔양이 방문해 리뷰한 한식 맛집."
+      }
+    ]
   },
   {
     id: "jjy-427",
@@ -8366,10 +8427,14 @@ const CURATED_FOOD = [
     kakaoUrl: "http://place.map.kakao.com/8587182",
     rating: null,
     reviewCount: null,
-    youtuber: "쯔양",
-    videoTitle: null,
-    videoUrl: null,
-    recommendNote: "쯔양이 방문해 리뷰한 중식 맛집."
+    youtubers: [
+      {
+        name: "쯔양",
+        videoTitle: null,
+        videoUrl: null,
+        recommendNote: "쯔양이 방문해 리뷰한 중식 맛집."
+      }
+    ]
   },
   {
     id: "jjy-428",
@@ -8382,10 +8447,14 @@ const CURATED_FOOD = [
     kakaoUrl: "http://place.map.kakao.com/14497402",
     rating: null,
     reviewCount: null,
-    youtuber: "쯔양",
-    videoTitle: null,
-    videoUrl: null,
-    recommendNote: "쯔양이 방문해 리뷰한 한식 맛집."
+    youtubers: [
+      {
+        name: "쯔양",
+        videoTitle: null,
+        videoUrl: null,
+        recommendNote: "쯔양이 방문해 리뷰한 한식 맛집."
+      }
+    ]
   },
   {
     id: "jjy-429",
@@ -8398,10 +8467,14 @@ const CURATED_FOOD = [
     kakaoUrl: "http://place.map.kakao.com/731469845",
     rating: null,
     reviewCount: null,
-    youtuber: "쯔양",
-    videoTitle: null,
-    videoUrl: null,
-    recommendNote: "쯔양이 방문해 리뷰한 중식 맛집."
+    youtubers: [
+      {
+        name: "쯔양",
+        videoTitle: null,
+        videoUrl: null,
+        recommendNote: "쯔양이 방문해 리뷰한 중식 맛집."
+      }
+    ]
   },
   {
     id: "jjy-430",
@@ -8414,10 +8487,14 @@ const CURATED_FOOD = [
     kakaoUrl: "http://place.map.kakao.com/1030277148",
     rating: null,
     reviewCount: null,
-    youtuber: "쯔양",
-    videoTitle: null,
-    videoUrl: null,
-    recommendNote: "쯔양이 방문해 리뷰한 고기 맛집."
+    youtubers: [
+      {
+        name: "쯔양",
+        videoTitle: null,
+        videoUrl: null,
+        recommendNote: "쯔양이 방문해 리뷰한 고기 맛집."
+      }
+    ]
   },
   {
     id: "jjy-431",
@@ -8430,10 +8507,14 @@ const CURATED_FOOD = [
     kakaoUrl: "http://place.map.kakao.com/1799433072",
     rating: null,
     reviewCount: null,
-    youtuber: "쯔양",
-    videoTitle: null,
-    videoUrl: null,
-    recommendNote: "쯔양이 방문해 리뷰한 중식 맛집."
+    youtubers: [
+      {
+        name: "쯔양",
+        videoTitle: null,
+        videoUrl: null,
+        recommendNote: "쯔양이 방문해 리뷰한 중식 맛집."
+      }
+    ]
   },
   {
     id: "jjy-432",
@@ -8446,10 +8527,14 @@ const CURATED_FOOD = [
     kakaoUrl: "http://place.map.kakao.com/533074237",
     rating: null,
     reviewCount: null,
-    youtuber: "쯔양",
-    videoTitle: null,
-    videoUrl: null,
-    recommendNote: "쯔양이 방문해 리뷰한 한식 맛집."
+    youtubers: [
+      {
+        name: "쯔양",
+        videoTitle: null,
+        videoUrl: null,
+        recommendNote: "쯔양이 방문해 리뷰한 한식 맛집."
+      }
+    ]
   },
   {
     id: "jjy-433",
@@ -8462,10 +8547,14 @@ const CURATED_FOOD = [
     kakaoUrl: "http://place.map.kakao.com/15103107",
     rating: null,
     reviewCount: null,
-    youtuber: "쯔양",
-    videoTitle: null,
-    videoUrl: null,
-    recommendNote: "쯔양이 방문해 리뷰한 한식 맛집."
+    youtubers: [
+      {
+        name: "쯔양",
+        videoTitle: null,
+        videoUrl: null,
+        recommendNote: "쯔양이 방문해 리뷰한 한식 맛집."
+      }
+    ]
   },
   {
     id: "jjy-434",
@@ -8478,10 +8567,14 @@ const CURATED_FOOD = [
     kakaoUrl: "http://place.map.kakao.com/10938579",
     rating: null,
     reviewCount: null,
-    youtuber: "쯔양",
-    videoTitle: null,
-    videoUrl: null,
-    recommendNote: "쯔양이 방문해 리뷰한 중식 맛집."
+    youtubers: [
+      {
+        name: "쯔양",
+        videoTitle: null,
+        videoUrl: null,
+        recommendNote: "쯔양이 방문해 리뷰한 중식 맛집."
+      }
+    ]
   },
   {
     id: "jjy-435",
@@ -8494,10 +8587,14 @@ const CURATED_FOOD = [
     kakaoUrl: "http://place.map.kakao.com/1127245866",
     rating: null,
     reviewCount: null,
-    youtuber: "쯔양",
-    videoTitle: null,
-    videoUrl: null,
-    recommendNote: "쯔양이 방문해 리뷰한 한식 맛집."
+    youtubers: [
+      {
+        name: "쯔양",
+        videoTitle: null,
+        videoUrl: null,
+        recommendNote: "쯔양이 방문해 리뷰한 한식 맛집."
+      }
+    ]
   },
   {
     id: "jjy-436",
@@ -8510,10 +8607,14 @@ const CURATED_FOOD = [
     kakaoUrl: "http://place.map.kakao.com/26971014",
     rating: null,
     reviewCount: null,
-    youtuber: "쯔양",
-    videoTitle: null,
-    videoUrl: null,
-    recommendNote: "쯔양이 방문해 리뷰한 한식 맛집."
+    youtubers: [
+      {
+        name: "쯔양",
+        videoTitle: null,
+        videoUrl: null,
+        recommendNote: "쯔양이 방문해 리뷰한 한식 맛집."
+      }
+    ]
   },
   {
     id: "jjy-437",
@@ -8526,10 +8627,14 @@ const CURATED_FOOD = [
     kakaoUrl: "http://place.map.kakao.com/1807395886",
     rating: null,
     reviewCount: null,
-    youtuber: "쯔양",
-    videoTitle: null,
-    videoUrl: null,
-    recommendNote: "쯔양이 방문해 리뷰한 한식 맛집."
+    youtubers: [
+      {
+        name: "쯔양",
+        videoTitle: null,
+        videoUrl: null,
+        recommendNote: "쯔양이 방문해 리뷰한 한식 맛집."
+      }
+    ]
   },
   {
     id: "jjy-438",
@@ -8542,10 +8647,14 @@ const CURATED_FOOD = [
     kakaoUrl: "http://place.map.kakao.com/12038566",
     rating: null,
     reviewCount: null,
-    youtuber: "쯔양",
-    videoTitle: null,
-    videoUrl: null,
-    recommendNote: "쯔양이 방문해 리뷰한 돈까스·회 전문점."
+    youtubers: [
+      {
+        name: "쯔양",
+        videoTitle: null,
+        videoUrl: null,
+        recommendNote: "쯔양이 방문해 리뷰한 돈까스·회 전문점."
+      }
+    ]
   },
   {
     id: "jjy-439",
@@ -8558,10 +8667,14 @@ const CURATED_FOOD = [
     kakaoUrl: "http://place.map.kakao.com/16251592",
     rating: null,
     reviewCount: null,
-    youtuber: "쯔양",
-    videoTitle: null,
-    videoUrl: null,
-    recommendNote: "쯔양이 방문해 리뷰한 돈까스·회 전문점."
+    youtubers: [
+      {
+        name: "쯔양",
+        videoTitle: null,
+        videoUrl: null,
+        recommendNote: "쯔양이 방문해 리뷰한 돈까스·회 전문점."
+      }
+    ]
   },
   {
     id: "jjy-440",
@@ -8574,10 +8687,14 @@ const CURATED_FOOD = [
     kakaoUrl: "http://place.map.kakao.com/1607479434",
     rating: null,
     reviewCount: null,
-    youtuber: "쯔양",
-    videoTitle: null,
-    videoUrl: null,
-    recommendNote: "쯔양이 방문해 리뷰한 맛집."
+    youtubers: [
+      {
+        name: "쯔양",
+        videoTitle: null,
+        videoUrl: null,
+        recommendNote: "쯔양이 방문해 리뷰한 맛집."
+      }
+    ]
   },
   {
     id: "jjy-442",
@@ -8590,10 +8707,14 @@ const CURATED_FOOD = [
     kakaoUrl: "http://place.map.kakao.com/1797095139",
     rating: null,
     reviewCount: null,
-    youtuber: "쯔양",
-    videoTitle: null,
-    videoUrl: null,
-    recommendNote: "쯔양이 방문해 리뷰한 돈까스·회 전문점."
+    youtubers: [
+      {
+        name: "쯔양",
+        videoTitle: null,
+        videoUrl: null,
+        recommendNote: "쯔양이 방문해 리뷰한 돈까스·회 전문점."
+      }
+    ]
   },
   {
     id: "jjy-443",
@@ -8606,10 +8727,14 @@ const CURATED_FOOD = [
     kakaoUrl: "http://place.map.kakao.com/23749811",
     rating: null,
     reviewCount: null,
-    youtuber: "쯔양",
-    videoTitle: null,
-    videoUrl: null,
-    recommendNote: "쯔양이 방문해 리뷰한 중식 맛집."
+    youtubers: [
+      {
+        name: "쯔양",
+        videoTitle: null,
+        videoUrl: null,
+        recommendNote: "쯔양이 방문해 리뷰한 중식 맛집."
+      }
+    ]
   },
   {
     id: "jjy-444",
@@ -8622,10 +8747,14 @@ const CURATED_FOOD = [
     kakaoUrl: "http://place.map.kakao.com/18831131",
     rating: null,
     reviewCount: null,
-    youtuber: "쯔양",
-    videoTitle: null,
-    videoUrl: null,
-    recommendNote: "쯔양이 방문해 리뷰한 고기 맛집."
+    youtubers: [
+      {
+        name: "쯔양",
+        videoTitle: null,
+        videoUrl: null,
+        recommendNote: "쯔양이 방문해 리뷰한 고기 맛집."
+      }
+    ]
   },
   {
     id: "jjy-445",
@@ -8638,10 +8767,14 @@ const CURATED_FOOD = [
     kakaoUrl: "http://place.map.kakao.com/8666853",
     rating: null,
     reviewCount: null,
-    youtuber: "쯔양",
-    videoTitle: null,
-    videoUrl: null,
-    recommendNote: "쯔양이 방문해 리뷰한 야식 맛집."
+    youtubers: [
+      {
+        name: "쯔양",
+        videoTitle: null,
+        videoUrl: null,
+        recommendNote: "쯔양이 방문해 리뷰한 야식 맛집."
+      }
+    ]
   },
   {
     id: "jjy-446",
@@ -8654,10 +8787,14 @@ const CURATED_FOOD = [
     kakaoUrl: "http://place.map.kakao.com/8540921",
     rating: null,
     reviewCount: null,
-    youtuber: "쯔양",
-    videoTitle: null,
-    videoUrl: null,
-    recommendNote: "쯔양이 방문해 리뷰한 중식 맛집."
+    youtubers: [
+      {
+        name: "쯔양",
+        videoTitle: null,
+        videoUrl: null,
+        recommendNote: "쯔양이 방문해 리뷰한 중식 맛집."
+      }
+    ]
   },
   {
     id: "jjy-447",
@@ -8670,10 +8807,14 @@ const CURATED_FOOD = [
     kakaoUrl: "http://place.map.kakao.com/1607818083",
     rating: null,
     reviewCount: null,
-    youtuber: "쯔양",
-    videoTitle: null,
-    videoUrl: null,
-    recommendNote: "쯔양이 방문해 리뷰한 돈까스·회 전문점."
+    youtubers: [
+      {
+        name: "쯔양",
+        videoTitle: null,
+        videoUrl: null,
+        recommendNote: "쯔양이 방문해 리뷰한 돈까스·회 전문점."
+      }
+    ]
   },
   {
     id: "jjy-448",
@@ -8686,10 +8827,14 @@ const CURATED_FOOD = [
     kakaoUrl: "http://place.map.kakao.com/16937330",
     rating: null,
     reviewCount: null,
-    youtuber: "쯔양",
-    videoTitle: null,
-    videoUrl: null,
-    recommendNote: "쯔양이 방문해 리뷰한 한식 맛집."
+    youtubers: [
+      {
+        name: "쯔양",
+        videoTitle: null,
+        videoUrl: null,
+        recommendNote: "쯔양이 방문해 리뷰한 한식 맛집."
+      }
+    ]
   },
   {
     id: "jjy-449",
@@ -8702,10 +8847,14 @@ const CURATED_FOOD = [
     kakaoUrl: "http://place.map.kakao.com/10986589",
     rating: null,
     reviewCount: null,
-    youtuber: "쯔양",
-    videoTitle: null,
-    videoUrl: null,
-    recommendNote: "쯔양이 방문해 리뷰한 한식 맛집."
+    youtubers: [
+      {
+        name: "쯔양",
+        videoTitle: null,
+        videoUrl: null,
+        recommendNote: "쯔양이 방문해 리뷰한 한식 맛집."
+      }
+    ]
   },
   {
     id: "jjy-450",
@@ -8718,10 +8867,14 @@ const CURATED_FOOD = [
     kakaoUrl: "http://place.map.kakao.com/1864860472",
     rating: null,
     reviewCount: null,
-    youtuber: "쯔양",
-    videoTitle: null,
-    videoUrl: null,
-    recommendNote: "쯔양이 방문해 리뷰한 아시안 맛집."
+    youtubers: [
+      {
+        name: "쯔양",
+        videoTitle: null,
+        videoUrl: null,
+        recommendNote: "쯔양이 방문해 리뷰한 아시안 맛집."
+      }
+    ]
   },
   {
     id: "jjy-451",
@@ -8734,10 +8887,14 @@ const CURATED_FOOD = [
     kakaoUrl: "http://place.map.kakao.com/16418514",
     rating: null,
     reviewCount: null,
-    youtuber: "쯔양",
-    videoTitle: null,
-    videoUrl: null,
-    recommendNote: "쯔양이 방문해 리뷰한 한식 맛집."
+    youtubers: [
+      {
+        name: "쯔양",
+        videoTitle: null,
+        videoUrl: null,
+        recommendNote: "쯔양이 방문해 리뷰한 한식 맛집."
+      }
+    ]
   },
   {
     id: "jjy-452",
@@ -8750,10 +8907,14 @@ const CURATED_FOOD = [
     kakaoUrl: "http://place.map.kakao.com/2082865911",
     rating: null,
     reviewCount: null,
-    youtuber: "쯔양",
-    videoTitle: null,
-    videoUrl: null,
-    recommendNote: "쯔양이 방문해 리뷰한 한식 맛집."
+    youtubers: [
+      {
+        name: "쯔양",
+        videoTitle: null,
+        videoUrl: null,
+        recommendNote: "쯔양이 방문해 리뷰한 한식 맛집."
+      }
+    ]
   },
   {
     id: "jjy-453",
@@ -8766,10 +8927,14 @@ const CURATED_FOOD = [
     kakaoUrl: "http://place.map.kakao.com/8155373",
     rating: null,
     reviewCount: null,
-    youtuber: "쯔양",
-    videoTitle: null,
-    videoUrl: null,
-    recommendNote: "쯔양이 방문해 리뷰한 고기 맛집."
+    youtubers: [
+      {
+        name: "쯔양",
+        videoTitle: null,
+        videoUrl: null,
+        recommendNote: "쯔양이 방문해 리뷰한 고기 맛집."
+      }
+    ]
   },
   {
     id: "jjy-454",
@@ -8782,10 +8947,14 @@ const CURATED_FOOD = [
     kakaoUrl: "http://place.map.kakao.com/21392443",
     rating: null,
     reviewCount: null,
-    youtuber: "쯔양",
-    videoTitle: null,
-    videoUrl: null,
-    recommendNote: "쯔양이 방문해 리뷰한 분식 맛집."
+    youtubers: [
+      {
+        name: "쯔양",
+        videoTitle: null,
+        videoUrl: null,
+        recommendNote: "쯔양이 방문해 리뷰한 분식 맛집."
+      }
+    ]
   },
   {
     id: "jjy-455",
@@ -8798,10 +8967,14 @@ const CURATED_FOOD = [
     kakaoUrl: "http://place.map.kakao.com/11197026",
     rating: null,
     reviewCount: null,
-    youtuber: "쯔양",
-    videoTitle: null,
-    videoUrl: null,
-    recommendNote: "쯔양이 방문해 리뷰한 찜·탕 맛집."
+    youtubers: [
+      {
+        name: "쯔양",
+        videoTitle: null,
+        videoUrl: null,
+        recommendNote: "쯔양이 방문해 리뷰한 찜·탕 맛집."
+      }
+    ]
   },
   {
     id: "jjy-456",
@@ -8814,10 +8987,14 @@ const CURATED_FOOD = [
     kakaoUrl: "http://place.map.kakao.com/1052646340",
     rating: null,
     reviewCount: null,
-    youtuber: "쯔양",
-    videoTitle: null,
-    videoUrl: null,
-    recommendNote: "쯔양이 방문해 리뷰한 한식 맛집."
+    youtubers: [
+      {
+        name: "쯔양",
+        videoTitle: null,
+        videoUrl: null,
+        recommendNote: "쯔양이 방문해 리뷰한 한식 맛집."
+      }
+    ]
   },
   {
     id: "jjy-457",
@@ -8830,10 +9007,14 @@ const CURATED_FOOD = [
     kakaoUrl: "http://place.map.kakao.com/16271741",
     rating: null,
     reviewCount: null,
-    youtuber: "쯔양",
-    videoTitle: null,
-    videoUrl: null,
-    recommendNote: "쯔양이 방문해 리뷰한 중식 맛집."
+    youtubers: [
+      {
+        name: "쯔양",
+        videoTitle: null,
+        videoUrl: null,
+        recommendNote: "쯔양이 방문해 리뷰한 중식 맛집."
+      }
+    ]
   },
   {
     id: "jjy-458",
@@ -8846,10 +9027,14 @@ const CURATED_FOOD = [
     kakaoUrl: "http://place.map.kakao.com/1519521521",
     rating: null,
     reviewCount: null,
-    youtuber: "쯔양",
-    videoTitle: null,
-    videoUrl: null,
-    recommendNote: "쯔양이 방문해 리뷰한 돈까스·회 전문점."
+    youtubers: [
+      {
+        name: "쯔양",
+        videoTitle: null,
+        videoUrl: null,
+        recommendNote: "쯔양이 방문해 리뷰한 돈까스·회 전문점."
+      }
+    ]
   },
   {
     id: "jjy-459",
@@ -8862,10 +9047,14 @@ const CURATED_FOOD = [
     kakaoUrl: "http://place.map.kakao.com/15606743",
     rating: null,
     reviewCount: null,
-    youtuber: "쯔양",
-    videoTitle: null,
-    videoUrl: null,
-    recommendNote: "쯔양이 방문해 리뷰한 분식 맛집."
+    youtubers: [
+      {
+        name: "쯔양",
+        videoTitle: null,
+        videoUrl: null,
+        recommendNote: "쯔양이 방문해 리뷰한 분식 맛집."
+      }
+    ]
   },
   {
     id: "jjy-460",
@@ -8878,10 +9067,14 @@ const CURATED_FOOD = [
     kakaoUrl: "http://place.map.kakao.com/15676593",
     rating: null,
     reviewCount: null,
-    youtuber: "쯔양",
-    videoTitle: null,
-    videoUrl: null,
-    recommendNote: "쯔양이 방문해 리뷰한 고기 맛집."
+    youtubers: [
+      {
+        name: "쯔양",
+        videoTitle: null,
+        videoUrl: null,
+        recommendNote: "쯔양이 방문해 리뷰한 고기 맛집."
+      }
+    ]
   },
   {
     id: "jjy-461",
@@ -8894,10 +9087,1954 @@ const CURATED_FOOD = [
     kakaoUrl: "http://place.map.kakao.com/528537292",
     rating: null,
     reviewCount: null,
-    youtuber: "쯔양",
-    videoTitle: null,
-    videoUrl: null,
-    recommendNote: "쯔양이 방문해 리뷰한 중식 맛집."
+    youtubers: [
+      {
+        name: "쯔양",
+        videoTitle: null,
+        videoUrl: null,
+        recommendNote: "쯔양이 방문해 리뷰한 중식 맛집."
+      }
+    ]
+  },
+  {
+    id: "mns-001",
+    name: "꼬끄더그릴",
+    category: "닭요리",
+    address: "서울 강남구 강남대로154길 10",
+    phone: "02-6338-3838",
+    lat: 37.517521712393965,
+    lng: 127.02014596984124,
+    kakaoUrl: "http://place.map.kakao.com/705044236",
+    rating: null,
+    reviewCount: null,
+    youtubers: [
+      {
+        name: "맛있는 녀석들",
+        videoTitle: null,
+        videoUrl: null,
+        recommendNote: "전직 래퍼 출신 사장이 운영하는 퓨전 닭요리 전문점으로, 방송에 식당 사장님 자격으로 직접 출연하기도 했다."
+      }
+    ]
+  },
+  {
+    id: "sc-001",
+    name: "현대순대국",
+    category: "순대",
+    address: "서울 강남구 강남대로124길 20",
+    phone: null,
+    lat: 37.5090641197919,
+    lng: 127.024235773746,
+    kakaoUrl: "http://place.map.kakao.com/11831548",
+    rating: null,
+    reviewCount: null,
+    youtubers: [
+      {
+        name: "성시경의 먹을텐데",
+        videoTitle: null,
+        videoUrl: null,
+        recommendNote: null
+      }
+    ]
+  },
+  {
+    id: "sc-002",
+    name: "육개옥",
+    category: "국밥",
+    address: "서울 강남구 봉은사로 167",
+    phone: "02-516-9181",
+    lat: 37.507238568097,
+    lng: 127.032256273604,
+    kakaoUrl: "http://place.map.kakao.com/1808543028",
+    rating: null,
+    reviewCount: null,
+    youtubers: [
+      {
+        name: "성시경의 먹을텐데",
+        videoTitle: null,
+        videoUrl: null,
+        recommendNote: null
+      }
+    ]
+  },
+  {
+    id: "sc-003",
+    name: "안동국시",
+    category: "국수",
+    address: "서울 강남구 언주로167길 46",
+    phone: "02-548-4986",
+    lat: 37.5265964750989,
+    lng: 127.029391111084,
+    kakaoUrl: "http://place.map.kakao.com/10583440",
+    rating: null,
+    reviewCount: null,
+    youtubers: [
+      {
+        name: "성시경의 먹을텐데",
+        videoTitle: null,
+        videoUrl: null,
+        recommendNote: null
+      }
+    ]
+  },
+  {
+    id: "sc-004",
+    name: "신미식당",
+    category: "육류,고기",
+    address: "서울 강남구 압구정로 214",
+    phone: "02-516-4900",
+    lat: 37.52793498570478,
+    lng: 127.03087366251374,
+    kakaoUrl: "http://place.map.kakao.com/11892123",
+    rating: null,
+    reviewCount: null,
+    youtubers: [
+      {
+        name: "성시경의 먹을텐데",
+        videoTitle: null,
+        videoUrl: null,
+        recommendNote: null
+      }
+    ]
+  },
+  {
+    id: "sc-005",
+    name: "부흥왕족발",
+    category: "족발,보쌈",
+    address: "서울 강남구 삼성로146길 8",
+    phone: "02-546-3727",
+    lat: 37.52309327329298,
+    lng: 127.04876908841662,
+    kakaoUrl: "http://place.map.kakao.com/10466580",
+    rating: null,
+    reviewCount: null,
+    youtubers: [
+      {
+        name: "성시경의 먹을텐데",
+        videoTitle: null,
+        videoUrl: null,
+        recommendNote: null
+      }
+    ]
+  },
+  {
+    id: "sc-006",
+    name: "이남장 삼성점",
+    category: "설렁탕",
+    address: "서울 강남구 봉은사로108길 21",
+    phone: "02-569-8726",
+    lat: 37.5135684607614,
+    lng: 127.064450126559,
+    kakaoUrl: "http://place.map.kakao.com/16649489",
+    rating: null,
+    reviewCount: null,
+    youtubers: [
+      {
+        name: "성시경의 먹을텐데",
+        videoTitle: null,
+        videoUrl: null,
+        recommendNote: null
+      }
+    ]
+  },
+  {
+    id: "sc-007",
+    name: "강남진해장",
+    category: "찌개,전골",
+    address: "서울 강남구 테헤란로5길 11",
+    phone: "02-557-2662",
+    lat: 37.499584393000326,
+    lng: 127.02930814350843,
+    kakaoUrl: "http://place.map.kakao.com/1428481536",
+    rating: null,
+    reviewCount: null,
+    youtubers: [
+      {
+        name: "성시경의 먹을텐데",
+        videoTitle: null,
+        videoUrl: null,
+        recommendNote: null
+      }
+    ]
+  },
+  {
+    id: "sc-008",
+    name: "대우부대찌개",
+    category: "찌개,전골",
+    address: "서울 강남구 테헤란로25길 34",
+    phone: "02-552-1663",
+    lat: 37.502696655575825,
+    lng: 127.03521737405278,
+    kakaoUrl: "http://place.map.kakao.com/7819490",
+    rating: null,
+    reviewCount: null,
+    youtubers: [
+      {
+        name: "성시경의 먹을텐데",
+        videoTitle: null,
+        videoUrl: null,
+        recommendNote: null
+      }
+    ]
+  },
+  {
+    id: "sc-009",
+    name: "도명골청국장",
+    category: "한식",
+    address: "서울 강남구 봉은사로114길 38",
+    phone: "02-569-6999",
+    lat: 37.51262098003945,
+    lng: 127.06540621093926,
+    kakaoUrl: "http://place.map.kakao.com/2130836465",
+    rating: null,
+    reviewCount: null,
+    youtubers: [
+      {
+        name: "성시경의 먹을텐데",
+        videoTitle: null,
+        videoUrl: null,
+        recommendNote: null
+      }
+    ]
+  },
+  {
+    id: "sc-010",
+    name: "왕스덕",
+    category: "중식",
+    address: "경기 성남시 분당구 대왕판교로645번길 36",
+    phone: "031-606-8517",
+    lat: 37.4004108231145,
+    lng: 127.102084009388,
+    kakaoUrl: "http://place.map.kakao.com/1379913602",
+    rating: null,
+    reviewCount: null,
+    youtubers: [
+      {
+        name: "성시경의 먹을텐데",
+        videoTitle: null,
+        videoUrl: null,
+        recommendNote: null
+      }
+    ]
+  },
+  {
+    id: "sc-013",
+    name: "미남옥",
+    category: "곰탕",
+    address: "서울 강남구 언주로153길 12",
+    phone: "02-549-5553",
+    lat: 37.52294578490738,
+    lng: 127.03219063516923,
+    kakaoUrl: "http://place.map.kakao.com/940697725",
+    rating: null,
+    reviewCount: null,
+    youtubers: [
+      {
+        name: "성시경의 먹을텐데",
+        videoTitle: null,
+        videoUrl: null,
+        recommendNote: null
+      }
+    ]
+  },
+  {
+    id: "sc-014",
+    name: "삼호짱뚱이",
+    category: "해물,생선",
+    address: "서울 강남구 도산대로34길 11",
+    phone: "02-547-1416",
+    lat: 37.51963671546776,
+    lng: 127.03101729816763,
+    kakaoUrl: "http://place.map.kakao.com/7929136",
+    rating: null,
+    reviewCount: null,
+    youtubers: [
+      {
+        name: "성시경의 먹을텐데",
+        videoTitle: null,
+        videoUrl: null,
+        recommendNote: null
+      }
+    ]
+  },
+  {
+    id: "sc-015",
+    name: "방화동교동짬뽕",
+    category: "중국요리",
+    address: "서울 강서구 금낭화로24나길 21",
+    phone: "02-2665-5778",
+    lat: 37.57725372854616,
+    lng: 126.81575560825779,
+    kakaoUrl: "http://place.map.kakao.com/25858128",
+    rating: null,
+    reviewCount: null,
+    youtubers: [
+      {
+        name: "성시경의 먹을텐데",
+        videoTitle: null,
+        videoUrl: null,
+        recommendNote: null
+      }
+    ]
+  },
+  {
+    id: "sc-016",
+    name: "영미오리탕",
+    category: "오리",
+    address: "전남광주통합특별시 북구 경양로 126",
+    phone: "062-527-0248",
+    lat: 35.16138362196164,
+    lng: 126.90552043216846,
+    kakaoUrl: "http://place.map.kakao.com/8441874",
+    rating: null,
+    reviewCount: null,
+    youtubers: [
+      {
+        name: "성시경의 먹을텐데",
+        videoTitle: null,
+        videoUrl: null,
+        recommendNote: null
+      }
+    ]
+  },
+  {
+    id: "sc-017",
+    name: "맛좋은순대국",
+    category: "순대",
+    address: "서울 광진구 자양번영로1길 22",
+    phone: "02-458-5737",
+    lat: 37.530865017051845,
+    lng: 127.07367768605853,
+    kakaoUrl: "http://place.map.kakao.com/10346328",
+    rating: null,
+    reviewCount: null,
+    youtubers: [
+      {
+        name: "성시경의 먹을텐데",
+        videoTitle: null,
+        videoUrl: null,
+        recommendNote: null
+      }
+    ]
+  },
+  {
+    id: "sc-019",
+    name: "어머니대성집",
+    category: "해장국",
+    address: "서울 동대문구 왕산로11길 4",
+    phone: "02-923-1718",
+    lat: 37.57741837425039,
+    lng: 127.02858466713235,
+    kakaoUrl: "http://place.map.kakao.com/907979960",
+    rating: null,
+    reviewCount: null,
+    youtubers: [
+      {
+        name: "성시경의 먹을텐데",
+        videoTitle: null,
+        videoUrl: null,
+        recommendNote: null
+      }
+    ]
+  },
+  {
+    id: "sc-021",
+    name: "권영수대가전골",
+    category: "찌개,전골",
+    address: "서울 동대문구 고산자로36길 3",
+    phone: "02-960-6043",
+    lat: 37.57945802812345,
+    lng: 127.03875167673729,
+    kakaoUrl: "http://place.map.kakao.com/1910019452",
+    rating: null,
+    reviewCount: null,
+    youtubers: [
+      {
+        name: "성시경의 먹을텐데",
+        videoTitle: null,
+        videoUrl: null,
+        recommendNote: null
+      }
+    ]
+  },
+  {
+    id: "sc-022",
+    name: "부영각",
+    category: "중국요리",
+    address: "서울 마포구 토정로 268",
+    phone: "02-715-7095",
+    lat: 37.5425107266566,
+    lng: 126.939503454631,
+    kakaoUrl: "http://place.map.kakao.com/10470081",
+    rating: null,
+    reviewCount: null,
+    youtubers: [
+      {
+        name: "성시경의 먹을텐데",
+        videoTitle: null,
+        videoUrl: null,
+        recommendNote: null
+      }
+    ]
+  },
+  {
+    id: "sc-023",
+    name: "원조신촌설렁탕",
+    category: "설렁탕",
+    address: "서울 마포구 마포대로14길 16",
+    phone: "02-712-3300",
+    lat: 37.5482809161142,
+    lng: 126.956269475672,
+    kakaoUrl: "http://place.map.kakao.com/16044683",
+    rating: null,
+    reviewCount: null,
+    youtubers: [
+      {
+        name: "성시경의 먹을텐데",
+        videoTitle: null,
+        videoUrl: null,
+        recommendNote: null
+      }
+    ]
+  },
+  {
+    id: "sc-024",
+    name: "길상양꼬치",
+    category: "양꼬치",
+    address: "서울 서대문구 연세로5가길 17",
+    phone: "02-336-8018",
+    lat: 37.5571877488669,
+    lng: 126.935639080919,
+    kakaoUrl: "http://place.map.kakao.com/25799235",
+    rating: null,
+    reviewCount: null,
+    youtubers: [
+      {
+        name: "성시경의 먹을텐데",
+        videoTitle: null,
+        videoUrl: null,
+        recommendNote: null
+      }
+    ]
+  },
+  {
+    id: "sc-025",
+    name: "청실홍실",
+    category: "감자탕",
+    address: "서울 서초구 서래로10길 9",
+    phone: "02-535-2544",
+    lat: 37.4995663995735,
+    lng: 126.998927916588,
+    kakaoUrl: "http://place.map.kakao.com/16470308",
+    rating: null,
+    reviewCount: null,
+    youtubers: [
+      {
+        name: "성시경의 먹을텐데",
+        videoTitle: null,
+        videoUrl: null,
+        recommendNote: null
+      }
+    ]
+  },
+  {
+    id: "sc-026",
+    name: "성천막국수 논현점",
+    category: "국수",
+    address: "서울 서초구 강남대로 545-12",
+    phone: "02-548-5529",
+    lat: 37.510370368086654,
+    lng: 127.02058515818821,
+    kakaoUrl: "http://place.map.kakao.com/862508200",
+    rating: null,
+    reviewCount: null,
+    youtubers: [
+      {
+        name: "성시경의 먹을텐데",
+        videoTitle: null,
+        videoUrl: null,
+        recommendNote: null
+      }
+    ]
+  },
+  {
+    id: "sc-027",
+    name: "서이축산",
+    category: "정육점",
+    address: "서울 서초구 서래로 29",
+    phone: "02-535-1145",
+    lat: 37.497564353887654,
+    lng: 126.99815217560459,
+    kakaoUrl: "http://place.map.kakao.com/1238960275",
+    rating: null,
+    reviewCount: null,
+    youtubers: [
+      {
+        name: "성시경의 먹을텐데",
+        videoTitle: null,
+        videoUrl: null,
+        recommendNote: null
+      }
+    ]
+  },
+  {
+    id: "sc-028",
+    name: "영동설렁탕",
+    category: "설렁탕",
+    address: "서울 서초구 강남대로101안길 24",
+    phone: "02-543-4716",
+    lat: 37.51615082556445,
+    lng: 127.01737204634458,
+    kakaoUrl: "http://place.map.kakao.com/8008344",
+    rating: null,
+    reviewCount: null,
+    youtubers: [
+      {
+        name: "성시경의 먹을텐데",
+        videoTitle: null,
+        videoUrl: null,
+        recommendNote: null
+      }
+    ]
+  },
+  {
+    id: "sc-029",
+    name: "화목순대국",
+    category: "순대",
+    address: "서울 영등포구 여의대방로 383",
+    phone: "02-780-8191",
+    lat: 37.51925139233756,
+    lng: 126.93129172468807,
+    kakaoUrl: "http://place.map.kakao.com/21423297",
+    rating: null,
+    reviewCount: null,
+    youtubers: [
+      {
+        name: "성시경의 먹을텐데",
+        videoTitle: null,
+        videoUrl: null,
+        recommendNote: null
+      }
+    ]
+  },
+  {
+    id: "sc-030",
+    name: "산동교자",
+    category: "중국요리",
+    address: "서울 중구 남대문로 52-13",
+    phone: "02-778-4150",
+    lat: 37.56213783919516,
+    lng: 126.98240562832072,
+    kakaoUrl: "http://place.map.kakao.com/7912905",
+    rating: null,
+    reviewCount: null,
+    youtubers: [
+      {
+        name: "성시경의 먹을텐데",
+        videoTitle: null,
+        videoUrl: null,
+        recommendNote: null
+      }
+    ]
+  },
+  {
+    id: "sc-031",
+    name: "필동면옥",
+    category: "냉면",
+    address: "서울 중구 서애로 26",
+    phone: "02-2266-2611",
+    lat: 37.5603983847784,
+    lng: 126.99693958989,
+    kakaoUrl: "http://place.map.kakao.com/11231325",
+    rating: null,
+    reviewCount: null,
+    youtubers: [
+      {
+        name: "성시경의 먹을텐데",
+        videoTitle: null,
+        videoUrl: null,
+        recommendNote: null
+      }
+    ]
+  },
+  {
+    id: "sc-032",
+    name: "진미식당",
+    category: "한식",
+    address: "서울 용산구 백범로90길 38",
+    phone: "02-703-6842",
+    lat: 37.53673789215872,
+    lng: 126.96960923245895,
+    kakaoUrl: "http://place.map.kakao.com/16526880",
+    rating: null,
+    reviewCount: null,
+    youtubers: [
+      {
+        name: "성시경의 먹을텐데",
+        videoTitle: null,
+        videoUrl: null,
+        recommendNote: null
+      }
+    ]
+  },
+  {
+    id: "sc-033",
+    name: "약수순대국",
+    category: "순대",
+    address: "서울 중구 동호로7길 14",
+    phone: "02-2236-5926",
+    lat: 37.55328275350285,
+    lng: 127.01080321635617,
+    kakaoUrl: "http://place.map.kakao.com/13499817",
+    rating: null,
+    reviewCount: null,
+    youtubers: [
+      {
+        name: "성시경의 먹을텐데",
+        videoTitle: null,
+        videoUrl: null,
+        recommendNote: null
+      }
+    ]
+  },
+  {
+    id: "sc-034",
+    name: "완도전복",
+    category: "굴,전복",
+    address: "서울 중구 동호로5길 2",
+    phone: "02-2234-8538",
+    lat: 37.552657345381775,
+    lng: 127.01199932388397,
+    kakaoUrl: "http://place.map.kakao.com/10616945",
+    rating: null,
+    reviewCount: null,
+    youtubers: [
+      {
+        name: "성시경의 먹을텐데",
+        videoTitle: null,
+        videoUrl: null,
+        recommendNote: null
+      }
+    ]
+  },
+  {
+    id: "sc-035",
+    name: "이태원숯불구이",
+    category: "육류,고기",
+    address: "서울 용산구 녹사평대로32길 41-5",
+    phone: "02-797-7777",
+    lat: 37.53306807193163,
+    lng: 126.9909013187132,
+    kakaoUrl: "http://place.map.kakao.com/27510733",
+    rating: null,
+    reviewCount: null,
+    youtubers: [
+      {
+        name: "성시경의 먹을텐데",
+        videoTitle: null,
+        videoUrl: null,
+        recommendNote: null
+      }
+    ]
+  },
+  {
+    id: "sc-036",
+    name: "버거스낵",
+    category: "햄버거",
+    address: "서울 용산구 녹사평대로46길 13",
+    phone: null,
+    lat: 37.53731779421355,
+    lng: 126.9876218326533,
+    kakaoUrl: "http://place.map.kakao.com/1927045218",
+    rating: null,
+    reviewCount: null,
+    youtubers: [
+      {
+        name: "성시경의 먹을텐데",
+        videoTitle: null,
+        videoUrl: null,
+        recommendNote: null
+      }
+    ]
+  },
+  {
+    id: "sc-038",
+    name: "명동함흥면옥 본점",
+    category: "냉면",
+    address: "서울 중구 명동10길 35-19",
+    phone: "02-776-8430",
+    lat: 37.562769881012464,
+    lng: 126.98568556457165,
+    kakaoUrl: "http://place.map.kakao.com/7871208",
+    rating: null,
+    reviewCount: null,
+    youtubers: [
+      {
+        name: "성시경의 먹을텐데",
+        videoTitle: null,
+        videoUrl: null,
+        recommendNote: null
+      }
+    ]
+  },
+  {
+    id: "swab-001",
+    name: "베수비오",
+    category: "이탈리안",
+    address: "서울 중구 다산로24길 28",
+    phone: null,
+    lat: 37.5575180130319,
+    lng: 127.01395466125,
+    kakaoUrl: "http://place.map.kakao.com/279218433",
+    rating: null,
+    reviewCount: null,
+    youtubers: [
+      {
+        name: "승우아빠",
+        videoTitle: null,
+        videoUrl: null,
+        recommendNote: "나폴리 피자 전문점 '나폴리 맛피아'가 새롭게 선보인 레스토랑으로, 기존보다 한층 업그레이드된 메뉴 구성으로 소개됐다."
+      }
+    ]
+  },
+  {
+    id: "swab-002",
+    name: "이타닉가든",
+    category: "한식",
+    address: "서울 강남구 테헤란로 231",
+    phone: "02-727-7610",
+    lat: 37.5028641154494,
+    lng: 127.04118315776,
+    kakaoUrl: "http://place.map.kakao.com/2044587542",
+    rating: null,
+    reviewCount: null,
+    youtubers: [
+      {
+        name: "승우아빠",
+        videoTitle: null,
+        videoUrl: null,
+        recommendNote: "예약이 매달 순식간에 마감될 정도로 인기가 높은 손종원 셰프의 파인다이닝 레스토랑으로 소개됐다."
+      }
+    ]
+  },
+  {
+    id: "swab-003",
+    name: "노뜨르",
+    category: "양식",
+    address: "서울 강남구 선릉로155길 13",
+    phone: null,
+    lat: 37.5253297256905,
+    lng: 127.03857772608,
+    kakaoUrl: "http://place.map.kakao.com/709646921",
+    rating: null,
+    reviewCount: null,
+    youtubers: [
+      {
+        name: "승우아빠",
+        videoTitle: null,
+        videoUrl: null,
+        recommendNote: "윤남노 셰프가 새롭게 시작한 레스토랑으로 소개됐다."
+      }
+    ]
+  },
+  {
+    id: "swab-004",
+    name: "카나르",
+    category: "일본식라면",
+    address: "서울 종로구 돈화문로11가길 65",
+    phone: "0502-5552-9113",
+    lat: 37.5755356548706,
+    lng: 126.99029617426,
+    kakaoUrl: "http://place.map.kakao.com/673601993",
+    rating: null,
+    reviewCount: null,
+    youtubers: [
+      {
+        name: "승우아빠",
+        videoTitle: null,
+        videoUrl: null,
+        recommendNote: "오리 한 마리를 통째로 끓여낸 육수를 사용하는 독특한 오리라멘 전문점으로 소개됐다."
+      }
+    ]
+  },
+  {
+    id: "swab-005",
+    name: "SMT차이나룸 몬드리안호텔점",
+    category: "중국요리",
+    address: "서울 용산구 장문로 23",
+    phone: "02-749-3396",
+    lat: 37.528534382013,
+    lng: 126.993104562807,
+    kakaoUrl: "http://place.map.kakao.com/734566080",
+    rating: null,
+    reviewCount: null,
+    youtubers: [
+      {
+        name: "승우아빠",
+        videoTitle: null,
+        videoUrl: null,
+        recommendNote: "호텔에 위치한 중식당으로 다양한 신기한 요리 구성이 인상적이라고 소개됐다."
+      }
+    ]
+  },
+  {
+    id: "swab-006",
+    name: "코우짱라멘",
+    category: "일본식라면",
+    address: "서울 관악구 봉천로 227",
+    phone: null,
+    lat: 37.4900319940447,
+    lng: 126.927117776911,
+    kakaoUrl: "http://place.map.kakao.com/942986693",
+    rating: null,
+    reviewCount: null,
+    youtubers: [
+      {
+        name: "승우아빠",
+        videoTitle: null,
+        videoUrl: null,
+        recommendNote: "돈코츠라멘과 함께 나오는 볶음밥이 특히 인상적이라고 소개된 라멘 전문점."
+      }
+    ]
+  },
+  {
+    id: "swab-007",
+    name: "신세카이",
+    category: "일식",
+    address: "서울 마포구 월드컵로13길 22-8",
+    phone: null,
+    lat: 37.5558115164214,
+    lng: 126.908996869161,
+    kakaoUrl: "http://place.map.kakao.com/1215753799",
+    rating: null,
+    reviewCount: null,
+    youtubers: [
+      {
+        name: "승우아빠",
+        videoTitle: null,
+        videoUrl: null,
+        recommendNote: "진한 토리파이탄(닭백숙) 육수의 라멘으로 소개된 일식당."
+      }
+    ]
+  },
+  {
+    id: "swab-008",
+    name: "멘야수",
+    category: "일본식라면",
+    address: "서울 마포구 양화로 56",
+    phone: "010-3481-5250",
+    lat: 37.54966314168434,
+    lng: 126.91509033581866,
+    kakaoUrl: "http://place.map.kakao.com/1937381710",
+    rating: null,
+    reviewCount: null,
+    youtubers: [
+      {
+        name: "승우아빠",
+        videoTitle: null,
+        videoUrl: null,
+        recommendNote: "담백한 오리라멘을 선보이는 전문점으로 소개됐다."
+      }
+    ]
+  },
+  {
+    id: "swab-009",
+    name: "맛스구라멘",
+    category: "일본식라면",
+    address: "서울 은평구 은평로3길 4",
+    phone: null,
+    lat: 37.5992402017266,
+    lng: 126.914866432736,
+    kakaoUrl: "http://place.map.kakao.com/741956418",
+    rating: null,
+    reviewCount: null,
+    youtubers: [
+      {
+        name: "승우아빠",
+        videoTitle: null,
+        videoUrl: null,
+        recommendNote: "매운맛의 돈코츠라멘을 선보이는 라멘 전문점으로 소개됐다."
+      }
+    ]
+  },
+  {
+    id: "swab-010",
+    name: "라멘롱시즌",
+    category: "일본식라면",
+    address: "서울 마포구 동교로34길 21",
+    phone: null,
+    lat: 37.5608542931865,
+    lng: 126.925568431297,
+    kakaoUrl: "http://place.map.kakao.com/432903250",
+    rating: null,
+    reviewCount: null,
+    youtubers: [
+      {
+        name: "승우아빠",
+        videoTitle: null,
+        videoUrl: null,
+        recommendNote: "진한 맛의 시오라멘으로 소개된 라멘 맛집."
+      }
+    ]
+  },
+  {
+    id: "swab-011",
+    name: "레귬",
+    category: "양식",
+    address: "서울 강남구 강남대로 652",
+    phone: "0507-1365-1567",
+    lat: 37.5194581390938,
+    lng: 127.019119370109,
+    kakaoUrl: "http://place.map.kakao.com/335870716",
+    rating: null,
+    reviewCount: null,
+    youtubers: [
+      {
+        name: "승우아빠",
+        videoTitle: null,
+        videoUrl: null,
+        recommendNote: "고기 없이도 미슐랭 1스타를 받을 만큼 완성도 있는 요리를 선보이는 레스토랑으로 소개됐다."
+      }
+    ]
+  },
+  {
+    id: "swab-012",
+    name: "레스토랑 산",
+    category: "양식",
+    address: "서울 강남구 언주로168길 6",
+    phone: "02-540-1729",
+    lat: 37.5263564954611,
+    lng: 127.033920717797,
+    kakaoUrl: "http://place.map.kakao.com/1828674706",
+    rating: null,
+    reviewCount: null,
+    youtubers: [
+      {
+        name: "승우아빠",
+        videoTitle: null,
+        videoUrl: null,
+        recommendNote: "최근 새롭게 떠오른 최고의 레스토랑 중 하나로 소개됐다."
+      }
+    ]
+  },
+  {
+    id: "swab-013",
+    name: "오프닝",
+    category: "양식",
+    address: "서울 강남구 도산대로34길 22",
+    phone: "02-2088-5844",
+    lat: 37.5188924866535,
+    lng: 127.031018121292,
+    kakaoUrl: "http://place.map.kakao.com/2010673091",
+    rating: null,
+    reviewCount: null,
+    youtubers: [
+      {
+        name: "승우아빠",
+        videoTitle: null,
+        videoUrl: null,
+        recommendNote: "남이 사준 밥이 제일 맛있다는 리뷰와 함께 소개된 레스토랑."
+      }
+    ]
+  },
+  {
+    id: "swab-014",
+    name: "기와강",
+    category: "한식",
+    address: "서울 강남구 논현로152길 9",
+    phone: "02-517-2511",
+    lat: 37.5211392152627,
+    lng: 127.028937615467,
+    kakaoUrl: "http://place.map.kakao.com/1522281632",
+    rating: null,
+    reviewCount: null,
+    youtubers: [
+      {
+        name: "승우아빠",
+        videoTitle: null,
+        videoUrl: null,
+        recommendNote: "미슐랭 1스타를 받은 한식 다이닝으로 소개됐다."
+      }
+    ]
+  },
+  {
+    id: "swab-015",
+    name: "아키야라멘",
+    category: "일본식라면",
+    address: "서울 마포구 토정로 39-3",
+    phone: "070-7636-0326",
+    lat: 37.5457466795839,
+    lng: 126.915339200849,
+    kakaoUrl: "http://place.map.kakao.com/604742224",
+    rating: null,
+    reviewCount: null,
+    youtubers: [
+      {
+        name: "승우아빠",
+        videoTitle: null,
+        videoUrl: null,
+        recommendNote: "전문점이 드문 미소라멘을 선보이는 라멘집으로 소개됐다."
+      }
+    ]
+  },
+  {
+    id: "swab-016",
+    name: "누와",
+    category: "중식",
+    address: "서울 강남구 강남대로 652",
+    phone: "02-518-2003",
+    lat: 37.5195662640323,
+    lng: 127.019091117912,
+    kakaoUrl: "http://place.map.kakao.com/1915805569",
+    rating: null,
+    reviewCount: null,
+    youtubers: [
+      {
+        name: "승우아빠",
+        videoTitle: null,
+        videoUrl: null,
+        recommendNote: "박은영 셰프가 선보이는 중식 레스토랑으로 소개됐다."
+      }
+    ]
+  },
+  {
+    id: "swab-017",
+    name: "신멘",
+    category: "일본식라면",
+    address: "경기 안양시 동안구 호성로 20",
+    phone: "070-8836-9268",
+    lat: 37.36351636620172,
+    lng: 126.9637866595994,
+    kakaoUrl: "http://place.map.kakao.com/1796608709",
+    rating: null,
+    reviewCount: null,
+    youtubers: [
+      {
+        name: "승우아빠",
+        videoTitle: null,
+        videoUrl: null,
+        recommendNote: "니보시(멸치) 육수 라멘을 선보이는 안양의 라멘 맛집으로, 색다른 라멘 경험을 준다고 소개됐다."
+      }
+    ]
+  },
+  {
+    id: "swab-018",
+    name: "소바키리 스즈",
+    category: "일식집",
+    address: "서울 중구 동호로12길 98",
+    phone: "02-2256-6986",
+    lat: 37.5594931690156,
+    lng: 127.012431633842,
+    kakaoUrl: "http://place.map.kakao.com/59179379",
+    rating: null,
+    reviewCount: null,
+    youtubers: [
+      {
+        name: "승우아빠",
+        videoTitle: null,
+        videoUrl: null,
+        recommendNote: "깔끔한 맛의 소바 전문점으로 소개됐다."
+      }
+    ]
+  },
+  {
+    id: "swab-019",
+    name: "요아케",
+    category: "일본식라면",
+    address: "서울 중구 퇴계로74길 9",
+    phone: "0502-5553-0817",
+    lat: 37.56462496452258,
+    lng: 127.014864880365,
+    kakaoUrl: "http://place.map.kakao.com/961759416",
+    rating: null,
+    reviewCount: null,
+    youtubers: [
+      {
+        name: "승우아빠",
+        videoTitle: null,
+        videoUrl: null,
+        recommendNote: "라멘에 진심인 오너가 만든 라멘집으로 소개됐다."
+      }
+    ]
+  },
+  {
+    id: "swab-020",
+    name: "조광201",
+    category: "중국요리",
+    address: "서울 송파구 새말로8길 13",
+    phone: "010-2459-0503",
+    lat: 37.4815503071785,
+    lng: 127.126787485897,
+    kakaoUrl: "http://place.map.kakao.com/1579261014",
+    rating: null,
+    reviewCount: null,
+    youtubers: [
+      {
+        name: "승우아빠",
+        videoTitle: null,
+        videoUrl: null,
+        recommendNote: "흑백요리사 출신 셰프가 운영하는 중식당으로, 센스 있는 구성이 여전히 돋보인다고 소개됐다."
+      }
+    ]
+  },
+  {
+    id: "swab-021",
+    name: "후제",
+    category: "양식",
+    address: "서울 강남구 논현로24길 21",
+    phone: "070-4837-4997",
+    lat: 37.4821261304299,
+    lng: 127.044768296392,
+    kakaoUrl: "http://place.map.kakao.com/1625504597",
+    rating: null,
+    reviewCount: null,
+    youtubers: [
+      {
+        name: "승우아빠",
+        videoTitle: null,
+        videoUrl: null,
+        recommendNote: "조만간 미슐랭에 오를 만한 실력이라는 평과 함께 소개된 레스토랑."
+      }
+    ]
+  },
+  {
+    id: "swab-022",
+    name: "쵸이닷",
+    category: "양식",
+    address: "서울 강남구 도산대로 457",
+    phone: "02-518-0318",
+    lat: 37.524415938697466,
+    lng: 127.04655153958882,
+    kakaoUrl: "http://place.map.kakao.com/1565367501",
+    rating: null,
+    reviewCount: null,
+    youtubers: [
+      {
+        name: "승우아빠",
+        videoTitle: null,
+        videoUrl: null,
+        recommendNote: "흑백요리사 출신 셰프가 운영하는 레스토랑으로, 도파민이 터지는 구성이라고 소개됐다."
+      }
+    ]
+  },
+  {
+    id: "swab-023",
+    name: "밍글스",
+    category: "한식",
+    address: "서울 강남구 도산대로67길 19",
+    phone: "02-515-7306",
+    lat: 37.52541969265465,
+    lng: 127.04410633651611,
+    kakaoUrl: "http://place.map.kakao.com/24073852",
+    rating: null,
+    reviewCount: null,
+    youtubers: [
+      {
+        name: "승우아빠",
+        videoTitle: null,
+        videoUrl: null,
+        recommendNote: "국내 유일 미슐랭 3스타를 보유한 한식 파인다이닝으로 소개됐다."
+      }
+    ]
+  },
+  {
+    id: "swab-024",
+    name: "솔밤",
+    category: "양식",
+    address: "서울 강남구 학동로 231",
+    phone: "070-4405-7788",
+    lat: 37.515714726279604,
+    lng: 127.03400526007886,
+    kakaoUrl: "http://place.map.kakao.com/2007100531",
+    rating: null,
+    reviewCount: null,
+    youtubers: [
+      {
+        name: "승우아빠",
+        videoTitle: null,
+        videoUrl: null,
+        recommendNote: "흑백요리사 출신 셰프가 운영하는 레스토랑으로 소개됐다."
+      }
+    ]
+  },
+  {
+    id: "swab-025",
+    name: "이목스모크다이닝",
+    category: "육류,고기",
+    address: "서울 강남구 압구정로2길 6",
+    phone: null,
+    lat: 37.52114839011912,
+    lng: 127.01930758314055,
+    kakaoUrl: "http://place.map.kakao.com/485505101",
+    rating: null,
+    reviewCount: null,
+    youtubers: [
+      {
+        name: "승우아빠",
+        videoTitle: null,
+        videoUrl: null,
+        recommendNote: "흑백요리사 출신 바베큐 전문 셰프가 운영하는 스모크 다이닝으로 소개됐다."
+      }
+    ]
+  },
+  {
+    id: "swab-026",
+    name: "호루몬",
+    category: "일식집",
+    address: "서울 강남구 언주로152길 11-5",
+    phone: "010-2893-7873",
+    lat: 37.5230451598482,
+    lng: 127.034446378235,
+    kakaoUrl: "http://place.map.kakao.com/2035856429",
+    rating: null,
+    reviewCount: null,
+    youtubers: [
+      {
+        name: "승우아빠",
+        videoTitle: null,
+        videoUrl: null,
+        recommendNote: "내장 오마카세를 전문으로 하는 일식당으로 소개됐다."
+      }
+    ]
+  },
+  {
+    id: "swab-027",
+    name: "수퍼판",
+    category: "퓨전한식",
+    address: "서울 강남구 논현로167길 15",
+    phone: "02-515-3848",
+    lat: 37.52443828157013,
+    lng: 127.02683813063683,
+    kakaoUrl: "http://place.map.kakao.com/26457126",
+    rating: null,
+    reviewCount: null,
+    youtubers: [
+      {
+        name: "승우아빠",
+        videoTitle: null,
+        videoUrl: null,
+        recommendNote: "흑백요리사 출신 셰프의 모던한식 레스토랑으로 소개됐다."
+      }
+    ]
+  },
+  {
+    id: "swab-028",
+    name: "에그앤플라워",
+    category: "이탈리안",
+    address: "서울 용산구 신흥로26길 35",
+    phone: null,
+    lat: 37.5453543271454,
+    lng: 126.984372866559,
+    kakaoUrl: "http://place.map.kakao.com/1838545503",
+    rating: null,
+    reviewCount: null,
+    youtubers: [
+      {
+        name: "승우아빠",
+        videoTitle: null,
+        videoUrl: null,
+        recommendNote: "생면 파스타를 전문으로 하는 이탈리안 레스토랑으로, 흑백요리사 출신 셰프가 운영한다고 소개됐다."
+      }
+    ]
+  },
+  {
+    id: "swab-029",
+    name: "스와니예",
+    category: "양식",
+    address: "서울 강남구 강남대로 652",
+    phone: "02-3477-9386",
+    lat: 37.5195103994699,
+    lng: 127.019105809157,
+    kakaoUrl: "http://place.map.kakao.com/1469290862",
+    rating: null,
+    reviewCount: null,
+    youtubers: [
+      {
+        name: "승우아빠",
+        videoTitle: null,
+        videoUrl: null,
+        recommendNote: "미슐랭 2스타를 보유한 파인다이닝 레스토랑으로 소개됐다."
+      }
+    ]
+  },
+  {
+    id: "swab-030",
+    name: "황성집",
+    category: "순대",
+    address: "서울 중구 청파로 447-15",
+    phone: "02-392-6926",
+    lat: 37.559294949155,
+    lng: 126.968287194687,
+    kakaoUrl: "http://place.map.kakao.com/14686414",
+    rating: null,
+    reviewCount: null,
+    youtubers: [
+      {
+        name: "승우아빠",
+        videoTitle: null,
+        videoUrl: null,
+        recommendNote: "지금까지 접해보지 못한 스타일의 순대국밥을 선보이는 노포로 소개됐다."
+      }
+    ]
+  },
+  {
+    id: "swab-031",
+    name: "탉",
+    category: "닭요리",
+    address: "경기 파주시 소리천로 29",
+    phone: null,
+    lat: 37.7158542045619,
+    lng: 126.761301814598,
+    kakaoUrl: "http://place.map.kakao.com/488815129",
+    rating: null,
+    reviewCount: null,
+    youtubers: [
+      {
+        name: "승우아빠",
+        videoTitle: null,
+        videoUrl: null,
+        recommendNote: "다양한 부위의 닭 요리를 한자리에서 즐길 수 있는 닭 요리 전문점으로 소개됐다."
+      }
+    ]
+  },
+  {
+    id: "swab-032",
+    name: "야키토리키유",
+    category: "일식",
+    address: "서울 마포구 도화4길 31",
+    phone: "02-702-1120",
+    lat: 37.54057550667603,
+    lng: 126.95149222069634,
+    kakaoUrl: "http://place.map.kakao.com/1766791669",
+    rating: null,
+    reviewCount: null,
+    youtubers: [
+      {
+        name: "승우아빠",
+        videoTitle: null,
+        videoUrl: null,
+        recommendNote: "닭꼬치(야키토리) 전문점으로, 술과 곁들이기 좋다고 소개됐다."
+      }
+    ]
+  },
+  {
+    id: "swab-033",
+    name: "라멘바 시코우",
+    category: "일본식라면",
+    address: "서울 마포구 와우산로7길 33",
+    phone: "0502-5554-5032",
+    lat: 37.5473471965062,
+    lng: 126.921036182831,
+    kakaoUrl: "http://place.map.kakao.com/2140098172",
+    rating: null,
+    reviewCount: null,
+    youtubers: [
+      {
+        name: "승우아빠",
+        videoTitle: null,
+        videoUrl: null,
+        recommendNote: "오픈한 지 두 달 만에 입소문이 난 라멘집으로 소개됐다."
+      }
+    ]
+  },
+  {
+    id: "swab-034",
+    name: "소바쥬",
+    category: "일식",
+    address: "서울 마포구 큰우물로 75",
+    phone: null,
+    lat: 37.541265225109,
+    lng: 126.946294706761,
+    kakaoUrl: "http://place.map.kakao.com/619030447",
+    rating: null,
+    reviewCount: null,
+    youtubers: [
+      {
+        name: "승우아빠",
+        videoTitle: null,
+        videoUrl: null,
+        recommendNote: "흑백요리사 출신 셰프가 선보이는 메밀 오마카세 전문점으로 소개됐다."
+      }
+    ]
+  },
+  {
+    id: "swab-035",
+    name: "하루",
+    category: "일식",
+    address: "경기 성남시 분당구 판교역로 231",
+    phone: "031-696-7588",
+    lat: 37.40122995226371,
+    lng: 127.10805405111144,
+    kakaoUrl: "http://place.map.kakao.com/670256293",
+    rating: null,
+    reviewCount: null,
+    youtubers: [
+      {
+        name: "승우아빠",
+        videoTitle: null,
+        videoUrl: null,
+        recommendNote: "판교에 위치한 튀김과 소바를 함께 즐길 수 있는 오마카세 전문점으로 소개됐다."
+      }
+    ]
+  },
+  {
+    id: "swab-036",
+    name: "봉자마라탕",
+    category: "중식",
+    address: "서울 광진구 동일로18길 22",
+    phone: "02-499-8889",
+    lat: 37.5396724802267,
+    lng: 127.064096932094,
+    kakaoUrl: "http://place.map.kakao.com/21312920",
+    rating: null,
+    reviewCount: null,
+    youtubers: [
+      {
+        name: "승우아빠",
+        videoTitle: null,
+        videoUrl: null,
+        recommendNote: "간판은 마라탕이지만 실제로는 볶음밥이 더 유명하다고 소개된 건대입구의 맛집."
+      }
+    ]
+  },
+  {
+    id: "swab-037",
+    name: "야키토리야키준",
+    category: "일식",
+    address: "경기 성남시 분당구 판교역로 178",
+    phone: "031-707-6447",
+    lat: 37.3965076599573,
+    lng: 127.110051847933,
+    kakaoUrl: "http://place.map.kakao.com/566578267",
+    rating: null,
+    reviewCount: null,
+    youtubers: [
+      {
+        name: "승우아빠",
+        videoTitle: null,
+        videoUrl: null,
+        recommendNote: "가성비 좋은 야키토리(닭꼬치) 전문점으로 소개됐다."
+      }
+    ]
+  },
+  {
+    id: "swab-038",
+    name: "라디치",
+    category: "이탈리안",
+    address: "서울 서초구 동광로39길 79",
+    phone: "02-6449-6755",
+    lat: 37.4984960080116,
+    lng: 126.999520509622,
+    kakaoUrl: "http://place.map.kakao.com/2029266116",
+    rating: null,
+    reviewCount: null,
+    youtubers: [
+      {
+        name: "승우아빠",
+        videoTitle: null,
+        videoUrl: null,
+        recommendNote: "현지의 맛을 그대로 재현했다는 평과 함께 소개된 이탈리안 레스토랑."
+      }
+    ]
+  },
+  {
+    id: "swab-039",
+    name: "일베키오",
+    category: "이탈리안",
+    address: "서울 마포구 월드컵북로 332-12",
+    phone: "02-302-0944",
+    lat: 37.57637747278064,
+    lng: 126.89470235864977,
+    kakaoUrl: "http://place.map.kakao.com/222224201",
+    rating: null,
+    reviewCount: null,
+    youtubers: [
+      {
+        name: "승우아빠",
+        videoTitle: null,
+        videoUrl: null,
+        recommendNote: "한 해를 대표할 만한 이탈리안 레스토랑으로 꼽히며 소개됐다."
+      }
+    ]
+  },
+  {
+    id: "swab-040",
+    name: "강동원",
+    category: "중국요리",
+    address: "서울 마포구 망원로 3",
+    phone: "02-335-0202",
+    lat: 37.5559172623921,
+    lng: 126.897314917439,
+    kakaoUrl: "http://place.map.kakao.com/16471669",
+    rating: null,
+    reviewCount: null,
+    youtubers: [
+      {
+        name: "승우아빠",
+        videoTitle: null,
+        videoUrl: null,
+        recommendNote: "자극적이지 않고 담백한 중화요리를 선보이는 중식당으로 소개됐다."
+      }
+    ]
+  },
+  {
+    id: "swab-041",
+    name: "피테일",
+    category: "양식",
+    address: "경기 남양주시 다산중앙로123번길 22-8",
+    phone: "070-8691-0504",
+    lat: 37.6242893194726,
+    lng: 127.151030775171,
+    kakaoUrl: "http://place.map.kakao.com/1510096064",
+    rating: null,
+    reviewCount: null,
+    youtubers: [
+      {
+        name: "승우아빠",
+        videoTitle: null,
+        videoUrl: null,
+        recommendNote: "다른 요리 유튜버의 추천으로 소개된 파스타 바."
+      }
+    ]
+  },
+  {
+    id: "swab-042",
+    name: "덕이짬뽕",
+    category: "중식",
+    address: "경기 고양시 일산서구 덕이로 186",
+    phone: "031-971-8280",
+    lat: 37.69458345153691,
+    lng: 126.74054814047305,
+    kakaoUrl: "http://place.map.kakao.com/1626062978",
+    rating: null,
+    reviewCount: null,
+    youtubers: [
+      {
+        name: "승우아빠",
+        videoTitle: null,
+        videoUrl: null,
+        recommendNote: "일산 덕이동에 위치한 짬뽕 맛집으로 소개됐다."
+      }
+    ]
+  },
+  {
+    id: "swab-043",
+    name: "멘큐단",
+    category: "일본식라면",
+    address: "경기 안양시 동안구 관평로69번길 19",
+    phone: null,
+    lat: 37.3832389881529,
+    lng: 126.964036879545,
+    kakaoUrl: "http://place.map.kakao.com/475644301",
+    rating: null,
+    reviewCount: null,
+    youtubers: [
+      {
+        name: "승우아빠",
+        videoTitle: null,
+        videoUrl: null,
+        recommendNote: "단순한 구성이지만 계속 생각나는 맛이라는 평과 함께 소개된 라멘집."
+      }
+    ]
+  },
+  {
+    id: "swab-044",
+    name: "멕시타이거",
+    category: "호프,요리주점",
+    address: "서울 강남구 테헤란로1길 42",
+    phone: null,
+    lat: 37.501130134367,
+    lng: 127.027148703417,
+    kakaoUrl: "http://place.map.kakao.com/1232109211",
+    rating: null,
+    reviewCount: null,
+    youtubers: [
+      {
+        name: "승우아빠",
+        videoTitle: null,
+        videoUrl: null,
+        recommendNote: "멕시칸 몰레 소스와 폴로 아사도(구운 치킨)를 전문으로 하는 요즘 뜨는 맛집으로 소개됐다."
+      }
+    ]
+  },
+  {
+    id: "swab-045",
+    name: "유니드라멘",
+    category: "일본식라면",
+    address: "서울 광진구 능동로37길 44",
+    phone: "070-8835-3737",
+    lat: 37.5588375979018,
+    lng: 127.077640435526,
+    kakaoUrl: "http://place.map.kakao.com/988572179",
+    rating: null,
+    reviewCount: null,
+    youtubers: [
+      {
+        name: "승우아빠",
+        videoTitle: null,
+        videoUrl: null,
+        recommendNote: "닭가슴살 토핑이 특징인 토리파이탄 라멘 전문점으로 소개됐다."
+      }
+    ]
+  },
+  {
+    id: "swab-046",
+    name: "아트와떵",
+    category: "양식",
+    address: "서울 마포구 동교로50길 25",
+    phone: "010-3249-5325",
+    lat: 37.5633376632533,
+    lng: 126.927374661302,
+    kakaoUrl: "http://place.map.kakao.com/1745240335",
+    rating: null,
+    reviewCount: null,
+    youtubers: [
+      {
+        name: "승우아빠",
+        videoTitle: null,
+        videoUrl: null,
+        recommendNote: "심플하면서도 맛있는 치킨 요리를 즐길 수 있는 곳으로 소개됐다."
+      }
+    ]
+  },
+  {
+    id: "swab-047",
+    name: "기댈빙",
+    category: "디저트카페",
+    address: "서울 성동구 서울숲2길 19-8",
+    phone: "010-5016-3531",
+    lat: 37.54722139096443,
+    lng: 127.04108420321187,
+    kakaoUrl: "http://place.map.kakao.com/332229378",
+    rating: null,
+    reviewCount: null,
+    youtubers: [
+      {
+        name: "승우아빠",
+        videoTitle: null,
+        videoUrl: null,
+        recommendNote: "평양냉면과 빙수를 접목한 평냉빙수, 햄빙수 등 독특한 메뉴로 소개된 디저트 카페."
+      }
+    ]
+  },
+  {
+    id: "swab-048",
+    name: "고덕",
+    category: "중식",
+    address: "서울 마포구 동교로27길 61",
+    phone: "02-2135-7578",
+    lat: 37.5604042603845,
+    lng: 126.920746243827,
+    kakaoUrl: "http://place.map.kakao.com/2067014398",
+    rating: null,
+    reviewCount: null,
+    youtubers: [
+      {
+        name: "승우아빠",
+        videoTitle: null,
+        videoUrl: null,
+        recommendNote: "가성비 좋은 베이징덕을 선보이는 중식당으로 소개됐다."
+      }
+    ]
+  },
+  {
+    id: "swab-049",
+    name: "이츠야",
+    category: "돈까스,우동",
+    address: "서울 마포구 양화로6길 99-9",
+    phone: "02-336-9244",
+    lat: 37.5487592205416,
+    lng: 126.919934746818,
+    kakaoUrl: "http://place.map.kakao.com/1709251572",
+    rating: null,
+    reviewCount: null,
+    youtubers: [
+      {
+        name: "승우아빠",
+        videoTitle: null,
+        videoUrl: null,
+        recommendNote: "인생 돈까스로 꼽힐 만큼 만족도가 높다고 소개된 돈카츠 전문점."
+      }
+    ]
+  },
+  {
+    id: "swab-050",
+    name: "미토우",
+    category: "일식",
+    address: "서울 강남구 도산대로70길 24",
+    phone: null,
+    lat: 37.52211896630903,
+    lng: 127.04504557668946,
+    kakaoUrl: "http://place.map.kakao.com/1375080913",
+    rating: null,
+    reviewCount: null,
+    youtubers: [
+      {
+        name: "승우아빠",
+        videoTitle: null,
+        videoUrl: null,
+        recommendNote: "미슐랭 2스타에 걸맞은 완성도라는 평과 함께 소개된 오마카세 전문점."
+      }
+    ]
+  },
+  {
+    id: "swab-051",
+    name: "모수 서울",
+    category: "양식",
+    address: "서울 용산구 회나무로41길 4",
+    phone: "02-6272-5678",
+    lat: 37.5411971867086,
+    lng: 126.996181126207,
+    kakaoUrl: "http://place.map.kakao.com/1791830911",
+    rating: null,
+    reviewCount: null,
+    youtubers: [
+      {
+        name: "승우아빠",
+        videoTitle: null,
+        videoUrl: null,
+        recommendNote: "파인다이닝 업계 종사자 출신이 직접 평가한 파인다이닝 레스토랑으로 소개됐다."
+      }
+    ]
+  },
+  {
+    id: "swab-052",
+    name: "스시한다",
+    category: "초밥,롤",
+    address: "서울 강남구 선릉로148길 52-5",
+    phone: null,
+    lat: 37.5226815829034,
+    lng: 127.044008569338,
+    kakaoUrl: "http://place.map.kakao.com/1844475944",
+    rating: null,
+    reviewCount: null,
+    youtubers: [
+      {
+        name: "승우아빠",
+        videoTitle: null,
+        videoUrl: null,
+        recommendNote: "만화 '초밥왕'에 나올 법한 초밥 표현을 실제로 이해하게 됐다는 평과 함께 소개된 초밥집."
+      }
+    ]
+  },
+  {
+    id: "swab-054",
+    name: "온지음",
+    category: "한식",
+    address: "서울 종로구 효자로 49",
+    phone: "02-6952-0024",
+    lat: 37.580494739542516,
+    lng: 126.97339071212892,
+    kakaoUrl: "http://place.map.kakao.com/27050439",
+    rating: null,
+    reviewCount: null,
+    youtubers: [
+      {
+        name: "승우아빠",
+        videoTitle: null,
+        videoUrl: null,
+        recommendNote: "22가지 코스로 구성된 미슐랭 1스타 한식 파인다이닝으로 소개됐다."
+      }
+    ]
+  },
+  {
+    id: "swab-055",
+    name: "이리에라멘",
+    category: "일본식라면",
+    address: "서울 마포구 성지1길 18",
+    phone: "02-332-3370",
+    lat: 37.5480723676712,
+    lng: 126.914381481829,
+    kakaoUrl: "http://place.map.kakao.com/906556987",
+    rating: null,
+    reviewCount: null,
+    youtubers: [
+      {
+        name: "승우아빠",
+        videoTitle: null,
+        videoUrl: null,
+        recommendNote: "원래도 줄서서 먹던 도미라멘 맛집으로 소개됐다."
+      }
+    ]
+  },
+  {
+    id: "swab-056",
+    name: "희옥",
+    category: "일본식라면",
+    address: "서울 마포구 월드컵로19길 74",
+    phone: "010-4083-2666",
+    lat: 37.55433769867013,
+    lng: 126.9069593083376,
+    kakaoUrl: "http://place.map.kakao.com/291532086",
+    rating: null,
+    reviewCount: null,
+    youtubers: [
+      {
+        name: "승우아빠",
+        videoTitle: null,
+        videoUrl: null,
+        recommendNote: "깔끔한 맛의 시오라멘을 선보이는 라멘집으로 소개됐다."
+      }
+    ]
+  },
+  {
+    id: "swab-057",
+    name: "슈보카가리",
+    category: "일식집",
+    address: "서울 강남구 선릉로148길 52-5",
+    phone: "02-512-9588",
+    lat: 37.5226815858538,
+    lng: 127.044000650671,
+    kakaoUrl: "http://place.map.kakao.com/138470789",
+    rating: null,
+    reviewCount: null,
+    youtubers: [
+      {
+        name: "승우아빠",
+        videoTitle: null,
+        videoUrl: null,
+        recommendNote: "SNS 화제성 1위에 오른 레스토랑으로 소개됐다."
+      }
+    ]
+  },
+  {
+    id: "swab-058",
+    name: "스시오마주",
+    category: "일식집",
+    address: "서울 강남구 강남대로152길 67",
+    phone: "02-515-1836",
+    lat: 37.51899852994263,
+    lng: 127.02452404450847,
+    kakaoUrl: "http://place.map.kakao.com/88230451",
+    rating: null,
+    reviewCount: null,
+    youtubers: [
+      {
+        name: "승우아빠",
+        videoTitle: null,
+        videoUrl: null,
+        recommendNote: "미들급 가격대에서 뛰어난 가성비를 보여주는 오마카세 스시로 소개됐다."
+      }
+    ]
+  },
+  {
+    id: "swab-059",
+    name: "캐비스트리",
+    category: "한식",
+    address: "서울 강남구 도산대로37길 21",
+    phone: "02-548-2248",
+    lat: 37.52248384253077,
+    lng: 127.0311768497404,
+    kakaoUrl: "http://place.map.kakao.com/346207534",
+    rating: null,
+    reviewCount: null,
+    youtubers: [
+      {
+        name: "승우아빠",
+        videoTitle: null,
+        videoUrl: null,
+        recommendNote: "일식의 끝판왕으로 불리는 셰프가 새롭게 선보인 스페인 요리 레스토랑으로 소개됐다."
+      }
+    ]
+  },
+  {
+    id: "swab-060",
+    name: "티엔미미 홍대점",
+    category: "중식",
+    address: "서울 마포구 양화로 144",
+    phone: "010-8823-1070",
+    lat: 37.555339944118,
+    lng: 126.92238582799,
+    kakaoUrl: "http://place.map.kakao.com/1940227088",
+    rating: null,
+    reviewCount: null,
+    youtubers: [
+      {
+        name: "승우아빠",
+        videoTitle: null,
+        videoUrl: null,
+        recommendNote: "흑백요리사 출신 딤섬 전문 셰프가 운영하는 중식당으로 소개됐다."
+      }
+    ]
+  },
+  {
+    id: "swab-061",
+    name: "산동포자",
+    category: "중국요리",
+    address: "인천 부평구 마장로 75",
+    phone: "032-431-8885",
+    lat: 37.4854519475591,
+    lng: 126.707738447374,
+    kakaoUrl: "http://place.map.kakao.com/25044266",
+    rating: null,
+    reviewCount: null,
+    youtubers: [
+      {
+        name: "승우아빠",
+        videoTitle: null,
+        videoUrl: null,
+        recommendNote: "노포 감성의 중식 주점으로 소개됐다."
+      }
+    ]
+  },
+  {
+    id: "swab-062",
+    name: "트리드",
+    category: "양식",
+    address: "서울 강남구 선릉로162길 16",
+    phone: "02-512-8312",
+    lat: 37.526706300862216,
+    lng: 127.0416883763941,
+    kakaoUrl: "http://place.map.kakao.com/744607127",
+    rating: null,
+    reviewCount: null,
+    youtubers: [
+      {
+        name: "승우아빠",
+        videoTitle: null,
+        videoUrl: null,
+        recommendNote: "흑백요리사 출신 셰프의 완벽한 디테일이 돋보이는 파인다이닝으로 소개됐다."
+      }
+    ]
+  },
+  {
+    id: "swab-063",
+    name: "히키니쿠토코메 도산",
+    category: "일식",
+    address: "서울 강남구 선릉로155길 21",
+    phone: "02-545-1129",
+    lat: 37.5254957171217,
+    lng: 127.037938637846,
+    kakaoUrl: "http://place.map.kakao.com/1803076723",
+    rating: null,
+    reviewCount: null,
+    youtubers: [
+      {
+        name: "승우아빠",
+        videoTitle: null,
+        videoUrl: null,
+        recommendNote: "시부야 스타일 숯불 함박스테이크를 선보이며 한국에 새롭게 문을 연 곳으로 소개됐다."
+      }
+    ]
+  },
+  {
+    id: "swab-064",
+    name: "라까예",
+    category: "멕시칸,브라질",
+    address: "서울 중구 퇴계로85길 42",
+    phone: "0507-1478-8780",
+    lat: 37.5676263667282,
+    lng: 127.019751965992,
+    kakaoUrl: "http://place.map.kakao.com/1763319426",
+    rating: null,
+    reviewCount: null,
+    youtubers: [
+      {
+        name: "승우아빠",
+        videoTitle: null,
+        videoUrl: null,
+        recommendNote: "가성비가 뛰어난 타코 전문점으로 소개됐다."
+      }
+    ]
   },
   {
     id: "ttg-001",
@@ -8910,10 +11047,14 @@ const CURATED_FOOD = [
     kakaoUrl: "http://place.map.kakao.com/972557256",
     rating: null,
     reviewCount: null,
-    youtuber: "또간집(풍자)",
-    videoTitle: null,
-    videoUrl: null,
-    recommendNote: "한남동 주민들만 안다는 찐맛집으로 소개된 곳으로, 닭도리탕 백반과 제육볶음이 또갈집으로 선정됐다."
+    youtubers: [
+      {
+        name: "또간집(풍자)",
+        videoTitle: null,
+        videoUrl: null,
+        recommendNote: "한남동 주민들만 안다는 찐맛집으로 소개된 곳으로, 닭도리탕 백반과 제육볶음이 또갈집으로 선정됐다."
+      }
+    ]
   },
   {
     id: "ttg-002",
@@ -8926,10 +11067,14 @@ const CURATED_FOOD = [
     kakaoUrl: "http://place.map.kakao.com/1282309711",
     rating: null,
     reviewCount: null,
-    youtuber: "또간집(풍자)",
-    videoTitle: null,
-    videoUrl: null,
-    recommendNote: "방송 출연을 극도로 꺼리던 성수동 맛집으로 소개됐으며, 조개찜과 칼국수가 또갈집으로 선정됐다."
+    youtubers: [
+      {
+        name: "또간집(풍자)",
+        videoTitle: null,
+        videoUrl: null,
+        recommendNote: "방송 출연을 극도로 꺼리던 성수동 맛집으로 소개됐으며, 조개찜과 칼국수가 또갈집으로 선정됐다."
+      }
+    ]
   },
   {
     id: "ttg-003",
@@ -8942,10 +11087,14 @@ const CURATED_FOOD = [
     kakaoUrl: "http://place.map.kakao.com/24040605",
     rating: null,
     reviewCount: null,
-    youtuber: "또간집(풍자)",
-    videoTitle: null,
-    videoUrl: null,
-    recommendNote: "문래동에서 2시간 만에 완판된다는 국밥집으로, 순댓국과 수육이 함께 나오는 정식이 또갈집으로 선정됐다."
+    youtubers: [
+      {
+        name: "또간집(풍자)",
+        videoTitle: null,
+        videoUrl: null,
+        recommendNote: "문래동에서 2시간 만에 완판된다는 국밥집으로, 순댓국과 수육이 함께 나오는 정식이 또갈집으로 선정됐다."
+      }
+    ]
   },
   {
     id: "ttg-004",
@@ -8958,10 +11107,14 @@ const CURATED_FOOD = [
     kakaoUrl: "http://place.map.kakao.com/21227823",
     rating: null,
     reviewCount: null,
-    youtuber: "또간집(풍자)",
-    videoTitle: null,
-    videoUrl: null,
-    recommendNote: "대구를 대표하는 맛집으로 소개됐으며, 뭉티기(생고기)와 오드레기(소 힘줄)가 또갈집으로 선정됐다."
+    youtubers: [
+      {
+        name: "또간집(풍자)",
+        videoTitle: null,
+        videoUrl: null,
+        recommendNote: "대구를 대표하는 맛집으로 소개됐으며, 뭉티기(생고기)와 오드레기(소 힘줄)가 또갈집으로 선정됐다."
+      }
+    ]
   },
   {
     id: "ttg-005",
@@ -8974,10 +11127,14 @@ const CURATED_FOOD = [
     kakaoUrl: "http://place.map.kakao.com/353333104",
     rating: null,
     reviewCount: null,
-    youtuber: "또간집(풍자)",
-    videoTitle: null,
-    videoUrl: null,
-    recommendNote: "프랜차이즈가 즐비한 강남에서 30년간 자리를 지켜온 맛집으로 소개됐으며, 떡도리탕이 또갈집으로 선정됐다."
+    youtubers: [
+      {
+        name: "또간집(풍자)",
+        videoTitle: null,
+        videoUrl: null,
+        recommendNote: "프랜차이즈가 즐비한 강남에서 30년간 자리를 지켜온 맛집으로 소개됐으며, 떡도리탕이 또갈집으로 선정됐다."
+      }
+    ]
   },
   {
     id: "ttg-006",
@@ -8990,10 +11147,14 @@ const CURATED_FOOD = [
     kakaoUrl: "http://place.map.kakao.com/18821272",
     rating: null,
     reviewCount: null,
-    youtuber: "또간집(풍자)",
-    videoTitle: null,
-    videoUrl: null,
-    recommendNote: "밥 네 공기까지 가능하다고 소개된 용산 맛집으로, 육전과 김치찜이 또갈집으로 선정됐다."
+    youtubers: [
+      {
+        name: "또간집(풍자)",
+        videoTitle: null,
+        videoUrl: null,
+        recommendNote: "밥 네 공기까지 가능하다고 소개된 용산 맛집으로, 육전과 김치찜이 또갈집으로 선정됐다."
+      }
+    ]
   },
   {
     id: "ttg-007",
@@ -9006,10 +11167,14 @@ const CURATED_FOOD = [
     kakaoUrl: "http://place.map.kakao.com/23346761",
     rating: null,
     reviewCount: null,
-    youtuber: "또간집(풍자)",
-    videoTitle: null,
-    videoUrl: null,
-    recommendNote: "수원 로컬 맛집으로 소개됐으며, 곱창구이와 얼큰라면, 알곱창구이가 또갈집으로 선정됐다."
+    youtubers: [
+      {
+        name: "또간집(풍자)",
+        videoTitle: null,
+        videoUrl: null,
+        recommendNote: "수원 로컬 맛집으로 소개됐으며, 곱창구이와 얼큰라면, 알곱창구이가 또갈집으로 선정됐다."
+      }
+    ]
   },
   {
     id: "ttg-008",
@@ -9022,10 +11187,14 @@ const CURATED_FOOD = [
     kakaoUrl: "http://place.map.kakao.com/8425892",
     rating: null,
     reviewCount: null,
-    youtuber: "또간집(풍자)",
-    videoTitle: null,
-    videoUrl: null,
-    recommendNote: "목포 찐맛집으로 소개됐으며, 준치 회무침과 붕장어 양념구이가 또갈집으로 선정됐다."
+    youtubers: [
+      {
+        name: "또간집(풍자)",
+        videoTitle: null,
+        videoUrl: null,
+        recommendNote: "목포 찐맛집으로 소개됐으며, 준치 회무침과 붕장어 양념구이가 또갈집으로 선정됐다."
+      }
+    ]
   },
   {
     id: "ttg-009",
@@ -9038,10 +11207,14 @@ const CURATED_FOOD = [
     kakaoUrl: "http://place.map.kakao.com/2083224089",
     rating: null,
     reviewCount: null,
-    youtuber: "또간집(풍자)",
-    videoTitle: null,
-    videoUrl: null,
-    recommendNote: "전라도 맛집 특집에서 소개됐으며, 오돌뼈 구이와 된장 삼겹살이 또갈집으로 선정됐다."
+    youtubers: [
+      {
+        name: "또간집(풍자)",
+        videoTitle: null,
+        videoUrl: null,
+        recommendNote: "전라도 맛집 특집에서 소개됐으며, 오돌뼈 구이와 된장 삼겹살이 또갈집으로 선정됐다."
+      }
+    ]
   },
   {
     id: "ttg-010",
@@ -9054,10 +11227,14 @@ const CURATED_FOOD = [
     kakaoUrl: "http://place.map.kakao.com/1627641819",
     rating: null,
     reviewCount: null,
-    youtuber: "또간집(풍자)",
-    videoTitle: null,
-    videoUrl: null,
-    recommendNote: "인천 주민들만 안다는 로컬 찐맛집으로 소개됐으며, 참다랑어·방어·참돔·대광어로 구성된 모듬숙성회가 또갈집으로 선정됐다."
+    youtubers: [
+      {
+        name: "또간집(풍자)",
+        videoTitle: null,
+        videoUrl: null,
+        recommendNote: "인천 주민들만 안다는 로컬 찐맛집으로 소개됐으며, 참다랑어·방어·참돔·대광어로 구성된 모듬숙성회가 또갈집으로 선정됐다."
+      }
+    ]
   },
   {
     id: "ttg-011",
@@ -9070,10 +11247,14 @@ const CURATED_FOOD = [
     kakaoUrl: "http://place.map.kakao.com/1629060954",
     rating: null,
     reviewCount: null,
-    youtuber: "또간집(풍자)",
-    videoTitle: null,
-    videoUrl: null,
-    recommendNote: "속초 찐맛집으로 소개됐으며, 해물순두부와 순두부가 또갈집으로 선정됐다."
+    youtubers: [
+      {
+        name: "또간집(풍자)",
+        videoTitle: null,
+        videoUrl: null,
+        recommendNote: "속초 찐맛집으로 소개됐으며, 해물순두부와 순두부가 또갈집으로 선정됐다."
+      }
+    ]
   },
   {
     id: "ttg-012",
@@ -9086,26 +11267,14 @@ const CURATED_FOOD = [
     kakaoUrl: "http://place.map.kakao.com/27449497",
     rating: null,
     reviewCount: null,
-    youtuber: "또간집(풍자)",
-    videoTitle: null,
-    videoUrl: null,
-    recommendNote: "서귀포 맛집으로 소개됐으며, 닭고기냉밀면과 닭깐풍기가 또갈집으로 선정됐다."
-  },
-  {
-    id: "ttg-013",
-    name: "가양칼국수",
-    category: "한식",
-    address: "서울 영등포구 국제금융로 86",
-    phone: "0507-1399-0438",
-    lat: 37.52020584896475,
-    lng: 126.93179988990671,
-    kakaoUrl: "http://place.map.kakao.com/20746242",
-    rating: null,
-    reviewCount: null,
-    youtuber: "또간집(풍자)",
-    videoTitle: null,
-    videoUrl: null,
-    recommendNote: "여의도 맛집으로 소개됐으며, 버섯매운탕을 곁들인 가양칼국수가 또갈집으로 선정됐다."
+    youtubers: [
+      {
+        name: "또간집(풍자)",
+        videoTitle: null,
+        videoUrl: null,
+        recommendNote: "서귀포 맛집으로 소개됐으며, 닭고기냉밀면과 닭깐풍기가 또갈집으로 선정됐다."
+      }
+    ]
   },
   {
     id: "ttg-014",
@@ -9118,26 +11287,14 @@ const CURATED_FOOD = [
     kakaoUrl: "http://place.map.kakao.com/2006190067",
     rating: null,
     reviewCount: null,
-    youtuber: "또간집(풍자)",
-    videoTitle: null,
-    videoUrl: null,
-    recommendNote: "경주 맛집으로 소개됐으며, 뒷목살·뽈살로 구성된 뒷고기 모듬이 또갈집으로 선정됐다."
-  },
-  {
-    id: "ttg-015",
-    name: "대흥양다리바베큐 건대점",
-    category: "중국요리",
-    address: "서울 광진구 아차산로30길 39",
-    phone: "02-468-6669",
-    lat: 37.53870567213866,
-    lng: 127.06739663259648,
-    kakaoUrl: "http://place.map.kakao.com/14663453",
-    rating: null,
-    reviewCount: null,
-    youtuber: "또간집(풍자)",
-    videoTitle: null,
-    videoUrl: null,
-    recommendNote: "건대 맛집으로 소개됐으며, 양다리 바베큐와 꿔바로우가 또갈집으로 선정됐다."
+    youtubers: [
+      {
+        name: "또간집(풍자)",
+        videoTitle: null,
+        videoUrl: null,
+        recommendNote: "경주 맛집으로 소개됐으며, 뒷목살·뽈살로 구성된 뒷고기 모듬이 또갈집으로 선정됐다."
+      }
+    ]
   },
   {
     id: "ttg-016",
@@ -9150,10 +11307,14 @@ const CURATED_FOOD = [
     kakaoUrl: "http://place.map.kakao.com/12405307",
     rating: null,
     reviewCount: null,
-    youtuber: "또간집(풍자)",
-    videoTitle: null,
-    videoUrl: null,
-    recommendNote: "용인 맛집으로 소개됐으며, 한정식 코스가 또갈집으로 선정됐다."
+    youtubers: [
+      {
+        name: "또간집(풍자)",
+        videoTitle: null,
+        videoUrl: null,
+        recommendNote: "용인 맛집으로 소개됐으며, 한정식 코스가 또갈집으로 선정됐다."
+      }
+    ]
   },
   {
     id: "ttg-017",
@@ -9166,10 +11327,14 @@ const CURATED_FOOD = [
     kakaoUrl: "http://place.map.kakao.com/21292784",
     rating: null,
     reviewCount: null,
-    youtuber: "또간집(풍자)",
-    videoTitle: null,
-    videoUrl: null,
-    recommendNote: "여수 맛집으로 소개됐으며, 백반과 서대회무침이 또갈집으로 선정됐다."
+    youtubers: [
+      {
+        name: "또간집(풍자)",
+        videoTitle: null,
+        videoUrl: null,
+        recommendNote: "여수 맛집으로 소개됐으며, 백반과 서대회무침이 또갈집으로 선정됐다."
+      }
+    ]
   },
   {
     id: "ttg-018",
@@ -9182,10 +11347,14 @@ const CURATED_FOOD = [
     kakaoUrl: "http://place.map.kakao.com/21571846",
     rating: null,
     reviewCount: null,
-    youtuber: "또간집(풍자)",
-    videoTitle: null,
-    videoUrl: null,
-    recommendNote: "순천 맛집으로 소개됐으며, 두루치기가 또갈집으로 선정됐다."
+    youtubers: [
+      {
+        name: "또간집(풍자)",
+        videoTitle: null,
+        videoUrl: null,
+        recommendNote: "순천 맛집으로 소개됐으며, 두루치기가 또갈집으로 선정됐다."
+      }
+    ]
   },
   {
     id: "ttg-019",
@@ -9198,10 +11367,14 @@ const CURATED_FOOD = [
     kakaoUrl: "http://place.map.kakao.com/7818113",
     rating: null,
     reviewCount: null,
-    youtuber: "또간집(풍자)",
-    videoTitle: null,
-    videoUrl: null,
-    recommendNote: "종로 맛집으로 소개됐으며, 시골칼국수와 생배추보쌈이 또갈집으로 선정됐다."
+    youtubers: [
+      {
+        name: "또간집(풍자)",
+        videoTitle: null,
+        videoUrl: null,
+        recommendNote: "종로 맛집으로 소개됐으며, 시골칼국수와 생배추보쌈이 또갈집으로 선정됐다."
+      }
+    ]
   },
   {
     id: "ttg-020",
@@ -9214,10 +11387,14 @@ const CURATED_FOOD = [
     kakaoUrl: "http://place.map.kakao.com/14076429",
     rating: null,
     reviewCount: null,
-    youtuber: "또간집(풍자)",
-    videoTitle: null,
-    videoUrl: null,
-    recommendNote: "포항 맛집으로 소개됐으며, 두루치기가 또갈집으로 선정됐다."
+    youtubers: [
+      {
+        name: "또간집(풍자)",
+        videoTitle: null,
+        videoUrl: null,
+        recommendNote: "포항 맛집으로 소개됐으며, 두루치기가 또갈집으로 선정됐다."
+      }
+    ]
   },
   {
     id: "ttg-021",
@@ -9230,10 +11407,14 @@ const CURATED_FOOD = [
     kakaoUrl: "http://place.map.kakao.com/1459458596",
     rating: null,
     reviewCount: null,
-    youtuber: "또간집(풍자)",
-    videoTitle: null,
-    videoUrl: null,
-    recommendNote: "신촌 맛집으로 소개됐으며, 치즈돈까스가 또갈집으로 선정됐다."
+    youtubers: [
+      {
+        name: "또간집(풍자)",
+        videoTitle: null,
+        videoUrl: null,
+        recommendNote: "신촌 맛집으로 소개됐으며, 치즈돈까스가 또갈집으로 선정됐다."
+      }
+    ]
   },
   {
     id: "ttg-022",
@@ -9246,10 +11427,14 @@ const CURATED_FOOD = [
     kakaoUrl: "http://place.map.kakao.com/1732828194",
     rating: null,
     reviewCount: null,
-    youtuber: "또간집(풍자)",
-    videoTitle: null,
-    videoUrl: null,
-    recommendNote: "을지로의 새로 뜨는 맛집 3대장 중 하나로 소개됐으며, 닭 모듬구이가 또갈집으로 선정됐다."
+    youtubers: [
+      {
+        name: "또간집(풍자)",
+        videoTitle: null,
+        videoUrl: null,
+        recommendNote: "을지로의 새로 뜨는 맛집 3대장 중 하나로 소개됐으며, 닭 모듬구이가 또갈집으로 선정됐다."
+      }
+    ]
   },
   {
     id: "ttg-023",
@@ -9262,10 +11447,14 @@ const CURATED_FOOD = [
     kakaoUrl: "http://place.map.kakao.com/12771116",
     rating: null,
     reviewCount: null,
-    youtuber: "또간집(풍자)",
-    videoTitle: null,
-    videoUrl: null,
-    recommendNote: "홍대 술자리 맛집으로 소개됐으며, 오코노미소스동이 또갈집으로 선정됐다."
+    youtubers: [
+      {
+        name: "또간집(풍자)",
+        videoTitle: null,
+        videoUrl: null,
+        recommendNote: "홍대 술자리 맛집으로 소개됐으며, 오코노미소스동이 또갈집으로 선정됐다."
+      }
+    ]
   },
   {
     id: "ttg-024",
@@ -9278,10 +11467,14 @@ const CURATED_FOOD = [
     kakaoUrl: "http://place.map.kakao.com/118007880",
     rating: null,
     reviewCount: null,
-    youtuber: "또간집(풍자)",
-    videoTitle: null,
-    videoUrl: null,
-    recommendNote: "대전 맛집으로 소개됐으며, 텐동이 또갈집으로 선정됐다."
+    youtubers: [
+      {
+        name: "또간집(풍자)",
+        videoTitle: null,
+        videoUrl: null,
+        recommendNote: "대전 맛집으로 소개됐으며, 텐동이 또갈집으로 선정됐다."
+      }
+    ]
   },
   {
     id: "ttg-025",
@@ -9294,10 +11487,14 @@ const CURATED_FOOD = [
     kakaoUrl: "http://place.map.kakao.com/1534943798",
     rating: null,
     reviewCount: null,
-    youtuber: "또간집(풍자)",
-    videoTitle: null,
-    videoUrl: null,
-    recommendNote: "합정 인근 맛집으로 소개됐으며, 라멘이 또갈집으로 선정됐다."
+    youtubers: [
+      {
+        name: "또간집(풍자)",
+        videoTitle: null,
+        videoUrl: null,
+        recommendNote: "합정 인근 맛집으로 소개됐으며, 라멘이 또갈집으로 선정됐다."
+      }
+    ]
   },
   {
     id: "ttg-026",
@@ -9310,10 +11507,14 @@ const CURATED_FOOD = [
     kakaoUrl: "http://place.map.kakao.com/1629395786",
     rating: null,
     reviewCount: null,
-    youtuber: "또간집(풍자)",
-    videoTitle: null,
-    videoUrl: null,
-    recommendNote: "연남동 맛집 종결자로 소개됐으며, 포테이토와 루꼴라 반반 피자가 또갈집으로 선정됐다."
+    youtubers: [
+      {
+        name: "또간집(풍자)",
+        videoTitle: null,
+        videoUrl: null,
+        recommendNote: "연남동 맛집 종결자로 소개됐으며, 포테이토와 루꼴라 반반 피자가 또갈집으로 선정됐다."
+      }
+    ]
   },
   {
     id: "ttg-027",
@@ -9326,10 +11527,14 @@ const CURATED_FOOD = [
     kakaoUrl: "http://place.map.kakao.com/8057957",
     rating: null,
     reviewCount: null,
-    youtuber: "또간집(풍자)",
-    videoTitle: null,
-    videoUrl: null,
-    recommendNote: "이태원 맛집 종결자로 소개됐으며, 내장을 활용한 버거가 또갈집으로 선정됐다."
+    youtubers: [
+      {
+        name: "또간집(풍자)",
+        videoTitle: null,
+        videoUrl: null,
+        recommendNote: "이태원 맛집 종결자로 소개됐으며, 내장을 활용한 버거가 또갈집으로 선정됐다."
+      }
+    ]
   },
   {
     id: "ttg-028",
@@ -9342,9 +11547,13 @@ const CURATED_FOOD = [
     kakaoUrl: "http://place.map.kakao.com/1618885386",
     rating: null,
     reviewCount: null,
-    youtuber: "또간집(풍자)",
-    videoTitle: null,
-    videoUrl: null,
-    recommendNote: "잠실 주민들만 안다는 로컬 맛집으로 소개됐으며, 차돌·양지·도가니가 들어간 쌀국수가 또갈집으로 선정됐다."
+    youtubers: [
+      {
+        name: "또간집(풍자)",
+        videoTitle: null,
+        videoUrl: null,
+        recommendNote: "잠실 주민들만 안다는 로컬 맛집으로 소개됐으며, 차돌·양지·도가니가 들어간 쌀국수가 또갈집으로 선정됐다."
+      }
+    ]
   }
 ];
