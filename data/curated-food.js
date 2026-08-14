@@ -610,5 +610,21 @@ const CURATED_FOOD = [
     videoTitle: null,
     videoUrl: null,
     recommendNote: null
+  },
+  {
+    id: "mns-001",
+    name: "꼬끄더그릴",
+    category: "닭요리",
+    address: "서울 강남구 강남대로154길 10",
+    phone: "02-6338-3838",
+    lat: 37.517521712393965,
+    lng: 127.02014596984124,
+    kakaoUrl: "http://place.map.kakao.com/705044236",
+    rating: null,
+    reviewCount: null,
+    youtuber: "맛있는 녀석들",
+    videoTitle: null,
+    videoUrl: null,
+    recommendNote: "전직 래퍼 출신 사장이 운영하는 퓨전 닭요리 전문점으로, 방송에 식당 사장님 자격으로 직접 출연하기도 했다."
   }
 ];
