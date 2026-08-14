@@ -68,21 +68,95 @@ header {
 /* 필터 바 */
 #filter-bar {
   background: #fff; border-bottom: 1px solid #e5e7eb;
-  padding: 6px 16px;
-  display: flex; align-items: center; gap: 8px;
-  flex-shrink: 0; overflow-x: auto; scrollbar-width: none;
+  padding: 8px 16px;
+  display: flex; align-items: center; gap: 10px;
+  flex-shrink: 0;
   box-shadow: 0 1px 3px rgba(0,0,0,.04);
 }
-#filter-bar::-webkit-scrollbar { display: none; }
-.filter-label { font-size: 11px; color: #9ca3af; font-weight: 500; flex-shrink: 0; }
-.filter-btn {
-  flex-shrink: 0; padding: 5px 12px; border-radius: 99px;
-  border: 1.5px solid #e5e7eb; background: #fff; color: #6b7280;
+#filter-trigger {
+  display: flex; align-items: center; gap: 6px;
+  padding: 6px 14px; border-radius: 99px;
+  border: 1.5px solid #e5e7eb; background: #fff; color: #374151;
+  font-size: 13px; font-weight: 600; cursor: pointer; font-family: inherit;
+  transition: all .15s; flex-shrink: 0;
+}
+#filter-trigger:hover { border-color: #22c55e; color: #16a34a; }
+#filter-trigger.active { background: #f0fdf4; border-color: #22c55e; color: #16a34a; }
+.filter-trigger-icon { font-size: 13px; }
+.filter-trigger-badge {
+  background: #16a34a; color: #fff; border-radius: 99px;
+  min-width: 18px; height: 18px; padding: 0 5px;
+  font-size: 11px; font-weight: 700; display: flex; align-items: center; justify-content: center;
+}
+.result-count-text { font-size: 12px; color: #6b7280; }
+
+/* 필터 패널 오버레이 */
+#filter-overlay {
+  display: none; position: fixed; inset: 0; background: rgba(0,0,0,.32);
+  z-index: 1400;
+}
+#filter-overlay.open { display: block; }
+
+/* 필터 패널 (PC: 드롭다운) */
+#filter-panel {
+  display: none; position: fixed; top: 100px; left: 16px;
+  width: 360px; max-height: 70vh;
+  background: #fff; border-radius: 16px; box-shadow: 0 12px 40px rgba(0,0,0,.18);
+  z-index: 1500; flex-direction: column; overflow: hidden;
+}
+#filter-panel.open { display: flex; }
+.filter-panel-handle { display: none; }
+.filter-panel-head {
+  display: flex; align-items: center; justify-content: space-between;
+  padding: 14px 16px; border-bottom: 1px solid #f3f4f6; flex-shrink: 0;
+}
+.filter-panel-title { font-size: 15px; font-weight: 700; color: #1a1a1a; }
+.filter-panel-close {
+  background: #f3f4f6; border: none; border-radius: 50%;
+  width: 28px; height: 28px; font-size: 13px; color: #6b7280; cursor: pointer;
+  display: flex; align-items: center; justify-content: center;
+}
+.filter-panel-body { flex: 1; overflow-y: auto; padding: 14px 16px; display: flex; flex-direction: column; gap: 16px; }
+.filter-section-title { font-size: 12px; font-weight: 700; color: #374151; margin-bottom: 8px; }
+.chip-group { display: flex; flex-wrap: wrap; gap: 6px; }
+.chip-group-sub { margin-top: 8px; padding-top: 8px; border-top: 1px dashed #e5e7eb; }
+.filter-chip {
+  padding: 6px 13px; border-radius: 99px;
+  border: 1.5px solid #e5e7eb; background: #fff; color: #4b5563;
   font-size: 12px; font-weight: 600; cursor: pointer; font-family: inherit;
   transition: all .15s; white-space: nowrap;
 }
-.filter-btn.on { background: #22c55e; border-color: #22c55e; color: #fff; }
-.filter-btn:hover:not(.on) { border-color: #22c55e; color: #16a34a; }
+.filter-chip:hover:not(.on) { border-color: #86efac; color: #16a34a; }
+.filter-chip.on { background: #16a34a; border-color: #16a34a; color: #fff; }
+.filter-chip.major.on { background: #15803d; border-color: #15803d; }
+.filter-chip .chip-count { opacity: .65; font-weight: 500; margin-left: 3px; }
+.filter-panel-footer {
+  display: flex; align-items: center; justify-content: space-between; gap: 12px;
+  padding: 12px 16px; border-top: 1px solid #f3f4f6; flex-shrink: 0;
+}
+.filter-reset-link {
+  font-size: 13px; color: #6b7280; font-weight: 600; cursor: pointer;
+  text-decoration: underline; flex-shrink: 0;
+}
+.filter-reset-link:hover { color: #ef4444; }
+.filter-apply-btn {
+  flex: 1; padding: 11px; border: none; border-radius: 10px;
+  background: #16a34a; color: #fff; font-size: 14px; font-weight: 700;
+  cursor: pointer; font-family: inherit; transition: background .15s;
+}
+.filter-apply-btn:hover { background: #15803d; }
+
+@media (max-width: 767px) {
+  #filter-panel {
+    top: auto; bottom: 0; left: 0; right: 0; width: 100%;
+    border-radius: 20px 20px 0 0; max-height: 78vh;
+  }
+  .filter-panel-handle {
+    display: block; width: 44px; height: 5px; background: #d1d5db;
+    border-radius: 3px; margin: 10px auto 0; flex-shrink: 0;
+  }
+  .result-count-text { display: none; }
+}
 
 /* 메인 */
 .main { display: flex; flex: 1; overflow: hidden; }
@@ -275,8 +349,41 @@ a.info-text:hover { color: #22c55e; }
 </header>
 
 <div id="filter-bar">
-  <span class="filter-label">채널</span>
-  <div id="channel-filter-btns" style="display:flex;gap:8px;align-items:center;"></div>
+  <button id="filter-trigger" onclick="toggleFilterPanel()">
+    <span class="filter-trigger-icon">🔍</span>
+    <span>필터</span>
+    <span class="filter-trigger-badge" id="filter-trigger-badge" style="display:none;">0</span>
+  </button>
+  <span class="result-count-text" id="result-count-text"></span>
+</div>
+
+<!-- 필터 패널 (PC: 드롭다운 / 모바일: 바텀시트) -->
+<div id="filter-overlay" onclick="closeFilterPanel()"></div>
+<div id="filter-panel">
+  <div class="filter-panel-handle" id="filter-panel-handle"></div>
+  <div class="filter-panel-head">
+    <span class="filter-panel-title">필터</span>
+    <button class="filter-panel-close" onclick="closeFilterPanel()">✕</button>
+  </div>
+  <div class="filter-panel-body" id="filter-panel-body">
+    <div class="filter-section">
+      <div class="filter-section-title">🎬 유튜버</div>
+      <div class="chip-group" id="filter-chips-youtuber"></div>
+    </div>
+    <div class="filter-section">
+      <div class="filter-section-title">📍 지역</div>
+      <div class="chip-group" id="filter-chips-region"></div>
+    </div>
+    <div class="filter-section">
+      <div class="filter-section-title">🍽️ 음식종류</div>
+      <div class="chip-group" id="filter-chips-category-major"></div>
+      <div class="chip-group chip-group-sub" id="filter-chips-category-leaf"></div>
+    </div>
+  </div>
+  <div class="filter-panel-footer">
+    <a class="filter-reset-link" onclick="resetFilters()">초기화</a>
+    <button class="filter-apply-btn" id="filter-apply-btn" onclick="applyFilterPanel()">결과 575곳 보기</button>
+  </div>
 </div>
 
 <div class="main">
@@ -345,7 +452,74 @@ const multiActiveImg = new kakao.maps.MarkerImage(mkStarSvg('#d97706', 30), new 
 
 let activeMarker = null;
 let activeFood   = null;
-let currentFilter = '';
+
+/* ── 지역/카테고리 정규화 ── */
+// 일부 주소가 "전남광주통합특별시"로 잘못 붙어 있어(카카오 API 응답 이슈),
+// 광주광역시 5개 구는 광주로, 나머지 시/군은 전남으로 재분류한다.
+const GWANGJU_GU = ['동구','서구','남구','북구','광산구'];
+const REGION_ALIAS = {
+  '전북특별자치도': '전북', '강원특별자치도': '강원', '제주특별자치도': '제주',
+};
+function extractRegion(address) {
+  if (!address) return '기타';
+  const [first, second] = address.split(' ');
+  if (first === '전남광주통합특별시') return GWANGJU_GU.includes(second) ? '광주' : '전남';
+  return REGION_ALIAS[first] || first;
+}
+
+const CATEGORY_MAJOR_MAP = {
+  // 한식
+  '한식':'한식', '육류,고기':'한식', '냉면':'한식', '국수':'한식', '칼국수':'한식',
+  '순대':'한식', '곱창,막창':'한식', '회':'한식', '찌개,전골':'한식', '갈비':'한식',
+  '설렁탕':'한식', '삼겹살':'한식', '굴,전복':'한식', '족발,보쌈':'한식', '국밥':'한식',
+  '한정식':'한식', '불고기,두루치기':'한식', '감자탕':'한식', '곰탕':'한식', '오리':'한식',
+  '아구':'한식', '수제비':'한식', '해장국':'한식', '매운탕,해물탕':'한식', '복어':'한식',
+  '장어':'한식', '쌈밥':'한식', '삼계탕':'한식', '퓨전한식':'한식', '두부전문점':'한식',
+  '해물,생선':'한식', '조개':'한식', '게,대게':'한식', '참치회':'한식', '해산물':'한식',
+  '기사식당':'한식', '한촌설렁탕':'한식', '지호한방삼계탕':'한식', '광주서울곱창':'한식',
+  '세광양대창':'한식', '원할머니보쌈족발':'한식', '족발신선생':'한식', '오봉집':'한식', '닭요리':'한식',
+  // 중식
+  '중국요리':'중식', '중식':'중식', '양꼬치':'중식',
+  // 일식
+  '돈까스,우동':'일식', '일본식라면':'일식', '일식':'일식', '초밥,롤':'일식',
+  '일식집':'일식', '무공돈까스':'일식', '야키토리잔잔':'일식', '샤브샤브':'일식',
+  // 양식
+  '양식':'양식', '이탈리안':'양식', '햄버거':'양식', '스테이크,립':'양식',
+  '피자':'양식', '멕시칸,브라질':'양식', '프랭크버거':'양식', '피자먹다':'양식',
+  '롯데리아':'양식', '맥도날드':'양식',
+  // 분식
+  '분식':'분식', '떡볶이':'분식', '동대문엽기떡볶이':'분식', '신전떡볶이':'분식',
+  '토스트':'분식', '이삭토스트':'분식', '샌드위치':'분식', '오뎅바':'분식',
+  '간식':'분식', '두찜':'분식', '한솥도시락':'분식',
+  // 카페·디저트
+  '아이스크림':'카페·디저트', '떡,한과':'카페·디저트', '커피전문점':'카페·디저트',
+  '요거트월드':'카페·디저트', '이디야커피':'카페·디저트', '디저트카페':'카페·디저트',
+  '파리바게뜨':'카페·디저트',
+};
+function getMajorCategory(cat) { return CATEGORY_MAJOR_MAP[cat] || '기타'; }
+
+// 필터 상태 (3축: 유튜버/지역/카테고리 — 축 간 AND, 축 내부 OR)
+const filterState = {
+  youtubers: new Set(),
+  regions: new Set(),
+  categoryMajors: new Set(),
+  categoryLeaves: new Set(),
+};
+// 패널에서 "결과 보기"를 누르기 전까지의 임시(초안) 상태 — 취소 시 되돌릴 수 있도록 분리
+let draftState = null;
+
+function matchesFilters(food, state) {
+  const s = state || filterState;
+  if (s.youtubers.size > 0 && !food.youtubers.some(y => s.youtubers.has(y.name))) return false;
+  if (s.regions.size > 0 && !s.regions.has(extractRegion(food.address))) return false;
+  if (s.categoryMajors.size > 0 || s.categoryLeaves.size > 0) {
+    const major = getMajorCategory(food.category);
+    const majorMatch = s.categoryMajors.has(major);
+    const leafMatch = s.categoryLeaves.has(food.category);
+    if (!majorMatch && !leafMatch) return false;
+  }
+  return true;
+}
 
 // 마커 클러스터러 (줌아웃 시 지역별로 숫자 뱃지로 뭉쳐 보임, 녹색 톤 통일)
 const clusterer = new kakao.maps.MarkerClusterer({
@@ -395,49 +569,148 @@ CURATED_FOOD.forEach(food => {
 
 clusterer.addMarkers(CURATED_FOOD.filter(f => f.marker).map(f => f.marker));
 
-// 채널 필터 버튼 동적 생성
-(function buildFilters() {
-  const channels = [...new Set(CURATED_FOOD.flatMap(f => f.youtubers.map(y => y.name)))];
-  const wrap = document.getElementById('channel-filter-btns');
-
-  const allBtn = document.createElement('button');
-  allBtn.className = 'filter-btn on';
-  allBtn.id = 'filter-all';
-  allBtn.textContent = '전체';
-  allBtn.onclick = () => applyFilter('');
-  wrap.appendChild(allBtn);
-
-  channels.forEach(ch => {
-    const btn = document.createElement('button');
-    btn.className = 'filter-btn';
-    btn.dataset.channel = ch;
-    btn.textContent = ch;
-    btn.onclick = () => applyFilter(ch);
-    wrap.appendChild(btn);
+/* ── 필터 패널 데이터 구성 (유튜버/지역/카테고리 목록 + 개수) ── */
+const FILTER_YOUTUBER_OPTS = (() => {
+  const counts = {};
+  CURATED_FOOD.forEach(f => f.youtubers.forEach(y => { counts[y.name] = (counts[y.name]||0) + 1; }));
+  return Object.entries(counts).sort((a,b) => b[1]-a[1]).map(([name,count]) => ({ value: name, count }));
+})();
+const FILTER_REGION_OPTS = (() => {
+  const counts = {};
+  CURATED_FOOD.forEach(f => { const r = extractRegion(f.address); counts[r] = (counts[r]||0) + 1; });
+  return Object.entries(counts).sort((a,b) => b[1]-a[1]).map(([name,count]) => ({ value: name, count }));
+})();
+const FILTER_CATEGORY_OPTS = (() => {
+  const majorCounts = {};
+  const leavesByMajor = {};
+  CURATED_FOOD.forEach(f => {
+    const major = getMajorCategory(f.category);
+    majorCounts[major] = (majorCounts[major]||0) + 1;
+    if (!leavesByMajor[major]) leavesByMajor[major] = {};
+    leavesByMajor[major][f.category] = (leavesByMajor[major][f.category]||0) + 1;
   });
-
-  updateCount();
+  const majors = Object.entries(majorCounts).sort((a,b) => b[1]-a[1]).map(([name,count]) => ({ value: name, count }));
+  const leaves = {};
+  Object.entries(leavesByMajor).forEach(([major, obj]) => {
+    leaves[major] = Object.entries(obj).sort((a,b) => b[1]-a[1]).map(([name,count]) => ({ value: name, count }));
+  });
+  return { majors, leaves };
 })();
 
-function updateCount() {
-  const n = CURATED_FOOD.filter(f => !currentFilter || f.youtubers.some(y => y.name === currentFilter)).length;
-  document.getElementById('cnt').textContent = n + '곳';
+function renderChipGroup(containerId, options, selectedSet, onToggle, extraClass) {
+  const wrap = document.getElementById(containerId);
+  wrap.innerHTML = options.map(opt => `
+    <button type="button" class="filter-chip${extraClass ? ' ' + extraClass : ''}${selectedSet.has(opt.value) ? ' on' : ''}" data-value="${esc(opt.value)}">
+      ${esc(opt.value)}<span class="chip-count">${opt.count}</span>
+    </button>`).join('');
+  wrap.querySelectorAll('.filter-chip').forEach(btn => {
+    btn.addEventListener('click', () => onToggle(btn.dataset.value, btn));
+  });
 }
 
-function applyFilter(youtuber) {
-  currentFilter = youtuber;
-  const visibleMarkers = CURATED_FOOD
-    .filter(f => f.marker && (!youtuber || f.youtubers.some(y => y.name === youtuber)))
-    .map(f => f.marker);
+function renderFilterPanel() {
+  const s = draftState;
+  renderChipGroup('filter-chips-youtuber', FILTER_YOUTUBER_OPTS, s.youtubers, (val, btn) => {
+    toggleSetValue(s.youtubers, val);
+    btn.classList.toggle('on');
+    updateFilterPanelLiveCount();
+  });
+  renderChipGroup('filter-chips-region', FILTER_REGION_OPTS, s.regions, (val, btn) => {
+    toggleSetValue(s.regions, val);
+    btn.classList.toggle('on');
+    updateFilterPanelLiveCount();
+  });
+  renderChipGroup('filter-chips-category-major', FILTER_CATEGORY_OPTS.majors, s.categoryMajors, (val, btn) => {
+    toggleSetValue(s.categoryMajors, val);
+    btn.classList.toggle('on');
+    renderCategoryLeafChips();
+    updateFilterPanelLiveCount();
+  }, 'major');
+  renderCategoryLeafChips();
+  updateFilterPanelLiveCount();
+}
+
+function renderCategoryLeafChips() {
+  const s = draftState;
+  // 선택되었거나(펼쳐볼 필요 있는) 대분류의 세부 카테고리만 서브 칩으로 노출
+  const majorsToShow = s.categoryMajors.size > 0 ? [...s.categoryMajors] : [];
+  const leafOpts = majorsToShow.flatMap(m => FILTER_CATEGORY_OPTS.leaves[m] || []);
+  renderChipGroup('filter-chips-category-leaf', leafOpts, s.categoryLeaves, (val, btn) => {
+    toggleSetValue(s.categoryLeaves, val);
+    btn.classList.toggle('on');
+    updateFilterPanelLiveCount();
+  });
+  document.getElementById('filter-chips-category-leaf').style.display = leafOpts.length ? 'flex' : 'none';
+}
+
+function toggleSetValue(set, val) { set.has(val) ? set.delete(val) : set.add(val); }
+
+function updateFilterPanelLiveCount() {
+  const n = CURATED_FOOD.filter(f => matchesFilters(f, draftState)).length;
+  document.getElementById('filter-apply-btn').textContent = `결과 ${n}곳 보기`;
+}
+
+function toggleFilterPanel() {
+  const panel = document.getElementById('filter-panel');
+  panel.classList.contains('open') ? closeFilterPanel() : openFilterPanel();
+}
+
+function openFilterPanel() {
+  draftState = {
+    youtubers: new Set(filterState.youtubers),
+    regions: new Set(filterState.regions),
+    categoryMajors: new Set(filterState.categoryMajors),
+    categoryLeaves: new Set(filterState.categoryLeaves),
+  };
+  renderFilterPanel();
+  document.getElementById('filter-panel').classList.add('open');
+  document.getElementById('filter-overlay').classList.add('open');
+}
+
+function closeFilterPanel() {
+  document.getElementById('filter-panel').classList.remove('open');
+  document.getElementById('filter-overlay').classList.remove('open');
+}
+
+function resetFilters() {
+  draftState = { youtubers: new Set(), regions: new Set(), categoryMajors: new Set(), categoryLeaves: new Set() };
+  renderFilterPanel();
+}
+
+function applyFilterPanel() {
+  filterState.youtubers = new Set(draftState.youtubers);
+  filterState.regions = new Set(draftState.regions);
+  filterState.categoryMajors = new Set(draftState.categoryMajors);
+  filterState.categoryLeaves = new Set(draftState.categoryLeaves);
+  closeFilterPanel();
+  applyFilters();
+}
+
+function activeFilterChipCount() {
+  return filterState.youtubers.size + filterState.regions.size + filterState.categoryMajors.size + filterState.categoryLeaves.size;
+}
+
+function updateCount() {
+  const n = CURATED_FOOD.filter(f => matchesFilters(f)).length;
+  const badge = document.getElementById('filter-trigger-badge');
+  const chipCount = activeFilterChipCount();
+  badge.style.display = chipCount > 0 ? 'flex' : 'none';
+  badge.textContent = chipCount;
+  document.getElementById('filter-trigger').classList.toggle('active', chipCount > 0);
+  document.getElementById('cnt').textContent = n + '곳';
+  document.getElementById('result-count-text').textContent =
+    chipCount > 0 ? `전체 ${CURATED_FOOD.length}곳 중 ${n}곳` : '';
+}
+
+function applyFilters() {
+  const visibleMarkers = CURATED_FOOD.filter(f => f.marker && matchesFilters(f)).map(f => f.marker);
   clusterer.clear();
   clusterer.addMarkers(visibleMarkers);
-  document.querySelectorAll('#channel-filter-btns .filter-btn').forEach(btn => {
-    const isAll = !btn.dataset.channel;
-    btn.classList.toggle('on', (!youtuber && isAll) || (!!youtuber && btn.dataset.channel === youtuber));
-  });
   updateCount();
-  if (activeFood && youtuber && !activeFood.youtubers.some(y => y.name === youtuber)) deselect();
+  if (activeFood && !matchesFilters(activeFood)) deselect();
 }
+
+updateCount();
 
 function deselect() {
   if (activeMarker) { activeMarker.setImage(activeMarker.normalImg); activeMarker = null; }
@@ -608,7 +881,7 @@ searchInput.addEventListener('input', function() {
   if (!q) { searchDropdown.classList.remove('open'); return; }
 
   const results = CURATED_FOOD
-    .filter(f => !currentFilter || f.youtubers.some(y => y.name === currentFilter))
+    .filter(f => matchesFilters(f))
     .filter(f => f.name.includes(q) || f.address.includes(q) || f.category.includes(q))
     .slice(0, 5);
 
