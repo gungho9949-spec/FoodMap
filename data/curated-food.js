@@ -626,5 +626,21 @@ const CURATED_FOOD = [
     videoTitle: null,
     videoUrl: null,
     recommendNote: "전직 래퍼 출신 사장이 운영하는 퓨전 닭요리 전문점으로, 방송에 식당 사장님 자격으로 직접 출연하기도 했다."
+  },
+  {
+    id: "mns-002",
+    name: "빈해원",
+    category: "중국요리",
+    address: "전북특별자치도 군산시 동령길 57",
+    phone: "063-445-2429",
+    lat: 35.988834779577,
+    lng: 126.713983172674,
+    kakaoUrl: "http://place.map.kakao.com/11053604",
+    rating: null,
+    reviewCount: null,
+    youtuber: "맛있는 녀석들",
+    videoTitle: null,
+    videoUrl: null,
+    recommendNote: "등록문화재로 지정된 군산의 대표 명소로, 영화 '타짜'의 촬영지로도 알려진 짬뽕 맛집이다."
   }
 ];
