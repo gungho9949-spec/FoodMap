@@ -207,6 +207,8 @@ header {
 /* 헤더 영역 */
 .d-head { padding: 16px; border-bottom: 1px solid #f3f4f6; }
 .d-name { font-size: 18px; font-weight: 700; color: #1a1a1a; margin-bottom: 8px; }
+.d-name.clickable { cursor: pointer; display: inline-block; transition: color .15s; }
+.d-name.clickable:hover { color: #16a34a; text-decoration: underline; }
 .d-badges { display: flex; flex-wrap: wrap; gap: 5px; margin-bottom: 10px; }
 .badge-cat {
   background: #f0fdf4; color: #16a34a;
@@ -754,9 +756,9 @@ function fillPanel(prefix, food) {
   const bodyId = prefix === 'd' ? 'd-body' : 's-body';
   const isMulti = food.youtubers.length > 1;
 
-  // 헤더: 이름·배지·주소·전화·평점
+  // 헤더: 이름(클릭 시 네이버 플레이스)·배지·주소·전화·평점
   let headHtml = `
-    <div class="d-name">${esc(food.name)}</div>
+    <div class="d-name${food.naverUrl ? ' clickable' : ''}"${food.naverUrl ? ` onclick="window.open('${esc(food.naverUrl)}', '_blank', 'noopener')" title="네이버 지도에서 보기"` : ''}>${esc(food.name)}</div>
     <div class="d-badges">
       <span class="badge-cat">${esc(food.category)}</span>
       ${isMulti
