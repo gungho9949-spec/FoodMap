@@ -11235,5 +11235,525 @@ const CURATED_FOOD = [
         recommendNote: "잠실 주민들만 안다는 로컬 맛집으로 소개됐으며, 차돌·양지·도가니가 들어간 쌀국수가 또갈집으로 선정됐다."
       }
     ]
+  },
+  {
+    id: "lyj-001",
+    name: "떡산",
+    category: "분식",
+    address: "서울 은평구 연서로 247-1",
+    phone: "02-6082-4321",
+    lat: 37.619553682927936,
+    lng: 126.92238708629974,
+    kakaoUrl: "http://place.map.kakao.com/57913604",
+    rating: null,
+    reviewCount: null,
+    youtubers: [
+      {
+        name: "전지적 참견 시점(이영자)",
+        videoTitle: null,
+        videoUrl: null,
+        recommendNote: "연신내 인근에서 부산식 전통 떡볶이를 선보이는 곳으로 소개됐다."
+      }
+    ]
+  },
+  {
+    id: "lyj-002",
+    name: "굴다리식당",
+    category: "한식",
+    address: "서울 마포구 새창로 8-1",
+    phone: "02-712-0066",
+    lat: 37.5421087241179,
+    lng: 126.950805519086,
+    kakaoUrl: "http://place.map.kakao.com/12079226",
+    rating: null,
+    reviewCount: null,
+    youtubers: [
+      {
+        name: "전지적 참견 시점(이영자)",
+        videoTitle: null,
+        videoUrl: null,
+        recommendNote: "공덕역 인근의 김치찌개·제육볶음 노포로 소개됐다."
+      }
+    ]
+  },
+  {
+    id: "lyj-003",
+    name: "슬로우치즈",
+    category: "양식",
+    address: "서울 강남구 삼성로145길 13",
+    phone: "02-517-7172",
+    lat: 37.5223740928915,
+    lng: 127.046991452104,
+    kakaoUrl: "http://place.map.kakao.com/416864455",
+    rating: null,
+    reviewCount: null,
+    youtubers: [
+      {
+        name: "전지적 참견 시점(이영자)",
+        videoTitle: null,
+        videoUrl: null,
+        recommendNote: "모짜렐라·부라타 등 다양한 치즈 요리를 선보이는 청담 인근 레스토랑으로 소개됐다."
+      }
+    ]
+  },
+  {
+    id: "lyj-004",
+    name: "참사랑해 본점",
+    category: "참치회",
+    address: "서울 강동구 양재대로 1500",
+    phone: "02-473-1337",
+    lat: 37.53949112801616,
+    lng: 127.14111969249298,
+    kakaoUrl: "http://place.map.kakao.com/27331509",
+    rating: null,
+    reviewCount: null,
+    youtubers: [
+      {
+        name: "전지적 참견 시점(이영자)",
+        videoTitle: null,
+        videoUrl: null,
+        recommendNote: "참치구이로 유명한 강동구의 참치 전문점으로 소개됐다."
+      }
+    ]
+  },
+  {
+    id: "lyj-005",
+    name: "영원식당",
+    category: "수제비",
+    address: "서울 영등포구 여의나루로 117",
+    phone: "02-784-1866",
+    lat: 37.526152949040615,
+    lng: 126.9310817631017,
+    kakaoUrl: "http://place.map.kakao.com/13289961",
+    rating: null,
+    reviewCount: null,
+    youtubers: [
+      {
+        name: "전지적 참견 시점(이영자)",
+        videoTitle: null,
+        videoUrl: null,
+        recommendNote: "여의도에서 수제비와 감자전을 파는 노포로 소개됐다."
+      }
+    ]
+  },
+  {
+    id: "lyj-006",
+    name: "한남동한방통닭",
+    category: "치킨",
+    address: "서울 용산구 대사관로34길 12",
+    phone: "02-797-8677",
+    lat: 37.53274120851465,
+    lng: 127.00596242739974,
+    kakaoUrl: "http://place.map.kakao.com/16330571",
+    rating: null,
+    reviewCount: null,
+    youtubers: [
+      {
+        name: "전지적 참견 시점(이영자)",
+        videoTitle: null,
+        videoUrl: null,
+        recommendNote: "장작으로 구워내는 한방 통닭으로 유명해져 유명 인사들의 단골집으로도 알려진 곳으로 소개됐다."
+      }
+    ]
+  },
+  {
+    id: "lyj-007",
+    name: "진주집",
+    category: "국수",
+    address: "서울 영등포구 국제금융로6길 33",
+    phone: "02-780-6108",
+    lat: 37.52059128119736,
+    lng: 126.9269500559961,
+    kakaoUrl: "http://place.map.kakao.com/8094563",
+    rating: null,
+    reviewCount: null,
+    youtubers: [
+      {
+        name: "전지적 참견 시점(이영자)",
+        videoTitle: null,
+        videoUrl: null,
+        recommendNote: "여의도의 콩국수·비빔국수 맛집으로 소개됐다."
+      }
+    ]
+  },
+  {
+    id: "lyj-008",
+    name: "민소한우 중앙여의도점",
+    category: "육류,고기",
+    address: "서울 영등포구 국제금융로2길 37",
+    phone: "02-780-3365",
+    lat: 37.5228671738776,
+    lng: 126.924030366469,
+    kakaoUrl: "http://place.map.kakao.com/12539001",
+    rating: null,
+    reviewCount: null,
+    youtubers: [
+      {
+        name: "전지적 참견 시점(이영자)",
+        videoTitle: null,
+        videoUrl: null,
+        recommendNote: "여의도에서 특안심·등심을 선보이는 한우 전문점으로 소개됐다."
+      }
+    ]
+  },
+  {
+    id: "lyj-009",
+    name: "무탄 압구정 본점",
+    category: "중식",
+    address: "서울 강남구 논현로176길 22",
+    phone: "02-549-9339",
+    lat: 37.5272954209603,
+    lng: 127.030307744874,
+    kakaoUrl: "http://place.map.kakao.com/1696571508",
+    rating: null,
+    reviewCount: null,
+    youtubers: [
+      {
+        name: "전지적 참견 시점(이영자)",
+        videoTitle: null,
+        videoUrl: null,
+        recommendNote: "트러플 짜장면과 고추 유린기를 선보이는 압구정의 이색 중식당으로 소개됐다."
+      }
+    ]
+  },
+  {
+    id: "lyj-010",
+    name: "소이연남",
+    category: "태국음식",
+    address: "서울 마포구 동교로 267",
+    phone: "02-323-5130",
+    lat: 37.5635139207821,
+    lng: 126.92538808404,
+    kakaoUrl: "http://place.map.kakao.com/25479306",
+    rating: null,
+    reviewCount: null,
+    youtubers: [
+      {
+        name: "전지적 참견 시점(이영자)",
+        videoTitle: null,
+        videoUrl: null,
+        recommendNote: "연남동의 소고기 쌀국수 맛집으로 소개됐다."
+      }
+    ]
+  },
+  {
+    id: "lyj-011",
+    name: "구삼부대찌개",
+    category: "찌개,전골",
+    address: "서울 강동구 강동대로53길 12",
+    phone: "02-472-7729",
+    lat: 37.5233623583694,
+    lng: 127.131722574862,
+    kakaoUrl: "http://place.map.kakao.com/27076619",
+    rating: null,
+    reviewCount: null,
+    youtubers: [
+      {
+        name: "전지적 참견 시점(이영자)",
+        videoTitle: null,
+        videoUrl: null,
+        recommendNote: "부대전골과 버터밥으로 유명한 강동구의 부대찌개 맛집으로 소개됐다."
+      }
+    ]
+  },
+  {
+    id: "lyj-012",
+    name: "남도분식 익선점",
+    category: "분식",
+    address: "서울 종로구 수표로28길 33",
+    phone: "02-763-7778",
+    lat: 37.573148901450146,
+    lng: 126.99007574368089,
+    kakaoUrl: "http://place.map.kakao.com/763250184",
+    rating: null,
+    reviewCount: null,
+    youtubers: [
+      {
+        name: "전지적 참견 시점(이영자)",
+        videoTitle: null,
+        videoUrl: null,
+        recommendNote: "익선동의 즉석 떡볶이·상추튀김 맛집으로 소개됐다."
+      }
+    ]
+  },
+  {
+    id: "lyj-013",
+    name: "도동집",
+    category: "퓨전한식",
+    address: "서울 용산구 후암로48길 1",
+    phone: "02-772-9463",
+    lat: 37.55284578740163,
+    lng: 126.9768047948429,
+    kakaoUrl: "http://place.map.kakao.com/27270808",
+    rating: null,
+    reviewCount: null,
+    youtubers: [
+      {
+        name: "전지적 참견 시점(이영자)",
+        videoTitle: null,
+        videoUrl: null,
+        recommendNote: "후암동에서 도동탕면·도동비면 등 독자적인 메뉴를 선보이는 곳으로 소개됐다."
+      }
+    ]
+  },
+  {
+    id: "lyj-014",
+    name: "진미식당",
+    category: "게,대게",
+    address: "서울 마포구 마포대로 186-6",
+    phone: "02-3211-4468",
+    lat: 37.550608920427024,
+    lng: 126.95579734486303,
+    kakaoUrl: "http://place.map.kakao.com/1386489124",
+    rating: null,
+    reviewCount: null,
+    youtubers: [
+      {
+        name: "전지적 참견 시점(이영자)",
+        videoTitle: null,
+        videoUrl: null,
+        recommendNote: "마포의 간장게장·달걀찜 맛집으로 소개됐다."
+      }
+    ]
+  },
+  {
+    id: "lyj-015",
+    name: "뉴만두집",
+    category: "한식",
+    address: "서울 강남구 압구정로 338",
+    phone: "02-544-3710",
+    lat: 37.5279236124535,
+    lng: 127.038876598377,
+    kakaoUrl: "http://place.map.kakao.com/13092552",
+    rating: null,
+    reviewCount: null,
+    youtubers: [
+      {
+        name: "전지적 참견 시점(이영자)",
+        videoTitle: null,
+        videoUrl: null,
+        recommendNote: "압구정의 만두국·만두 전문점으로 소개됐다."
+      }
+    ]
+  },
+  {
+    id: "lyj-016",
+    name: "선채 용산",
+    category: "한식",
+    address: "서울 용산구 한강대로52길 29-10",
+    phone: "02-2039-2771",
+    lat: 37.53161024306737,
+    lng: 126.97310499380934,
+    kakaoUrl: "http://place.map.kakao.com/2141900202",
+    rating: null,
+    reviewCount: null,
+    youtubers: [
+      {
+        name: "전지적 참견 시점(이영자)",
+        videoTitle: null,
+        videoUrl: null,
+        recommendNote: "전국 팔도 재료로 만드는 요리를 선보이는 용산의 작은 한식 다이닝으로, 전복 들깨 칼비빔과 육회 묵은지말이가 대표 메뉴로 소개됐다."
+      }
+    ]
+  },
+  {
+    id: "lyj-017",
+    name: "반티엔야오 카오위 강남점",
+    category: "중식",
+    address: "서울 서초구 서초대로73길 12",
+    phone: "02-6953-6668",
+    lat: 37.49843286149087,
+    lng: 127.02562896506164,
+    kakaoUrl: "http://place.map.kakao.com/1890287094",
+    rating: null,
+    reviewCount: null,
+    youtubers: [
+      {
+        name: "전지적 참견 시점(이영자)",
+        videoTitle: null,
+        videoUrl: null,
+        recommendNote: "마라 카오위 등 중국식 구이 요리를 전문으로 하는 강남의 식당으로 소개됐다."
+      }
+    ]
+  },
+  {
+    id: "lyj-018",
+    name: "한성칼국수",
+    category: "한식",
+    address: "서울 강남구 언주로148길 14",
+    phone: "02-544-0540",
+    lat: 37.520450854963826,
+    lng: 127.03551983007482,
+    kakaoUrl: "http://place.map.kakao.com/8140834",
+    rating: null,
+    reviewCount: null,
+    youtubers: [
+      {
+        name: "전지적 참견 시점(이영자)",
+        videoTitle: null,
+        videoUrl: null,
+        recommendNote: "논현동의 바지락 칼국수·손만두 맛집으로 소개됐다."
+      }
+    ]
+  },
+  {
+    id: "lyj-019",
+    name: "마복림할머니집",
+    category: "떡볶이",
+    address: "서울 중구 다산로35길 5",
+    phone: "02-2232-8930",
+    lat: 37.56327523942241,
+    lng: 127.01512154258373,
+    kakaoUrl: "http://place.map.kakao.com/25036918",
+    rating: null,
+    reviewCount: null,
+    youtubers: [
+      {
+        name: "전지적 참견 시점(이영자)",
+        videoTitle: null,
+        videoUrl: null,
+        recommendNote: "신당동 즉석떡볶이 골목의 원조격 노포로 소개됐다."
+      }
+    ]
+  },
+  {
+    id: "lyj-020",
+    name: "성심당 본점",
+    category: "제과,베이커리",
+    address: "대전 중구 대종로480번길 15",
+    phone: "042-229-5302",
+    lat: 36.32774375491543,
+    lng: 127.42724536162811,
+    kakaoUrl: "http://place.map.kakao.com/17733090",
+    rating: null,
+    reviewCount: null,
+    youtubers: [
+      {
+        name: "전지적 참견 시점(이영자)",
+        videoTitle: null,
+        videoUrl: null,
+        recommendNote: "대전을 대표하는 빵집으로, 튀김소보로와 판타롱부추빵이 유명하다고 소개됐다."
+      }
+    ]
+  },
+  {
+    id: "lyj-021",
+    name: "원조기장손칼국수 기장시장본점",
+    category: "칼국수",
+    address: "부산 기장군 기장읍 읍내로104번길 16",
+    phone: "0507-1369-8757",
+    lat: 35.243311060601705,
+    lng: 129.2149797190951,
+    kakaoUrl: "http://place.map.kakao.com/23879267",
+    rating: null,
+    reviewCount: null,
+    youtubers: [
+      {
+        name: "전지적 참견 시점(이영자)",
+        videoTitle: null,
+        videoUrl: null,
+        recommendNote: "기장시장의 멸치칼국수·수제비 맛집으로 소개됐다."
+      }
+    ]
+  },
+  {
+    id: "lyj-022",
+    name: "삼백집 전주본점",
+    category: "국밥",
+    address: "전북특별자치도 전주시 완산구 전주객사2길 22",
+    phone: "063-284-2227",
+    lat: 35.8178522281359,
+    lng: 127.141006036071,
+    kakaoUrl: "http://place.map.kakao.com/8350296",
+    rating: null,
+    reviewCount: null,
+    youtubers: [
+      {
+        name: "전지적 참견 시점(이영자)",
+        videoTitle: null,
+        videoUrl: null,
+        recommendNote: "전주의 콩나물국밥·수란 노포로 소개됐다."
+      }
+    ]
+  },
+  {
+    id: "lyj-023",
+    name: "초당할머니순두부",
+    category: "두부전문점",
+    address: "강원특별자치도 강릉시 초당순두부길 77",
+    phone: "033-652-2058",
+    lat: 37.7905546548915,
+    lng: 128.915396082152,
+    kakaoUrl: "http://place.map.kakao.com/8535139",
+    rating: null,
+    reviewCount: null,
+    youtubers: [
+      {
+        name: "전지적 참견 시점(이영자)",
+        videoTitle: null,
+        videoUrl: null,
+        recommendNote: "강릉 초당동의 순두부·두부전골 맛집으로 소개됐다."
+      }
+    ]
+  },
+  {
+    id: "lyj-024",
+    name: "서보",
+    category: "태국음식",
+    address: "서울 송파구 오금로18길 5",
+    phone: "0507-1355-8518",
+    lat: 37.51015892450543,
+    lng: 127.11079080112465,
+    kakaoUrl: "http://place.map.kakao.com/290687035",
+    rating: null,
+    reviewCount: null,
+    youtubers: [
+      {
+        name: "전지적 참견 시점(이영자)",
+        videoTitle: null,
+        videoUrl: null,
+        recommendNote: "족발덮밥과 새우국밥을 선보이는 잠실 인근 맛집으로 소개됐다."
+      }
+    ]
+  },
+  {
+    id: "lyj-025",
+    name: "와카노키친",
+    category: "일본식주점",
+    address: "서울 강동구 암사길 23",
+    phone: null,
+    lat: 37.5517419654121,
+    lng: 127.131797401603,
+    kakaoUrl: "http://place.map.kakao.com/1660147516",
+    rating: null,
+    reviewCount: null,
+    youtubers: [
+      {
+        name: "전지적 참견 시점(이영자)",
+        videoTitle: null,
+        videoUrl: null,
+        recommendNote: "우니·소고기 다다끼·차돌사시미 등 다양한 안주를 선보이는 이자카야로 소개됐다."
+      }
+    ]
+  },
+  {
+    id: "lyj-026",
+    name: "봉자막창 부천원종점",
+    category: "곱창,막창",
+    address: "경기 부천시 오정구 원종로 7",
+    phone: "032-673-7333",
+    lat: 37.524287905474,
+    lng: 126.800886551231,
+    kakaoUrl: "http://place.map.kakao.com/570286556",
+    rating: null,
+    reviewCount: null,
+    youtubers: [
+      {
+        name: "전지적 참견 시점(이영자)",
+        videoTitle: null,
+        videoUrl: null,
+        recommendNote: "부천의 막창 전문점으로 소개됐다."
+      }
+    ]
   }
 ];
