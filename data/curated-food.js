@@ -4687,6 +4687,12 @@ const CURATED_FOOD = [
         videoTitle: null,
         videoUrl: null,
         recommendNote: "쯔양이 방문해 리뷰한 한식 맛집."
+      },
+      {
+        name: "식객 허영만의 백반기행",
+        videoTitle: null,
+        videoUrl: null,
+        recommendNote: "광장시장의 백반집으로, 누룽지밥과 청국장이 대표 메뉴로 소개됐다."
       }
     ]
   },
@@ -6565,6 +6571,12 @@ const CURATED_FOOD = [
         videoTitle: null,
         videoUrl: null,
         recommendNote: "쯔양이 방문해 리뷰한 고기 맛집."
+      },
+      {
+        name: "식객 허영만의 백반기행",
+        videoTitle: null,
+        videoUrl: null,
+        recommendNote: "잠실 인근에서 김치삼겹살을 선보이는 곳으로 소개됐다."
       }
     ]
   },
@@ -11363,6 +11375,12 @@ const CURATED_FOOD = [
         videoTitle: null,
         videoUrl: null,
         recommendNote: "여의도에서 수제비와 감자전을 파는 노포로 소개됐다."
+      },
+      {
+        name: "식객 허영만의 백반기행",
+        videoTitle: null,
+        videoUrl: null,
+        recommendNote: "여의도에서 오랫동안 수제비와 감자전을 선보여온 노포로 소개됐다."
       }
     ]
   },
@@ -12363,6 +12381,12 @@ const CURATED_FOOD = [
         videoTitle: null,
         videoUrl: null,
         recommendNote: "을지로3가의 양념갈비·갈비탕 노포로 소개됐다."
+      },
+      {
+        name: "식객 허영만의 백반기행",
+        videoTitle: null,
+        videoUrl: null,
+        recommendNote: "을지로3가의 100년 넘은 노포로, 양념갈비와 갈비탕을 선보이는 곳으로 소개됐다."
       }
     ]
   },
@@ -12483,6 +12507,806 @@ const CURATED_FOOD = [
         videoTitle: null,
         videoUrl: null,
         recommendNote: "남대문시장의 닭곰탕 노포로 소개됐다."
+      }
+    ]
+  },
+  {
+    id: "hyb-002",
+    name: "묵동부대찌개전문",
+    category: "찌개,전골",
+    address: "서울 중랑구 중랑역로 247",
+    phone: "02-974-4866",
+    lat: 37.615439206010024,
+    lng: 127.07571032915537,
+    kakaoUrl: "http://place.map.kakao.com/16064808",
+    rating: null,
+    reviewCount: null,
+    youtubers: [
+      {
+        name: "식객 허영만의 백반기행",
+        videoTitle: null,
+        videoUrl: null,
+        recommendNote: "묵동에서 미나리를 넣은 맑은 부대찌개를 선보이는 곳으로 소개됐다."
+      }
+    ]
+  },
+  {
+    id: "hyb-003",
+    name: "일등바우",
+    category: "해물,생선",
+    address: "서울 송파구 송이로20길 20",
+    phone: "02-448-8312",
+    lat: 37.495577673828954,
+    lng: 127.11940426706997,
+    kakaoUrl: "http://place.map.kakao.com/9351511",
+    rating: null,
+    reviewCount: null,
+    youtubers: [
+      {
+        name: "식객 허영만의 백반기행",
+        videoTitle: null,
+        videoUrl: null,
+        recommendNote: "가락동에서 민어회와 병어조림 등 남도 해산물 요리를 선보이는 곳으로 소개됐다."
+      }
+    ]
+  },
+  {
+    id: "hyb-004",
+    name: "신명먹거리",
+    category: "한식",
+    address: "서울 성동구 상원6길 3",
+    phone: "02-464-8075",
+    lat: 37.54854390914657,
+    lng: 127.04859215663367,
+    kakaoUrl: "http://place.map.kakao.com/19009694",
+    rating: null,
+    reviewCount: null,
+    youtubers: [
+      {
+        name: "식객 허영만의 백반기행",
+        videoTitle: null,
+        videoUrl: null,
+        recommendNote: "성수동의 허름하지만 정성 가득한 백반집으로 소개됐다."
+      }
+    ]
+  },
+  {
+    id: "hyb-005",
+    name: "어울림",
+    category: "해물,생선",
+    address: "서울 광진구 광장로1나길 10",
+    phone: "02-453-1470",
+    lat: 37.54845309615863,
+    lng: 127.10199247106137,
+    kakaoUrl: "http://place.map.kakao.com/1320909178",
+    rating: null,
+    reviewCount: null,
+    youtubers: [
+      {
+        name: "식객 허영만의 백반기행",
+        videoTitle: null,
+        videoUrl: null,
+        recommendNote: "광나루역 인근에서 새조개 등 해산물 요리를 선보이는 여수식 전문점으로 소개됐다."
+      }
+    ]
+  },
+  {
+    id: "hyb-006",
+    name: "무수옥",
+    category: "육류,고기",
+    address: "서울 도봉구 도봉로165길 15",
+    phone: "02-954-6292",
+    lat: 37.67713476879158,
+    lng: 127.0441642533523,
+    kakaoUrl: "http://place.map.kakao.com/13091152",
+    rating: null,
+    reviewCount: null,
+    youtubers: [
+      {
+        name: "식객 허영만의 백반기행",
+        videoTitle: null,
+        videoUrl: null,
+        recommendNote: "도봉역 인근의 설렁탕·육회비빔밥 맛집으로 소개됐다."
+      }
+    ]
+  },
+  {
+    id: "hyb-007",
+    name: "오시오",
+    category: "한식",
+    address: "서울 성동구 행당로17길 19-1",
+    phone: "02-2299-8686",
+    lat: 37.5600478086458,
+    lng: 127.03307581536,
+    kakaoUrl: "http://place.map.kakao.com/20742403",
+    rating: null,
+    reviewCount: null,
+    youtubers: [
+      {
+        name: "식객 허영만의 백반기행",
+        videoTitle: null,
+        videoUrl: null,
+        recommendNote: "왕십리에서 남도식 서대찜을 선보이는 곳으로 소개됐다."
+      }
+    ]
+  },
+  {
+    id: "hyb-008",
+    name: "고사리 익스프레스",
+    category: "한식",
+    address: "서울 중구 퇴계로85길 12-10",
+    phone: "02-2039-3140",
+    lat: 37.5662676217473,
+    lng: 127.020008547897,
+    kakaoUrl: "http://place.map.kakao.com/173951940",
+    rating: null,
+    reviewCount: null,
+    youtubers: [
+      {
+        name: "식객 허영만의 백반기행",
+        videoTitle: null,
+        videoUrl: null,
+        recommendNote: "신당역 중앙시장에서 고사리를 활용한 온면·파스타 등을 선보이는 비건 식당으로 소개됐다."
+      }
+    ]
+  },
+  {
+    id: "hyb-009",
+    name: "금성스테이크부대찌개",
+    category: "찌개,전골",
+    address: "서울 강남구 언주로174길 26",
+    phone: "02-547-4872",
+    lat: 37.528064220310426,
+    lng: 127.03586622964322,
+    kakaoUrl: "http://place.map.kakao.com/10215748",
+    rating: null,
+    reviewCount: null,
+    youtubers: [
+      {
+        name: "식객 허영만의 백반기행",
+        videoTitle: null,
+        videoUrl: null,
+        recommendNote: "압구정의 오래된 부대찌개 노포로 소개됐다."
+      }
+    ]
+  },
+  {
+    id: "hyb-010",
+    name: "천일삼계탕",
+    category: "삼계탕",
+    address: "서울 중구 장충단로13길 43",
+    phone: "02-2273-9405",
+    lat: 37.56802786318591,
+    lng: 127.00683682037156,
+    kakaoUrl: "http://place.map.kakao.com/21397712",
+    rating: null,
+    reviewCount: null,
+    youtubers: [
+      {
+        name: "식객 허영만의 백반기행",
+        videoTitle: null,
+        videoUrl: null,
+        recommendNote: "동대문 인근의 삼계탕·인삼주 맛집으로 소개됐다."
+      }
+    ]
+  },
+  {
+    id: "hyb-011",
+    name: "일등식당",
+    category: "해장국",
+    address: "서울 마포구 방울내로 82",
+    phone: "02-333-0361",
+    lat: 37.5605470785376,
+    lng: 126.904339369294,
+    kakaoUrl: "http://place.map.kakao.com/16050121",
+    rating: null,
+    reviewCount: null,
+    youtubers: [
+      {
+        name: "식객 허영만의 백반기행",
+        videoTitle: null,
+        videoUrl: null,
+        recommendNote: "망원동에서 33년간 이어온 뼈해장국 노포로 소개됐다."
+      }
+    ]
+  },
+  {
+    id: "hyb-012",
+    name: "이문설농탕",
+    category: "설렁탕",
+    address: "서울 종로구 우정국로 38-13",
+    phone: "02-733-6526",
+    lat: 37.5727337640939,
+    lng: 126.983907557385,
+    kakaoUrl: "http://place.map.kakao.com/24725293",
+    rating: null,
+    reviewCount: null,
+    youtubers: [
+      {
+        name: "식객 허영만의 백반기행",
+        videoTitle: null,
+        videoUrl: null,
+        recommendNote: "인사동 인근에서 국내 최고령급 역사를 지닌 설렁탕 노포로 소개됐다."
+      }
+    ]
+  },
+  {
+    id: "hyb-013",
+    name: "가향",
+    category: "한식",
+    address: "서울 종로구 삼일대로 390-10",
+    phone: "02-2279-5327",
+    lat: 37.5693537687393,
+    lng: 126.988522088184,
+    kakaoUrl: "http://place.map.kakao.com/1979164872",
+    rating: null,
+    reviewCount: null,
+    youtubers: [
+      {
+        name: "식객 허영만의 백반기행",
+        videoTitle: null,
+        videoUrl: null,
+        recommendNote: "종로3가에서 가오리찜 등을 선보이는 횟집으로 소개됐다."
+      }
+    ]
+  },
+  {
+    id: "hyb-014",
+    name: "솔",
+    category: "한식",
+    address: "서울 영등포구 국제금융로8길 27-9",
+    phone: "02-783-5568",
+    lat: 37.5196590716325,
+    lng: 126.928965618836,
+    kakaoUrl: "http://place.map.kakao.com/10552768",
+    rating: null,
+    reviewCount: null,
+    youtubers: [
+      {
+        name: "식객 허영만의 백반기행",
+        videoTitle: null,
+        videoUrl: null,
+        recommendNote: "여의도의 작은 김치찌개·수제비 맛집으로 소개됐다."
+      }
+    ]
+  },
+  {
+    id: "hyb-015",
+    name: "뚱보돼지갈비통고기",
+    category: "육류,고기",
+    address: "서울 중구 퇴계로27길 14",
+    phone: "02-2267-1801",
+    lat: 37.561807293985616,
+    lng: 126.99173311525246,
+    kakaoUrl: "http://place.map.kakao.com/10365977",
+    rating: null,
+    reviewCount: null,
+    youtubers: [
+      {
+        name: "식객 허영만의 백반기행",
+        videoTitle: null,
+        videoUrl: null,
+        recommendNote: "충무로에서 고추장불고기 쌈밥을 선보이는 돼지갈비 맛집으로 소개됐다."
+      }
+    ]
+  },
+  {
+    id: "hyb-016",
+    name: "동경전통육개장설곰탕",
+    category: "국밥",
+    address: "서울 강남구 테헤란로7길 22",
+    phone: "02-566-9779",
+    lat: 37.5004570371425,
+    lng: 127.0309957919559,
+    kakaoUrl: "http://place.map.kakao.com/541903475",
+    rating: null,
+    reviewCount: null,
+    youtubers: [
+      {
+        name: "식객 허영만의 백반기행",
+        videoTitle: null,
+        videoUrl: null,
+        recommendNote: "강남역 인근의 전통 방식 육개장·설곰탕 맛집으로 소개됐다."
+      }
+    ]
+  },
+  {
+    id: "hyb-017",
+    name: "경동맛집",
+    category: "해물,생선",
+    address: "서울 종로구 자하문로1길 7",
+    phone: null,
+    lat: 37.5764508458905,
+    lng: 126.971997577113,
+    kakaoUrl: "http://place.map.kakao.com/1620522747",
+    rating: null,
+    reviewCount: null,
+    youtubers: [
+      {
+        name: "식객 허영만의 백반기행",
+        videoTitle: null,
+        videoUrl: null,
+        recommendNote: "서촌에서 생선조림·가오리찜을 안주로 곁들일 수 있는 곳으로 소개됐다."
+      }
+    ]
+  },
+  {
+    id: "hyb-018",
+    name: "토박이",
+    category: "한식",
+    address: "서울 서초구 반포대로39길 38",
+    phone: "02-532-4837",
+    lat: 37.4984635561412,
+    lng: 127.001981289571,
+    kakaoUrl: "http://place.map.kakao.com/10905508",
+    rating: null,
+    reviewCount: null,
+    youtubers: [
+      {
+        name: "식객 허영만의 백반기행",
+        videoTitle: null,
+        videoUrl: null,
+        recommendNote: "서래마을에서 집밥 스타일의 만두전골을 선보이는 곳으로 소개됐다."
+      }
+    ]
+  },
+  {
+    id: "hyb-019",
+    name: "충무집",
+    category: "해물,생선",
+    address: "서울 중구 을지로3길 30-14",
+    phone: "010-2019-4088",
+    lat: 37.5673779751551,
+    lng: 126.982020677003,
+    kakaoUrl: "http://place.map.kakao.com/781644913",
+    rating: null,
+    reviewCount: null,
+    youtubers: [
+      {
+        name: "식객 허영만의 백반기행",
+        videoTitle: null,
+        videoUrl: null,
+        recommendNote: "을지로입구역 인근에서 도다리쑥국을 선보이는 횟집으로 소개됐다."
+      }
+    ]
+  },
+  {
+    id: "hyb-020",
+    name: "신신식당",
+    category: "한식",
+    address: "서울 성북구 삼선교로23길 7",
+    phone: "02-929-2913",
+    lat: 37.5899303502004,
+    lng: 127.014381909579,
+    kakaoUrl: "http://place.map.kakao.com/1275857761",
+    rating: null,
+    reviewCount: null,
+    youtubers: [
+      {
+        name: "식객 허영만의 백반기행",
+        videoTitle: null,
+        videoUrl: null,
+        recommendNote: "성신여대 인근의 우렁쌈밥 맛집으로 소개됐다."
+      }
+    ]
+  },
+  {
+    id: "hyb-021",
+    name: "창성옥 용문본점",
+    category: "해장국",
+    address: "서울 용산구 새창로 124-10",
+    phone: "02-718-2878",
+    lat: 37.5363747672842,
+    lng: 126.960412992937,
+    kakaoUrl: "http://place.map.kakao.com/10469081",
+    rating: null,
+    reviewCount: null,
+    youtubers: [
+      {
+        name: "식객 허영만의 백반기행",
+        videoTitle: null,
+        videoUrl: null,
+        recommendNote: "뼈전골을 곁들인 해장국 노포로 소개됐다."
+      }
+    ]
+  },
+  {
+    id: "hyb-022",
+    name: "잊지마 식당",
+    category: "한식",
+    address: "서울 중구 퇴계로41길 47",
+    phone: "02-2265-4328",
+    lat: 37.56393654999313,
+    lng: 126.99543746428647,
+    kakaoUrl: "http://place.map.kakao.com/16765311",
+    rating: null,
+    reviewCount: null,
+    youtubers: [
+      {
+        name: "식객 허영만의 백반기행",
+        videoTitle: null,
+        videoUrl: null,
+        recommendNote: "충무로에서 생선구이 백반을 선보이는 곳으로 소개됐다."
+      }
+    ]
+  },
+  {
+    id: "hyb-023",
+    name: "버섯잔치집 본점",
+    category: "샤브샤브",
+    address: "서울 강동구 성내로 52",
+    phone: "02-470-0092",
+    lat: 37.5282884155882,
+    lng: 127.125676399035,
+    kakaoUrl: "http://place.map.kakao.com/8313639",
+    rating: null,
+    reviewCount: null,
+    youtubers: [
+      {
+        name: "식객 허영만의 백반기행",
+        videoTitle: null,
+        videoUrl: null,
+        recommendNote: "강동구청 인근에서 버섯 무한리필을 선보이는 곳으로 소개됐다."
+      }
+    ]
+  },
+  {
+    id: "hyb-024",
+    name: "일미장어",
+    category: "장어",
+    address: "서울 용산구 후암로57길 35-15",
+    phone: "02-777-4380",
+    lat: 37.552157810329795,
+    lng: 126.97431417197112,
+    kakaoUrl: "http://place.map.kakao.com/16039548",
+    rating: null,
+    reviewCount: null,
+    youtubers: [
+      {
+        name: "식객 허영만의 백반기행",
+        videoTitle: null,
+        videoUrl: null,
+        recommendNote: "서울역 인근의 장어구이 맛집으로 소개됐다."
+      }
+    ]
+  },
+  {
+    id: "hyb-025",
+    name: "민정식당 본점",
+    category: "한식",
+    address: "서울 광진구 아차산로42길 41-4",
+    phone: "02-452-3574",
+    lat: 37.5355872979807,
+    lng: 127.079041930436,
+    kakaoUrl: "http://place.map.kakao.com/16085841",
+    rating: null,
+    reviewCount: null,
+    youtubers: [
+      {
+        name: "식객 허영만의 백반기행",
+        videoTitle: null,
+        videoUrl: null,
+        recommendNote: "설렁탕과 수육전골을 함께 선보이는 곳으로 소개됐다."
+      }
+    ]
+  },
+  {
+    id: "hyb-027",
+    name: "해남닭집",
+    category: "치킨",
+    address: "서울 광진구 능동로13길 46",
+    phone: "02-466-4656",
+    lat: 37.5439831154697,
+    lng: 127.069998313511,
+    kakaoUrl: "http://place.map.kakao.com/11499383",
+    rating: null,
+    reviewCount: null,
+    youtubers: [
+      {
+        name: "식객 허영만의 백반기행",
+        videoTitle: null,
+        videoUrl: null,
+        recommendNote: "건대 인근에서 옛날통닭을 선보이는 노포로 소개됐다."
+      }
+    ]
+  },
+  {
+    id: "hyb-028",
+    name: "돈불리제담",
+    category: "한식",
+    address: "서울 강남구 압구정로2길 46",
+    phone: "02-546-2995",
+    lat: 37.51877490915872,
+    lng: 127.02071755239015,
+    kakaoUrl: "http://place.map.kakao.com/267115983",
+    rating: null,
+    reviewCount: null,
+    youtubers: [
+      {
+        name: "식객 허영만의 백반기행",
+        videoTitle: null,
+        videoUrl: null,
+        recommendNote: "신사동에서 제주식 고기국수와 돔베고기를 선보이는 곳으로 소개됐다."
+      }
+    ]
+  },
+  {
+    id: "hyb-029",
+    name: "서울복집",
+    category: "복어",
+    address: "서울 중구 명동길 25-6",
+    phone: "02-3789-9389",
+    lat: 37.563986878949244,
+    lng: 126.98376682435733,
+    kakaoUrl: "http://place.map.kakao.com/1348519662",
+    rating: null,
+    reviewCount: null,
+    youtubers: [
+      {
+        name: "식객 허영만의 백반기행",
+        videoTitle: null,
+        videoUrl: null,
+        recommendNote: "명동에서 참복 요리를 선보이는 복어 전문점으로 소개됐다."
+      }
+    ]
+  },
+  {
+    id: "hyb-030",
+    name: "오복꼬리곰탕",
+    category: "곰탕",
+    address: "서울 서초구 강남대로97길 16",
+    phone: "02-542-4610",
+    lat: 37.514812614135614,
+    lng: 127.01881391373699,
+    kakaoUrl: "http://place.map.kakao.com/171777481",
+    rating: null,
+    reviewCount: null,
+    youtubers: [
+      {
+        name: "식객 허영만의 백반기행",
+        videoTitle: null,
+        videoUrl: null,
+        recommendNote: "신사역 인근의 꼬리곰탕 맛집으로 소개됐다."
+      }
+    ]
+  },
+  {
+    id: "hyb-031",
+    name: "다락정",
+    category: "한식",
+    address: "서울 종로구 삼청로 131-1",
+    phone: "02-725-1697",
+    lat: 37.58724572376609,
+    lng: 126.98152565031037,
+    kakaoUrl: "http://place.map.kakao.com/25732519",
+    rating: null,
+    reviewCount: null,
+    youtubers: [
+      {
+        name: "식객 허영만의 백반기행",
+        videoTitle: null,
+        videoUrl: null,
+        recommendNote: "삼청동에서 만두국·만두전골을 선보이는 곳으로 소개됐다."
+      }
+    ]
+  },
+  {
+    id: "hyb-032",
+    name: "동대문곱창",
+    category: "곱창,막창",
+    address: "서울 광진구 아차산로49길 9",
+    phone: "02-455-9194",
+    lat: 37.53730622503729,
+    lng: 127.08450869204134,
+    kakaoUrl: "http://place.map.kakao.com/16793832",
+    rating: null,
+    reviewCount: null,
+    youtubers: [
+      {
+        name: "식객 허영만의 백반기행",
+        videoTitle: null,
+        videoUrl: null,
+        recommendNote: "건대 인근의 곱창·닭볶음탕 맛집으로 소개됐다."
+      }
+    ]
+  },
+  {
+    id: "hyb-033",
+    name: "홍연옥콩나물국밥맛있는집",
+    category: "국밥",
+    address: "서울 중구 퇴계로 431",
+    phone: "02-2252-5489",
+    lat: 37.565813598827,
+    lng: 127.019536428171,
+    kakaoUrl: "http://place.map.kakao.com/1452642112",
+    rating: null,
+    reviewCount: null,
+    youtubers: [
+      {
+        name: "식객 허영만의 백반기행",
+        videoTitle: null,
+        videoUrl: null,
+        recommendNote: "신당역 인근의 콩나물국밥 맛집으로 소개됐다."
+      }
+    ]
+  },
+  {
+    id: "hyb-034",
+    name: "유원설렁탕",
+    category: "설렁탕",
+    address: "서울 송파구 삼전로 90",
+    phone: "02-414-2256",
+    lat: 37.5063922787565,
+    lng: 127.09012766229003,
+    kakaoUrl: "http://place.map.kakao.com/13141184",
+    rating: null,
+    reviewCount: null,
+    youtubers: [
+      {
+        name: "식객 허영만의 백반기행",
+        videoTitle: null,
+        videoUrl: null,
+        recommendNote: "잠실 인근에서 도가니탕을 함께 선보이는 설렁탕집으로 소개됐다."
+      }
+    ]
+  },
+  {
+    id: "hyb-035",
+    name: "주유소식당",
+    category: "한식",
+    address: "서울 중구 창경궁로5길 11",
+    phone: "02-2275-4935",
+    lat: 37.5671090155253,
+    lng: 126.997342275322,
+    kakaoUrl: "http://place.map.kakao.com/9464519",
+    rating: null,
+    reviewCount: null,
+    youtubers: [
+      {
+        name: "식객 허영만의 백반기행",
+        videoTitle: null,
+        videoUrl: null,
+        recommendNote: "을지로4가 인근에서 낙지볶음·제육볶음을 선보이는 곳으로 소개됐다."
+      }
+    ]
+  },
+  {
+    id: "hyb-036",
+    name: "춘천막국수",
+    category: "국수",
+    address: "서울 중구 다산로10길 6",
+    phone: "02-2232-2969",
+    lat: 37.553462727154525,
+    lng: 127.01030699031857,
+    kakaoUrl: "http://place.map.kakao.com/9974647",
+    rating: null,
+    reviewCount: null,
+    youtubers: [
+      {
+        name: "식객 허영만의 백반기행",
+        videoTitle: null,
+        videoUrl: null,
+        recommendNote: "약수역 인근에서 이북식 찜닭과 막국수를 함께 선보이는 곳으로 소개됐다."
+      }
+    ]
+  },
+  {
+    id: "hyb-037",
+    name: "목포낙지마을",
+    category: "해물,생선",
+    address: "서울 마포구 월드컵로32길 11",
+    phone: "02-333-1032",
+    lat: 37.562512961527226,
+    lng: 126.90534419340985,
+    kakaoUrl: "http://place.map.kakao.com/8997552",
+    rating: null,
+    reviewCount: null,
+    youtubers: [
+      {
+        name: "식객 허영만의 백반기행",
+        videoTitle: null,
+        videoUrl: null,
+        recommendNote: "마포구청역 인근에서 민어회를 선보이는 목포식 해산물 전문점으로 소개됐다."
+      }
+    ]
+  },
+  {
+    id: "hyb-038",
+    name: "신복촌",
+    category: "해물,생선",
+    address: "서울 영등포구 국제금융로8길 19",
+    phone: "02-706-2500",
+    lat: 37.52080894475147,
+    lng: 126.92928805480548,
+    kakaoUrl: "http://place.map.kakao.com/12725316",
+    rating: null,
+    reviewCount: null,
+    youtubers: [
+      {
+        name: "식객 허영만의 백반기행",
+        videoTitle: null,
+        videoUrl: null,
+        recommendNote: "여의도의 자연산 우럭 전문 횟집으로 소개됐다."
+      }
+    ]
+  },
+  {
+    id: "hyb-039",
+    name: "사랑방칼국수",
+    category: "칼국수",
+    address: "서울 중구 퇴계로27길 46",
+    phone: "02-2272-2020",
+    lat: 37.563266879496595,
+    lng: 126.99133001470943,
+    kakaoUrl: "http://place.map.kakao.com/7919722",
+    rating: null,
+    reviewCount: null,
+    youtubers: [
+      {
+        name: "식객 허영만의 백반기행",
+        videoTitle: null,
+        videoUrl: null,
+        recommendNote: "충무로에서 백숙과 칼국수를 함께 선보이는 곳으로 소개됐다."
+      }
+    ]
+  },
+  {
+    id: "hyb-040",
+    name: "황평집",
+    category: "닭요리",
+    address: "서울 중구 마른내로 74",
+    phone: "02-2266-6875",
+    lat: 37.5640672191679,
+    lng: 126.996129025206,
+    kakaoUrl: "http://place.map.kakao.com/12751485",
+    rating: null,
+    reviewCount: null,
+    youtubers: [
+      {
+        name: "식객 허영만의 백반기행",
+        videoTitle: null,
+        videoUrl: null,
+        recommendNote: "충무로 인근의 닭곰탕·닭무침 맛집으로 소개됐다."
+      }
+    ]
+  },
+  {
+    id: "hyb-041",
+    name: "김경자원조손칼국수보쌈",
+    category: "칼국수",
+    address: "서울 성동구 금호산2길 20-1",
+    phone: null,
+    lat: 37.5487924548573,
+    lng: 127.021837121177,
+    kakaoUrl: "http://place.map.kakao.com/323486428",
+    rating: null,
+    reviewCount: null,
+    youtubers: [
+      {
+        name: "식객 허영만의 백반기행",
+        videoTitle: null,
+        videoUrl: null,
+        recommendNote: "금남시장 인근에서 손칼국수와 보쌈을 함께 선보이는 곳으로 소개됐다."
+      }
+    ]
+  },
+  {
+    id: "hyb-042",
+    name: "광주식당",
+    category: "해물,생선",
+    address: "서울 종로구 지봉로2길 15",
+    phone: "02-2236-5247",
+    lat: 37.57084146864495,
+    lng: 127.01753642468066,
+    kakaoUrl: "http://place.map.kakao.com/1407123477",
+    rating: null,
+    reviewCount: null,
+    youtubers: [
+      {
+        name: "식객 허영만의 백반기행",
+        videoTitle: null,
+        videoUrl: null,
+        recommendNote: "동묘 인근의 동태탕 맛집으로 소개됐다."
       }
     ]
   }
