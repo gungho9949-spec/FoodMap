@@ -99,6 +99,12 @@ const CURATED_FOOD = [
         videoTitle: null,
         videoUrl: null,
         recommendNote: "서울로7017 인근에 위치한 닭요리 전문점으로, 팬들 사이에서 대표 방문 맛집으로 회자된다."
+      },
+      {
+        name: "최자로드",
+        videoTitle: null,
+        videoUrl: null,
+        recommendNote: "서울역 인근의 닭꼬치·닭도리탕 맛집으로 웨이팅이 많은 곳으로 소개됐다."
       }
     ]
   },
@@ -1465,6 +1471,12 @@ const CURATED_FOOD = [
         videoTitle: null,
         videoUrl: null,
         recommendNote: "쯔양이 방문해 리뷰한 한식 맛집."
+      },
+      {
+        name: "최자로드",
+        videoTitle: null,
+        videoUrl: null,
+        recommendNote: "서교동에서 만두국·만두전골을 선보이는 곳으로 소개됐다."
       }
     ]
   },
@@ -2917,6 +2929,12 @@ const CURATED_FOOD = [
         videoTitle: null,
         videoUrl: null,
         recommendNote: "쯔양이 방문해 리뷰한 한식 맛집."
+      },
+      {
+        name: "최자로드",
+        videoTitle: null,
+        videoUrl: null,
+        recommendNote: "육개장에 칼국수를 더한 독자적인 메뉴로 소개됐다."
       }
     ]
   },
@@ -7007,6 +7025,12 @@ const CURATED_FOOD = [
         videoTitle: null,
         videoUrl: null,
         recommendNote: "쯔양이 방문해 리뷰한 고기 맛집."
+      },
+      {
+        name: "최자로드",
+        videoTitle: null,
+        videoUrl: null,
+        recommendNote: "대림역 인근의 양꼬치·양다리구이 맛집으로 소개됐다."
       }
     ]
   },
@@ -9213,6 +9237,12 @@ const CURATED_FOOD = [
         videoTitle: null,
         videoUrl: null,
         recommendNote: null
+      },
+      {
+        name: "최자로드",
+        videoTitle: null,
+        videoUrl: null,
+        recommendNote: "서래마을의 감자탕 맛집으로 소개됐다."
       }
     ]
   },
@@ -11753,6 +11783,706 @@ const CURATED_FOOD = [
         videoTitle: null,
         videoUrl: null,
         recommendNote: "부천의 막창 전문점으로 소개됐다."
+      }
+    ]
+  },
+  {
+    id: "czr-001",
+    name: "월래순교자관",
+    category: "중국요리",
+    address: "서울 구로구 디지털로19길 13",
+    phone: "02-855-8488",
+    lat: 37.4802731041657,
+    lng: 126.889810723306,
+    kakaoUrl: "http://place.map.kakao.com/1125944924",
+    rating: null,
+    reviewCount: null,
+    youtubers: [
+      {
+        name: "최자로드",
+        videoTitle: null,
+        videoUrl: null,
+        recommendNote: "가리봉동에서 군만두·소롱포로 신뢰받는 중식당으로 소개됐다."
+      }
+    ]
+  },
+  {
+    id: "czr-002",
+    name: "심마니약초백숙",
+    category: "닭요리",
+    address: "서울 성동구 성덕정13길 4",
+    phone: "02-466-9368",
+    lat: 37.53808482920842,
+    lng: 127.05340996120808,
+    kakaoUrl: "http://place.map.kakao.com/27594348",
+    rating: null,
+    reviewCount: null,
+    youtubers: [
+      {
+        name: "최자로드",
+        videoTitle: null,
+        videoUrl: null,
+        recommendNote: "직접 캐온 산약초로 끓이는 백숙을 선보이는 성수동 맛집으로 소개됐다."
+      }
+    ]
+  },
+  {
+    id: "czr-003",
+    name: "야반",
+    category: "한정식",
+    address: "경기 이천시 경충대로 2849",
+    phone: "031-633-9970",
+    lat: 37.2902794670161,
+    lng: 127.425607180687,
+    kakaoUrl: "http://place.map.kakao.com/991903346",
+    rating: null,
+    reviewCount: null,
+    youtubers: [
+      {
+        name: "최자로드",
+        videoTitle: null,
+        videoUrl: null,
+        recommendNote: "이천 현지에서도 인기가 많은 한정식집으로, 방송 이후 더 유명해진 곳으로 소개됐다."
+      }
+    ]
+  },
+  {
+    id: "czr-004",
+    name: "만선호프",
+    category: "호프,요리주점",
+    address: "서울 중구 충무로9길 14",
+    phone: null,
+    lat: 37.5671528905606,
+    lng: 126.991532176337,
+    kakaoUrl: "http://place.map.kakao.com/1745558364",
+    rating: null,
+    reviewCount: null,
+    youtubers: [
+      {
+        name: "최자로드",
+        videoTitle: null,
+        videoUrl: null,
+        recommendNote: "을지로 노가리 골목의 대표 호프집으로 소개됐다."
+      }
+    ]
+  },
+  {
+    id: "czr-005",
+    name: "혜장국",
+    category: "한식",
+    address: "서울 서초구 사평대로56길 4",
+    phone: null,
+    lat: 37.503456573558,
+    lng: 127.022675514232,
+    kakaoUrl: "http://place.map.kakao.com/1581082162",
+    rating: null,
+    reviewCount: null,
+    youtubers: [
+      {
+        name: "최자로드",
+        videoTitle: null,
+        videoUrl: null,
+        recommendNote: "신논현 인근에서 대구식 육개장을 선보이는 맛집으로 소개됐다."
+      }
+    ]
+  },
+  {
+    id: "czr-006",
+    name: "송강",
+    category: "장어",
+    address: "서울 서초구 명달로9길 5",
+    phone: "02-598-9288",
+    lat: 37.48188855125893,
+    lng: 127.00448631281752,
+    kakaoUrl: "http://place.map.kakao.com/11892091",
+    rating: null,
+    reviewCount: null,
+    youtubers: [
+      {
+        name: "최자로드",
+        videoTitle: null,
+        videoUrl: null,
+        recommendNote: "방배동에서 황복 사시미와 황복지리를 선보이는 곳으로 소개됐다."
+      }
+    ]
+  },
+  {
+    id: "czr-007",
+    name: "고도식 마포점",
+    category: "육류,고기",
+    address: "서울 마포구 마포대로1길 16",
+    phone: "02-6952-8684",
+    lat: 37.539701421130765,
+    lng: 126.9431536656136,
+    kakaoUrl: "http://place.map.kakao.com/1142993069",
+    rating: null,
+    reviewCount: null,
+    youtubers: [
+      {
+        name: "최자로드",
+        videoTitle: null,
+        videoUrl: null,
+        recommendNote: "알등심과 발효 목살 등 다양한 부위를 선보이는 마포의 고깃집으로 소개됐다."
+      }
+    ]
+  },
+  {
+    id: "czr-008",
+    name: "을지로 산수갑산 을지로점",
+    category: "순대",
+    address: "서울 중구 을지로20길 24",
+    phone: null,
+    lat: 37.56537903946138,
+    lng: 126.99529702271732,
+    kakaoUrl: "http://place.map.kakao.com/27072121",
+    rating: null,
+    reviewCount: null,
+    youtubers: [
+      {
+        name: "최자로드",
+        videoTitle: null,
+        videoUrl: null,
+        recommendNote: "을지로의 유명 순대국밥집으로, 순대정식이 대표 메뉴로 소개됐다."
+      }
+    ]
+  },
+  {
+    id: "czr-009",
+    name: "뫼촌",
+    category: "닭요리",
+    address: "서울 마포구 새창로6길 18",
+    phone: "02-711-9966",
+    lat: 37.54124633240712,
+    lng: 126.95267988084042,
+    kakaoUrl: "http://place.map.kakao.com/2121293267",
+    rating: null,
+    reviewCount: null,
+    youtubers: [
+      {
+        name: "최자로드",
+        videoTitle: null,
+        videoUrl: null,
+        recommendNote: "공덕 인근의 닭볶음탕·감자전 맛집으로 소개됐다."
+      }
+    ]
+  },
+  {
+    id: "czr-010",
+    name: "중화요리팔공",
+    category: "중국요리",
+    address: "서울 관악구 남부순환로 1680",
+    phone: "02-877-9815",
+    lat: 37.48405234129973,
+    lng: 126.9371129279526,
+    kakaoUrl: "http://place.map.kakao.com/1518802779",
+    rating: null,
+    reviewCount: null,
+    youtubers: [
+      {
+        name: "최자로드",
+        videoTitle: null,
+        videoUrl: null,
+        recommendNote: "신림에서 짜장면보다 짬뽕이 유명하다고 소개된 중식당으로, 늘 웨이팅이 있는 곳이다."
+      }
+    ]
+  },
+  {
+    id: "czr-011",
+    name: "산동만두",
+    category: "분식",
+    address: "서울 용산구 후암로28길 10",
+    phone: "02-3789-8285",
+    lat: 37.5498618736387,
+    lng: 126.977806097361,
+    kakaoUrl: "http://place.map.kakao.com/78191558",
+    rating: null,
+    reviewCount: null,
+    youtubers: [
+      {
+        name: "최자로드",
+        videoTitle: null,
+        videoUrl: null,
+        recommendNote: "후암동의 만두·군만두 맛집으로 소개됐다."
+      }
+    ]
+  },
+  {
+    id: "czr-012",
+    name: "금강산",
+    category: "한식",
+    address: "서울 용산구 청파로 303",
+    phone: "02-713-6650",
+    lat: 37.54665621823538,
+    lng: 126.97008387342409,
+    kakaoUrl: "http://place.map.kakao.com/13026428",
+    rating: null,
+    reviewCount: null,
+    youtubers: [
+      {
+        name: "최자로드",
+        videoTitle: null,
+        videoUrl: null,
+        recommendNote: "숙대 인근에서 묵은지 삼겹살을 선보이는 맛집으로 소개됐다."
+      }
+    ]
+  },
+  {
+    id: "czr-013",
+    name: "신당한우곱창",
+    category: "곱창,막창",
+    address: "서울 중구 다산로 236",
+    phone: "02-552-7850",
+    lat: 37.5639580504948,
+    lng: 127.016208268417,
+    kakaoUrl: "http://place.map.kakao.com/868837637",
+    rating: null,
+    reviewCount: null,
+    youtubers: [
+      {
+        name: "최자로드",
+        videoTitle: null,
+        videoUrl: null,
+        recommendNote: "신당역 인근의 한우곱창 전문점으로 소개됐다."
+      }
+    ]
+  },
+  {
+    id: "czr-014",
+    name: "대머리식당",
+    category: "한식",
+    address: "서울 성북구 돌곶이로 162",
+    phone: "02-915-9233",
+    lat: 37.6158344635536,
+    lng: 127.051064309237,
+    kakaoUrl: "http://place.map.kakao.com/12098241",
+    rating: null,
+    reviewCount: null,
+    youtubers: [
+      {
+        name: "최자로드",
+        videoTitle: null,
+        videoUrl: null,
+        recommendNote: "장위동에서 생선구이와 돌솥밥을 선보이는 노포로 소개됐다."
+      }
+    ]
+  },
+  {
+    id: "czr-015",
+    name: "홍지로스",
+    category: "한식",
+    address: "서울 종로구 삼일대로 428",
+    phone: null,
+    lat: 37.57308294850953,
+    lng: 126.98812305173762,
+    kakaoUrl: "http://place.map.kakao.com/2057838663",
+    rating: null,
+    reviewCount: null,
+    youtubers: [
+      {
+        name: "최자로드",
+        videoTitle: null,
+        videoUrl: null,
+        recommendNote: "낙원상가 인근의 삼겹살·차돌박이 맛집으로 소개됐다."
+      }
+    ]
+  },
+  {
+    id: "czr-016",
+    name: "오죽이네",
+    category: "닭요리",
+    address: "서울 종로구 돈화문로11가길 25",
+    phone: "02-741-8874",
+    lat: 37.57375803293386,
+    lng: 126.99080354567869,
+    kakaoUrl: "http://place.map.kakao.com/16734831",
+    rating: null,
+    reviewCount: null,
+    youtubers: [
+      {
+        name: "최자로드",
+        videoTitle: null,
+        videoUrl: null,
+        recommendNote: "익선동의 닭매운탕 맛집으로, 인기가 많아 별관까지 운영한다고 소개됐다."
+      }
+    ]
+  },
+  {
+    id: "czr-017",
+    name: "브리즈 버거",
+    category: "햄버거",
+    address: "서울 서초구 방배로19길 14",
+    phone: "0502-5553-7615",
+    lat: 37.4852699787426,
+    lng: 126.994184942873,
+    kakaoUrl: "http://place.map.kakao.com/996411963",
+    rating: null,
+    reviewCount: null,
+    youtubers: [
+      {
+        name: "최자로드",
+        videoTitle: null,
+        videoUrl: null,
+        recommendNote: "내방역 인근의 수제버거 맛집으로 소개됐다."
+      }
+    ]
+  },
+  {
+    id: "czr-018",
+    name: "대화정진짜해장국",
+    category: "해장국",
+    address: "서울 중구 장충단로 249-20",
+    phone: "0507-1348-8485",
+    lat: 37.567537664098374,
+    lng: 127.00776494708423,
+    kakaoUrl: "http://place.map.kakao.com/8895765",
+    rating: null,
+    reviewCount: null,
+    youtubers: [
+      {
+        name: "최자로드",
+        videoTitle: null,
+        videoUrl: null,
+        recommendNote: "선지가 풍성하게 들어간 해장국으로 소개됐다."
+      }
+    ]
+  },
+  {
+    id: "czr-020",
+    name: "카와카츠 합정점",
+    category: "돈까스,우동",
+    address: "서울 마포구 양화로 78-7",
+    phone: "0507-1365-6317",
+    lat: 37.5515073363916,
+    lng: 126.917421754867,
+    kakaoUrl: "http://place.map.kakao.com/1363495640",
+    rating: null,
+    reviewCount: null,
+    youtubers: [
+      {
+        name: "최자로드",
+        videoTitle: null,
+        videoUrl: null,
+        recommendNote: "비계 손질이 뛰어난 카츠 전문점으로 소개됐다."
+      }
+    ]
+  },
+  {
+    id: "czr-021",
+    name: "사랑방 참숯화로구이",
+    category: "육류,고기",
+    address: "서울 용산구 신흥로36길 4",
+    phone: "02-774-5950",
+    lat: 37.54640812590351,
+    lng: 126.98178921083972,
+    kakaoUrl: "http://place.map.kakao.com/15413494",
+    rating: null,
+    reviewCount: null,
+    youtubers: [
+      {
+        name: "최자로드",
+        videoTitle: null,
+        videoUrl: null,
+        recommendNote: "후암동의 참숯 화로구이 삼겹살 맛집으로 소개됐다."
+      }
+    ]
+  },
+  {
+    id: "czr-022",
+    name: "신림순대곱창볶음",
+    category: "순대",
+    address: "서울 용산구 한강대로62길 18",
+    phone: null,
+    lat: 37.53413127317479,
+    lng: 126.97323306940186,
+    kakaoUrl: "http://place.map.kakao.com/15662545",
+    rating: null,
+    reviewCount: null,
+    youtubers: [
+      {
+        name: "최자로드",
+        videoTitle: null,
+        videoUrl: null,
+        recommendNote: "삼각지 인근에서 순대볶음·곱창볶음을 선보이는 곳으로 소개됐다."
+      }
+    ]
+  },
+  {
+    id: "czr-023",
+    name: "목로",
+    category: "한식",
+    address: "서울 강남구 압구정로28길 18",
+    phone: null,
+    lat: 37.52550130032503,
+    lng: 127.02755008720861,
+    kakaoUrl: "http://place.map.kakao.com/7866991",
+    rating: null,
+    reviewCount: null,
+    youtubers: [
+      {
+        name: "최자로드",
+        videoTitle: null,
+        videoUrl: null,
+        recommendNote: "압구정의 만두국·평양만두 맛집으로 소개됐다."
+      }
+    ]
+  },
+  {
+    id: "czr-025",
+    name: "신비갈비살 본점",
+    category: "육류,고기",
+    address: "서울 강남구 강남대로158길 15",
+    phone: "02-543-5992",
+    lat: 37.51912099743737,
+    lng: 127.02012151373633,
+    kakaoUrl: "http://place.map.kakao.com/1390828006",
+    rating: null,
+    reviewCount: null,
+    youtubers: [
+      {
+        name: "최자로드",
+        videoTitle: null,
+        videoUrl: null,
+        recommendNote: "짝갈비·한우갈비 전문점으로 소개됐다."
+      }
+    ]
+  },
+  {
+    id: "czr-026",
+    name: "미성옥",
+    category: "설렁탕",
+    address: "서울 중구 명동길 25-11",
+    phone: "02-776-8929",
+    lat: 37.5641707054203,
+    lng: 126.983936564299,
+    kakaoUrl: "http://place.map.kakao.com/19157171",
+    rating: null,
+    reviewCount: null,
+    youtubers: [
+      {
+        name: "최자로드",
+        videoTitle: null,
+        videoUrl: null,
+        recommendNote: "명동의 설렁탕·수육 노포로 소개됐다."
+      }
+    ]
+  },
+  {
+    id: "czr-027",
+    name: "카와카츠 본점",
+    category: "돈까스,우동",
+    address: "서울 마포구 동교로 126",
+    phone: "070-8801-2053",
+    lat: 37.554741054656375,
+    lng: 126.916195926392,
+    kakaoUrl: "http://place.map.kakao.com/1351221007",
+    rating: null,
+    reviewCount: null,
+    youtubers: [
+      {
+        name: "최자로드",
+        videoTitle: null,
+        videoUrl: null,
+        recommendNote: "홍대 인근의 카츠 전문점 본점으로 소개됐다."
+      }
+    ]
+  },
+  {
+    id: "czr-028",
+    name: "우촌숯불갈비",
+    category: "육류,고기",
+    address: "서울 성동구 장터길 44-1",
+    phone: "02-2292-9072",
+    lat: 37.5481466436773,
+    lng: 127.02069965148,
+    kakaoUrl: "http://place.map.kakao.com/9307166",
+    rating: null,
+    reviewCount: null,
+    youtubers: [
+      {
+        name: "최자로드",
+        videoTitle: null,
+        videoUrl: null,
+        recommendNote: "금호동의 숯불 삼겹살 맛집으로 소개됐다."
+      }
+    ]
+  },
+  {
+    id: "czr-029",
+    name: "성천막국수 답십리점",
+    category: "한식",
+    address: "서울 동대문구 답십리로48나길 2",
+    phone: "02-2244-5529",
+    lat: 37.56988437438424,
+    lng: 127.05780878599663,
+    kakaoUrl: "http://place.map.kakao.com/9141738",
+    rating: null,
+    reviewCount: null,
+    youtubers: [
+      {
+        name: "최자로드",
+        videoTitle: null,
+        videoUrl: null,
+        recommendNote: "답십리의 막국수·제육 맛집으로 소개됐다."
+      }
+    ]
+  },
+  {
+    id: "czr-030",
+    name: "최가네황소곱창",
+    category: "육류,고기",
+    address: "서울 종로구 돈화문로4길 27",
+    phone: "02-2274-6683",
+    lat: 37.57012181541133,
+    lng: 126.99386480069762,
+    kakaoUrl: "http://place.map.kakao.com/16415346",
+    rating: null,
+    reviewCount: null,
+    youtubers: [
+      {
+        name: "최자로드",
+        videoTitle: null,
+        videoUrl: null,
+        recommendNote: "종로3가의 소곱창 전문점으로 소개됐다."
+      }
+    ]
+  },
+  {
+    id: "czr-032",
+    name: "조선옥",
+    category: "육류,고기",
+    address: "서울 중구 을지로15길 6-5",
+    phone: "02-2266-0333",
+    lat: 37.5667899215171,
+    lng: 126.993638692943,
+    kakaoUrl: "http://place.map.kakao.com/649080277",
+    rating: null,
+    reviewCount: null,
+    youtubers: [
+      {
+        name: "최자로드",
+        videoTitle: null,
+        videoUrl: null,
+        recommendNote: "을지로3가의 양념갈비·갈비탕 노포로 소개됐다."
+      }
+    ]
+  },
+  {
+    id: "czr-033",
+    name: "평양집",
+    category: "육류,고기",
+    address: "서울 용산구 한강대로 186",
+    phone: "02-798-3989",
+    lat: 37.5348864781984,
+    lng: 126.973977275672,
+    kakaoUrl: "http://place.map.kakao.com/8122347",
+    rating: null,
+    reviewCount: null,
+    youtubers: [
+      {
+        name: "최자로드",
+        videoTitle: null,
+        videoUrl: null,
+        recommendNote: "삼각지의 내장탕·내장곰탕 맛집으로 소개됐다."
+      }
+    ]
+  },
+  {
+    id: "czr-034",
+    name: "대물섬",
+    category: "한식",
+    address: "서울 용산구 독서당로 65-11",
+    phone: "070-8870-6707",
+    lat: 37.5340691545836,
+    lng: 127.008131446965,
+    kakaoUrl: "http://place.map.kakao.com/1827653054",
+    rating: null,
+    reviewCount: null,
+    youtubers: [
+      {
+        name: "최자로드",
+        videoTitle: null,
+        videoUrl: null,
+        recommendNote: "한남동의 숙성회 횟집으로 소개됐다."
+      }
+    ]
+  },
+  {
+    id: "czr-035",
+    name: "금돼지식당",
+    category: "육류,고기",
+    address: "서울 중구 다산로 149",
+    phone: "0507-1307-8750",
+    lat: 37.55705875134064,
+    lng: 127.01167974212188,
+    kakaoUrl: "http://place.map.kakao.com/1065693087",
+    rating: null,
+    reviewCount: null,
+    youtubers: [
+      {
+        name: "최자로드",
+        videoTitle: null,
+        videoUrl: null,
+        recommendNote: "약수역 인근의 삼겹살·꽃목살 맛집으로 소개됐다."
+      }
+    ]
+  },
+  {
+    id: "czr-036",
+    name: "봉구네가마솥순대국",
+    category: "순대",
+    address: "서울 서대문구 증가로10길 50",
+    phone: "02-373-1170",
+    lat: 37.57914579363387,
+    lng: 126.92477247953684,
+    kakaoUrl: "http://place.map.kakao.com/26546071",
+    rating: null,
+    reviewCount: null,
+    youtubers: [
+      {
+        name: "최자로드",
+        videoTitle: null,
+        videoUrl: null,
+        recommendNote: "가마솥에 끓인 순대국을 선보이는 맛집으로 소개됐다."
+      }
+    ]
+  },
+  {
+    id: "czr-037",
+    name: "스시702",
+    category: "초밥,롤",
+    address: "서울 강남구 압구정로28길 31",
+    phone: null,
+    lat: 37.524466905586046,
+    lng: 127.02773862814922,
+    kakaoUrl: "http://place.map.kakao.com/1341632439",
+    rating: null,
+    reviewCount: null,
+    youtubers: [
+      {
+        name: "최자로드",
+        videoTitle: null,
+        videoUrl: null,
+        recommendNote: "압구정의 초밥·캘리포니아롤 맛집으로 소개됐다."
+      }
+    ]
+  },
+  {
+    id: "czr-038",
+    name: "닭진미",
+    category: "닭요리",
+    address: "서울 중구 남대문시장길 22-20",
+    phone: "02-753-9063",
+    lat: 37.55956187021395,
+    lng: 126.97704718094006,
+    kakaoUrl: "http://place.map.kakao.com/8167414",
+    rating: null,
+    reviewCount: null,
+    youtubers: [
+      {
+        name: "최자로드",
+        videoTitle: null,
+        videoUrl: null,
+        recommendNote: "남대문시장의 닭곰탕 노포로 소개됐다."
       }
     ]
   }
