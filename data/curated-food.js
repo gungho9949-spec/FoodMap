@@ -489,26 +489,6 @@ const CURATED_FOOD = [
     ]
   },
   {
-    id: "jjy-025",
-    name: "격포어촌계수산물회센타",
-    category: "수산물판매",
-    address: "전북특별자치도 부안군 변산면 격포항길 24-5",
-    phone: "063-582-8939",
-    lat: 35.62349005007636,
-    lng: 126.47029020100011,
-    kakaoUrl: "http://place.map.kakao.com/15332394",
-    rating: null,
-    reviewCount: null,
-    youtubers: [
-      {
-        name: "쯔양",
-        videoTitle: null,
-        videoUrl: null,
-        recommendNote: "쯔양이 방문해 리뷰한 돈까스·회 전문점."
-      }
-    ]
-  },
-  {
     id: "jjy-026",
     name: "경주축산농협 축산물프라자",
     category: "육류,고기",
@@ -729,26 +709,6 @@ const CURATED_FOOD = [
     ]
   },
   {
-    id: "jjy-038",
-    name: "광명새마을시장 공영주차장",
-    category: "공영주차장",
-    address: "경기 광명시 광명동 290-10",
-    phone: "02-2614-5292",
-    lat: 37.47426168664403,
-    lng: 126.85055137039359,
-    kakaoUrl: "http://place.map.kakao.com/2067482324",
-    rating: null,
-    reviewCount: null,
-    youtubers: [
-      {
-        name: "쯔양",
-        videoTitle: null,
-        videoUrl: null,
-        recommendNote: "쯔양이 방문해 리뷰한 맛집."
-      }
-    ]
-  },
-  {
     id: "jjy-039",
     name: "광명홍두깨칼국수 본점",
     category: "칼국수",
@@ -797,26 +757,6 @@ const CURATED_FOOD = [
     lat: 37.5605446535829,
     lng: 126.838427289344,
     kakaoUrl: "http://place.map.kakao.com/455388326",
-    rating: null,
-    reviewCount: null,
-    youtubers: [
-      {
-        name: "쯔양",
-        videoTitle: null,
-        videoUrl: null,
-        recommendNote: "쯔양이 방문해 리뷰한 한식 맛집."
-      }
-    ]
-  },
-  {
-    id: "jjy-042",
-    name: "괴산두레학교",
-    category: "특수학교",
-    address: "충북 괴산군 괴산읍 읍내로2길 27-10",
-    phone: "0507-1396-0087",
-    lat: 36.8069049655342,
-    lng: 127.790998743765,
-    kakaoUrl: "http://place.map.kakao.com/1020151813",
     rating: null,
     reviewCount: null,
     youtubers: [
@@ -885,26 +825,6 @@ const CURATED_FOOD = [
         videoTitle: null,
         videoUrl: null,
         recommendNote: "쯔양이 방문해 리뷰한 중식 맛집."
-      }
-    ]
-  },
-  {
-    id: "jjy-046",
-    name: "국립암센터 본관 정문",
-    category: "입출구",
-    address: "경기 고양시 일산동구 일산로 323",
-    phone: "1577-8877",
-    lat: 37.6635837397188,
-    lng: 126.783511093128,
-    kakaoUrl: "http://place.map.kakao.com/1701535637",
-    rating: null,
-    reviewCount: null,
-    youtubers: [
-      {
-        name: "쯔양",
-        videoTitle: null,
-        videoUrl: null,
-        recommendNote: "쯔양이 방문해 리뷰한 양식 맛집."
       }
     ]
   },
@@ -1629,26 +1549,6 @@ const CURATED_FOOD = [
     ]
   },
   {
-    id: "jjy-085",
-    name: "노량진수산물도매시장",
-    category: "시장",
-    address: "서울 동작구 노들로 674",
-    phone: "02-2254-8000",
-    lat: 37.514766187527776,
-    lng: 126.93777601640095,
-    kakaoUrl: "http://place.map.kakao.com/8205369",
-    rating: null,
-    reviewCount: null,
-    youtubers: [
-      {
-        name: "쯔양",
-        videoTitle: null,
-        videoUrl: null,
-        recommendNote: "쯔양이 방문해 리뷰한 돈까스·회 전문점."
-      }
-    ]
-  },
-  {
     id: "jjy-086",
     name: "녹원",
     category: "한식",
@@ -1685,26 +1585,6 @@ const CURATED_FOOD = [
         videoTitle: null,
         videoUrl: null,
         recommendNote: "쯔양이 방문해 리뷰한 분식 맛집."
-      }
-    ]
-  },
-  {
-    id: "jjy-088",
-    name: "농업회사법인 보성싱싱농원",
-    category: "식품가공,제조",
-    address: "전남광주통합특별시 보성군 조성면 조성봉산길 5",
-    phone: "010-6727-3032",
-    lat: 34.7936124092205,
-    lng: 127.222128441962,
-    kakaoUrl: "http://place.map.kakao.com/1483741259",
-    rating: null,
-    reviewCount: null,
-    youtubers: [
-      {
-        name: "쯔양",
-        videoTitle: null,
-        videoUrl: null,
-        recommendNote: "쯔양이 방문해 리뷰한 카페·디저트 맛집."
       }
     ]
   },
@@ -1877,26 +1757,6 @@ const CURATED_FOOD = [
     lat: 35.373554792626,
     lng: 127.14044024629,
     kakaoUrl: "http://place.map.kakao.com/18495699",
-    rating: null,
-    reviewCount: null,
-    youtubers: [
-      {
-        name: "쯔양",
-        videoTitle: null,
-        videoUrl: null,
-        recommendNote: "쯔양이 방문해 리뷰한 한식 맛집."
-      }
-    ]
-  },
-  {
-    id: "jjy-098",
-    name: "대성식품",
-    category: "식품판매",
-    address: "서울 중구 을지로30길 51",
-    phone: "02-2279-1340",
-    lat: 37.5648169082223,
-    lng: 126.999117137252,
-    kakaoUrl: "http://place.map.kakao.com/15751431",
     rating: null,
     reviewCount: null,
     youtubers: [
@@ -2857,26 +2717,6 @@ const CURATED_FOOD = [
         videoTitle: null,
         videoUrl: null,
         recommendNote: "쯔양이 방문해 리뷰한 돈까스·회 전문점."
-      }
-    ]
-  },
-  {
-    id: "jjy-146",
-    name: "명성슈퍼",
-    category: "슈퍼마켓",
-    address: "서울 영등포구 도림로141다길 31-3",
-    phone: "010-2127-9344",
-    lat: 37.5155097221703,
-    lng: 126.888928686931,
-    kakaoUrl: "http://place.map.kakao.com/848905473",
-    rating: null,
-    reviewCount: null,
-    youtubers: [
-      {
-        name: "쯔양",
-        videoTitle: null,
-        videoUrl: null,
-        recommendNote: "쯔양이 방문해 리뷰한 한식 맛집."
       }
     ]
   },
@@ -5199,26 +5039,6 @@ const CURATED_FOOD = [
     ]
   },
   {
-    id: "jjy-264",
-    name: "엄마네한우",
-    category: "정육점",
-    address: "경기 남양주시 진접읍 진벌로 52",
-    phone: "1877-4495",
-    lat: 37.74457220247481,
-    lng: 127.21103681331071,
-    kakaoUrl: "http://place.map.kakao.com/1883680407",
-    rating: null,
-    reviewCount: null,
-    youtubers: [
-      {
-        name: "쯔양",
-        videoTitle: null,
-        videoUrl: null,
-        recommendNote: "쯔양이 방문해 리뷰한 고기 맛집."
-      }
-    ]
-  },
-  {
     id: "jjy-265",
     name: "에이스분식",
     category: "분식",
@@ -6671,26 +6491,6 @@ const CURATED_FOOD = [
     ]
   },
   {
-    id: "jjy-338",
-    name: "장계향문화체험교육원",
-    category: "체험학습장",
-    address: "경북 영양군 석보면 두들마을1길 42",
-    phone: "054-680-6440",
-    lat: 36.5614392931691,
-    lng: 129.128639230486,
-    kakaoUrl: "http://place.map.kakao.com/1320546155",
-    rating: null,
-    reviewCount: null,
-    youtubers: [
-      {
-        name: "쯔양",
-        videoTitle: null,
-        videoUrl: null,
-        recommendNote: "쯔양이 방문해 리뷰한 맛집."
-      }
-    ]
-  },
-  {
     id: "jjy-339",
     name: "장꼬방묵은김치찌개전문",
     category: "찌개,전골",
@@ -6971,26 +6771,6 @@ const CURATED_FOOD = [
     ]
   },
   {
-    id: "jjy-353",
-    name: "제너시스치킨대학",
-    category: "연수원",
-    address: "경기 이천시 마장면 서이천로528번길 191",
-    phone: "031-635-8463",
-    lat: 37.2704724225422,
-    lng: 127.413039639908,
-    kakaoUrl: "http://place.map.kakao.com/8068165",
-    rating: null,
-    reviewCount: null,
-    youtubers: [
-      {
-        name: "쯔양",
-        videoTitle: null,
-        videoUrl: null,
-        recommendNote: "쯔양이 방문해 리뷰한 치킨 전문점."
-      }
-    ]
-  },
-  {
     id: "jjy-354",
     name: "제일곱창 본점",
     category: "곱창,막창",
@@ -7127,26 +6907,6 @@ const CURATED_FOOD = [
         videoTitle: null,
         videoUrl: null,
         recommendNote: "쯔양이 방문해 리뷰한 족발·보쌈 맛집."
-      }
-    ]
-  },
-  {
-    id: "jjy-363",
-    name: "준코뮤직타운 신림2호점",
-    category: "준코뮤직타운",
-    address: "서울 관악구 신림로59길 14",
-    phone: "02-877-1243",
-    lat: 37.483290761384,
-    lng: 126.928773935271,
-    kakaoUrl: "http://place.map.kakao.com/27376903",
-    rating: null,
-    reviewCount: null,
-    youtubers: [
-      {
-        name: "쯔양",
-        videoTitle: null,
-        videoUrl: null,
-        recommendNote: "쯔양이 방문해 리뷰한 야식 맛집."
       }
     ]
   },
@@ -8117,26 +7877,6 @@ const CURATED_FOOD = [
     ]
   },
   {
-    id: "jjy-412",
-    name: "트멍캠핑장",
-    category: "야영,캠핑장",
-    address: "경기 포천시 소흘읍 광릉수목원로 932-2",
-    phone: "010-7604-6606",
-    lat: 37.7794956869446,
-    lng: 127.141591746331,
-    kakaoUrl: "http://place.map.kakao.com/877084488",
-    rating: null,
-    reviewCount: null,
-    youtubers: [
-      {
-        name: "쯔양",
-        videoTitle: null,
-        videoUrl: null,
-        recommendNote: "쯔양이 방문해 리뷰한 고기 맛집."
-      }
-    ]
-  },
-  {
     id: "jjy-413",
     name: "파이브가이즈 강남",
     category: "햄버거",
@@ -8357,26 +8097,6 @@ const CURATED_FOOD = [
     ]
   },
   {
-    id: "jjy-424",
-    name: "피씨나인",
-    category: "게임방,PC방",
-    address: "서울 용산구 청파로47나길 13",
-    phone: "0507-1374-1305",
-    lat: 37.5455813559294,
-    lng: 126.966821945198,
-    kakaoUrl: "http://place.map.kakao.com/1925571407",
-    rating: null,
-    reviewCount: null,
-    youtubers: [
-      {
-        name: "쯔양",
-        videoTitle: null,
-        videoUrl: null,
-        recommendNote: "쯔양이 방문해 리뷰한 고기 맛집."
-      }
-    ]
-  },
-  {
     id: "jjy-425",
     name: "피자먹다 광교점",
     category: "피자먹다",
@@ -8433,26 +8153,6 @@ const CURATED_FOOD = [
         videoTitle: null,
         videoUrl: null,
         recommendNote: "쯔양이 방문해 리뷰한 중식 맛집."
-      }
-    ]
-  },
-  {
-    id: "jjy-428",
-    name: "하영슈퍼",
-    category: "슈퍼마켓",
-    address: "서울 종로구 종로36길 10",
-    phone: "02-2276-1488",
-    lat: 37.5704931238017,
-    lng: 127.003798861823,
-    kakaoUrl: "http://place.map.kakao.com/14497402",
-    rating: null,
-    reviewCount: null,
-    youtubers: [
-      {
-        name: "쯔양",
-        videoTitle: null,
-        videoUrl: null,
-        recommendNote: "쯔양이 방문해 리뷰한 한식 맛집."
       }
     ]
   },
@@ -8693,26 +8393,6 @@ const CURATED_FOOD = [
         videoTitle: null,
         videoUrl: null,
         recommendNote: "쯔양이 방문해 리뷰한 맛집."
-      }
-    ]
-  },
-  {
-    id: "jjy-442",
-    name: "해심수산 남동점",
-    category: "수산물판매",
-    address: "인천 남동구 소래역로 12",
-    phone: "0503-7153-0978",
-    lat: 37.398735500384,
-    lng: 126.737140977063,
-    kakaoUrl: "http://place.map.kakao.com/1797095139",
-    rating: null,
-    reviewCount: null,
-    youtubers: [
-      {
-        name: "쯔양",
-        videoTitle: null,
-        videoUrl: null,
-        recommendNote: "쯔양이 방문해 리뷰한 돈까스·회 전문점."
       }
     ]
   },
