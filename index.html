@@ -499,10 +499,6 @@ a.info-text:hover { color: #22c55e; }
   </div>
 </header>
 
-<div id="visit-progress"></div>
-
-<div id="curation-sections"></div>
-
 <div id="filter-bar">
   <select id="filter-youtuber" class="filter-select" onchange="onFilterSelectChange()"></select>
   <select id="filter-region" class="filter-select" onchange="onFilterSelectChange()"></select>
@@ -552,6 +548,8 @@ a.info-text:hover { color: #22c55e; }
 <div class="main">
   <div id="left-panel">
     <div id="list-view">
+      <div id="visit-progress"></div>
+      <div id="curation-sections"></div>
       <div id="food-list"></div>
       <div class="list-status" id="list-status"></div>
     </div>
@@ -999,8 +997,6 @@ function deselect() {
   activeFood = null;
   document.getElementById('detail-view').style.display = 'none';
   document.getElementById('list-view').style.display = 'flex';
-  document.getElementById('curation-sections').style.display = '';
-  document.getElementById('visit-progress').style.display = '';
   closeSheet();
 }
 
@@ -1025,8 +1021,6 @@ function select(food, marker) {
     // 리스트 카드 클릭(모바일/PC 공통) 또는 PC 분할뷰의 지도 마커 클릭 → 좌측 패널이 상세로 전환
     fillPanel('d', food);
     document.getElementById('list-view').style.display = 'none';
-    document.getElementById('curation-sections').style.display = 'none';
-    document.getElementById('visit-progress').style.display = 'none';
     document.getElementById('detail-view').style.display = 'flex';
     document.getElementById('detail-view').scrollTop = 0;
   }
@@ -1457,8 +1451,6 @@ function goHome() {
   map.setLevel(13);
   document.getElementById('detail-view').style.display = 'none';
   document.getElementById('list-view').style.display = 'flex';
-  document.getElementById('curation-sections').style.display = '';
-  document.getElementById('visit-progress').style.display = '';
   document.getElementById('map-wrap').classList.remove('mobile-visible');
   document.getElementById('map-fab').style.display = '';
   document.getElementById('list-view').scrollTop = 0;
