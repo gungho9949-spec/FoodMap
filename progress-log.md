@@ -4,6 +4,37 @@
 
 ---
 
+## 2026-08-16 — 백년가게 데이터 추가 (data.go.kr) — 좌표 확보 직전 대기 중
+
+data.go.kr "소상공인시장진흥공단_전국 백년가게 지정리스트 현황 정보"(2025-09-03 갱신,
+1,407건, 로그인 없이 다운로드 가능 확인)를 다운로드해서 업체명/주소/연락처를 확인했다.
+연락처 컬럼은 전부 공란(원본 안내: "사업체 연락처는 향후 데이터 정제 후 공개할 예정").
+
+**처리 과정:**
+1. 요청 지역(전북/충남/경북/충북/인천/전남/대전/강원/부산/제주) 필터링 → 742곳
+2. 백년가게 데이터셋은 식당뿐 아니라 전자상가·서점·문구점 등 업종 전체를 포함하므로,
+   상호명 키워드(식당/갈비/냉면/국밥/횟집 등 vs 전자/서점/문구/안경 등)로 1차 분류 → food 321곳
+3. 지역별 4~5곳씩 총 **47곳** 최종 선별 (`data/baekyeongage-candidates.json`)
+4. 좌표/kakaoUrl 확보용 스크립트 작성 완료 (`data/add-baekyeongage.js`) — Kakao Local
+   API로 "상호명+지역명" 검색, 기존 데이터와 50m 이내 겹치면 새 항목 대신 기존 항목에
+   `certification` 필드만 병합하는 로직까지 구현·문법 검증 완료
+5. `index.html`의 `fillPanel()`도 함께 보강: `youtubers`가 빈 배열인 인증 전용 항목을
+   클릭하면 기존 코드가 `food.youtubers[0].name`에서 크래시 나는 걸 발견해서, 인증
+   배지(`.badge-cert`)/인증 섹션(`.cert-section`)을 추가하고 mock 테스트로
+   단독 인증 항목·유튜버+인증 병합 항목 둘 다 정상 렌더링 확인함
+
+**🚫 차단됨**: Kakao Local API용 REST API 키가 없음. 프로젝트에 있는 건 지도 로딩용
+JavaScript 키(`28bac2696bc8d416ce3d2f349581838e`)뿐이고, 이걸로 Local API를 직접
+호출해보니 `401 Unauthorized`(KA Header 필요)가 떴다 — Kakao는 JS 키와 REST API 키를
+별도 발급하기 때문에 서버 사이드 검색이 불가능. 사용자에게 안내했고, `data/.env.txt`에
+`KAKAO_REST_KEY`를 추가해주면 이어서 진행하기로 함.
+
+**커밋된 것**: `data/add-baekyeongage.js`(스크립트), `data/baekyeongage-candidates.json`
+(선별된 47곳), `index.html`(인증 배지 UI). **`curated-food.js`는 아직 미변경** —
+좌표 없이는 지도에 표시할 수 없어서 실제 데이터 추가는 키 확보 후 진행 예정.
+
+---
+
 ## 2026-08-15 (Day 1)
 
 ### 1-1. videoUrl 채널별 현황 (완료)
