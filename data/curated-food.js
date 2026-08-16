@@ -12376,6 +12376,12 @@ const CURATED_FOOD = [
         videoTitle: null,
         videoUrl: null,
         recommendNote: "이태원 맛집 종결자로 소개됐으며, 내장을 활용한 버거가 또갈집으로 선정됐다."
+      },
+      {
+        name: "쯔양",
+        videoTitle: null,
+        videoUrl: null,
+        recommendNote: "용산 이태원의 수제버거 전문점, SNS에서 화제가 된 내장파괴버거로 알려짐."
       }
     ]
   },
@@ -18809,6 +18815,424 @@ const CURATED_FOOD = [
     certification: "착한가격업소(행정안전부)",
     recommendNote: "착한가격업소로 지정된 곳, 대표메뉴 양념통닭 15,000원",
     youtubers: [
+    ]
+  },
+  {
+    id: "jjy-462",
+    name: "경복 냉삼 선정릉역본점",
+    category: "삼겹살",
+    address: "서울 강남구 언주로108길 12",
+    phone: "02-555-1093",
+    lat: 37.50832624729216,
+    lng: 127.04049397303721,
+    kakaoUrl: "http://place.map.kakao.com/608318822",
+    naverUrl: "https://map.naver.com/p/search/%EA%B2%BD%EB%B3%B5%20%EB%83%89%EC%82%BC%20%EC%84%A0%EC%A0%95%EB%A6%89%EC%97%AD%EB%B3%B8%EC%A0%90%20%EC%84%9C%EC%9A%B8%20%EA%B0%95%EB%82%A8%EA%B5%AC%20%EC%96%B8%EC%A3%BC%EB%A1%9C108%EA%B8%B8%2012",
+    rating: null,
+    reviewCount: null,
+    photoUrl: null,
+    youtubers: [
+      {
+        name: "쯔양",
+        videoTitle: null,
+        videoUrl: null,
+        recommendNote: "냉동 삼겹살과 참치 해체쇼로 알려진 강남 역삼동 고깃집."
+      }
+    ]
+  },
+  {
+    id: "jjy-463",
+    name: "닭다방x종로우성닭갈비",
+    category: "닭요리",
+    address: "서울 종로구 종로8길 15-1",
+    phone: "02-420-0053",
+    lat: 37.5693280260785,
+    lng: 126.98408487334,
+    kakaoUrl: "http://place.map.kakao.com/648945279",
+    naverUrl: "https://map.naver.com/p/search/%EB%8B%AD%EB%8B%A4%EB%B0%A9x%EC%A2%85%EB%A1%9C%EC%9A%B0%EC%84%B1%EB%8B%AD%EA%B0%88%EB%B9%84%20%EC%84%9C%EC%9A%B8%20%EC%A2%85%EB%A1%9C%EA%B5%AC%20%EC%A2%85%EB%A1%9C8%EA%B8%B8%2015-1",
+    rating: null,
+    reviewCount: null,
+    photoUrl: null,
+    youtubers: [
+      {
+        name: "쯔양",
+        videoTitle: null,
+        videoUrl: null,
+        recommendNote: "종로 관철동의 닭갈비 전문점, 마무리 볶음밥까지 알차게 즐길 수 있는 곳."
+      }
+    ]
+  },
+  {
+    id: "jjy-464",
+    name: "데일리픽스 강남본점",
+    category: "햄버거",
+    address: "서울 강남구 논현로85길 70",
+    phone: "070-4222-2022",
+    lat: 37.49775543833608,
+    lng: 127.03241956181776,
+    kakaoUrl: "http://place.map.kakao.com/717158192",
+    naverUrl: "https://map.naver.com/p/search/%EB%8D%B0%EC%9D%BC%EB%A6%AC%ED%94%BD%EC%8A%A4%20%EA%B0%95%EB%82%A8%EB%B3%B8%EC%A0%90%20%EC%84%9C%EC%9A%B8%20%EA%B0%95%EB%82%A8%EA%B5%AC%20%EB%85%BC%ED%98%84%EB%A1%9C85%EA%B8%B8%2070",
+    rating: null,
+    reviewCount: null,
+    photoUrl: null,
+    youtubers: [
+      {
+        name: "쯔양",
+        videoTitle: null,
+        videoUrl: null,
+        recommendNote: "미쉐린 출신 셰프가 만드는 수제버거로 알려진 강남 역삼동 버거 전문점."
+      }
+    ]
+  },
+  {
+    id: "jjy-465",
+    name: "라면타임 본점",
+    category: "분식",
+    address: "대전 중구 계백로1685번길 45",
+    phone: "042-533-3048",
+    lat: 36.3225825516266,
+    lng: 127.405030175109,
+    kakaoUrl: "http://place.map.kakao.com/848713930",
+    naverUrl: "https://map.naver.com/p/search/%EB%9D%BC%EB%A9%B4%ED%83%80%EC%9E%84%20%EB%B3%B8%EC%A0%90%20%EB%8C%80%EC%A0%84%20%EC%A4%91%EA%B5%AC%20%EA%B3%84%EB%B0%B1%EB%A1%9C1685%EB%B2%88%EA%B8%B8%2045",
+    rating: null,
+    reviewCount: null,
+    photoUrl: null,
+    youtubers: [
+      {
+        name: "쯔양",
+        videoTitle: null,
+        videoUrl: null,
+        recommendNote: "37년 전통의 대전 중구 라면 노포, 우유라면·짬뽕라면이 대표 메뉴."
+      }
+    ]
+  },
+  {
+    id: "jjy-466",
+    name: "말고기연구소 제주공항점",
+    category: "호프,요리주점",
+    address: "제주특별자치도 제주시 북성로 43",
+    phone: "064-758-8250",
+    lat: 33.5155346656782,
+    lng: 126.520307377759,
+    kakaoUrl: "http://place.map.kakao.com/1597639792",
+    naverUrl: "https://map.naver.com/p/search/%EB%A7%90%EA%B3%A0%EA%B8%B0%EC%97%B0%EA%B5%AC%EC%86%8C%20%EC%A0%9C%EC%A3%BC%EA%B3%B5%ED%95%AD%EC%A0%90%20%EC%A0%9C%EC%A3%BC%ED%8A%B9%EB%B3%84%EC%9E%90%EC%B9%98%EB%8F%84%20%EC%A0%9C%EC%A3%BC%EC%8B%9C%20%EB%B6%81%EC%84%B1%EB%A1%9C%2043",
+    rating: null,
+    reviewCount: null,
+    photoUrl: null,
+    youtubers: [
+      {
+        name: "쯔양",
+        videoTitle: null,
+        videoUrl: null,
+        recommendNote: "제주공항 인근 말고기 전문점, 마샤브(말고기 샤부샤부)로 알려짐."
+      }
+    ]
+  },
+  {
+    id: "jjy-467",
+    name: "별미분식 사당역 본점",
+    category: "분식",
+    address: "서울 관악구 남현2길 46",
+    phone: "0503-7154-1565",
+    lat: 37.4756221566959,
+    lng: 126.97491582756,
+    kakaoUrl: "http://place.map.kakao.com/18984332",
+    naverUrl: "https://map.naver.com/p/search/%EB%B3%84%EB%AF%B8%EB%B6%84%EC%8B%9D%20%EC%82%AC%EB%8B%B9%EC%97%AD%20%EB%B3%B8%EC%A0%90%20%EC%84%9C%EC%9A%B8%20%EA%B4%80%EC%95%85%EA%B5%AC%20%EB%82%A8%ED%98%842%EA%B8%B8%2046",
+    rating: null,
+    reviewCount: null,
+    photoUrl: null,
+    youtubers: [
+      {
+        name: "쯔양",
+        videoTitle: null,
+        videoUrl: null,
+        recommendNote: "관악구 남현동의 분식집, 차돌박이를 활용한 메뉴들로 유명."
+      }
+    ]
+  },
+  {
+    id: "jjy-468",
+    name: "빨간세상라면학교 의정부본점",
+    category: "분식",
+    address: "경기 의정부시 시민로 83",
+    phone: "031-837-3334",
+    lat: 37.73897568299134,
+    lng: 127.04457308941086,
+    kakaoUrl: "http://place.map.kakao.com/21388744",
+    naverUrl: "https://map.naver.com/p/search/%EB%B9%A8%EA%B0%84%EC%84%B8%EC%83%81%EB%9D%BC%EB%A9%B4%ED%95%99%EA%B5%90%20%EC%9D%98%EC%A0%95%EB%B6%80%EB%B3%B8%EC%A0%90%20%EA%B2%BD%EA%B8%B0%20%EC%9D%98%EC%A0%95%EB%B6%80%EC%8B%9C%20%EC%8B%9C%EB%AF%BC%EB%A1%9C%2083",
+    rating: null,
+    reviewCount: null,
+    photoUrl: null,
+    youtubers: [
+      {
+        name: "쯔양",
+        videoTitle: null,
+        videoUrl: null,
+        recommendNote: "의정부의 매운 라면 전문점, 단골들 사이에서 오래 사랑받은 곳."
+      }
+    ]
+  },
+  {
+    id: "jjy-469",
+    name: "서두산딤섬 2호점",
+    category: "중식",
+    address: "서울 송파구 올림픽로32길 18-23",
+    phone: "02-422-4588",
+    lat: 37.513842867985716,
+    lng: 127.10815624866359,
+    kakaoUrl: "http://place.map.kakao.com/1396116679",
+    naverUrl: "https://map.naver.com/p/search/%EC%84%9C%EB%91%90%EC%82%B0%EB%94%A4%EC%84%AC%202%ED%98%B8%EC%A0%90%20%EC%84%9C%EC%9A%B8%20%EC%86%A1%ED%8C%8C%EA%B5%AC%20%EC%98%AC%EB%A6%BC%ED%94%BD%EB%A1%9C32%EA%B8%B8%2018-23",
+    rating: null,
+    reviewCount: null,
+    photoUrl: null,
+    youtubers: [
+      {
+        name: "쯔양",
+        videoTitle: null,
+        videoUrl: null,
+        recommendNote: "송파구 방이동의 딤섬 전문점, 샤오롱바오와 야끼만두로 알려짐."
+      }
+    ]
+  },
+  {
+    id: "jjy-470",
+    name: "선창횟집 태안본점",
+    category: "회",
+    address: "충남 태안군 남면 마검포길 427-5",
+    phone: "041-674-6270",
+    lat: 36.6199424311079,
+    lng: 126.286913623817,
+    kakaoUrl: "http://place.map.kakao.com/26912018",
+    naverUrl: "https://map.naver.com/p/search/%EC%84%A0%EC%B0%BD%ED%9A%9F%EC%A7%91%20%ED%83%9C%EC%95%88%EB%B3%B8%EC%A0%90%20%EC%B6%A9%EB%82%A8%20%ED%83%9C%EC%95%88%EA%B5%B0%20%EB%82%A8%EB%A9%B4%20%EB%A7%88%EA%B2%80%ED%8F%AC%EA%B8%B8%20427-5",
+    rating: null,
+    reviewCount: null,
+    photoUrl: null,
+    youtubers: [
+      {
+        name: "쯔양",
+        videoTitle: null,
+        videoUrl: null,
+        recommendNote: "태안 남면의 해산물 전문점, 봄철 꽃게찜과 주꾸미 샤부샤부가 대표 메뉴."
+      }
+    ]
+  },
+  {
+    id: "jjy-471",
+    name: "솥뚜껑 충주본점",
+    category: "찌개,전골",
+    address: "충북 충주시 성서7길 6",
+    phone: "043-843-8161",
+    lat: 36.969803651346254,
+    lng: 127.93187878260046,
+    kakaoUrl: "http://place.map.kakao.com/16684164",
+    naverUrl: "https://map.naver.com/p/search/%EC%86%A5%EB%9A%9C%EA%BB%91%20%EC%B6%A9%EC%A3%BC%EB%B3%B8%EC%A0%90%20%EC%B6%A9%EB%B6%81%20%EC%B6%A9%EC%A3%BC%EC%8B%9C%20%EC%84%B1%EC%84%9C7%EA%B8%B8%206",
+    rating: null,
+    reviewCount: null,
+    photoUrl: null,
+    youtubers: [
+      {
+        name: "쯔양",
+        videoTitle: null,
+        videoUrl: null,
+        recommendNote: "1982년부터 이어온 충주 노포, 솥뚜껑에 구운 삼겹살과 닭사리 전골이 특징."
+      }
+    ]
+  },
+  {
+    id: "jjy-472",
+    name: "안성휴게소서울방향 푸드코트",
+    category: "푸드코트",
+    address: "경기 안성시 원곡면 경부고속도로 372",
+    phone: "031-611-5793",
+    lat: 37.0767882437962,
+    lng: 127.132478872185,
+    kakaoUrl: "http://place.map.kakao.com/114303253",
+    naverUrl: "https://map.naver.com/p/search/%EC%95%88%EC%84%B1%ED%9C%B4%EA%B2%8C%EC%86%8C%EC%84%9C%EC%9A%B8%EB%B0%A9%ED%96%A5%20%ED%91%B8%EB%93%9C%EC%BD%94%ED%8A%B8%20%EA%B2%BD%EA%B8%B0%20%EC%95%88%EC%84%B1%EC%8B%9C%20%EC%9B%90%EA%B3%A1%EB%A9%B4%20%EA%B2%BD%EB%B6%80%EA%B3%A0%EC%86%8D%EB%8F%84%EB%A1%9C%20372",
+    rating: null,
+    reviewCount: null,
+    photoUrl: null,
+    youtubers: [
+      {
+        name: "쯔양",
+        videoTitle: null,
+        videoUrl: null,
+        recommendNote: "경부고속도로 안성휴게소(서울방향)의 식당가, 로띠번 등 휴게소 디저트로도 알려짐."
+      }
+    ]
+  },
+  {
+    id: "jjy-473",
+    name: "우정집 9-8호",
+    category: "분식",
+    address: "강원특별자치도 원주시 중앙시장길 11",
+    phone: "033-743-5822",
+    lat: 37.35082536111693,
+    lng: 127.94914418454492,
+    kakaoUrl: "http://place.map.kakao.com/21448694",
+    naverUrl: "https://map.naver.com/p/search/%EC%9A%B0%EC%A0%95%EC%A7%91%209-8%ED%98%B8%20%EA%B0%95%EC%9B%90%ED%8A%B9%EB%B3%84%EC%9E%90%EC%B9%98%EB%8F%84%20%EC%9B%90%EC%A3%BC%EC%8B%9C%20%EC%A4%91%EC%95%99%EC%8B%9C%EC%9E%A5%EA%B8%B8%2011",
+    rating: null,
+    reviewCount: null,
+    photoUrl: null,
+    youtubers: [
+      {
+        name: "쯔양",
+        videoTitle: null,
+        videoUrl: null,
+        recommendNote: "원주 자유시장 내 떡볶이집, 시장 떡볶이거리에서도 손꼽히는 곳."
+      }
+    ]
+  },
+  {
+    id: "jjy-474",
+    name: "장군족발보쌈 본관",
+    category: "족발,보쌈",
+    address: "서울 종로구 삼일대로 434-1",
+    phone: "02-743-3557",
+    lat: 37.5735307493384,
+    lng: 126.988186373024,
+    kakaoUrl: "http://place.map.kakao.com/8054793",
+    naverUrl: "https://map.naver.com/p/search/%EC%9E%A5%EA%B5%B0%EC%A1%B1%EB%B0%9C%EB%B3%B4%EC%8C%88%20%EB%B3%B8%EA%B4%80%20%EC%84%9C%EC%9A%B8%20%EC%A2%85%EB%A1%9C%EA%B5%AC%20%EC%82%BC%EC%9D%BC%EB%8C%80%EB%A1%9C%20434-1",
+    rating: null,
+    reviewCount: null,
+    photoUrl: null,
+    youtubers: [
+      {
+        name: "쯔양",
+        videoTitle: null,
+        videoUrl: null,
+        recommendNote: "종로 낙원동의 족발보쌈 전문점."
+      }
+    ]
+  },
+  {
+    id: "jjy-475",
+    name: "중앙스넥 본점",
+    category: "분식",
+    address: "경기 안성시 시장길 63",
+    phone: "031-671-8757",
+    lat: 37.006405864003604,
+    lng: 127.27140262791418,
+    kakaoUrl: "http://place.map.kakao.com/24164483",
+    naverUrl: "https://map.naver.com/p/search/%EC%A4%91%EC%95%99%EC%8A%A4%EB%84%A5%20%EB%B3%B8%EC%A0%90%20%EA%B2%BD%EA%B8%B0%20%EC%95%88%EC%84%B1%EC%8B%9C%20%EC%8B%9C%EC%9E%A5%EA%B8%B8%2063",
+    rating: null,
+    reviewCount: null,
+    photoUrl: null,
+    youtubers: [
+      {
+        name: "쯔양",
+        videoTitle: null,
+        videoUrl: null,
+        recommendNote: "40년 전통의 안성 분식집, 쫄면과 함박스테이크가 대표 메뉴."
+      }
+    ]
+  },
+  {
+    id: "jjy-476",
+    name: "쭈꾸미도사 천호본점",
+    category: "해물,생선",
+    address: "서울 강동구 천호대로158길 9",
+    phone: "02-488-0523",
+    lat: 37.53707952743723,
+    lng: 127.12647411828341,
+    kakaoUrl: "http://place.map.kakao.com/889697758",
+    naverUrl: "https://map.naver.com/p/search/%EC%AD%88%EA%BE%B8%EB%AF%B8%EB%8F%84%EC%82%AC%20%EC%B2%9C%ED%98%B8%EB%B3%B8%EC%A0%90%20%EC%84%9C%EC%9A%B8%20%EA%B0%95%EB%8F%99%EA%B5%AC%20%EC%B2%9C%ED%98%B8%EB%8C%80%EB%A1%9C158%EA%B8%B8%209",
+    rating: null,
+    reviewCount: null,
+    photoUrl: null,
+    youtubers: [
+      {
+        name: "쯔양",
+        videoTitle: null,
+        videoUrl: null,
+        recommendNote: "강동구 성내동의 쭈꾸미 전문점, 대창과 함께 즐기는 조합으로 알려짐."
+      }
+    ]
+  },
+  {
+    id: "jjy-477",
+    name: "충남집 9-5호",
+    category: "한식",
+    address: "강원특별자치도 원주시 중앙시장길 11",
+    phone: null,
+    lat: 37.35078563531704,
+    lng: 127.94904210921933,
+    kakaoUrl: "http://place.map.kakao.com/1650545003",
+    naverUrl: "https://map.naver.com/p/search/%EC%B6%A9%EB%82%A8%EC%A7%91%209-5%ED%98%B8%20%EA%B0%95%EC%9B%90%ED%8A%B9%EB%B3%84%EC%9E%90%EC%B9%98%EB%8F%84%20%EC%9B%90%EC%A3%BC%EC%8B%9C%20%EC%A4%91%EC%95%99%EC%8B%9C%EC%9E%A5%EA%B8%B8%2011",
+    rating: null,
+    reviewCount: null,
+    photoUrl: null,
+    youtubers: [
+      {
+        name: "쯔양",
+        videoTitle: null,
+        videoUrl: null,
+        recommendNote: "원주 자유시장 내 떡볶이집, 진한 국물맛이 특징."
+      }
+    ]
+  },
+  {
+    id: "jjy-478",
+    name: "친절떡볶이 9-9호",
+    category: "떡볶이",
+    address: "강원특별자치도 원주시 중앙시장길 11",
+    phone: null,
+    lat: 37.350839911423144,
+    lng: 127.94912743853453,
+    kakaoUrl: "http://place.map.kakao.com/25849180",
+    naverUrl: "https://map.naver.com/p/search/%EC%B9%9C%EC%A0%88%EB%96%A1%EB%B3%B6%EC%9D%B4%209-9%ED%98%B8%20%EA%B0%95%EC%9B%90%ED%8A%B9%EB%B3%84%EC%9E%90%EC%B9%98%EB%8F%84%20%EC%9B%90%EC%A3%BC%EC%8B%9C%20%EC%A4%91%EC%95%99%EC%8B%9C%EC%9E%A5%EA%B8%B8%2011",
+    rating: null,
+    reviewCount: null,
+    photoUrl: null,
+    youtubers: [
+      {
+        name: "쯔양",
+        videoTitle: null,
+        videoUrl: null,
+        recommendNote: "37년 전통의 원주 자유시장 떡볶이집, 순대도 함께 판매."
+      }
+    ]
+  },
+  {
+    id: "jjy-479",
+    name: "통굴통굴 시흥본점",
+    category: "굴,전복",
+    address: "경기 시흥시 대골안길 94",
+    phone: "031-318-1542",
+    lat: 37.4418097901624,
+    lng: 126.785987924602,
+    kakaoUrl: "http://place.map.kakao.com/246912337",
+    naverUrl: "https://map.naver.com/p/search/%ED%86%B5%EA%B5%B4%ED%86%B5%EA%B5%B4%20%EC%8B%9C%ED%9D%A5%EB%B3%B8%EC%A0%90%20%EA%B2%BD%EA%B8%B0%20%EC%8B%9C%ED%9D%A5%EC%8B%9C%20%EB%8C%80%EA%B3%A8%EC%95%88%EA%B8%B8%2094",
+    rating: null,
+    reviewCount: null,
+    photoUrl: null,
+    youtubers: [
+      {
+        name: "쯔양",
+        videoTitle: null,
+        videoUrl: null,
+        recommendNote: "시흥의 굴 요리 전문점, 여수산 굴을 사용한 굴찜·굴전으로 알려짐."
+      }
+    ]
+  },
+  {
+    id: "jjy-480",
+    name: "해주냉면 본점",
+    category: "냉면",
+    address: "서울 송파구 백제고분로7길 8-16",
+    phone: "02-424-7192",
+    lat: 37.509652351093166,
+    lng: 127.07977463491474,
+    kakaoUrl: "http://place.map.kakao.com/25049102",
+    naverUrl: "https://map.naver.com/p/search/%ED%95%B4%EC%A3%BC%EB%83%89%EB%A9%B4%20%EB%B3%B8%EC%A0%90%20%EC%84%9C%EC%9A%B8%20%EC%86%A1%ED%8C%8C%EA%B5%AC%20%EB%B0%B1%EC%A0%9C%EA%B3%A0%EB%B6%84%EB%A1%9C7%EA%B8%B8%208-16",
+    rating: null,
+    reviewCount: null,
+    photoUrl: null,
+    youtubers: [
+      {
+        name: "쯔양",
+        videoTitle: null,
+        videoUrl: null,
+        recommendNote: "서울 5대 매운 냉면집으로 꼽히는 잠실의 냉면 노포."
+      }
     ]
   }
 ];
