@@ -4,6 +4,35 @@
 
 ---
 
+## 2026-08-17 — 큐레이션 섹션 추가 후 생긴 리스트뷰 세로 스크롤 막힘 버그 수정
+
+**증상**: 홈 화면(리스트뷰)에서 스크롤이 아래로 안 내려감.
+
+**원인**: `#curation-sections`(가로 스크롤 섹션 4~5개)와 `#visit-progress`를
+`header`/`#filter-bar`와 같은 레벨의 고정 청크(`flex-shrink:0`)로 `body` 상단에
+직접 뒀던 게 문제. `body`는 `display:flex; flex-direction:column`이고 `.main`이
+`flex:1`로 나머지 공간을 차지하는 구조인데, 고정 청크들의 실제 높이 합이 화면
+높이를 넘으면 `.main`이 0으로 눌리고, 그 안의 `#list-view`(`overflow-y:auto`)도
+`clientHeight`가 0이 돼서 스크롤할 영역 자체가 사라짐. mock에서 실측: viewport
+630px인데 헤더(56)+진행률(56)+큐레이션(1104)+필터바(95) 합이 1311px — `.main`
+`getBoundingClientRect().height`가 정확히 0으로 찍힘. 리스트 카드 자체는 892개
+다 정상 렌더링되고 있었고(`foodListChildCount: 50`, 페이지네이션도 정상), 순전히
+레이아웃 문제였음.
+
+**수정**: `#visit-progress`·`#curation-sections`를 body 최상단 고정 영역에서 빼서
+`#list-view` 안(`#food-list` 바로 위)으로 옮김. 필터바는 모바일 지도 화면에서도
+계속 접근 가능해야 해서 그대로 고정 유지하고, 나머지 둘은 리스트와 함께 자연스럽게
+스크롤되는 콘텐츠로 바꿈. 부수 효과로 상세 패널 진입/복귀 시 이 둘을 수동으로
+숨기고 보이던 코드(`select`/`deselect`/`goHome` 3곳)가 필요 없어져서 제거 —
+`#list-view` 자체의 `display` 토글에 자동으로 같이 숨겨짐(확인: 상세 진입 시
+`offsetParent === null`).
+
+**mock 검증**: `#list-view.clientHeight`가 0 → 479px로 정상화된 것 확인, 스크롤
+이벤트를 반복 발생시켜 무한스크롤로 892곳 전부(마지막 카드 `chk-038`까지) 로드·
+도달되는 것, "전체 892곳을 다 봤어요" 상태 텍스트까지 확인. 커밋 `9a62119`.
+
+---
+
 ## 2026-08-17 — "가봤어요" 방문 체크 기능 추가
 
 상세 패널(전체화면 상세/바텀시트 둘 다 — `fillPanel(prefix, food)`가 공유하는
