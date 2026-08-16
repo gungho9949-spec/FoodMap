@@ -15,10 +15,16 @@ const DATA_FILE = path.join(__dirname, 'curated-food.js');
 const CACHE_DIR = path.join(__dirname, '..', '_yt-cache');
 
 const CHANNELS = {
-  '성시경의 먹을텐데': 'UCl23-Cci_SMqyGXE1T_LYUg',
-  '또간집(풍자)': 'UC4ZA57iJrf73bJlApKFeLRw',
-  '승우아빠': 'UCgsffS7MfKL6YU3r_U3E-aA',
-  '쯔양': 'UCfpaSruWW3S4dibonKXENjA',
+  '성시경의 먹을텐데': { id: 'UCl23-Cci_SMqyGXE1T_LYUg' },
+  '또간집(풍자)': { id: 'UC4ZA57iJrf73bJlApKFeLRw' },
+  '승우아빠': { id: 'UCgsffS7MfKL6YU3r_U3E-aA' },
+  '쯔양': { id: 'UCfpaSruWW3S4dibonKXENjA' },
+  // TV 방송 채널: 프로그램 전용 채널이 아니라 방송사 종합 채널이라
+  // 다른 프로그램 영상이 섞여있음 → 제목에 프로그램 태그가 있는 것만 후보로 필터링
+  '최자로드': { id: 'UCYdUe6y0F8TQS6siNVS7QMw' },
+  '식객 허영만의 백반기행': { id: 'UCb5ymSxGa41rYAMDvh22I2Q', titleFilter: /백반기행/ },
+  '전지적 참견 시점(이영자)': { id: 'UCiwQRG2sCcfjKkgxMEdJGPg', titleFilter: /전참시|이영자/ },
+  '맛있는 녀석들': { id: 'UCsOW9TPy2TKkqCchUHL04Fg' },
 };
 
 function normalize(s) {
@@ -27,6 +33,20 @@ function normalize(s) {
     .replace(/[\s\-·,./!?~"'’‘]/g, '')
     .toLowerCase();
 }
+
+// 공백만 홑공백으로 정리(완전히 제거하지 않음) — 서로 다른 단어 경계를 걸친
+// 우연한 부분일치를 막기 위해 사용한다.
+// ("서보"라는 짧은 식당명이 "멀리서 보면"이라는 무관한 문구의 "~서"+"보~" 경계를
+//  걸쳐 우연히 일치해 오매칭된 사례가 발견되어 추가된 안전장치)
+function normalizeKeepSpace(s) {
+  return (s || '')
+    .replace(/\([^)]*\)/g, '')
+    .replace(/[\-·,./!?~"'’‘]/g, '')
+    .replace(/\s+/g, ' ')
+    .trim()
+    .toLowerCase();
+}
+const SHORT_NAME_THRESHOLD = 3; // 이 길이 이하는 반드시 단어 경계 보존 비교로만 매칭
 
 // 영상 타임스탬프/챕터 라벨이나 보일러플레이트 문구로 흔히 쓰여
 // 식당명과 우연히 겹칠 수 있는 일반 단어 — 이 단어들만으로는 매칭하지 않는다.
@@ -96,12 +116,18 @@ function main() {
     console.error('채널명:', Object.keys(CHANNELS).join(', '));
     process.exit(1);
   }
-  const channelId = CHANNELS[channelName];
+  const { id: channelId, titleFilter } = CHANNELS[channelName];
   const cacheFile = path.join(CACHE_DIR, `${channelId}.json`);
-  const videos = JSON.parse(fs.readFileSync(cacheFile, 'utf-8'));
+  let videos = JSON.parse(fs.readFileSync(cacheFile, 'utf-8'));
+  if (titleFilter) {
+    const before = videos.length;
+    videos = videos.filter(v => titleFilter.test(v.title));
+    console.log(`(방송사 종합채널 → 제목에 프로그램 태그 있는 영상만 필터링: ${before} -> ${videos.length})`);
+  }
   const videosNorm = videos.map(v => ({
     ...v,
     normText: normalize(v.title) + '||' + normalize(v.description),
+    normTextKeepSpace: normalizeKeepSpace(v.title) + ' || ' + normalizeKeepSpace(v.description),
   }));
 
   const data = loadData();
@@ -124,7 +150,11 @@ function main() {
       notFound++; notFoundList.push(food.name); return;
     }
 
-    const hits = videosNorm.filter(v => v.normText.includes(normName));
+    // 짧은 이름(<=3자)은 단어 경계를 걸친 우연일치를 막기 위해 공백 보존 비교만 사용,
+    // 충분히 긴 이름은 지점명 표기 차이를 흡수하기 위해 공백 제거 비교도 함께 허용
+    const hits = normName.length <= SHORT_NAME_THRESHOLD
+      ? videosNorm.filter(v => v.normTextKeepSpace.includes(normalizeKeepSpace(food.name)))
+      : videosNorm.filter(v => v.normText.includes(normName));
 
     if (hits.length === 0) {
       notFound++;

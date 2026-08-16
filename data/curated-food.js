@@ -12614,8 +12614,8 @@ const CURATED_FOOD = [
     youtubers: [
       {
         name: "최자로드",
-        videoTitle: null,
-        videoUrl: null,
+        videoTitle: "최자의 점메추 프로젝트(?) 🔥 최자세끼 🔥 | 최자로드 온더웨이 EP. 18",
+        videoUrl: "https://www.youtube.com/watch?v=u4jD_Q0Rdfc",
         recommendNote: "후암동의 만두·군만두 맛집으로 소개됐다."
       }
     ]
@@ -12845,8 +12845,8 @@ const CURATED_FOOD = [
     youtubers: [
       {
         name: "최자로드",
-        videoTitle: null,
-        videoUrl: null,
+        videoTitle: "[SUB] 조정석에게 만두의 정석을 알려주다 | (다시 쓰는) 최자로드 EP.02",
+        videoUrl: "https://www.youtube.com/watch?v=jrLiUX7Fo_o",
         recommendNote: "압구정의 만두국·평양만두 맛집으로 소개됐다."
       }
     ]
@@ -13019,8 +13019,8 @@ const CURATED_FOOD = [
     youtubers: [
       {
         name: "최자로드",
-        videoTitle: null,
-        videoUrl: null,
+        videoTitle: "삼각지역 평양집",
+        videoUrl: "https://www.youtube.com/watch?v=0i-g2PFmPP8",
         recommendNote: "삼각지의 내장탕·내장곰탕 맛집으로 소개됐다."
       }
     ]
@@ -13040,8 +13040,8 @@ const CURATED_FOOD = [
     youtubers: [
       {
         name: "최자로드",
-        videoTitle: null,
-        videoUrl: null,
+        videoTitle: "[SUB] 세븐틴의 힙합 듀오 X 다듀의 대광어 맛 프리스타일 벌스 | (다시 쓰는) 최자로드 EP.01",
+        videoUrl: "https://www.youtube.com/watch?v=lY1IigHIkV4",
         recommendNote: "한남동의 숙성회 횟집으로 소개됐다."
       }
     ]
@@ -13103,8 +13103,8 @@ const CURATED_FOOD = [
     youtubers: [
       {
         name: "최자로드",
-        videoTitle: null,
-        videoUrl: null,
+        videoTitle: "[SUB] 참치 180kg 먹기 챌린지 | 최자로드 온더웨이 EP.04",
+        videoUrl: "https://www.youtube.com/watch?v=hYJVZtoY1qA",
         recommendNote: "압구정의 초밥·캘리포니아롤 맛집으로 소개됐다."
       }
     ]

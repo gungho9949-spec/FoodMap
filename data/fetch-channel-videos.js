@@ -15,6 +15,11 @@ const CHANNELS = {
   '또간집(풍자)': 'UC4ZA57iJrf73bJlApKFeLRw',
   '승우아빠': 'UCgsffS7MfKL6YU3r_U3E-aA',
   '쯔양': 'UCfpaSruWW3S4dibonKXENjA',
+  // TV 방송 채널 (프로그램 전용 채널이 아니라 방송사 종합 채널인 경우도 있음 — 매칭 스크립트에서 태그로 필터링)
+  '최자로드': 'UCYdUe6y0F8TQS6siNVS7QMw',
+  '식객 허영만의 백반기행': 'UCb5ymSxGa41rYAMDvh22I2Q',
+  '전지적 참견 시점(이영자)': 'UCiwQRG2sCcfjKkgxMEdJGPg',
+  '맛있는 녀석들': 'UCsOW9TPy2TKkqCchUHL04Fg',
 };
 
 async function getUploadsPlaylistId(key, channelId) {
