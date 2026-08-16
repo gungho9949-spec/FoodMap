@@ -118,6 +118,13 @@ header {
 .food-card-mini .card-name { font-size: 13px; }
 .food-card-mini .card-info { padding: 8px 10px 10px; }
 
+/* "가본 곳" 진행률 바 (홈=리스트뷰 상단, 큐레이션 섹션 위) */
+#visit-progress { background: #fff; flex-shrink: 0; padding: 12px 16px; border-bottom: 1px solid #f3f4f6; }
+.visit-progress-text { font-size: 12px; font-weight: 700; color: #374151; margin-bottom: 6px; }
+.visit-progress-text strong { color: #16a34a; font-size: 13px; }
+.visit-progress-bar { height: 6px; background: #f3f4f6; border-radius: 99px; overflow: hidden; }
+.visit-progress-fill { height: 100%; background: #16a34a; border-radius: 99px; transition: width .3s ease; }
+
 /* ════════════════════════════════════════════════════════════════
    [OLD] 칩(chip) 기반 필터 패널 스타일 — 드롭다운 방식으로 교체되어
    더 이상 사용하지 않음. 나중에 되돌릴 수도 있어 삭제하지 않고
@@ -232,6 +239,14 @@ header {
   font-size: 40px; overflow: hidden; border-radius: 12px 12px 0 0;
 }
 .card-thumb img { width: 100%; height: 100%; object-fit: cover; display: block; }
+/* "가봤어요" 체크한 곳은 썸네일 우측 상단에 녹색 체크 배지 */
+.card-visited-badge {
+  position: absolute; top: 6px; right: 6px; z-index: 2;
+  width: 22px; height: 22px; border-radius: 50%;
+  background: #16a34a; color: #fff; font-size: 12px; font-weight: 900;
+  display: flex; align-items: center; justify-content: center;
+  box-shadow: 0 1px 4px rgba(0,0,0,.25);
+}
 /* 사진 로딩 중 회색 스켈레톤 */
 .card-thumb.skeleton {
   background: linear-gradient(90deg, #eceff1 25%, #e2e5e8 37%, #eceff1 63%);
@@ -340,6 +355,17 @@ header {
   border: 1px solid #bfdbfe; border-radius: 99px;
   padding: 3px 10px; font-size: 11px; font-weight: 700;
 }
+/* "가봤어요" 토글 — 상세 패널/바텀시트 공통 */
+.visit-toggle-btn {
+  display: inline-flex; align-items: center; gap: 5px;
+  padding: 7px 16px; border-radius: 99px; margin-bottom: 10px;
+  border: 1.5px solid #d1d5db; background: #fff; color: #6b7280;
+  font-size: 12px; font-weight: 700; cursor: pointer; font-family: inherit;
+  transition: all .15s;
+}
+.visit-toggle-btn:hover { border-color: #16a34a; color: #16a34a; }
+.visit-toggle-btn.on { background: #16a34a; border-color: #16a34a; color: #fff; }
+.visit-toggle-btn.on:hover { background: #15803d; border-color: #15803d; color: #fff; }
 .info-row {
   display: flex; align-items: flex-start; gap: 7px;
   font-size: 13px; color: #374151; margin-bottom: 5px;
@@ -473,6 +499,8 @@ a.info-text:hover { color: #22c55e; }
   </div>
 </header>
 
+<div id="visit-progress"></div>
+
 <div id="curation-sections"></div>
 
 <div id="filter-bar">
@@ -480,6 +508,11 @@ a.info-text:hover { color: #22c55e; }
   <select id="filter-region" class="filter-select" onchange="onFilterSelectChange()"></select>
   <select id="filter-category" class="filter-select" onchange="onFilterSelectChange()"></select>
   <select id="filter-certification" class="filter-select" onchange="onFilterSelectChange()"></select>
+  <select id="filter-visited" class="filter-select" onchange="onFilterSelectChange()">
+    <option value="">전체</option>
+    <option value="visited">가본 곳만</option>
+    <option value="unvisited">안 가본 곳만</option>
+  </select>
   <span class="result-count-text" id="result-count-text"></span>
 </div>
 
@@ -642,6 +675,7 @@ const filterState = {
   region: '',
   categoryMajor: '',
   certification: '', // '백년가게' | '한국관광공사' — certification 문자열에 부분일치로 판단
+  visited: '', // '' | 'visited' | 'unvisited'
 };
 
 function matchesFilters(food, state) {
@@ -650,7 +684,53 @@ function matchesFilters(food, state) {
   if (s.region && extractRegion(food.address) !== s.region) return false;
   if (s.categoryMajor && getMajorCategory(food.category) !== s.categoryMajor) return false;
   if (s.certification && !(food.certification && food.certification.includes(s.certification))) return false;
+  if (s.visited === 'visited' && !isVisited(food.id)) return false;
+  if (s.visited === 'unvisited' && isVisited(food.id)) return false;
   return true;
+}
+
+/* ── "가봤어요" 방문 기록 저장소 ──
+   지금은 localStorage에만 저장. 나중에 로그인 붙이면 이 5개 함수(load/save/isVisited/
+   toggleVisited/onVisitedChange) 내부 구현만 서버 API 호출로 바꾸면 되도록 다른 코드는
+   이 함수들만 통해서 방문 여부를 읽고 쓰게 함(직접 localStorage나 visitedSet을 만지지 않음). */
+const VISIT_STORAGE_KEY = 'visitedRestaurants';
+function loadVisitedSet() {
+  try {
+    const raw = localStorage.getItem(VISIT_STORAGE_KEY);
+    return new Set(raw ? JSON.parse(raw) : []);
+  } catch (e) { return new Set(); }
+}
+function saveVisitedSet(set) {
+  try { localStorage.setItem(VISIT_STORAGE_KEY, JSON.stringify([...set])); } catch (e) {}
+}
+let visitedSet = loadVisitedSet();
+function isVisited(id) { return visitedSet.has(id); }
+function toggleVisited(id) {
+  if (visitedSet.has(id)) visitedSet.delete(id); else visitedSet.add(id);
+  saveVisitedSet(visitedSet);
+  onVisitedChange(id);
+}
+// 방문 상태가 바뀔 때마다 화면에서 갱신이 필요한 곳들을 한 곳에서 처리
+// (진행률 바 / 큐레이션 섹션 / 리스트·필터 / 지금 열려 있는 상세 패널의 버튼 상태)
+function onVisitedChange(id) {
+  renderVisitProgress();
+  renderCurationSections();
+  applyFilters();
+  if (activeFood && activeFood.id === id) {
+    document.querySelectorAll(`.visit-toggle-btn[data-id="${id}"]`).forEach(btn => {
+      const on = isVisited(id);
+      btn.classList.toggle('on', on);
+      btn.textContent = on ? '✓ 가봤어요' : '가봤어요';
+    });
+  }
+}
+function renderVisitProgress() {
+  const total = CURATED_FOOD.length;
+  const visited = visitedSet.size;
+  const pct = total ? Math.round((visited / total) * 100) : 0;
+  document.getElementById('visit-progress').innerHTML = `
+    <div class="visit-progress-text">내가 가본 곳 <strong>${visited}</strong>/${total}</div>
+    <div class="visit-progress-bar"><div class="visit-progress-fill" style="width:${pct}%"></div></div>`;
 }
 
 /* ════════════════════════════════════════════════════════════════
@@ -775,12 +855,13 @@ function onFilterSelectChange() {
   filterState.region = document.getElementById('filter-region').value;
   filterState.categoryMajor = document.getElementById('filter-category').value;
   filterState.certification = document.getElementById('filter-certification').value;
+  filterState.visited = document.getElementById('filter-visited').value;
   applyFilters();
 }
 
 function updateCount() {
   const n = CURATED_FOOD.filter(f => matchesFilters(f)).length;
-  const activeCount = [filterState.youtuber, filterState.region, filterState.categoryMajor, filterState.certification].filter(Boolean).length;
+  const activeCount = [filterState.youtuber, filterState.region, filterState.categoryMajor, filterState.certification, filterState.visited].filter(Boolean).length;
   document.getElementById('cnt').textContent = n + '곳';
   document.getElementById('result-count-text').textContent =
     activeCount > 0 ? `전체 ${CURATED_FOOD.length}곳 중 ${n}곳` : '';
@@ -919,6 +1000,7 @@ function deselect() {
   document.getElementById('detail-view').style.display = 'none';
   document.getElementById('list-view').style.display = 'flex';
   document.getElementById('curation-sections').style.display = '';
+  document.getElementById('visit-progress').style.display = '';
   closeSheet();
 }
 
@@ -944,6 +1026,7 @@ function select(food, marker) {
     fillPanel('d', food);
     document.getElementById('list-view').style.display = 'none';
     document.getElementById('curation-sections').style.display = 'none';
+    document.getElementById('visit-progress').style.display = 'none';
     document.getElementById('detail-view').style.display = 'flex';
     document.getElementById('detail-view').scrollTop = 0;
   }
@@ -1038,10 +1121,11 @@ function renderFoodCard(food, extraClass) {
          onerror="this.parentElement.classList.remove('skeleton'); this.remove(); this.parentElement.textContent='${icon}';">`
     : icon;
   const thumbClass = food.photoUrl ? 'card-thumb skeleton' : 'card-thumb';
+  const visitedBadge = isVisited(food.id) ? `<span class="card-visited-badge">✓</span>` : '';
 
   return `
     <div class="food-card${extraClass ? ' ' + extraClass : ''}" data-id="${esc(food.id)}">
-      <div class="${thumbClass}">${thumb}</div>
+      <div class="${thumbClass}">${thumb}${visitedBadge}</div>
       <div class="card-info">
         <div class="card-name">${esc(food.name)}</div>
         <div class="card-meta">
@@ -1163,6 +1247,23 @@ const CURATION_SECTIONS = [
       filterState.certification = opt ? opt.value : '';
     },
   },
+  {
+    id: 'unvisited-popular',
+    title: '당신이 아직 안 가본 인기 맛집',
+    getSubtitle: null,
+    // 방문 기록이 하나도 없으면(처음 쓰는 사람) 의미가 없으니 빈 배열을 반환해 섹션 자체를 숨김
+    getItems: () => {
+      if (visitedSet.size === 0) return [];
+      return CURATED_FOOD
+        .filter(f => !isVisited(f.id) && (f.youtubers.length >= 2 || (f.rating || 0) >= 4.5))
+        .sort(byRatingDesc)
+        .slice(0, 8);
+    },
+    moreFilter: () => {
+      filterState.youtuber = ''; filterState.region = ''; filterState.categoryMajor = ''; filterState.certification = '';
+      filterState.visited = 'unvisited';
+    },
+  },
 ];
 
 function syncFilterSelectsUI() {
@@ -1170,6 +1271,7 @@ function syncFilterSelectsUI() {
   document.getElementById('filter-region').value = filterState.region;
   document.getElementById('filter-category').value = filterState.categoryMajor;
   document.getElementById('filter-certification').value = filterState.certification;
+  document.getElementById('filter-visited').value = filterState.visited;
 }
 
 function applySectionFilter(sectionId) {
@@ -1216,6 +1318,7 @@ document.getElementById('curation-sections').addEventListener('click', e => {
 });
 
 renderCurationSections();
+renderVisitProgress();
 
 function fillPanel(prefix, food) {
   const headId = prefix === 'd' ? 'd-head' : 's-head';
@@ -1237,6 +1340,7 @@ function fillPanel(prefix, food) {
       ${ytBadgeHtml}
       ${certBadgeHtml}
     </div>
+    <button class="visit-toggle-btn${isVisited(food.id) ? ' on' : ''}" data-id="${esc(food.id)}">${isVisited(food.id) ? '✓ 가봤어요' : '가봤어요'}</button>
     <div class="info-row">
       <span class="info-icon">📍</span>
       <span class="info-text">${esc(food.address)}</span>
@@ -1315,6 +1419,14 @@ function fillPanel(prefix, food) {
   document.getElementById(bodyId).innerHTML = bodyHtml;
 }
 
+['d-head', 's-head'].forEach(headId => {
+  document.getElementById(headId).addEventListener('click', e => {
+    const btn = e.target.closest('.visit-toggle-btn');
+    if (!btn) return;
+    toggleVisited(btn.dataset.id);
+  });
+});
+
 function navTo(app) {
   if (!activeFood) return;
   openNavApp(app, activeFood.name, activeFood.lat, activeFood.lng);
@@ -1346,6 +1458,7 @@ function goHome() {
   document.getElementById('detail-view').style.display = 'none';
   document.getElementById('list-view').style.display = 'flex';
   document.getElementById('curation-sections').style.display = '';
+  document.getElementById('visit-progress').style.display = '';
   document.getElementById('map-wrap').classList.remove('mobile-visible');
   document.getElementById('map-fab').style.display = '';
   document.getElementById('list-view').scrollTop = 0;
