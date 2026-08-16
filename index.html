@@ -655,12 +655,15 @@ const FILTER_CATEGORY_MAJOR_OPTS = (() => {
 })();
 // 인증(백년가게/한국관광공사 등록)은 유튜버 추천과 별개 축 — certification 문자열에
 // 부분일치로 판단하므로(복수 인증은 " · "로 이어붙어 있음) 짧은 키(백년가게/한국관광공사)로 카운트
+// 복수 인증은 certification 문자열에 " · "로 이어붙어 있으므로 그 조각들을
+// 그대로 옵션으로 쓴다 — 새 인증 출처가 추가돼도 이 코드를 손댈 필요 없음.
 const FILTER_CERTIFICATION_OPTS = (() => {
   const counts = {};
   CURATED_FOOD.forEach(f => {
     if (!f.certification) return;
-    if (f.certification.includes('백년가게')) counts['백년가게'] = (counts['백년가게']||0) + 1;
-    if (f.certification.includes('한국관광공사')) counts['한국관광공사'] = (counts['한국관광공사']||0) + 1;
+    f.certification.split(' · ').forEach(part => {
+      counts[part] = (counts[part] || 0) + 1;
+    });
   });
   return Object.entries(counts).sort((a,b) => b[1]-a[1]).map(([name,count]) => ({ value: name, count }));
 })();
