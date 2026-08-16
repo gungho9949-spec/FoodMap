@@ -125,6 +125,21 @@ header {
 .visit-progress-bar { height: 6px; background: #f3f4f6; border-radius: 99px; overflow: hidden; }
 .visit-progress-fill { height: 100%; background: #16a34a; border-radius: 99px; transition: width .3s ease; }
 
+/* "⭐ 내가 찜한 곳" 홈 진입점 — 찜한 곳 0개면 renderSavedEntry()가 display:none 처리 */
+#saved-entry { padding: 0 16px 12px; }
+#saved-entry-btn {
+  width: 100%; display: flex; align-items: center; justify-content: space-between;
+  padding: 12px 14px; border-radius: 12px; border: 1.5px solid #fde68a;
+  background: #fffbeb; color: #b45309; font-size: 13px; font-weight: 700;
+  cursor: pointer; font-family: inherit; transition: background .15s;
+}
+#saved-entry-btn:hover { background: #fef3c7; }
+.saved-entry-count {
+  background: #f59e0b; color: #fff; border-radius: 99px;
+  min-width: 20px; height: 20px; padding: 0 6px;
+  font-size: 12px; display: inline-flex; align-items: center; justify-content: center;
+}
+
 /* ════════════════════════════════════════════════════════════════
    [OLD] 칩(chip) 기반 필터 패널 스타일 — 드롭다운 방식으로 교체되어
    더 이상 사용하지 않음. 나중에 되돌릴 수도 있어 삭제하지 않고
@@ -247,6 +262,17 @@ header {
   display: flex; align-items: center; justify-content: center;
   box-shadow: 0 1px 4px rgba(0,0,0,.25);
 }
+/* "가고싶어요" 별 토글 — 썸네일 좌측 상단, 카드 클릭과 분리된 버튼 */
+.card-save-btn {
+  position: absolute; top: 6px; left: 6px; z-index: 2;
+  width: 24px; height: 24px; border-radius: 50%; border: none;
+  background: rgba(255,255,255,.85); color: #9ca3af;
+  font-size: 15px; line-height: 1; cursor: pointer;
+  display: flex; align-items: center; justify-content: center;
+  box-shadow: 0 1px 4px rgba(0,0,0,.2); transition: transform .1s;
+}
+.card-save-btn:hover { transform: scale(1.12); }
+.card-save-btn.on { color: #f59e0b; }
 /* 사진 로딩 중 회색 스켈레톤 */
 .card-thumb.skeleton {
   background: linear-gradient(90deg, #eceff1 25%, #e2e5e8 37%, #eceff1 63%);
@@ -366,6 +392,17 @@ header {
 .visit-toggle-btn:hover { border-color: #16a34a; color: #16a34a; }
 .visit-toggle-btn.on { background: #16a34a; border-color: #16a34a; color: #fff; }
 .visit-toggle-btn.on:hover { background: #15803d; border-color: #15803d; color: #fff; }
+/* "가고싶어요"(찜) 토글 — visit-toggle-btn과 나란히 두되 별/금색 계열로 구분 */
+.save-toggle-btn {
+  display: inline-flex; align-items: center; gap: 5px;
+  padding: 7px 16px; border-radius: 99px; margin-bottom: 10px; margin-left: 6px;
+  border: 1.5px solid #d1d5db; background: #fff; color: #6b7280;
+  font-size: 12px; font-weight: 700; cursor: pointer; font-family: inherit;
+  transition: all .15s;
+}
+.save-toggle-btn:hover { border-color: #f59e0b; color: #b45309; }
+.save-toggle-btn.on { background: #fffbeb; border-color: #f59e0b; color: #b45309; }
+.save-toggle-btn.on:hover { background: #fef3c7; }
 .info-row {
   display: flex; align-items: flex-start; gap: 7px;
   font-size: 13px; color: #374151; margin-bottom: 5px;
@@ -509,6 +546,11 @@ a.info-text:hover { color: #22c55e; }
     <option value="visited">가본 곳만</option>
     <option value="unvisited">안 가본 곳만</option>
   </select>
+  <select id="filter-saved" class="filter-select" onchange="onFilterSelectChange()">
+    <option value="">전체</option>
+    <option value="saved">찜한 곳만</option>
+    <option value="unsaved">안 찜한 곳만</option>
+  </select>
   <span class="result-count-text" id="result-count-text"></span>
 </div>
 
@@ -549,6 +591,7 @@ a.info-text:hover { color: #22c55e; }
   <div id="left-panel">
     <div id="list-view">
       <div id="visit-progress"></div>
+      <div id="saved-entry"></div>
       <div id="curation-sections"></div>
       <div id="food-list"></div>
       <div class="list-status" id="list-status"></div>
@@ -674,6 +717,7 @@ const filterState = {
   categoryMajor: '',
   certification: '', // '백년가게' | '한국관광공사' — certification 문자열에 부분일치로 판단
   visited: '', // '' | 'visited' | 'unvisited'
+  saved: '', // '' | 'saved' | 'unsaved'
 };
 
 function matchesFilters(food, state) {
@@ -684,6 +728,8 @@ function matchesFilters(food, state) {
   if (s.certification && !(food.certification && food.certification.includes(s.certification))) return false;
   if (s.visited === 'visited' && !isVisited(food.id)) return false;
   if (s.visited === 'unvisited' && isVisited(food.id)) return false;
+  if (s.saved === 'saved' && !isSaved(food.id)) return false;
+  if (s.saved === 'unsaved' && isSaved(food.id)) return false;
   return true;
 }
 
@@ -730,6 +776,59 @@ function renderVisitProgress() {
     <div class="visit-progress-text">내가 가본 곳 <strong>${visited}</strong>/${total}</div>
     <div class="visit-progress-bar"><div class="visit-progress-fill" style="width:${pct}%"></div></div>`;
 }
+
+/* ── "가고싶어요"(찜) 저장소 — visitedRestaurants와 완전히 분리된 키를 씀.
+   구조는 방문 기록과 동일(load/save/isSaved/toggleSaved/onSavedChange 5개 함수로만
+   읽고 쓰게 함) — 나중에 로그인 붙이면 이 함수들 내부만 서버 API 호출로 바꾸면 됨. */
+const SAVE_STORAGE_KEY = 'savedRestaurants';
+function loadSavedSet() {
+  try {
+    const raw = localStorage.getItem(SAVE_STORAGE_KEY);
+    return new Set(raw ? JSON.parse(raw) : []);
+  } catch (e) { return new Set(); }
+}
+function saveSavedSet(set) {
+  try { localStorage.setItem(SAVE_STORAGE_KEY, JSON.stringify([...set])); } catch (e) {}
+}
+let savedSet = loadSavedSet();
+function isSaved(id) { return savedSet.has(id); }
+function toggleSaved(id) {
+  if (savedSet.has(id)) savedSet.delete(id); else savedSet.add(id);
+  saveSavedSet(savedSet);
+  onSavedChange(id);
+}
+function onSavedChange(id) {
+  renderSavedEntry();
+  renderCurationSections();
+  applyFilters();
+  if (activeFood && activeFood.id === id) {
+    document.querySelectorAll(`.save-toggle-btn[data-id="${id}"]`).forEach(btn => {
+      const on = isSaved(id);
+      btn.classList.toggle('on', on);
+      btn.textContent = on ? '★ 가고싶어요' : '☆ 가고싶어요';
+    });
+  }
+}
+// 홈 화면 진입점: 찜한 곳이 0개면 굳이 보여줄 필요 없어서 숨김(큐레이션 섹션의
+// "아이템 0개면 숨김" 패턴과 동일)
+function renderSavedEntry() {
+  const n = savedSet.size;
+  const el = document.getElementById('saved-entry');
+  if (n === 0) { el.innerHTML = ''; el.style.display = 'none'; return; }
+  el.style.display = '';
+  el.innerHTML = `<button id="saved-entry-btn">⭐ 내가 찜한 곳 <span class="saved-entry-count">${n}</span></button>`;
+}
+function goToSavedList() {
+  deselect();
+  filterState.youtuber = ''; filterState.region = ''; filterState.categoryMajor = '';
+  filterState.certification = ''; filterState.visited = ''; filterState.saved = 'saved';
+  syncFilterSelectsUI();
+  applyFilters();
+  document.getElementById('list-view').scrollTop = 0;
+}
+document.getElementById('saved-entry').addEventListener('click', e => {
+  if (e.target.closest('#saved-entry-btn')) goToSavedList();
+});
 
 /* ════════════════════════════════════════════════════════════════
    [OLD] 칩 기반 다중선택 필터 상태 — 드롭다운 단일선택 방식으로
@@ -854,12 +953,13 @@ function onFilterSelectChange() {
   filterState.categoryMajor = document.getElementById('filter-category').value;
   filterState.certification = document.getElementById('filter-certification').value;
   filterState.visited = document.getElementById('filter-visited').value;
+  filterState.saved = document.getElementById('filter-saved').value;
   applyFilters();
 }
 
 function updateCount() {
   const n = CURATED_FOOD.filter(f => matchesFilters(f)).length;
-  const activeCount = [filterState.youtuber, filterState.region, filterState.categoryMajor, filterState.certification, filterState.visited].filter(Boolean).length;
+  const activeCount = [filterState.youtuber, filterState.region, filterState.categoryMajor, filterState.certification, filterState.visited, filterState.saved].filter(Boolean).length;
   document.getElementById('cnt').textContent = n + '곳';
   document.getElementById('result-count-text').textContent =
     activeCount > 0 ? `전체 ${CURATED_FOOD.length}곳 중 ${n}곳` : '';
@@ -1116,10 +1216,11 @@ function renderFoodCard(food, extraClass) {
     : icon;
   const thumbClass = food.photoUrl ? 'card-thumb skeleton' : 'card-thumb';
   const visitedBadge = isVisited(food.id) ? `<span class="card-visited-badge">✓</span>` : '';
+  const saveBtn = `<button class="card-save-btn${isSaved(food.id) ? ' on' : ''}" data-id="${esc(food.id)}" title="가고싶어요">${isSaved(food.id) ? '★' : '☆'}</button>`;
 
   return `
     <div class="food-card${extraClass ? ' ' + extraClass : ''}" data-id="${esc(food.id)}">
-      <div class="${thumbClass}">${thumb}${visitedBadge}</div>
+      <div class="${thumbClass}">${thumb}${visitedBadge}${saveBtn}</div>
       <div class="card-info">
         <div class="card-name">${esc(food.name)}</div>
         <div class="card-meta">
@@ -1154,6 +1255,8 @@ function renderListNextPage() {
 }
 
 document.getElementById('food-list').addEventListener('click', e => {
+  const saveBtn = e.target.closest('.card-save-btn');
+  if (saveBtn) { toggleSaved(saveBtn.dataset.id); return; }
   const card = e.target.closest('.food-card');
   if (!card) return;
   const food = CURATED_FOOD.find(f => f.id === card.dataset.id);
@@ -1266,6 +1369,7 @@ function syncFilterSelectsUI() {
   document.getElementById('filter-category').value = filterState.categoryMajor;
   document.getElementById('filter-certification').value = filterState.certification;
   document.getElementById('filter-visited').value = filterState.visited;
+  document.getElementById('filter-saved').value = filterState.saved;
 }
 
 function applySectionFilter(sectionId) {
@@ -1305,6 +1409,8 @@ function renderCurationSections() {
 document.getElementById('curation-sections').addEventListener('click', e => {
   const moreBtn = e.target.closest('.curation-more-btn');
   if (moreBtn) { applySectionFilter(moreBtn.dataset.section); return; }
+  const saveBtn = e.target.closest('.card-save-btn');
+  if (saveBtn) { toggleSaved(saveBtn.dataset.id); return; }
   const card = e.target.closest('.food-card');
   if (!card) return;
   const food = CURATED_FOOD.find(f => f.id === card.dataset.id);
@@ -1313,6 +1419,7 @@ document.getElementById('curation-sections').addEventListener('click', e => {
 
 renderCurationSections();
 renderVisitProgress();
+renderSavedEntry();
 
 function fillPanel(prefix, food) {
   const headId = prefix === 'd' ? 'd-head' : 's-head';
@@ -1335,6 +1442,7 @@ function fillPanel(prefix, food) {
       ${certBadgeHtml}
     </div>
     <button class="visit-toggle-btn${isVisited(food.id) ? ' on' : ''}" data-id="${esc(food.id)}">${isVisited(food.id) ? '✓ 가봤어요' : '가봤어요'}</button>
+    <button class="save-toggle-btn${isSaved(food.id) ? ' on' : ''}" data-id="${esc(food.id)}">${isSaved(food.id) ? '★ 가고싶어요' : '☆ 가고싶어요'}</button>
     <div class="info-row">
       <span class="info-icon">📍</span>
       <span class="info-text">${esc(food.address)}</span>
@@ -1415,9 +1523,10 @@ function fillPanel(prefix, food) {
 
 ['d-head', 's-head'].forEach(headId => {
   document.getElementById(headId).addEventListener('click', e => {
-    const btn = e.target.closest('.visit-toggle-btn');
-    if (!btn) return;
-    toggleVisited(btn.dataset.id);
+    const visitBtn = e.target.closest('.visit-toggle-btn');
+    if (visitBtn) { toggleVisited(visitBtn.dataset.id); return; }
+    const saveBtn = e.target.closest('.save-toggle-btn');
+    if (saveBtn) { toggleSaved(saveBtn.dataset.id); return; }
   });
 });
 
