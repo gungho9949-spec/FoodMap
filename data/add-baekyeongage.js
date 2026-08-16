@@ -141,14 +141,19 @@ async function main() {
     const phone = best.phone && best.phone.trim() ? best.phone : null;
     const categoryLeaf = (best.category_name || '').split('>').pop().trim() || '한식';
 
-    // 기존 데이터와 50m 이내 겹치는지 확인
-    const near = data.find(d => d.lat && d.lng && haversineM(lat, lng, d.lat, d.lng) <= MERGE_RADIUS_M);
+    // 기존 데이터와 병합 여부 판단: kakaoUrl(=Kakao 장소 고유 ID)이 정확히 같아야만 병합.
+    // 단순 50m 반경만으로는 전통시장처럼 여러 점포가 다닥다닥 붙어있는 곳에서
+    // 서로 다른 업체를 같은 곳으로 잘못 합치는 오탐이 발생함(실제로 발견된 사례:
+    // "신포순대"↔"맷돌손칼국수", "육거리소문난만두"↔"금강설렁탕" — 이름이 전혀 다른
+    // 별개 업체인데 50m 이내라는 이유만으로 병합될 뻔했음). kakaoUrl 일치를 기준으로
+    // 삼으면 이런 오탐 없이 "정말 같은 장소"만 정확히 병합된다.
+    const near = data.find(d => d.kakaoUrl && d.kakaoUrl === kakaoUrl);
     if (near) {
       near.certification = CERT_TEXT;
       near.recommendNote = near.recommendNote || CERT_NOTE;
       merged++;
-      mergedList.push(`${c.name} -> 기존 "${near.name}"에 병합`);
-      console.log(`🔗 [${c.region}] ${c.name} - 기존 "${near.name}"와 50m 이내, 병합`);
+      mergedList.push(`${c.name} -> 기존 "${near.name}"에 병합 (kakaoUrl 동일)`);
+      console.log(`🔗 [${c.region}] ${c.name} - 기존 "${near.name}"와 동일 장소(kakaoUrl 일치), 병합`);
       continue;
     }
 
@@ -156,11 +161,11 @@ async function main() {
       id: `bng-${String(nextSeq++).padStart(3, '0')}`,
       name: c.name,
       category: categoryLeaf,
-      address: best.address_name || c.address,
+      address: best.road_address_name || best.address_name || c.address,
       phone,
       lat, lng,
       kakaoUrl,
-      naverUrl: `https://map.naver.com/p/search/${encodeURIComponent(c.name + ' ' + (best.address_name || c.address))}`,
+      naverUrl: `https://map.naver.com/p/search/${encodeURIComponent(c.name + ' ' + (best.road_address_name || best.address_name || c.address))}`,
       rating: null,
       reviewCount: null,
       certification: CERT_TEXT,
