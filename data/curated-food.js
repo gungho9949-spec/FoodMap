@@ -228,8 +228,8 @@ const CURATED_FOOD = [
     lng: 127.49523411383207,
     kakaoUrl: "http://place.map.kakao.com/21552691",
     naverUrl: "https://map.naver.com/p/search/61%ED%98%B8%EB%AA%85%ED%83%9C%EC%A0%84%20%EC%A0%84%EB%82%A8%EA%B4%91%EC%A3%BC%ED%86%B5%ED%95%A9%ED%8A%B9%EB%B3%84%EC%8B%9C%20%EC%88%9C%EC%B2%9C%EC%8B%9C%20%EC%9E%A5%ED%8F%89%EB%A1%9C%2060",
-    rating: null,
-    reviewCount: null,
+    rating: 4.1,
+    reviewCount: 7,
     youtubers: [
       {
         name: "쯔양",
@@ -3045,8 +3045,8 @@ const CURATED_FOOD = [
     lng: 128.10739929207085,
     kakaoUrl: "http://place.map.kakao.com/1722921495",
     naverUrl: "https://map.naver.com/p/search/%EB%AC%B8%EA%B2%BD%EC%A0%84%ED%86%B5%EC%8B%9C%EC%9E%A5%20%EC%83%81%EC%B0%A8%EB%A6%BC2%ED%98%B8%EC%A0%90%20%EA%B2%BD%EB%B6%81%20%EB%AC%B8%EA%B2%BD%EC%8B%9C%20%EB%AC%B8%EA%B2%BD%EC%9D%8D%20%EB%AC%B8%ED%9D%AC%EB%A1%9C%2041-15",
-    rating: null,
-    reviewCount: null,
+    rating: 3.6,
+    reviewCount: 94,
     youtubers: [
       {
         name: "쯔양",
@@ -6252,8 +6252,8 @@ const CURATED_FOOD = [
     lng: 126.921121754368,
     kakaoUrl: "http://place.map.kakao.com/1525701535",
     naverUrl: "https://map.naver.com/p/search/%EC%9B%90%EB%B3%B4%20%EC%A0%84%EB%82%A8%EA%B4%91%EC%A3%BC%ED%86%B5%ED%95%A9%ED%8A%B9%EB%B3%84%EC%8B%9C%20%EB%B6%81%EA%B5%AC%20%EC%84%9C%EB%B0%A9%EB%A1%9C%2078-1",
-    rating: null,
-    reviewCount: null,
+    rating: 4,
+    reviewCount: 4,
     youtubers: [
       {
         name: "쯔양",
@@ -8649,8 +8649,8 @@ const CURATED_FOOD = [
     lng: 128.575240281764,
     kakaoUrl: "http://place.map.kakao.com/1799433072",
     naverUrl: "https://map.naver.com/p/search/%ED%95%9C%EA%B0%95%EB%B0%98%EC%A0%90%20%EB%8C%80%EA%B5%AC%20%EC%A4%91%EA%B5%AC%20%EB%8B%AC%EA%B5%AC%EB%B2%8C%EB%8C%80%EB%A1%9C387%EA%B8%B8%2042",
-    rating: null,
-    reviewCount: null,
+    rating: 3.2,
+    reviewCount: 5,
     youtubers: [
       {
         name: "쯔양",
@@ -9174,8 +9174,8 @@ const CURATED_FOOD = [
     lng: 128.82773266891087,
     kakaoUrl: "http://place.map.kakao.com/1519521521",
     naverUrl: "https://map.naver.com/p/search/%ED%99%94%EB%8F%99%EB%AC%B8%EC%96%B4%20%EA%B0%95%EC%9B%90%ED%8A%B9%EB%B3%84%EC%9E%90%EC%B9%98%EB%8F%84%20%EA%B0%95%EB%A6%89%EC%8B%9C%20%EC%A3%BC%EB%AC%B8%EC%A7%84%EC%9D%8D%20%EC%8B%9C%EC%9E%A5%EA%B8%B8%2038",
-    rating: null,
-    reviewCount: null,
+    rating: 5,
+    reviewCount: 1,
     youtubers: [
       {
         name: "쯔양",
@@ -12378,8 +12378,8 @@ const CURATED_FOOD = [
     lng: 126.800886551231,
     kakaoUrl: "http://place.map.kakao.com/570286556",
     naverUrl: "https://map.naver.com/p/search/%EB%B4%89%EC%9E%90%EB%A7%89%EC%B0%BD%20%EB%B6%80%EC%B2%9C%EC%9B%90%EC%A2%85%EC%A0%90%20%EA%B2%BD%EA%B8%B0%20%EB%B6%80%EC%B2%9C%EC%8B%9C%20%EC%98%A4%EC%A0%95%EA%B5%AC%20%EC%9B%90%EC%A2%85%EB%A1%9C%207",
-    rating: null,
-    reviewCount: null,
+    rating: 4.5,
+    reviewCount: 24,
     youtubers: [
       {
         name: "전지적 참견 시점(이영자)",
