@@ -387,6 +387,7 @@ a.info-text:hover { color: #22c55e; }
   <select id="filter-youtuber" class="filter-select" onchange="onFilterSelectChange()"></select>
   <select id="filter-region" class="filter-select" onchange="onFilterSelectChange()"></select>
   <select id="filter-category" class="filter-select" onchange="onFilterSelectChange()"></select>
+  <select id="filter-certification" class="filter-select" onchange="onFilterSelectChange()"></select>
   <span class="result-count-text" id="result-count-text"></span>
 </div>
 
@@ -496,6 +497,11 @@ let activeFood   = null;
 const GWANGJU_GU = ['동구','서구','남구','북구','광산구'];
 const REGION_ALIAS = {
   '전북특별자치도': '전북', '강원특별자치도': '강원', '제주특별자치도': '제주',
+  // TourAPI 등 일부 출처는 축약형이 아니라 정식 시/도 명칭을 줘서(예: "충청남도") 추가함
+  '충청남도': '충남', '충청북도': '충북', '경상북도': '경북', '경상남도': '경남',
+  '전라남도': '전남', '전라북도': '전북', '경기도': '경기', '서울특별시': '서울',
+  '부산광역시': '부산', '대구광역시': '대구', '인천광역시': '인천', '광주광역시': '광주',
+  '대전광역시': '대전', '울산광역시': '울산', '세종특별자치시': '세종',
 };
 function extractRegion(address) {
   if (!address) return '기타';
@@ -544,6 +550,7 @@ const filterState = {
   youtuber: '',
   region: '',
   categoryMajor: '',
+  certification: '', // '백년가게' | '한국관광공사' — certification 문자열에 부분일치로 판단
 };
 
 function matchesFilters(food, state) {
@@ -551,6 +558,7 @@ function matchesFilters(food, state) {
   if (s.youtuber && !food.youtubers.some(y => y.name === s.youtuber)) return false;
   if (s.region && extractRegion(food.address) !== s.region) return false;
   if (s.categoryMajor && getMajorCategory(food.category) !== s.categoryMajor) return false;
+  if (s.certification && !(food.certification && food.certification.includes(s.certification))) return false;
   return true;
 }
 
@@ -645,6 +653,17 @@ const FILTER_CATEGORY_MAJOR_OPTS = (() => {
   CURATED_FOOD.forEach(f => { const m = getMajorCategory(f.category); counts[m] = (counts[m]||0) + 1; });
   return Object.entries(counts).sort((a,b) => b[1]-a[1]).map(([name,count]) => ({ value: name, count }));
 })();
+// 인증(백년가게/한국관광공사 등록)은 유튜버 추천과 별개 축 — certification 문자열에
+// 부분일치로 판단하므로(복수 인증은 " · "로 이어붙어 있음) 짧은 키(백년가게/한국관광공사)로 카운트
+const FILTER_CERTIFICATION_OPTS = (() => {
+  const counts = {};
+  CURATED_FOOD.forEach(f => {
+    if (!f.certification) return;
+    if (f.certification.includes('백년가게')) counts['백년가게'] = (counts['백년가게']||0) + 1;
+    if (f.certification.includes('한국관광공사')) counts['한국관광공사'] = (counts['한국관광공사']||0) + 1;
+  });
+  return Object.entries(counts).sort((a,b) => b[1]-a[1]).map(([name,count]) => ({ value: name, count }));
+})();
 
 // 골프노노 스타일: <select> 옵션으로 렌더링, "전체" 옵션이 항상 첫 번째
 function renderFilterSelect(selectId, allLabel, options, showCount) {
@@ -655,17 +674,19 @@ function renderFilterSelect(selectId, allLabel, options, showCount) {
 renderFilterSelect('filter-youtuber', '유튜버 전체', FILTER_YOUTUBER_OPTS, true);
 renderFilterSelect('filter-region', '지역 전체', FILTER_REGION_OPTS, false);
 renderFilterSelect('filter-category', '음식종류 전체', FILTER_CATEGORY_MAJOR_OPTS, false);
+renderFilterSelect('filter-certification', '인증 전체', FILTER_CERTIFICATION_OPTS, true);
 
 function onFilterSelectChange() {
   filterState.youtuber = document.getElementById('filter-youtuber').value;
   filterState.region = document.getElementById('filter-region').value;
   filterState.categoryMajor = document.getElementById('filter-category').value;
+  filterState.certification = document.getElementById('filter-certification').value;
   applyFilters();
 }
 
 function updateCount() {
   const n = CURATED_FOOD.filter(f => matchesFilters(f)).length;
-  const activeCount = [filterState.youtuber, filterState.region, filterState.categoryMajor].filter(Boolean).length;
+  const activeCount = [filterState.youtuber, filterState.region, filterState.categoryMajor, filterState.certification].filter(Boolean).length;
   document.getElementById('cnt').textContent = n + '곳';
   document.getElementById('result-count-text').textContent =
     activeCount > 0 ? `전체 ${CURATED_FOOD.length}곳 중 ${n}곳` : '';
@@ -841,7 +862,7 @@ function fillPanel(prefix, food) {
       ? `<span class="badge-multi">🌟 ${food.youtubers.length}명의 유튜버가 추천했어요</span>`
       : `<span class="badge-yt">▶ ${esc(food.youtubers[0].name)}</span>`;
   }
-  const certBadgeHtml = food.certification ? `<span class="badge-cert">🏅 ${esc(food.certification)}</span>` : '';
+  const certBadgeHtml = food.certification ? `<span class="badge-cert" title="${esc(food.certification)}">🏛️ 공식 인증</span>` : '';
   let headHtml = `
     <div class="d-name${food.naverUrl ? ' clickable' : ''}"${food.naverUrl ? ` onclick="window.open('${esc(food.naverUrl)}', '_blank', 'noopener')" title="네이버 지도에서 보기"` : ''}>${esc(food.name)}</div>
     <div class="d-badges">
