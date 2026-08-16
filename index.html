@@ -192,18 +192,31 @@ header {
 #list-view::-webkit-scrollbar-thumb { background: #d1d5db; border-radius: 2px; }
 
 .food-card {
-  display: flex; gap: 12px; padding: 12px 16px;
-  border-bottom: 1px solid #f3f4f6; cursor: pointer;
-  transition: background .15s;
+  display: flex; flex-direction: column;
+  margin: 10px 12px; border-radius: 12px; overflow: hidden;
+  background: #fff; box-shadow: 0 1px 3px rgba(0,0,0,.10);
+  cursor: pointer; transition: transform .15s ease, box-shadow .15s ease;
 }
-.food-card:hover { background: #f9fafb; }
+.food-card:hover { transform: translateY(-4px); box-shadow: 0 10px 24px rgba(0,0,0,.14); }
+
+/* 사진(4:3) — 있으면 실사진, 없으면 카테고리 아이콘으로 대체 */
 .card-thumb {
-  width: 60px; height: 60px; border-radius: 10px; flex-shrink: 0;
+  position: relative; width: 100%; aspect-ratio: 4 / 3; flex-shrink: 0;
   background: #f0fdf4; display: flex; align-items: center; justify-content: center;
-  font-size: 26px; overflow: hidden;
+  font-size: 40px; overflow: hidden; border-radius: 12px 12px 0 0;
 }
-.card-thumb img { width: 100%; height: 100%; object-fit: cover; }
-.card-info { flex: 1; min-width: 0; display: flex; flex-direction: column; gap: 4px; justify-content: center; }
+.card-thumb img { width: 100%; height: 100%; object-fit: cover; display: block; }
+/* 사진 로딩 중 회색 스켈레톤 */
+.card-thumb.skeleton {
+  background: linear-gradient(90deg, #eceff1 25%, #e2e5e8 37%, #eceff1 63%);
+  background-size: 400% 100%; animation: card-skeleton 1.4s ease infinite;
+}
+@keyframes card-skeleton {
+  0% { background-position: 100% 50%; }
+  100% { background-position: 0 50%; }
+}
+
+.card-info { flex: 1; min-width: 0; display: flex; flex-direction: column; gap: 4px; padding: 10px 12px 12px; }
 .card-name {
   font-size: 14px; font-weight: 700; color: #1a1a1a;
   white-space: nowrap; overflow: hidden; text-overflow: ellipsis;
@@ -215,9 +228,10 @@ header {
   font-size: 10px; font-weight: 700; padding: 2px 7px; border-radius: 99px;
   white-space: nowrap; border: 1px solid transparent;
 }
-.card-badge-yt { background: #fff1f2; color: #e11d48; border-color: #fecdd3; }
+/* 채널별 배지 색상은 CHANNEL_COLORS(JS)에서 인라인 스타일로 적용됨.
+   여기 있는 색은 채널 매핑이 없는 경우의 기본값 + 복수추천/인증 배지용. */
 .card-badge-multi { background: #fffbeb; color: #b45309; border-color: #fde68a; }
-.card-badge-cert { background: #eff6ff; color: #1d4ed8; border-color: #bfdbfe; padding: 2px 6px; }
+.card-badge-cert { background: #fffbeb; color: #b45309; border-color: #fde68a; padding: 2px 6px; } /* 인증=금색 계열 */
 .list-status { padding: 18px; text-align: center; font-size: 12px; color: #9ca3af; flex-shrink: 0; }
 .list-empty { padding: 60px 24px; text-align: center; color: #9ca3af; font-size: 13px; }
 
@@ -942,13 +956,43 @@ const CATEGORY_ICON = {
   '분식': '🍢', '카페·디저트': '☕', '기타': '🍽️',
 };
 
+// 채널별 배지 색상(카드 전용) — 요청 예시(성시경=파랑, 쯔양=빨강)를 기준으로
+// 나머지 채널도 서로 구별되게 배정. 인증은 별도로 금색 계열(.card-badge-cert) 고정.
+const CHANNEL_COLORS = {
+  '쯔양': { bg: '#fff1f2', color: '#e11d48', border: '#fecdd3' },
+  '성시경의 먹을텐데': { bg: '#eff6ff', color: '#2563eb', border: '#bfdbfe' },
+  '승우아빠': { bg: '#fff7ed', color: '#c2410c', border: '#fed7aa' },
+  '또간집(풍자)': { bg: '#f0fdf4', color: '#15803d', border: '#bbf7d0' },
+  '전지적 참견 시점(이영자)': { bg: '#faf5ff', color: '#9333ea', border: '#e9d5ff' },
+  '최자로드': { bg: '#ecfeff', color: '#0e7490', border: '#a5f3fc' },
+  '식객 허영만의 백반기행': { bg: '#fefce8', color: '#a16207', border: '#fef08a' },
+  '맛있는 녀석들': { bg: '#fdf2f8', color: '#be185d', border: '#fbcfe8' },
+};
+const CHANNEL_COLOR_DEFAULT = { bg: '#f3f4f6', color: '#4b5563', border: '#e5e7eb' };
+
+function channelBadgeStyle(name) {
+  const c = CHANNEL_COLORS[name] || CHANNEL_COLOR_DEFAULT;
+  return `background:${c.bg};color:${c.color};border-color:${c.border};`;
+}
+
+// ── 카드 컴포넌트 단위로 렌더 함수를 분리해 둠: 지금은 food-card 하나뿐이지만,
+// 나중에 다른 타입의 카드(광고 등)를 끼워넣을 때 이 스위치만 확장하면 됨.
+function renderListItem(food, indexInFilteredList) {
+  // 향후 네이티브 광고 슬롯 삽입 지점 (예: 10번째마다 광고 카드로 교체)
+  // if (indexInFilteredList > 0 && (indexInFilteredList + 1) % 10 === 0) {
+  //   return renderAdCard(indexInFilteredList);
+  // }
+  return renderFoodCard(food);
+}
+
 function renderFoodCard(food) {
   const isMulti = food.youtubers.length > 1;
   let channelBadge = '';
   if (isMulti) {
     channelBadge = `<span class="card-badge card-badge-multi">🌟${food.youtubers.length}명 추천</span>`;
   } else if (food.youtubers.length === 1) {
-    channelBadge = `<span class="card-badge card-badge-yt">${esc(food.youtubers[0].name)}</span>`;
+    const ytName = food.youtubers[0].name;
+    channelBadge = `<span class="card-badge" style="${channelBadgeStyle(ytName)}">${esc(ytName)}</span>`;
   }
   const certBadge = food.certification ? `<span class="card-badge card-badge-cert" title="${esc(food.certification)}">🏛️</span>` : '';
   const ratingHtml = food.rating
@@ -956,13 +1000,18 @@ function renderFoodCard(food) {
     : '';
   const region = extractRegion(food.address);
   const icon = CATEGORY_ICON[getMajorCategory(food.category)] || '🍽️';
-  const thumb = food.imageUrl
-    ? `<img src="${esc(food.imageUrl)}" alt="${esc(food.name)}">`
+  // 사진이 있으면 로딩 전엔 스켈레톤을 보여주고, 로드 완료/실패 시 img.onload/onerror로 해제.
+  // 사진이 없으면 카테고리 아이콘을 바로 보여줌(스켈레톤 불필요).
+  const thumb = food.photoUrl
+    ? `<img src="${esc(food.photoUrl)}" alt="${esc(food.name)}" loading="lazy"
+         onload="this.parentElement.classList.remove('skeleton')"
+         onerror="this.parentElement.classList.remove('skeleton'); this.remove(); this.parentElement.textContent='${icon}';">`
     : icon;
+  const thumbClass = food.photoUrl ? 'card-thumb skeleton' : 'card-thumb';
 
   return `
     <div class="food-card" data-id="${esc(food.id)}">
-      <div class="card-thumb">${thumb}</div>
+      <div class="${thumbClass}">${thumb}</div>
       <div class="card-info">
         <div class="card-name">${esc(food.name)}</div>
         <div class="card-meta">
@@ -989,7 +1038,8 @@ function renderListInitial() {
 function renderListNextPage() {
   const next = filteredList.slice(listRenderedCount, listRenderedCount + LIST_PAGE_SIZE);
   if (!next.length) return;
-  document.getElementById('food-list').insertAdjacentHTML('beforeend', next.map(renderFoodCard).join(''));
+  const html = next.map((food, i) => renderListItem(food, listRenderedCount + i)).join('');
+  document.getElementById('food-list').insertAdjacentHTML('beforeend', html);
   listRenderedCount += next.length;
   document.getElementById('list-status').textContent =
     listRenderedCount < filteredList.length ? '' : `전체 ${filteredList.length}곳을 다 봤어요`;
