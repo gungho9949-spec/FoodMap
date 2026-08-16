@@ -65,14 +65,37 @@ header {
 .search-item-sub { font-size: 11px; color: #9ca3af; margin-top: 2px; }
 .search-empty { padding: 14px; text-align: center; font-size: 13px; color: #9ca3af; }
 
-/* 필터 바 */
+/* 필터 바 (골프노노/와일드피크스 스타일 — 드롭다운 셀렉트 3개 상시 노출) */
 #filter-bar {
   background: #fff; border-bottom: 1px solid #e5e7eb;
   padding: 8px 16px;
-  display: flex; align-items: center; gap: 10px;
+  display: flex; align-items: center; gap: 8px; flex-wrap: wrap;
   flex-shrink: 0;
   box-shadow: 0 1px 3px rgba(0,0,0,.04);
 }
+.filter-select {
+  padding: 7px 26px 7px 10px; border-radius: 8px;
+  border: 1.5px solid #e5e7eb; background: #fff; color: #374151;
+  font-size: 13px; font-weight: 600; cursor: pointer; font-family: inherit;
+  transition: border-color .15s; max-width: 170px;
+  background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='10' height='6'%3E%3Cpath d='M1 1l4 4 4-4' stroke='%236b7280' stroke-width='1.5' fill='none' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
+  background-repeat: no-repeat; background-position: right 10px center;
+  -webkit-appearance: none; appearance: none;
+}
+.filter-select:hover { border-color: #86efac; }
+.filter-select:focus { outline: none; border-color: #22c55e; }
+.result-count-text { font-size: 12px; color: #6b7280; margin-left: auto; white-space: nowrap; }
+
+@media (max-width: 767px) {
+  #filter-bar { flex-wrap: wrap; }
+  .filter-select { flex: 1 1 auto; min-width: 100px; max-width: none; }
+  .result-count-text { display: none; }
+}
+
+/* ════════════════════════════════════════════════════════════════
+   [OLD] 칩(chip) 기반 필터 패널 스타일 — 드롭다운 방식으로 교체되어
+   더 이상 사용하지 않음. 나중에 되돌릴 수도 있어 삭제하지 않고
+   주석 처리만 해 둠 (관련 HTML/JS도 동일하게 주석 처리됨).
 #filter-trigger {
   display: flex; align-items: center; gap: 6px;
   padding: 6px 14px; border-radius: 99px;
@@ -88,16 +111,13 @@ header {
   min-width: 18px; height: 18px; padding: 0 5px;
   font-size: 11px; font-weight: 700; display: flex; align-items: center; justify-content: center;
 }
-.result-count-text { font-size: 12px; color: #6b7280; }
 
-/* 필터 패널 오버레이 */
 #filter-overlay {
   display: none; position: fixed; inset: 0; background: rgba(0,0,0,.32);
   z-index: 1400;
 }
 #filter-overlay.open { display: block; }
 
-/* 필터 패널 (PC: 드롭다운) */
 #filter-panel {
   display: none; position: fixed; top: 100px; left: 16px;
   width: 360px; max-height: 70vh;
@@ -155,8 +175,8 @@ header {
     display: block; width: 44px; height: 5px; background: #d1d5db;
     border-radius: 3px; margin: 10px auto 0; flex-shrink: 0;
   }
-  .result-count-text { display: none; }
 }
+   ════════════════════════════════════════════════════════════════ */
 
 /* 메인 */
 .main { display: flex; flex: 1; overflow: hidden; }
@@ -351,15 +371,16 @@ a.info-text:hover { color: #22c55e; }
 </header>
 
 <div id="filter-bar">
-  <button id="filter-trigger" onclick="toggleFilterPanel()">
-    <span class="filter-trigger-icon">🔍</span>
-    <span>필터</span>
-    <span class="filter-trigger-badge" id="filter-trigger-badge" style="display:none;">0</span>
-  </button>
+  <select id="filter-youtuber" class="filter-select" onchange="onFilterSelectChange()"></select>
+  <select id="filter-region" class="filter-select" onchange="onFilterSelectChange()"></select>
+  <select id="filter-category" class="filter-select" onchange="onFilterSelectChange()"></select>
   <span class="result-count-text" id="result-count-text"></span>
 </div>
 
-<!-- 필터 패널 (PC: 드롭다운 / 모바일: 바텀시트) -->
+<!-- ════════════════════════════════════════════════════════════════
+     [OLD] 칩 기반 필터 패널 (PC: 드롭다운 패널 / 모바일: 바텀시트) —
+     드롭다운 셀렉트 방식으로 교체되어 더 이상 사용하지 않음.
+     나중에 되돌릴 수도 있어 삭제하지 않고 주석 처리만 해 둠.
 <div id="filter-overlay" onclick="closeFilterPanel()"></div>
 <div id="filter-panel">
   <div class="filter-panel-handle" id="filter-panel-handle"></div>
@@ -387,6 +408,7 @@ a.info-text:hover { color: #22c55e; }
     <button class="filter-apply-btn" id="filter-apply-btn" onclick="applyFilterPanel()">결과 575곳 보기</button>
   </div>
 </div>
+     ════════════════════════════════════════════════════════════════ -->
 
 <div class="main">
   <div id="sidebar">
@@ -504,8 +526,26 @@ const CATEGORY_MAJOR_MAP = {
 };
 function getMajorCategory(cat) { return CATEGORY_MAJOR_MAP[cat] || '기타'; }
 
-// 필터 상태 (3축: 유튜버/지역/카테고리 — 축 간 AND, 축 내부 OR)
+// 필터 상태 (3축: 유튜버/지역/음식종류 — 드롭다운 단일선택, 축 간 AND)
 const filterState = {
+  youtuber: '',
+  region: '',
+  categoryMajor: '',
+};
+
+function matchesFilters(food, state) {
+  const s = state || filterState;
+  if (s.youtuber && !food.youtubers.some(y => y.name === s.youtuber)) return false;
+  if (s.region && extractRegion(food.address) !== s.region) return false;
+  if (s.categoryMajor && getMajorCategory(food.category) !== s.categoryMajor) return false;
+  return true;
+}
+
+/* ════════════════════════════════════════════════════════════════
+   [OLD] 칩 기반 다중선택 필터 상태 — 드롭다운 단일선택 방식으로
+   교체되어 더 이상 사용하지 않음. 나중에 되돌릴 수도 있어
+   삭제하지 않고 주석 처리만 해 둠.
+const filterState_OLD = {
   youtubers: new Set(),
   regions: new Set(),
   categoryMajors: new Set(),
@@ -514,8 +554,8 @@ const filterState = {
 // 패널에서 "결과 보기"를 누르기 전까지의 임시(초안) 상태 — 취소 시 되돌릴 수 있도록 분리
 let draftState = null;
 
-function matchesFilters(food, state) {
-  const s = state || filterState;
+function matchesFilters_OLD(food, state) {
+  const s = state || filterState_OLD;
   if (s.youtubers.size > 0 && !food.youtubers.some(y => s.youtubers.has(y.name))) return false;
   if (s.regions.size > 0 && !s.regions.has(extractRegion(food.address))) return false;
   if (s.categoryMajors.size > 0 || s.categoryLeaves.size > 0) {
@@ -526,6 +566,7 @@ function matchesFilters(food, state) {
   }
   return true;
 }
+   ════════════════════════════════════════════════════════════════ */
 
 // 마커 클러스터러 (줌아웃 시 지역별로 숫자 뱃지로 뭉쳐 보임, 녹색 톤 통일)
 const clusterer = new kakao.maps.MarkerClusterer({
@@ -575,7 +616,7 @@ CURATED_FOOD.forEach(food => {
 
 clusterer.addMarkers(CURATED_FOOD.filter(f => f.marker).map(f => f.marker));
 
-/* ── 필터 패널 데이터 구성 (유튜버/지역/카테고리 목록 + 개수) ── */
+/* ── 필터 드롭다운 데이터 구성 (유튜버/지역/음식종류 목록 + 개수) ── */
 const FILTER_YOUTUBER_OPTS = (() => {
   const counts = {};
   CURATED_FOOD.forEach(f => f.youtubers.forEach(y => { counts[y.name] = (counts[y.name]||0) + 1; }));
@@ -586,7 +627,42 @@ const FILTER_REGION_OPTS = (() => {
   CURATED_FOOD.forEach(f => { const r = extractRegion(f.address); counts[r] = (counts[r]||0) + 1; });
   return Object.entries(counts).sort((a,b) => b[1]-a[1]).map(([name,count]) => ({ value: name, count }));
 })();
-const FILTER_CATEGORY_OPTS = (() => {
+const FILTER_CATEGORY_MAJOR_OPTS = (() => {
+  const counts = {};
+  CURATED_FOOD.forEach(f => { const m = getMajorCategory(f.category); counts[m] = (counts[m]||0) + 1; });
+  return Object.entries(counts).sort((a,b) => b[1]-a[1]).map(([name,count]) => ({ value: name, count }));
+})();
+
+// 골프노노 스타일: <select> 옵션으로 렌더링, "전체" 옵션이 항상 첫 번째
+function renderFilterSelect(selectId, allLabel, options, showCount) {
+  const el = document.getElementById(selectId);
+  el.innerHTML = `<option value="">${esc(allLabel)}</option>` +
+    options.map(opt => `<option value="${esc(opt.value)}">${esc(opt.value)}${showCount ? ' ' + opt.count : ''}</option>`).join('');
+}
+renderFilterSelect('filter-youtuber', '유튜버 전체', FILTER_YOUTUBER_OPTS, true);
+renderFilterSelect('filter-region', '지역 전체', FILTER_REGION_OPTS, false);
+renderFilterSelect('filter-category', '음식종류 전체', FILTER_CATEGORY_MAJOR_OPTS, false);
+
+function onFilterSelectChange() {
+  filterState.youtuber = document.getElementById('filter-youtuber').value;
+  filterState.region = document.getElementById('filter-region').value;
+  filterState.categoryMajor = document.getElementById('filter-category').value;
+  applyFilters();
+}
+
+function updateCount() {
+  const n = CURATED_FOOD.filter(f => matchesFilters(f)).length;
+  const activeCount = [filterState.youtuber, filterState.region, filterState.categoryMajor].filter(Boolean).length;
+  document.getElementById('cnt').textContent = n + '곳';
+  document.getElementById('result-count-text').textContent =
+    activeCount > 0 ? `전체 ${CURATED_FOOD.length}곳 중 ${n}곳` : '';
+}
+
+/* ════════════════════════════════════════════════════════════════
+   [OLD] 칩 기반 다중선택 필터 패널 렌더링 로직 — 드롭다운 방식으로
+   교체되어 더 이상 사용하지 않음. 나중에 되돌릴 수도 있어
+   삭제하지 않고 주석 처리만 해 둠.
+const FILTER_CATEGORY_OPTS_OLD = (() => {
   const majorCounts = {};
   const leavesByMajor = {};
   CURATED_FOOD.forEach(f => {
@@ -626,7 +702,7 @@ function renderFilterPanel() {
     btn.classList.toggle('on');
     updateFilterPanelLiveCount();
   });
-  renderChipGroup('filter-chips-category-major', FILTER_CATEGORY_OPTS.majors, s.categoryMajors, (val, btn) => {
+  renderChipGroup('filter-chips-category-major', FILTER_CATEGORY_OPTS_OLD.majors, s.categoryMajors, (val, btn) => {
     toggleSetValue(s.categoryMajors, val);
     btn.classList.toggle('on');
     renderCategoryLeafChips();
@@ -640,7 +716,7 @@ function renderCategoryLeafChips() {
   const s = draftState;
   // 선택되었거나(펼쳐볼 필요 있는) 대분류의 세부 카테고리만 서브 칩으로 노출
   const majorsToShow = s.categoryMajors.size > 0 ? [...s.categoryMajors] : [];
-  const leafOpts = majorsToShow.flatMap(m => FILTER_CATEGORY_OPTS.leaves[m] || []);
+  const leafOpts = majorsToShow.flatMap(m => FILTER_CATEGORY_OPTS_OLD.leaves[m] || []);
   renderChipGroup('filter-chips-category-leaf', leafOpts, s.categoryLeaves, (val, btn) => {
     toggleSetValue(s.categoryLeaves, val);
     btn.classList.toggle('on');
@@ -652,7 +728,7 @@ function renderCategoryLeafChips() {
 function toggleSetValue(set, val) { set.has(val) ? set.delete(val) : set.add(val); }
 
 function updateFilterPanelLiveCount() {
-  const n = CURATED_FOOD.filter(f => matchesFilters(f, draftState)).length;
+  const n = CURATED_FOOD.filter(f => matchesFilters_OLD(f, draftState)).length;
   document.getElementById('filter-apply-btn').textContent = `결과 ${n}곳 보기`;
 }
 
@@ -663,10 +739,10 @@ function toggleFilterPanel() {
 
 function openFilterPanel() {
   draftState = {
-    youtubers: new Set(filterState.youtubers),
-    regions: new Set(filterState.regions),
-    categoryMajors: new Set(filterState.categoryMajors),
-    categoryLeaves: new Set(filterState.categoryLeaves),
+    youtubers: new Set(filterState_OLD.youtubers),
+    regions: new Set(filterState_OLD.regions),
+    categoryMajors: new Set(filterState_OLD.categoryMajors),
+    categoryLeaves: new Set(filterState_OLD.categoryLeaves),
   };
   renderFilterPanel();
   document.getElementById('filter-panel').classList.add('open');
@@ -684,29 +760,18 @@ function resetFilters() {
 }
 
 function applyFilterPanel() {
-  filterState.youtubers = new Set(draftState.youtubers);
-  filterState.regions = new Set(draftState.regions);
-  filterState.categoryMajors = new Set(draftState.categoryMajors);
-  filterState.categoryLeaves = new Set(draftState.categoryLeaves);
+  filterState_OLD.youtubers = new Set(draftState.youtubers);
+  filterState_OLD.regions = new Set(draftState.regions);
+  filterState_OLD.categoryMajors = new Set(draftState.categoryMajors);
+  filterState_OLD.categoryLeaves = new Set(draftState.categoryLeaves);
   closeFilterPanel();
   applyFilters();
 }
 
 function activeFilterChipCount() {
-  return filterState.youtubers.size + filterState.regions.size + filterState.categoryMajors.size + filterState.categoryLeaves.size;
+  return filterState_OLD.youtubers.size + filterState_OLD.regions.size + filterState_OLD.categoryMajors.size + filterState_OLD.categoryLeaves.size;
 }
-
-function updateCount() {
-  const n = CURATED_FOOD.filter(f => matchesFilters(f)).length;
-  const badge = document.getElementById('filter-trigger-badge');
-  const chipCount = activeFilterChipCount();
-  badge.style.display = chipCount > 0 ? 'flex' : 'none';
-  badge.textContent = chipCount;
-  document.getElementById('filter-trigger').classList.toggle('active', chipCount > 0);
-  document.getElementById('cnt').textContent = n + '곳';
-  document.getElementById('result-count-text').textContent =
-    chipCount > 0 ? `전체 ${CURATED_FOOD.length}곳 중 ${n}곳` : '';
-}
+   ════════════════════════════════════════════════════════════════ */
 
 function applyFilters() {
   const visibleMarkers = CURATED_FOOD.filter(f => f.marker && matchesFilters(f)).map(f => f.marker);
