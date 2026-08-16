@@ -1,0 +1,11 @@
+{
+  "version": "0.0.1",
+  "configurations": [
+    {
+      "name": "foodmap-testdir",
+      "runtimeExecutable": "npx",
+      "runtimeArgs": ["-y", "http-server", "_testdir", "-p", "8934", "-c-1"],
+      "port": 8934
+    }
+  ]
+}
