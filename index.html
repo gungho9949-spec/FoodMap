@@ -178,22 +178,73 @@ header {
 }
    ════════════════════════════════════════════════════════════════ */
 
-/* 메인 */
+/* 메인 (좌: 리스트/상세, 우: 지도 — PC 1024px 이상은 좌우 분할, 미만은 한 번에 하나씩) */
 .main { display: flex; flex: 1; overflow: hidden; }
 
-/* 사이드바 */
-#sidebar {
-  width: 340px; min-width: 340px; background: #fff;
-  border-right: 1px solid #e5e7eb;
-  overflow-y: auto; overscroll-behavior: contain;
-  box-shadow: 2px 0 8px rgba(0,0,0,.04);
+#left-panel {
+  width: 100%; background: #fff;
+  display: flex; flex-direction: column; overflow: hidden;
 }
-#sidebar::-webkit-scrollbar { width: 4px; }
-#sidebar::-webkit-scrollbar-thumb { background: #d1d5db; border-radius: 2px; }
 
-/* 지도 */
-.map-wrap { flex: 1; position: relative; }
+/* 리스트(피드) */
+#list-view { flex: 1; overflow-y: auto; overscroll-behavior: contain; display: flex; flex-direction: column; }
+#list-view::-webkit-scrollbar { width: 4px; }
+#list-view::-webkit-scrollbar-thumb { background: #d1d5db; border-radius: 2px; }
+
+.food-card {
+  display: flex; gap: 12px; padding: 12px 16px;
+  border-bottom: 1px solid #f3f4f6; cursor: pointer;
+  transition: background .15s;
+}
+.food-card:hover { background: #f9fafb; }
+.card-thumb {
+  width: 60px; height: 60px; border-radius: 10px; flex-shrink: 0;
+  background: #f0fdf4; display: flex; align-items: center; justify-content: center;
+  font-size: 26px; overflow: hidden;
+}
+.card-thumb img { width: 100%; height: 100%; object-fit: cover; }
+.card-info { flex: 1; min-width: 0; display: flex; flex-direction: column; gap: 4px; justify-content: center; }
+.card-name {
+  font-size: 14px; font-weight: 700; color: #1a1a1a;
+  white-space: nowrap; overflow: hidden; text-overflow: ellipsis;
+}
+.card-meta { display: flex; align-items: center; gap: 8px; font-size: 12px; color: #6b7280; }
+.card-rating { color: #b45309; font-weight: 700; white-space: nowrap; }
+.card-badges { display: flex; gap: 5px; flex-wrap: wrap; }
+.card-badge {
+  font-size: 10px; font-weight: 700; padding: 2px 7px; border-radius: 99px;
+  white-space: nowrap; border: 1px solid transparent;
+}
+.card-badge-yt { background: #fff1f2; color: #e11d48; border-color: #fecdd3; }
+.card-badge-multi { background: #fffbeb; color: #b45309; border-color: #fde68a; }
+.card-badge-cert { background: #eff6ff; color: #1d4ed8; border-color: #bfdbfe; padding: 2px 6px; }
+.list-status { padding: 18px; text-align: center; font-size: 12px; color: #9ca3af; flex-shrink: 0; }
+.list-empty { padding: 60px 24px; text-align: center; color: #9ca3af; font-size: 13px; }
+
+/* 상세 패널 (리스트 카드/지도 마커 클릭 시 좌측 패널이 리스트 → 상세로 전환) */
+#detail-view { flex: 1; overflow-y: auto; overscroll-behavior: contain; display: none; flex-direction: column; }
+.detail-back-btn {
+  display: flex; align-items: center; gap: 6px; padding: 12px 16px;
+  font-size: 13px; font-weight: 700; color: #374151; cursor: pointer;
+  border-bottom: 1px solid #f3f4f6; flex-shrink: 0; transition: color .15s;
+}
+.detail-back-btn:hover { color: #16a34a; }
+
+/* 지도 (모바일/태블릿: FAB로 여는 전체화면 오버레이 / PC: 우측 60% 항상 노출) */
+.map-wrap {
+  display: none;
+  position: fixed; inset: 0; z-index: 950;
+  background: #fff;
+}
+.map-wrap.mobile-visible { display: block; }
 #map { width: 100%; height: 100%; }
+#map-back-btn {
+  position: absolute; top: 14px; left: 14px; z-index: 960;
+  background: #fff; border: none; border-radius: 99px;
+  padding: 9px 16px; font-size: 13px; font-weight: 700; color: #1a1a1a;
+  box-shadow: 0 2px 10px rgba(0,0,0,.18); cursor: pointer;
+}
+#map-back-btn:hover { color: #16a34a; }
 .locate-btn {
   position: fixed; bottom: 90px; right: 16px; z-index: 1100;
   width: 44px; height: 44px; border-radius: 50%;
@@ -205,20 +256,19 @@ header {
 .locate-btn:hover { box-shadow: 0 4px 16px rgba(34,197,94,.28); transform: scale(1.07); }
 .locate-btn:active { transform: scale(.95); }
 
-/* 웰컴 */
-#welcome {
-  display: flex; flex-direction: column; align-items: center;
-  justify-content: center; height: 100%; padding: 32px 24px;
-  text-align: center; gap: 10px;
+/* 지도로 보기 FAB (모바일/태블릿 전용) */
+#map-fab {
+  display: none; position: fixed; bottom: 24px; right: 16px; z-index: 500;
+  background: #1a1a1a; color: #fff; border: none; border-radius: 99px;
+  padding: 13px 20px; font-size: 14px; font-weight: 700; cursor: pointer;
+  box-shadow: 0 4px 16px rgba(0,0,0,.3); align-items: center; gap: 6px;
 }
-#welcome .ico { font-size: 52px; }
-#welcome h2 { font-size: 16px; font-weight: 700; color: #1a1a1a; }
-#welcome p { font-size: 13px; color: #6b7280; line-height: 1.75; }
-.chips { display: flex; flex-wrap: wrap; gap: 6px; justify-content: center; margin-top: 6px; }
-.chip {
-  background: #f0fdf4; color: #16a34a;
-  border: 1px solid #bbf7d0; border-radius: 99px;
-  padding: 4px 12px; font-size: 11px; font-weight: 600;
+@media (max-width: 1023px) { #map-fab { display: flex; } }
+
+@media (min-width: 1024px) {
+  #left-panel { width: 40%; min-width: 380px; max-width: 480px; border-right: 1px solid #e5e7eb; box-shadow: 2px 0 8px rgba(0,0,0,.04); }
+  .map-wrap { display: block !important; position: relative; inset: auto; z-index: auto; flex: 1; }
+  #map-fab, #map-back-btn { display: none !important; }
 }
 
 /* 상세 패널 */
@@ -325,14 +375,14 @@ a.info-text:hover { color: #22c55e; }
 }
 .kakao-place-link:hover { border-color: #22c55e; background: #f0fdf4; color: #16a34a; }
 
-/* 모바일 */
+/* 모바일 전용 미세 조정 (구조적 전환은 1024px 기준, 이건 좁은 화면 여유 확보용) */
 @media (max-width: 767px) {
-  #sidebar { display: none; }
-  #map { width: 100%; }
-  .locate-btn { position: fixed !important; bottom: 90px !important; right: 16px !important; z-index: 1100 !important; }
   .count-badge { display: none; }
   .search-input { width: 130px; }
+}
 
+/* 바텀시트: 지도 화면에서 마커를 직접 클릭했을 때만 씀 (리스트 카드 클릭은 상세 패널로) */
+@media (max-width: 1023px) {
   #sheet {
     position: fixed; bottom: 0; left: 0; right: 0;
     background: #fff; border-radius: 20px 20px 0 0;
@@ -350,11 +400,11 @@ a.info-text:hover { color: #22c55e; }
     border-radius: 3px; margin: 12px auto 4px; cursor: grab; flex-shrink: 0;
   }
 }
-@media (min-width: 768px) { #sheet { display: none !important; } }
+@media (min-width: 1024px) { #sheet { display: none !important; } }
 
-/* 홈 FAB */
+/* 홈 FAB (바텀시트 열렸을 때 목록으로 빠르게 돌아가기) */
 #home-fab {
-  display: none; position: fixed; bottom: 24px; left: 16px; z-index: 300;
+  display: none; position: fixed; bottom: 24px; left: 16px; z-index: 1300;
   width: 48px; height: 48px; border-radius: 50%;
   background: linear-gradient(135deg, #16a34a, #22c55e); border: none;
   box-shadow: 0 4px 16px rgba(22,163,74,.5), 0 2px 8px rgba(0,0,0,.2);
@@ -425,31 +475,30 @@ a.info-text:hover { color: #22c55e; }
      ════════════════════════════════════════════════════════════════ -->
 
 <div class="main">
-  <div id="sidebar">
-    <div id="welcome">
-      <div class="ico">🍜</div>
-      <h2>유튜버 추천 맛집을 클릭하세요</h2>
-      <p>지도의 녹색 마커를 클릭하면<br>맛집 정보와 유튜브 영상을<br>바로 확인할 수 있어요.</p>
-      <div class="chips">
-        <span class="chip">🎬 유튜버 추천</span>
-        <span class="chip">📍 전국 맛집</span>
-        <span class="chip">🗺️ 길찾기</span>
-      </div>
+  <div id="left-panel">
+    <div id="list-view">
+      <div id="food-list"></div>
+      <div class="list-status" id="list-status"></div>
     </div>
 
-    <div id="detail">
+    <div id="detail-view">
+      <div class="detail-back-btn" onclick="deselect()">← 목록으로</div>
       <div class="d-head" id="d-head"></div>
       <div class="d-body" id="d-body"></div>
     </div>
   </div>
 
-  <div class="map-wrap">
+  <div class="map-wrap" id="map-wrap">
+    <button id="map-back-btn" onclick="showListView()">☰ 목록으로</button>
     <div id="map"></div>
     <button class="locate-btn" onclick="locateMe()" title="내 위치">📍</button>
   </div>
 </div>
 
-<!-- 모바일 바텀시트 -->
+<!-- 지도로 보기 FAB (모바일/태블릿 전용) -->
+<button id="map-fab" onclick="showMapView()">🗺️ 지도로 보기</button>
+
+<!-- 모바일 바텀시트 (지도 화면에서 마커를 직접 클릭했을 때만) -->
 <div id="sheet">
   <div class="sheet-handle"></div>
   <button onclick="closeSheet()" style="position:absolute;top:10px;right:14px;background:#f3f4f6;border:none;border-radius:50%;width:30px;height:30px;font-size:15px;color:#6b7280;cursor:pointer;display:flex;align-items:center;justify-content:center;">✕</button>
@@ -815,20 +864,23 @@ function applyFilters() {
   clusterer.clear();
   clusterer.addMarkers(visibleMarkers);
   updateCount();
+  renderListInitial();
   if (activeFood && !matchesFilters(activeFood)) deselect();
 }
 
 updateCount();
 
+// 리스트 상세 ↔ 목록 전환 시 사용할 상태를 없애고, 목록/상세는 항상 둘 중 하나만 보이도록 함
 function deselect() {
   if (activeMarker) { activeMarker.setImage(activeMarker.normalImg); activeMarker = null; }
   activeFood = null;
-  document.getElementById('welcome').style.display = 'flex';
-  document.getElementById('detail').style.display = 'none';
+  document.getElementById('detail-view').style.display = 'none';
+  document.getElementById('list-view').style.display = 'flex';
   closeSheet();
 }
 
 function select(food, marker) {
+  if (!marker) return;
   if (activeMarker) activeMarker.setImage(activeMarker.normalImg);
   activeMarker = marker;
   marker.setImage(marker.activeImg);
@@ -836,22 +888,118 @@ function select(food, marker) {
   map.setLevel(4);
   activeFood = food;
 
-  if (window.innerWidth < 768) {
+  const isMobileMapView = window.innerWidth < 1024 && document.getElementById('map-wrap').classList.contains('mobile-visible');
+
+  if (isMobileMapView) {
+    // 모바일/태블릿에서 지도 위 마커를 직접 클릭한 경우 → 바텀시트로 빠르게 보여줌
     fillPanel('s', food);
     document.getElementById('sheet').classList.add('open');
     document.getElementById('home-fab').classList.add('visible');
     document.querySelectorAll('.locate-btn').forEach(b => b.style.display = 'none');
   } else {
+    // 리스트 카드 클릭(모바일/PC 공통) 또는 PC 분할뷰의 지도 마커 클릭 → 좌측 패널이 상세로 전환
     fillPanel('d', food);
-    document.getElementById('welcome').style.display = 'none';
-    document.getElementById('detail').style.display = 'flex';
-    document.getElementById('sidebar').scrollTop = 0;
+    document.getElementById('list-view').style.display = 'none';
+    document.getElementById('detail-view').style.display = 'flex';
+    document.getElementById('detail-view').scrollTop = 0;
   }
 }
 
 function esc(str) {
   return (str || '').replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;');
 }
+
+/* ── 지도 ↔ 목록 전환 (모바일/태블릿 전용, PC는 항상 좌우 분할이라 해당 없음) ── */
+function showMapView() {
+  document.getElementById('map-wrap').classList.add('mobile-visible');
+  document.getElementById('map-fab').style.display = 'none';
+}
+function showListView() {
+  document.getElementById('map-wrap').classList.remove('mobile-visible');
+  document.getElementById('map-fab').style.display = '';
+  closeSheet();
+  document.getElementById('detail-view').style.display = 'none';
+  document.getElementById('list-view').style.display = 'flex';
+}
+
+/* ── 리스트(피드) 렌더링 — 무한 스크롤, 50개씩 배치 추가 ── */
+const LIST_PAGE_SIZE = 50;
+let filteredList = [];
+let listRenderedCount = 0;
+
+const CATEGORY_ICON = {
+  '한식': '🍚', '중식': '🥟', '일식': '🍣', '양식': '🍝',
+  '분식': '🍢', '카페·디저트': '☕', '기타': '🍽️',
+};
+
+function renderFoodCard(food) {
+  const isMulti = food.youtubers.length > 1;
+  let channelBadge = '';
+  if (isMulti) {
+    channelBadge = `<span class="card-badge card-badge-multi">🌟${food.youtubers.length}명 추천</span>`;
+  } else if (food.youtubers.length === 1) {
+    channelBadge = `<span class="card-badge card-badge-yt">${esc(food.youtubers[0].name)}</span>`;
+  }
+  const certBadge = food.certification ? `<span class="card-badge card-badge-cert" title="${esc(food.certification)}">🏛️</span>` : '';
+  const ratingHtml = food.rating
+    ? `<span class="card-rating">⭐${food.rating}${food.reviewCount ? ` (${food.reviewCount.toLocaleString()})` : ''}</span>`
+    : '';
+  const region = extractRegion(food.address);
+  const icon = CATEGORY_ICON[getMajorCategory(food.category)] || '🍽️';
+  const thumb = food.imageUrl
+    ? `<img src="${esc(food.imageUrl)}" alt="${esc(food.name)}">`
+    : icon;
+
+  return `
+    <div class="food-card" data-id="${esc(food.id)}">
+      <div class="card-thumb">${thumb}</div>
+      <div class="card-info">
+        <div class="card-name">${esc(food.name)}</div>
+        <div class="card-meta">
+          <span>📍 ${esc(region)}</span>
+          ${ratingHtml}
+        </div>
+        <div class="card-badges">${channelBadge}${certBadge}</div>
+      </div>
+    </div>`;
+}
+
+function renderListInitial() {
+  filteredList = CURATED_FOOD.filter(f => matchesFilters(f));
+  listRenderedCount = 0;
+  document.getElementById('food-list').innerHTML = '';
+  document.getElementById('list-status').textContent = '';
+  if (filteredList.length === 0) {
+    document.getElementById('food-list').innerHTML = '<div class="list-empty">조건에 맞는 맛집이 없어요</div>';
+    return;
+  }
+  renderListNextPage();
+}
+
+function renderListNextPage() {
+  const next = filteredList.slice(listRenderedCount, listRenderedCount + LIST_PAGE_SIZE);
+  if (!next.length) return;
+  document.getElementById('food-list').insertAdjacentHTML('beforeend', next.map(renderFoodCard).join(''));
+  listRenderedCount += next.length;
+  document.getElementById('list-status').textContent =
+    listRenderedCount < filteredList.length ? '' : `전체 ${filteredList.length}곳을 다 봤어요`;
+}
+
+document.getElementById('food-list').addEventListener('click', e => {
+  const card = e.target.closest('.food-card');
+  if (!card) return;
+  const food = CURATED_FOOD.find(f => f.id === card.dataset.id);
+  if (food && food.marker) select(food, food.marker);
+});
+
+document.getElementById('list-view').addEventListener('scroll', function() {
+  if (listRenderedCount >= filteredList.length) return;
+  if (this.scrollTop + this.clientHeight >= this.scrollHeight - 400) {
+    renderListNextPage();
+  }
+});
+
+renderListInitial();
 
 function fillPanel(prefix, food) {
   const headId = prefix === 'd' ? 'd-head' : 's-head';
@@ -979,8 +1127,11 @@ function goHome() {
   activeFood = null;
   map.setCenter(new kakao.maps.LatLng(36.2, 127.8));
   map.setLevel(13);
-  document.getElementById('welcome').style.display = 'flex';
-  document.getElementById('detail').style.display = 'none';
+  document.getElementById('detail-view').style.display = 'none';
+  document.getElementById('list-view').style.display = 'flex';
+  document.getElementById('map-wrap').classList.remove('mobile-visible');
+  document.getElementById('map-fab').style.display = '';
+  document.getElementById('list-view').scrollTop = 0;
 }
 
 function closeSheet() {
