@@ -913,6 +913,16 @@ function esc(str) {
 function showMapView() {
   document.getElementById('map-wrap').classList.add('mobile-visible');
   document.getElementById('map-fab').style.display = 'none';
+  // 카카오맵은 컨테이너가 display:none인 상태로 생성되면 크기를 0으로 인식해서
+  // 타일이 회색 화면으로 안 그려지는 알려진 문제가 있다. #map은 페이지 로드 시
+  // 딱 한 번만 생성되는데, 모바일에서는 그 시점에 .map-wrap이 숨겨져 있으므로
+  // 지도를 다시 보여줄 때마다 relayout()으로 컨테이너 크기를 재인식시켜야 한다.
+  // display:none → block 전환이 실제로 반영된 뒤 호출되도록 다음 프레임에서 실행.
+  requestAnimationFrame(() => {
+    const center = map.getCenter();
+    map.relayout();
+    map.setCenter(center); // relayout 과정에서 중심이 틀어지는 것 방지 (Kakao 권장 패턴)
+  });
 }
 function showListView() {
   document.getElementById('map-wrap').classList.remove('mobile-visible');
