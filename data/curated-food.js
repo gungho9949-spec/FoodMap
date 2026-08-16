@@ -59,8 +59,8 @@ const CURATED_FOOD = [
     youtubers: [
       {
         name: "쯔양",
-        videoTitle: null,
-        videoUrl: null,
+        videoTitle: "75년 역사의 중식집..여기 진짜 맛있습니다👍이문동 영화장 짜장면 짬뽕 탕수육 먹방",
+        videoUrl: "https://www.youtube.com/watch?v=GeRkd99WZbU",
         recommendNote: "쯔동여지도 인기 TOP5에 오른 동대문구의 중식당."
       }
     ]
@@ -128,8 +128,8 @@ const CURATED_FOOD = [
     youtubers: [
       {
         name: "쯔양",
-        videoTitle: null,
-        videoUrl: null,
+        videoTitle: "가맥집에서 먹는 짜파게티! 을지로 백만불식품 먹방",
+        videoUrl: "https://www.youtube.com/watch?v=M8whof-__nY",
         recommendNote: "을지로 노포 상권을 대표하는 고기 맛집으로 알려졌다."
       }
     ]
@@ -254,8 +254,8 @@ const CURATED_FOOD = [
     youtubers: [
       {
         name: "쯔양",
-        videoTitle: null,
-        videoUrl: null,
+        videoTitle: "청주사람은 다안다는 3대째 내려온 떡볶이집?!😳 50년 전통 apm떡볶이 먹방",
+        videoUrl: "https://www.youtube.com/watch?v=waeLgP8c0cA",
         recommendNote: "쯔양이 방문해 리뷰한 분식 맛집."
       }
     ]
@@ -338,8 +338,8 @@ const CURATED_FOOD = [
     youtubers: [
       {
         name: "쯔양",
-        videoTitle: null,
-        videoUrl: null,
+        videoTitle: "서울 3대 스테이크?! 얼굴만한 티본스테이크😳 저스트 스테이크 2.4kg먹방",
+        videoUrl: "https://www.youtube.com/watch?v=CHvhhACncY8",
         recommendNote: "쯔양이 방문해 리뷰한 양식 맛집."
       }
     ]
@@ -491,8 +491,8 @@ const CURATED_FOOD = [
     youtubers: [
       {
         name: "쯔양",
-        videoTitle: null,
-        videoUrl: null,
+        videoTitle: "한도 무제한카드로 시장털기🤣 70년 전통 만두와 시장 떡볶이 먹방",
+        videoUrl: "https://www.youtube.com/watch?v=xRyaIyl8quc",
         recommendNote: "쯔양이 방문해 리뷰한 한식 맛집."
       }
     ]
@@ -575,8 +575,8 @@ const CURATED_FOOD = [
     youtubers: [
       {
         name: "쯔양",
-        videoTitle: null,
-        videoUrl: null,
+        videoTitle: "여기 소고기랑 무생채가 미쳤어요..🥺 쯔양팀 회식장소에서 소갈비 20인분 먹방",
+        videoUrl: "https://www.youtube.com/watch?v=iig0YSPArE0",
         recommendNote: "쯔양이 방문해 리뷰한 고기 맛집."
       }
     ]
@@ -638,8 +638,8 @@ const CURATED_FOOD = [
     youtubers: [
       {
         name: "쯔양",
-        videoTitle: null,
-        videoUrl: null,
+        videoTitle: "못먹는다에 만원 거셨어요👊🏻 암사 숨은맛집 고추장구이 먹방",
+        videoUrl: "https://www.youtube.com/watch?v=UOTXMMGvXUk",
         recommendNote: "쯔양이 방문해 리뷰한 고기 맛집."
       }
     ]
@@ -785,8 +785,8 @@ const CURATED_FOOD = [
     youtubers: [
       {
         name: "쯔양",
-        videoTitle: null,
-        videoUrl: null,
+        videoTitle: "횡성 38년전통 광암막국수🍜 전메뉴 먹방",
+        videoUrl: "https://www.youtube.com/watch?v=rqwXDBojRpY",
         recommendNote: "쯔양이 방문해 리뷰한 한식 맛집."
       }
     ]
@@ -827,8 +827,8 @@ const CURATED_FOOD = [
     youtubers: [
       {
         name: "쯔양",
-        videoTitle: null,
-        videoUrl: null,
+        videoTitle: "불쭈꾸미 10인분!!🔥👊 구독자분이 놀라서 병원에서 목발 짚고 달려오셨어요😂 교동집 매운 쭈꾸미 먹방",
+        videoUrl: "https://www.youtube.com/watch?v=9AeDIHDL9ZM",
         recommendNote: "쯔양이 방문해 리뷰한 한식 맛집."
       }
     ]
@@ -932,8 +932,8 @@ const CURATED_FOOD = [
     youtubers: [
       {
         name: "쯔양",
-        videoTitle: null,
-        videoUrl: null,
+        videoTitle: "군만두 하나에 200원?! 만두 다 떨어질때까지 먹었습니다😂 40년간 군만두만 구워온 달인군만두 먹방",
+        videoUrl: "https://www.youtube.com/watch?v=fKiyBm3PGAI",
         recommendNote: "쯔양이 방문해 리뷰한 분식 맛집."
       }
     ]
@@ -1079,8 +1079,8 @@ const CURATED_FOOD = [
     youtubers: [
       {
         name: "쯔양",
-        videoTitle: null,
-        videoUrl: null,
+        videoTitle: "월 매출 1억?!😱 전국 TOP3 식당을 찾아갔습니다🔥 100대 1의 경쟁률을 뚫고 올라온 쌀국수 햄버거 젤라또 먹방",
+        videoUrl: "https://www.youtube.com/watch?v=lbueoat6MJk",
         recommendNote: "쯔양이 방문해 리뷰한 카페·디저트 맛집."
       }
     ]
@@ -1100,8 +1100,8 @@ const CURATED_FOOD = [
     youtubers: [
       {
         name: "쯔양",
-        videoTitle: null,
-        videoUrl: null,
+        videoTitle: "8명의 요리 다먹을수 있을까...?🤔 킹타이거 새우 라면 햄버거 먹방(w.포도)",
+        videoUrl: "https://www.youtube.com/watch?v=yEQvlQg6mWA",
         recommendNote: "쯔양이 방문해 리뷰한 한식 맛집."
       }
     ]
@@ -1121,8 +1121,8 @@ const CURATED_FOOD = [
     youtubers: [
       {
         name: "쯔양",
-        videoTitle: null,
-        videoUrl: null,
+        videoTitle: "쯔양 아닌척하고 쯔양세트 시켜봤습니다🤣 사장님 몰래카메라 과연 성공했을까..광주 금성식당 먹방",
+        videoUrl: "https://www.youtube.com/watch?v=fXxl-YDU2uQ",
         recommendNote: "쯔양이 방문해 리뷰한 한식 맛집."
       }
     ]
@@ -1142,8 +1142,8 @@ const CURATED_FOOD = [
     youtubers: [
       {
         name: "쯔양",
-        videoTitle: null,
-        videoUrl: null,
+        videoTitle: "전메뉴 다 주세요!😠 전주에서 줄서서먹는 금암소바 먹방",
+        videoUrl: "https://www.youtube.com/watch?v=1O5vTQR8EO8",
         recommendNote: "쯔양이 방문해 리뷰한 한식 맛집."
       }
     ]
@@ -1163,8 +1163,8 @@ const CURATED_FOOD = [
     youtubers: [
       {
         name: "쯔양",
-        videoTitle: null,
-        videoUrl: null,
+        videoTitle: "동네 사장님들 모이셨습니다🤣 김치와 보쌈이 들어간 순창 삼합??먹방",
+        videoUrl: "https://www.youtube.com/watch?v=R4l1zUbM-dM",
         recommendNote: "쯔양이 방문해 리뷰한 한식 맛집."
       }
     ]
@@ -1184,8 +1184,8 @@ const CURATED_FOOD = [
     youtubers: [
       {
         name: "쯔양",
-        videoTitle: null,
-        videoUrl: null,
+        videoTitle: "중식집 사장님이 배 터지라고 만든 초대형 돈까스😱부안 기라성 비빔간짜장 짬뽕 먹방",
+        videoUrl: "https://www.youtube.com/watch?v=VmOEK9isSuk",
         recommendNote: "쯔양이 방문해 리뷰한 중식 맛집."
       }
     ]
@@ -1247,8 +1247,8 @@ const CURATED_FOOD = [
     youtubers: [
       {
         name: "쯔양",
-        videoTitle: null,
-        videoUrl: null,
+        videoTitle: "맛있어서 기절한다는 막창순대?🤔 서울대생 핫플 기절초풍왕순대 먹방",
+        videoUrl: "https://www.youtube.com/watch?v=p9Uxmbu45p0",
         recommendNote: "쯔양이 방문해 리뷰한 한식 맛집."
       }
     ]
@@ -1373,8 +1373,8 @@ const CURATED_FOOD = [
     youtubers: [
       {
         name: "쯔양",
-        videoTitle: null,
-        videoUrl: null,
+        videoTitle: "40년 초밥장인 가게에서 마지막식사 했습니다..🥺 초밥 100개 도전🔥 강남 김수사 먹방",
+        videoUrl: "https://www.youtube.com/watch?v=sFm9UUP9a5M",
         recommendNote: "쯔양이 방문해 리뷰한 돈까스·회 전문점."
       }
     ]
@@ -1415,8 +1415,8 @@ const CURATED_FOOD = [
     youtubers: [
       {
         name: "쯔양",
-        videoTitle: null,
-        videoUrl: null,
+        videoTitle: "1시간 기다렸습니다😢 전국 원탑 알탕집 까치둥지? 알만 10인분 먹었더니..",
+        videoUrl: "https://www.youtube.com/watch?v=PWWm9Cy4GiY",
         recommendNote: "쯔양이 방문해 리뷰한 찜·탕 맛집."
       }
     ]
@@ -1541,8 +1541,8 @@ const CURATED_FOOD = [
     youtubers: [
       {
         name: "쯔양",
-        videoTitle: null,
-        videoUrl: null,
+        videoTitle: "우연히 들어갔는데 찐맛집이었습니다😳 서교동 남북통일 닭칼국수 먹방",
+        videoUrl: "https://www.youtube.com/watch?v=dRO4cbYyNvE",
         recommendNote: "쯔양이 방문해 리뷰한 한식 맛집."
       },
       {
@@ -1589,8 +1589,8 @@ const CURATED_FOOD = [
     youtubers: [
       {
         name: "쯔양",
-        videoTitle: null,
-        videoUrl: null,
+        videoTitle: "시장골목 할머님이 끓여주시는 수제비라면과 짜볶이?😳 동대문시장 남이분식 라면먹방",
+        videoUrl: "https://www.youtube.com/watch?v=3MLTE9Zqcoo",
         recommendNote: "쯔양이 방문해 리뷰한 분식 맛집."
       }
     ]
@@ -1652,8 +1652,8 @@ const CURATED_FOOD = [
     youtubers: [
       {
         name: "쯔양",
-        videoTitle: null,
-        videoUrl: null,
+        videoTitle: "동네 사장님들 모이셨습니다🤣 김치와 보쌈이 들어간 순창 삼합??먹방",
+        videoUrl: "https://www.youtube.com/watch?v=R4l1zUbM-dM",
         recommendNote: "쯔양이 방문해 리뷰한 한식 맛집."
       }
     ]
@@ -1694,8 +1694,8 @@ const CURATED_FOOD = [
     youtubers: [
       {
         name: "쯔양",
-        videoTitle: null,
-        videoUrl: null,
+        videoTitle: "국수팔아서 빌딩을 세웠다구요?!😳 삼청동 눈나무집 국수 먹방",
+        videoUrl: "https://www.youtube.com/watch?v=ayjSkDH_Vtw",
         recommendNote: "쯔양이 방문해 리뷰한 한식 맛집."
       }
     ]
@@ -1841,8 +1841,8 @@ const CURATED_FOOD = [
     youtubers: [
       {
         name: "쯔양",
-        videoTitle: null,
-        videoUrl: null,
+        videoTitle: "역대급 사장님 반응ㅋㅋㅋ🤣 야외에서먹는 과천 대공원포도밭 오리주물럭 먹방",
+        videoUrl: "https://www.youtube.com/watch?v=F1ms0elgPLQ",
         recommendNote: "쯔양이 방문해 리뷰한 고기 맛집."
       }
     ]
@@ -1862,8 +1862,8 @@ const CURATED_FOOD = [
     youtubers: [
       {
         name: "쯔양",
-        videoTitle: null,
-        videoUrl: null,
+        videoTitle: "동네 사장님들 모이셨습니다🤣 김치와 보쌈이 들어간 순창 삼합??먹방",
+        videoUrl: "https://www.youtube.com/watch?v=R4l1zUbM-dM",
         recommendNote: "쯔양이 방문해 리뷰한 한식 맛집."
       }
     ]
@@ -2126,8 +2126,8 @@ const CURATED_FOOD = [
     youtubers: [
       {
         name: "쯔양",
-        videoTitle: null,
-        videoUrl: null,
+        videoTitle: "곡성 120년 전통 석쇠구이? 14인분만 먹방",
+        videoUrl: "https://www.youtube.com/watch?v=hryirOKFk38",
         recommendNote: "쯔양이 방문해 리뷰한 고기 맛집."
       }
     ]
@@ -2420,8 +2420,8 @@ const CURATED_FOOD = [
     youtubers: [
       {
         name: "쯔양",
-        videoTitle: null,
-        videoUrl: null,
+        videoTitle: "동네 사장님들 모이셨습니다🤣 김치와 보쌈이 들어간 순창 삼합??먹방",
+        videoUrl: "https://www.youtube.com/watch?v=R4l1zUbM-dM",
         recommendNote: "쯔양이 방문해 리뷰한 한식 맛집."
       }
     ]
@@ -2504,8 +2504,8 @@ const CURATED_FOOD = [
     youtubers: [
       {
         name: "쯔양",
-        videoTitle: null,
-        videoUrl: null,
+        videoTitle: "우리나라 최초의 이탈리안 레스토랑은 어떨까🤔 을지로 라칸티나 먹방",
+        videoUrl: "https://www.youtube.com/watch?v=ZoQf6XgFzRw",
         recommendNote: "쯔양이 방문해 리뷰한 양식 맛집."
       }
     ]
@@ -2525,8 +2525,8 @@ const CURATED_FOOD = [
     youtubers: [
       {
         name: "쯔양",
-        videoTitle: null,
-        videoUrl: null,
+        videoTitle: "🔥100명중에 3명만 시킨다는 매운라면🔥 회기동 레알라면 먹방",
+        videoUrl: "https://www.youtube.com/watch?v=pRx2cMwyrKU",
         recommendNote: "쯔양이 방문해 리뷰한 분식 맛집."
       }
     ]
@@ -2966,8 +2966,8 @@ const CURATED_FOOD = [
     youtubers: [
       {
         name: "쯔양",
-        videoTitle: null,
-        videoUrl: null,
+        videoTitle: "제주5탄) '김치찌개'맛 짬뽕으로 유명한 40년전통 몰질식육식당?🤔 손님들도 놀란 짬뽕 우동 먹방",
+        videoUrl: "https://www.youtube.com/watch?v=6YLPoxJwoyU",
         recommendNote: "쯔양이 방문해 리뷰한 중식 맛집."
       }
     ]
@@ -2987,8 +2987,8 @@ const CURATED_FOOD = [
     youtubers: [
       {
         name: "쯔양",
-        videoTitle: null,
-        videoUrl: null,
+        videoTitle: "웨이팅이 8시간..?!😳 우리나라에서 우대갈비로 제일 유명하다는 몽탄 먹방",
+        videoUrl: "https://www.youtube.com/watch?v=lhs_QyVeEgs",
         recommendNote: "쯔양이 방문해 리뷰한 고기 맛집."
       }
     ]
@@ -3098,8 +3098,8 @@ const CURATED_FOOD = [
     youtubers: [
       {
         name: "쯔양",
-        videoTitle: null,
-        videoUrl: null,
+        videoTitle: "맥주 몇병 먹었을까..?🤔 을지로 골뱅이가 유명한 핫플 뮌헨호프 먹방",
+        videoUrl: "https://www.youtube.com/watch?v=LnpoLJ1PLFM",
         recommendNote: "쯔양이 방문해 리뷰한 야식 맛집."
       }
     ]
@@ -3182,8 +3182,8 @@ const CURATED_FOOD = [
     youtubers: [
       {
         name: "쯔양",
-        videoTitle: null,
-        videoUrl: null,
+        videoTitle: "튀김순대가 미쳤다는 곳..🔥 구반포 40년 전통 미소의집 즉석떡볶이 먹방",
+        videoUrl: "https://www.youtube.com/watch?v=XhUJ-ChfPQw",
         recommendNote: "쯔양이 방문해 리뷰한 분식 맛집."
       }
     ]
@@ -3371,8 +3371,8 @@ const CURATED_FOOD = [
     youtubers: [
       {
         name: "쯔양",
-        videoTitle: null,
-        videoUrl: null,
+        videoTitle: "30년전통 떡으로 끓인 통가래떡 라면..🥺",
+        videoUrl: "https://www.youtube.com/watch?v=Xy7Cp6rA3BM",
         recommendNote: "쯔양이 방문해 리뷰한 카페·디저트 맛집."
       }
     ]
@@ -3686,8 +3686,8 @@ const CURATED_FOOD = [
     youtubers: [
       {
         name: "쯔양",
-        videoTitle: null,
-        videoUrl: null,
+        videoTitle: "가게에 어묵 전부 털기👊🏻 명일동 부산진오뎅 먹방",
+        videoUrl: "https://www.youtube.com/watch?v=uoVQb2OXhzM",
         recommendNote: "쯔양이 방문해 리뷰한 분식 맛집."
       }
     ]
@@ -3755,8 +3755,8 @@ const CURATED_FOOD = [
     youtubers: [
       {
         name: "쯔양",
-        videoTitle: null,
-        videoUrl: null,
+        videoTitle: "81세 할머니의 특이한 떡볶이?🤔 미친 비주얼의 새빨간 떡볶이 분식 먹방",
+        videoUrl: "https://www.youtube.com/watch?v=HT3oGmsf1xo",
         recommendNote: "쯔양이 방문해 리뷰한 분식 맛집."
       }
     ]
@@ -3797,8 +3797,8 @@ const CURATED_FOOD = [
     youtubers: [
       {
         name: "쯔양",
-        videoTitle: null,
-        videoUrl: null,
+        videoTitle: "사장님이 달라지셨어요(?)😳 백종원의골목식당 상도동 빽찐라면 전메뉴 먹방",
+        videoUrl: "https://www.youtube.com/watch?v=Td-nXxKGqT0",
         recommendNote: "쯔양이 방문해 리뷰한 분식 맛집."
       }
     ]
@@ -4112,8 +4112,8 @@ const CURATED_FOOD = [
     youtubers: [
       {
         name: "쯔양",
-        videoTitle: null,
-        videoUrl: null,
+        videoTitle: "광주 현지분께 추천 받았습니다🥺 70년 전통?! 오픈부터 마감까지 줄서있는 서울곱창 먹방",
+        videoUrl: "https://www.youtube.com/watch?v=5kvyjueOvxE",
         recommendNote: "쯔양이 방문해 리뷰한 고기 맛집."
       }
     ]
@@ -4154,8 +4154,8 @@ const CURATED_FOOD = [
     youtubers: [
       {
         name: "쯔양",
-        videoTitle: null,
-        videoUrl: null,
+        videoTitle: "🔥눈물나게 매운 쭈꾸미🔥먹다가 포기했습니다.. 영동시장 서울쭈꾸미 매운맛 1.2.3단계 먹방",
+        videoUrl: "https://www.youtube.com/watch?v=N4nuqaAs79g",
         recommendNote: "쯔양이 방문해 리뷰한 한식 맛집."
       }
     ]
@@ -4217,8 +4217,8 @@ const CURATED_FOOD = [
     youtubers: [
       {
         name: "쯔양",
-        videoTitle: null,
-        videoUrl: null,
+        videoTitle: "곡성 120년 전통 석쇠구이? 14인분만 먹방",
+        videoUrl: "https://www.youtube.com/watch?v=hryirOKFk38",
         recommendNote: "쯔양이 방문해 리뷰한 고기 맛집."
       }
     ]
@@ -4238,8 +4238,8 @@ const CURATED_FOOD = [
     youtubers: [
       {
         name: "쯔양",
-        videoTitle: null,
-        videoUrl: null,
+        videoTitle: "목포1탄) 한입 먹자마자 인생맛집이 됐습니다🥺 목포 현지인도 줄서는 선희식육식당 생고기 삼겹살 먹방",
+        videoUrl: "https://www.youtube.com/watch?v=uNq8gRAzMYc",
         recommendNote: "쯔양이 방문해 리뷰한 한식 맛집."
       }
     ]
@@ -4301,8 +4301,8 @@ const CURATED_FOOD = [
     youtubers: [
       {
         name: "쯔양",
-        videoTitle: null,
-        videoUrl: null,
+        videoTitle: "성수 배달지옥🔥 유명한 성수맛집 싹다 배달시켰습니다. 성수족발 감자탕 떡볶이와 마라곤약젤리 먹방",
+        videoUrl: "https://www.youtube.com/watch?v=HbJCszPqy_I",
         recommendNote: "쯔양이 방문해 리뷰한 족발·보쌈 맛집."
       }
     ]
@@ -4454,8 +4454,8 @@ const CURATED_FOOD = [
       },
       {
         name: "성시경의 먹을텐데",
-        videoTitle: null,
-        videoUrl: null,
+        videoTitle: "[sub] 성시경의 먹을텐데 l 성수 감자탕",
+        videoUrl: "https://www.youtube.com/watch?v=MAIrp4WYAx4",
         recommendNote: null
       }
     ]
@@ -4517,8 +4517,8 @@ const CURATED_FOOD = [
     youtubers: [
       {
         name: "쯔양",
-        videoTitle: null,
-        videoUrl: null,
+        videoTitle: "5그릇 다먹으면 짬뽕 100그릇?!😳 평생무료권도 받았습니다 짬뽕 도전먹방",
+        videoUrl: "https://www.youtube.com/watch?v=7nW5xNfUjUo",
         recommendNote: "쯔양이 방문해 리뷰한 중식 맛집."
       }
     ]
@@ -4580,8 +4580,8 @@ const CURATED_FOOD = [
     youtubers: [
       {
         name: "쯔양",
-        videoTitle: null,
-        videoUrl: null,
+        videoTitle: "60년전통 메밀국수 몇판 먹었을까? 서울3대메밀국수! 남대문 송옥 판메밀먹방",
+        videoUrl: "https://www.youtube.com/watch?v=vsyr8N53ye4",
         recommendNote: "쯔양이 방문해 리뷰한 한식 맛집."
       }
     ]
@@ -4601,8 +4601,8 @@ const CURATED_FOOD = [
     youtubers: [
       {
         name: "쯔양",
-        videoTitle: null,
-        videoUrl: null,
+        videoTitle: "미국에서 오자마자 백반집으로 달려갔습니다🥹동대문시장 불꼬지백반 맛집 송정식당 먹방",
+        videoUrl: "https://www.youtube.com/watch?v=sYxpwthA4qo",
         recommendNote: "쯔양이 방문해 리뷰한 한식 맛집."
       }
     ]
@@ -4769,8 +4769,8 @@ const CURATED_FOOD = [
     youtubers: [
       {
         name: "쯔양",
-        videoTitle: null,
-        videoUrl: null,
+        videoTitle: "혼자 절대 못먹는다는 대왕돈까스 실제로 봤습니다😳웨이팅 극악 하루 3시간 여는 제천 수제돈까스 먹방",
+        videoUrl: "https://www.youtube.com/watch?v=OzHPMTZXs8U",
         recommendNote: "쯔양이 방문해 리뷰한 돈까스·회 전문점."
       }
     ]
@@ -4916,8 +4916,8 @@ const CURATED_FOOD = [
     youtubers: [
       {
         name: "쯔양",
-        videoTitle: null,
-        videoUrl: null,
+        videoTitle: "이거 먹으려고 아침7시에 찾아갔습니다🥺 종로 숨은 골목맛집 승우네식당 백반먹방",
+        videoUrl: "https://www.youtube.com/watch?v=HyWn4MjoxXU",
         recommendNote: "쯔양이 방문해 리뷰한 한식 맛집."
       },
       {
@@ -5006,8 +5006,8 @@ const CURATED_FOOD = [
     youtubers: [
       {
         name: "쯔양",
-        videoTitle: null,
-        videoUrl: null,
+        videoTitle: "사장님이 퇴근해도 되겠대요🤣 인천 1958년 개업한 신신옥 먹방",
+        videoUrl: "https://www.youtube.com/watch?v=4AlE083qq4g",
         recommendNote: "쯔양이 방문해 리뷰한 한식 맛집."
       }
     ]
@@ -5159,8 +5159,8 @@ const CURATED_FOOD = [
       },
       {
         name: "성시경의 먹을텐데",
-        videoTitle: null,
-        videoUrl: null,
+        videoTitle: "[sub] 성시경의 먹을텐데 l 경동시장 안동집, 김제식당",
+        videoUrl: "https://www.youtube.com/watch?v=6T7fWf5EA0s",
         recommendNote: null
       }
     ]
@@ -5222,8 +5222,8 @@ const CURATED_FOOD = [
     youtubers: [
       {
         name: "쯔양",
-        videoTitle: null,
-        videoUrl: null,
+        videoTitle: "꼬치 몇개 먹었을까?🤔 종류만 xx개 전메뉴와 술먹방",
+        videoUrl: "https://www.youtube.com/watch?v=MN5cxevTa_M",
         recommendNote: "쯔양이 방문해 리뷰한 야식 맛집."
       }
     ]
@@ -5417,8 +5417,8 @@ const CURATED_FOOD = [
       },
       {
         name: "성시경의 먹을텐데",
-        videoTitle: null,
-        videoUrl: null,
+        videoTitle: "[sub] 성시경의 먹을텐데 l 논현동 영동장어",
+        videoUrl: "https://www.youtube.com/watch?v=B5rp9kCcqmw",
         recommendNote: null
       }
     ]
@@ -5459,8 +5459,8 @@ const CURATED_FOOD = [
     youtubers: [
       {
         name: "쯔양",
-        videoTitle: null,
-        videoUrl: null,
+        videoTitle: "슈퍼에서 먹는 라면이 최고죠👍사장님 손님들 다 놀란 성수동 영식품 가맥집 먹방",
+        videoUrl: "https://www.youtube.com/watch?v=YwHVzstKtD8",
         recommendNote: "쯔양이 방문해 리뷰한 한식 맛집."
       }
     ]
@@ -5480,8 +5480,8 @@ const CURATED_FOOD = [
     youtubers: [
       {
         name: "쯔양",
-        videoTitle: null,
-        videoUrl: null,
+        videoTitle: "레전드 영주 랜떡 40년만에 서울상륙?🔥가래떡 떡볶이 순대 튀김먹방",
+        videoUrl: "https://www.youtube.com/watch?v=mtGRwDtU35E",
         recommendNote: "쯔양이 방문해 리뷰한 분식 맛집."
       }
     ]
@@ -5627,8 +5627,8 @@ const CURATED_FOOD = [
     youtubers: [
       {
         name: "쯔양",
-        videoTitle: null,
-        videoUrl: null,
+        videoTitle: "\"oh my god😱\" 외국인 손님도 경악한 40년전통 옛집국수 전메뉴 먹방",
+        videoUrl: "https://www.youtube.com/watch?v=-RI5PUiPr3g",
         recommendNote: "쯔양이 방문해 리뷰한 한식 맛집."
       }
     ]
@@ -5711,8 +5711,8 @@ const CURATED_FOOD = [
     youtubers: [
       {
         name: "쯔양",
-        videoTitle: null,
-        videoUrl: null,
+        videoTitle: "다 못먹으면 혼난다는 사장님 놀래키기🤣 광명 오뚜기 돈까스 먹방",
+        videoUrl: "https://www.youtube.com/watch?v=zPy7VeF0YSY",
         recommendNote: "쯔양이 방문해 리뷰한 돈까스·회 전문점."
       }
     ]
@@ -5795,8 +5795,8 @@ const CURATED_FOOD = [
     youtubers: [
       {
         name: "쯔양",
-        videoTitle: null,
-        videoUrl: null,
+        videoTitle: "최애등극..역대급 돈까스 맛집을 찾았습니다🥹 줄서서먹는 옥자회관 돈까스 먹방",
+        videoUrl: "https://www.youtube.com/watch?v=raDdfpVDIbw",
         recommendNote: "쯔양이 방문해 리뷰한 돈까스·회 전문점."
       }
     ]
@@ -5942,8 +5942,8 @@ const CURATED_FOOD = [
     youtubers: [
       {
         name: "쯔양",
-        videoTitle: null,
-        videoUrl: null,
+        videoTitle: "고기만 1.8kg인 김치찌개..😨 천안 줄서서 먹는다는 용천가든 먹방",
+        videoUrl: "https://www.youtube.com/watch?v=wF3eisdCcBA",
         recommendNote: "쯔양이 방문해 리뷰한 한식 맛집."
       }
     ]
@@ -6026,8 +6026,8 @@ const CURATED_FOOD = [
     youtubers: [
       {
         name: "쯔양",
-        videoTitle: null,
-        videoUrl: null,
+        videoTitle: "곡성 120년 전통 석쇠구이? 14인분만 먹방",
+        videoUrl: "https://www.youtube.com/watch?v=hryirOKFk38",
         recommendNote: "쯔양이 방문해 리뷰한 고기 맛집."
       }
     ]
@@ -6068,8 +6068,8 @@ const CURATED_FOOD = [
     youtubers: [
       {
         name: "쯔양",
-        videoTitle: null,
-        videoUrl: null,
+        videoTitle: "우동집에 갔더니 유명배우가 사장님..?🤫 가락동 우불식당 먹방",
+        videoUrl: "https://www.youtube.com/watch?v=HvTLbeasXS4",
         recommendNote: "쯔양이 방문해 리뷰한 분식 맛집."
       }
     ]
@@ -6152,8 +6152,8 @@ const CURATED_FOOD = [
     youtubers: [
       {
         name: "쯔양",
-        videoTitle: null,
-        videoUrl: null,
+        videoTitle: "울릉도11)먹방 구경하러 다 모이셨어요🤣 우진이네 오징어통찜 라면 먹방",
+        videoUrl: "https://www.youtube.com/watch?v=QWtvZ6NfNJ8",
         recommendNote: "쯔양이 방문해 리뷰한 한식 맛집."
       }
     ]
@@ -6698,14 +6698,14 @@ const CURATED_FOOD = [
     youtubers: [
       {
         name: "쯔양",
-        videoTitle: null,
-        videoUrl: null,
+        videoTitle: "갑자기 100개 도전했습니다😳 일광쪽갈비 100개 도전먹방",
+        videoUrl: "https://www.youtube.com/watch?v=GLTd77dTP4Q",
         recommendNote: "쯔양이 방문해 리뷰한 고기 맛집."
       },
       {
         name: "성시경의 먹을텐데",
-        videoTitle: null,
-        videoUrl: null,
+        videoTitle: "성시경의 먹을텐데 l 답십리 일광쪽갈비",
+        videoUrl: "https://www.youtube.com/watch?v=nUj86InQ6dM",
         recommendNote: null
       }
     ]
@@ -6746,8 +6746,8 @@ const CURATED_FOOD = [
     youtubers: [
       {
         name: "쯔양",
-        videoTitle: null,
-        videoUrl: null,
+        videoTitle: "인천 30년 전통 불고기 맛집🤤 육개장이 맛있다는 일미정 먹방",
+        videoUrl: "https://www.youtube.com/watch?v=RiQrl1R2EFE",
         recommendNote: "쯔양이 방문해 리뷰한 한식 맛집."
       }
     ]
@@ -6893,8 +6893,8 @@ const CURATED_FOOD = [
     youtubers: [
       {
         name: "쯔양",
-        videoTitle: null,
-        videoUrl: null,
+        videoTitle: "비주얼 대박👍줄서서 먹는 김치삼겹살..? 삼전동 장수식당 특이한 김치삼겹 먹방",
+        videoUrl: "https://www.youtube.com/watch?v=6O0fYDDFJbk",
         recommendNote: "쯔양이 방문해 리뷰한 고기 맛집."
       },
       {
@@ -6941,8 +6941,8 @@ const CURATED_FOOD = [
     youtubers: [
       {
         name: "쯔양",
-        videoTitle: null,
-        videoUrl: null,
+        videoTitle: "단돈 1000원 국수..???😳 광주 장터국수 전메뉴 먹방",
+        videoUrl: "https://www.youtube.com/watch?v=4Cujb7BvlEI",
         recommendNote: "쯔양이 방문해 리뷰한 한식 맛집."
       }
     ]
@@ -7067,8 +7067,8 @@ const CURATED_FOOD = [
     youtubers: [
       {
         name: "쯔양",
-        videoTitle: null,
-        videoUrl: null,
+        videoTitle: "백반 먹으러 새벽 6시에 찾아갔습니다🥺 동대문 평화시장 찐맛집 전주집 먹방",
+        videoUrl: "https://www.youtube.com/watch?v=Eb5AYxy_7ag",
         recommendNote: "쯔양이 방문해 리뷰한 한식 맛집."
       }
     ]
@@ -7172,8 +7172,8 @@ const CURATED_FOOD = [
     youtubers: [
       {
         name: "쯔양",
-        videoTitle: null,
-        videoUrl: null,
+        videoTitle: "최애 떡볶이집 다시 방문했더니..👊🏻 미아동 40년전통 제일분식 먹방",
+        videoUrl: "https://www.youtube.com/watch?v=Lm9JRlYxFG4",
         recommendNote: "쯔양이 방문해 리뷰한 분식 맛집."
       }
     ]
@@ -7319,8 +7319,8 @@ const CURATED_FOOD = [
     youtubers: [
       {
         name: "쯔양",
-        videoTitle: null,
-        videoUrl: null,
+        videoTitle: "줄서서 먹는 인생 맛집..?!🥺중앙해장🔥 곱창만 3kg 들어간 곱창전골 먹방",
+        videoUrl: "https://www.youtube.com/watch?v=oIekVa6OA-8",
         recommendNote: "쯔양이 방문해 리뷰한 한식 맛집."
       }
     ]
@@ -7583,8 +7583,8 @@ const CURATED_FOOD = [
     youtubers: [
       {
         name: "쯔양",
-        videoTitle: null,
-        videoUrl: null,
+        videoTitle: "여기있는 떡볶이 전부 주세요!😠 동국대생들의 찐맛집 진아네떡볶이 먹방",
+        videoUrl: "https://www.youtube.com/watch?v=koQmU0V3AbU",
         recommendNote: "쯔양이 방문해 리뷰한 분식 맛집."
       }
     ]
@@ -7814,8 +7814,8 @@ const CURATED_FOOD = [
     youtubers: [
       {
         name: "쯔양",
-        videoTitle: null,
-        videoUrl: null,
+        videoTitle: "여의도 주민은 다 안다는 40년전통 맛집?😳 청수모밀 먹방",
+        videoUrl: "https://www.youtube.com/watch?v=lx9-ecadk7U",
         recommendNote: "쯔양이 방문해 리뷰한 한식 맛집."
       }
     ]
@@ -7898,8 +7898,8 @@ const CURATED_FOOD = [
     youtubers: [
       {
         name: "쯔양",
-        videoTitle: null,
-        videoUrl: null,
+        videoTitle: "줄서서먹는 특이한 우설?😳 남영동2탄 핫플레이스 초원 먹방",
+        videoUrl: "https://www.youtube.com/watch?v=SVtf7xT5J64",
         recommendNote: "쯔양이 방문해 리뷰한 고기 맛집."
       }
     ]
@@ -8444,8 +8444,8 @@ const CURATED_FOOD = [
     youtubers: [
       {
         name: "쯔양",
-        videoTitle: null,
-        videoUrl: null,
+        videoTitle: "충주 '너구리'맛 짬뽕으로 유명한 풍년식당 먹방",
+        videoUrl: "https://www.youtube.com/watch?v=wfKSmMuTnQo",
         recommendNote: "쯔양이 방문해 리뷰한 중식 맛집."
       }
     ]
@@ -8549,8 +8549,8 @@ const CURATED_FOOD = [
     youtubers: [
       {
         name: "쯔양",
-        videoTitle: null,
-        videoUrl: null,
+        videoTitle: "피자가 총 2M?!😳 살면서 처음으로 2M 피자 도전했습니다 도전먹방",
+        videoUrl: "https://www.youtube.com/watch?v=2-HzvxrREac",
         recommendNote: "쯔양이 방문해 리뷰한 피자 맛집."
       }
     ]
@@ -8927,8 +8927,8 @@ const CURATED_FOOD = [
     youtubers: [
       {
         name: "쯔양",
-        videoTitle: null,
-        videoUrl: null,
+        videoTitle: "70년만에 이런 손님은 처음이래요🤣 70년 전통 현래장 수타짜장면 중식 먹방",
+        videoUrl: "https://www.youtube.com/watch?v=kF0V4Hrqluo",
         recommendNote: "쯔양이 방문해 리뷰한 중식 맛집."
       }
     ]
@@ -8969,8 +8969,8 @@ const CURATED_FOOD = [
     youtubers: [
       {
         name: "쯔양",
-        videoTitle: null,
-        videoUrl: null,
+        videoTitle: "1968년 개업 54년전통 칼국수?😲 청량리 줄서서먹는 혜성칼국수 먹방",
+        videoUrl: "https://www.youtube.com/watch?v=dcxQA9WRuq8",
         recommendNote: "쯔양이 방문해 리뷰한 한식 맛집."
       }
     ]
@@ -8990,8 +8990,8 @@ const CURATED_FOOD = [
     youtubers: [
       {
         name: "쯔양",
-        videoTitle: null,
-        videoUrl: null,
+        videoTitle: "80세 할아버지께서 가게 망하겠대요😂 제주도 돔베고기 다 털었습니다! 30년전통 호근동 먹방",
+        videoUrl: "https://www.youtube.com/watch?v=c0G-lfExt64",
         recommendNote: "쯔양이 방문해 리뷰한 한식 맛집."
       }
     ]
@@ -9158,8 +9158,8 @@ const CURATED_FOOD = [
     youtubers: [
       {
         name: "쯔양",
-        videoTitle: null,
-        videoUrl: null,
+        videoTitle: "여기가 찐 숨은 맛집입니다..👊🏻 제기동 40년 노포 홍콩중화요리 먹방",
+        videoUrl: "https://www.youtube.com/watch?v=GiQlzDcTKj8",
         recommendNote: "쯔양이 방문해 리뷰한 중식 맛집."
       }
     ]
@@ -9284,8 +9284,8 @@ const CURATED_FOOD = [
     youtubers: [
       {
         name: "성시경의 먹을텐데",
-        videoTitle: null,
-        videoUrl: null,
+        videoTitle: "성시경의 먹을텐데 l 영동시장 현대순대국",
+        videoUrl: "https://www.youtube.com/watch?v=AeZaYlJBWuI",
         recommendNote: null
       }
     ]
@@ -9305,8 +9305,8 @@ const CURATED_FOOD = [
     youtubers: [
       {
         name: "성시경의 먹을텐데",
-        videoTitle: null,
-        videoUrl: null,
+        videoTitle: "성시경의 먹을텐데 l 문천식과 육개장",
+        videoUrl: "https://www.youtube.com/watch?v=aliPr4O2T5s",
         recommendNote: null
       }
     ]
@@ -9326,8 +9326,8 @@ const CURATED_FOOD = [
     youtubers: [
       {
         name: "성시경의 먹을텐데",
-        videoTitle: null,
-        videoUrl: null,
+        videoTitle: "성시경의 먹을텐데 l 첫 게스트와 안동국시 (GUEST.유세윤)",
+        videoUrl: "https://www.youtube.com/watch?v=AHPEiQSyezo",
         recommendNote: null
       }
     ]
@@ -9347,8 +9347,8 @@ const CURATED_FOOD = [
     youtubers: [
       {
         name: "성시경의 먹을텐데",
-        videoTitle: null,
-        videoUrl: null,
+        videoTitle: "성시경의 먹을텐데 l 신미식당 감자탕",
+        videoUrl: "https://www.youtube.com/watch?v=a4IFiQUf3D4",
         recommendNote: null
       }
     ]
@@ -9368,8 +9368,8 @@ const CURATED_FOOD = [
     youtubers: [
       {
         name: "성시경의 먹을텐데",
-        videoTitle: null,
-        videoUrl: null,
+        videoTitle: "[sub] 성시경의 먹을텐데 l 청담동 부흥왕족발",
+        videoUrl: "https://www.youtube.com/watch?v=lO1qFusLkTQ",
         recommendNote: null
       }
     ]
@@ -9410,8 +9410,8 @@ const CURATED_FOOD = [
     youtubers: [
       {
         name: "성시경의 먹을텐데",
-        videoTitle: null,
-        videoUrl: null,
+        videoTitle: "[sub] 성시경의 먹을텐데 l 역삼동 강남 진해장",
+        videoUrl: "https://www.youtube.com/watch?v=u4Ci7OW5ES0",
         recommendNote: null
       }
     ]
@@ -9431,8 +9431,8 @@ const CURATED_FOOD = [
     youtubers: [
       {
         name: "성시경의 먹을텐데",
-        videoTitle: null,
-        videoUrl: null,
+        videoTitle: "[sub] 성시경의 먹을텐데 l 역삼동 대우 부대찌개",
+        videoUrl: "https://www.youtube.com/watch?v=lQ9le3dqrRk",
         recommendNote: null
       }
     ]
@@ -9452,8 +9452,8 @@ const CURATED_FOOD = [
     youtubers: [
       {
         name: "성시경의 먹을텐데",
-        videoTitle: null,
-        videoUrl: null,
+        videoTitle: "[sub] 성시경의 먹을텐데 l 삼성동 도명골 청국장",
+        videoUrl: "https://www.youtube.com/watch?v=LXKubqppj0U",
         recommendNote: null
       }
     ]
@@ -9473,8 +9473,8 @@ const CURATED_FOOD = [
     youtubers: [
       {
         name: "성시경의 먹을텐데",
-        videoTitle: null,
-        videoUrl: null,
+        videoTitle: "[sub] 성시경의 먹을텐데 l 논현동 왕스덕",
+        videoUrl: "https://www.youtube.com/watch?v=-e6zzDqCS6E",
         recommendNote: null
       }
     ]
@@ -9494,8 +9494,8 @@ const CURATED_FOOD = [
     youtubers: [
       {
         name: "성시경의 먹을텐데",
-        videoTitle: null,
-        videoUrl: null,
+        videoTitle: "성시경의 먹을텐데 l 신사동 미남옥",
+        videoUrl: "https://www.youtube.com/watch?v=z5nqim1xRyE",
         recommendNote: null
       }
     ]
@@ -9536,8 +9536,8 @@ const CURATED_FOOD = [
     youtubers: [
       {
         name: "성시경의 먹을텐데",
-        videoTitle: null,
-        videoUrl: null,
+        videoTitle: "성시경의 먹을텐데 l 방화동 교동짬뽕",
+        videoUrl: "https://www.youtube.com/watch?v=l4bgfC2WlUY",
         recommendNote: null
       }
     ]
@@ -9557,8 +9557,8 @@ const CURATED_FOOD = [
     youtubers: [
       {
         name: "성시경의 먹을텐데",
-        videoTitle: null,
-        videoUrl: null,
+        videoTitle: "성시경의 먹을텐데 l 군자 영미 오리탕",
+        videoUrl: "https://www.youtube.com/watch?v=vvGnYVFWrMc",
         recommendNote: null
       }
     ]
@@ -9578,8 +9578,8 @@ const CURATED_FOOD = [
     youtubers: [
       {
         name: "성시경의 먹을텐데",
-        videoTitle: null,
-        videoUrl: null,
+        videoTitle: "성시경의 먹을텐데 l 맛 좋은 순대국",
+        videoUrl: "https://www.youtube.com/watch?v=P6sEVRj87gQ",
         recommendNote: null
       }
     ]
@@ -9599,8 +9599,8 @@ const CURATED_FOOD = [
     youtubers: [
       {
         name: "성시경의 먹을텐데",
-        videoTitle: null,
-        videoUrl: null,
+        videoTitle: "[sub] 성시경의 먹을텐데 l 어머니 대성집 해장국",
+        videoUrl: "https://www.youtube.com/watch?v=28pXe1a9yrA",
         recommendNote: null
       }
     ]
@@ -9620,8 +9620,8 @@ const CURATED_FOOD = [
     youtubers: [
       {
         name: "성시경의 먹을텐데",
-        videoTitle: null,
-        videoUrl: null,
+        videoTitle: "[sub] 성시경의 먹을텐데 l 경동시장 권영수 대가전골",
+        videoUrl: "https://www.youtube.com/watch?v=UhlyCAVklLE",
         recommendNote: null
       }
     ]
@@ -9662,8 +9662,8 @@ const CURATED_FOOD = [
     youtubers: [
       {
         name: "성시경의 먹을텐데",
-        videoTitle: null,
-        videoUrl: null,
+        videoTitle: "[sub] 성시경의 먹을텐데 l 공덕동 원조신촌설렁탕",
+        videoUrl: "https://www.youtube.com/watch?v=XO-UqGjZomc",
         recommendNote: null
       }
     ]
@@ -9704,8 +9704,8 @@ const CURATED_FOOD = [
     youtubers: [
       {
         name: "성시경의 먹을텐데",
-        videoTitle: null,
-        videoUrl: null,
+        videoTitle: "성시경의 먹을텐데 l 서래마을 청실홍실",
+        videoUrl: "https://www.youtube.com/watch?v=3rWCk9M9MQY",
         recommendNote: null
       },
       {
@@ -9731,8 +9731,8 @@ const CURATED_FOOD = [
     youtubers: [
       {
         name: "성시경의 먹을텐데",
-        videoTitle: null,
-        videoUrl: null,
+        videoTitle: "성시경의 먹을텐데 l 논현 성천막국수",
+        videoUrl: "https://www.youtube.com/watch?v=V0QUgTpLTwo",
         recommendNote: null
       }
     ]
@@ -9752,8 +9752,8 @@ const CURATED_FOOD = [
     youtubers: [
       {
         name: "성시경의 먹을텐데",
-        videoTitle: null,
-        videoUrl: null,
+        videoTitle: "성시경의 먹을텐데 l 서래마을 서이축산",
+        videoUrl: "https://www.youtube.com/watch?v=LQOYruD7sek",
         recommendNote: null
       }
     ]
@@ -9773,8 +9773,8 @@ const CURATED_FOOD = [
     youtubers: [
       {
         name: "성시경의 먹을텐데",
-        videoTitle: null,
-        videoUrl: null,
+        videoTitle: "성시경의 먹을텐데 l 신사 영동 설렁탕",
+        videoUrl: "https://www.youtube.com/watch?v=fR2z8JyBb44",
         recommendNote: null
       }
     ]
@@ -9794,8 +9794,8 @@ const CURATED_FOOD = [
     youtubers: [
       {
         name: "성시경의 먹을텐데",
-        videoTitle: null,
-        videoUrl: null,
+        videoTitle: "[sub] 성시경의 먹을텐데 l 화목 순대국",
+        videoUrl: "https://www.youtube.com/watch?v=DpGJEDKsf1o",
         recommendNote: null
       }
     ]
@@ -9815,8 +9815,8 @@ const CURATED_FOOD = [
     youtubers: [
       {
         name: "성시경의 먹을텐데",
-        videoTitle: null,
-        videoUrl: null,
+        videoTitle: "성시경의 먹을텐데 l 명동 산동교자",
+        videoUrl: "https://www.youtube.com/watch?v=AmZ5ceHhkG8",
         recommendNote: null
       }
     ]
@@ -9836,8 +9836,8 @@ const CURATED_FOOD = [
     youtubers: [
       {
         name: "성시경의 먹을텐데",
-        videoTitle: null,
-        videoUrl: null,
+        videoTitle: "성시경의 먹을텐데 l 충무로 필동면옥",
+        videoUrl: "https://www.youtube.com/watch?v=EnMwZlMLPWY",
         recommendNote: null
       }
     ]
@@ -9899,8 +9899,8 @@ const CURATED_FOOD = [
     youtubers: [
       {
         name: "성시경의 먹을텐데",
-        videoTitle: null,
-        videoUrl: null,
+        videoTitle: "성시경의 먹을텐데 l 약수 완도 전복",
+        videoUrl: "https://www.youtube.com/watch?v=ZKOYAQXVhaA",
         recommendNote: null
       }
     ]
@@ -9941,8 +9941,8 @@ const CURATED_FOOD = [
     youtubers: [
       {
         name: "성시경의 먹을텐데",
-        videoTitle: null,
-        videoUrl: null,
+        videoTitle: "성시경의 먹을텐데 l 이태원 버거스낵",
+        videoUrl: "https://www.youtube.com/watch?v=bkdYYIBe0PM",
         recommendNote: null
       }
     ]
