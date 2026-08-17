@@ -6,50 +6,6 @@
 
 const CURATED_FOOD = [
   {
-    id: "jjy-001",
-    name: "스시린 신불당본점",
-    category: "초밥,롤",
-    address: "충남 천안시 서북구 불당31길 32",
-    phone: "041-565-6655",
-    lat: 36.8099894722105,
-    lng: 127.105840141939,
-    kakaoUrl: "http://place.map.kakao.com/376240132",
-    naverUrl: "https://map.naver.com/p/search/%EC%8A%A4%EC%8B%9C%EB%A6%B0%20%EC%8B%A0%EB%B6%88%EB%8B%B9%EB%B3%B8%EC%A0%90%20%EC%B6%A9%EB%82%A8%20%EC%B2%9C%EC%95%88%EC%8B%9C%20%EC%84%9C%EB%B6%81%EA%B5%AC%20%EB%B6%88%EB%8B%B931%EA%B8%B8%2032",
-    rating: 3.8,
-    reviewCount: 510,
-    photoUrl: "https://lh3.googleusercontent.com/place-photos/AG9NLjDBSXr8lbDOQOVRP8T24PFPTD420naTGim4mXap5YOHR0D1_hB1_N3R6T8YfmD9mibRJvVFk5BNcJc-3Z3nd_-OaixoYF9lDbkLkax5PlW8yql4T5ZPZgDRKKgzplpK9YDuqDG-4xsfkj_oKg=s4800-w800",
-    youtubers: [
-      {
-        name: "쯔양",
-        videoTitle: null,
-        videoUrl: null,
-        recommendNote: "쯔양 팬 커뮤니티 지도 '쯔동여지도'에서 처음 방문해도 실패 없는 인기 TOP5 맛집으로 꼽힌 초밥 전문점."
-      }
-    ]
-  },
-  {
-    id: "jjy-002",
-    name: "한잔의추억",
-    category: "호프,요리주점",
-    address: "서울 강남구 논현로175길 68",
-    phone: "02-541-0969",
-    lat: 37.52400834370954,
-    lng: 127.02334917546781,
-    kakaoUrl: "http://place.map.kakao.com/12250697",
-    naverUrl: "https://map.naver.com/p/search/%ED%95%9C%EC%9E%94%EC%9D%98%EC%B6%94%EC%96%B5%20%EC%84%9C%EC%9A%B8%20%EA%B0%95%EB%82%A8%EA%B5%AC%20%EB%85%BC%ED%98%84%EB%A1%9C175%EA%B8%B8%2068",
-    rating: 3.9,
-    reviewCount: 1809,
-    photoUrl: "https://lh3.googleusercontent.com/place-photos/AG9NLjCq4C2ye_fss9MY3-rAQTJlN8mMxT5kLpaFd3V9sxfds2zQhailXu7o4jIK4hmlb-R4NATGXv8qk4gYUSvyC4AcvtKHf5Fh8OmUQAMcZ3QYW9eTBNjoxAcbcTMKIgFdeao2OZD7e-lvKIGniet7i3pDYw=s4800-w800",
-    youtubers: [
-      {
-        name: "쯔양",
-        videoTitle: null,
-        videoUrl: null,
-        recommendNote: "쯔동여지도에서 '한추'라는 애칭으로 불리며 인기 TOP5에 오른 강남 논현동의 요리주점."
-      }
-    ]
-  },
-  {
     id: "jjy-003",
     name: "영화장",
     category: "중국요리",
@@ -144,138 +100,6 @@ const CURATED_FOOD = [
     ]
   },
   {
-    id: "jjy-007",
-    name: "또래끼리",
-    category: "한식",
-    address: "서울 광진구 군자로 103",
-    phone: "02-469-6684",
-    lat: 37.5524084392817,
-    lng: 127.071359690762,
-    kakaoUrl: "http://place.map.kakao.com/19183006",
-    naverUrl: "https://map.naver.com/p/search/%EB%98%90%EB%9E%98%EB%81%BC%EB%A6%AC%20%EC%84%9C%EC%9A%B8%20%EA%B4%91%EC%A7%84%EA%B5%AC%20%EA%B5%B0%EC%9E%90%EB%A1%9C%20103",
-    rating: 4.1,
-    reviewCount: 97,
-    photoUrl: "https://lh3.googleusercontent.com/place-photos/AG9NLjD8-514xMZOSAfb78ql_MuDU7UOUINIXi660B9biuycp1dbBH9ZIZX2ry6pniLkpDKr2WhrKvi39pQwaiXsL0ASeHU8BY0_bmDtOdpsbctDbyi3QoreG1ItEIR6CEzcB1KBLaLumV4X1i9F=s4800-w800",
-    youtubers: [
-      {
-        name: "쯔양",
-        videoTitle: null,
-        videoUrl: null,
-        recommendNote: "세종대 후문 인근에 위치한 김치볶음밥 전문점으로 알려졌다."
-      }
-    ]
-  },
-  {
-    id: "jjy-008",
-    name: "1500회전초밥",
-    category: "초밥,롤",
-    address: "대전 동구 동서대로1695번길 43",
-    phone: "042-633-1345",
-    lat: 36.3513707543074,
-    lng: 127.436720169101,
-    kakaoUrl: "http://place.map.kakao.com/524565876",
-    naverUrl: "https://map.naver.com/p/search/1500%ED%9A%8C%EC%A0%84%EC%B4%88%EB%B0%A5%20%EB%8C%80%EC%A0%84%20%EB%8F%99%EA%B5%AC%20%EB%8F%99%EC%84%9C%EB%8C%80%EB%A1%9C1695%EB%B2%88%EA%B8%B8%2043",
-    rating: 4,
-    reviewCount: 16,
-    photoUrl: "https://lh3.googleusercontent.com/place-photos/AG9NLjCQ8pqlfAwYT04M6Fc7MbtyzyMmF0gixu-8R3rFeIExkuPsXHSB0UJf48dSorOHeT9etuO5EjdHNAnMLgRaks_5U2GCFfKQRJLoATcQ2Q_SnoOD-d8ZQKDHiT-eYsm64lyJJ-5nsbDcnEHpKA=s4800-w800",
-    youtubers: [
-      {
-        name: "쯔양",
-        videoTitle: null,
-        videoUrl: null,
-        recommendNote: "쯔양이 방문해 리뷰한 돈까스·회 전문점."
-      }
-    ]
-  },
-  {
-    id: "jjy-009",
-    name: "153수냉면",
-    category: "냉면",
-    address: "서울 강서구 공항대로 14",
-    phone: "02-2661-7495",
-    lat: 37.561328298727126,
-    lng: 126.80873340116742,
-    kakaoUrl: "http://place.map.kakao.com/21330187",
-    naverUrl: "https://map.naver.com/p/search/153%EC%88%98%EB%83%89%EB%A9%B4%20%EC%84%9C%EC%9A%B8%20%EA%B0%95%EC%84%9C%EA%B5%AC%20%EA%B3%B5%ED%95%AD%EB%8C%80%EB%A1%9C%2014",
-    rating: null,
-    reviewCount: null,
-    photoUrl: null,
-    youtubers: [
-      {
-        name: "쯔양",
-        videoTitle: null,
-        videoUrl: null,
-        recommendNote: "쯔양이 방문해 리뷰한 한식 맛집."
-      }
-    ]
-  },
-  {
-    id: "jjy-010",
-    name: "500원부침개",
-    category: "한식",
-    address: "서울 동대문구 전농로 147",
-    phone: null,
-    lat: 37.57787647959876,
-    lng: 127.05722968252738,
-    kakaoUrl: "http://place.map.kakao.com/1838820758",
-    naverUrl: "https://map.naver.com/p/search/500%EC%9B%90%EB%B6%80%EC%B9%A8%EA%B0%9C%20%EC%84%9C%EC%9A%B8%20%EB%8F%99%EB%8C%80%EB%AC%B8%EA%B5%AC%20%EC%A0%84%EB%86%8D%EB%A1%9C%20147",
-    rating: 4.6,
-    reviewCount: 43,
-    photoUrl: "https://lh3.googleusercontent.com/place-photos/AG9NLjBZO5L1yI1phOshp8er3qSaxYuWL6CX8qV3NRfRNAvZFHkIuHKhMnOlTIRoTXXhxjacIGEgzZdLPB5J6G_qaG-Cr8hxR2YdUpLi1fzAsYTd2-56Q1q7Wnv0t91bmp8X5ApfzQKA2TaZdGp0IGhkBxNv4A=s4800-w800",
-    youtubers: [
-      {
-        name: "쯔양",
-        videoTitle: null,
-        videoUrl: null,
-        recommendNote: "쯔양이 방문해 리뷰한 한식 맛집."
-      }
-    ]
-  },
-  {
-    id: "jjy-011",
-    name: "61호명태전",
-    category: "한식",
-    address: "전남광주통합특별시 순천시 장평로 60",
-    phone: null,
-    lat: 34.945620437689385,
-    lng: 127.49523411383207,
-    kakaoUrl: "http://place.map.kakao.com/21552691",
-    naverUrl: "https://map.naver.com/p/search/61%ED%98%B8%EB%AA%85%ED%83%9C%EC%A0%84%20%EC%A0%84%EB%82%A8%EA%B4%91%EC%A3%BC%ED%86%B5%ED%95%A9%ED%8A%B9%EB%B3%84%EC%8B%9C%20%EC%88%9C%EC%B2%9C%EC%8B%9C%20%EC%9E%A5%ED%8F%89%EB%A1%9C%2060",
-    rating: 4.1,
-    reviewCount: 7,
-    photoUrl: null,
-    youtubers: [
-      {
-        name: "쯔양",
-        videoTitle: null,
-        videoUrl: null,
-        recommendNote: "쯔양이 방문해 리뷰한 한식 맛집."
-      }
-    ]
-  },
-  {
-    id: "jjy-012",
-    name: "APM떡볶이",
-    category: "떡볶이",
-    address: "충북 청주시 상당구 상당로59번길 31",
-    phone: "043-256-5671",
-    lat: 36.63355213050472,
-    lng: 127.48887871371484,
-    kakaoUrl: "http://place.map.kakao.com/21346744",
-    naverUrl: "https://map.naver.com/p/search/APM%EB%96%A1%EB%B3%B6%EC%9D%B4%20%EC%B6%A9%EB%B6%81%20%EC%B2%AD%EC%A3%BC%EC%8B%9C%20%EC%83%81%EB%8B%B9%EA%B5%AC%20%EC%83%81%EB%8B%B9%EB%A1%9C59%EB%B2%88%EA%B8%B8%2031",
-    rating: 3.8,
-    reviewCount: 537,
-    photoUrl: "https://lh3.googleusercontent.com/place-photos/AG9NLjD6CBeUGtGO5A2m2FkrDBeUpmU3svQVDeePhpU8QNC7x5zIIdVyZrzckd8HnRCH_pJxXMjyZbzXQZRnHmyIfSvgHooUBEA_ZTLA4dowe6a7hmYvhyOZfpPeNxcFw29x_I-7piYF0tLJ4EPptYB--BJ0UQ=s4800-w800",
-    youtubers: [
-      {
-        name: "쯔양",
-        videoTitle: "청주사람은 다안다는 3대째 내려온 떡볶이집?!😳 50년 전통 apm떡볶이 먹방",
-        videoUrl: "https://www.youtube.com/watch?v=waeLgP8c0cA",
-        recommendNote: "쯔양이 방문해 리뷰한 분식 맛집."
-      }
-    ]
-  },
-  {
     id: "jjy-013",
     name: "BBQ 빌리지 송리단길점",
     category: "BBQ",
@@ -294,50 +118,6 @@ const CURATED_FOOD = [
         videoTitle: null,
         videoUrl: null,
         recommendNote: "쯔양이 방문해 리뷰한 치킨 전문점."
-      }
-    ]
-  },
-  {
-    id: "jjy-014",
-    name: "BHC치킨 석촌점",
-    category: "BHC치킨",
-    address: "서울 송파구 석촌호수로18길 27",
-    phone: "02-412-9211",
-    lat: 37.504652804993356,
-    lng: 127.10187178381963,
-    kakaoUrl: "http://place.map.kakao.com/11505752",
-    naverUrl: "https://map.naver.com/p/search/BHC%EC%B9%98%ED%82%A8%20%EC%84%9D%EC%B4%8C%EC%A0%90%20%EC%84%9C%EC%9A%B8%20%EC%86%A1%ED%8C%8C%EA%B5%AC%20%EC%84%9D%EC%B4%8C%ED%98%B8%EC%88%98%EB%A1%9C18%EA%B8%B8%2027",
-    rating: 4,
-    reviewCount: 49,
-    photoUrl: "https://lh3.googleusercontent.com/place-photos/AG9NLjC0dz0BxnM4-U_C3Cxy0p109Pu1lzFldrUbWKnOmpHuKGBZwu6Deup6q1IWhr320jnU8E_-mgLvOCt3HE9e7WTWS6zYiE1N5iZxyLmy5XEZgr4eCilEJWSZxqsur-7Xp3vetCcakgtwhEAEEA=s4800-w800",
-    youtubers: [
-      {
-        name: "쯔양",
-        videoTitle: null,
-        videoUrl: null,
-        recommendNote: "쯔양이 방문해 리뷰한 치킨 전문점."
-      }
-    ]
-  },
-  {
-    id: "jjy-015",
-    name: "CU 평창낙천대점",
-    category: "CU",
-    address: "서울 종로구 평창문화로 140",
-    phone: null,
-    lat: 37.60888191002574,
-    lng: 126.97541249710868,
-    kakaoUrl: "http://place.map.kakao.com/129438233",
-    naverUrl: "https://map.naver.com/p/search/CU%20%ED%8F%89%EC%B0%BD%EB%82%99%EC%B2%9C%EB%8C%80%EC%A0%90%20%EC%84%9C%EC%9A%B8%20%EC%A2%85%EB%A1%9C%EA%B5%AC%20%ED%8F%89%EC%B0%BD%EB%AC%B8%ED%99%94%EB%A1%9C%20140",
-    rating: 1,
-    reviewCount: 1,
-    photoUrl: null,
-    youtubers: [
-      {
-        name: "쯔양",
-        videoTitle: null,
-        videoUrl: null,
-        recommendNote: "쯔양이 방문해 리뷰한 분식 맛집."
       }
     ]
   },
@@ -386,28 +166,6 @@ const CURATED_FOOD = [
     ]
   },
   {
-    id: "jjy-018",
-    name: "가막새",
-    category: "술집",
-    address: "서울 서대문구 연세로7안길 54",
-    phone: "02-326-2227",
-    lat: 37.5586284413841,
-    lng: 126.934003549254,
-    kakaoUrl: "http://place.map.kakao.com/8734699",
-    naverUrl: "https://map.naver.com/p/search/%EA%B0%80%EB%A7%89%EC%83%88%20%EC%84%9C%EC%9A%B8%20%EC%84%9C%EB%8C%80%EB%AC%B8%EA%B5%AC%20%EC%97%B0%EC%84%B8%EB%A1%9C7%EC%95%88%EA%B8%B8%2054",
-    rating: 4.3,
-    reviewCount: 78,
-    photoUrl: "https://lh3.googleusercontent.com/place-photos/AG9NLjC1RtccVJyM3L3HM3JPnyFO9SRZFwjhS-NFGvMZLjEViQM5lbhI00O-zJtFKI0uaAKvyXf-OJAsDUYptu_3-Srqeit0Il8-FBjfSclhJYwNoG47dNYxv080jib7eJdDazP-rYXxuTm6BFzuW2z_kx-f=s4800-w800",
-    youtubers: [
-      {
-        name: "쯔양",
-        videoTitle: null,
-        videoUrl: null,
-        recommendNote: "쯔양이 방문해 리뷰한 한식 맛집."
-      }
-    ]
-  },
-  {
     id: "jjy-019",
     name: "가양칼국수",
     category: "한식",
@@ -436,50 +194,6 @@ const CURATED_FOOD = [
     ]
   },
   {
-    id: "jjy-020",
-    name: "파리바게뜨 가평휴게소 춘천방향점",
-    category: "파리바게뜨",
-    address: "경기 가평군 설악면 미사리로540번길 51",
-    phone: "031-584-1426",
-    lat: 37.701926970265625,
-    lng: 127.54679528632819,
-    kakaoUrl: "http://place.map.kakao.com/494870660",
-    naverUrl: "https://map.naver.com/p/search/%ED%8C%8C%EB%A6%AC%EB%B0%94%EA%B2%8C%EB%9C%A8%20%EA%B0%80%ED%8F%89%ED%9C%B4%EA%B2%8C%EC%86%8C%20%EC%B6%98%EC%B2%9C%EB%B0%A9%ED%96%A5%EC%A0%90%20%EA%B2%BD%EA%B8%B0%20%EA%B0%80%ED%8F%89%EA%B5%B0%20%EC%84%A4%EC%95%85%EB%A9%B4%20%EB%AF%B8%EC%82%AC%EB%A6%AC%EB%A1%9C540%EB%B2%88%EA%B8%B8%2051",
-    rating: 4.4,
-    reviewCount: 20,
-    photoUrl: "https://lh3.googleusercontent.com/place-photos/AG9NLjAxSjE3rTtvJrior6GEu9RLYl2f5hTj2AZl5EqrCEe27vU7PsrbV0YNcLuoHLDFXL3KVlb2uDK2pnKmGsm_8I1B6XhCL-qDN19MQ0rkouxmLiXByBmxWe111B5aMqMMYtsZdhgIgKnlfH9b=s4800-w800",
-    youtubers: [
-      {
-        name: "쯔양",
-        videoTitle: null,
-        videoUrl: null,
-        recommendNote: "쯔양이 방문해 리뷰한 한식 맛집."
-      }
-    ]
-  },
-  {
-    id: "jjy-021",
-    name: "감미옥",
-    category: "한식",
-    address: "서울 서초구 신반포로23길 30",
-    phone: "02-537-4422",
-    lat: 37.5088971582088,
-    lng: 127.003732400403,
-    kakaoUrl: "http://place.map.kakao.com/8725439",
-    naverUrl: "https://map.naver.com/p/search/%EA%B0%90%EB%AF%B8%EC%98%A5%20%EC%84%9C%EC%9A%B8%20%EC%84%9C%EC%B4%88%EA%B5%AC%20%EC%8B%A0%EB%B0%98%ED%8F%AC%EB%A1%9C23%EA%B8%B8%2030",
-    rating: 2.9,
-    reviewCount: 18,
-    photoUrl: "https://lh3.googleusercontent.com/place-photos/AG9NLjCnvS_QfHwlxklFCMJNxjKjuZtnrb3EJ_KC20OsiRE80QWa_LuQudlIC4NyGhdKKy-scHzQnFjx9uLSy93niX-ThI8PqSUlkgkwButDsUgvdB_xVBhYo6cXbR_IoiNrjElsqS5OorJw4DScrg=s4800-w800",
-    youtubers: [
-      {
-        name: "쯔양",
-        videoTitle: null,
-        videoUrl: null,
-        recommendNote: "쯔양이 방문해 리뷰한 고기 맛집."
-      }
-    ]
-  },
-  {
     id: "jjy-022",
     name: "강릉교동짬뽕 교대점",
     category: "중국요리",
@@ -498,94 +212,6 @@ const CURATED_FOOD = [
         videoTitle: null,
         videoUrl: null,
         recommendNote: "쯔양이 방문해 리뷰한 중식 맛집."
-      }
-    ]
-  },
-  {
-    id: "jjy-023",
-    name: "개천식당",
-    category: "분식",
-    address: "대전 동구 대전로779번길 39-2",
-    phone: "042-256-1003",
-    lat: 36.32856259924816,
-    lng: 127.43160003292918,
-    kakaoUrl: "http://place.map.kakao.com/11051453",
-    naverUrl: "https://map.naver.com/p/search/%EA%B0%9C%EC%B2%9C%EC%8B%9D%EB%8B%B9%20%EB%8C%80%EC%A0%84%20%EB%8F%99%EA%B5%AC%20%EB%8C%80%EC%A0%84%EB%A1%9C779%EB%B2%88%EA%B8%B8%2039-2",
-    rating: 3.8,
-    reviewCount: 700,
-    photoUrl: "https://lh3.googleusercontent.com/place-photos/AG9NLjD1DLBsasEVQ_snPdJQyatacnxKSaL3YBS9wiFQzbyHPd7cAdG5SLgrgtaB1ofN9wQ1DHb5QbJVONMqS3jaueaHP_b2UDlIHWooc4BG6eYm3xqxv5MDAAZzLWOuV8wWIm0dyntOyiDwk-we=s4800-w800",
-    youtubers: [
-      {
-        name: "쯔양",
-        videoTitle: "한도 무제한카드로 시장털기🤣 70년 전통 만두와 시장 떡볶이 먹방",
-        videoUrl: "https://www.youtube.com/watch?v=xRyaIyl8quc",
-        recommendNote: "쯔양이 방문해 리뷰한 한식 맛집."
-      }
-    ]
-  },
-  {
-    id: "jjy-024",
-    name: "개화식당",
-    category: "중국요리",
-    address: "경기 평택시 통복시장로6번길 2",
-    phone: "031-655-2225",
-    lat: 36.99568970617554,
-    lng: 127.0851637903361,
-    kakaoUrl: "http://place.map.kakao.com/11039136",
-    naverUrl: "https://map.naver.com/p/search/%EA%B0%9C%ED%99%94%EC%8B%9D%EB%8B%B9%20%EA%B2%BD%EA%B8%B0%20%ED%8F%89%ED%83%9D%EC%8B%9C%20%ED%86%B5%EB%B3%B5%EC%8B%9C%EC%9E%A5%EB%A1%9C6%EB%B2%88%EA%B8%B8%202",
-    rating: 3.9,
-    reviewCount: 499,
-    photoUrl: "https://lh3.googleusercontent.com/place-photos/AG9NLjDLDU52DPFSiasjbNGs2NrqnB3W1eRchXuVYYYC243hKvlF_gsXO7ba9Y6AuX27rluWrXsKzpXEkAFFLXeO6sQ-51vUGvmAWHhEdYyrVtS0JxekH0yt4EJNCSNlih3C0nuqonkCK71niBv6RXte1tikqg=s4800-w800",
-    youtubers: [
-      {
-        name: "쯔양",
-        videoTitle: null,
-        videoUrl: null,
-        recommendNote: "쯔양이 방문해 리뷰한 중식 맛집."
-      }
-    ]
-  },
-  {
-    id: "jjy-026",
-    name: "경주축산농협 축산물프라자",
-    category: "육류,고기",
-    address: "경북 경주시 외동읍 산업로 2157",
-    phone: "054-741-1735",
-    lat: 35.70576965727441,
-    lng: 129.32655029188032,
-    kakaoUrl: "http://place.map.kakao.com/2029330312",
-    naverUrl: "https://map.naver.com/p/search/%EA%B2%BD%EC%A3%BC%EC%B6%95%EC%82%B0%EB%86%8D%ED%98%91%20%EC%B6%95%EC%82%B0%EB%AC%BC%ED%94%84%EB%9D%BC%EC%9E%90%20%EA%B2%BD%EB%B6%81%20%EA%B2%BD%EC%A3%BC%EC%8B%9C%20%EC%99%B8%EB%8F%99%EC%9D%8D%20%EC%82%B0%EC%97%85%EB%A1%9C%202157",
-    rating: null,
-    reviewCount: null,
-    photoUrl: null,
-    youtubers: [
-      {
-        name: "쯔양",
-        videoTitle: null,
-        videoUrl: null,
-        recommendNote: "쯔양이 방문해 리뷰한 고기 맛집."
-      }
-    ]
-  },
-  {
-    id: "jjy-027",
-    name: "고고s빨간오뎅 길동점",
-    category: "분식",
-    address: "서울 강동구 양재대로116길 42",
-    phone: "010-8391-0728",
-    lat: 37.53812242774234,
-    lng: 127.14268759452968,
-    kakaoUrl: "http://place.map.kakao.com/27405754",
-    naverUrl: "https://map.naver.com/p/search/%EA%B3%A0%EA%B3%A0s%EB%B9%A8%EA%B0%84%EC%98%A4%EB%8E%85%20%EA%B8%B8%EB%8F%99%EC%A0%90%20%EC%84%9C%EC%9A%B8%20%EA%B0%95%EB%8F%99%EA%B5%AC%20%EC%96%91%EC%9E%AC%EB%8C%80%EB%A1%9C116%EA%B8%B8%2042",
-    rating: null,
-    reviewCount: null,
-    photoUrl: "https://lh3.googleusercontent.com/place-photos/AG9NLjDzTGJ1kYeYY7uxT1Gt0UHCuOThQc7JlW7FOcElLwzfjGsRef_GqCN4ek88FZ9oew6w6hf_M45KgBNFz1ENf8NtKoLeOPU4vyRVOTrrq2t9vZwdyxhhcG_g9UKiCfD9w6obsmCPM90_wdfc0f8=s4800-w800",
-    youtubers: [
-      {
-        name: "쯔양",
-        videoTitle: null,
-        videoUrl: null,
-        recommendNote: "쯔양이 방문해 리뷰한 분식 맛집."
       }
     ]
   },
@@ -678,50 +304,6 @@ const CURATED_FOOD = [
     ]
   },
   {
-    id: "jjy-032",
-    name: "고향손칼국수",
-    category: "칼국수",
-    address: "경기 고양시 일산서구 중앙로 1371",
-    phone: "031-914-9866",
-    lat: 37.66687281115239,
-    lng: 126.76630300840841,
-    kakaoUrl: "http://place.map.kakao.com/21479267",
-    naverUrl: "https://map.naver.com/p/search/%EA%B3%A0%ED%96%A5%EC%86%90%EC%B9%BC%EA%B5%AD%EC%88%98%20%EA%B2%BD%EA%B8%B0%20%EA%B3%A0%EC%96%91%EC%8B%9C%20%EC%9D%BC%EC%82%B0%EC%84%9C%EA%B5%AC%20%EC%A4%91%EC%95%99%EB%A1%9C%201371",
-    rating: 4.3,
-    reviewCount: 6,
-    photoUrl: "https://lh3.googleusercontent.com/place-photos/AG9NLjCJPqS-pOU4_4Hm4N-tkHlOL8C_uFkDomkQlyRHzKlJ2gdZmF6fJtqJ4og1dDVP6Rwaz61ovOb_Le8G_sWdGVX0ej34Frl2qwLonvXqd28KYG2HcV3KPg150_fZWcIgYdaKmlWSR2FCC3Q=s4800-w800",
-    youtubers: [
-      {
-        name: "쯔양",
-        videoTitle: null,
-        videoUrl: null,
-        recommendNote: "쯔양이 방문해 리뷰한 한식 맛집."
-      }
-    ]
-  },
-  {
-    id: "jjy-033",
-    name: "골목냉면",
-    category: "냉면",
-    address: "서울 성동구 독서당로 295-7",
-    phone: "02-2235-2540",
-    lat: 37.5485572658737,
-    lng: 127.021989822533,
-    kakaoUrl: "http://place.map.kakao.com/8697587",
-    naverUrl: "https://map.naver.com/p/search/%EA%B3%A8%EB%AA%A9%EB%83%89%EB%A9%B4%20%EC%84%9C%EC%9A%B8%20%EC%84%B1%EB%8F%99%EA%B5%AC%20%EB%8F%85%EC%84%9C%EB%8B%B9%EB%A1%9C%20295-7",
-    rating: 3.9,
-    reviewCount: 255,
-    photoUrl: "https://lh3.googleusercontent.com/place-photos/AG9NLjCVKbRuWU0-jKS_IIB1OB6GEHVQevJsFcUn0yuUFtKzcdZQLaZ-j2EacWVJY_XL3r9pDJuY-KPobHgkCWM8mxC-OmWfwukxSJEcmeJ2ZoGmpCrOKskTj25ypanjDFftkcCjbiYKmVqSJeB1ASnPFHVYVQ=s4800-w800",
-    youtubers: [
-      {
-        name: "쯔양",
-        videoTitle: null,
-        videoUrl: null,
-        recommendNote: "쯔양이 방문해 리뷰한 분식 맛집."
-      }
-    ]
-  },
-  {
     id: "jjy-034",
     name: "골목떡볶이",
     category: "떡볶이",
@@ -762,28 +344,6 @@ const CURATED_FOOD = [
         videoTitle: null,
         videoUrl: null,
         recommendNote: "쯔양이 방문해 리뷰한 고기 맛집."
-      }
-    ]
-  },
-  {
-    id: "jjy-037",
-    name: "공아춘수타왕손짜장",
-    category: "중국요리",
-    address: "경북 상주시 경상대로 3197",
-    phone: "054-531-3050",
-    lat: 36.43244986644467,
-    lng: 128.15258440168455,
-    kakaoUrl: "http://place.map.kakao.com/18314447",
-    naverUrl: "https://map.naver.com/p/search/%EA%B3%B5%EC%95%84%EC%B6%98%EC%88%98%ED%83%80%EC%99%95%EC%86%90%EC%A7%9C%EC%9E%A5%20%EA%B2%BD%EB%B6%81%20%EC%83%81%EC%A3%BC%EC%8B%9C%20%EA%B2%BD%EC%83%81%EB%8C%80%EB%A1%9C%203197",
-    rating: 3.7,
-    reviewCount: 527,
-    photoUrl: "https://lh3.googleusercontent.com/place-photos/AG9NLjAx9fmsTpOK971mrxbXEC9UGbIkD0hdizO3TTwUjiMIE0-uwao9nOezw4wj3lMlgnOENw-tQc9hMEmr9lBHdeqjeYPw8IAeb7UGaUUGD9Tp62yUW5lH1vwNE8NVM3MQu2IvWLlezxWst9bPxQ=s4800-w800",
-    youtubers: [
-      {
-        name: "쯔양",
-        videoTitle: null,
-        videoUrl: null,
-        recommendNote: "쯔양이 방문해 리뷰한 중식 맛집."
       }
     ]
   },
@@ -832,72 +392,6 @@ const CURATED_FOOD = [
     ]
   },
   {
-    id: "jjy-041",
-    name: "괭이부리마을 마곡김장훈점",
-    category: "해물,생선",
-    address: "서울 강서구 강서로 391",
-    phone: null,
-    lat: 37.5605446535829,
-    lng: 126.838427289344,
-    kakaoUrl: "http://place.map.kakao.com/455388326",
-    naverUrl: "https://map.naver.com/p/search/%EA%B4%AD%EC%9D%B4%EB%B6%80%EB%A6%AC%EB%A7%88%EC%9D%84%20%EB%A7%88%EA%B3%A1%EA%B9%80%EC%9E%A5%ED%9B%88%EC%A0%90%20%EC%84%9C%EC%9A%B8%20%EA%B0%95%EC%84%9C%EA%B5%AC%20%EA%B0%95%EC%84%9C%EB%A1%9C%20391",
-    rating: 4,
-    reviewCount: 5,
-    photoUrl: "https://lh3.googleusercontent.com/place-photos/AG9NLjA-HmKjnGke70r3Ik7A_VqaChx9tEKUbqd9zeUIQBz7HQyCQ6N5PDVYSluYeY22dmyQHoo3gOu_qipv0CWNNnvoW90xeE7OMx90roP9npha9c_XVW5FYVF5mEf9qyvPThzhTvZLBbNrdpMOCAIHO79YmA=s4800-w800",
-    youtubers: [
-      {
-        name: "쯔양",
-        videoTitle: null,
-        videoUrl: null,
-        recommendNote: "쯔양이 방문해 리뷰한 한식 맛집."
-      }
-    ]
-  },
-  {
-    id: "jjy-043",
-    name: "교동집",
-    category: "해물,생선",
-    address: "서울 마포구 동교로 208",
-    phone: "02-337-3663",
-    lat: 37.5585212915048,
-    lng: 126.923654648782,
-    kakaoUrl: "http://place.map.kakao.com/8673547",
-    naverUrl: "https://map.naver.com/p/search/%EA%B5%90%EB%8F%99%EC%A7%91%20%EC%84%9C%EC%9A%B8%20%EB%A7%88%ED%8F%AC%EA%B5%AC%20%EB%8F%99%EA%B5%90%EB%A1%9C%20208",
-    rating: 3.7,
-    reviewCount: 472,
-    photoUrl: "https://lh3.googleusercontent.com/place-photos/AG9NLjBEMTsT_uObEb3DyVKTk8xg-jrVV6z-Cfso1u2MNbSUksccwM4jgV876WhLyRSfLeYPCbMXotl0Qx3a_6ezHDCDSdbdw7AkXsrxrsZRhfTwEQyPILDpt7HryRZF8diFc_P6wNaPGvBcEfkzzg=s4800-w800",
-    youtubers: [
-      {
-        name: "쯔양",
-        videoTitle: "불쭈꾸미 10인분!!🔥👊 구독자분이 놀라서 병원에서 목발 짚고 달려오셨어요😂 교동집 매운 쭈꾸미 먹방",
-        videoUrl: "https://www.youtube.com/watch?v=9AeDIHDL9ZM",
-        recommendNote: "쯔양이 방문해 리뷰한 한식 맛집."
-      }
-    ]
-  },
-  {
-    id: "jjy-044",
-    name: "구들짱황소곱창",
-    category: "곱창,막창",
-    address: "경기 안양시 동안구 인덕원로 33",
-    phone: "031-424-2777",
-    lat: 37.40258935617114,
-    lng: 126.97447034946981,
-    kakaoUrl: "http://place.map.kakao.com/644351777",
-    naverUrl: "https://map.naver.com/p/search/%EA%B5%AC%EB%93%A4%EC%A7%B1%ED%99%A9%EC%86%8C%EA%B3%B1%EC%B0%BD%20%EA%B2%BD%EA%B8%B0%20%EC%95%88%EC%96%91%EC%8B%9C%20%EB%8F%99%EC%95%88%EA%B5%AC%20%EC%9D%B8%EB%8D%95%EC%9B%90%EB%A1%9C%2033",
-    rating: 4.3,
-    reviewCount: 10,
-    photoUrl: "https://lh3.googleusercontent.com/place-photos/AG9NLjCBxgMLbRRu1wo17qD_aBW60pY1shhD5kVSqRHzDgKwg0-lSi6MFxkzph1DyKcPdyDZzqim7HQl5muII_l1LZp5GHpsFOCgGmgyjSA45gOCPDOVUGEC0ZV7c1_6o7I6CusHsKtp2XSqDoBw=s4800-w800",
-    youtubers: [
-      {
-        name: "쯔양",
-        videoTitle: null,
-        videoUrl: null,
-        recommendNote: "쯔양이 방문해 리뷰한 고기 맛집."
-      }
-    ]
-  },
-  {
     id: "jjy-045",
     name: "구복만두 숙대본점",
     category: "분식",
@@ -916,28 +410,6 @@ const CURATED_FOOD = [
         videoTitle: null,
         videoUrl: null,
         recommendNote: "쯔양이 방문해 리뷰한 중식 맛집."
-      }
-    ]
-  },
-  {
-    id: "jjy-047",
-    name: "국민낙곱새 망포직영점",
-    category: "해물,생선",
-    address: "경기 수원시 영통구 영통로130번길 13",
-    phone: "031-203-0958",
-    lat: 37.239584138100014,
-    lng: 127.05701462471103,
-    kakaoUrl: "http://place.map.kakao.com/1528475971",
-    naverUrl: "https://map.naver.com/p/search/%EA%B5%AD%EB%AF%BC%EB%82%99%EA%B3%B1%EC%83%88%20%EB%A7%9D%ED%8F%AC%EC%A7%81%EC%98%81%EC%A0%90%20%EA%B2%BD%EA%B8%B0%20%EC%88%98%EC%9B%90%EC%8B%9C%20%EC%98%81%ED%86%B5%EA%B5%AC%20%EC%98%81%ED%86%B5%EB%A1%9C130%EB%B2%88%EA%B8%B8%2013",
-    rating: 4.9,
-    reviewCount: 81,
-    photoUrl: "https://lh3.googleusercontent.com/place-photos/AG9NLjAHynbyVi-pX8yx7VydfxUaf2XGINZjpaD6_Dbjk_xUuGswKYjfSCJ6qWlxHexzkUZpFCsDcAl34Cpx51trx_AvCD1hGajO1oZ3H2813OZil7f06b6eY9UvmHHnOXaj51VTs5PEVx9JVYd5rZjPjRrgOw=s4800-w800",
-    youtubers: [
-      {
-        name: "쯔양",
-        videoTitle: null,
-        videoUrl: null,
-        recommendNote: "쯔양이 방문해 리뷰한 찜·탕 맛집."
       }
     ]
   },
@@ -964,28 +436,6 @@ const CURATED_FOOD = [
     ]
   },
   {
-    id: "jjy-049",
-    name: "달인군만두",
-    category: "분식",
-    address: "서울 동대문구 전농로2가길 13",
-    phone: "010-6487-2465",
-    lat: 37.56744655778121,
-    lng: 127.05723981257071,
-    kakaoUrl: "http://place.map.kakao.com/846439834",
-    naverUrl: "https://map.naver.com/p/search/%EB%8B%AC%EC%9D%B8%EA%B5%B0%EB%A7%8C%EB%91%90%20%EC%84%9C%EC%9A%B8%20%EB%8F%99%EB%8C%80%EB%AC%B8%EA%B5%AC%20%EC%A0%84%EB%86%8D%EB%A1%9C2%EA%B0%80%EA%B8%B8%2013",
-    rating: 4.5,
-    reviewCount: 64,
-    photoUrl: "https://lh3.googleusercontent.com/place-photos/AG9NLjAXv7HmCRA1kWxxZ61KDeQdNGniYWdkeZwcD1w9leKVgInAspl-eR-L8u66n3mG83d4sqNZnI2DX5aBYu9C7kaBmh7r0WYnifsedWEniD2nxrUQrn4XcFHhwCAce5EJhPsmib_6cp7Md3ApDw=s4800-w800",
-    youtubers: [
-      {
-        name: "쯔양",
-        videoTitle: "군만두 하나에 200원?! 만두 다 떨어질때까지 먹었습니다😂 40년간 군만두만 구워온 달인군만두 먹방",
-        videoUrl: "https://www.youtube.com/watch?v=fKiyBm3PGAI",
-        recommendNote: "쯔양이 방문해 리뷰한 분식 맛집."
-      }
-    ]
-  },
-  {
     id: "jjy-050",
     name: "굴과찜사랑 본사직영점",
     category: "굴,전복",
@@ -998,72 +448,6 @@ const CURATED_FOOD = [
     rating: 4.2,
     reviewCount: 310,
     photoUrl: "https://lh3.googleusercontent.com/place-photos/AG9NLjAUTlNcazmdeXFOknRcdrYOnRZgobZgxrX2Xkpra255lfHYQg_eLwnZvKDtQ8sdJVq4pJO4Ps0y5DiZ80oz32JVSE0Q056CapXYDViUHjsgTtBt0lNNdtcHJ_AJWdogtt1q39adIKS0LX8ApwsPY7Fwbw=s4800-w800",
-    youtubers: [
-      {
-        name: "쯔양",
-        videoTitle: null,
-        videoUrl: null,
-        recommendNote: "쯔양이 방문해 리뷰한 한식 맛집."
-      }
-    ]
-  },
-  {
-    id: "jjy-051",
-    name: "굴이짱 본점",
-    category: "굴,전복",
-    address: "서울 광진구 긴고랑로 61",
-    phone: "02-458-9995",
-    lat: 37.56206932673117,
-    lng: 127.08314789518539,
-    kakaoUrl: "http://place.map.kakao.com/15928968",
-    naverUrl: "https://map.naver.com/p/search/%EA%B5%B4%EC%9D%B4%EC%A7%B1%20%EB%B3%B8%EC%A0%90%20%EC%84%9C%EC%9A%B8%20%EA%B4%91%EC%A7%84%EA%B5%AC%20%EA%B8%B4%EA%B3%A0%EB%9E%91%EB%A1%9C%2061",
-    rating: 4.4,
-    reviewCount: 70,
-    photoUrl: "https://lh3.googleusercontent.com/place-photos/AG9NLjB4X0KStukD-ZXwm3sb9qrrS2BOHnfleIMZGlTqqEHKszYBXWoMlUPULAHxVhpkkH6DeasY4KI-S_eQeGA4pzQaYbdO8EDDbVSp8-nV14Q0XdctjeIFISgvywwQcLXw0sp4WbB8HvAYUPiitJVpw9F_=s4800-w800",
-    youtubers: [
-      {
-        name: "쯔양",
-        videoTitle: null,
-        videoUrl: null,
-        recommendNote: "쯔양이 방문해 리뷰한 찜·탕 맛집."
-      }
-    ]
-  },
-  {
-    id: "jjy-052",
-    name: "굽네치킨 굽네 플레이타운점",
-    category: "굽네치킨",
-    address: "서울 마포구 잔다리로2길 23",
-    phone: "0507-1487-9456",
-    lat: 37.5517081311934,
-    lng: 126.921190016923,
-    kakaoUrl: "http://place.map.kakao.com/1253348263",
-    naverUrl: "https://map.naver.com/p/search/%EA%B5%BD%EB%84%A4%EC%B9%98%ED%82%A8%20%EA%B5%BD%EB%84%A4%20%ED%94%8C%EB%A0%88%EC%9D%B4%ED%83%80%EC%9A%B4%EC%A0%90%20%EC%84%9C%EC%9A%B8%20%EB%A7%88%ED%8F%AC%EA%B5%AC%20%EC%9E%94%EB%8B%A4%EB%A6%AC%EB%A1%9C2%EA%B8%B8%2023",
-    rating: 4.1,
-    reviewCount: 8,
-    photoUrl: "https://lh3.googleusercontent.com/place-photos/AG9NLjATSNFcmJhbinlRuBCy-U5KeyOq9QsrKqz3nm1KKA023qYl43QghZok_yeZzAIkJrN3vhHG-px3i-TzyGl8BrikQJYHqx9GQorhE0EMImdy6unjRYZr28HjghkK51w9lmYLPaeCRsxzuYZky4Y=s4800-w800",
-    youtubers: [
-      {
-        name: "쯔양",
-        videoTitle: null,
-        videoUrl: null,
-        recommendNote: "쯔양이 방문해 리뷰한 치킨 전문점."
-      }
-    ]
-  },
-  {
-    id: "jjy-053",
-    name: "궁중닭갈비 본점",
-    category: "닭요리",
-    address: "서울 중랑구 면목로92길 11",
-    phone: "02-2208-7676",
-    lat: 37.5950369388198,
-    lng: 127.086564576185,
-    kakaoUrl: "http://place.map.kakao.com/21325321",
-    naverUrl: "https://map.naver.com/p/search/%EA%B6%81%EC%A4%91%EB%8B%AD%EA%B0%88%EB%B9%84%20%EB%B3%B8%EC%A0%90%20%EC%84%9C%EC%9A%B8%20%EC%A4%91%EB%9E%91%EA%B5%AC%20%EB%A9%B4%EB%AA%A9%EB%A1%9C92%EA%B8%B8%2011",
-    rating: 3.8,
-    reviewCount: 60,
-    photoUrl: "https://lh3.googleusercontent.com/place-photos/AG9NLjCr30kXPHzFWqu0-C1uY40gf_Vlqbx9e_Iv_i1i0iKKLwCZYWrlZPrs3f6iVBV8ermLBj2yoFRmX-2_Tu_Ua2NxzM55m6Cr_gOS7B_97NkPNlN4JsUV_734iU93pwUj7sScz59-ae0nzx3EjQc=s4800-w800",
     youtubers: [
       {
         name: "쯔양",
@@ -1118,28 +502,6 @@ const CURATED_FOOD = [
     ]
   },
   {
-    id: "jjy-056",
-    name: "글라시에홍",
-    category: "아이스크림",
-    address: "전남광주통합특별시 동구 서석로7번길 12-24",
-    phone: "062-413-2107",
-    lat: 35.146500400758,
-    lng: 126.915325268461,
-    kakaoUrl: "http://place.map.kakao.com/518689703",
-    naverUrl: "https://map.naver.com/p/search/%EA%B8%80%EB%9D%BC%EC%8B%9C%EC%97%90%ED%99%8D%20%EC%A0%84%EB%82%A8%EA%B4%91%EC%A3%BC%ED%86%B5%ED%95%A9%ED%8A%B9%EB%B3%84%EC%8B%9C%20%EB%8F%99%EA%B5%AC%20%EC%84%9C%EC%84%9D%EB%A1%9C7%EB%B2%88%EA%B8%B8%2012-24",
-    rating: 4.6,
-    reviewCount: 24,
-    photoUrl: "https://lh3.googleusercontent.com/place-photos/AG9NLjAPvmbWsdUitkmtTtLpdThQ0eBtsyMBLGJp2ScneykJNjV19E8E3FPIZWHp7MKS-vS0vLa8tz7Eh-nBeUZ3D_AxvkdOBl_Y0PZk0DEcBprndm7OkMXXrjYnxUpAz9NpzF7lmYcLpCz5ersWJjc=s4800-w800",
-    youtubers: [
-      {
-        name: "쯔양",
-        videoTitle: "월 매출 1억?!😱 전국 TOP3 식당을 찾아갔습니다🔥 100대 1의 경쟁률을 뚫고 올라온 쌀국수 햄버거 젤라또 먹방",
-        videoUrl: "https://www.youtube.com/watch?v=lbueoat6MJk",
-        recommendNote: "쯔양이 방문해 리뷰한 카페·디저트 맛집."
-      }
-    ]
-  },
-  {
     id: "jjy-057",
     name: "금성관",
     category: "곰탕",
@@ -1157,28 +519,6 @@ const CURATED_FOOD = [
         name: "쯔양",
         videoTitle: "8명의 요리 다먹을수 있을까...?🤔 킹타이거 새우 라면 햄버거 먹방(w.포도)",
         videoUrl: "https://www.youtube.com/watch?v=yEQvlQg6mWA",
-        recommendNote: "쯔양이 방문해 리뷰한 한식 맛집."
-      }
-    ]
-  },
-  {
-    id: "jjy-058",
-    name: "금성식당",
-    category: "육류,고기",
-    address: "전남광주통합특별시 동구 제봉로222번길 2",
-    phone: "062-227-4717",
-    lat: 35.1550911838805,
-    lng: 126.913924730038,
-    kakaoUrl: "http://place.map.kakao.com/21224205",
-    naverUrl: "https://map.naver.com/p/search/%EA%B8%88%EC%84%B1%EC%8B%9D%EB%8B%B9%20%EC%A0%84%EB%82%A8%EA%B4%91%EC%A3%BC%ED%86%B5%ED%95%A9%ED%8A%B9%EB%B3%84%EC%8B%9C%20%EB%8F%99%EA%B5%AC%20%EC%A0%9C%EB%B4%89%EB%A1%9C222%EB%B2%88%EA%B8%B8%202",
-    rating: 3.9,
-    reviewCount: 84,
-    photoUrl: "https://lh3.googleusercontent.com/place-photos/AG9NLjD-YQdGUNYQPwQDeansco1UXIbKTWK-3P5vl_N1iE9fS455_PTwGXS_XXdXgffmWUvFWgCUQK7eoa15aiJelLo4lHgQ6n5O0pRDcrsvMqCk0PTYl5hl3Bt3hYMWLoChxW0lum5G9SetLDQnJQ=s4800-w800",
-    youtubers: [
-      {
-        name: "쯔양",
-        videoTitle: "쯔양 아닌척하고 쯔양세트 시켜봤습니다🤣 사장님 몰래카메라 과연 성공했을까..광주 금성식당 먹방",
-        videoUrl: "https://www.youtube.com/watch?v=fXxl-YDU2uQ",
         recommendNote: "쯔양이 방문해 리뷰한 한식 맛집."
       }
     ]
@@ -1206,28 +546,6 @@ const CURATED_FOOD = [
     ]
   },
   {
-    id: "jjy-060",
-    name: "금은옥",
-    category: "육류,고기",
-    address: "전북특별자치도 순창군 팔덕면 찬물내기길 2",
-    phone: "010-8897-2233",
-    lat: 35.380237923412395,
-    lng: 127.10201413305116,
-    kakaoUrl: "http://place.map.kakao.com/1515963409",
-    naverUrl: "https://map.naver.com/p/search/%EA%B8%88%EC%9D%80%EC%98%A5%20%EC%A0%84%EB%B6%81%ED%8A%B9%EB%B3%84%EC%9E%90%EC%B9%98%EB%8F%84%20%EC%88%9C%EC%B0%BD%EA%B5%B0%20%ED%8C%94%EB%8D%95%EB%A9%B4%20%EC%B0%AC%EB%AC%BC%EB%82%B4%EA%B8%B0%EA%B8%B8%202",
-    rating: null,
-    reviewCount: null,
-    photoUrl: null,
-    youtubers: [
-      {
-        name: "쯔양",
-        videoTitle: "동네 사장님들 모이셨습니다🤣 김치와 보쌈이 들어간 순창 삼합??먹방",
-        videoUrl: "https://www.youtube.com/watch?v=R4l1zUbM-dM",
-        recommendNote: "쯔양이 방문해 리뷰한 한식 맛집."
-      }
-    ]
-  },
-  {
     id: "jjy-061",
     name: "기라성",
     category: "중국요리",
@@ -1246,50 +564,6 @@ const CURATED_FOOD = [
         videoTitle: "중식집 사장님이 배 터지라고 만든 초대형 돈까스😱부안 기라성 비빔간짜장 짬뽕 먹방",
         videoUrl: "https://www.youtube.com/watch?v=VmOEK9isSuk",
         recommendNote: "쯔양이 방문해 리뷰한 중식 맛집."
-      }
-    ]
-  },
-  {
-    id: "jjy-062",
-    name: "기장손만두",
-    category: "분식",
-    address: "부산 기장군 기장읍 차성동로67번길 2-4",
-    phone: "0507-1321-7367",
-    lat: 35.2440285557,
-    lng: 129.215952674612,
-    kakaoUrl: "http://place.map.kakao.com/15907104",
-    naverUrl: "https://map.naver.com/p/search/%EA%B8%B0%EC%9E%A5%EC%86%90%EB%A7%8C%EB%91%90%20%EB%B6%80%EC%82%B0%20%EA%B8%B0%EC%9E%A5%EA%B5%B0%20%EA%B8%B0%EC%9E%A5%EC%9D%8D%20%EC%B0%A8%EC%84%B1%EB%8F%99%EB%A1%9C67%EB%B2%88%EA%B8%B8%202-4",
-    rating: null,
-    reviewCount: null,
-    photoUrl: null,
-    youtubers: [
-      {
-        name: "쯔양",
-        videoTitle: null,
-        videoUrl: null,
-        recommendNote: "쯔양이 방문해 리뷰한 분식 맛집."
-      }
-    ]
-  },
-  {
-    id: "jjy-063",
-    name: "기절초풍물닭갈비 상도동점",
-    category: "닭요리",
-    address: "서울 동작구 성대로1길 6",
-    phone: "02-824-4636",
-    lat: 37.500359111392186,
-    lng: 126.93282444720694,
-    kakaoUrl: "http://place.map.kakao.com/219304883",
-    naverUrl: "https://map.naver.com/p/search/%EA%B8%B0%EC%A0%88%EC%B4%88%ED%92%8D%EB%AC%BC%EB%8B%AD%EA%B0%88%EB%B9%84%20%EC%83%81%EB%8F%84%EB%8F%99%EC%A0%90%20%EC%84%9C%EC%9A%B8%20%EB%8F%99%EC%9E%91%EA%B5%AC%20%EC%84%B1%EB%8C%80%EB%A1%9C1%EA%B8%B8%206",
-    rating: 4.1,
-    reviewCount: 39,
-    photoUrl: "https://lh3.googleusercontent.com/place-photos/AG9NLjAmd4O9mAmvLM09eVv1ZNhDh2xR6WAdjXKRSHufqtpy2HsZfA7_PQLbHaMCScrTbQqFUiwMVcocdXZcdfwSUM2uIJmAZ_YdxMh-HZYpBrXlM6QU5oHtRzdyDe8WGe03mr4ed7-tKvylmfGU_A=s4800-w800",
-    youtubers: [
-      {
-        name: "쯔양",
-        videoTitle: null,
-        videoUrl: null,
-        recommendNote: "쯔양이 방문해 리뷰한 한식 맛집."
       }
     ]
   },
@@ -1316,116 +590,6 @@ const CURATED_FOOD = [
     ]
   },
   {
-    id: "jjy-065",
-    name: "김가네분식",
-    category: "분식",
-    address: "부산 기장군 기장읍 읍내로 104",
-    phone: "051-724-0427",
-    lat: 35.24473634062591,
-    lng: 129.21553695883821,
-    kakaoUrl: "http://place.map.kakao.com/23878877",
-    naverUrl: "https://map.naver.com/p/search/%EA%B9%80%EA%B0%80%EB%84%A4%EB%B6%84%EC%8B%9D%20%EB%B6%80%EC%82%B0%20%EA%B8%B0%EC%9E%A5%EA%B5%B0%20%EA%B8%B0%EC%9E%A5%EC%9D%8D%20%EC%9D%8D%EB%82%B4%EB%A1%9C%20104",
-    rating: 2.5,
-    reviewCount: 11,
-    photoUrl: "https://lh3.googleusercontent.com/place-photos/AG9NLjAlAA704gFVEy7M_4bCVvcmJtTIsIaXdXq32bZrauI2ZeCzI2D-uVP2AAhZiG14ChFaMZYEe4Ka9J1SgaLhpXUEJEQqgp0ldnkUhmg2LUKGyYAM2CLmvAfXdIchnsb0WPd4F5co46ePCn4NFKM=s4800-w800",
-    youtubers: [
-      {
-        name: "쯔양",
-        videoTitle: null,
-        videoUrl: null,
-        recommendNote: "쯔양이 방문해 리뷰한 분식 맛집."
-      }
-    ]
-  },
-  {
-    id: "jjy-066",
-    name: "김밥나라 남성역점",
-    category: "분식",
-    address: "서울 동작구 사당로 196",
-    phone: "02-598-7182",
-    lat: 37.48503650581963,
-    lng: 126.96980317993331,
-    kakaoUrl: "http://place.map.kakao.com/17304590",
-    naverUrl: "https://map.naver.com/p/search/%EA%B9%80%EB%B0%A5%EB%82%98%EB%9D%BC%20%EB%82%A8%EC%84%B1%EC%97%AD%EC%A0%90%20%EC%84%9C%EC%9A%B8%20%EB%8F%99%EC%9E%91%EA%B5%AC%20%EC%82%AC%EB%8B%B9%EB%A1%9C%20196",
-    rating: 4.6,
-    reviewCount: 96,
-    photoUrl: "https://lh3.googleusercontent.com/place-photos/AG9NLjCtO3Sw1otArQiK7tlqBMEl3F4rmbP12DRvO72Mqv8igB0YxxZM-lUzquyCGXi4KkpnHj0Xir_UJZIhVpIV3O3W5CgPyPD2_DERTeWnXKVm2fgFA08ZCtUNRjSqVm7ChZ1qGR11usx6wEnTRg=s4800-w800",
-    youtubers: [
-      {
-        name: "쯔양",
-        videoTitle: null,
-        videoUrl: null,
-        recommendNote: "쯔양이 방문해 리뷰한 분식 맛집."
-      }
-    ]
-  },
-  {
-    id: "jjy-067",
-    name: "김밥천국 건대2호점",
-    category: "분식",
-    address: "서울 광진구 능동로13길 21",
-    phone: "02-499-0308",
-    lat: 37.5429699694523,
-    lng: 127.070707976361,
-    kakaoUrl: "http://place.map.kakao.com/2141404953",
-    naverUrl: "https://map.naver.com/p/search/%EA%B9%80%EB%B0%A5%EC%B2%9C%EA%B5%AD%20%EA%B1%B4%EB%8C%802%ED%98%B8%EC%A0%90%20%EC%84%9C%EC%9A%B8%20%EA%B4%91%EC%A7%84%EA%B5%AC%20%EB%8A%A5%EB%8F%99%EB%A1%9C13%EA%B8%B8%2021",
-    rating: 4.1,
-    reviewCount: 13,
-    photoUrl: "https://lh3.googleusercontent.com/place-photos/AG9NLjAxupRRexpoLutkHgcnG3d2dat4K2_EevPXKOjQy-zwm2LaNgN3BRTf2mmBE2T4nrzyUGP46Vb_vGGcqZ1BSTnB6pnDgOo5HuvDf99sYLdYKuNnK9KRapKPlSB5-P7Hx9rv7qMeGydf2lP558k=s4800-w800",
-    youtubers: [
-      {
-        name: "쯔양",
-        videoTitle: null,
-        videoUrl: null,
-        recommendNote: "쯔양이 방문해 리뷰한 한식 맛집."
-      }
-    ]
-  },
-  {
-    id: "jjy-068",
-    name: "김밥천국",
-    category: "분식",
-    address: "서울 서초구 동광로 70",
-    phone: "02-535-8545",
-    lat: 37.4925886077375,
-    lng: 126.990270730517,
-    kakaoUrl: "http://place.map.kakao.com/16588301",
-    naverUrl: "https://map.naver.com/p/search/%EA%B9%80%EB%B0%A5%EC%B2%9C%EA%B5%AD%20%EC%84%9C%EC%9A%B8%20%EC%84%9C%EC%B4%88%EA%B5%AC%20%EB%8F%99%EA%B4%91%EB%A1%9C%2070",
-    rating: 2.6,
-    reviewCount: 57,
-    photoUrl: "https://lh3.googleusercontent.com/place-photos/AG9NLjC9huxlaLAZW2SV11CzO6mnpmWduoXMiZJVxHTchBamfmClN71FitNwOZxOHeJbmv46hoZCFaheOp4zCYbQPk6Hd3twXCgAM2D8wLOPfwUJVsWUqbD4iYIxdFIt_RzVitnM_IT47g-Rio2gNubcd4aHow=s4800-w800",
-    youtubers: [
-      {
-        name: "쯔양",
-        videoTitle: null,
-        videoUrl: null,
-        recommendNote: "쯔양이 방문해 리뷰한 분식 맛집."
-      }
-    ]
-  },
-  {
-    id: "jjy-069",
-    name: "김밥천국 신음점",
-    category: "분식",
-    address: "경북 김천시 시청로 66",
-    phone: "054-436-4527",
-    lat: 36.1341963485071,
-    lng: 128.117889938301,
-    kakaoUrl: "http://place.map.kakao.com/10201781",
-    naverUrl: "https://map.naver.com/p/search/%EA%B9%80%EB%B0%A5%EC%B2%9C%EA%B5%AD%20%EC%8B%A0%EC%9D%8C%EC%A0%90%20%EA%B2%BD%EB%B6%81%20%EA%B9%80%EC%B2%9C%EC%8B%9C%20%EC%8B%9C%EC%B2%AD%EB%A1%9C%2066",
-    rating: 3.7,
-    reviewCount: 43,
-    photoUrl: "https://lh3.googleusercontent.com/place-photos/AG9NLjBzQwKmCIm7Ne_WyRM4-Mh7gYLTEbA4MJT3J6bE1fwieMR0m656VNkwdrDdILU4el9tUh7Fr4R7BX_5-4tjqUTnEvRpJLPFzX9iTDN_cqgo_j1h_apWOG4BGk3tVdvLUIrvns-LUkQDRkCZsA=s4800-w800",
-    youtubers: [
-      {
-        name: "쯔양",
-        videoTitle: null,
-        videoUrl: null,
-        recommendNote: "쯔양이 방문해 리뷰한 분식 맛집."
-      }
-    ]
-  },
-  {
     id: "jjy-070",
     name: "김수사",
     category: "초밥,롤",
@@ -1443,28 +607,6 @@ const CURATED_FOOD = [
         name: "쯔양",
         videoTitle: "40년 초밥장인 가게에서 마지막식사 했습니다..🥺 초밥 100개 도전🔥 강남 김수사 먹방",
         videoUrl: "https://www.youtube.com/watch?v=sFm9UUP9a5M",
-        recommendNote: "쯔양이 방문해 리뷰한 돈까스·회 전문점."
-      }
-    ]
-  },
-  {
-    id: "jjy-071",
-    name: "김종구의참치박사",
-    category: "참치회",
-    address: "서울 동작구 동작대로 25-1",
-    phone: "02-523-3799",
-    lat: 37.4787011422244,
-    lng: 126.981010859595,
-    kakaoUrl: "http://place.map.kakao.com/27328740",
-    naverUrl: "https://map.naver.com/p/search/%EA%B9%80%EC%A2%85%EA%B5%AC%EC%9D%98%EC%B0%B8%EC%B9%98%EB%B0%95%EC%82%AC%20%EC%84%9C%EC%9A%B8%20%EB%8F%99%EC%9E%91%EA%B5%AC%20%EB%8F%99%EC%9E%91%EB%8C%80%EB%A1%9C%2025-1",
-    rating: 4.2,
-    reviewCount: 94,
-    photoUrl: "https://lh3.googleusercontent.com/place-photos/AG9NLjD4VYpMf2osQuN0E8wU860vu_gsjp0Ssf-TPgZr6ZZaY2IaifWq_YQDWoFe9U6tjYFegb9eq_52W6O3pxbq3dk3zwmpHXyORVq3LnSrLE5yvGrNRCCVHpBcC2X0kVBFJPONDhdpGhwi8fzloA=s4800-w800",
-    youtubers: [
-      {
-        name: "쯔양",
-        videoTitle: null,
-        videoUrl: null,
         recommendNote: "쯔양이 방문해 리뷰한 돈까스·회 전문점."
       }
     ]
@@ -1558,28 +700,6 @@ const CURATED_FOOD = [
     ]
   },
   {
-    id: "jjy-076",
-    name: "나연식당",
-    category: "한식",
-    address: "경기 수원시 권선구 세권로 185",
-    phone: "031-233-7094",
-    lat: 37.2564096942116,
-    lng: 127.024632549208,
-    kakaoUrl: "http://place.map.kakao.com/15971668",
-    naverUrl: "https://map.naver.com/p/search/%EB%82%98%EC%97%B0%EC%8B%9D%EB%8B%B9%20%EA%B2%BD%EA%B8%B0%20%EC%88%98%EC%9B%90%EC%8B%9C%20%EA%B6%8C%EC%84%A0%EA%B5%AC%20%EC%84%B8%EA%B6%8C%EB%A1%9C%20185",
-    rating: 4.2,
-    reviewCount: 25,
-    photoUrl: "https://lh3.googleusercontent.com/place-photos/AG9NLjD4_a89Gj-mFi-PL8RSJqrDIq1H2xwAwlgLZeD9YRQzyvzmWfgvsKFhkNErfkXXkMdQbSXAo1m6MOfrLTwVV0WHb9-0CKiymaZYEnJ725gmuJWhrRd_aVp4-FMh9rrdphjt0kI_NZCR-OnDuA=s4800-w800",
-    youtubers: [
-      {
-        name: "쯔양",
-        videoTitle: null,
-        videoUrl: null,
-        recommendNote: "쯔양이 방문해 리뷰한 찜·탕 맛집."
-      }
-    ]
-  },
-  {
     id: "jjy-077",
     name: "낙성기사식당",
     category: "한식",
@@ -1652,28 +772,6 @@ const CURATED_FOOD = [
     ]
   },
   {
-    id: "jjy-081",
-    name: "남이분식",
-    category: "분식",
-    address: "서울 종로구 종로40가길 3",
-    phone: "02-2273-8203",
-    lat: 37.5702803719655,
-    lng: 127.006483855369,
-    kakaoUrl: "http://place.map.kakao.com/20536942",
-    naverUrl: "https://map.naver.com/p/search/%EB%82%A8%EC%9D%B4%EB%B6%84%EC%8B%9D%20%EC%84%9C%EC%9A%B8%20%EC%A2%85%EB%A1%9C%EA%B5%AC%20%EC%A2%85%EB%A1%9C40%EA%B0%80%EA%B8%B8%203",
-    rating: 3.8,
-    reviewCount: 21,
-    photoUrl: "https://lh3.googleusercontent.com/place-photos/AG9NLjDMhzQeuqrSr2KewCVggfpTTLTH6ceQ42UGGiBycukX36EyEN4dEjz95yjCaVcHBqD26j-r5qXcx5sv3r3CzUKTBqGkOlv253VXlahU9Pqi-OHPqsJ_-SpsID_I4-e23yMzyPCEAWQuoTUFmrs98KWJ=s4800-w800",
-    youtubers: [
-      {
-        name: "쯔양",
-        videoTitle: "시장골목 할머님이 끓여주시는 수제비라면과 짜볶이?😳 동대문시장 남이분식 라면먹방",
-        videoUrl: "https://www.youtube.com/watch?v=3MLTE9Zqcoo",
-        recommendNote: "쯔양이 방문해 리뷰한 분식 맛집."
-      }
-    ]
-  },
-  {
     id: "jjy-082",
     name: "내고향강원도",
     category: "회",
@@ -1718,28 +816,6 @@ const CURATED_FOOD = [
     ]
   },
   {
-    id: "jjy-086",
-    name: "녹원",
-    category: "한식",
-    address: "전북특별자치도 순창군 순창읍 순창5길 28",
-    phone: null,
-    lat: 35.373831406942145,
-    lng: 127.13974303424155,
-    kakaoUrl: "http://place.map.kakao.com/9704834",
-    naverUrl: "https://map.naver.com/p/search/%EB%85%B9%EC%9B%90%20%EC%A0%84%EB%B6%81%ED%8A%B9%EB%B3%84%EC%9E%90%EC%B9%98%EB%8F%84%20%EC%88%9C%EC%B0%BD%EA%B5%B0%20%EC%88%9C%EC%B0%BD%EC%9D%8D%20%EC%88%9C%EC%B0%BD5%EA%B8%B8%2028",
-    rating: 3.2,
-    reviewCount: 41,
-    photoUrl: null,
-    youtubers: [
-      {
-        name: "쯔양",
-        videoTitle: "동네 사장님들 모이셨습니다🤣 김치와 보쌈이 들어간 순창 삼합??먹방",
-        videoUrl: "https://www.youtube.com/watch?v=R4l1zUbM-dM",
-        recommendNote: "쯔양이 방문해 리뷰한 한식 맛집."
-      }
-    ]
-  },
-  {
     id: "jjy-087",
     name: "놀부만두",
     category: "분식",
@@ -1762,50 +838,6 @@ const CURATED_FOOD = [
     ]
   },
   {
-    id: "jjy-089",
-    name: "눈나무집",
-    category: "한식",
-    address: "서울 종로구 삼청로 136-1",
-    phone: "02-739-6742",
-    lat: 37.58746562127582,
-    lng: 126.98188224468566,
-    kakaoUrl: "http://place.map.kakao.com/8193918",
-    naverUrl: "https://map.naver.com/p/search/%EB%88%88%EB%82%98%EB%AC%B4%EC%A7%91%20%EC%84%9C%EC%9A%B8%20%EC%A2%85%EB%A1%9C%EA%B5%AC%20%EC%82%BC%EC%B2%AD%EB%A1%9C%20136-1",
-    rating: 3.8,
-    reviewCount: 516,
-    photoUrl: "https://lh3.googleusercontent.com/place-photos/AG9NLjBBW7L3dKcR8VBxrr2TQud69FeXOFVhSEK9WjhKnIrRRBvZHLVpLBR-GEpB6WvpElV5cj-TD0PMtkoOBCo25OaCCF21f4zNIQdKg9YUB6JLs8TPRYzU63weRFt_pHjBv-RDJ6SBYtvC9kJap9k=s4800-w800",
-    youtubers: [
-      {
-        name: "쯔양",
-        videoTitle: "국수팔아서 빌딩을 세웠다구요?!😳 삼청동 눈나무집 국수 먹방",
-        videoUrl: "https://www.youtube.com/watch?v=ayjSkDH_Vtw",
-        recommendNote: "쯔양이 방문해 리뷰한 한식 맛집."
-      }
-    ]
-  },
-  {
-    id: "jjy-090",
-    name: "뉴타운 생양고기",
-    category: "육류,고기",
-    address: "서울 중구 난계로 205",
-    phone: "02-2231-7712",
-    lat: 37.569842175425,
-    lng: 127.023267260026,
-    kakaoUrl: "http://place.map.kakao.com/1198457054",
-    naverUrl: "https://map.naver.com/p/search/%EB%89%B4%ED%83%80%EC%9A%B4%20%EC%83%9D%EC%96%91%EA%B3%A0%EA%B8%B0%20%EC%84%9C%EC%9A%B8%20%EC%A4%91%EA%B5%AC%20%EB%82%9C%EA%B3%84%EB%A1%9C%20205",
-    rating: 4.1,
-    reviewCount: 59,
-    photoUrl: "https://lh3.googleusercontent.com/place-photos/AG9NLjBuwM2ij6Y-n99Qft04vLwCbBnicc00rg6TKo55vbwlXglGo0Bd5lSktbrlIEzrwTP-TOp2VSBDKpwwBg4UCEoELGc9oxJ9vRfHqECH7MQDAD-RKwU-QYN3-M8h3cOUZElOnGgq2XoToemW=s4800-w800",
-    youtubers: [
-      {
-        name: "쯔양",
-        videoTitle: null,
-        videoUrl: null,
-        recommendNote: "쯔양이 방문해 리뷰한 고기 맛집."
-      }
-    ]
-  },
-  {
     id: "jjy-091",
     name: "다래함박스텍",
     category: "돈까스,우동",
@@ -1824,72 +856,6 @@ const CURATED_FOOD = [
         videoTitle: null,
         videoUrl: null,
         recommendNote: "쯔양이 방문해 리뷰한 양식 맛집."
-      }
-    ]
-  },
-  {
-    id: "jjy-092",
-    name: "다리집 본점",
-    category: "떡볶이",
-    address: "부산 수영구 남천바다로10번길 70",
-    phone: null,
-    lat: 35.14650006857246,
-    lng: 129.11068698324127,
-    kakaoUrl: "http://place.map.kakao.com/8849564",
-    naverUrl: "https://map.naver.com/p/search/%EB%8B%A4%EB%A6%AC%EC%A7%91%20%EB%B3%B8%EC%A0%90%20%EB%B6%80%EC%82%B0%20%EC%88%98%EC%98%81%EA%B5%AC%20%EB%82%A8%EC%B2%9C%EB%B0%94%EB%8B%A4%EB%A1%9C10%EB%B2%88%EA%B8%B8%2070",
-    rating: 3.5,
-    reviewCount: 1736,
-    photoUrl: "https://lh3.googleusercontent.com/place-photos/AG9NLjD3f6GphLaJBZgnRe75Yg3EAZlehbKTz7eB2S9TZqMZQJrJtIgjYURY05Z2Lv3y6m3kYx0QEFGvY2VMHkShSjxKDRaHz47XWQx71TPbuvuTHhZUFqWrVMyMois014Nmz0mWLtHoZooVzfYjNw=s4800-w800",
-    youtubers: [
-      {
-        name: "쯔양",
-        videoTitle: null,
-        videoUrl: null,
-        recommendNote: "쯔양이 방문해 리뷰한 분식 맛집."
-      }
-    ]
-  },
-  {
-    id: "jjy-093",
-    name: "닭동가리 강남역점",
-    category: "치킨",
-    address: "서울 서초구 서초대로77길 37",
-    phone: "010-9906-7680",
-    lat: 37.5010125807001,
-    lng: 127.02498183450759,
-    kakaoUrl: "http://place.map.kakao.com/1395737067",
-    naverUrl: "https://map.naver.com/p/search/%EB%8B%AD%EB%8F%99%EA%B0%80%EB%A6%AC%20%EA%B0%95%EB%82%A8%EC%97%AD%EC%A0%90%20%EC%84%9C%EC%9A%B8%20%EC%84%9C%EC%B4%88%EA%B5%AC%20%EC%84%9C%EC%B4%88%EB%8C%80%EB%A1%9C77%EA%B8%B8%2037",
-    rating: null,
-    reviewCount: null,
-    photoUrl: "https://lh3.googleusercontent.com/place-photos/AG9NLjAYkE-6u3fMvd-Rsh5zraTX40uYFfsVTRg1lRddPaBg4P5YZF3zA3ymR6Qvc0cvTmf9-FaZx_g9V6VT3kmZyAfPorm8ep52Os6sm7V4iVOjzWAS_dAjkIgAKoTiF59F9U5Id38dNdx4MNus6wfU8Gw5Nw=s4800-w800",
-    youtubers: [
-      {
-        name: "쯔양",
-        videoTitle: null,
-        videoUrl: null,
-        recommendNote: "쯔양이 방문해 리뷰한 치킨 전문점."
-      }
-    ]
-  },
-  {
-    id: "jjy-094",
-    name: "답십리별미",
-    category: "한식",
-    address: "서울 동대문구 답십리로48길 98",
-    phone: "02-2248-1419",
-    lat: 37.5683708198862,
-    lng: 127.057567647305,
-    kakaoUrl: "http://place.map.kakao.com/46948751",
-    naverUrl: "https://map.naver.com/p/search/%EB%8B%B5%EC%8B%AD%EB%A6%AC%EB%B3%84%EB%AF%B8%20%EC%84%9C%EC%9A%B8%20%EB%8F%99%EB%8C%80%EB%AC%B8%EA%B5%AC%20%EB%8B%B5%EC%8B%AD%EB%A6%AC%EB%A1%9C48%EA%B8%B8%2098",
-    rating: 4.5,
-    reviewCount: 89,
-    photoUrl: "https://lh3.googleusercontent.com/place-photos/AG9NLjB-s8wFXOjK85heUOL1MHmGaOT932YTraabMOiHkU9p2VhroT05Auhv9ydHPPSylyxGaOty0soYSm8eA8gvrR9fUJDrSSFxIw7yiB_arFedYrmGHUAUhgQAKoMhQxD7j_9wwNxv3ziefCg-cw=s4800-w800",
-    youtubers: [
-      {
-        name: "쯔양",
-        videoTitle: null,
-        videoUrl: null,
-        recommendNote: "쯔양이 방문해 리뷰한 한식 맛집."
       }
     ]
   },
@@ -1938,50 +904,6 @@ const CURATED_FOOD = [
     ]
   },
   {
-    id: "jjy-097",
-    name: "대궁",
-    category: "한정식",
-    address: "전북특별자치도 순창군 순창읍 순창5길 20",
-    phone: "063-653-8234",
-    lat: 35.373554792626,
-    lng: 127.14044024629,
-    kakaoUrl: "http://place.map.kakao.com/18495699",
-    naverUrl: "https://map.naver.com/p/search/%EB%8C%80%EA%B6%81%20%EC%A0%84%EB%B6%81%ED%8A%B9%EB%B3%84%EC%9E%90%EC%B9%98%EB%8F%84%20%EC%88%9C%EC%B0%BD%EA%B5%B0%20%EC%88%9C%EC%B0%BD%EC%9D%8D%20%EC%88%9C%EC%B0%BD5%EA%B8%B8%2020",
-    rating: 3.9,
-    reviewCount: 82,
-    photoUrl: "https://lh3.googleusercontent.com/place-photos/AG9NLjDmWUqrvmlmk6p4A71EjXeCRpeRqNKEH4p0fboacb052FdBJXyPWDBMwTTKgotuofGjr8pgMpOqOeKGeoHuel2mMitTSBi1hP8rVTvHlVdoXn5q54xIoQ5c1u82zYLrM4C-sR4OhVXXE72mpg=s4800-w800",
-    youtubers: [
-      {
-        name: "쯔양",
-        videoTitle: "동네 사장님들 모이셨습니다🤣 김치와 보쌈이 들어간 순창 삼합??먹방",
-        videoUrl: "https://www.youtube.com/watch?v=R4l1zUbM-dM",
-        recommendNote: "쯔양이 방문해 리뷰한 한식 맛집."
-      }
-    ]
-  },
-  {
-    id: "jjy-099",
-    name: "대일분식",
-    category: "분식",
-    address: "전북특별자치도 익산시 중앙로3길 26-7",
-    phone: "063-852-2374",
-    lat: 35.9415476664055,
-    lng: 126.950561996469,
-    kakaoUrl: "http://place.map.kakao.com/21506143",
-    naverUrl: "https://map.naver.com/p/search/%EB%8C%80%EC%9D%BC%EB%B6%84%EC%8B%9D%20%EC%A0%84%EB%B6%81%ED%8A%B9%EB%B3%84%EC%9E%90%EC%B9%98%EB%8F%84%20%EC%9D%B5%EC%82%B0%EC%8B%9C%20%EC%A4%91%EC%95%99%EB%A1%9C3%EA%B8%B8%2026-7",
-    rating: 4.3,
-    reviewCount: 71,
-    photoUrl: "https://lh3.googleusercontent.com/place-photos/AG9NLjBa3F_wpv-qttANCgh2N-p3sTW4Ox740Pe3HvOtKLDIOueQq6CjHclcEAICNhV4Gh5cwooieXWcar79l0UlT_nb05AZ83bF8gYkODp3i_moYK5e4ezK87mTDnCJl5LztJHPCxRhuCA0taTNjb3xV_4n=s4800-w800",
-    youtubers: [
-      {
-        name: "쯔양",
-        videoTitle: null,
-        videoUrl: null,
-        recommendNote: "쯔양이 방문해 리뷰한 분식 맛집."
-      }
-    ]
-  },
-  {
     id: "jjy-100",
     name: "대흥양다리바베큐 건대점",
     category: "중국요리",
@@ -2006,28 +928,6 @@ const CURATED_FOOD = [
         videoTitle: null,
         videoUrl: null,
         recommendNote: "건대 맛집으로 소개됐으며, 양다리 바베큐와 꿔바로우가 또갈집으로 선정됐다."
-      }
-    ]
-  },
-  {
-    id: "jjy-101",
-    name: "더즌오이스터 한남점",
-    category: "굴,전복",
-    address: "서울 용산구 이태원로54길 63-4",
-    phone: "02-790-0916",
-    lat: 37.5354984137461,
-    lng: 127.001380347103,
-    kakaoUrl: "http://place.map.kakao.com/702878329",
-    naverUrl: "https://map.naver.com/p/search/%EB%8D%94%EC%A6%8C%EC%98%A4%EC%9D%B4%EC%8A%A4%ED%84%B0%20%ED%95%9C%EB%82%A8%EC%A0%90%20%EC%84%9C%EC%9A%B8%20%EC%9A%A9%EC%82%B0%EA%B5%AC%20%EC%9D%B4%ED%83%9C%EC%9B%90%EB%A1%9C54%EA%B8%B8%2063-4",
-    rating: 4.4,
-    reviewCount: 48,
-    photoUrl: "https://lh3.googleusercontent.com/place-photos/AG9NLjBJv_Y8hHWzG_dFr5shWwd9IGYHF7X13LuMyShhSgUYkiJ0ShuFkWTGOLPmte2BX_itDacxMClYiA5y_hKMnism5QQPx39Myra_fnIcUGH16gTP8nUjPZnpL-7xpyLWtcKaLyEpnDiokuqLuw=s4800-w800",
-    youtubers: [
-      {
-        name: "쯔양",
-        videoTitle: null,
-        videoUrl: null,
-        recommendNote: "쯔양이 방문해 리뷰한 양식 맛집."
       }
     ]
   },
@@ -2068,12 +968,6 @@ const CURATED_FOOD = [
     photoUrl: "https://lh3.googleusercontent.com/place-photos/AG9NLjCaMJmpgx2edaGPvX2jAcwhlzULCns4kTekC99ARYbgODUlwzj0rLYni1cqo6UBwCj4y09BE3tEBY_61RMNJP_Eu8fiSID0nts-w2dMtMx08MDt6u9jr0wnVf6c_l8djKuEWmVmcscX0uRXNg=s4800-w800",
     youtubers: [
       {
-        name: "쯔양",
-        videoTitle: null,
-        videoUrl: null,
-        recommendNote: "쯔양이 방문해 리뷰한 돈까스·회 전문점."
-      },
-      {
         name: "승우아빠",
         videoTitle: null,
         videoUrl: null,
@@ -2104,28 +998,6 @@ const CURATED_FOOD = [
     ]
   },
   {
-    id: "jjy-105",
-    name: "독도반점 저동점",
-    category: "중국요리",
-    address: "경북 울릉군 울릉읍 울릉순환로 211-3",
-    phone: "054-791-3323",
-    lat: 37.4920545696796,
-    lng: 130.909884310444,
-    kakaoUrl: "http://place.map.kakao.com/1330892374",
-    naverUrl: "https://map.naver.com/p/search/%EB%8F%85%EB%8F%84%EB%B0%98%EC%A0%90%20%EC%A0%80%EB%8F%99%EC%A0%90%20%EA%B2%BD%EB%B6%81%20%EC%9A%B8%EB%A6%89%EA%B5%B0%20%EC%9A%B8%EB%A6%89%EC%9D%8D%20%EC%9A%B8%EB%A6%89%EC%88%9C%ED%99%98%EB%A1%9C%20211-3",
-    rating: 5,
-    reviewCount: 1,
-    photoUrl: null,
-    youtubers: [
-      {
-        name: "쯔양",
-        videoTitle: null,
-        videoUrl: null,
-        recommendNote: "쯔양이 방문해 리뷰한 중식 맛집."
-      }
-    ]
-  },
-  {
     id: "jjy-106",
     name: "돈까스먹는용만이",
     category: "돈까스,우동",
@@ -2138,50 +1010,6 @@ const CURATED_FOOD = [
     rating: 4.1,
     reviewCount: 737,
     photoUrl: "https://lh3.googleusercontent.com/place-photos/AG9NLjCXJyRW21Zdh8mzqWjrxsVO8M-37s-VKgmUTNbQDguPHB6BKKwjXHws4HXCCXW2vnTHzj3C-U-Ep6-S2pI9uVN4lr_SQPCWTLhxD5speeocq4SupFEFUZb2FhoEsOb3L-ICkDmRQsCZVUwtFg=s4800-w800",
-    youtubers: [
-      {
-        name: "쯔양",
-        videoTitle: null,
-        videoUrl: null,
-        recommendNote: "쯔양이 방문해 리뷰한 돈까스·회 전문점."
-      }
-    ]
-  },
-  {
-    id: "jjy-107",
-    name: "산골녹차냉면 본점",
-    category: "냉면",
-    address: "서울 용산구 효창원로 147",
-    phone: "02-716-1988",
-    lat: 37.5412802907394,
-    lng: 126.961867796378,
-    kakaoUrl: "http://place.map.kakao.com/13096291",
-    naverUrl: "https://map.naver.com/p/search/%EC%82%B0%EA%B3%A8%EB%85%B9%EC%B0%A8%EB%83%89%EB%A9%B4%20%EB%B3%B8%EC%A0%90%20%EC%84%9C%EC%9A%B8%20%EC%9A%A9%EC%82%B0%EA%B5%AC%20%ED%9A%A8%EC%B0%BD%EC%9B%90%EB%A1%9C%20147",
-    rating: 3.9,
-    reviewCount: 48,
-    photoUrl: "https://lh3.googleusercontent.com/place-photos/AG9NLjASwArE-oeZftsk-yqEUaMFKzTlT7JA7bhyxeJpKR3_xJHNTM2ufHeNU0Wo2iFE7URRc4z88YqeDSG7pHySqh8EWwkhVpBZ_HhQB0M5MAXM3bAO-S3tYXWMiIqnWHjX2RLDz6D0ycu2C8YHMw=s4800-w800",
-    youtubers: [
-      {
-        name: "쯔양",
-        videoTitle: null,
-        videoUrl: null,
-        recommendNote: "쯔양이 방문해 리뷰한 돈까스·회 전문점."
-      }
-    ]
-  },
-  {
-    id: "jjy-108",
-    name: "돈미정",
-    category: "돈까스,우동",
-    address: "충북 청주시 청원구 향군로31번길 26",
-    phone: null,
-    lat: 36.6480841693189,
-    lng: 127.485682737193,
-    kakaoUrl: "http://place.map.kakao.com/1298842981",
-    naverUrl: "https://map.naver.com/p/search/%EB%8F%88%EB%AF%B8%EC%A0%95%20%EC%B6%A9%EB%B6%81%20%EC%B2%AD%EC%A3%BC%EC%8B%9C%20%EC%B2%AD%EC%9B%90%EA%B5%AC%20%ED%96%A5%EA%B5%B0%EB%A1%9C31%EB%B2%88%EA%B8%B8%2026",
-    rating: 4.8,
-    reviewCount: 4,
-    photoUrl: "https://lh3.googleusercontent.com/place-photos/AG9NLjBmvvZyKlmYEPszn1J9q7xep_JEppPb_Lw2iMk9Fo1cLZGsqAxpumm-3iFPtLJZ1SA0BQMmdqOSGk3xZewb5Jsrh0ZcboFlm7lWcfWZD4O6PHQzsL0UWwUCY6Fgo2Esn3m2viMEiy0nyEjpVZUv6tojGQ=s4800-w800",
     youtubers: [
       {
         name: "쯔양",
@@ -2214,28 +1042,6 @@ const CURATED_FOOD = [
     ]
   },
   {
-    id: "jjy-110",
-    name: "돌실숯불회관",
-    category: "육류,고기",
-    address: "전남광주통합특별시 곡성군 석곡면 석곡로 52-1",
-    phone: "061-363-1457",
-    lat: 35.1316768393353,
-    lng: 127.253679462366,
-    kakaoUrl: "http://place.map.kakao.com/8916213",
-    naverUrl: "https://map.naver.com/p/search/%EB%8F%8C%EC%8B%A4%EC%88%AF%EB%B6%88%ED%9A%8C%EA%B4%80%20%EC%A0%84%EB%82%A8%EA%B4%91%EC%A3%BC%ED%86%B5%ED%95%A9%ED%8A%B9%EB%B3%84%EC%8B%9C%20%EA%B3%A1%EC%84%B1%EA%B5%B0%20%EC%84%9D%EA%B3%A1%EB%A9%B4%20%EC%84%9D%EA%B3%A1%EB%A1%9C%2052-1",
-    rating: 4.1,
-    reviewCount: 91,
-    photoUrl: "https://lh3.googleusercontent.com/place-photos/AG9NLjDtemxeYY-PWAxGvLDCsoUre_VJsLRLWy3vv3h2kdXhqdgzGV8iQdHYlXcMQwrP8LL_W2po0-V38knoz9Aqz8OGIOosp7U3w528lMksmcHQAc397U3GaCjeEBOmknIdIzv1OpKPePb8jPSEXw=s4800-w800",
-    youtubers: [
-      {
-        name: "쯔양",
-        videoTitle: "곡성 120년 전통 석쇠구이? 14인분만 먹방",
-        videoUrl: "https://www.youtube.com/watch?v=hryirOKFk38",
-        recommendNote: "쯔양이 방문해 리뷰한 고기 맛집."
-      }
-    ]
-  },
-  {
     id: "jjy-111",
     name: "동대문엽기떡볶이 본점홀매장",
     category: "동대문엽기떡볶이",
@@ -2248,50 +1054,6 @@ const CURATED_FOOD = [
     rating: 4,
     reviewCount: 266,
     photoUrl: "https://lh3.googleusercontent.com/place-photos/AG9NLjCjcNiUohLhcIahMUpQyQcARHkrfOc1U_maW1IiFZX5YB63Q-TSARNdubLAxnwHUOP07-emoiOD8xk6hUbkUcBwf2vqKZSfKlcRx9eV_Zj4CU9OEVXQW_rbKrnLxI_qhfNPbGJvOordI8W3XOxxpIBnEg=s4800-w800",
-    youtubers: [
-      {
-        name: "쯔양",
-        videoTitle: null,
-        videoUrl: null,
-        recommendNote: "쯔양이 방문해 리뷰한 분식 맛집."
-      }
-    ]
-  },
-  {
-    id: "jjy-112",
-    name: "동대문엽기떡볶이 신촌점",
-    category: "동대문엽기떡볶이",
-    address: "서울 서대문구 연세로5가길 14",
-    phone: "02-365-8592",
-    lat: 37.5573888532887,
-    lng: 126.9359739097304,
-    kakaoUrl: "http://place.map.kakao.com/17764441",
-    naverUrl: "https://map.naver.com/p/search/%EB%8F%99%EB%8C%80%EB%AC%B8%EC%97%BD%EA%B8%B0%EB%96%A1%EB%B3%B6%EC%9D%B4%20%EC%8B%A0%EC%B4%8C%EC%A0%90%20%EC%84%9C%EC%9A%B8%20%EC%84%9C%EB%8C%80%EB%AC%B8%EA%B5%AC%20%EC%97%B0%EC%84%B8%EB%A1%9C5%EA%B0%80%EA%B8%B8%2014",
-    rating: 3.6,
-    reviewCount: 44,
-    photoUrl: "https://lh3.googleusercontent.com/place-photos/AG9NLjCUVjY3hHgWrbtVvjETpBrmmFxHcSGUPHuJjfAe547-OltDMJ-3ER_8FLOVujbg7YVxAa-U9ve6QCxZJ31BqMoR2HNYQ09gkGUr6LP-Oe2FLlpbabEsd4TvfC5G5sX5S5rr4SzngFWb_XuaSA=s4800-w800",
-    youtubers: [
-      {
-        name: "쯔양",
-        videoTitle: null,
-        videoUrl: null,
-        recommendNote: "쯔양이 방문해 리뷰한 분식 맛집."
-      }
-    ]
-  },
-  {
-    id: "jjy-113",
-    name: "동문시장빨간오뎅",
-    category: "분식",
-    address: "충북 제천시 독순로13길 7",
-    phone: "043-642-8125",
-    lat: 37.1390203271429,
-    lng: 128.212877628413,
-    kakaoUrl: "http://place.map.kakao.com/549977021",
-    naverUrl: "https://map.naver.com/p/search/%EB%8F%99%EB%AC%B8%EC%8B%9C%EC%9E%A5%EB%B9%A8%EA%B0%84%EC%98%A4%EB%8E%85%20%EC%B6%A9%EB%B6%81%20%EC%A0%9C%EC%B2%9C%EC%8B%9C%20%EB%8F%85%EC%88%9C%EB%A1%9C13%EA%B8%B8%207",
-    rating: 3.5,
-    reviewCount: 13,
-    photoUrl: "https://lh3.googleusercontent.com/place-photos/AG9NLjCJ6tdjqI4CQjepyksxG_vfD1GMNcDNm0gOZT5-CSG-JoTHfeWC23oHdNlrNcKK9CT_ljhToUOYZNPVBg0IvMKr2TZsoiEqBzqXhYwQYnOn2RQS0onQ0SpA1vIJT4mgm98_NIGzEgLsO6ylFfI=s4800-w800",
     youtubers: [
       {
         name: "쯔양",
@@ -2324,50 +1086,6 @@ const CURATED_FOOD = [
     ]
   },
   {
-    id: "jjy-115",
-    name: "동삼동불짬뽕",
-    category: "중국요리",
-    address: "부산 영도구 동삼남로 21",
-    phone: "051-403-7388",
-    lat: 35.0778493510842,
-    lng: 129.068050623359,
-    kakaoUrl: "http://place.map.kakao.com/19041717",
-    naverUrl: "https://map.naver.com/p/search/%EB%8F%99%EC%82%BC%EB%8F%99%EB%B6%88%EC%A7%AC%EB%BD%95%20%EB%B6%80%EC%82%B0%20%EC%98%81%EB%8F%84%EA%B5%AC%20%EB%8F%99%EC%82%BC%EB%82%A8%EB%A1%9C%2021",
-    rating: 3.6,
-    reviewCount: 142,
-    photoUrl: "https://lh3.googleusercontent.com/place-photos/AG9NLjDowgMHFhmnC3uNOKuXiWC9zEw8a-fzcbsXwJnxldo4-DmTcN4p_nXqcaKdZLTOFWhiw5W5e0jbcl7eOV-iZrUNUSEqOTGKNDcp6ThWOuhGWuoiEg-DomMLfWFZcSGxk-aaZY4sXHCvmzbA3A=s4800-w800",
-    youtubers: [
-      {
-        name: "쯔양",
-        videoTitle: null,
-        videoUrl: null,
-        recommendNote: "쯔양이 방문해 리뷰한 중식 맛집."
-      }
-    ]
-  },
-  {
-    id: "jjy-116",
-    name: "동춘이만두",
-    category: "분식",
-    address: "부산 부산진구 당감로25번길 11",
-    phone: "051-896-1869",
-    lat: 35.1640545179476,
-    lng: 129.038947080611,
-    kakaoUrl: "http://place.map.kakao.com/27361254",
-    naverUrl: "https://map.naver.com/p/search/%EB%8F%99%EC%B6%98%EC%9D%B4%EB%A7%8C%EB%91%90%20%EB%B6%80%EC%82%B0%20%EB%B6%80%EC%82%B0%EC%A7%84%EA%B5%AC%20%EB%8B%B9%EA%B0%90%EB%A1%9C25%EB%B2%88%EA%B8%B8%2011",
-    rating: 4.4,
-    reviewCount: 72,
-    photoUrl: "https://lh3.googleusercontent.com/place-photos/AG9NLjArvi-v-s9mTkwmgtoQFRF5AmP3YvEnvXxdCmth7X8HOXrhUIKNXRg2T2185LsQ5PZLu5j4Qwpsl-PIkNc-LigPyF3uJWi7AgJUWR9jCZlP8cPCfYZ_K6iBE1G_uvhxy88QFN-qVts5vyAYq8E=s4800-w800",
-    youtubers: [
-      {
-        name: "쯔양",
-        videoTitle: null,
-        videoUrl: null,
-        recommendNote: "쯔양이 방문해 리뷰한 분식 맛집."
-      }
-    ]
-  },
-  {
     id: "jjy-117",
     name: "돼지집 본관",
     category: "불고기,두루치기",
@@ -2390,116 +1108,6 @@ const CURATED_FOOD = [
     ]
   },
   {
-    id: "jjy-118",
-    name: "두찜 한양대점",
-    category: "두찜",
-    address: "서울 성동구 살곶이길 346-1",
-    phone: "02-2295-9959",
-    lat: 37.556311585523,
-    lng: 127.041014498032,
-    kakaoUrl: "http://place.map.kakao.com/1895181104",
-    naverUrl: "https://map.naver.com/p/search/%EB%91%90%EC%B0%9C%20%ED%95%9C%EC%96%91%EB%8C%80%EC%A0%90%20%EC%84%9C%EC%9A%B8%20%EC%84%B1%EB%8F%99%EA%B5%AC%20%EC%82%B4%EA%B3%B6%EC%9D%B4%EA%B8%B8%20346-1",
-    rating: 3.4,
-    reviewCount: 5,
-    photoUrl: "https://lh3.googleusercontent.com/place-photos/AG9NLjDLWbPjnSyJyjn89TgQN3AZxCJ0Dt9Z-cSVJnT8liRym9zjWDLePyNvK-Cs3van5RLuQSyoFH_ZuM5_Ul_nHtSdxq7gOvONhaEpa6xde2wzkCIqrpOPvJNUwfAYE__ddJV-oCSFLpjoDm8D4Q=s4800-w800",
-    youtubers: [
-      {
-        name: "쯔양",
-        videoTitle: null,
-        videoUrl: null,
-        recommendNote: "쯔양이 방문해 리뷰한 찜·탕 맛집."
-      }
-    ]
-  },
-  {
-    id: "jjy-119",
-    name: "두툼 강남점",
-    category: "육류,고기",
-    address: "서울 강남구 선릉로93길 56",
-    phone: "0507-1373-0017",
-    lat: 37.5042469881733,
-    lng: 127.04415042593,
-    kakaoUrl: "http://place.map.kakao.com/144873563",
-    naverUrl: "https://map.naver.com/p/search/%EB%91%90%ED%88%BC%20%EA%B0%95%EB%82%A8%EC%A0%90%20%EC%84%9C%EC%9A%B8%20%EA%B0%95%EB%82%A8%EA%B5%AC%20%EC%84%A0%EB%A6%89%EB%A1%9C93%EA%B8%B8%2056",
-    rating: 4.8,
-    reviewCount: 13,
-    photoUrl: "https://lh3.googleusercontent.com/place-photos/AG9NLjAWq5N3g-OToNX2dTbPwYQIBlQfLJIVLYWVS0y0NfpR9nNdctie9KkY2bQhrEeM9t80D2HB1i9gMP6hnWZwC4Wl2EOP6DZpETa1NsqRY6vPs6nFg9WdWv4534kxS48Sdl29Y_o0-KbQDdZn6XaXa4eCXg=s4800-w800",
-    youtubers: [
-      {
-        name: "쯔양",
-        videoTitle: null,
-        videoUrl: null,
-        recommendNote: "쯔양이 방문해 리뷰한 고기 맛집."
-      }
-    ]
-  },
-  {
-    id: "jjy-120",
-    name: "등대경양식",
-    category: "양식",
-    address: "인천 제물포구 제물량로 190",
-    phone: "032-773-3473",
-    lat: 37.47079090684128,
-    lng: 126.62313832954209,
-    kakaoUrl: "http://place.map.kakao.com/8958913",
-    naverUrl: "https://map.naver.com/p/search/%EB%93%B1%EB%8C%80%EA%B2%BD%EC%96%91%EC%8B%9D%20%EC%9D%B8%EC%B2%9C%20%EC%A0%9C%EB%AC%BC%ED%8F%AC%EA%B5%AC%20%EC%A0%9C%EB%AC%BC%EB%9F%89%EB%A1%9C%20190",
-    rating: 3.4,
-    reviewCount: 107,
-    photoUrl: "https://lh3.googleusercontent.com/place-photos/AG9NLjAbZmxhhr2WYHdQRoMeqazq4MYPQZHBok3AMd1DfU4qLiKymhVa54NqPptiG94QsjlqRAtXA3yojbSZGvwmRt872IR5OfbQgg460AZOYWoHIfe8YcFbMJZDzt47WGhikUP0XjhrRLpxURByQhnelmSB-w=s4800-w800",
-    youtubers: [
-      {
-        name: "쯔양",
-        videoTitle: null,
-        videoUrl: null,
-        recommendNote: "쯔양이 방문해 리뷰한 돈까스·회 전문점."
-      }
-    ]
-  },
-  {
-    id: "jjy-121",
-    name: "등마루 족발 연구소",
-    category: "족발,보쌈",
-    address: "서울 영등포구 선유로49길 32-1",
-    phone: "02-2678-4060",
-    lat: 37.5371270187173,
-    lng: 126.89434459286795,
-    kakaoUrl: "http://place.map.kakao.com/21423018",
-    naverUrl: "https://map.naver.com/p/search/%EB%93%B1%EB%A7%88%EB%A3%A8%20%EC%A1%B1%EB%B0%9C%20%EC%97%B0%EA%B5%AC%EC%86%8C%20%EC%84%9C%EC%9A%B8%20%EC%98%81%EB%93%B1%ED%8F%AC%EA%B5%AC%20%EC%84%A0%EC%9C%A0%EB%A1%9C49%EA%B8%B8%2032-1",
-    rating: 3.9,
-    reviewCount: 65,
-    photoUrl: "https://lh3.googleusercontent.com/place-photos/AG9NLjBcIX5BUnJE59V31S7jMjDpnnZpk2w718gEa_2N1qhsnU2Mei57v0QwK3621KJUYVAvT6ROtnj12nACjh7P1V2xQYPUxOYFOH-zO8ZTPzMHkSJ2F4aYtMrwjQP6mCDnIWrH5RMG_aEDq6TT=s4800-w800",
-    youtubers: [
-      {
-        name: "쯔양",
-        videoTitle: null,
-        videoUrl: null,
-        recommendNote: "쯔양이 방문해 리뷰한 족발·보쌈 맛집."
-      }
-    ]
-  },
-  {
-    id: "jjy-122",
-    name: "똘이떡볶이",
-    category: "떡볶이",
-    address: "강원특별자치도 원주시 중앙시장길 11",
-    phone: "033-731-8082",
-    lat: 37.35075696933128,
-    lng: 127.94902143331666,
-    kakaoUrl: "http://place.map.kakao.com/21343398",
-    naverUrl: "https://map.naver.com/p/search/%EB%98%98%EC%9D%B4%EB%96%A1%EB%B3%B6%EC%9D%B4%20%EA%B0%95%EC%9B%90%ED%8A%B9%EB%B3%84%EC%9E%90%EC%B9%98%EB%8F%84%20%EC%9B%90%EC%A3%BC%EC%8B%9C%20%EC%A4%91%EC%95%99%EC%8B%9C%EC%9E%A5%EA%B8%B8%2011",
-    rating: 4,
-    reviewCount: 50,
-    photoUrl: "https://lh3.googleusercontent.com/place-photos/AG9NLjA1nRxqbtBI7eKhiwmCEOrRMiRdwmwoyuIOv8EEG-oZHt0FHz_8E_yWZGK4ndz7bnA9BnoDV0dSWZtUqnKBx8_1VeA-Gst5l3PfQGqHsPU8YZJfDY5t6V4AibzRl4ImQo84a6im6knipMwHalqZrrDt=s4800-w800",
-    youtubers: [
-      {
-        name: "쯔양",
-        videoTitle: null,
-        videoUrl: null,
-        recommendNote: "쯔양이 방문해 리뷰한 분식 맛집."
-      }
-    ]
-  },
-  {
     id: "jjy-123",
     name: "뜨락",
     category: "육류,고기",
@@ -2512,72 +1120,6 @@ const CURATED_FOOD = [
     rating: 4.4,
     reviewCount: 675,
     photoUrl: "https://lh3.googleusercontent.com/place-photos/AG9NLjBXzyuT9HGczTED2WH4gvIH7Me9Ck5SPhXqTrkBCSZAFXSzhrSiqoAEWKUH4CZmi_YfnZ5UUO84f59BV4zW8N6NL3udktZ5TNMGDRIfIIXPYVYMpMNAQCgMK8pFJ_N0BNieiVsEA3TA-VkeW_M_db7WRQ=s4800-w800",
-    youtubers: [
-      {
-        name: "쯔양",
-        videoTitle: null,
-        videoUrl: null,
-        recommendNote: "쯔양이 방문해 리뷰한 고기 맛집."
-      }
-    ]
-  },
-  {
-    id: "jjy-124",
-    name: "뜨란채",
-    category: "한식",
-    address: "전북특별자치도 순창군 팔덕면 강천로 664-26",
-    phone: "063-653-1305",
-    lat: 35.41593500639342,
-    lng: 127.07754792697243,
-    kakaoUrl: "http://place.map.kakao.com/26547556",
-    naverUrl: "https://map.naver.com/p/search/%EB%9C%A8%EB%9E%80%EC%B1%84%20%EC%A0%84%EB%B6%81%ED%8A%B9%EB%B3%84%EC%9E%90%EC%B9%98%EB%8F%84%20%EC%88%9C%EC%B0%BD%EA%B5%B0%20%ED%8C%94%EB%8D%95%EB%A9%B4%20%EA%B0%95%EC%B2%9C%EB%A1%9C%20664-26",
-    rating: 4.1,
-    reviewCount: 53,
-    photoUrl: "https://lh3.googleusercontent.com/place-photos/AG9NLjBPeN5dFeYCSlPUwhGwktm7_-eaB_XS8gFUNpw2f4YPSswC1jzpt6eBsZCfmhjlaDR63GWHYhH9WyIE5CqoXKY1pjVvqvAi_qBD92kQ4p9qRqhhoVG7iCokKRTF9BlpH-aHyQoJd5t8pHG0hA=s4800-w800",
-    youtubers: [
-      {
-        name: "쯔양",
-        videoTitle: "동네 사장님들 모이셨습니다🤣 김치와 보쌈이 들어간 순창 삼합??먹방",
-        videoUrl: "https://www.youtube.com/watch?v=R4l1zUbM-dM",
-        recommendNote: "쯔양이 방문해 리뷰한 한식 맛집."
-      }
-    ]
-  },
-  {
-    id: "jjy-125",
-    name: "라면팜 외대점",
-    category: "분식",
-    address: "서울 동대문구 이문로25길 36",
-    phone: "0507-1436-1074",
-    lat: 37.5955700336484,
-    lng: 127.05752065393662,
-    kakaoUrl: "http://place.map.kakao.com/1566501996",
-    naverUrl: "https://map.naver.com/p/search/%EB%9D%BC%EB%A9%B4%ED%8C%9C%20%EC%99%B8%EB%8C%80%EC%A0%90%20%EC%84%9C%EC%9A%B8%20%EB%8F%99%EB%8C%80%EB%AC%B8%EA%B5%AC%20%EC%9D%B4%EB%AC%B8%EB%A1%9C25%EA%B8%B8%2036",
-    rating: null,
-    reviewCount: null,
-    photoUrl: null,
-    youtubers: [
-      {
-        name: "쯔양",
-        videoTitle: null,
-        videoUrl: null,
-        recommendNote: "쯔양이 방문해 리뷰한 분식 맛집."
-      }
-    ]
-  },
-  {
-    id: "jjy-126",
-    name: "라무진 구로디지털단지역점",
-    category: "육류,고기",
-    address: "서울 구로구 디지털로34길 43",
-    phone: "02-866-1210",
-    lat: 37.485152001067,
-    lng: 126.898804836896,
-    kakaoUrl: "http://place.map.kakao.com/217809792",
-    naverUrl: "https://map.naver.com/p/search/%EB%9D%BC%EB%AC%B4%EC%A7%84%20%EA%B5%AC%EB%A1%9C%EB%94%94%EC%A7%80%ED%84%B8%EB%8B%A8%EC%A7%80%EC%97%AD%EC%A0%90%20%EC%84%9C%EC%9A%B8%20%EA%B5%AC%EB%A1%9C%EA%B5%AC%20%EB%94%94%EC%A7%80%ED%84%B8%EB%A1%9C34%EA%B8%B8%2043",
-    rating: 4.7,
-    reviewCount: 22,
-    photoUrl: "https://lh3.googleusercontent.com/place-photos/AG9NLjBgQd5k5qkF-LGdFAH-AAlaw8V9_e2qiCx2NCX-KmSMEUpVYLVImQjDrAK5XAEVOrtehVxzI4kBGQjUy4FjHphjD1jA-IAfi-vCskHtt3HRxSNUi_fE_o708fFbepThu0tAGilOeFVw8lz15A=s4800-w720",
     youtubers: [
       {
         name: "쯔양",
@@ -2654,72 +1196,6 @@ const CURATED_FOOD = [
     ]
   },
   {
-    id: "jjy-130",
-    name: "롯데리아 면목중앙점",
-    category: "롯데리아",
-    address: "서울 중랑구 면목로 415",
-    phone: "02-439-8245",
-    lat: 37.5890322446018,
-    lng: 127.087223379478,
-    kakaoUrl: "http://place.map.kakao.com/7856782",
-    naverUrl: "https://map.naver.com/p/search/%EB%A1%AF%EB%8D%B0%EB%A6%AC%EC%95%84%20%EB%A9%B4%EB%AA%A9%EC%A4%91%EC%95%99%EC%A0%90%20%EC%84%9C%EC%9A%B8%20%EC%A4%91%EB%9E%91%EA%B5%AC%20%EB%A9%B4%EB%AA%A9%EB%A1%9C%20415",
-    rating: 3.6,
-    reviewCount: 292,
-    photoUrl: "https://lh3.googleusercontent.com/place-photos/AG9NLjBd6iznrBkJ9BQPtG8JaGB7cDXNEmsr-EWJaEuC7lgtEGCBSJCMUKg7qM6Lu3j6xozCSK7foE2fFqz7i--7W-NiUzlby90bxxdUe6at-54eFwa9crKm9S6yoG1F1WhFIYG2DRLh32B4IyfrnK8=s4800-w800",
-    youtubers: [
-      {
-        name: "쯔양",
-        videoTitle: null,
-        videoUrl: null,
-        recommendNote: "쯔양이 방문해 리뷰한 패스트푸드 맛집."
-      }
-    ]
-  },
-  {
-    id: "jjy-131",
-    name: "롯데리아 학동역점",
-    category: "롯데리아",
-    address: "서울 강남구 학동로 219",
-    phone: "02-3443-9200",
-    lat: 37.5149869390675,
-    lng: 127.03321879987563,
-    kakaoUrl: "http://place.map.kakao.com/21852012",
-    naverUrl: "https://map.naver.com/p/search/%EB%A1%AF%EB%8D%B0%EB%A6%AC%EC%95%84%20%ED%95%99%EB%8F%99%EC%97%AD%EC%A0%90%20%EC%84%9C%EC%9A%B8%20%EA%B0%95%EB%82%A8%EA%B5%AC%20%ED%95%99%EB%8F%99%EB%A1%9C%20219",
-    rating: 3.9,
-    reviewCount: 222,
-    photoUrl: "https://lh3.googleusercontent.com/place-photos/AG9NLjDy2MwrYcmz96eNM_l4vXyeqmcGJXSLDuNrMW1GQZsYAh-VJpnHqNS1kn_gpko7Jcv39w19w1n73wXA7192D6DfssBcsHZeZoy4bzrgdCe-5Q18UILF08q-BPoSrLvLOdNq0NlPQ_2P0QH_MGI=s4800-w800",
-    youtubers: [
-      {
-        name: "쯔양",
-        videoTitle: null,
-        videoUrl: null,
-        recommendNote: "쯔양이 방문해 리뷰한 맛집."
-      }
-    ]
-  },
-  {
-    id: "jjy-132",
-    name: "마라도별장식당",
-    category: "중국요리",
-    address: "제주특별자치도 서귀포시 대정읍 마라로101번길 43",
-    phone: "010-3639-3327",
-    lat: 33.1183402662918,
-    lng: 126.266553963876,
-    kakaoUrl: "http://place.map.kakao.com/16644589",
-    naverUrl: "https://map.naver.com/p/search/%EB%A7%88%EB%9D%BC%EB%8F%84%EB%B3%84%EC%9E%A5%EC%8B%9D%EB%8B%B9%20%EC%A0%9C%EC%A3%BC%ED%8A%B9%EB%B3%84%EC%9E%90%EC%B9%98%EB%8F%84%20%EC%84%9C%EA%B7%80%ED%8F%AC%EC%8B%9C%20%EB%8C%80%EC%A0%95%EC%9D%8D%20%EB%A7%88%EB%9D%BC%EB%A1%9C101%EB%B2%88%EA%B8%B8%2043",
-    rating: 4,
-    reviewCount: 74,
-    photoUrl: "https://lh3.googleusercontent.com/place-photos/AG9NLjB1xBjHFOIoMXbsm7OZsjZL4iVtFRrNkBwiWb0Ddza9UCL1wwV7HMzcifW_2OZnTt0tyIJHRqySf45_xR7ANBjUF4H-HJcIA0-yfWYHhTjOjgZJWBYGdKADMV5I0LhbS2ZfsVbERGk7qHOhEg=s4800-w800",
-    youtubers: [
-      {
-        name: "쯔양",
-        videoTitle: null,
-        videoUrl: null,
-        recommendNote: "쯔양이 방문해 리뷰한 중식 맛집."
-      }
-    ]
-  },
-  {
     id: "jjy-133",
     name: "마루돈까스",
     category: "돈까스,우동",
@@ -2738,72 +1214,6 @@ const CURATED_FOOD = [
         videoTitle: null,
         videoUrl: null,
         recommendNote: "쯔양이 방문해 리뷰한 돈까스·회 전문점."
-      }
-    ]
-  },
-  {
-    id: "jjy-134",
-    name: "마포만두 합정점",
-    category: "분식",
-    address: "서울 마포구 양화로7길 12",
-    phone: "02-333-9842",
-    lat: 37.5514084484882,
-    lng: 126.915192469733,
-    kakaoUrl: "http://place.map.kakao.com/27341415",
-    naverUrl: "https://map.naver.com/p/search/%EB%A7%88%ED%8F%AC%EB%A7%8C%EB%91%90%20%ED%95%A9%EC%A0%95%EC%A0%90%20%EC%84%9C%EC%9A%B8%20%EB%A7%88%ED%8F%AC%EA%B5%AC%20%EC%96%91%ED%99%94%EB%A1%9C7%EA%B8%B8%2012",
-    rating: 3.6,
-    reviewCount: 673,
-    photoUrl: "https://lh3.googleusercontent.com/place-photos/AG9NLjCxqeFL28IlUeS_MqIr_gyX-9HHEKYT0qI5O-UzcCpd6GTAO0nJcNi3W43OqmGKtUNPQ3e2ipyy1UFDkGqlJDx6xmJcmUpzI__omiWHhtUbraL7VrjcrYMw580jpon0CxUiJ3xDgtr8EM1VxNKZgxN0=s4800-w800",
-    youtubers: [
-      {
-        name: "쯔양",
-        videoTitle: null,
-        videoUrl: null,
-        recommendNote: "쯔양이 방문해 리뷰한 분식 맛집."
-      }
-    ]
-  },
-  {
-    id: "jjy-135",
-    name: "마피아떡볶이 본점",
-    category: "떡볶이",
-    address: "인천 서해구 염곡로 318",
-    phone: "032-563-4005",
-    lat: 37.513038629886466,
-    lng: 126.66873503651642,
-    kakaoUrl: "http://place.map.kakao.com/832721235",
-    naverUrl: "https://map.naver.com/p/search/%EB%A7%88%ED%94%BC%EC%95%84%EB%96%A1%EB%B3%B6%EC%9D%B4%20%EB%B3%B8%EC%A0%90%20%EC%9D%B8%EC%B2%9C%20%EC%84%9C%ED%95%B4%EA%B5%AC%20%EC%97%BC%EA%B3%A1%EB%A1%9C%20318",
-    rating: null,
-    reviewCount: null,
-    photoUrl: null,
-    youtubers: [
-      {
-        name: "쯔양",
-        videoTitle: null,
-        videoUrl: null,
-        recommendNote: "쯔양이 방문해 리뷰한 분식 맛집."
-      }
-    ]
-  },
-  {
-    id: "jjy-136",
-    name: "막내낙지",
-    category: "해물,생선",
-    address: "서울 종로구 종로 19",
-    phone: "02-736-0824",
-    lat: 37.571095137132566,
-    lng: 126.97987922763413,
-    kakaoUrl: "http://place.map.kakao.com/12447799",
-    naverUrl: "https://map.naver.com/p/search/%EB%A7%89%EB%82%B4%EB%82%99%EC%A7%80%20%EC%84%9C%EC%9A%B8%20%EC%A2%85%EB%A1%9C%EA%B5%AC%20%EC%A2%85%EB%A1%9C%2019",
-    rating: 3.9,
-    reviewCount: 260,
-    photoUrl: "https://lh3.googleusercontent.com/place-photos/AG9NLjDAhtPQJ_N3q3nLV_jw0WCC-vrsPM1e0DBdzNKlQ9hGM7tRI1VFZsYR_60xp8MYXLTu0rGNtmHXWvjiUwd-foUDDj-xtijQh30wR0diZjnCH4nll8zWFcY4XJG2_S7vRB1X8WVMuSP9IKxYEyIPa6fbnQ=s4800-w800",
-    youtubers: [
-      {
-        name: "쯔양",
-        videoTitle: null,
-        videoUrl: null,
-        recommendNote: "쯔양이 방문해 리뷰한 한식 맛집."
       }
     ]
   },
@@ -2852,50 +1262,6 @@ const CURATED_FOOD = [
     ]
   },
   {
-    id: "jjy-139",
-    name: "맛있는칼국수",
-    category: "칼국수",
-    address: "대전 서구 도마2길 43",
-    phone: "0507-1355-0589",
-    lat: 36.3146646064942,
-    lng: 127.381529435798,
-    kakaoUrl: "http://place.map.kakao.com/1885694872",
-    naverUrl: "https://map.naver.com/p/search/%EB%A7%9B%EC%9E%88%EB%8A%94%EC%B9%BC%EA%B5%AD%EC%88%98%20%EB%8C%80%EC%A0%84%20%EC%84%9C%EA%B5%AC%20%EB%8F%84%EB%A7%882%EA%B8%B8%2043",
-    rating: null,
-    reviewCount: null,
-    photoUrl: "https://lh3.googleusercontent.com/place-photos/AG9NLjALuU0CQvfCSvoyIXRHhRFPSGaTEe_vGQdY3lbaTkV_ju__jhMN4ZWgAuYMgUn2bQIq97IT7qAhGf3VtI2Ls94ssRBDHjFY9uapLlw0VQIOTUrXJBfGMtTllgecLqGQrwXzHJr707kYz09qnQ=s4800-w800",
-    youtubers: [
-      {
-        name: "쯔양",
-        videoTitle: null,
-        videoUrl: null,
-        recommendNote: "쯔양이 방문해 리뷰한 한식 맛집."
-      }
-    ]
-  },
-  {
-    id: "jjy-140",
-    name: "맛있는튀김집",
-    category: "분식",
-    address: "충남 금산군 금산읍 인삼약초로 40",
-    phone: "041-753-7277",
-    lat: 36.1007383320129,
-    lng: 127.497563408059,
-    kakaoUrl: "http://place.map.kakao.com/333510712",
-    naverUrl: "https://map.naver.com/p/search/%EB%A7%9B%EC%9E%88%EB%8A%94%ED%8A%80%EA%B9%80%EC%A7%91%20%EC%B6%A9%EB%82%A8%20%EA%B8%88%EC%82%B0%EA%B5%B0%20%EA%B8%88%EC%82%B0%EC%9D%8D%20%EC%9D%B8%EC%82%BC%EC%95%BD%EC%B4%88%EB%A1%9C%2040",
-    rating: 4.5,
-    reviewCount: 2,
-    photoUrl: "https://lh3.googleusercontent.com/place-photos/AG9NLjDHZ3IeLv3dhzWxgfm_4Z581KY05K6Ar1OTWnOP4URTQORIOl62dHkIvPUs0WjbN8T1PUZ9S3qBgxOXJ3ienKmsKFjNKdTCs6xdRSsV52plxDxVFqdIGq878pSJagZRGX-7znt7XtDq-e3cvg=s4800-w800",
-    youtubers: [
-      {
-        name: "쯔양",
-        videoTitle: null,
-        videoUrl: null,
-        recommendNote: "쯔양이 방문해 리뷰한 맛집."
-      }
-    ]
-  },
-  {
     id: "jjy-141",
     name: "망원동 즉석우동 전문돈까스 본점",
     category: "돈까스,우동",
@@ -2918,50 +1284,6 @@ const CURATED_FOOD = [
     ]
   },
   {
-    id: "jjy-142",
-    name: "맥도날드 굽은다리역DT점",
-    category: "맥도날드",
-    address: "서울 강동구 양재대로 1587",
-    phone: "02-6140-4100",
-    lat: 37.5472508507001,
-    lng: 127.143098792431,
-    kakaoUrl: "http://place.map.kakao.com/27316244",
-    naverUrl: "https://map.naver.com/p/search/%EB%A7%A5%EB%8F%84%EB%82%A0%EB%93%9C%20%EA%B5%BD%EC%9D%80%EB%8B%A4%EB%A6%AC%EC%97%ADDT%EC%A0%90%20%EC%84%9C%EC%9A%B8%20%EA%B0%95%EB%8F%99%EA%B5%AC%20%EC%96%91%EC%9E%AC%EB%8C%80%EB%A1%9C%201587",
-    rating: 3.9,
-    reviewCount: 773,
-    photoUrl: "https://lh3.googleusercontent.com/place-photos/AG9NLjBJpyADtemSMEJzdE39EfMj3edca_HIne0soQe8nuNCBlL1V6cCjg8dJjgdhHa-oeyYdUmnjGwpvm_cgbZAG9hZOMRv7110m0QvV8iGgb3AZQ0tdUakSCvsa7UcJgm-Wws_LTZHG0q48Gqfpw=s4800-w800",
-    youtubers: [
-      {
-        name: "쯔양",
-        videoTitle: null,
-        videoUrl: null,
-        recommendNote: "쯔양이 방문해 리뷰한 패스트푸드 맛집."
-      }
-    ]
-  },
-  {
-    id: "jjy-143",
-    name: "맷돌손칼국수",
-    category: "칼국수",
-    address: "인천 제물포구 신포로 32-16",
-    phone: "032-762-5930",
-    lat: 37.4715145145904,
-    lng: 126.625721190314,
-    kakaoUrl: "http://place.map.kakao.com/21373373",
-    naverUrl: "https://map.naver.com/p/search/%EB%A7%B7%EB%8F%8C%EC%86%90%EC%B9%BC%EA%B5%AD%EC%88%98%20%EC%9D%B8%EC%B2%9C%20%EC%A0%9C%EB%AC%BC%ED%8F%AC%EA%B5%AC%20%EC%8B%A0%ED%8F%AC%EB%A1%9C%2032-16",
-    rating: 3.6,
-    reviewCount: 393,
-    photoUrl: "https://lh3.googleusercontent.com/place-photos/AG9NLjBkqTL-HuCtjN7_xlp4bohhSdi2hAAlIymY9ZW0myKq9AhkYCqfntXwmrK3ACoj8IBLpPSBFhD4KA0iJ6S-lGxpMkwBAjW5PHZygA7OLFIFudzteuQlyMWx819HAvqxt-blLAN_I_CORN2BhQ=s4800-w800",
-    youtubers: [
-      {
-        name: "쯔양",
-        videoTitle: null,
-        videoUrl: null,
-        recommendNote: "쯔양이 방문해 리뷰한 분식 맛집."
-      }
-    ]
-  },
-  {
     id: "jjy-144",
     name: "머거보까 매운불갈비찜 본점",
     category: "갈비",
@@ -2974,72 +1296,6 @@ const CURATED_FOOD = [
     rating: 4,
     reviewCount: 119,
     photoUrl: "https://lh3.googleusercontent.com/place-photos/AG9NLjB5yZZZ23Wr7DmPpRNXr5Sv2MDF662iFAbVadEay-LGLrRq_sospQv2bdc_MyMSasxS0YUFJ7-xgTi31dV6-CyIVVN8Y00XZllUzLXlwwuYvjxaspAH1eTPxzAGhulHFyNUoqXj01XMJroBVdG-kV6l5g=s4800-w800",
-    youtubers: [
-      {
-        name: "쯔양",
-        videoTitle: null,
-        videoUrl: null,
-        recommendNote: "쯔양이 방문해 리뷰한 한식 맛집."
-      }
-    ]
-  },
-  {
-    id: "jjy-145",
-    name: "명가돈까스",
-    category: "돈까스,우동",
-    address: "경기 안양시 만안구 장내로139번길 30",
-    phone: "031-443-9407",
-    lat: 37.3990345731584,
-    lng: 126.922289811889,
-    kakaoUrl: "http://place.map.kakao.com/2061262308",
-    naverUrl: "https://map.naver.com/p/search/%EB%AA%85%EA%B0%80%EB%8F%88%EA%B9%8C%EC%8A%A4%20%EA%B2%BD%EA%B8%B0%20%EC%95%88%EC%96%91%EC%8B%9C%20%EB%A7%8C%EC%95%88%EA%B5%AC%20%EC%9E%A5%EB%82%B4%EB%A1%9C139%EB%B2%88%EA%B8%B8%2030",
-    rating: 3.8,
-    reviewCount: 367,
-    photoUrl: "https://lh3.googleusercontent.com/place-photos/AG9NLjAoolyMACsF3oOpv7MPMA8gzcfrWkdrS3tvtoRKcUxZ9WRzrD1lMM3qoEytO2QxoRIJv34D_yf2ahguMw8dTgXc9zRsk5eqRKNpu_n_iMwSXNqgBmAFK59gbSqzDbYS4XH8hmfpSkLyGT3WuO4zU7oVkw=s4800-w800",
-    youtubers: [
-      {
-        name: "쯔양",
-        videoTitle: null,
-        videoUrl: null,
-        recommendNote: "쯔양이 방문해 리뷰한 돈까스·회 전문점."
-      }
-    ]
-  },
-  {
-    id: "jjy-147",
-    name: "명인집 하당점",
-    category: "해물,생선",
-    address: "전남광주통합특별시 목포시 하당로30번길 14",
-    phone: "061-245-8808",
-    lat: 34.798861875914945,
-    lng: 126.42225862940062,
-    kakaoUrl: "http://place.map.kakao.com/11684688",
-    naverUrl: "https://map.naver.com/p/search/%EB%AA%85%EC%9D%B8%EC%A7%91%20%ED%95%98%EB%8B%B9%EC%A0%90%20%EC%A0%84%EB%82%A8%EA%B4%91%EC%A3%BC%ED%86%B5%ED%95%A9%ED%8A%B9%EB%B3%84%EC%8B%9C%20%EB%AA%A9%ED%8F%AC%EC%8B%9C%20%ED%95%98%EB%8B%B9%EB%A1%9C30%EB%B2%88%EA%B8%B8%2014",
-    rating: 3.7,
-    reviewCount: 66,
-    photoUrl: "https://lh3.googleusercontent.com/place-photos/AG9NLjB-kQdbCc-q2nyN4wOp-uvZMAiS9QQSPiFjONtV4z5rHr2xbTDjO19xbhZt9xC1BC0_JbwUIPLdwfl32fw65JmMuCG5F4D89-6YMqq4qeq-tze72WU_JFovvziJM6d-KsBteMgTZnb7ji5pSw=s4800-w800",
-    youtubers: [
-      {
-        name: "쯔양",
-        videoTitle: null,
-        videoUrl: null,
-        recommendNote: "쯔양이 방문해 리뷰한 한식 맛집."
-      }
-    ]
-  },
-  {
-    id: "jjy-148",
-    name: "모던샤브하우스 GFC점",
-    category: "샤브샤브",
-    address: "서울 강남구 테헤란로 152",
-    phone: "02-569-8330",
-    lat: 37.5000337904805,
-    lng: 127.036511000074,
-    kakaoUrl: "http://place.map.kakao.com/1484187628",
-    naverUrl: "https://map.naver.com/p/search/%EB%AA%A8%EB%8D%98%EC%83%A4%EB%B8%8C%ED%95%98%EC%9A%B0%EC%8A%A4%20GFC%EC%A0%90%20%EC%84%9C%EC%9A%B8%20%EA%B0%95%EB%82%A8%EA%B5%AC%20%ED%85%8C%ED%97%A4%EB%9E%80%EB%A1%9C%20152",
-    rating: 4.7,
-    reviewCount: 28,
-    photoUrl: "https://lh3.googleusercontent.com/place-photos/AG9NLjBlDJkojk5Kj2LbYV7e09rjYZ3gVhpcT1NPcnVWLz6patdfcxrNYltypYFFZ_uTEswQCwNAQc4VQFalqR7oHLsebxUisz5bJcxGs6lylxph-j7lu0yU5Lr9Wl30YK4eUDkHFZULpD2XY0Z0nSrFpLLs=s4800-w800",
     youtubers: [
       {
         name: "쯔양",
@@ -3138,72 +1394,6 @@ const CURATED_FOOD = [
     ]
   },
   {
-    id: "jjy-153",
-    name: "무공돈까스 동탄호수공원점",
-    category: "무공돈까스",
-    address: "경기 화성시 동탄구 동탄대로 182",
-    phone: "031-377-3513",
-    lat: 37.17075857107155,
-    lng: 127.10725998859576,
-    kakaoUrl: "http://place.map.kakao.com/119302602",
-    naverUrl: "https://map.naver.com/p/search/%EB%AC%B4%EA%B3%B5%EB%8F%88%EA%B9%8C%EC%8A%A4%20%EB%8F%99%ED%83%84%ED%98%B8%EC%88%98%EA%B3%B5%EC%9B%90%EC%A0%90%20%EA%B2%BD%EA%B8%B0%20%ED%99%94%EC%84%B1%EC%8B%9C%20%EB%8F%99%ED%83%84%EA%B5%AC%20%EB%8F%99%ED%83%84%EB%8C%80%EB%A1%9C%20182",
-    rating: 4.2,
-    reviewCount: 28,
-    photoUrl: "https://lh3.googleusercontent.com/place-photos/AG9NLjBvwocz0BmyUiCG15GUKXSBQ87WPdodg8XVdm4xAb7QyhBwbLMAGdhU51fUZTepc6cSkD8q4qdCAIWB-TAQLYYp3_D3S-xb43yarWwsWcl6WNib7XyIRMOqFP6if4L7GgllW29vaNt7jB2MTQ=s4800-w800",
-    youtubers: [
-      {
-        name: "쯔양",
-        videoTitle: null,
-        videoUrl: null,
-        recommendNote: "쯔양이 방문해 리뷰한 돈까스·회 전문점."
-      }
-    ]
-  },
-  {
-    id: "jjy-154",
-    name: "무궁화어묵",
-    category: "분식",
-    address: "서울 마포구 망원로 82",
-    phone: "02-6396-6588",
-    lat: 37.55741463210853,
-    lng: 126.90585767267815,
-    kakaoUrl: "http://place.map.kakao.com/747666847",
-    naverUrl: "https://map.naver.com/p/search/%EB%AC%B4%EA%B6%81%ED%99%94%EC%96%B4%EB%AC%B5%20%EC%84%9C%EC%9A%B8%20%EB%A7%88%ED%8F%AC%EA%B5%AC%20%EB%A7%9D%EC%9B%90%EB%A1%9C%2082",
-    rating: 4.2,
-    reviewCount: 21,
-    photoUrl: "https://lh3.googleusercontent.com/place-photos/AG9NLjAbZFWDU4gQxgWAZBR7deHypKjPkwhIF8yIBYyurfhV8I1L8xaYwUBNUpWMxW40XvcN7_Z6khqa3kxMsp6Pn6yGYnfguXl-Mw-m9NpgK5Ao296r9FfP_Yh1yIkgRlbHixVoZ0myJ1N2B-NB9W0=s4800-w800",
-    youtubers: [
-      {
-        name: "쯔양",
-        videoTitle: null,
-        videoUrl: null,
-        recommendNote: "쯔양이 방문해 리뷰한 분식 맛집."
-      }
-    ]
-  },
-  {
-    id: "jjy-155",
-    name: "문경전통시장 상차림2호점",
-    category: "한식",
-    address: "경북 문경시 문경읍 문희로 41-15",
-    phone: "054-572-5555",
-    lat: 36.735585569247135,
-    lng: 128.10739929207085,
-    kakaoUrl: "http://place.map.kakao.com/1722921495",
-    naverUrl: "https://map.naver.com/p/search/%EB%AC%B8%EA%B2%BD%EC%A0%84%ED%86%B5%EC%8B%9C%EC%9E%A5%20%EC%83%81%EC%B0%A8%EB%A6%BC2%ED%98%B8%EC%A0%90%20%EA%B2%BD%EB%B6%81%20%EB%AC%B8%EA%B2%BD%EC%8B%9C%20%EB%AC%B8%EA%B2%BD%EC%9D%8D%20%EB%AC%B8%ED%9D%AC%EB%A1%9C%2041-15",
-    rating: 3.6,
-    reviewCount: 94,
-    photoUrl: null,
-    youtubers: [
-      {
-        name: "쯔양",
-        videoTitle: null,
-        videoUrl: null,
-        recommendNote: "쯔양이 방문해 리뷰한 맛집."
-      }
-    ]
-  },
-  {
     id: "jjy-156",
     name: "문배동육칼 본점",
     category: "칼국수",
@@ -3228,28 +1418,6 @@ const CURATED_FOOD = [
         videoTitle: null,
         videoUrl: null,
         recommendNote: "육개장에 칼국수를 더한 독자적인 메뉴로 소개됐다."
-      }
-    ]
-  },
-  {
-    id: "jjy-157",
-    name: "뮌헨호프",
-    category: "호프,요리주점",
-    address: "서울 중구 을지로14길 30",
-    phone: "02-2273-2288",
-    lat: 37.564897729978,
-    lng: 126.991997632865,
-    kakaoUrl: "http://place.map.kakao.com/1626559942",
-    naverUrl: "https://map.naver.com/p/search/%EB%AE%8C%ED%97%A8%ED%98%B8%ED%94%84%20%EC%84%9C%EC%9A%B8%20%EC%A4%91%EA%B5%AC%20%EC%9D%84%EC%A7%80%EB%A1%9C14%EA%B8%B8%2030",
-    rating: 3.8,
-    reviewCount: 1131,
-    photoUrl: "https://lh3.googleusercontent.com/place-photos/AG9NLjDGjYhmiPPveE2Jy61OJkwcsbp_5KT7J8Vv76Dcyh2R5qFJ3glHy0gMroFOBFkzawfjHdTrd-41S_4rSNkXc3u6EofO-LAzlxjyoA1nEkx_1e5w5JdfCOYhxvf0HcRbqAVtMN27lHGJL5Li7eU=s4800-w800",
-    youtubers: [
-      {
-        name: "쯔양",
-        videoTitle: "맥주 몇병 먹었을까..?🤔 을지로 골뱅이가 유명한 핫플 뮌헨호프 먹방",
-        videoUrl: "https://www.youtube.com/watch?v=LnpoLJ1PLFM",
-        recommendNote: "쯔양이 방문해 리뷰한 야식 맛집."
       }
     ]
   },
@@ -3386,94 +1554,6 @@ const CURATED_FOOD = [
     ]
   },
   {
-    id: "jjy-164",
-    name: "미타 우동 본점",
-    category: "돈까스,우동",
-    address: "서울 송파구 송파대로49길 31",
-    phone: "02-422-5212",
-    lat: 37.506657031667274,
-    lng: 127.10141645379939,
-    kakaoUrl: "http://place.map.kakao.com/1897956251",
-    naverUrl: "https://map.naver.com/p/search/%EB%AF%B8%ED%83%80%20%EC%9A%B0%EB%8F%99%20%EB%B3%B8%EC%A0%90%20%EC%84%9C%EC%9A%B8%20%EC%86%A1%ED%8C%8C%EA%B5%AC%20%EC%86%A1%ED%8C%8C%EB%8C%80%EB%A1%9C49%EA%B8%B8%2031",
-    rating: 4.7,
-    reviewCount: 10,
-    photoUrl: "https://lh3.googleusercontent.com/place-photos/AG9NLjARUKQyHf1xKXg9nElE9AZEj8grOEv6p5-VkZjwpMWcWkC7EyU14nRPhyyom8ADXXLxPQ8yzYxoc8B0BcmWDvJtEdS912otGJZvGRF_1f-B6pNPGssMziUGfXvzmyeg-qvPN8FGbVLIrdJ4eAKENRrP_Q=s4800-w773",
-    youtubers: [
-      {
-        name: "쯔양",
-        videoTitle: null,
-        videoUrl: null,
-        recommendNote: "쯔양이 방문해 리뷰한 돈까스·회 전문점."
-      }
-    ]
-  },
-  {
-    id: "jjy-165",
-    name: "민기남씨네조점용솥뚜껑닭매운탕",
-    category: "닭요리",
-    address: "경기 가평군 설악면 유명로 654-57",
-    phone: "031-585-3386",
-    lat: 37.603445247239655,
-    lng: 127.49559928210124,
-    kakaoUrl: "http://place.map.kakao.com/11298129",
-    naverUrl: "https://map.naver.com/p/search/%EB%AF%BC%EA%B8%B0%EB%82%A8%EC%94%A8%EB%84%A4%EC%A1%B0%EC%A0%90%EC%9A%A9%EC%86%A5%EB%9A%9C%EA%BB%91%EB%8B%AD%EB%A7%A4%EC%9A%B4%ED%83%95%20%EA%B2%BD%EA%B8%B0%20%EA%B0%80%ED%8F%89%EA%B5%B0%20%EC%84%A4%EC%95%85%EB%A9%B4%20%EC%9C%A0%EB%AA%85%EB%A1%9C%20654-57",
-    rating: 3.5,
-    reviewCount: 274,
-    photoUrl: "https://lh3.googleusercontent.com/place-photos/AG9NLjB4WNBkHHLv6-bkKbJj76LjCnSvQk6joo5C0I_lm5Fpa7IebG2ee7TbiBQetTytvHLyNBkS_xWPvha7FZgDYrTtV5aWEFko0d-VmOqgL_FgrPQEwA7lVRF_CtjGVWMWIUfEMq2IK7SUMxeCnb0=s4800-w800",
-    youtubers: [
-      {
-        name: "쯔양",
-        videoTitle: null,
-        videoUrl: null,
-        recommendNote: "쯔양이 방문해 리뷰한 찜·탕 맛집."
-      }
-    ]
-  },
-  {
-    id: "jjy-166",
-    name: "태안맛집 바다꽃게장",
-    category: "게,대게",
-    address: "충남 태안군 태안읍 능샘1길 45",
-    phone: "041-674-5197",
-    lat: 36.7546210370327,
-    lng: 126.29395584287,
-    kakaoUrl: "http://place.map.kakao.com/10406311",
-    naverUrl: "https://map.naver.com/p/search/%ED%83%9C%EC%95%88%EB%A7%9B%EC%A7%91%20%EB%B0%94%EB%8B%A4%EA%BD%83%EA%B2%8C%EC%9E%A5%20%EC%B6%A9%EB%82%A8%20%ED%83%9C%EC%95%88%EA%B5%B0%20%ED%83%9C%EC%95%88%EC%9D%8D%20%EB%8A%A5%EC%83%981%EA%B8%B8%2045",
-    rating: null,
-    reviewCount: null,
-    photoUrl: null,
-    youtubers: [
-      {
-        name: "쯔양",
-        videoTitle: null,
-        videoUrl: null,
-        recommendNote: "쯔양이 방문해 리뷰한 한식 맛집."
-      }
-    ]
-  },
-  {
-    id: "jjy-167",
-    name: "바다회상 잠실점",
-    category: "회",
-    address: "서울 송파구 오금로 62",
-    phone: "02-2240-3101",
-    lat: 37.516413128502414,
-    lng: 127.10550177114722,
-    kakaoUrl: "http://place.map.kakao.com/343205408",
-    naverUrl: "https://map.naver.com/p/search/%EB%B0%94%EB%8B%A4%ED%9A%8C%EC%83%81%20%EC%9E%A0%EC%8B%A4%EC%A0%90%20%EC%84%9C%EC%9A%B8%20%EC%86%A1%ED%8C%8C%EA%B5%AC%20%EC%98%A4%EA%B8%88%EB%A1%9C%2062",
-    rating: 4,
-    reviewCount: 21,
-    photoUrl: "https://lh3.googleusercontent.com/place-photos/AG9NLjAQyRo7682t7oCIUEzKBU9NVCux1xuctw5fv8fEvElbF9bkSqK_TrUVVOL10k3a6F_r8l3FKWgNoJwApj3uKcFimhfXrlUUJYk8QDY8wfJ6yQ71TSoARIS_rwT3Q24YoZ3QOawzzDVk4tsGvai7J-O3bg=s4800-w800",
-    youtubers: [
-      {
-        name: "쯔양",
-        videoTitle: null,
-        videoUrl: null,
-        recommendNote: "쯔양이 방문해 리뷰한 한식 맛집."
-      }
-    ]
-  },
-  {
     id: "jjy-168",
     name: "바담칼국수",
     category: "칼국수",
@@ -3606,28 +1686,6 @@ const CURATED_FOOD = [
     ]
   },
   {
-    id: "jjy-174",
-    name: "번네식당",
-    category: "해물,생선",
-    address: "제주특별자치도 서귀포시 안덕면 일주서로 1606-10",
-    phone: "064-792-1006",
-    lat: 33.25595515827839,
-    lng: 126.34533521196033,
-    kakaoUrl: "http://place.map.kakao.com/26884184",
-    naverUrl: "https://map.naver.com/p/search/%EB%B2%88%EB%84%A4%EC%8B%9D%EB%8B%B9%20%EC%A0%9C%EC%A3%BC%ED%8A%B9%EB%B3%84%EC%9E%90%EC%B9%98%EB%8F%84%20%EC%84%9C%EA%B7%80%ED%8F%AC%EC%8B%9C%20%EC%95%88%EB%8D%95%EB%A9%B4%20%EC%9D%BC%EC%A3%BC%EC%84%9C%EB%A1%9C%201606-10",
-    rating: 3.9,
-    reviewCount: 296,
-    photoUrl: "https://lh3.googleusercontent.com/place-photos/AG9NLjA9_Si1JnnjR_op1Jam7ysFUZcMydnvNcZILDHYa322fO77E92Xh9PSpvIyf-zq6RNkdbVHSpUsD-j8ya1EsZ_8eLdrvPYZim7SA666pKl60iSYXVQc9Q43iHVqBg52nwcm8pEkRTyn_MiU-x4=s4800-w800",
-    youtubers: [
-      {
-        name: "쯔양",
-        videoTitle: null,
-        videoUrl: null,
-        recommendNote: "쯔양이 방문해 리뷰한 한식 맛집."
-      }
-    ]
-  },
-  {
     id: "jjy-175",
     name: "보글이생태탕왕코다리 양재역점",
     category: "해물,생선",
@@ -3646,72 +1704,6 @@ const CURATED_FOOD = [
         videoTitle: null,
         videoUrl: null,
         recommendNote: "쯔양이 방문해 리뷰한 찜·탕 맛집."
-      }
-    ]
-  },
-  {
-    id: "jjy-176",
-    name: "보슬보슬 압구정본점",
-    category: "분식",
-    address: "서울 강남구 압구정로 216",
-    phone: "02-515-1245",
-    lat: 37.52794391845586,
-    lng: 127.03116780884831,
-    kakaoUrl: "http://place.map.kakao.com/620066371",
-    naverUrl: "https://map.naver.com/p/search/%EB%B3%B4%EC%8A%AC%EB%B3%B4%EC%8A%AC%20%EC%95%95%EA%B5%AC%EC%A0%95%EB%B3%B8%EC%A0%90%20%EC%84%9C%EC%9A%B8%20%EA%B0%95%EB%82%A8%EA%B5%AC%20%EC%95%95%EA%B5%AC%EC%A0%95%EB%A1%9C%20216",
-    rating: 4.5,
-    reviewCount: 69,
-    photoUrl: "https://lh3.googleusercontent.com/place-photos/AG9NLjDtTNB7wH-o4JcFHlbDW6Dkm13i0aN0VMBlBnjmOyXBkThNFxhezbWccof85o0TaeaZSoBqLKDK3HB8Hb18300wuQd5rap7JitaNrj723Wv9kA3K4_fFi6Dm7jpqCifLALL66OawvHL3sKMYsA=s4800-w800",
-    youtubers: [
-      {
-        name: "쯔양",
-        videoTitle: null,
-        videoUrl: null,
-        recommendNote: "쯔양이 방문해 리뷰한 분식 맛집."
-      }
-    ]
-  },
-  {
-    id: "jjy-177",
-    name: "복성루",
-    category: "중국요리",
-    address: "전북특별자치도 군산시 월명로 382",
-    phone: "063-445-8412",
-    lat: 35.9782404415897,
-    lng: 126.715733366869,
-    kakaoUrl: "http://place.map.kakao.com/10379033",
-    naverUrl: "https://map.naver.com/p/search/%EB%B3%B5%EC%84%B1%EB%A3%A8%20%EC%A0%84%EB%B6%81%ED%8A%B9%EB%B3%84%EC%9E%90%EC%B9%98%EB%8F%84%20%EA%B5%B0%EC%82%B0%EC%8B%9C%20%EC%9B%94%EB%AA%85%EB%A1%9C%20382",
-    rating: 3.8,
-    reviewCount: 2580,
-    photoUrl: "https://lh3.googleusercontent.com/place-photos/AG9NLjD1_3gZg6-8EyFqEwcBiDISj-3BZepxLZa5GsRTqlIccXgfawzjvBoWLvGl-PsanXGalzWwyXaCcEHyDnI7nYqgxb1ob8A1Q24zwxj0XTg4FD8oPuJePkNXyDMifHq1k_2apnsKTb6asZg9xLYAqYccnw=s4800-w800",
-    youtubers: [
-      {
-        name: "쯔양",
-        videoTitle: null,
-        videoUrl: null,
-        recommendNote: "쯔양이 방문해 리뷰한 중식 맛집."
-      }
-    ]
-  },
-  {
-    id: "jjy-178",
-    name: "복성원",
-    category: "중국요리",
-    address: "강원특별자치도 춘천시 춘천로 195",
-    phone: "033-251-3125",
-    lat: 37.8770011569824,
-    lng: 127.735625421593,
-    kakaoUrl: "http://place.map.kakao.com/10379849",
-    naverUrl: "https://map.naver.com/p/search/%EB%B3%B5%EC%84%B1%EC%9B%90%20%EA%B0%95%EC%9B%90%ED%8A%B9%EB%B3%84%EC%9E%90%EC%B9%98%EB%8F%84%20%EC%B6%98%EC%B2%9C%EC%8B%9C%20%EC%B6%98%EC%B2%9C%EB%A1%9C%20195",
-    rating: 3.8,
-    reviewCount: 87,
-    photoUrl: "https://lh3.googleusercontent.com/place-photos/AG9NLjCGCsW3ObFoRB-D35zMVcongz3kjIRFjFzxbnrTbKvWXnDrR-EYaJfcFswS4RO9ZoASprwCGZtlCjRflINvs84_c-ytu9SiABEhncWRmxxRWxdwP1mCCFEKhG5iVA7ZjYIaxm5uNcby7Gg7zw=s4800-w800",
-    youtubers: [
-      {
-        name: "쯔양",
-        videoTitle: null,
-        videoUrl: null,
-        recommendNote: "쯔양이 방문해 리뷰한 중식 맛집."
       }
     ]
   },
@@ -3760,50 +1752,6 @@ const CURATED_FOOD = [
     ]
   },
   {
-    id: "jjy-181",
-    name: "본때 곡성점",
-    category: "감자탕",
-    address: "전남광주통합특별시 곡성군 곡성읍 군청로 49",
-    phone: "061-363-4242",
-    lat: 35.28165972405916,
-    lng: 127.29087858263979,
-    kakaoUrl: "http://place.map.kakao.com/11909225",
-    naverUrl: "https://map.naver.com/p/search/%EB%B3%B8%EB%95%8C%20%EA%B3%A1%EC%84%B1%EC%A0%90%20%EC%A0%84%EB%82%A8%EA%B4%91%EC%A3%BC%ED%86%B5%ED%95%A9%ED%8A%B9%EB%B3%84%EC%8B%9C%20%EA%B3%A1%EC%84%B1%EA%B5%B0%20%EA%B3%A1%EC%84%B1%EC%9D%8D%20%EA%B5%B0%EC%B2%AD%EB%A1%9C%2049",
-    rating: 3.8,
-    reviewCount: 4,
-    photoUrl: "https://lh3.googleusercontent.com/place-photos/AG9NLjCv9hAYDtcOHZfcbo76HGH3-2BTpviX31oMn-uMNx1BDZvlvOLgMigXz5yyUoXqN9OB6fwQ_KQfe1nQiZ4vq5z8A3A7H9DshAeFiHmN0RbddbiUkUI4EikZWDgzTH6xjXSMWfJcYUDFA-I9tIY=s4800-w800",
-    youtubers: [
-      {
-        name: "쯔양",
-        videoTitle: null,
-        videoUrl: null,
-        recommendNote: "쯔양이 방문해 리뷰한 찜·탕 맛집."
-      }
-    ]
-  },
-  {
-    id: "jjy-182",
-    name: "봉화숯불왕갈비",
-    category: "갈비",
-    address: "경북 봉화군 봉화읍 내성로1길 75",
-    phone: "054-673-1999",
-    lat: 36.89243118637831,
-    lng: 128.73980107399208,
-    kakaoUrl: "http://place.map.kakao.com/1572329399",
-    naverUrl: "https://map.naver.com/p/search/%EB%B4%89%ED%99%94%EC%88%AF%EB%B6%88%EC%99%95%EA%B0%88%EB%B9%84%20%EA%B2%BD%EB%B6%81%20%EB%B4%89%ED%99%94%EA%B5%B0%20%EB%B4%89%ED%99%94%EC%9D%8D%20%EB%82%B4%EC%84%B1%EB%A1%9C1%EA%B8%B8%2075",
-    rating: null,
-    reviewCount: null,
-    photoUrl: null,
-    youtubers: [
-      {
-        name: "쯔양",
-        videoTitle: null,
-        videoUrl: null,
-        recommendNote: "쯔양이 방문해 리뷰한 고기 맛집."
-      }
-    ]
-  },
-  {
     id: "jjy-183",
     name: "봉황부대찌개 본점",
     category: "찌개,전골",
@@ -3848,50 +1796,6 @@ const CURATED_FOOD = [
     ]
   },
   {
-    id: "jjy-185",
-    name: "부산진오뎅",
-    category: "오뎅바",
-    address: "서울 강동구 동남로75길 13-7",
-    phone: "02-442-2588",
-    lat: 37.5539313347855,
-    lng: 127.155537737174,
-    kakaoUrl: "http://place.map.kakao.com/12150208",
-    naverUrl: "https://map.naver.com/p/search/%EB%B6%80%EC%82%B0%EC%A7%84%EC%98%A4%EB%8E%85%20%EC%84%9C%EC%9A%B8%20%EA%B0%95%EB%8F%99%EA%B5%AC%20%EB%8F%99%EB%82%A8%EB%A1%9C75%EA%B8%B8%2013-7",
-    rating: 4.1,
-    reviewCount: 25,
-    photoUrl: "https://lh3.googleusercontent.com/place-photos/AG9NLjAmoBw4G7bjknm3_Lk9IY9726PyjbyIh-phgyIGX55MBQtvWIP-yGlV_UP1Bcl1yS9C9kL9mXaXunQh-3ivPjZEG4QuRFyY_tLeZ78dR1tepl5Wo86TNkON3hyG8BEwXdiYDkxU7ICFQjcasQ=s4800-w800",
-    youtubers: [
-      {
-        name: "쯔양",
-        videoTitle: "가게에 어묵 전부 털기👊🏻 명일동 부산진오뎅 먹방",
-        videoUrl: "https://www.youtube.com/watch?v=uoVQb2OXhzM",
-        recommendNote: "쯔양이 방문해 리뷰한 분식 맛집."
-      }
-    ]
-  },
-  {
-    id: "jjy-186",
-    name: "부추소곱창",
-    category: "곱창,막창",
-    address: "서울 동대문구 왕산로43길 16",
-    phone: "010-4736-9897",
-    lat: 37.5837459869045,
-    lng: 127.048184806812,
-    kakaoUrl: "http://place.map.kakao.com/350312322",
-    naverUrl: "https://map.naver.com/p/search/%EB%B6%80%EC%B6%94%EC%86%8C%EA%B3%B1%EC%B0%BD%20%EC%84%9C%EC%9A%B8%20%EB%8F%99%EB%8C%80%EB%AC%B8%EA%B5%AC%20%EC%99%95%EC%82%B0%EB%A1%9C43%EA%B8%B8%2016",
-    rating: 4.6,
-    reviewCount: 7,
-    photoUrl: "https://lh3.googleusercontent.com/place-photos/AG9NLjAch2rOAMbq4WQL_ohLrNq_iLJcxssjsp4SfLSdeEwADGb_WdYqG41S64o6YSVNgR9HvpzC0uqF7oxY8U_QlnFOJWUZDUf4AYaTbULOUaYrroK6g3aHR6rR3vqqM2mlfjW_xL0WxkACkCB2474=s4800-w800",
-    youtubers: [
-      {
-        name: "쯔양",
-        videoTitle: null,
-        videoUrl: null,
-        recommendNote: "쯔양이 방문해 리뷰한 고기 맛집."
-      }
-    ]
-  },
-  {
     id: "jjy-187",
     name: "빈해원",
     category: "중국요리",
@@ -3905,12 +1809,6 @@ const CURATED_FOOD = [
     reviewCount: 2619,
     photoUrl: "https://lh3.googleusercontent.com/place-photos/AG9NLjA85hEwUPo3D0XOy7LWBzzgYS82wy6XweUDdI5S05dnUtPjf41bm9F7dQu8NaYCNyU6YEWimli04cNKVQcVSSVVEKqmB-4B5xhY6bNgsvWsQZ0ABhc4MHYqYPtYQCC_KGty_GhObr8d1iVp-dM=s4800-w800",
     youtubers: [
-      {
-        name: "쯔양",
-        videoTitle: null,
-        videoUrl: null,
-        recommendNote: "쯔양이 방문해 리뷰한 중식 맛집."
-      },
       {
         name: "맛있는 녀석들",
         videoTitle: null,
@@ -3942,116 +1840,6 @@ const CURATED_FOOD = [
     ]
   },
   {
-    id: "jjy-190",
-    name: "빨간부산오뎅",
-    category: "분식",
-    address: "서울 송파구 백제고분로48길 36",
-    phone: "02-6439-5050",
-    lat: 37.5103927830355,
-    lng: 127.11681965612,
-    kakaoUrl: "http://place.map.kakao.com/1827236569",
-    naverUrl: "https://map.naver.com/p/search/%EB%B9%A8%EA%B0%84%EB%B6%80%EC%82%B0%EC%98%A4%EB%8E%85%20%EC%84%9C%EC%9A%B8%20%EC%86%A1%ED%8C%8C%EA%B5%AC%20%EB%B0%B1%EC%A0%9C%EA%B3%A0%EB%B6%84%EB%A1%9C48%EA%B8%B8%2036",
-    rating: 4.1,
-    reviewCount: 18,
-    photoUrl: "https://lh3.googleusercontent.com/place-photos/AG9NLjD9EaMQ1rbJyQ_GFOh1s0kumUGXyloE0GE5-GKe7JvP7WmauHQ3rmAa97f_B9dZOyh6fP_85M_H7hJXiG2JqShVOJc5aBnkF31xV5ljVtrL4zctJqvBtE8VQbvpL1mJIbFdOyySx1lRxTdlFQ=s4800-w800",
-    youtubers: [
-      {
-        name: "쯔양",
-        videoTitle: null,
-        videoUrl: null,
-        recommendNote: "쯔양이 방문해 리뷰한 분식 맛집."
-      }
-    ]
-  },
-  {
-    id: "jjy-191",
-    name: "빽찐라면",
-    category: "분식",
-    address: "서울 동작구 상도로 295",
-    phone: "02-6397-4186",
-    lat: 37.5014477452177,
-    lng: 126.949552009383,
-    kakaoUrl: "http://place.map.kakao.com/1606118061",
-    naverUrl: "https://map.naver.com/p/search/%EB%B9%BD%EC%B0%90%EB%9D%BC%EB%A9%B4%20%EC%84%9C%EC%9A%B8%20%EB%8F%99%EC%9E%91%EA%B5%AC%20%EC%83%81%EB%8F%84%EB%A1%9C%20295",
-    rating: 4.3,
-    reviewCount: 63,
-    photoUrl: "https://lh3.googleusercontent.com/place-photos/AG9NLjCGNAOo7vrgKLwxIIG7xLyesDoEpwHithnNRyILmy3yECVuJyMcCahmdXYHTpv_tG-x5IuZJ25muwB3pzhgsplzhqVoqmaeOXMs9j48mHUkvLTSFpCjt1DQIuNLBUkQy-fqBW_xAFnnAMU29rQ=s4800-w800",
-    youtubers: [
-      {
-        name: "쯔양",
-        videoTitle: "사장님이 달라지셨어요(?)😳 백종원의골목식당 상도동 빽찐라면 전메뉴 먹방",
-        videoUrl: "https://www.youtube.com/watch?v=Td-nXxKGqT0",
-        recommendNote: "쯔양이 방문해 리뷰한 분식 맛집."
-      }
-    ]
-  },
-  {
-    id: "jjy-192",
-    name: "뻘하우스",
-    category: "조개",
-    address: "서울 중구 다산로47길 15",
-    phone: "02-2231-7292",
-    lat: 37.5665314424681,
-    lng: 127.015099562759,
-    kakaoUrl: "http://place.map.kakao.com/19162981",
-    naverUrl: "https://map.naver.com/p/search/%EB%BB%98%ED%95%98%EC%9A%B0%EC%8A%A4%20%EC%84%9C%EC%9A%B8%20%EC%A4%91%EA%B5%AC%20%EB%8B%A4%EC%82%B0%EB%A1%9C47%EA%B8%B8%2015",
-    rating: 4.3,
-    reviewCount: 88,
-    photoUrl: "https://lh3.googleusercontent.com/place-photos/AG9NLjCMpXUL5XhSeD2WGYkbJ2O04FlLrVBpFc_P2nUwTea5n3MvcQ5EDdI8-0gBBUhimR1d-o9Fia6XtODQw7IBoWHtDt8W7k2pljNn5z-24VdfxkMlHJfFKcotQcjfIWcuThWRbVDTtCW46oryHAQYCv5ojg=s4800-w800",
-    youtubers: [
-      {
-        name: "쯔양",
-        videoTitle: null,
-        videoUrl: null,
-        recommendNote: "쯔양이 방문해 리뷰한 찜·탕 맛집."
-      }
-    ]
-  },
-  {
-    id: "jjy-193",
-    name: "뽕사부 약수역점",
-    category: "중국요리",
-    address: "서울 중구 동호로 186-3",
-    phone: "02-2253-8882",
-    lat: 37.5547432358249,
-    lng: 127.011181422642,
-    kakaoUrl: "http://place.map.kakao.com/2038295536",
-    naverUrl: "https://map.naver.com/p/search/%EB%BD%95%EC%82%AC%EB%B6%80%20%EC%95%BD%EC%88%98%EC%97%AD%EC%A0%90%20%EC%84%9C%EC%9A%B8%20%EC%A4%91%EA%B5%AC%20%EB%8F%99%ED%98%B8%EB%A1%9C%20186-3",
-    rating: 3.8,
-    reviewCount: 28,
-    photoUrl: "https://lh3.googleusercontent.com/place-photos/AG9NLjB--B52xdLj31Ci9HoSMa9pVcfAC5_2Ypk9r2zyDjPXBYA5w2qiMdMs8ppgxRuUm7xH23pRWZ5rnpl2j5Xe4sCrXuQtj-2PPO9ubOi5nztD3Q61hQO7rVSDYsUY3c8TrBxBn59NmpKgnVtyUmU=s4800-w800",
-    youtubers: [
-      {
-        name: "쯔양",
-        videoTitle: null,
-        videoUrl: null,
-        recommendNote: "쯔양이 방문해 리뷰한 중식 맛집."
-      }
-    ]
-  },
-  {
-    id: "jjy-194",
-    name: "사리원면옥 본점",
-    category: "냉면",
-    address: "대전 중구 중교로 62",
-    phone: "042-256-6506",
-    lat: 36.3261520899609,
-    lng: 127.426540617167,
-    kakaoUrl: "http://place.map.kakao.com/25049472",
-    naverUrl: "https://map.naver.com/p/search/%EC%82%AC%EB%A6%AC%EC%9B%90%EB%A9%B4%EC%98%A5%20%EB%B3%B8%EC%A0%90%20%EB%8C%80%EC%A0%84%20%EC%A4%91%EA%B5%AC%20%EC%A4%91%EA%B5%90%EB%A1%9C%2062",
-    rating: 3.5,
-    reviewCount: 1357,
-    photoUrl: "https://lh3.googleusercontent.com/place-photos/AG9NLjBGHmu9ypn51dDX4v7qFDM2FRfu0B4vTeCAKQZvajSrBp9MWicJVLqElgrta40HKV9PAUmwIRKrvb_63xesLN-7-9lnTjzX3_bcRZAMU_SaE6cAm_sozrMVCrFumG_KbSpi8bL0IOegI7AcJPs=s4800-w800",
-    youtubers: [
-      {
-        name: "쯔양",
-        videoTitle: null,
-        videoUrl: null,
-        recommendNote: "쯔양이 방문해 리뷰한 한식 맛집."
-      }
-    ]
-  },
-  {
     id: "jjy-195",
     name: "산골닭갈비",
     category: "닭요리",
@@ -4070,28 +1858,6 @@ const CURATED_FOOD = [
         videoTitle: null,
         videoUrl: null,
         recommendNote: "쯔양이 방문해 리뷰한 한식 맛집."
-      }
-    ]
-  },
-  {
-    id: "jjy-196",
-    name: "산쪼메 이수점",
-    category: "일본식라면",
-    address: "서울 동작구 사당로 300",
-    phone: "070-4110-1534",
-    lat: 37.4844278377431,
-    lng: 126.980294832277,
-    kakaoUrl: "http://place.map.kakao.com/526361801",
-    naverUrl: "https://map.naver.com/p/search/%EC%82%B0%EC%AA%BC%EB%A9%94%20%EC%9D%B4%EC%88%98%EC%A0%90%20%EC%84%9C%EC%9A%B8%20%EB%8F%99%EC%9E%91%EA%B5%AC%20%EC%82%AC%EB%8B%B9%EB%A1%9C%20300",
-    rating: 4.1,
-    reviewCount: 70,
-    photoUrl: "https://lh3.googleusercontent.com/place-photos/AG9NLjAZIV1GQS3iKwi4GpQEJm73Og9JOG800dUjELQsMQEnDYB7NIrIDpfV4GWvEKT5zUXm8vExl8X_nOboYkMn3sag1X6yVz9vVtveOY_8edRB8V-WViHZYZLB1SuZNGWK8ohZDRbXRtnxKKTFiw=s4800-w800",
-    youtubers: [
-      {
-        name: "쯔양",
-        videoTitle: null,
-        videoUrl: null,
-        recommendNote: "쯔양이 방문해 리뷰한 아시안 맛집."
       }
     ]
   },
@@ -4140,72 +1906,6 @@ const CURATED_FOOD = [
     ]
   },
   {
-    id: "jjy-199",
-    name: "삼삼이네생고기 성수점",
-    category: "육류,고기",
-    address: "서울 성동구 성덕정길 122",
-    phone: "02-461-0946",
-    lat: 37.53664068433047,
-    lng: 127.0569277381386,
-    kakaoUrl: "http://place.map.kakao.com/9809733",
-    naverUrl: "https://map.naver.com/p/search/%EC%82%BC%EC%82%BC%EC%9D%B4%EB%84%A4%EC%83%9D%EA%B3%A0%EA%B8%B0%20%EC%84%B1%EC%88%98%EC%A0%90%20%EC%84%9C%EC%9A%B8%20%EC%84%B1%EB%8F%99%EA%B5%AC%20%EC%84%B1%EB%8D%95%EC%A0%95%EA%B8%B8%20122",
-    rating: 3.8,
-    reviewCount: 6,
-    photoUrl: "https://lh3.googleusercontent.com/place-photos/AG9NLjBeXuEw1_V1LIkIMZSbU1KnAo4BNJ0vy4DPPkJxGtJWjNRsxQOz6gxfp9Hb3sfSsYrArgHmKfmvXchlnt06aipJlZ3U92na3PPb-5-Zb_oHcSJQa77e06Y7U6-epTjgNFJ6DGYgqsPg7h95IhoO1UUHzw=s4800-w800",
-    youtubers: [
-      {
-        name: "쯔양",
-        videoTitle: null,
-        videoUrl: null,
-        recommendNote: "쯔양이 방문해 리뷰한 고기 맛집."
-      }
-    ]
-  },
-  {
-    id: "jjy-200",
-    name: "삼성갈미조개",
-    category: "조개",
-    address: "부산 강서구 르노삼성대로 602",
-    phone: "051-271-0722",
-    lat: 35.1015547859128,
-    lng: 128.929184376214,
-    kakaoUrl: "http://place.map.kakao.com/21843973",
-    naverUrl: "https://map.naver.com/p/search/%EC%82%BC%EC%84%B1%EA%B0%88%EB%AF%B8%EC%A1%B0%EA%B0%9C%20%EB%B6%80%EC%82%B0%20%EA%B0%95%EC%84%9C%EA%B5%AC%20%EB%A5%B4%EB%85%B8%EC%82%BC%EC%84%B1%EB%8C%80%EB%A1%9C%20602",
-    rating: 4.1,
-    reviewCount: 47,
-    photoUrl: "https://lh3.googleusercontent.com/place-photos/AG9NLjDg-O8Nu5jSJOH0kmX-ED_UlXE6sUVevE7mHevlW_arlFfErqMb0H3crTWFmUVMPNrgoZj_bGCTLrYhu8ihjfpSAla-gXmVOUnl9kBsyVrdiuX9xBUzuz6Gwy5gqvxm57h9cLboH7X-e6K3hzZ1o2oM=s4800-w800",
-    youtubers: [
-      {
-        name: "쯔양",
-        videoTitle: null,
-        videoUrl: null,
-        recommendNote: "쯔양이 방문해 리뷰한 한식 맛집."
-      }
-    ]
-  },
-  {
-    id: "jjy-201",
-    name: "삼정본가식당",
-    category: "한식",
-    address: "경북 울릉군 울릉읍 울릉순환로 212-8",
-    phone: "054-791-5870",
-    lat: 37.49264522193613,
-    lng: 130.90985864284113,
-    kakaoUrl: "http://place.map.kakao.com/24159571",
-    naverUrl: "https://map.naver.com/p/search/%EC%82%BC%EC%A0%95%EB%B3%B8%EA%B0%80%EC%8B%9D%EB%8B%B9%20%EA%B2%BD%EB%B6%81%20%EC%9A%B8%EB%A6%89%EA%B5%B0%20%EC%9A%B8%EB%A6%89%EC%9D%8D%20%EC%9A%B8%EB%A6%89%EC%88%9C%ED%99%98%EB%A1%9C%20212-8",
-    rating: 4,
-    reviewCount: 74,
-    photoUrl: "https://lh3.googleusercontent.com/place-photos/AG9NLjAOoJ4tNEv-NHpl46C1fUazev3a9JGrNT88qvDhI9BH_vVQVX-11koOd_0n5ApyJD5F38SSXDd-Bwsuq-BP_tsbi7awq-qG2lWqPoGZAhePXuceDMDx2gL6RzQfIqejEPUmuuNgGgQRO6Z6hhA=s4800-w800",
-    youtubers: [
-      {
-        name: "쯔양",
-        videoTitle: null,
-        videoUrl: null,
-        recommendNote: "쯔양이 방문해 리뷰한 한식 맛집."
-      }
-    ]
-  },
-  {
     id: "jjy-202",
     name: "삼화만두 본점",
     category: "분식",
@@ -4224,72 +1924,6 @@ const CURATED_FOOD = [
         videoTitle: null,
         videoUrl: null,
         recommendNote: "쯔양이 방문해 리뷰한 분식 맛집."
-      }
-    ]
-  },
-  {
-    id: "jjy-203",
-    name: "상국이네",
-    category: "분식",
-    address: "부산 해운대구 구남로41번길 40-1",
-    phone: "051-742-9001",
-    lat: 35.162016169133,
-    lng: 129.16287693095907,
-    kakaoUrl: "http://place.map.kakao.com/9089301",
-    naverUrl: "https://map.naver.com/p/search/%EC%83%81%EA%B5%AD%EC%9D%B4%EB%84%A4%20%EB%B6%80%EC%82%B0%20%ED%95%B4%EC%9A%B4%EB%8C%80%EA%B5%AC%20%EA%B5%AC%EB%82%A8%EB%A1%9C41%EB%B2%88%EA%B8%B8%2040-1",
-    rating: 3.4,
-    reviewCount: 1996,
-    photoUrl: "https://lh3.googleusercontent.com/place-photos/AG9NLjCb1MDQvVkTHx2Qly7eAJlMZjsKQAKk6cyR3scvyz1pdxg7a4fayOsk3WMKZBzfTpLAXBxmfgnUZbaHOyG-6a-dn3w90RtW1TgVIIi0NZTqQrvJeivSHQf2el3Y4b4bU1I0tEgOr3YVNfOsDA=s4800-w800",
-    youtubers: [
-      {
-        name: "쯔양",
-        videoTitle: null,
-        videoUrl: null,
-        recommendNote: "쯔양이 방문해 리뷰한 분식 맛집."
-      }
-    ]
-  },
-  {
-    id: "jjy-204",
-    name: "상록식육식당",
-    category: "육류,고기",
-    address: "경북 울릉군 서면 남양4길 25",
-    phone: "054-791-5005",
-    lat: 37.46742539801962,
-    lng: 130.83763528709693,
-    kakaoUrl: "http://place.map.kakao.com/12614097",
-    naverUrl: "https://map.naver.com/p/search/%EC%83%81%EB%A1%9D%EC%8B%9D%EC%9C%A1%EC%8B%9D%EB%8B%B9%20%EA%B2%BD%EB%B6%81%20%EC%9A%B8%EB%A6%89%EA%B5%B0%20%EC%84%9C%EB%A9%B4%20%EB%82%A8%EC%96%914%EA%B8%B8%2025",
-    rating: 4.2,
-    reviewCount: 18,
-    photoUrl: "https://lh3.googleusercontent.com/place-photos/AG9NLjB8ssn8NZHxOrzTpLqdoLparE_NSHA3DjMkpHCSEjiy7UqQdGkObBeX49FY8Mb4VRPHwapEa5le3t9sSkHLxEkkrFVJhcmttaU--HgGHDXs458M1npF3W_YMjxVZIorEW_o8xc2w9gz2EcLDw=s4800-w800",
-    youtubers: [
-      {
-        name: "쯔양",
-        videoTitle: null,
-        videoUrl: null,
-        recommendNote: "쯔양이 방문해 리뷰한 고기 맛집."
-      }
-    ]
-  },
-  {
-    id: "jjy-205",
-    name: "새집",
-    category: "한정식",
-    address: "전북특별자치도 순창군 순창읍 순창6길 5-1",
-    phone: "063-653-2271",
-    lat: 35.3731622853721,
-    lng: 127.143111459668,
-    kakaoUrl: "http://place.map.kakao.com/8361352",
-    naverUrl: "https://map.naver.com/p/search/%EC%83%88%EC%A7%91%20%EC%A0%84%EB%B6%81%ED%8A%B9%EB%B3%84%EC%9E%90%EC%B9%98%EB%8F%84%20%EC%88%9C%EC%B0%BD%EA%B5%B0%20%EC%88%9C%EC%B0%BD%EC%9D%8D%20%EC%88%9C%EC%B0%BD6%EA%B8%B8%205-1",
-    rating: 3.4,
-    reviewCount: 425,
-    photoUrl: "https://lh3.googleusercontent.com/place-photos/AG9NLjAIAuPHOHp3qprWsnxC9PDrjaZY3NkMCKvb4fEOtyOC9hULaFfVFk1C9cUQrgViPEuscnmVcd2-1NyaHXZLa2qlLKe4AmuakXOH2kLb2VYBaDqx69fkjXENqSETamkqeFxcnCyaAU6CS3pdsg=s4800-w800",
-    youtubers: [
-      {
-        name: "쯔양",
-        videoTitle: null,
-        videoUrl: null,
-        recommendNote: "쯔양이 방문해 리뷰한 한식 맛집."
       }
     ]
   },
@@ -4316,182 +1950,6 @@ const CURATED_FOOD = [
     ]
   },
   {
-    id: "jjy-207",
-    name: "서울떡볶이",
-    category: "떡볶이",
-    address: "제주특별자치도 제주시 동문로4길 11",
-    phone: "064-726-9266",
-    lat: 33.5122953202419,
-    lng: 126.527834618103,
-    kakaoUrl: "http://place.map.kakao.com/12582103",
-    naverUrl: "https://map.naver.com/p/search/%EC%84%9C%EC%9A%B8%EB%96%A1%EB%B3%B6%EC%9D%B4%20%EC%A0%9C%EC%A3%BC%ED%8A%B9%EB%B3%84%EC%9E%90%EC%B9%98%EB%8F%84%20%EC%A0%9C%EC%A3%BC%EC%8B%9C%20%EB%8F%99%EB%AC%B8%EB%A1%9C4%EA%B8%B8%2011",
-    rating: 2.5,
-    reviewCount: 214,
-    photoUrl: "https://lh3.googleusercontent.com/place-photos/AG9NLjDP_Q62LQjXwgBWqp1I92EcprLo2nQ6cF0LXtJSvb4klZCuQhCivuJau3YuvMWffdF53qzU7MCgLgUToWpgWnQ6J43O__87AD_L68BKUzmNRc2aubLyk2Lo5-KUWIhAzkEa3X3MxrfKzyQYwA=s4800-w800",
-    youtubers: [
-      {
-        name: "쯔양",
-        videoTitle: null,
-        videoUrl: null,
-        recommendNote: "쯔양이 방문해 리뷰한 분식 맛집."
-      }
-    ]
-  },
-  {
-    id: "jjy-208",
-    name: "서울쭈꾸미",
-    category: "해물,생선",
-    address: "서울 서초구 신반포로47길 33-5",
-    phone: "02-516-1134",
-    lat: 37.511942896413515,
-    lng: 127.01893761179306,
-    kakaoUrl: "http://place.map.kakao.com/12659868",
-    naverUrl: "https://map.naver.com/p/search/%EC%84%9C%EC%9A%B8%EC%AD%88%EA%BE%B8%EB%AF%B8%20%EC%84%9C%EC%9A%B8%20%EC%84%9C%EC%B4%88%EA%B5%AC%20%EC%8B%A0%EB%B0%98%ED%8F%AC%EB%A1%9C47%EA%B8%B8%2033-5",
-    rating: 4.3,
-    reviewCount: 39,
-    photoUrl: "https://lh3.googleusercontent.com/place-photos/AG9NLjDd6bD_k6o5VOrqBY5NLS-C_XLLXZIDWxJfg1aZzwEk5o8z04wi5pn_FlwFShqKcbDo4EY675b96UdNjjt69QQLr_KFSLDD5rbZCs94RcyBq7gvMdhUwlHT1hGG6MtvIqd9AzZpv9419Y0Wkw=s4800-w800",
-    youtubers: [
-      {
-        name: "쯔양",
-        videoTitle: "🔥눈물나게 매운 쭈꾸미🔥먹다가 포기했습니다.. 영동시장 서울쭈꾸미 매운맛 1.2.3단계 먹방",
-        videoUrl: "https://www.youtube.com/watch?v=N4nuqaAs79g",
-        recommendNote: "쯔양이 방문해 리뷰한 한식 맛집."
-      }
-    ]
-  },
-  {
-    id: "jjy-209",
-    name: "서유기짬뽕",
-    category: "중국요리",
-    address: "충남 당진시 신평면 삽교천3길 60",
-    phone: "041-363-2017",
-    lat: 36.89146638897112,
-    lng: 126.82234301604028,
-    kakaoUrl: "http://place.map.kakao.com/1598787020",
-    naverUrl: "https://map.naver.com/p/search/%EC%84%9C%EC%9C%A0%EA%B8%B0%EC%A7%AC%EB%BD%95%20%EC%B6%A9%EB%82%A8%20%EB%8B%B9%EC%A7%84%EC%8B%9C%20%EC%8B%A0%ED%8F%89%EB%A9%B4%20%EC%82%BD%EA%B5%90%EC%B2%9C3%EA%B8%B8%2060",
-    rating: 3.9,
-    reviewCount: 327,
-    photoUrl: "https://lh3.googleusercontent.com/place-photos/AG9NLjDi4xBagx2f4vsoCyJvpfnxa9-QBCaTzfWRhQCOzVz3j5O8IsHo1MRbzBLasBLQQB29unXMjAyZmT1LPDkFT1bctUwnZ_NHIRYUqtk3ga6tfs52nqFH5pIkv-ZUevf3kl8aGKjAO1sVkrpS=s4800-w800",
-    youtubers: [
-      {
-        name: "쯔양",
-        videoTitle: null,
-        videoUrl: null,
-        recommendNote: "쯔양이 방문해 리뷰한 중식 맛집."
-      }
-    ]
-  },
-  {
-    id: "jjy-210",
-    name: "서종대왕낙지 서종본점",
-    category: "해물,생선",
-    address: "경기 양평군 서종면 사랑제길 8",
-    phone: "031-772-8293",
-    lat: 37.5966619684621,
-    lng: 127.35292128996,
-    kakaoUrl: "http://place.map.kakao.com/1548676412",
-    naverUrl: "https://map.naver.com/p/search/%EC%84%9C%EC%A2%85%EB%8C%80%EC%99%95%EB%82%99%EC%A7%80%20%EC%84%9C%EC%A2%85%EB%B3%B8%EC%A0%90%20%EA%B2%BD%EA%B8%B0%20%EC%96%91%ED%8F%89%EA%B5%B0%20%EC%84%9C%EC%A2%85%EB%A9%B4%20%EC%82%AC%EB%9E%91%EC%A0%9C%EA%B8%B8%208",
-    rating: 3.7,
-    reviewCount: 20,
-    photoUrl: "https://lh3.googleusercontent.com/place-photos/AG9NLjCsUKETO1etNMs0M-o_zkdQOITPACiicZngFBFTDoXvTFepq8xHmRte41oY6c4E9Gc-yh44_ArL8jpG2DOgCHsOV7YMi79iYa-yr_01mnF3ZoDhzUNNAla5xREMfWYhQOhmQ4PnH7CjrjKoH3BqmyW4DQ=s4800-w800",
-    youtubers: [
-      {
-        name: "쯔양",
-        videoTitle: null,
-        videoUrl: null,
-        recommendNote: "쯔양이 방문해 리뷰한 한식 맛집."
-      }
-    ]
-  },
-  {
-    id: "jjy-211",
-    name: "석곡돼지한마리",
-    category: "육류,고기",
-    address: "전남광주통합특별시 곡성군 석곡면 석곡2길 13",
-    phone: "061-362-3077",
-    lat: 35.130200847711976,
-    lng: 127.25475998527646,
-    kakaoUrl: "http://place.map.kakao.com/8952970",
-    naverUrl: "https://map.naver.com/p/search/%EC%84%9D%EA%B3%A1%EB%8F%BC%EC%A7%80%ED%95%9C%EB%A7%88%EB%A6%AC%20%EC%A0%84%EB%82%A8%EA%B4%91%EC%A3%BC%ED%86%B5%ED%95%A9%ED%8A%B9%EB%B3%84%EC%8B%9C%20%EA%B3%A1%EC%84%B1%EA%B5%B0%20%EC%84%9D%EA%B3%A1%EB%A9%B4%20%EC%84%9D%EA%B3%A12%EA%B8%B8%2013",
-    rating: 3.7,
-    reviewCount: 42,
-    photoUrl: "https://lh3.googleusercontent.com/place-photos/AG9NLjBrV9uXI2FDmzZSOvQ0zzqYbnhjh4SnZQYWMzEt0vxcHfigPQk6t0snLQCPUHwR0AAKT9CChXcgKAvfw3uJGciRnJmXN5LSmwbIf2HWXPFRNtKZ9wrVr2aH9XI55uiVBVJ5tB_FFEQUNGztwdkXbWsSGA=s4800-w800",
-    youtubers: [
-      {
-        name: "쯔양",
-        videoTitle: "곡성 120년 전통 석쇠구이? 14인분만 먹방",
-        videoUrl: "https://www.youtube.com/watch?v=hryirOKFk38",
-        recommendNote: "쯔양이 방문해 리뷰한 고기 맛집."
-      }
-    ]
-  },
-  {
-    id: "jjy-212",
-    name: "선희식육식당",
-    category: "육류,고기",
-    address: "전남광주통합특별시 목포시 비파로 145",
-    phone: "061-283-2334",
-    lat: 34.809883892795,
-    lng: 126.420876802296,
-    kakaoUrl: "http://place.map.kakao.com/168909374",
-    naverUrl: "https://map.naver.com/p/search/%EC%84%A0%ED%9D%AC%EC%8B%9D%EC%9C%A1%EC%8B%9D%EB%8B%B9%20%EC%A0%84%EB%82%A8%EA%B4%91%EC%A3%BC%ED%86%B5%ED%95%A9%ED%8A%B9%EB%B3%84%EC%8B%9C%20%EB%AA%A9%ED%8F%AC%EC%8B%9C%20%EB%B9%84%ED%8C%8C%EB%A1%9C%20145",
-    rating: 4.4,
-    reviewCount: 55,
-    photoUrl: "https://lh3.googleusercontent.com/place-photos/AG9NLjDPGG1LAgQkl6RjWRjS_kuH36tJYL1Ewd9jbfidczwBpzC65_vzZ19wb1vdZ1e-Pd1q9F54NnlMFn8yt7okxTfxyZgEbjq4IP5GPzL0by6i0wChzF5bDSbWjb9XAZ4nJ4mbb5QcUFKTF4n71FhKDxdt=s4800-w773",
-    youtubers: [
-      {
-        name: "쯔양",
-        videoTitle: "목포1탄) 한입 먹자마자 인생맛집이 됐습니다🥺 목포 현지인도 줄서는 선희식육식당 생고기 삼겹살 먹방",
-        videoUrl: "https://www.youtube.com/watch?v=uNq8gRAzMYc",
-        recommendNote: "쯔양이 방문해 리뷰한 한식 맛집."
-      }
-    ]
-  },
-  {
-    id: "jjy-213",
-    name: "성북동돼지갈비 본점",
-    category: "갈비",
-    address: "서울 성북구 성북로 115",
-    phone: "02-764-2420",
-    lat: 37.593288257663986,
-    lng: 126.99607316143037,
-    kakaoUrl: "http://place.map.kakao.com/10479275",
-    naverUrl: "https://map.naver.com/p/search/%EC%84%B1%EB%B6%81%EB%8F%99%EB%8F%BC%EC%A7%80%EA%B0%88%EB%B9%84%20%EB%B3%B8%EC%A0%90%20%EC%84%9C%EC%9A%B8%20%EC%84%B1%EB%B6%81%EA%B5%AC%20%EC%84%B1%EB%B6%81%EB%A1%9C%20115",
-    rating: 3.7,
-    reviewCount: 993,
-    photoUrl: "https://lh3.googleusercontent.com/place-photos/AG9NLjD_Sz3RdDIOhpNRL72nMaWSIhTqkbwoxY2ZmbbszsurMuxoanBAtuisJJFQ_YzGm7B9uh10bayI2l0JIZm3QCVKO3wYJjLLnxZeRBDLTYyqwDt-n5gKuSs-JIBP9YKk8Nj4JNeQEB_B3NzvO4T394GUAA=s4800-w800",
-    youtubers: [
-      {
-        name: "쯔양",
-        videoTitle: null,
-        videoUrl: null,
-        recommendNote: "쯔양이 방문해 리뷰한 고기 맛집."
-      }
-    ]
-  },
-  {
-    id: "jjy-214",
-    name: "성수국밥",
-    category: "국밥",
-    address: "전남광주통합특별시 순천시 북문길 40",
-    phone: "061-752-5258",
-    lat: 34.9588941473201,
-    lng: 127.484957568513,
-    kakaoUrl: "http://place.map.kakao.com/15409073",
-    naverUrl: "https://map.naver.com/p/search/%EC%84%B1%EC%88%98%EA%B5%AD%EB%B0%A5%20%EC%A0%84%EB%82%A8%EA%B4%91%EC%A3%BC%ED%86%B5%ED%95%A9%ED%8A%B9%EB%B3%84%EC%8B%9C%20%EC%88%9C%EC%B2%9C%EC%8B%9C%20%EB%B6%81%EB%AC%B8%EA%B8%B8%2040",
-    rating: 5,
-    reviewCount: 2,
-    photoUrl: "https://lh3.googleusercontent.com/place-photos/AG9NLjCe8h464vjIb-lCv6LghhV_P2yb-OGux6FrJCZ0SCit2ezwEQW8DB_Y2T_XfWo-d3vqCH9PzlwLs_n0ZNXfoSvkRc-DKFdjTggoEvmQsmdp1ehNClE5NN8cOPW0xWlp7fbp5bv7odAPSakZgJvsNPlpZw=s4800-w800",
-    youtubers: [
-      {
-        name: "쯔양",
-        videoTitle: null,
-        videoUrl: null,
-        recommendNote: "쯔양이 방문해 리뷰한 한식 맛집."
-      }
-    ]
-  },
-  {
     id: "jjy-215",
     name: "성수족발",
     category: "족발,보쌈",
@@ -4510,94 +1968,6 @@ const CURATED_FOOD = [
         videoTitle: "성수 배달지옥🔥 유명한 성수맛집 싹다 배달시켰습니다. 성수족발 감자탕 떡볶이와 마라곤약젤리 먹방",
         videoUrl: "https://www.youtube.com/watch?v=HbJCszPqy_I",
         recommendNote: "쯔양이 방문해 리뷰한 족발·보쌈 맛집."
-      }
-    ]
-  },
-  {
-    id: "jjy-216",
-    name: "성이네천원김밥",
-    category: "한식",
-    address: "서울 중랑구 중랑역로 150",
-    phone: "02-976-5648",
-    lat: 37.606690600278895,
-    lng: 127.07710690494243,
-    kakaoUrl: "http://place.map.kakao.com/698990184",
-    naverUrl: "https://map.naver.com/p/search/%EC%84%B1%EC%9D%B4%EB%84%A4%EC%B2%9C%EC%9B%90%EA%B9%80%EB%B0%A5%20%EC%84%9C%EC%9A%B8%20%EC%A4%91%EB%9E%91%EA%B5%AC%20%EC%A4%91%EB%9E%91%EC%97%AD%EB%A1%9C%20150",
-    rating: 5,
-    reviewCount: 6,
-    photoUrl: "https://lh3.googleusercontent.com/place-photos/AG9NLjBQY--gJBmNuiRZDqJRNRmS0YKGRCAyORY-OWvVzHGt6DXLd0RxtOqvMT5SMCES4VtKpgh2zEPobbmJdMUlTDLnZlMMRKfkCFO6enGXuZ30VfKHTAVpBN-GLlPL8ZS_ry-v8O33SzMmRfiI9sArhzvkHw=s4800-w800",
-    youtubers: [
-      {
-        name: "쯔양",
-        videoTitle: null,
-        videoUrl: null,
-        recommendNote: "쯔양이 방문해 리뷰한 분식 맛집."
-      }
-    ]
-  },
-  {
-    id: "jjy-217",
-    name: "세광식당",
-    category: "국밥",
-    address: "전남광주통합특별시 순천시 북문길 40",
-    phone: "061-752-4895",
-    lat: 34.9589120870312,
-    lng: 127.484979571629,
-    kakaoUrl: "http://place.map.kakao.com/10564559",
-    naverUrl: "https://map.naver.com/p/search/%EC%84%B8%EA%B4%91%EC%8B%9D%EB%8B%B9%20%EC%A0%84%EB%82%A8%EA%B4%91%EC%A3%BC%ED%86%B5%ED%95%A9%ED%8A%B9%EB%B3%84%EC%8B%9C%20%EC%88%9C%EC%B2%9C%EC%8B%9C%20%EB%B6%81%EB%AC%B8%EA%B8%B8%2040",
-    rating: 5,
-    reviewCount: 2,
-    photoUrl: "https://lh3.googleusercontent.com/place-photos/AG9NLjCjguaIg3K_H7I-ECJeyH6b1hgoFiIC9Nxq6cNh-66_BYopO6Cx8vSgN200-0_4GgorbOEZnfv1DIqTV0sM0vRKpkP7QraPjqnGG0glIY7cejP2rheVciftvS1LuDfXOPPv4lR4I5uoZ3ZlNA=s4800-w800",
-    youtubers: [
-      {
-        name: "쯔양",
-        videoTitle: null,
-        videoUrl: null,
-        recommendNote: "쯔양이 방문해 리뷰한 한식 맛집."
-      }
-    ]
-  },
-  {
-    id: "jjy-218",
-    name: "세광양대창 강남역중앙점",
-    category: "세광양대창",
-    address: "서울 강남구 강남대로94길 14",
-    phone: "02-555-5717",
-    lat: 37.49928814234142,
-    lng: 127.02857182130006,
-    kakaoUrl: "http://place.map.kakao.com/2121791662",
-    naverUrl: "https://map.naver.com/p/search/%EC%84%B8%EA%B4%91%EC%96%91%EB%8C%80%EC%B0%BD%20%EA%B0%95%EB%82%A8%EC%97%AD%EC%A4%91%EC%95%99%EC%A0%90%20%EC%84%9C%EC%9A%B8%20%EA%B0%95%EB%82%A8%EA%B5%AC%20%EA%B0%95%EB%82%A8%EB%8C%80%EB%A1%9C94%EA%B8%B8%2014",
-    rating: 4.3,
-    reviewCount: 42,
-    photoUrl: "https://lh3.googleusercontent.com/place-photos/AG9NLjCkNjokl5Wu9wcsBxQiDzL4bB9h87Q6g7VMYD32PvnBU7OITc8gLChuWiZmupHTA4IczKtRA3Jli7VWH3PhM04wrrFYzlJYWAn0kGL0dSmJvQ2UF-Oju22zm6VFvWJ4f7jCyLidlG3EjYHhgzwl43-QMg=s4800-w800",
-    youtubers: [
-      {
-        name: "쯔양",
-        videoTitle: null,
-        videoUrl: null,
-        recommendNote: "쯔양이 방문해 리뷰한 고기 맛집."
-      }
-    ]
-  },
-  {
-    id: "jjy-219",
-    name: "세븐일레븐 종로재동점",
-    category: "세븐일레븐",
-    address: "서울 종로구 북촌로5길 4",
-    phone: "02-3672-8991",
-    lat: 37.57955619880447,
-    lng: 126.9846940296201,
-    kakaoUrl: "http://place.map.kakao.com/799869189",
-    naverUrl: "https://map.naver.com/p/search/%EC%84%B8%EB%B8%90%EC%9D%BC%EB%A0%88%EB%B8%90%20%EC%A2%85%EB%A1%9C%EC%9E%AC%EB%8F%99%EC%A0%90%20%EC%84%9C%EC%9A%B8%20%EC%A2%85%EB%A1%9C%EA%B5%AC%20%EB%B6%81%EC%B4%8C%EB%A1%9C5%EA%B8%B8%204",
-    rating: 3.8,
-    reviewCount: 21,
-    photoUrl: "https://lh3.googleusercontent.com/place-photos/AG9NLjAQJeqb3g5o252vQJyvmo_nLhGisL1BeDhMwElegcHfDmeuiYGnz8n8B_AYn1P2Gbmfo4958N800vWE6GteJ-Z7gp5o-ya7HtfXDOc416dxbceUQpkejuJcmkcYrWW7ymEOcuGagqxUAGycrQ=s4800-w800",
-    youtubers: [
-      {
-        name: "쯔양",
-        videoTitle: null,
-        videoUrl: null,
-        recommendNote: "쯔양이 방문해 리뷰한 한식 맛집."
       }
     ]
   },
@@ -4674,116 +2044,6 @@ const CURATED_FOOD = [
     ]
   },
   {
-    id: "jjy-223",
-    name: "소문난칼국수",
-    category: "칼국수",
-    address: "경기 이천시 설봉로58번길 30",
-    phone: "031-635-6102",
-    lat: 37.2811375395329,
-    lng: 127.439916869696,
-    kakaoUrl: "http://place.map.kakao.com/10563611",
-    naverUrl: "https://map.naver.com/p/search/%EC%86%8C%EB%AC%B8%EB%82%9C%EC%B9%BC%EA%B5%AD%EC%88%98%20%EA%B2%BD%EA%B8%B0%20%EC%9D%B4%EC%B2%9C%EC%8B%9C%20%EC%84%A4%EB%B4%89%EB%A1%9C58%EB%B2%88%EA%B8%B8%2030",
-    rating: 3.6,
-    reviewCount: 228,
-    photoUrl: "https://lh3.googleusercontent.com/place-photos/AG9NLjAlM89yKP4N8e8ow8pW1BEl4KzTZwhkReeFwcx2LdCpqBEYdNdpRPty2h1DaKnXwNnUaMEwbfB0I1RRweRmz1rsmzIssF5SD__cN2CPa3f1rK49HPvTCV_26T3ED5RmDFPxoaURL9MgJc8IgTM=s4800-w800",
-    youtubers: [
-      {
-        name: "쯔양",
-        videoTitle: null,
-        videoUrl: null,
-        recommendNote: "쯔양이 방문해 리뷰한 한식 맛집."
-      }
-    ]
-  },
-  {
-    id: "jjy-224",
-    name: "소소라면닭꼬치",
-    category: "분식",
-    address: "서울 용산구 한강대로 268-1",
-    phone: "0503-7153-3483",
-    lat: 37.54225284973914,
-    lng: 126.9730581729797,
-    kakaoUrl: "http://place.map.kakao.com/18513961",
-    naverUrl: "https://map.naver.com/p/search/%EC%86%8C%EC%86%8C%EB%9D%BC%EB%A9%B4%EB%8B%AD%EA%BC%AC%EC%B9%98%20%EC%84%9C%EC%9A%B8%20%EC%9A%A9%EC%82%B0%EA%B5%AC%20%ED%95%9C%EA%B0%95%EB%8C%80%EB%A1%9C%20268-1",
-    rating: 3.9,
-    reviewCount: 41,
-    photoUrl: "https://lh3.googleusercontent.com/place-photos/AG9NLjBWvrjXxDZmkBcJ-JABEVir_gol_ZB2n5kIRlHulE9syC2uRmaqKghqASweiMvJTQuq359urWqqPqWE9kkDaUHDrQiDyxKwwcPA8KBKxHiYHLzoOPOw3poJ3tEs5tsbdXlm8nPYKoGPzoCAT9zrj06LBA=s4800-w800",
-    youtubers: [
-      {
-        name: "쯔양",
-        videoTitle: null,
-        videoUrl: null,
-        recommendNote: "쯔양이 방문해 리뷰한 분식 맛집."
-      }
-    ]
-  },
-  {
-    id: "jjy-225",
-    name: "속편한짬뽕",
-    category: "중국요리",
-    address: "서울 서대문구 통일로 143",
-    phone: "02-365-5560",
-    lat: 37.5671002806222,
-    lng: 126.96509190026,
-    kakaoUrl: "http://place.map.kakao.com/1159889320",
-    naverUrl: "https://map.naver.com/p/search/%EC%86%8D%ED%8E%B8%ED%95%9C%EC%A7%AC%EB%BD%95%20%EC%84%9C%EC%9A%B8%20%EC%84%9C%EB%8C%80%EB%AC%B8%EA%B5%AC%20%ED%86%B5%EC%9D%BC%EB%A1%9C%20143",
-    rating: 4.4,
-    reviewCount: 18,
-    photoUrl: "https://lh3.googleusercontent.com/place-photos/AG9NLjDCd6iYn4VieLKY9O5Pyvt8ChdU1IDNXCFiZoi_YjFLy_KVkjUpb0xml7MfRN23NtuINJa9X6NCQm8b5cYD3TKsBqyLINP6WAvuzWLw3yrgkeo5NpZAsOu2Vip-RtFBgH40SPqwLTrrRuZxUjnWfaToRA=s4800-w800",
-    youtubers: [
-      {
-        name: "쯔양",
-        videoTitle: "5그릇 다먹으면 짬뽕 100그릇?!😳 평생무료권도 받았습니다 짬뽕 도전먹방",
-        videoUrl: "https://www.youtube.com/watch?v=7nW5xNfUjUo",
-        recommendNote: "쯔양이 방문해 리뷰한 중식 맛집."
-      }
-    ]
-  },
-  {
-    id: "jjy-226",
-    name: "솔밭뽈살하얀살전문",
-    category: "육류,고기",
-    address: "서울 은평구 갈현로 62",
-    phone: "02-388-5937",
-    lat: 37.60337704480158,
-    lng: 126.91053006318089,
-    kakaoUrl: "http://place.map.kakao.com/12502472",
-    naverUrl: "https://map.naver.com/p/search/%EC%86%94%EB%B0%AD%EB%BD%88%EC%82%B4%ED%95%98%EC%96%80%EC%82%B4%EC%A0%84%EB%AC%B8%20%EC%84%9C%EC%9A%B8%20%EC%9D%80%ED%8F%89%EA%B5%AC%20%EA%B0%88%ED%98%84%EB%A1%9C%2062",
-    rating: null,
-    reviewCount: null,
-    photoUrl: null,
-    youtubers: [
-      {
-        name: "쯔양",
-        videoTitle: null,
-        videoUrl: null,
-        recommendNote: "쯔양이 방문해 리뷰한 고기 맛집."
-      }
-    ]
-  },
-  {
-    id: "jjy-227",
-    name: "송산칼국수집",
-    category: "칼국수",
-    address: "경기 화성시 만세구 송산면 사강리 630-2",
-    phone: "031-357-8381",
-    lat: 37.2145158955764,
-    lng: 126.736025059172,
-    kakaoUrl: "http://place.map.kakao.com/548498659",
-    naverUrl: "https://map.naver.com/p/search/%EC%86%A1%EC%82%B0%EC%B9%BC%EA%B5%AD%EC%88%98%EC%A7%91%20%EA%B2%BD%EA%B8%B0%20%ED%99%94%EC%84%B1%EC%8B%9C%20%EB%A7%8C%EC%84%B8%EA%B5%AC%20%EC%86%A1%EC%82%B0%EB%A9%B4%20%EC%82%AC%EA%B0%95%EB%A6%AC%20630-2",
-    rating: 4.3,
-    reviewCount: 4,
-    photoUrl: "https://lh3.googleusercontent.com/place-photos/AG9NLjDwHD8AVfR6LRdJyNeNc0xLKi64bU_3qMSUEuhmaQ67nCSp5G6hvGBAItjfC7XNAlUPqRyvEWqlWngMc5EO5bYwV-2YUImJcCDGRiyQP4wQTrMh3sBaf87ELeEODjUxX2nAGCV6A4wHymz6zZ3o5JpQ=s4800-w800",
-    youtubers: [
-      {
-        name: "쯔양",
-        videoTitle: null,
-        videoUrl: null,
-        recommendNote: "쯔양이 방문해 리뷰한 한식 맛집."
-      }
-    ]
-  },
-  {
     id: "jjy-228",
     name: "송옥",
     category: "국수",
@@ -4823,28 +2083,6 @@ const CURATED_FOOD = [
         name: "쯔양",
         videoTitle: "미국에서 오자마자 백반집으로 달려갔습니다🥹동대문시장 불꼬지백반 맛집 송정식당 먹방",
         videoUrl: "https://www.youtube.com/watch?v=sYxpwthA4qo",
-        recommendNote: "쯔양이 방문해 리뷰한 한식 맛집."
-      }
-    ]
-  },
-  {
-    id: "jjy-230",
-    name: "송주불냉면&수제왕돈까스 안양본점",
-    category: "냉면",
-    address: "경기 안양시 만안구 안양로257번길 14",
-    phone: "031-468-9298",
-    lat: 37.3954814249834,
-    lng: 126.923025282115,
-    kakaoUrl: "http://place.map.kakao.com/17174682",
-    naverUrl: "https://map.naver.com/p/search/%EC%86%A1%EC%A3%BC%EB%B6%88%EB%83%89%EB%A9%B4%26%EC%88%98%EC%A0%9C%EC%99%95%EB%8F%88%EA%B9%8C%EC%8A%A4%20%EC%95%88%EC%96%91%EB%B3%B8%EC%A0%90%20%EA%B2%BD%EA%B8%B0%20%EC%95%88%EC%96%91%EC%8B%9C%20%EB%A7%8C%EC%95%88%EA%B5%AC%20%EC%95%88%EC%96%91%EB%A1%9C257%EB%B2%88%EA%B8%B8%2014",
-    rating: 3.8,
-    reviewCount: 216,
-    photoUrl: "https://lh3.googleusercontent.com/place-photos/AG9NLjBcxLJ3hjpzMNV04Ig-3nfJgWnV7SGWWJiSRrk07p2yZNOhTjBbBOL8EAsSYo8RtrAVXofZ5frnT45I_Phwc-fDGj3EEif_M6hVJQx1ufze8wH37juf3fGzqEwFrJPnu0HWkqZdykJCfmIsjA=s4800-w800",
-    youtubers: [
-      {
-        name: "쯔양",
-        videoTitle: null,
-        videoUrl: null,
         recommendNote: "쯔양이 방문해 리뷰한 한식 맛집."
       }
     ]
@@ -4890,28 +2128,6 @@ const CURATED_FOOD = [
         videoTitle: null,
         videoUrl: null,
         recommendNote: "쯔양이 방문해 리뷰한 양식 맛집."
-      }
-    ]
-  },
-  {
-    id: "jjy-233",
-    name: "수조개전골",
-    category: "조개",
-    address: "대전 유성구 신성로 80",
-    phone: "042-933-0900",
-    lat: 36.3902013245865,
-    lng: 127.349337280977,
-    kakaoUrl: "http://place.map.kakao.com/266293133",
-    naverUrl: "https://map.naver.com/p/search/%EC%88%98%EC%A1%B0%EA%B0%9C%EC%A0%84%EA%B3%A8%20%EB%8C%80%EC%A0%84%20%EC%9C%A0%EC%84%B1%EA%B5%AC%20%EC%8B%A0%EC%84%B1%EB%A1%9C%2080",
-    rating: 4.9,
-    reviewCount: 24,
-    photoUrl: "https://lh3.googleusercontent.com/place-photos/AG9NLjBFz3MnrSz5tztGnzkFjtaJSnCcDb1ms-5npkkhE3fejlz4ZzC_59qQjYW71bqiEi5p0HpyIFEfHcfVrVPEsvZQKvXUSCSGQYERc0hG7XfmyukgxRnqocCsLL69IbSbeR7wevctaQhmfiXF=s4800-w800",
-    youtubers: [
-      {
-        name: "쯔양",
-        videoTitle: null,
-        videoUrl: null,
-        recommendNote: "쯔양이 방문해 리뷰한 한식 맛집."
       }
     ]
   },
@@ -5004,72 +2220,6 @@ const CURATED_FOOD = [
     ]
   },
   {
-    id: "jjy-238",
-    name: "수제비먹는닭갈비 본점",
-    category: "닭요리",
-    address: "서울 성동구 왕십리로21다길 39",
-    phone: "02-2299-8557",
-    lat: 37.55964952323087,
-    lng: 127.03323522268896,
-    kakaoUrl: "http://place.map.kakao.com/413620947",
-    naverUrl: "https://map.naver.com/p/search/%EC%88%98%EC%A0%9C%EB%B9%84%EB%A8%B9%EB%8A%94%EB%8B%AD%EA%B0%88%EB%B9%84%20%EB%B3%B8%EC%A0%90%20%EC%84%9C%EC%9A%B8%20%EC%84%B1%EB%8F%99%EA%B5%AC%20%EC%99%95%EC%8B%AD%EB%A6%AC%EB%A1%9C21%EB%8B%A4%EA%B8%B8%2039",
-    rating: 4.4,
-    reviewCount: 5,
-    photoUrl: "https://lh3.googleusercontent.com/place-photos/AG9NLjDfXUuvMTTU7x7myagjIwP5rNgdaJXgGfwDofkfPD7ftJG9VXpiMMQTJKnwLJsFt1ZhTyWYCs91HVExv9zxo8lrg1qt-V91vJ9csF3Yk-Zlkkkm1noERrlSFrnwTBaZrlPO0MK4B6dY5pv17hY=s4800-w800",
-    youtubers: [
-      {
-        name: "쯔양",
-        videoTitle: null,
-        videoUrl: null,
-        recommendNote: "쯔양이 방문해 리뷰한 한식 맛집."
-      }
-    ]
-  },
-  {
-    id: "jjy-239",
-    name: "숙성육관by해봉",
-    category: "육류,고기",
-    address: "서울 마포구 토정로37길 41",
-    phone: "02-712-9929",
-    lat: 37.5427133196459,
-    lng: 126.946710075108,
-    kakaoUrl: "http://place.map.kakao.com/2091412504",
-    naverUrl: "https://map.naver.com/p/search/%EC%88%99%EC%84%B1%EC%9C%A1%EA%B4%80by%ED%95%B4%EB%B4%89%20%EC%84%9C%EC%9A%B8%20%EB%A7%88%ED%8F%AC%EA%B5%AC%20%ED%86%A0%EC%A0%95%EB%A1%9C37%EA%B8%B8%2041",
-    rating: 4.7,
-    reviewCount: 55,
-    photoUrl: "https://lh3.googleusercontent.com/place-photos/AG9NLjDjvsnJdzJz3Ye_8t6P5U8Ldbx8LNuiiOPjE__EaoX22wbS4RVwDzY3b9cdBP3nIngqph6j0h1bRncDpbWy0RCV5_6lYTHmmqXhxgOaskfl372kkO8siQiW9qHtVAsISPy_J9TAhpeMP41s=s4800-w800",
-    youtubers: [
-      {
-        name: "쯔양",
-        videoTitle: null,
-        videoUrl: null,
-        recommendNote: "쯔양이 방문해 리뷰한 고기 맛집."
-      }
-    ]
-  },
-  {
-    id: "jjy-240",
-    name: "오마카세오사이초밥 신림점",
-    category: "초밥,롤",
-    address: "서울 관악구 남부순환로180길 6",
-    phone: "02-877-0542",
-    lat: 37.483758587443056,
-    lng: 126.93062888969713,
-    kakaoUrl: "http://place.map.kakao.com/1917598552",
-    naverUrl: "https://map.naver.com/p/search/%EC%98%A4%EB%A7%88%EC%B9%B4%EC%84%B8%EC%98%A4%EC%82%AC%EC%9D%B4%EC%B4%88%EB%B0%A5%20%EC%8B%A0%EB%A6%BC%EC%A0%90%20%EC%84%9C%EC%9A%B8%20%EA%B4%80%EC%95%85%EA%B5%AC%20%EB%82%A8%EB%B6%80%EC%88%9C%ED%99%98%EB%A1%9C180%EA%B8%B8%206",
-    rating: 4.6,
-    reviewCount: 7,
-    photoUrl: "https://lh3.googleusercontent.com/place-photos/AG9NLjAh2SVZRtnN2cDFx89mJ6mUWr8svPzAcg8psfxIfXG1gCMZ1PtZsszly-mRsfpozX2EMgHH_SGmo0wOKhEJKBAIZYlcAN4EH2GuBkygxcW89ZlLPPzppU-HWdDw_yYY438fZutx1lQoW8CH6MckRlHJYw=s4800-w800",
-    youtubers: [
-      {
-        name: "쯔양",
-        videoTitle: null,
-        videoUrl: null,
-        recommendNote: "쯔양이 방문해 리뷰한 돈까스·회 전문점."
-      }
-    ]
-  },
-  {
     id: "jjy-241",
     name: "스시로로",
     category: "초밥,롤",
@@ -5082,28 +2232,6 @@ const CURATED_FOOD = [
     rating: 4.2,
     reviewCount: 1030,
     photoUrl: "https://lh3.googleusercontent.com/place-photos/AG9NLjBc70bl03b16nq-Bb9gerXLiQf7GPhu0BXhN3O8QSUqrFJjrmLPpcaLBf5iwq9Z99vYfSmAE0T2hJcnJq8DapQGzRMU0gC3xwIpvhFpKeWlKMCqezIPSyB25oKB-LtQTzOS-P617Pg0p0mAXw=s4800-w800",
-    youtubers: [
-      {
-        name: "쯔양",
-        videoTitle: null,
-        videoUrl: null,
-        recommendNote: "쯔양이 방문해 리뷰한 돈까스·회 전문점."
-      }
-    ]
-  },
-  {
-    id: "jjy-242",
-    name: "스시선",
-    category: "초밥,롤",
-    address: "서울 도봉구 도봉로 684",
-    phone: "02-954-6777",
-    lat: 37.6653483637625,
-    lng: 127.043590568881,
-    kakaoUrl: "http://place.map.kakao.com/51661598",
-    naverUrl: "https://map.naver.com/p/search/%EC%8A%A4%EC%8B%9C%EC%84%A0%20%EC%84%9C%EC%9A%B8%20%EB%8F%84%EB%B4%89%EA%B5%AC%20%EB%8F%84%EB%B4%89%EB%A1%9C%20684",
-    rating: 3.2,
-    reviewCount: 6,
-    photoUrl: "https://lh3.googleusercontent.com/place-photos/AG9NLjBXkdq0_NcYbZ7YNPXl7QtRJqJIiyXClA2uYs24MaUIKRNxknjZQZQeYefSqcex8zUWVNgtc9FmS-ELDS-RKoKFwzZ0t79jVVn4sfXOb_tPt9b_BFCdh7jruWaMrxPkrdqgGe-0SdKaV1xsXg=s4800-w800",
     youtubers: [
       {
         name: "쯔양",
@@ -5150,126 +2278,10 @@ const CURATED_FOOD = [
     photoUrl: "https://lh3.googleusercontent.com/place-photos/AG9NLjD34g3hHtHAcrvImK2Yb0QcZFXWSD5brQ8K3P-npFK8HFNY-_EAgY5PaTEBr74SY7hGsCBrG51RRZJda-BEIzBo5v6O8OFb_PeURFLqHG1kzglAA27bWMi9xZETBF2h-4L1nKYo_Yc9lOtOquXwE5DSrQ=s4800-w800",
     youtubers: [
       {
-        name: "쯔양",
-        videoTitle: "이거 먹으려고 아침7시에 찾아갔습니다🥺 종로 숨은 골목맛집 승우네식당 백반먹방",
-        videoUrl: "https://www.youtube.com/watch?v=HyWn4MjoxXU",
-        recommendNote: "쯔양이 방문해 리뷰한 한식 맛집."
-      },
-      {
         name: "식객 허영만의 백반기행",
         videoTitle: null,
         videoUrl: null,
         recommendNote: "광장시장의 백반집으로, 누룽지밥과 청국장이 대표 메뉴로 소개됐다."
-      }
-    ]
-  },
-  {
-    id: "jjy-245",
-    name: "신가원설렁탕&제주본가",
-    category: "설렁탕",
-    address: "서울 중구 을지로3길 21",
-    phone: "02-778-8898",
-    lat: 37.56701749691807,
-    lng: 126.9815034814155,
-    kakaoUrl: "http://place.map.kakao.com/27300574",
-    naverUrl: "https://map.naver.com/p/search/%EC%8B%A0%EA%B0%80%EC%9B%90%EC%84%A4%EB%A0%81%ED%83%95%26%EC%A0%9C%EC%A3%BC%EB%B3%B8%EA%B0%80%20%EC%84%9C%EC%9A%B8%20%EC%A4%91%EA%B5%AC%20%EC%9D%84%EC%A7%80%EB%A1%9C3%EA%B8%B8%2021",
-    rating: 3.7,
-    reviewCount: 207,
-    photoUrl: "https://lh3.googleusercontent.com/place-photos/AG9NLjDukV9GZiyle81nQH48-zq8Ok9PB89SIXYvjoNje16KwXQiY-ecFExELjnyNHfhNPmMTgT_jL1LdiybFsGA5qKi4m7q2iV-ZrdHnT3VzhpFx5M532NVJb72qV6DUHoRswmWQz8l4JTq2m3xmgIluuCr7g=s4800-w800",
-    youtubers: [
-      {
-        name: "쯔양",
-        videoTitle: null,
-        videoUrl: null,
-        recommendNote: "쯔양이 방문해 리뷰한 한식 맛집."
-      }
-    ]
-  },
-  {
-    id: "jjy-246",
-    name: "신길동별난아찌짬뽕",
-    category: "중국요리",
-    address: "서울 영등포구 영등포로62길 10",
-    phone: "010-5395-1151",
-    lat: 37.515295475412124,
-    lng: 126.91651152539325,
-    kakaoUrl: "http://place.map.kakao.com/11962368",
-    naverUrl: "https://map.naver.com/p/search/%EC%8B%A0%EA%B8%B8%EB%8F%99%EB%B3%84%EB%82%9C%EC%95%84%EC%B0%8C%EC%A7%AC%EB%BD%95%20%EC%84%9C%EC%9A%B8%20%EC%98%81%EB%93%B1%ED%8F%AC%EA%B5%AC%20%EC%98%81%EB%93%B1%ED%8F%AC%EB%A1%9C62%EA%B8%B8%2010",
-    rating: 4,
-    reviewCount: 22,
-    photoUrl: "https://lh3.googleusercontent.com/place-photos/AG9NLjCkH-fJWbTIJ8bce0lhIbAT7pRiQWA1GsXIhUoDPNjzeDb3FlsDl1GY3vc6ShARs9tEv7Y71iNiSE2SpUwN8trZJa4l66A7uHnGPz9vzcbvVnVE9z3BRc413-jOiOXHyKEOppeMi75rjLVX=s4800-w800",
-    youtubers: [
-      {
-        name: "쯔양",
-        videoTitle: null,
-        videoUrl: null,
-        recommendNote: "쯔양이 방문해 리뷰한 중식 맛집."
-      }
-    ]
-  },
-  {
-    id: "jjy-248",
-    name: "신사한우곱창전문점",
-    category: "곱창,막창",
-    address: "서울 은평구 갈현로 30",
-    phone: "010-3239-2834",
-    lat: 37.6005920117778,
-    lng: 126.910434878143,
-    kakaoUrl: "http://place.map.kakao.com/27134327",
-    naverUrl: "https://map.naver.com/p/search/%EC%8B%A0%EC%82%AC%ED%95%9C%EC%9A%B0%EA%B3%B1%EC%B0%BD%EC%A0%84%EB%AC%B8%EC%A0%90%20%EC%84%9C%EC%9A%B8%20%EC%9D%80%ED%8F%89%EA%B5%AC%20%EA%B0%88%ED%98%84%EB%A1%9C%2030",
-    rating: 4.4,
-    reviewCount: 20,
-    photoUrl: "https://lh3.googleusercontent.com/place-photos/AG9NLjCjZWY19vCEpEHepgSXTf8UYGBkclxiZ5w8dIkpsuZHIgfEGh2S3MvoKTJFNkRJg9im4yYLLNNBnHdf9d1Ee07TZmFZWW9Vvb-XEqm11m6LWyGEVUekwKk-Qj92vWcoZEy1Hz_Xw_Kwro6j=s4800-w800",
-    youtubers: [
-      {
-        name: "쯔양",
-        videoTitle: null,
-        videoUrl: null,
-        recommendNote: "쯔양이 방문해 리뷰한 고기 맛집."
-      }
-    ]
-  },
-  {
-    id: "jjy-249",
-    name: "신신옥",
-    category: "분식",
-    address: "인천 제물포구 우현로49번길 7",
-    phone: "032-766-0303",
-    lat: 37.4715936054944,
-    lng: 126.627941022951,
-    kakaoUrl: "http://place.map.kakao.com/10523660",
-    naverUrl: "https://map.naver.com/p/search/%EC%8B%A0%EC%8B%A0%EC%98%A5%20%EC%9D%B8%EC%B2%9C%20%EC%A0%9C%EB%AC%BC%ED%8F%AC%EA%B5%AC%20%EC%9A%B0%ED%98%84%EB%A1%9C49%EB%B2%88%EA%B8%B8%207",
-    rating: 3.9,
-    reviewCount: 75,
-    photoUrl: "https://lh3.googleusercontent.com/place-photos/AG9NLjDxW3yB-ya9ULXzS8347d_mf5JYzsfJrGAZpiV9JdoFDy8ppR4nM3whbT9dtPh9Ok0cNRrs5RCvtbdl1tVIf8Kf-oKYYbhHrebbrwMlBfEEYXJK7wVjadvASszWMtVeuq3CURMZei452HtOYg=s4800-w800",
-    youtubers: [
-      {
-        name: "쯔양",
-        videoTitle: "사장님이 퇴근해도 되겠대요🤣 인천 1958년 개업한 신신옥 먹방",
-        videoUrl: "https://www.youtube.com/watch?v=4AlE083qq4g",
-        recommendNote: "쯔양이 방문해 리뷰한 한식 맛집."
-      }
-    ]
-  },
-  {
-    id: "jjy-250",
-    name: "큰집설농탕",
-    category: "설렁탕",
-    address: "서울 양천구 화곡로4길 9",
-    phone: "02-2605-1999",
-    lat: 37.538598155408465,
-    lng: 126.8275966297638,
-    kakaoUrl: "http://place.map.kakao.com/20623675",
-    naverUrl: "https://map.naver.com/p/search/%ED%81%B0%EC%A7%91%EC%84%A4%EB%86%8D%ED%83%95%20%EC%84%9C%EC%9A%B8%20%EC%96%91%EC%B2%9C%EA%B5%AC%20%ED%99%94%EA%B3%A1%EB%A1%9C4%EA%B8%B8%209",
-    rating: 4.8,
-    reviewCount: 30,
-    photoUrl: "https://lh3.googleusercontent.com/place-photos/AG9NLjCm_EkO2rn_wDVWTSE4-Rysqdb7fpZXW40jfQszL02yo8NkvyqRRjgploJf-IXA6tOv7ts7ve0hDIRl7WKV3YokwT6RX4IPpVqnCrE_G_I7Ll236lNwdG5K9NX4QmH_IphYQ0y1_SGk97YN=s4800-w800",
-    youtubers: [
-      {
-        name: "쯔양",
-        videoTitle: null,
-        videoUrl: null,
-        recommendNote: "쯔양이 방문해 리뷰한 찜·탕 맛집."
       }
     ]
   },
@@ -5336,28 +2348,6 @@ const CURATED_FOOD = [
         videoTitle: null,
         videoUrl: null,
         recommendNote: "쯔양이 방문해 리뷰한 한식 맛집."
-      }
-    ]
-  },
-  {
-    id: "jjy-254",
-    name: "신짬뽕",
-    category: "중국요리",
-    address: "인천 남동구 논현고잔로 148",
-    phone: "032-721-9854",
-    lat: 37.3957126433608,
-    lng: 126.714624907219,
-    kakaoUrl: "http://place.map.kakao.com/885020597",
-    naverUrl: "https://map.naver.com/p/search/%EC%8B%A0%EC%A7%AC%EB%BD%95%20%EC%9D%B8%EC%B2%9C%20%EB%82%A8%EB%8F%99%EA%B5%AC%20%EB%85%BC%ED%98%84%EA%B3%A0%EC%9E%94%EB%A1%9C%20148",
-    rating: 4.3,
-    reviewCount: 6,
-    photoUrl: "https://lh3.googleusercontent.com/place-photos/AG9NLjCuLyZnRCMYKN2eJqbLpDXu_bc6FubV_QecMTBbR5wC-W3PTiLaNGaCR9P3ppUuC73X6OugxJ156dVae05QKBDWjL63vYrhspIHxVnhsedOsYrsob76H-bAlyVfcaPMVKNIfa44uWuvwTeNY9AEm07i=s4800-w800",
-    youtubers: [
-      {
-        name: "쯔양",
-        videoTitle: null,
-        videoUrl: null,
-        recommendNote: "쯔양이 방문해 리뷰한 중식 맛집."
       }
     ]
   },
@@ -5500,28 +2490,6 @@ const CURATED_FOOD = [
     ]
   },
   {
-    id: "jjy-261",
-    name: "양포항 송파거여점",
-    category: "아구",
-    address: "서울 송파구 오금로 521",
-    phone: "02-449-1112",
-    lat: 37.4930943609571,
-    lng: 127.146725885009,
-    kakaoUrl: "http://place.map.kakao.com/2002885918",
-    naverUrl: "https://map.naver.com/p/search/%EC%96%91%ED%8F%AC%ED%95%AD%20%EC%86%A1%ED%8C%8C%EA%B1%B0%EC%97%AC%EC%A0%90%20%EC%84%9C%EC%9A%B8%20%EC%86%A1%ED%8C%8C%EA%B5%AC%20%EC%98%A4%EA%B8%88%EB%A1%9C%20521",
-    rating: null,
-    reviewCount: null,
-    photoUrl: null,
-    youtubers: [
-      {
-        name: "쯔양",
-        videoTitle: null,
-        videoUrl: null,
-        recommendNote: "쯔양이 방문해 리뷰한 한식 맛집."
-      }
-    ]
-  },
-  {
     id: "jjy-262",
     name: "어랑추생고등어묵은지전문점",
     category: "해물,생선",
@@ -5566,50 +2534,6 @@ const CURATED_FOOD = [
     ]
   },
   {
-    id: "jjy-265",
-    name: "에이스분식",
-    category: "분식",
-    address: "대전 동구 대전로785번길 50",
-    phone: "010-3415-9687",
-    lat: 36.3289719066255,
-    lng: 127.430802633342,
-    kakaoUrl: "http://place.map.kakao.com/840444376",
-    naverUrl: "https://map.naver.com/p/search/%EC%97%90%EC%9D%B4%EC%8A%A4%EB%B6%84%EC%8B%9D%20%EB%8C%80%EC%A0%84%20%EB%8F%99%EA%B5%AC%20%EB%8C%80%EC%A0%84%EB%A1%9C785%EB%B2%88%EA%B8%B8%2050",
-    rating: 3.7,
-    reviewCount: 24,
-    photoUrl: "https://lh3.googleusercontent.com/place-photos/AG9NLjDujvncopvyURX7_ffyg9jaJP-jAPcq5gmoE2lH8ONZvIcSNTon8I1diMRQ0p5lGb_xWCY3YP3LJKcEka8IalsrzGArEH5VUQFea2FXY76qGxhJY5JpuEs1RSti7D0QLNzUzC7qjMTLCmUlR6RTzUQ3Ug=s4800-w800",
-    youtubers: [
-      {
-        name: "쯔양",
-        videoTitle: null,
-        videoUrl: null,
-        recommendNote: "쯔양이 방문해 리뷰한 분식 맛집."
-      }
-    ]
-  },
-  {
-    id: "jjy-266",
-    name: "연소바 서울대점",
-    category: "일식",
-    address: "서울 관악구 남부순환로 1802",
-    phone: "02-871-2221",
-    lat: 37.48133751642271,
-    lng: 126.95015345249314,
-    kakaoUrl: "http://place.map.kakao.com/1067831271",
-    naverUrl: "https://map.naver.com/p/search/%EC%97%B0%EC%86%8C%EB%B0%94%20%EC%84%9C%EC%9A%B8%EB%8C%80%EC%A0%90%20%EC%84%9C%EC%9A%B8%20%EA%B4%80%EC%95%85%EA%B5%AC%20%EB%82%A8%EB%B6%80%EC%88%9C%ED%99%98%EB%A1%9C%201802",
-    rating: 3.7,
-    reviewCount: 342,
-    photoUrl: "https://lh3.googleusercontent.com/place-photos/AG9NLjBBhwOw5dGPu0NiT9365TVb8Yy46Zm8N0NagirhHd-I6T10p3bqpPeieX-Gjd96HMsOZvkS3OzTLtHya9IDh9EjH6OEINBrTKBz13lJaLTjhyRqLd5GnnNXUu2w0gb377sLlEJuvL4kTR7QNedn7JWlvw=s4800-w516",
-    youtubers: [
-      {
-        name: "쯔양",
-        videoTitle: null,
-        videoUrl: null,
-        recommendNote: "쯔양이 방문해 리뷰한 돈까스·회 전문점."
-      }
-    ]
-  },
-  {
     id: "jjy-267",
     name: "연호정칼국수",
     category: "칼국수",
@@ -5622,28 +2546,6 @@ const CURATED_FOOD = [
     rating: 4.3,
     reviewCount: 333,
     photoUrl: "https://lh3.googleusercontent.com/place-photos/AG9NLjBGFR5Thgce1aCptOdIK2oTFczYnbWghAAmT7Erk1sXbp_FQwVjBnTKoYnPnLChsJ5_iG-G-N5PXLMPgLtK2IkOEYmPyfl-xKdhA-QTfAk6VZ7zXVdfIF44M621KHfZtVmIKDxa6btpXBedzdiWtoxyrQ=s4800-w800",
-    youtubers: [
-      {
-        name: "쯔양",
-        videoTitle: null,
-        videoUrl: null,
-        recommendNote: "쯔양이 방문해 리뷰한 한식 맛집."
-      }
-    ]
-  },
-  {
-    id: "jjy-268",
-    name: "연흥식당",
-    category: "한식",
-    address: "강원특별자치도 원주시 평원로 1-1",
-    phone: "033-743-0589",
-    lat: 37.34728815038615,
-    lng: 127.95372449352888,
-    kakaoUrl: "http://place.map.kakao.com/10653477",
-    naverUrl: "https://map.naver.com/p/search/%EC%97%B0%ED%9D%A5%EC%8B%9D%EB%8B%B9%20%EA%B0%95%EC%9B%90%ED%8A%B9%EB%B3%84%EC%9E%90%EC%B9%98%EB%8F%84%20%EC%9B%90%EC%A3%BC%EC%8B%9C%20%ED%8F%89%EC%9B%90%EB%A1%9C%201-1",
-    rating: 4.1,
-    reviewCount: 50,
-    photoUrl: "https://lh3.googleusercontent.com/place-photos/AG9NLjBQ2fcd34lYJX4t3DjloCcjwKoRpeIB0eLrOSpqbQ3rBIsCtND7adignhv6LNZAUCfAkR2_FjX7rsVpziTc_7YprTy6ryFsGQY9ZniD9Ba6mvvHFHaQpjOWHLcQD-p6AGHMiLAfjSCpLtRslA=s4800-w800",
     youtubers: [
       {
         name: "쯔양",
@@ -5668,60 +2570,10 @@ const CURATED_FOOD = [
     photoUrl: null,
     youtubers: [
       {
-        name: "쯔양",
-        videoTitle: null,
-        videoUrl: null,
-        recommendNote: "쯔양이 방문해 리뷰한 한식 맛집."
-      },
-      {
         name: "성시경의 먹을텐데",
         videoTitle: "[sub] 성시경의 먹을텐데 l 논현동 영동장어",
         videoUrl: "https://www.youtube.com/watch?v=B5rp9kCcqmw",
         recommendNote: null
-      }
-    ]
-  },
-  {
-    id: "jjy-270",
-    name: "영생덕",
-    category: "중국요리",
-    address: "대구 중구 종로 39",
-    phone: "053-255-5777",
-    lat: 35.869384767619,
-    lng: 128.591393678021,
-    kakaoUrl: "http://place.map.kakao.com/9252005",
-    naverUrl: "https://map.naver.com/p/search/%EC%98%81%EC%83%9D%EB%8D%95%20%EB%8C%80%EA%B5%AC%20%EC%A4%91%EA%B5%AC%20%EC%A2%85%EB%A1%9C%2039",
-    rating: 3.8,
-    reviewCount: 1052,
-    photoUrl: "https://lh3.googleusercontent.com/place-photos/AG9NLjCOwd6WW2-TRm-57w8sf8vvqbNrXFUZ038_6YusFaFEzCJ1cM6cWZTtbJ8wgeQGtrDHfEqBB7o7E-6UPUFLzEwXCG1GJTVnzticfuCdRwRmy-jIQnEH76E_uOad1rZcAehPgy26d5udFC-XFz8=s4800-w800",
-    youtubers: [
-      {
-        name: "쯔양",
-        videoTitle: null,
-        videoUrl: null,
-        recommendNote: "쯔양이 방문해 리뷰한 중식 맛집."
-      }
-    ]
-  },
-  {
-    id: "jjy-271",
-    name: "영식품",
-    category: "한식",
-    address: "서울 성동구 성수이로 126",
-    phone: "02-469-2900",
-    lat: 37.5461735750961,
-    lng: 127.058132212264,
-    kakaoUrl: "http://place.map.kakao.com/16060241",
-    naverUrl: "https://map.naver.com/p/search/%EC%98%81%EC%8B%9D%ED%92%88%20%EC%84%9C%EC%9A%B8%20%EC%84%B1%EB%8F%99%EA%B5%AC%20%EC%84%B1%EC%88%98%EC%9D%B4%EB%A1%9C%20126",
-    rating: 4.7,
-    reviewCount: 3,
-    photoUrl: "https://lh3.googleusercontent.com/place-photos/AG9NLjCx56S6OGYGCOk3bcSR7YEWwn7cPNxashnqEcARejXjORwpCRVT8JcdRBtjFm0FBl65TvGFQsAOseYwVPzrKJap47oWPe5BnAX2xm89WSVKEs7_VAL6jgtzCoNyklKUg97ov37-elWuXV-2=s4800-w800",
-    youtubers: [
-      {
-        name: "쯔양",
-        videoTitle: "슈퍼에서 먹는 라면이 최고죠👍사장님 손님들 다 놀란 성수동 영식품 가맥집 먹방",
-        videoUrl: "https://www.youtube.com/watch?v=YwHVzstKtD8",
-        recommendNote: "쯔양이 방문해 리뷰한 한식 맛집."
       }
     ]
   },
@@ -5748,28 +2600,6 @@ const CURATED_FOOD = [
     ]
   },
   {
-    id: "jjy-273",
-    name: "옛날중국집",
-    category: "중국요리",
-    address: "서울 성북구 성북로8길 8",
-    phone: "02-764-0094",
-    lat: 37.590813216797244,
-    lng: 127.00437395474002,
-    kakaoUrl: "http://place.map.kakao.com/20944335",
-    naverUrl: "https://map.naver.com/p/search/%EC%98%9B%EB%82%A0%EC%A4%91%EA%B5%AD%EC%A7%91%20%EC%84%9C%EC%9A%B8%20%EC%84%B1%EB%B6%81%EA%B5%AC%20%EC%84%B1%EB%B6%81%EB%A1%9C8%EA%B8%B8%208",
-    rating: 3.9,
-    reviewCount: 412,
-    photoUrl: "https://lh3.googleusercontent.com/place-photos/AG9NLjA8VoYKJZAWdFRjsZIFAyg2_XbIDRGHySbVelcAqsIwfVDVhKkiogmXJrztE4GehZDsKudNWzx7l8p3TaGE-UmS46ifrprHgQmh1t3VfpDxw9AuLEknR0DwcPZPQ9WVubEWLx8UcCPcpRAW1vNB5Y3r=s4800-w800",
-    youtubers: [
-      {
-        name: "쯔양",
-        videoTitle: null,
-        videoUrl: null,
-        recommendNote: "쯔양이 방문해 리뷰한 중식 맛집."
-      }
-    ]
-  },
-  {
     id: "jjy-274",
     name: "옛날국수집",
     category: "국수",
@@ -5788,50 +2618,6 @@ const CURATED_FOOD = [
         videoTitle: null,
         videoUrl: null,
         recommendNote: "쯔양이 방문해 리뷰한 한식 맛집."
-      }
-    ]
-  },
-  {
-    id: "jjy-275",
-    name: "옛날맛짜장",
-    category: "중국요리",
-    address: "서울 송파구 가락로 113",
-    phone: "02-425-3533",
-    lat: 37.5016572215739,
-    lng: 127.10865889266,
-    kakaoUrl: "http://place.map.kakao.com/16268657",
-    naverUrl: "https://map.naver.com/p/search/%EC%98%9B%EB%82%A0%EB%A7%9B%EC%A7%9C%EC%9E%A5%20%EC%84%9C%EC%9A%B8%20%EC%86%A1%ED%8C%8C%EA%B5%AC%20%EA%B0%80%EB%9D%BD%EB%A1%9C%20113",
-    rating: 3.9,
-    reviewCount: 38,
-    photoUrl: "https://lh3.googleusercontent.com/place-photos/AG9NLjDUDY7B1AQ69hLx7RbuxHYC5lIH1skV0JT-q05TvAgNneADSmQYmPoa6GUdyRm60GxAeHDd-aPjPhHbvJBGq3h-BTcPzCGUwq9dxeLbrCG1hZYtqwpCaVjm4D9j5OTkAlrDwch7qbL039wI0w=s4800-w800",
-    youtubers: [
-      {
-        name: "쯔양",
-        videoTitle: null,
-        videoUrl: null,
-        recommendNote: "쯔양이 방문해 리뷰한 중식 맛집."
-      }
-    ]
-  },
-  {
-    id: "jjy-276",
-    name: "옛날왕솥뚜껑생삼겹살",
-    category: "삼겹살",
-    address: "서울 서대문구 통일로39길 22-58",
-    phone: "02-394-2188",
-    lat: 37.5899510831576,
-    lng: 126.941734117361,
-    kakaoUrl: "http://place.map.kakao.com/698283938",
-    naverUrl: "https://map.naver.com/p/search/%EC%98%9B%EB%82%A0%EC%99%95%EC%86%A5%EB%9A%9C%EA%BB%91%EC%83%9D%EC%82%BC%EA%B2%B9%EC%82%B4%20%EC%84%9C%EC%9A%B8%20%EC%84%9C%EB%8C%80%EB%AC%B8%EA%B5%AC%20%ED%86%B5%EC%9D%BC%EB%A1%9C39%EA%B8%B8%2022-58",
-    rating: 4.3,
-    reviewCount: 73,
-    photoUrl: "https://lh3.googleusercontent.com/place-photos/AG9NLjCnqKPcIqLh701b3WxCn6aqumfs2-Wm3q-8Em6CvxEpxPMt6BGX-kPSDwxqOuz9_3IaobFUvbbFlVEruUjgWaxrngeJGrW0qCKT8-xVW-mnMmZbCFJ4h4Ilb1fDlWO90pHjXYanJSL5I7pGog=s4800-w800",
-    youtubers: [
-      {
-        name: "쯔양",
-        videoTitle: null,
-        videoUrl: null,
-        recommendNote: "쯔양이 방문해 리뷰한 고기 맛집."
       }
     ]
   },
@@ -5924,116 +2710,6 @@ const CURATED_FOOD = [
     ]
   },
   {
-    id: "jjy-281",
-    name: "오늘초밥 수지구청점",
-    category: "초밥,롤",
-    address: "경기 용인시 수지구 풍덕천로 119",
-    phone: "0507-1390-0108",
-    lat: 37.32284125659158,
-    lng: 127.0946928449908,
-    kakaoUrl: "http://place.map.kakao.com/1822883618",
-    naverUrl: "https://map.naver.com/p/search/%EC%98%A4%EB%8A%98%EC%B4%88%EB%B0%A5%20%EC%88%98%EC%A7%80%EA%B5%AC%EC%B2%AD%EC%A0%90%20%EA%B2%BD%EA%B8%B0%20%EC%9A%A9%EC%9D%B8%EC%8B%9C%20%EC%88%98%EC%A7%80%EA%B5%AC%20%ED%92%8D%EB%8D%95%EC%B2%9C%EB%A1%9C%20119",
-    rating: 2,
-    reviewCount: 1,
-    photoUrl: null,
-    youtubers: [
-      {
-        name: "쯔양",
-        videoTitle: null,
-        videoUrl: null,
-        recommendNote: "쯔양이 방문해 리뷰한 돈까스·회 전문점."
-      }
-    ]
-  },
-  {
-    id: "jjy-282",
-    name: "오단이꼬마김밥",
-    category: "분식",
-    address: "경북 김천시 평화순환길 8",
-    phone: "054-434-7924",
-    lat: 36.12554415126579,
-    lng: 128.1068436968257,
-    kakaoUrl: "http://place.map.kakao.com/24528418",
-    naverUrl: "https://map.naver.com/p/search/%EC%98%A4%EB%8B%A8%EC%9D%B4%EA%BC%AC%EB%A7%88%EA%B9%80%EB%B0%A5%20%EA%B2%BD%EB%B6%81%20%EA%B9%80%EC%B2%9C%EC%8B%9C%20%ED%8F%89%ED%99%94%EC%88%9C%ED%99%98%EA%B8%B8%208",
-    rating: 3.7,
-    reviewCount: 132,
-    photoUrl: "https://lh3.googleusercontent.com/place-photos/AG9NLjDWkAmLuRqydnKca1oyelO_j7dVl8hEUh_MAkoISx9drBUH6C5B-l0d7JVF8fcdqLMLzo24Uh0RP4AV8bVFBLwvOdYcPzrXAG-i1R8mg-hWI3hnuyDrKFcXnmhWYaxb0XO5By5qqXx6r8WHSpE8atHbpA=s4800-w800",
-    youtubers: [
-      {
-        name: "쯔양",
-        videoTitle: null,
-        videoUrl: null,
-        recommendNote: "쯔양이 방문해 리뷰한 분식 맛집."
-      }
-    ]
-  },
-  {
-    id: "jjy-283",
-    name: "오뚜기돈까스",
-    category: "돈까스,우동",
-    address: "경기 광명시 오리로 991",
-    phone: "02-2616-1316",
-    lat: 37.4796418733086,
-    lng: 126.852914891656,
-    kakaoUrl: "http://place.map.kakao.com/9262805",
-    naverUrl: "https://map.naver.com/p/search/%EC%98%A4%EB%9A%9C%EA%B8%B0%EB%8F%88%EA%B9%8C%EC%8A%A4%20%EA%B2%BD%EA%B8%B0%20%EA%B4%91%EB%AA%85%EC%8B%9C%20%EC%98%A4%EB%A6%AC%EB%A1%9C%20991",
-    rating: 3.5,
-    reviewCount: 44,
-    photoUrl: "https://lh3.googleusercontent.com/place-photos/AG9NLjAdLHSwKR2TWHMp4XtP6NAOUlfWt_G2-QTXiU0p1D8AjcMUt9j72Ty2LKkBJu3CRUlHHNjVQDCN1nVIE4xi8whZX2nnTE26hHP5LqTeqGEa3MdvnrYYcXqJbzCGkUYxvQQXNWowAiFjpaapmg=s4800-w800",
-    youtubers: [
-      {
-        name: "쯔양",
-        videoTitle: "다 못먹으면 혼난다는 사장님 놀래키기🤣 광명 오뚜기 돈까스 먹방",
-        videoUrl: "https://www.youtube.com/watch?v=zPy7VeF0YSY",
-        recommendNote: "쯔양이 방문해 리뷰한 돈까스·회 전문점."
-      }
-    ]
-  },
-  {
-    id: "jjy-284",
-    name: "오마카세 오사이초밥 잠실송리단길점",
-    category: "초밥,롤",
-    address: "서울 송파구 백제고분로45길 17-3",
-    phone: "02-423-5422",
-    lat: 37.50956464143005,
-    lng: 127.10941684026714,
-    kakaoUrl: "http://place.map.kakao.com/180526534",
-    naverUrl: "https://map.naver.com/p/search/%EC%98%A4%EB%A7%88%EC%B9%B4%EC%84%B8%20%EC%98%A4%EC%82%AC%EC%9D%B4%EC%B4%88%EB%B0%A5%20%EC%9E%A0%EC%8B%A4%EC%86%A1%EB%A6%AC%EB%8B%A8%EA%B8%B8%EC%A0%90%20%EC%84%9C%EC%9A%B8%20%EC%86%A1%ED%8C%8C%EA%B5%AC%20%EB%B0%B1%EC%A0%9C%EA%B3%A0%EB%B6%84%EB%A1%9C45%EA%B8%B8%2017-3",
-    rating: 4.7,
-    reviewCount: 12,
-    photoUrl: "https://lh3.googleusercontent.com/place-photos/AG9NLjD2UIlsa4b0rRqxTrMfRSYUTQsWP-90j2mutgUw5xk8KgiM72qehyxt0xKaMPNxjg-NSotrd8Uz5uxs7Pm_X21KHYSsn9kPSZAKd1qQZmAytUbly2eBcK3R08s9AJORlHN9QowRMxsb_bG-g-M=s4800-w800",
-    youtubers: [
-      {
-        name: "쯔양",
-        videoTitle: null,
-        videoUrl: null,
-        recommendNote: "쯔양이 방문해 리뷰한 돈까스·회 전문점."
-      }
-    ]
-  },
-  {
-    id: "jjy-285",
-    name: "오봉집 천호점",
-    category: "오봉집",
-    address: "서울 강동구 올림픽로 722",
-    phone: "02-477-0934",
-    lat: 37.5456627163126,
-    lng: 127.126221563525,
-    kakaoUrl: "http://place.map.kakao.com/33773654",
-    naverUrl: "https://map.naver.com/p/search/%EC%98%A4%EB%B4%89%EC%A7%91%20%EC%B2%9C%ED%98%B8%EC%A0%90%20%EC%84%9C%EC%9A%B8%20%EA%B0%95%EB%8F%99%EA%B5%AC%20%EC%98%AC%EB%A6%BC%ED%94%BD%EB%A1%9C%20722",
-    rating: 4.2,
-    reviewCount: 59,
-    photoUrl: "https://lh3.googleusercontent.com/place-photos/AG9NLjDr_K3zDr61lZa5dIhmgQViXf_glNEOnf_6h61BomE3xuwyHViQSmI_teWZTi5_7gQlGdAuXqy8YHvGsDSpVl4sW4TX5i2uLtQMbgX6GSccijZZ95KNdOexHQQBDvH50yX6ECfj9YF7TAuC1nY=s4800-w800",
-    youtubers: [
-      {
-        name: "쯔양",
-        videoTitle: null,
-        videoUrl: null,
-        recommendNote: "쯔양이 방문해 리뷰한 한식 맛집."
-      }
-    ]
-  },
-  {
     id: "jjy-286",
     name: "오장동흥남집 본점",
     category: "냉면",
@@ -6078,116 +2754,6 @@ const CURATED_FOOD = [
     ]
   },
   {
-    id: "jjy-288",
-    name: "옥천옥",
-    category: "설렁탕",
-    address: "서울 동대문구 하정로 16",
-    phone: "02-2292-8201",
-    lat: 37.572508327034626,
-    lng: 127.0269980020464,
-    kakaoUrl: "http://place.map.kakao.com/22618131",
-    naverUrl: "https://map.naver.com/p/search/%EC%98%A5%EC%B2%9C%EC%98%A5%20%EC%84%9C%EC%9A%B8%20%EB%8F%99%EB%8C%80%EB%AC%B8%EA%B5%AC%20%ED%95%98%EC%A0%95%EB%A1%9C%2016",
-    rating: 3.9,
-    reviewCount: 249,
-    photoUrl: "https://lh3.googleusercontent.com/place-photos/AG9NLjAsLx0z7WkcsvDzWB80Co2s4kVtaWN25LP77fuXDq1Oya1iTo01v7ALzxNnHc1omQJvIAjfeXzL7UtIK0LJ12WyrSen0NqfXh31xr0ENANJzUJOwMA4dfrbU3NtaBCJfJFceYzNqWuWwNOojw=s4800-w800",
-    youtubers: [
-      {
-        name: "쯔양",
-        videoTitle: null,
-        videoUrl: null,
-        recommendNote: "쯔양이 방문해 리뷰한 한식 맛집."
-      }
-    ]
-  },
-  {
-    id: "jjy-289",
-    name: "온정돈까스 본점",
-    category: "돈까스,우동",
-    address: "서울 관악구 남부순환로 1509",
-    phone: "02-3281-3330",
-    lat: 37.482761296535365,
-    lng: 126.91815324257718,
-    kakaoUrl: "http://place.map.kakao.com/27508076",
-    naverUrl: "https://map.naver.com/p/search/%EC%98%A8%EC%A0%95%EB%8F%88%EA%B9%8C%EC%8A%A4%20%EB%B3%B8%EC%A0%90%20%EC%84%9C%EC%9A%B8%20%EA%B4%80%EC%95%85%EA%B5%AC%20%EB%82%A8%EB%B6%80%EC%88%9C%ED%99%98%EB%A1%9C%201509",
-    rating: 3.7,
-    reviewCount: 1131,
-    photoUrl: "https://lh3.googleusercontent.com/place-photos/AG9NLjALZ0GXGCyoVZS3E6Pdt4pVGc432Ib7WXDBFjASw6QqmXQzSkD3i9A7iuQKeAQVzEBIQCeVlKw4vOEoaWltnLuguw812_NaDEOq3ZmYSNkE0V4IF8xLeHXY9xEOfFOBkzj8_XlXwWM_g6r7=s4800-w800",
-    youtubers: [
-      {
-        name: "쯔양",
-        videoTitle: null,
-        videoUrl: null,
-        recommendNote: "쯔양이 방문해 리뷰한 돈까스·회 전문점."
-      }
-    ]
-  },
-  {
-    id: "jjy-290",
-    name: "온정떡집",
-    category: "떡,한과",
-    address: "전남광주통합특별시 순천시 북문길 11",
-    phone: "061-752-7354",
-    lat: 34.957765444544414,
-    lng: 127.48455020201808,
-    kakaoUrl: "http://place.map.kakao.com/10620868",
-    naverUrl: "https://map.naver.com/p/search/%EC%98%A8%EC%A0%95%EB%96%A1%EC%A7%91%20%EC%A0%84%EB%82%A8%EA%B4%91%EC%A3%BC%ED%86%B5%ED%95%A9%ED%8A%B9%EB%B3%84%EC%8B%9C%20%EC%88%9C%EC%B2%9C%EC%8B%9C%20%EB%B6%81%EB%AC%B8%EA%B8%B8%2011",
-    rating: 5,
-    reviewCount: 1,
-    photoUrl: "https://lh3.googleusercontent.com/place-photos/AG9NLjCLsm6FJFEzYFckVd99mICIixaDAJoduEexctvV0B_HDmO4iz9LMH1ojz3IFavn9vzviS9Ytu8pO28YnU5K2DI39gp4yxZlrubkHrEgDSwk7Ty9R1GjhdEmCB4LtSLSHErbJLELZBWX4A_rq0s=s4800-w800",
-    youtubers: [
-      {
-        name: "쯔양",
-        videoTitle: null,
-        videoUrl: null,
-        recommendNote: "쯔양이 방문해 리뷰한 카페·디저트 맛집."
-      }
-    ]
-  },
-  {
-    id: "jjy-291",
-    name: "외갓집",
-    category: "분식",
-    address: "충북 제천시 풍양로17길 7",
-    phone: "043-652-7767",
-    lat: 37.137710212857804,
-    lng: 128.212178087636,
-    kakaoUrl: "http://place.map.kakao.com/18768435",
-    naverUrl: "https://map.naver.com/p/search/%EC%99%B8%EA%B0%93%EC%A7%91%20%EC%B6%A9%EB%B6%81%20%EC%A0%9C%EC%B2%9C%EC%8B%9C%20%ED%92%8D%EC%96%91%EB%A1%9C17%EA%B8%B8%207",
-    rating: 4.3,
-    reviewCount: 37,
-    photoUrl: "https://lh3.googleusercontent.com/place-photos/AG9NLjBuifMw9X_vCXdqLTK45F11B4_YCFk7FZUNKSAyLlIvf_QkYb-5F5uGLt8SZinNQQQD5tdIxVrldpPjBCsu3yVLGy4_MZDQt2bJkQOqMqFdMwvqxdTgsH53llydjYNa7jDyt-HGlkp2U1RiPQo=s4800-w800",
-    youtubers: [
-      {
-        name: "쯔양",
-        videoTitle: null,
-        videoUrl: null,
-        recommendNote: "쯔양이 방문해 리뷰한 분식 맛집."
-      }
-    ]
-  },
-  {
-    id: "jjy-292",
-    name: "요거트월드 하양점",
-    category: "요거트월드",
-    address: "경북 경산시 하양읍 대학로305길 51-2",
-    phone: "010-7636-1352",
-    lat: 35.9107939674228,
-    lng: 128.81686840650252,
-    kakaoUrl: "http://place.map.kakao.com/148260882",
-    naverUrl: "https://map.naver.com/p/search/%EC%9A%94%EA%B1%B0%ED%8A%B8%EC%9B%94%EB%93%9C%20%ED%95%98%EC%96%91%EC%A0%90%20%EA%B2%BD%EB%B6%81%20%EA%B2%BD%EC%82%B0%EC%8B%9C%20%ED%95%98%EC%96%91%EC%9D%8D%20%EB%8C%80%ED%95%99%EB%A1%9C305%EA%B8%B8%2051-2",
-    rating: null,
-    reviewCount: null,
-    photoUrl: null,
-    youtubers: [
-      {
-        name: "쯔양",
-        videoTitle: null,
-        videoUrl: null,
-        recommendNote: "쯔양이 방문해 리뷰한 카페·디저트 맛집."
-      }
-    ]
-  },
-  {
     id: "jjy-293",
     name: "할매바리스타",
     category: "커피전문점",
@@ -6228,28 +2794,6 @@ const CURATED_FOOD = [
         videoTitle: "고기만 1.8kg인 김치찌개..😨 천안 줄서서 먹는다는 용천가든 먹방",
         videoUrl: "https://www.youtube.com/watch?v=wF3eisdCcBA",
         recommendNote: "쯔양이 방문해 리뷰한 한식 맛집."
-      }
-    ]
-  },
-  {
-    id: "jjy-295",
-    name: "우대포 분당직영점",
-    category: "육류,고기",
-    address: "경기 성남시 분당구 서현동 261-6",
-    phone: "0507-1335-6139",
-    lat: 37.38583889337056,
-    lng: 127.1217593866941,
-    kakaoUrl: "http://place.map.kakao.com/1453370999",
-    naverUrl: "https://map.naver.com/p/search/%EC%9A%B0%EB%8C%80%ED%8F%AC%20%EB%B6%84%EB%8B%B9%EC%A7%81%EC%98%81%EC%A0%90%20%EA%B2%BD%EA%B8%B0%20%EC%84%B1%EB%82%A8%EC%8B%9C%20%EB%B6%84%EB%8B%B9%EA%B5%AC%20%EC%84%9C%ED%98%84%EB%8F%99%20261-6",
-    rating: 4.3,
-    reviewCount: 23,
-    photoUrl: "https://lh3.googleusercontent.com/place-photos/AG9NLjAXhkXiv3tP3uKjb37YsS1fbrlfEJifODc2yPQ0fkzMPbU15lHumiG58zJbgYATYEFsYtTrjkQkce26k7AdveFm9xQIksxYZjTA9x6pQJm5IDFedq5fKTR5gQWPM9B5ZA7oR782GtSSmNSZPiWj6382=s4800-w800",
-    youtubers: [
-      {
-        name: "쯔양",
-        videoTitle: null,
-        videoUrl: null,
-        recommendNote: "쯔양이 방문해 리뷰한 고기 맛집."
       }
     ]
   },
@@ -6364,28 +2908,6 @@ const CURATED_FOOD = [
     ]
   },
   {
-    id: "jjy-301",
-    name: "우암국수",
-    category: "국수",
-    address: "충북 청주시 청원구 향군로 35",
-    phone: "043-255-9766",
-    lat: 36.648867248575,
-    lng: 127.486345223835,
-    kakaoUrl: "http://place.map.kakao.com/10707829",
-    naverUrl: "https://map.naver.com/p/search/%EC%9A%B0%EC%95%94%EA%B5%AD%EC%88%98%20%EC%B6%A9%EB%B6%81%20%EC%B2%AD%EC%A3%BC%EC%8B%9C%20%EC%B2%AD%EC%9B%90%EA%B5%AC%20%ED%96%A5%EA%B5%B0%EB%A1%9C%2035",
-    rating: null,
-    reviewCount: null,
-    photoUrl: null,
-    youtubers: [
-      {
-        name: "쯔양",
-        videoTitle: null,
-        videoUrl: null,
-        recommendNote: "쯔양이 방문해 리뷰한 한식 맛집."
-      }
-    ]
-  },
-  {
     id: "jjy-302",
     name: "우육미",
     category: "육류,고기",
@@ -6430,28 +2952,6 @@ const CURATED_FOOD = [
     ]
   },
   {
-    id: "jjy-304",
-    name: "우진이네",
-    category: "해물,생선",
-    address: "경북 울릉군 서면 태하길 174",
-    phone: "010-6823-9374",
-    lat: 37.51174961039474,
-    lng: 130.79978723445006,
-    kakaoUrl: "http://place.map.kakao.com/579485501",
-    naverUrl: "https://map.naver.com/p/search/%EC%9A%B0%EC%A7%84%EC%9D%B4%EB%84%A4%20%EA%B2%BD%EB%B6%81%20%EC%9A%B8%EB%A6%89%EA%B5%B0%20%EC%84%9C%EB%A9%B4%20%ED%83%9C%ED%95%98%EA%B8%B8%20174",
-    rating: 4.3,
-    reviewCount: 24,
-    photoUrl: "https://lh3.googleusercontent.com/place-photos/AG9NLjCCc7o5PtvyY4XXponffZ27X-6Exs9yotgkqj4A-dbaR7Bq0d2qoAMprf_Nt0s9V7medXqlh3skBA3-2Em_gdRaXSLPCUEYt4F5U0JylPPHS4BsR1hyIL5no47ACWSA_ulkMOlaV04Ph4_IiQ=s4800-w800",
-    youtubers: [
-      {
-        name: "쯔양",
-        videoTitle: "울릉도11)먹방 구경하러 다 모이셨어요🤣 우진이네 오징어통찜 라면 먹방",
-        videoUrl: "https://www.youtube.com/watch?v=QWtvZ6NfNJ8",
-        recommendNote: "쯔양이 방문해 리뷰한 한식 맛집."
-      }
-    ]
-  },
-  {
     id: "jjy-305",
     name: "울프강스테이크하우스 청담점",
     category: "스테이크,립",
@@ -6474,28 +2974,6 @@ const CURATED_FOOD = [
     ]
   },
   {
-    id: "jjy-306",
-    name: "웅가네 개성김치녹차삼겹살",
-    category: "삼겹살",
-    address: "서울 노원구 공릉로59길 15",
-    phone: "02-971-2283",
-    lat: 37.6331482789928,
-    lng: 127.07108335831,
-    kakaoUrl: "http://place.map.kakao.com/11181285",
-    naverUrl: "https://map.naver.com/p/search/%EC%9B%85%EA%B0%80%EB%84%A4%20%EA%B0%9C%EC%84%B1%EA%B9%80%EC%B9%98%EB%85%B9%EC%B0%A8%EC%82%BC%EA%B2%B9%EC%82%B4%20%EC%84%9C%EC%9A%B8%20%EB%85%B8%EC%9B%90%EA%B5%AC%20%EA%B3%B5%EB%A6%89%EB%A1%9C59%EA%B8%B8%2015",
-    rating: 4.6,
-    reviewCount: 64,
-    photoUrl: "https://lh3.googleusercontent.com/place-photos/AG9NLjD4tKHN1hSfnl-GsTZHDEUKW5TKQblIjQtTqYNSy1VJ33FYsMYzJ_xoroOVIlK2WJbh7OoeuzIqcNALNMQaIonT84AYSNJYD0Joa6H51bZpDq_fhsSq1TLrqEtulFdwCCnsVzffgdyXGr0y7JSEBF06pg=s4800-w800",
-    youtubers: [
-      {
-        name: "쯔양",
-        videoTitle: null,
-        videoUrl: null,
-        recommendNote: "쯔양이 방문해 리뷰한 고기 맛집."
-      }
-    ]
-  },
-  {
     id: "jjy-307",
     name: "웅담식당",
     category: "육류,고기",
@@ -6514,72 +2992,6 @@ const CURATED_FOOD = [
         videoTitle: null,
         videoUrl: null,
         recommendNote: "쯔양이 방문해 리뷰한 고기 맛집."
-      }
-    ]
-  },
-  {
-    id: "jjy-308",
-    name: "한솥도시락 고양원당점",
-    category: "한솥도시락",
-    address: "경기 고양시 덕양구 호국로 797",
-    phone: "010-8877-0400",
-    lat: 37.6573326579565,
-    lng: 126.836618724706,
-    kakaoUrl: "http://place.map.kakao.com/864785263",
-    naverUrl: "https://map.naver.com/p/search/%ED%95%9C%EC%86%A5%EB%8F%84%EC%8B%9C%EB%9D%BD%20%EA%B3%A0%EC%96%91%EC%9B%90%EB%8B%B9%EC%A0%90%20%EA%B2%BD%EA%B8%B0%20%EA%B3%A0%EC%96%91%EC%8B%9C%20%EB%8D%95%EC%96%91%EA%B5%AC%20%ED%98%B8%EA%B5%AD%EB%A1%9C%20797",
-    rating: 2,
-    reviewCount: 2,
-    photoUrl: "https://lh3.googleusercontent.com/place-photos/AG9NLjAC3yAY5waojy-HPXjeV7bL2ZX_2VS40Eqxqcp7pN6wrmf-u9tLP0AWt-9l6ACczLNyWqy1s76WD12iS0i8fbaw-hLASc4nquDMd3ncypzBs7n5X7lWy3TQYTHgQMcHdvCEQR__T4ercJ4Z05w=s4800-w800",
-    youtubers: [
-      {
-        name: "쯔양",
-        videoTitle: null,
-        videoUrl: null,
-        recommendNote: "쯔양이 방문해 리뷰한 한식 맛집."
-      }
-    ]
-  },
-  {
-    id: "jjy-309",
-    name: "원보",
-    category: "중국요리",
-    address: "전남광주통합특별시 북구 서방로 78-1",
-    phone: "062-252-3380",
-    lat: 35.1714467328007,
-    lng: 126.921121754368,
-    kakaoUrl: "http://place.map.kakao.com/1525701535",
-    naverUrl: "https://map.naver.com/p/search/%EC%9B%90%EB%B3%B4%20%EC%A0%84%EB%82%A8%EA%B4%91%EC%A3%BC%ED%86%B5%ED%95%A9%ED%8A%B9%EB%B3%84%EC%8B%9C%20%EB%B6%81%EA%B5%AC%20%EC%84%9C%EB%B0%A9%EB%A1%9C%2078-1",
-    rating: 4,
-    reviewCount: 4,
-    photoUrl: null,
-    youtubers: [
-      {
-        name: "쯔양",
-        videoTitle: null,
-        videoUrl: null,
-        recommendNote: "쯔양이 방문해 리뷰한 중식 맛집."
-      }
-    ]
-  },
-  {
-    id: "jjy-310",
-    name: "마산할매간장게장",
-    category: "아구",
-    address: "서울 서초구 강남대로99길 10",
-    phone: "02-547-2774",
-    lat: 37.5154748329156,
-    lng: 127.01893284859412,
-    kakaoUrl: "http://place.map.kakao.com/10686549",
-    naverUrl: "https://map.naver.com/p/search/%EB%A7%88%EC%82%B0%ED%95%A0%EB%A7%A4%EA%B0%84%EC%9E%A5%EA%B2%8C%EC%9E%A5%20%EC%84%9C%EC%9A%B8%20%EC%84%9C%EC%B4%88%EA%B5%AC%20%EA%B0%95%EB%82%A8%EB%8C%80%EB%A1%9C99%EA%B8%B8%2010",
-    rating: null,
-    reviewCount: null,
-    photoUrl: null,
-    youtubers: [
-      {
-        name: "쯔양",
-        videoTitle: null,
-        videoUrl: null,
-        recommendNote: "쯔양이 방문해 리뷰한 한식 맛집."
       }
     ]
   },
@@ -6628,28 +3040,6 @@ const CURATED_FOOD = [
     ]
   },
   {
-    id: "jjy-313",
-    name: "원할머니보쌈족발 먹골역점",
-    category: "원할머니보쌈족발",
-    address: "서울 중랑구 동일로 865",
-    phone: "02-978-8252",
-    lat: 37.607525225314866,
-    lng: 127.07800812143502,
-    kakaoUrl: "http://place.map.kakao.com/8029579",
-    naverUrl: "https://map.naver.com/p/search/%EC%9B%90%ED%95%A0%EB%A8%B8%EB%8B%88%EB%B3%B4%EC%8C%88%EC%A1%B1%EB%B0%9C%20%EB%A8%B9%EA%B3%A8%EC%97%AD%EC%A0%90%20%EC%84%9C%EC%9A%B8%20%EC%A4%91%EB%9E%91%EA%B5%AC%20%EB%8F%99%EC%9D%BC%EB%A1%9C%20865",
-    rating: 3.1,
-    reviewCount: 42,
-    photoUrl: "https://lh3.googleusercontent.com/place-photos/AG9NLjBssdZMdgpYZpDzFu7LENzYVJLC4UCHjIClgF-QPvEH-fWkUPurXHf-1jb-m9fMGjFdLFZZeudNRnEzRGpXCL65_dghRo7G5I-JsaeeyrpBLSgI3GAkCuTiuDsSrICS3Kx0hJrdffK3s--rqQ=s4800-w800",
-    youtubers: [
-      {
-        name: "쯔양",
-        videoTitle: null,
-        videoUrl: null,
-        recommendNote: "쯔양이 방문해 리뷰한 족발·보쌈 맛집."
-      }
-    ]
-  },
-  {
     id: "jjy-314",
     name: "원효굴찜",
     category: "굴,전복",
@@ -6690,50 +3080,6 @@ const CURATED_FOOD = [
         videoTitle: null,
         videoUrl: null,
         recommendNote: "쯔양이 방문해 리뷰한 고기 맛집."
-      }
-    ]
-  },
-  {
-    id: "jjy-316",
-    name: "유가장",
-    category: "중국요리",
-    address: "경기 여주시 세종로46번길 17-1",
-    phone: "031-884-1412",
-    lat: 37.2938162482069,
-    lng: 127.633907251279,
-    kakaoUrl: "http://place.map.kakao.com/9363354",
-    naverUrl: "https://map.naver.com/p/search/%EC%9C%A0%EA%B0%80%EC%9E%A5%20%EA%B2%BD%EA%B8%B0%20%EC%97%AC%EC%A3%BC%EC%8B%9C%20%EC%84%B8%EC%A2%85%EB%A1%9C46%EB%B2%88%EA%B8%B8%2017-1",
-    rating: 3.9,
-    reviewCount: 406,
-    photoUrl: "https://lh3.googleusercontent.com/place-photos/AG9NLjC1PTbyQzcFt1XlVZlAouhBmzZ6vEW1V6BWhBXPREyiS2AsoSpJLnjw6dCzc64w1RsvfeqRlX9VWehpCgcvgRohHupZh-7ITrn8K1YUuIqP-eFf58w726bHVyJkpq-6tzH3I1F7SHhhYjiO4A=s4800-w800",
-    youtubers: [
-      {
-        name: "쯔양",
-        videoTitle: null,
-        videoUrl: null,
-        recommendNote: "쯔양이 방문해 리뷰한 중식 맛집."
-      }
-    ]
-  },
-  {
-    id: "jjy-317",
-    name: "유자유김치떡볶이 신촌점",
-    category: "떡볶이",
-    address: "서울 서대문구 연세로11길 22",
-    phone: "02-332-9301",
-    lat: 37.5590257796027,
-    lng: 126.935632972832,
-    kakaoUrl: "http://place.map.kakao.com/104532017",
-    naverUrl: "https://map.naver.com/p/search/%EC%9C%A0%EC%9E%90%EC%9C%A0%EA%B9%80%EC%B9%98%EB%96%A1%EB%B3%B6%EC%9D%B4%20%EC%8B%A0%EC%B4%8C%EC%A0%90%20%EC%84%9C%EC%9A%B8%20%EC%84%9C%EB%8C%80%EB%AC%B8%EA%B5%AC%20%EC%97%B0%EC%84%B8%EB%A1%9C11%EA%B8%B8%2022",
-    rating: 3.8,
-    reviewCount: 139,
-    photoUrl: "https://lh3.googleusercontent.com/place-photos/AG9NLjBb3bsiqTbglG-E026aL9s6dlaluJQOoyMRNUqnJ5hZ4yr3ievJKIlRH13bZRPfCCMQdyU0mT8n99MK3-nzO62TInFDl15p1AdzmitPgHn2CYsJIgtAFiMqnlmoNzsT8_wLAr-x242OhLJA6eU=s4800-w800",
-    youtubers: [
-      {
-        name: "쯔양",
-        videoTitle: null,
-        videoUrl: null,
-        recommendNote: "쯔양이 방문해 리뷰한 분식 맛집."
       }
     ]
   },
@@ -6782,28 +3128,6 @@ const CURATED_FOOD = [
     ]
   },
   {
-    id: "jjy-320",
-    name: "은희네순대",
-    category: "순대",
-    address: "충남 논산시 노성면 노성로 576",
-    phone: "041-734-6009",
-    lat: 36.2761704816286,
-    lng: 127.130001352378,
-    kakaoUrl: "http://place.map.kakao.com/18636567",
-    naverUrl: "https://map.naver.com/p/search/%EC%9D%80%ED%9D%AC%EB%84%A4%EC%88%9C%EB%8C%80%20%EC%B6%A9%EB%82%A8%20%EB%85%BC%EC%82%B0%EC%8B%9C%20%EB%85%B8%EC%84%B1%EB%A9%B4%20%EB%85%B8%EC%84%B1%EB%A1%9C%20576",
-    rating: 2.5,
-    reviewCount: 2,
-    photoUrl: "https://lh3.googleusercontent.com/place-photos/AG9NLjD3MEOQL50oG3OtDq01kzY9MXTB3s9QyCCS3Zg68bzsXIaIGu-BXDj_TgaU7JQ9y6Vs3zYDLh6P10pf5Dji88cwBAZKtIgvlg7eeuTIfXHUVWVCEav9B1iq4uHZewX1aTNG_U3wBqZE9fiPwCA=s4800-w800",
-    youtubers: [
-      {
-        name: "쯔양",
-        videoTitle: null,
-        videoUrl: null,
-        recommendNote: "쯔양이 방문해 리뷰한 한식 맛집."
-      }
-    ]
-  },
-  {
     id: "jjy-321",
     name: "이가바지락손칼국수",
     category: "칼국수",
@@ -6822,94 +3146,6 @@ const CURATED_FOOD = [
         videoTitle: null,
         videoUrl: null,
         recommendNote: "쯔양이 방문해 리뷰한 한식 맛집."
-      }
-    ]
-  },
-  {
-    id: "jjy-322",
-    name: "이디야커피 IBK본점",
-    category: "이디야커피",
-    address: "서울 중구 을지로 79",
-    phone: "02-318-6427",
-    lat: 37.56642622612368,
-    lng: 126.98655642767942,
-    kakaoUrl: "http://place.map.kakao.com/10748217",
-    naverUrl: "https://map.naver.com/p/search/%EC%9D%B4%EB%94%94%EC%95%BC%EC%BB%A4%ED%94%BC%20IBK%EB%B3%B8%EC%A0%90%20%EC%84%9C%EC%9A%B8%20%EC%A4%91%EA%B5%AC%20%EC%9D%84%EC%A7%80%EB%A1%9C%2079",
-    rating: 3.9,
-    reviewCount: 60,
-    photoUrl: "https://lh3.googleusercontent.com/place-photos/AG9NLjDxEx76Kyio3vS0HQFLgRtMvjk1rivs0_hA3CpCXqVp2XSbpl63eOUyGBuo6vmLVbBuy3dwUSD_WA4ySh4CHiV2V07MJo9y6gUvHO6Eq9TRDxFf8WA6PZwwhpC29OjHj3_TCWuHurPKfQu7PRlb7hWg=s4800-w800",
-    youtubers: [
-      {
-        name: "쯔양",
-        videoTitle: null,
-        videoUrl: null,
-        recommendNote: "쯔양이 방문해 리뷰한 카페·디저트 맛집."
-      }
-    ]
-  },
-  {
-    id: "jjy-323",
-    name: "이레수산",
-    category: "회",
-    address: "충남 홍성군 서부면 남당항로213번길 12",
-    phone: "041-631-2750",
-    lat: 36.5396951332221,
-    lng: 126.470974173938,
-    kakaoUrl: "http://place.map.kakao.com/11182424",
-    naverUrl: "https://map.naver.com/p/search/%EC%9D%B4%EB%A0%88%EC%88%98%EC%82%B0%20%EC%B6%A9%EB%82%A8%20%ED%99%8D%EC%84%B1%EA%B5%B0%20%EC%84%9C%EB%B6%80%EB%A9%B4%20%EB%82%A8%EB%8B%B9%ED%95%AD%EB%A1%9C213%EB%B2%88%EA%B8%B8%2012",
-    rating: 4,
-    reviewCount: 46,
-    photoUrl: "https://lh3.googleusercontent.com/place-photos/AG9NLjCmLMGUFjurL2AhRnsgOHyCMXkUxay7MGWFHAbaMBX43DRsrLE1ToSFJUTZm_eUbWJ1-3DlRydUF-TWRYG1riNsaT9AvbD1G6PzuYvG4DSmLkEBzZ91vgwX_dRZuRDuk026_iPR318=s4800-w800",
-    youtubers: [
-      {
-        name: "쯔양",
-        videoTitle: null,
-        videoUrl: null,
-        recommendNote: "쯔양이 방문해 리뷰한 맛집."
-      }
-    ]
-  },
-  {
-    id: "jjy-324",
-    name: "이삭토스트 한티역점",
-    category: "이삭토스트",
-    address: "서울 강남구 도곡로63길 16",
-    phone: "02-557-3060",
-    lat: 37.4980132023897,
-    lng: 127.05430419528,
-    kakaoUrl: "http://place.map.kakao.com/532272836",
-    naverUrl: "https://map.naver.com/p/search/%EC%9D%B4%EC%82%AD%ED%86%A0%EC%8A%A4%ED%8A%B8%20%ED%95%9C%ED%8B%B0%EC%97%AD%EC%A0%90%20%EC%84%9C%EC%9A%B8%20%EA%B0%95%EB%82%A8%EA%B5%AC%20%EB%8F%84%EA%B3%A1%EB%A1%9C63%EA%B8%B8%2016",
-    rating: 4.4,
-    reviewCount: 9,
-    photoUrl: "https://lh3.googleusercontent.com/place-photos/AG9NLjAVK19TbaObRzO2eocc3o5xlMOi8zxST4kj9aClLcgfptCexqf8_noz5dPHDXDh717RL4UhCI-HPXlMBwj1PH9YiHK6GtqRPEatx-pJr8qZ80hpGPlwYmXtJrt8o5-iyLFVTre8Tb0LHsPCB9M=s4800-w800",
-    youtubers: [
-      {
-        name: "쯔양",
-        videoTitle: null,
-        videoUrl: null,
-        recommendNote: "쯔양이 방문해 리뷰한 패스트푸드 맛집."
-      }
-    ]
-  },
-  {
-    id: "jjy-325",
-    name: "이수생삼겹살 이수역점",
-    category: "삼겹살",
-    address: "서울 동작구 동작대로23길 23",
-    phone: "02-583-1976",
-    lat: 37.48407195838376,
-    lng: 126.98040912200601,
-    kakaoUrl: "http://place.map.kakao.com/1316094610",
-    naverUrl: "https://map.naver.com/p/search/%EC%9D%B4%EC%88%98%EC%83%9D%EC%82%BC%EA%B2%B9%EC%82%B4%20%EC%9D%B4%EC%88%98%EC%97%AD%EC%A0%90%20%EC%84%9C%EC%9A%B8%20%EB%8F%99%EC%9E%91%EA%B5%AC%20%EB%8F%99%EC%9E%91%EB%8C%80%EB%A1%9C23%EA%B8%B8%2023",
-    rating: 5,
-    reviewCount: 2,
-    photoUrl: null,
-    youtubers: [
-      {
-        name: "쯔양",
-        videoTitle: null,
-        videoUrl: null,
-        recommendNote: "쯔양이 방문해 리뷰한 고기 맛집."
       }
     ]
   },
@@ -6936,28 +3172,6 @@ const CURATED_FOOD = [
     ]
   },
   {
-    id: "jjy-327",
-    name: "이화루중화요리",
-    category: "중국요리",
-    address: "강원특별자치도 삼척시 근덕면 교가길 13-3",
-    phone: "033-573-7749",
-    lat: 37.38047748826549,
-    lng: 129.2266376820076,
-    kakaoUrl: "http://place.map.kakao.com/23791683",
-    naverUrl: "https://map.naver.com/p/search/%EC%9D%B4%ED%99%94%EB%A3%A8%EC%A4%91%ED%99%94%EC%9A%94%EB%A6%AC%20%EA%B0%95%EC%9B%90%ED%8A%B9%EB%B3%84%EC%9E%90%EC%B9%98%EB%8F%84%20%EC%82%BC%EC%B2%99%EC%8B%9C%20%EA%B7%BC%EB%8D%95%EB%A9%B4%20%EA%B5%90%EA%B0%80%EA%B8%B8%2013-3",
-    rating: 3.9,
-    reviewCount: 180,
-    photoUrl: "https://lh3.googleusercontent.com/place-photos/AG9NLjCo9L9FLBTtUtYwJuJ4gIvtt7WDSf69tzkPbuIqzXIt1r1pVo08TKuH8kvutM3ucfdw9I_-NpEjEr9Zq4x2mh3LLg-sSqFsnp29iwBCyBZjpvaGiXHppRY9z7VjLVaQvzErB_PrFy6-XORyH4GsbSCS-A=s4800-w800",
-    youtubers: [
-      {
-        name: "쯔양",
-        videoTitle: null,
-        videoUrl: null,
-        recommendNote: "쯔양이 방문해 리뷰한 중식 맛집."
-      }
-    ]
-  },
-  {
     id: "jjy-328",
     name: "인사동수제비",
     category: "수제비",
@@ -6980,28 +3194,6 @@ const CURATED_FOOD = [
     ]
   },
   {
-    id: "jjy-329",
-    name: "인천분식",
-    category: "분식",
-    address: "경북 구미시 장천면 강동로 175",
-    phone: "054-471-5316",
-    lat: 36.12522505495171,
-    lng: 128.49489353226448,
-    kakaoUrl: "http://place.map.kakao.com/25839584",
-    naverUrl: "https://map.naver.com/p/search/%EC%9D%B8%EC%B2%9C%EB%B6%84%EC%8B%9D%20%EA%B2%BD%EB%B6%81%20%EA%B5%AC%EB%AF%B8%EC%8B%9C%20%EC%9E%A5%EC%B2%9C%EB%A9%B4%20%EA%B0%95%EB%8F%99%EB%A1%9C%20175",
-    rating: 4.4,
-    reviewCount: 37,
-    photoUrl: "https://lh3.googleusercontent.com/place-photos/AG9NLjARBYk1vDpTAMvShsI13nbw3wXHaManRy1EoIIxRz-SZ8DGfTvbKVEk5hou40Fc5GcBYgKEGrN7zY-3-4jd7da9NLrsz5wN4RdOPQW0hj0EBJjtWUUp4xKBssFIBy_vDQhUTSmPqdnCW-4m=s4800-w800",
-    youtubers: [
-      {
-        name: "쯔양",
-        videoTitle: null,
-        videoUrl: null,
-        recommendNote: "쯔양이 방문해 리뷰한 분식 맛집."
-      }
-    ]
-  },
-  {
     id: "jjy-330",
     name: "일광",
     category: "갈비",
@@ -7016,38 +3208,10 @@ const CURATED_FOOD = [
     photoUrl: "https://lh3.googleusercontent.com/place-photos/AG9NLjAUyv2Nxlpd7BezHmG_XZeLRgXWu_BBIgJjROvT7Uv-ciAEkFA99glZy__msKc1r-0yEhrP_0e5NpvNEkOsl6uT-DCgf3W4kdLlQrm91xVJPfy8l15Cg3KYJYIpa6SBQSMbPTQWCPjATo9q=s4800-w800",
     youtubers: [
       {
-        name: "쯔양",
-        videoTitle: "갑자기 100개 도전했습니다😳 일광쪽갈비 100개 도전먹방",
-        videoUrl: "https://www.youtube.com/watch?v=GLTd77dTP4Q",
-        recommendNote: "쯔양이 방문해 리뷰한 고기 맛집."
-      },
-      {
         name: "성시경의 먹을텐데",
         videoTitle: "성시경의 먹을텐데 l 답십리 일광쪽갈비",
         videoUrl: "https://www.youtube.com/watch?v=nUj86InQ6dM",
         recommendNote: null
-      }
-    ]
-  },
-  {
-    id: "jjy-331",
-    name: "일미간장게장",
-    category: "게,대게",
-    address: "서울 동대문구 장한로24길 7",
-    phone: "02-2242-4338",
-    lat: 37.57086352866605,
-    lng: 127.07139653824059,
-    kakaoUrl: "http://place.map.kakao.com/21360025",
-    naverUrl: "https://map.naver.com/p/search/%EC%9D%BC%EB%AF%B8%EA%B0%84%EC%9E%A5%EA%B2%8C%EC%9E%A5%20%EC%84%9C%EC%9A%B8%20%EB%8F%99%EB%8C%80%EB%AC%B8%EA%B5%AC%20%EC%9E%A5%ED%95%9C%EB%A1%9C24%EA%B8%B8%207",
-    rating: 3.8,
-    reviewCount: 1146,
-    photoUrl: "https://lh3.googleusercontent.com/place-photos/AG9NLjCqKdqo9R8XgfWsGpXkJ8eODAJhb3_yWNkJpW2szYfPYPVYqejI14tibo6d-qDoKeXmeNB5dfx7l4BN4ERmJmkqRcXPH-QtCqxXhfxuXTY2jXTbT4l6lwl1dulGD1d3txC32xlGkLhJRih3vA=s4800-w800",
-    youtubers: [
-      {
-        name: "쯔양",
-        videoTitle: null,
-        videoUrl: null,
-        recommendNote: "쯔양이 방문해 리뷰한 한식 맛집."
       }
     ]
   },
@@ -7096,50 +3260,6 @@ const CURATED_FOOD = [
     ]
   },
   {
-    id: "jjy-335",
-    name: "자담치킨 서울가산점",
-    category: "자담치킨",
-    address: "서울 금천구 가산로3길 65",
-    phone: "02-858-9003",
-    lat: 37.47218849636557,
-    lng: 126.89192301787415,
-    kakaoUrl: "http://place.map.kakao.com/1069592544",
-    naverUrl: "https://map.naver.com/p/search/%EC%9E%90%EB%8B%B4%EC%B9%98%ED%82%A8%20%EC%84%9C%EC%9A%B8%EA%B0%80%EC%82%B0%EC%A0%90%20%EC%84%9C%EC%9A%B8%20%EA%B8%88%EC%B2%9C%EA%B5%AC%20%EA%B0%80%EC%82%B0%EB%A1%9C3%EA%B8%B8%2065",
-    rating: 1,
-    reviewCount: 1,
-    photoUrl: null,
-    youtubers: [
-      {
-        name: "쯔양",
-        videoTitle: null,
-        videoUrl: null,
-        recommendNote: "쯔양이 방문해 리뷰한 치킨 전문점."
-      }
-    ]
-  },
-  {
-    id: "jjy-336",
-    name: "자매분식",
-    category: "분식",
-    address: "서울 중구 을지로36길 23",
-    phone: null,
-    lat: 37.56554490431684,
-    lng: 127.00168990629435,
-    kakaoUrl: "http://place.map.kakao.com/114375270",
-    naverUrl: "https://map.naver.com/p/search/%EC%9E%90%EB%A7%A4%EB%B6%84%EC%8B%9D%20%EC%84%9C%EC%9A%B8%20%EC%A4%91%EA%B5%AC%20%EC%9D%84%EC%A7%80%EB%A1%9C36%EA%B8%B8%2023",
-    rating: 4,
-    reviewCount: 16,
-    photoUrl: "https://lh3.googleusercontent.com/place-photos/AG9NLjDl8Rtr7IrqtfSPm6mfe7XJKes1-Ndl0_J0EYfol4iZALaDpF-LmBhUYUcFDq_FCLxjq4i5UaCwaKdN5oMDuaTESf-1e7qR1tR29bTyZog7bOaJCB4GFEsMeuoAPCcpDOgoCCqczAvcHQE1=s4800-w800",
-    youtubers: [
-      {
-        name: "쯔양",
-        videoTitle: null,
-        videoUrl: null,
-        recommendNote: "쯔양이 방문해 리뷰한 분식 맛집."
-      }
-    ]
-  },
-  {
     id: "jjy-337",
     name: "잠원떡볶이",
     category: "떡볶이",
@@ -7180,28 +3300,6 @@ const CURATED_FOOD = [
         videoTitle: null,
         videoUrl: null,
         recommendNote: "쯔양이 방문해 리뷰한 한식 맛집."
-      }
-    ]
-  },
-  {
-    id: "jjy-340",
-    name: "장선생밥집",
-    category: "한식",
-    address: "경남 통영시 욕지면 서촌윗길 171-39",
-    phone: "055-649-6174",
-    lat: 34.635843690815015,
-    lng: 128.26368192149516,
-    kakaoUrl: "http://place.map.kakao.com/770500774",
-    naverUrl: "https://map.naver.com/p/search/%EC%9E%A5%EC%84%A0%EC%83%9D%EB%B0%A5%EC%A7%91%20%EA%B2%BD%EB%82%A8%20%ED%86%B5%EC%98%81%EC%8B%9C%20%EC%9A%95%EC%A7%80%EB%A9%B4%20%EC%84%9C%EC%B4%8C%EC%9C%97%EA%B8%B8%20171-39",
-    rating: 5,
-    reviewCount: 2,
-    photoUrl: "https://lh3.googleusercontent.com/place-photos/AG9NLjBPVeeeKWT125DMwFMDrhA13vKdiNiVkzUZvIu4Pbsl6cj2LphW1Z33UO11lV9wvK9m6zbmMeHffUZdGbmc8X6AbQFh1nGk3i86Pk22P4V_Hvr8P-DTIdQcCuCSbBTIfxlN4F4fXEjvQrtn5htq-ybxAQ=s4800-w800",
-    youtubers: [
-      {
-        name: "쯔양",
-        videoTitle: null,
-        videoUrl: null,
-        recommendNote: "쯔양이 방문해 리뷰한 맛집."
       }
     ]
   },
@@ -7252,116 +3350,6 @@ const CURATED_FOOD = [
         videoTitle: null,
         videoUrl: null,
         recommendNote: "쯔양이 방문해 리뷰한 고기 맛집."
-      }
-    ]
-  },
-  {
-    id: "jjy-343",
-    name: "장터국수",
-    category: "국수",
-    address: "전남광주통합특별시 동구 제봉로194번길 15",
-    phone: "010-3610-6894",
-    lat: 35.1544047705296,
-    lng: 126.91711697543268,
-    kakaoUrl: "http://place.map.kakao.com/18936696",
-    naverUrl: "https://map.naver.com/p/search/%EC%9E%A5%ED%84%B0%EA%B5%AD%EC%88%98%20%EC%A0%84%EB%82%A8%EA%B4%91%EC%A3%BC%ED%86%B5%ED%95%A9%ED%8A%B9%EB%B3%84%EC%8B%9C%20%EB%8F%99%EA%B5%AC%20%EC%A0%9C%EB%B4%89%EB%A1%9C194%EB%B2%88%EA%B8%B8%2015",
-    rating: 4,
-    reviewCount: 8,
-    photoUrl: "https://lh3.googleusercontent.com/place-photos/AG9NLjACANJS7EeHY2_gdjPqo9v2RRKf7ovCXeRTeb2nopCzz_gnpUYLb6iU9A_aBDZXIW1bH5y9K-uV-NiNGNahHo_3Hha7nQns2n43DHFnTuQ-eAVSn6hiGaQnMILtITj9bnQ24q8RW62b7fod=s4800-w800",
-    youtubers: [
-      {
-        name: "쯔양",
-        videoTitle: "단돈 1000원 국수..???😳 광주 장터국수 전메뉴 먹방",
-        videoUrl: "https://www.youtube.com/watch?v=4Cujb7BvlEI",
-        recommendNote: "쯔양이 방문해 리뷰한 한식 맛집."
-      }
-    ]
-  },
-  {
-    id: "jjy-344",
-    name: "전농곱창싱",
-    category: "곱창,막창",
-    address: "서울 동대문구 전농로14길 14",
-    phone: "02-2248-6191",
-    lat: 37.5761406676034,
-    lng: 127.058246063905,
-    kakaoUrl: "http://place.map.kakao.com/12998369",
-    naverUrl: "https://map.naver.com/p/search/%EC%A0%84%EB%86%8D%EA%B3%B1%EC%B0%BD%EC%8B%B1%20%EC%84%9C%EC%9A%B8%20%EB%8F%99%EB%8C%80%EB%AC%B8%EA%B5%AC%20%EC%A0%84%EB%86%8D%EB%A1%9C14%EA%B8%B8%2014",
-    rating: 4.5,
-    reviewCount: 76,
-    photoUrl: "https://lh3.googleusercontent.com/place-photos/AG9NLjAGH4VxSNQNO-zVaYA-qoPDBmDUG4rHydP_v7sst0cjLr1xwej8Tgg5j2j-Mg2jUzAzj_oidItyLZoKsrVOFnhMJGrg50Q26uFX14sd0fFyEjN9Js5jXMU6eH99O_5hPQ3VB72sfvP0U0QyT4K4p6QM6w=s4800-w800",
-    youtubers: [
-      {
-        name: "쯔양",
-        videoTitle: null,
-        videoUrl: null,
-        recommendNote: "쯔양이 방문해 리뷰한 한식 맛집."
-      }
-    ]
-  },
-  {
-    id: "jjy-345",
-    name: "전원분식",
-    category: "분식",
-    address: "경남 통영시 욕지면 서촌아랫길 130",
-    phone: "010-9240-3740",
-    lat: 34.63484919842879,
-    lng: 128.26362321614724,
-    kakaoUrl: "http://place.map.kakao.com/283087337",
-    naverUrl: "https://map.naver.com/p/search/%EC%A0%84%EC%9B%90%EB%B6%84%EC%8B%9D%20%EA%B2%BD%EB%82%A8%20%ED%86%B5%EC%98%81%EC%8B%9C%20%EC%9A%95%EC%A7%80%EB%A9%B4%20%EC%84%9C%EC%B4%8C%EC%95%84%EB%9E%AB%EA%B8%B8%20130",
-    rating: null,
-    reviewCount: null,
-    photoUrl: null,
-    youtubers: [
-      {
-        name: "쯔양",
-        videoTitle: null,
-        videoUrl: null,
-        recommendNote: "쯔양이 방문해 리뷰한 분식 맛집."
-      }
-    ]
-  },
-  {
-    id: "jjy-346",
-    name: "전주맛자랑",
-    category: "한식",
-    address: "서울 강남구 논현로151길 26",
-    phone: "02-514-7992",
-    lat: 37.5199154116172,
-    lng: 127.02610801994695,
-    kakaoUrl: "http://place.map.kakao.com/9934784",
-    naverUrl: "https://map.naver.com/p/search/%EC%A0%84%EC%A3%BC%EB%A7%9B%EC%9E%90%EB%9E%91%20%EC%84%9C%EC%9A%B8%20%EA%B0%95%EB%82%A8%EA%B5%AC%20%EB%85%BC%ED%98%84%EB%A1%9C151%EA%B8%B8%2026",
-    rating: 4.5,
-    reviewCount: 74,
-    photoUrl: "https://lh3.googleusercontent.com/place-photos/AG9NLjAiafK-uPsvA779gZUMKSmyYgVSygCdXYWXwwSdp0y8N-nYqrS3S43chz95wVlU4yEiJznNIGmtYEz7g40jt35rPbT3hyF8hSFAzjYfwlr6U1r9FpOv2gIUSJYIZRlOy4Nc5mq0pMfm1_rChQ=s4800-w800",
-    youtubers: [
-      {
-        name: "쯔양",
-        videoTitle: null,
-        videoUrl: null,
-        recommendNote: "쯔양이 방문해 리뷰한 한식 맛집."
-      }
-    ]
-  },
-  {
-    id: "jjy-347",
-    name: "전주비빔밥",
-    category: "한식",
-    address: "서울 동대문구 고산자로36길 3",
-    phone: "02-965-5608",
-    lat: 37.5791532404122,
-    lng: 127.03951115266412,
-    kakaoUrl: "http://place.map.kakao.com/682548398",
-    naverUrl: "https://map.naver.com/p/search/%EC%A0%84%EC%A3%BC%EB%B9%84%EB%B9%94%EB%B0%A5%20%EC%84%9C%EC%9A%B8%20%EB%8F%99%EB%8C%80%EB%AC%B8%EA%B5%AC%20%EA%B3%A0%EC%82%B0%EC%9E%90%EB%A1%9C36%EA%B8%B8%203",
-    rating: 3.7,
-    reviewCount: 102,
-    photoUrl: "https://lh3.googleusercontent.com/place-photos/AG9NLjA5Y_6AVVu6ZjxB2iT-TZ0IVT8O-NwWBKCOHjNfHGYCANfHhvN6tdZKSf1GQYXkGpvbyWr5LYCHBd8gOZI1oRZqu0VZuIGGBwr9cK4iu0fDNyRZEeUu0i1SwRr2jh9wONfTWa5mImxoQyqjzw=s4800-w800",
-    youtubers: [
-      {
-        name: "쯔양",
-        videoTitle: null,
-        videoUrl: null,
-        recommendNote: "쯔양이 방문해 리뷰한 한식 맛집."
       }
     ]
   },
@@ -7454,28 +3442,6 @@ const CURATED_FOOD = [
     ]
   },
   {
-    id: "jjy-352",
-    name: "정토스트",
-    category: "토스트",
-    address: "충북 청주시 청원구 향군로41번길 22",
-    phone: null,
-    lat: 36.6488324967126,
-    lng: 127.485365361666,
-    kakaoUrl: "http://place.map.kakao.com/2130406169",
-    naverUrl: "https://map.naver.com/p/search/%EC%A0%95%ED%86%A0%EC%8A%A4%ED%8A%B8%20%EC%B6%A9%EB%B6%81%20%EC%B2%AD%EC%A3%BC%EC%8B%9C%20%EC%B2%AD%EC%9B%90%EA%B5%AC%20%ED%96%A5%EA%B5%B0%EB%A1%9C41%EB%B2%88%EA%B8%B8%2022",
-    rating: 4.5,
-    reviewCount: 2,
-    photoUrl: null,
-    youtubers: [
-      {
-        name: "쯔양",
-        videoTitle: null,
-        videoUrl: null,
-        recommendNote: "쯔양이 방문해 리뷰한 패스트푸드 맛집."
-      }
-    ]
-  },
-  {
     id: "jjy-354",
     name: "제일곱창 본점",
     category: "곱창,막창",
@@ -7520,116 +3486,6 @@ const CURATED_FOOD = [
     ]
   },
   {
-    id: "jjy-358",
-    name: "제주라면 2호점",
-    category: "분식",
-    address: "제주특별자치도 제주시 서해안로 210",
-    phone: "0507-1439-9666",
-    lat: 33.50694524396482,
-    lng: 126.46987506474804,
-    kakaoUrl: "http://place.map.kakao.com/334649458",
-    naverUrl: "https://map.naver.com/p/search/%EC%A0%9C%EC%A3%BC%EB%9D%BC%EB%A9%B4%202%ED%98%B8%EC%A0%90%20%EC%A0%9C%EC%A3%BC%ED%8A%B9%EB%B3%84%EC%9E%90%EC%B9%98%EB%8F%84%20%EC%A0%9C%EC%A3%BC%EC%8B%9C%20%EC%84%9C%ED%95%B4%EC%95%88%EB%A1%9C%20210",
-    rating: 3.5,
-    reviewCount: 36,
-    photoUrl: "https://lh3.googleusercontent.com/place-photos/AG9NLjAzxAzd2P_-WDjFtWEnrkt6eeHE2CvHEHepq4803YRBmAegyzLBwMxqT0h1Z89X1umVjJVbUsCzJ64bxFpsGRJQ43tmMgEMsC5V0mpXtJ9E8tTeUXw9lS9gaZhd-T3CFemV_CDU383RIaaDxUTOHKpJ=s4800-w800",
-    youtubers: [
-      {
-        name: "쯔양",
-        videoTitle: null,
-        videoUrl: null,
-        recommendNote: "쯔양이 방문해 리뷰한 한식 맛집."
-      }
-    ]
-  },
-  {
-    id: "jjy-359",
-    name: "빨간오뎅보금자리",
-    category: "분식",
-    address: "충북 제천시 의병대로18길 2",
-    phone: "043-643-6395",
-    lat: 37.1355411783539,
-    lng: 128.211944287022,
-    kakaoUrl: "http://place.map.kakao.com/353997698",
-    naverUrl: "https://map.naver.com/p/search/%EB%B9%A8%EA%B0%84%EC%98%A4%EB%8E%85%EB%B3%B4%EA%B8%88%EC%9E%90%EB%A6%AC%20%EC%B6%A9%EB%B6%81%20%EC%A0%9C%EC%B2%9C%EC%8B%9C%20%EC%9D%98%EB%B3%91%EB%8C%80%EB%A1%9C18%EA%B8%B8%202",
-    rating: 3.7,
-    reviewCount: 42,
-    photoUrl: "https://lh3.googleusercontent.com/place-photos/AG9NLjD7ilroUpYdgNvsIKzeu1_Wv5SS19k80peqFL56fQHbqlDmVOXE6t3f55DKBPaQxb3GaZCOkOWRLg_HgSPZmHR9C3YoBrDJbvBAdflqr8ET3f1PdngpYKkHgYQzrc3RH0EvdUE6O8KbDaNsCYLWLUex=s4800-w800",
-    youtubers: [
-      {
-        name: "쯔양",
-        videoTitle: null,
-        videoUrl: null,
-        recommendNote: "쯔양이 방문해 리뷰한 분식 맛집."
-      }
-    ]
-  },
-  {
-    id: "jjy-360",
-    name: "조가네족발왕",
-    category: "족발,보쌈",
-    address: "서울 동작구 동작대로23길 21",
-    phone: "02-522-2777",
-    lat: 37.4840746836425,
-    lng: 126.980543669372,
-    kakaoUrl: "http://place.map.kakao.com/1930777703",
-    naverUrl: "https://map.naver.com/p/search/%EC%A1%B0%EA%B0%80%EB%84%A4%EC%A1%B1%EB%B0%9C%EC%99%95%20%EC%84%9C%EC%9A%B8%20%EB%8F%99%EC%9E%91%EA%B5%AC%20%EB%8F%99%EC%9E%91%EB%8C%80%EB%A1%9C23%EA%B8%B8%2021",
-    rating: 4.4,
-    reviewCount: 24,
-    photoUrl: "https://lh3.googleusercontent.com/place-photos/AG9NLjBWM0On-xoIxByZbIS7MDaGvpd4StVHFqC6p6ImftgkWGC0rUgWiYGXiWuh7wJvWzWaaYYD0Ff0HaC6MUXgnG8ob6XLljz6iaL1atJ1aB6K7eGlvKO_7HL3optsAyADiZ_IuPLdOfTH6o7crqI=s4800-w800",
-    youtubers: [
-      {
-        name: "쯔양",
-        videoTitle: null,
-        videoUrl: null,
-        recommendNote: "쯔양이 방문해 리뷰한 족발·보쌈 맛집."
-      }
-    ]
-  },
-  {
-    id: "jjy-361",
-    name: "조개사랑",
-    category: "조개",
-    address: "충남 당진시 신평면 삽교천3길 84",
-    phone: "041-362-3370",
-    lat: 36.89024490589739,
-    lng: 126.82443470575969,
-    kakaoUrl: "http://place.map.kakao.com/15960884",
-    naverUrl: "https://map.naver.com/p/search/%EC%A1%B0%EA%B0%9C%EC%82%AC%EB%9E%91%20%EC%B6%A9%EB%82%A8%20%EB%8B%B9%EC%A7%84%EC%8B%9C%20%EC%8B%A0%ED%8F%89%EB%A9%B4%20%EC%82%BD%EA%B5%90%EC%B2%9C3%EA%B8%B8%2084",
-    rating: 4.6,
-    reviewCount: 12,
-    photoUrl: "https://lh3.googleusercontent.com/place-photos/AG9NLjB9Ymf8cuHHuLSRc9Fw_vHBoyUJ0jNMeQL2NLIYPZBXF1cvX6L37lQ38b9-QZEhP5kHMpPDR0Hu8kZ8Cva7AFztSr4M13VJ0ShBeXL4o97eM_ibzDjEiIHwHB5zebD4BeSInqE6s06JS5HPnq4ucN8wgA=s4800-w800",
-    youtubers: [
-      {
-        name: "쯔양",
-        videoTitle: null,
-        videoUrl: null,
-        recommendNote: "쯔양이 방문해 리뷰한 돈까스·회 전문점."
-      }
-    ]
-  },
-  {
-    id: "jjy-362",
-    name: "족발신선생 선릉김승수점",
-    category: "족발신선생",
-    address: "서울 강남구 역삼로63길 24",
-    phone: "02-6952-4646",
-    lat: 37.5027805604381,
-    lng: 127.052000534347,
-    kakaoUrl: "http://place.map.kakao.com/1361454624",
-    naverUrl: "https://map.naver.com/p/search/%EC%A1%B1%EB%B0%9C%EC%8B%A0%EC%84%A0%EC%83%9D%20%EC%84%A0%EB%A6%89%EA%B9%80%EC%8A%B9%EC%88%98%EC%A0%90%20%EC%84%9C%EC%9A%B8%20%EA%B0%95%EB%82%A8%EA%B5%AC%20%EC%97%AD%EC%82%BC%EB%A1%9C63%EA%B8%B8%2024",
-    rating: 3,
-    reviewCount: 3,
-    photoUrl: "https://lh3.googleusercontent.com/place-photos/AG9NLjAuampxTKPt_YRmnbkOvl3zCvCk25V-gg3EihAgakdXB5mw1r5hUguG_J25krhe_BhuHFJbX1x_OLZbbWZgMzDNagb6IDCYp9V7r-1dce5m4qCtI93vJMWWMqFkLb0PaLcJQ630v4rBHYgb=s4800-w300",
-    youtubers: [
-      {
-        name: "쯔양",
-        videoTitle: null,
-        videoUrl: null,
-        recommendNote: "쯔양이 방문해 리뷰한 족발·보쌈 맛집."
-      }
-    ]
-  },
-  {
     id: "jjy-364",
     name: "중앙식당",
     category: "해물,생선",
@@ -7670,28 +3526,6 @@ const CURATED_FOOD = [
         videoTitle: "줄서서 먹는 인생 맛집..?!🥺중앙해장🔥 곱창만 3kg 들어간 곱창전골 먹방",
         videoUrl: "https://www.youtube.com/watch?v=oIekVa6OA-8",
         recommendNote: "쯔양이 방문해 리뷰한 한식 맛집."
-      }
-    ]
-  },
-  {
-    id: "jjy-366",
-    name: "정궁중화요리",
-    category: "중국요리",
-    address: "서울 동대문구 약령시로 116",
-    phone: "02-963-4210",
-    lat: 37.5829155181329,
-    lng: 127.042872227605,
-    kakaoUrl: "http://place.map.kakao.com/15810574",
-    naverUrl: "https://map.naver.com/p/search/%EC%A0%95%EA%B6%81%EC%A4%91%ED%99%94%EC%9A%94%EB%A6%AC%20%EC%84%9C%EC%9A%B8%20%EB%8F%99%EB%8C%80%EB%AC%B8%EA%B5%AC%20%EC%95%BD%EB%A0%B9%EC%8B%9C%EB%A1%9C%20116",
-    rating: null,
-    reviewCount: null,
-    photoUrl: null,
-    youtubers: [
-      {
-        name: "쯔양",
-        videoTitle: null,
-        videoUrl: null,
-        recommendNote: "쯔양이 방문해 리뷰한 중식 맛집."
       }
     ]
   },
@@ -7742,116 +3576,6 @@ const CURATED_FOOD = [
         videoTitle: null,
         videoUrl: null,
         recommendNote: "대림역 인근의 양꼬치·양다리구이 맛집으로 소개됐다."
-      }
-    ]
-  },
-  {
-    id: "jjy-369",
-    name: "즉떡이네",
-    category: "떡볶이",
-    address: "서울 강동구 천호옛길 96",
-    phone: "02-477-9267",
-    lat: 37.5371357378669,
-    lng: 127.126148353868,
-    kakaoUrl: "http://place.map.kakao.com/27245818",
-    naverUrl: "https://map.naver.com/p/search/%EC%A6%89%EB%96%A1%EC%9D%B4%EB%84%A4%20%EC%84%9C%EC%9A%B8%20%EA%B0%95%EB%8F%99%EA%B5%AC%20%EC%B2%9C%ED%98%B8%EC%98%9B%EA%B8%B8%2096",
-    rating: 3.3,
-    reviewCount: 3,
-    photoUrl: "https://lh3.googleusercontent.com/place-photos/AG9NLjCDGUtqKD4Y94O_v6sA2o55Q4RioEwZczo6vkheklnIsfGOLy0OvGEtoMWx8JzAxfXeTVLkSNU8ciqpQOCes7q83z0tlEwSKAO5xXwQBO2zvyBEmPWEXEIYK7UeP0zzK3_BxyRQ7JrcWJM-Sw=s4800-w800",
-    youtubers: [
-      {
-        name: "쯔양",
-        videoTitle: null,
-        videoUrl: null,
-        recommendNote: "쯔양이 방문해 리뷰한 분식 맛집."
-      }
-    ]
-  },
-  {
-    id: "jjy-370",
-    name: "지린성",
-    category: "중국요리",
-    address: "전북특별자치도 군산시 미원로 87",
-    phone: "063-467-2905",
-    lat: 35.97965477064132,
-    lng: 126.71396085989238,
-    kakaoUrl: "http://place.map.kakao.com/421048086",
-    naverUrl: "https://map.naver.com/p/search/%EC%A7%80%EB%A6%B0%EC%84%B1%20%EC%A0%84%EB%B6%81%ED%8A%B9%EB%B3%84%EC%9E%90%EC%B9%98%EB%8F%84%20%EA%B5%B0%EC%82%B0%EC%8B%9C%20%EB%AF%B8%EC%9B%90%EB%A1%9C%2087",
-    rating: 3.5,
-    reviewCount: 3583,
-    photoUrl: "https://lh3.googleusercontent.com/place-photos/AG9NLjAWVAXNAJoZw1HQrsSUWd3fXaQpS9ZkcJtVBrXnkcUVU9QazpytTdVUI2k8pMSg957IPDjLwzojNQ99vCR6yND0ntq31j0vaNsbmOu4lyektPtb1uQuWBBKfRoVO155qNH0MxQh_hJp-d-ZyEw=s4800-w800",
-    youtubers: [
-      {
-        name: "쯔양",
-        videoTitle: null,
-        videoUrl: null,
-        recommendNote: "쯔양이 방문해 리뷰한 중식 맛집."
-      }
-    ]
-  },
-  {
-    id: "jjy-371",
-    name: "지미존스 서강대점",
-    category: "샌드위치",
-    address: "서울 마포구 백범로 28",
-    phone: "02-712-2024",
-    lat: 37.5520644956517,
-    lng: 126.93697434513,
-    kakaoUrl: "http://place.map.kakao.com/937173939",
-    naverUrl: "https://map.naver.com/p/search/%EC%A7%80%EB%AF%B8%EC%A1%B4%EC%8A%A4%20%EC%84%9C%EA%B0%95%EB%8C%80%EC%A0%90%20%EC%84%9C%EC%9A%B8%20%EB%A7%88%ED%8F%AC%EA%B5%AC%20%EB%B0%B1%EB%B2%94%EB%A1%9C%2028",
-    rating: 4.3,
-    reviewCount: 3,
-    photoUrl: "https://lh3.googleusercontent.com/place-photos/AG9NLjBs67qzMR4B-YzlaRsnciK31MuRY8K8YGv-WUk8s7qaZcowV8NEFqNZ0Ookf8Zy4DO45eTinse5j_9V2LwplgPUo0SpxMSMb0TD2XUMmOjuoDU8ZB64rHbcgpfeqNxuAR2MzMa7MW68pjJFF5UJIzNi=s4800-w800",
-    youtubers: [
-      {
-        name: "쯔양",
-        videoTitle: null,
-        videoUrl: null,
-        recommendNote: "쯔양이 방문해 리뷰한 패스트푸드 맛집."
-      }
-    ]
-  },
-  {
-    id: "jjy-372",
-    name: "지하식당",
-    category: "중국요리",
-    address: "전남광주통합특별시 서구 천변좌로 154",
-    phone: "062-364-1448",
-    lat: 35.15910496062275,
-    lng: 126.89560551144865,
-    kakaoUrl: "http://place.map.kakao.com/8584787",
-    naverUrl: "https://map.naver.com/p/search/%EC%A7%80%ED%95%98%EC%8B%9D%EB%8B%B9%20%EC%A0%84%EB%82%A8%EA%B4%91%EC%A3%BC%ED%86%B5%ED%95%A9%ED%8A%B9%EB%B3%84%EC%8B%9C%20%EC%84%9C%EA%B5%AC%20%EC%B2%9C%EB%B3%80%EC%A2%8C%EB%A1%9C%20154",
-    rating: 3.7,
-    reviewCount: 40,
-    photoUrl: "https://lh3.googleusercontent.com/place-photos/AG9NLjDjZcY5S5O0qQSfiq9u2iu2YFKQypZkA3U0s8J1e56mcCOmsLJVetjXpuXRxZ7_G1y_ayoqEkiae4-LwqH7f2OR1-S9esl8q4LmcHVyFoV99rkdo5J_iqpW3buEv5TAcVxApXoJUP-ZntnX8g=s4800-w800",
-    youtubers: [
-      {
-        name: "쯔양",
-        videoTitle: null,
-        videoUrl: null,
-        recommendNote: "쯔양이 방문해 리뷰한 중식 맛집."
-      }
-    ]
-  },
-  {
-    id: "jjy-373",
-    name: "지호한방삼계탕 구리직영점",
-    category: "지호한방삼계탕",
-    address: "경기 구리시 벌말로80번길 82",
-    phone: "031-567-3339",
-    lat: 37.5813144509714,
-    lng: 127.14990576274,
-    kakaoUrl: "http://place.map.kakao.com/99607938",
-    naverUrl: "https://map.naver.com/p/search/%EC%A7%80%ED%98%B8%ED%95%9C%EB%B0%A9%EC%82%BC%EA%B3%84%ED%83%95%20%EA%B5%AC%EB%A6%AC%EC%A7%81%EC%98%81%EC%A0%90%20%EA%B2%BD%EA%B8%B0%20%EA%B5%AC%EB%A6%AC%EC%8B%9C%20%EB%B2%8C%EB%A7%90%EB%A1%9C80%EB%B2%88%EA%B8%B8%2082",
-    rating: 4.3,
-    reviewCount: 95,
-    photoUrl: "https://lh3.googleusercontent.com/place-photos/AG9NLjCcAWHSEKzmMzG4NmMWx19fqm8zGqy8dyv381LAKXcffsPeu7wN79GOJJpyGoWJDGMwBusXJRs64TcM9tQTygU1fF_uzJsWUEp-LON3fc7CeXz1JOtklc0O8v3F9jyqg6-NPlsl-e6lvTdaCA=s4800-w800",
-    youtubers: [
-      {
-        name: "쯔양",
-        videoTitle: null,
-        videoUrl: null,
-        recommendNote: "쯔양이 방문해 리뷰한 찜·탕 맛집."
       }
     ]
   },
@@ -7950,50 +3674,6 @@ const CURATED_FOOD = [
     ]
   },
   {
-    id: "jjy-378",
-    name: "오뎅이랑정종",
-    category: "오뎅바",
-    address: "서울 관악구 남현1길 58",
-    phone: "02-581-8950",
-    lat: 37.475749368064,
-    lng: 126.980600093289,
-    kakaoUrl: "http://place.map.kakao.com/21330749",
-    naverUrl: "https://map.naver.com/p/search/%EC%98%A4%EB%8E%85%EC%9D%B4%EB%9E%91%EC%A0%95%EC%A2%85%20%EC%84%9C%EC%9A%B8%20%EA%B4%80%EC%95%85%EA%B5%AC%20%EB%82%A8%ED%98%841%EA%B8%B8%2058",
-    rating: 4.1,
-    reviewCount: 49,
-    photoUrl: "https://lh3.googleusercontent.com/place-photos/AG9NLjD1_YF2QVJTwd7hFrZ5K7jpdtZ5WfXaTi7GuP5vevSMBjYgvGoJX83vvh-jblBzbgymKMQlj5zejl4tov4YwmlR22SpFXB5c2XZffKYJyfG-3KCzaUYd1SpSFJ6y4ELy8J3HQQvt44O-tVJ=s4800-w800",
-    youtubers: [
-      {
-        name: "쯔양",
-        videoTitle: null,
-        videoUrl: null,
-        recommendNote: "쯔양이 방문해 리뷰한 야식 맛집."
-      }
-    ]
-  },
-  {
-    id: "jjy-379",
-    name: "짬뽕일상",
-    category: "중국요리",
-    address: "경기 화성시 만세구 향남읍 토성로 33",
-    phone: "031-366-1318",
-    lat: 37.1283546058785,
-    lng: 126.93304549635,
-    kakaoUrl: "http://place.map.kakao.com/144542448",
-    naverUrl: "https://map.naver.com/p/search/%EC%A7%AC%EB%BD%95%EC%9D%BC%EC%83%81%20%EA%B2%BD%EA%B8%B0%20%ED%99%94%EC%84%B1%EC%8B%9C%20%EB%A7%8C%EC%84%B8%EA%B5%AC%20%ED%96%A5%EB%82%A8%EC%9D%8D%20%ED%86%A0%EC%84%B1%EB%A1%9C%2033",
-    rating: 4.4,
-    reviewCount: 44,
-    photoUrl: "https://lh3.googleusercontent.com/place-photos/AG9NLjCQ2oGb6fQe1dvW5RV_X5rQfqBwRN21ydnS_KSZIhVX5DYkGFkMEiNKAWBdq2_cYXJFEO_P9NTfnqz0nK8q6lIpHH1w3nVKUPovDJgrPpNPVxE5wkh3W1XHCi3siZujAE-1v-1mU_vxxDK8=s4800-w800",
-    youtubers: [
-      {
-        name: "쯔양",
-        videoTitle: null,
-        videoUrl: null,
-        recommendNote: "쯔양이 방문해 리뷰한 중식 맛집."
-      }
-    ]
-  },
-  {
     id: "jjy-380",
     name: "찌마기 송파문정점",
     category: "조개",
@@ -8012,72 +3692,6 @@ const CURATED_FOOD = [
         videoTitle: null,
         videoUrl: null,
         recommendNote: "쯔양이 방문해 리뷰한 찜·탕 맛집."
-      }
-    ]
-  },
-  {
-    id: "jjy-381",
-    name: "100년가 공화춘 천안삼거리휴게소 서울방향점",
-    category: "중국요리",
-    address: "충남 천안시 동남구 쉼1길 42",
-    phone: "041-551-2480",
-    lat: 36.78760192067439,
-    lng: 127.17361336157182,
-    kakaoUrl: "http://place.map.kakao.com/2041008961",
-    naverUrl: "https://map.naver.com/p/search/100%EB%85%84%EA%B0%80%20%EA%B3%B5%ED%99%94%EC%B6%98%20%EC%B2%9C%EC%95%88%EC%82%BC%EA%B1%B0%EB%A6%AC%ED%9C%B4%EA%B2%8C%EC%86%8C%20%EC%84%9C%EC%9A%B8%EB%B0%A9%ED%96%A5%EC%A0%90%20%EC%B6%A9%EB%82%A8%20%EC%B2%9C%EC%95%88%EC%8B%9C%20%EB%8F%99%EB%82%A8%EA%B5%AC%20%EC%89%BC1%EA%B8%B8%2042",
-    rating: 3.8,
-    reviewCount: 7800,
-    photoUrl: "https://lh3.googleusercontent.com/place-photos/AG9NLjD6chGXOQ66Z3OivPPLfR0gAgvWLj4E6Xu-OUy7FULwLt2eXPR39kwkwRiUQJXyK_dDAG1lQQsi2pTHk4xgHbkBTaS53pAPLoHoT_gtPlc0UspFR9bLxsQWFfr2KRRF-_GmsLpfoc9xqM5CCAYG_qP1WQ=s4800-w800",
-    youtubers: [
-      {
-        name: "쯔양",
-        videoTitle: null,
-        videoUrl: null,
-        recommendNote: "쯔양이 방문해 리뷰한 한식 맛집."
-      }
-    ]
-  },
-  {
-    id: "jjy-382",
-    name: "천원국수",
-    category: "국수",
-    address: "충남 천안시 동남구 문암로 66",
-    phone: "041-554-0965",
-    lat: 36.84069621377791,
-    lng: 127.1808523648596,
-    kakaoUrl: "http://place.map.kakao.com/15746761",
-    naverUrl: "https://map.naver.com/p/search/%EC%B2%9C%EC%9B%90%EA%B5%AD%EC%88%98%20%EC%B6%A9%EB%82%A8%20%EC%B2%9C%EC%95%88%EC%8B%9C%20%EB%8F%99%EB%82%A8%EA%B5%AC%20%EB%AC%B8%EC%95%94%EB%A1%9C%2066",
-    rating: 4.1,
-    reviewCount: 28,
-    photoUrl: "https://lh3.googleusercontent.com/place-photos/AG9NLjDsFKV57p-YrJx9GhHz0UX11RZmyS8JZa3wt6qZtAO9mDt3HQC06zlQKYupVp4Biofs1lvsi7KJGETVNLDmByAap47x9E6yBd1uWuArCsCv_LN7qmSzSU79fUaryuAcjaldBW1pBlxF8YEeOoQ=s4800-w800",
-    youtubers: [
-      {
-        name: "쯔양",
-        videoTitle: null,
-        videoUrl: null,
-        recommendNote: "쯔양이 방문해 리뷰한 분식 맛집."
-      }
-    ]
-  },
-  {
-    id: "jjy-383",
-    name: "천원분식",
-    category: "분식",
-    address: "제주특별자치도 제주시 관덕로8길 22",
-    phone: "064-753-3397",
-    lat: 33.51129464561127,
-    lng: 126.52315065613529,
-    kakaoUrl: "http://place.map.kakao.com/12637040",
-    naverUrl: "https://map.naver.com/p/search/%EC%B2%9C%EC%9B%90%EB%B6%84%EC%8B%9D%20%EC%A0%9C%EC%A3%BC%ED%8A%B9%EB%B3%84%EC%9E%90%EC%B9%98%EB%8F%84%20%EC%A0%9C%EC%A3%BC%EC%8B%9C%20%EA%B4%80%EB%8D%95%EB%A1%9C8%EA%B8%B8%2022",
-    rating: 5,
-    reviewCount: 11,
-    photoUrl: "https://lh3.googleusercontent.com/place-photos/AG9NLjB48z37L8i3JYrDWrV0rYojvaU5F0JMFZ5riZtpDrU6uBbZ3_9WKnUg-gtKn8YFWDSlSgeqmXo86cGz5K7mmtr4DhlRMJqH5al7PNWWNxGp50H_ULbpg6FGNT24iHs1mweWlHanJd81JZZwUQ=s4800-w800",
-    youtubers: [
-      {
-        name: "쯔양",
-        videoTitle: null,
-        videoUrl: null,
-        recommendNote: "쯔양이 방문해 리뷰한 분식 맛집."
       }
     ]
   },
@@ -8122,96 +3736,6 @@ const CURATED_FOOD = [
         videoTitle: null,
         videoUrl: null,
         recommendNote: "쯔양이 방문해 리뷰한 한식 맛집."
-      }
-    ]
-  },
-  {
-    id: "jjy-386",
-    name: "철원막국수",
-    category: "국수",
-    address: "강원특별자치도 철원군 갈말읍 명성로158번길 13",
-    phone: "033-452-2589",
-    lat: 38.1459754194437,
-    lng: 127.30874930512,
-    kakaoUrl: "http://place.map.kakao.com/9458545",
-    naverUrl: "https://map.naver.com/p/search/%EC%B2%A0%EC%9B%90%EB%A7%89%EA%B5%AD%EC%88%98%20%EA%B0%95%EC%9B%90%ED%8A%B9%EB%B3%84%EC%9E%90%EC%B9%98%EB%8F%84%20%EC%B2%A0%EC%9B%90%EA%B5%B0%20%EA%B0%88%EB%A7%90%EC%9D%8D%20%EB%AA%85%EC%84%B1%EB%A1%9C158%EB%B2%88%EA%B8%B8%2013",
-    rating: 3.9,
-    reviewCount: 1743,
-    photoUrl: "https://lh3.googleusercontent.com/place-photos/AG9NLjCzWtEU9AfFkx2pYxjUbOS4AdaRgpQJPwqq-5Yl5S_gU0QATUSLc3RI2llzBWGDmlct0fZULsjBtzEwqQ-ffF1Kry-m9I5jTxrDBG1yHJ5WlvLHN5o_uZNR3tvSDlFbqGosdLMJxNJPR_b7joc=s4800-w800",
-    certification: "백년가게(중소벤처기업부 공식 인증)",
-    recommendNote: "오랜 기간 한 자리를 지켜온 노포로, 중소벤처기업부가 백년가게로 공식 인증한 곳입니다.",
-    youtubers: [
-      {
-        name: "쯔양",
-        videoTitle: null,
-        videoUrl: null,
-        recommendNote: "쯔양이 방문해 리뷰한 한식 맛집."
-      }
-    ]
-  },
-  {
-    id: "jjy-387",
-    name: "청년다방 양재시민의숲역점",
-    category: "청년다방",
-    address: "서울 서초구 강남대로12길 23-15",
-    phone: "02-2088-1214",
-    lat: 37.47017785742735,
-    lng: 127.03967868135825,
-    kakaoUrl: "http://place.map.kakao.com/1688975890",
-    naverUrl: "https://map.naver.com/p/search/%EC%B2%AD%EB%85%84%EB%8B%A4%EB%B0%A9%20%EC%96%91%EC%9E%AC%EC%8B%9C%EB%AF%BC%EC%9D%98%EC%88%B2%EC%97%AD%EC%A0%90%20%EC%84%9C%EC%9A%B8%20%EC%84%9C%EC%B4%88%EA%B5%AC%20%EA%B0%95%EB%82%A8%EB%8C%80%EB%A1%9C12%EA%B8%B8%2023-15",
-    rating: 4.2,
-    reviewCount: 28,
-    photoUrl: "https://lh3.googleusercontent.com/place-photos/AG9NLjCvsBfte79I_9UOz79qiGfaSBB56X7PkJz8DiAd59hmnCj8eYw0GlAh7LhFwrBjJu6HXmu-tvo5dOpjd1iAj1WAiT1gtwMNtU4dlJvW07QIAjPEwhjGXohi_4YtRDbPBh5g0BFOutpEoO73_k8=s4800-w800",
-    youtubers: [
-      {
-        name: "쯔양",
-        videoTitle: null,
-        videoUrl: null,
-        recommendNote: "쯔양이 방문해 리뷰한 분식 맛집."
-      }
-    ]
-  },
-  {
-    id: "jjy-388",
-    name: "청수",
-    category: "냉면",
-    address: "서울 영등포구 국제금융로 112",
-    phone: "02-784-1559",
-    lat: 37.518360928834404,
-    lng: 126.93397342127108,
-    kakaoUrl: "http://place.map.kakao.com/20746105",
-    naverUrl: "https://map.naver.com/p/search/%EC%B2%AD%EC%88%98%20%EC%84%9C%EC%9A%B8%20%EC%98%81%EB%93%B1%ED%8F%AC%EA%B5%AC%20%EA%B5%AD%EC%A0%9C%EA%B8%88%EC%9C%B5%EB%A1%9C%20112",
-    rating: 3.9,
-    reviewCount: 1355,
-    photoUrl: "https://lh3.googleusercontent.com/place-photos/AG9NLjBms8HIZm9cmDM8zTLOdn3_c4VsPSE89KRKEOQSvqo3qTGkNy8VaOFR2C8BVorgvLCXzhUSYpvn9U0iwCRyA5ImtBAfavr8tt8NaapAoSngrw_QMrOEzR1ym979OcI_gsgUC9NRvDc5YZVXHNWNEo59Aw=s4800-w800",
-    youtubers: [
-      {
-        name: "쯔양",
-        videoTitle: "여의도 주민은 다 안다는 40년전통 맛집?😳 청수모밀 먹방",
-        videoUrl: "https://www.youtube.com/watch?v=lx9-ecadk7U",
-        recommendNote: "쯔양이 방문해 리뷰한 한식 맛집."
-      }
-    ]
-  },
-  {
-    id: "jjy-389",
-    name: "청해조개구이회센타 영미네맛집",
-    category: "회",
-    address: "충남 당진시 신평면 삽교천3길 20",
-    phone: "041-362-8889",
-    lat: 36.8902858878102,
-    lng: 126.822904426381,
-    kakaoUrl: "http://place.map.kakao.com/838893716",
-    naverUrl: "https://map.naver.com/p/search/%EC%B2%AD%ED%95%B4%EC%A1%B0%EA%B0%9C%EA%B5%AC%EC%9D%B4%ED%9A%8C%EC%84%BC%ED%83%80%20%EC%98%81%EB%AF%B8%EB%84%A4%EB%A7%9B%EC%A7%91%20%EC%B6%A9%EB%82%A8%20%EB%8B%B9%EC%A7%84%EC%8B%9C%20%EC%8B%A0%ED%8F%89%EB%A9%B4%20%EC%82%BD%EA%B5%90%EC%B2%9C3%EA%B8%B8%2020",
-    rating: 3.3,
-    reviewCount: 131,
-    photoUrl: "https://lh3.googleusercontent.com/place-photos/AG9NLjCTlHzAUoiAI0L4PKJ98KKCPJuVQC2OO6qMYSOGBThCIRq3FnpDwq23ymmFW2FYUadM-riaVKNAtJ5PudvqtPZxMc8qdLALV-1hfdq8Z8Lru0hJX7v0UVt4nWrtMg_Jl4ubPhc-45PmuSd3cQ=s4800-w800",
-    youtubers: [
-      {
-        name: "쯔양",
-        videoTitle: null,
-        videoUrl: null,
-        recommendNote: "쯔양이 방문해 리뷰한 돈까스·회 전문점."
       }
     ]
   },
@@ -8282,50 +3806,6 @@ const CURATED_FOOD = [
     ]
   },
   {
-    id: "jjy-393",
-    name: "초원튀김전문점",
-    category: "분식",
-    address: "경기 고양시 덕양구 마상로154번길 34",
-    phone: "031-964-2911",
-    lat: 37.6575763240644,
-    lng: 126.838217250012,
-    kakaoUrl: "http://place.map.kakao.com/606972245",
-    naverUrl: "https://map.naver.com/p/search/%EC%B4%88%EC%9B%90%ED%8A%80%EA%B9%80%EC%A0%84%EB%AC%B8%EC%A0%90%20%EA%B2%BD%EA%B8%B0%20%EA%B3%A0%EC%96%91%EC%8B%9C%20%EB%8D%95%EC%96%91%EA%B5%AC%20%EB%A7%88%EC%83%81%EB%A1%9C154%EB%B2%88%EA%B8%B8%2034",
-    rating: 3.5,
-    reviewCount: 2,
-    photoUrl: "https://lh3.googleusercontent.com/place-photos/AG9NLjCcZwtFOiREImeJfX_kclwY_eaGhFWJbhrVUz6eM1-F59Kdo8KD9iwr_zFo1_AexCJ0grnXylkouk12mgcBRJB-TqdZoykjkm1XJ-bvCUZTwk5aPVtg79EhzUnN__vRE3aT9lguB7dTSWfssQ=s4800-w800",
-    youtubers: [
-      {
-        name: "쯔양",
-        videoTitle: null,
-        videoUrl: null,
-        recommendNote: "쯔양이 방문해 리뷰한 분식 맛집."
-      }
-    ]
-  },
-  {
-    id: "jjy-394",
-    name: "촌놈 옥련점",
-    category: "회",
-    address: "인천 연수구 옥련로99번길 42",
-    phone: "032-874-2645",
-    lat: 37.42611080673122,
-    lng: 126.65194577983632,
-    kakaoUrl: "http://place.map.kakao.com/259752996",
-    naverUrl: "https://map.naver.com/p/search/%EC%B4%8C%EB%86%88%20%EC%98%A5%EB%A0%A8%EC%A0%90%20%EC%9D%B8%EC%B2%9C%20%EC%97%B0%EC%88%98%EA%B5%AC%20%EC%98%A5%EB%A0%A8%EB%A1%9C99%EB%B2%88%EA%B8%B8%2042",
-    rating: 4.3,
-    reviewCount: 98,
-    photoUrl: "https://lh3.googleusercontent.com/place-photos/AG9NLjBbrIcdsvdyjHKLMBjTKKVbei9DlI0L3Aykly5Mg5otQEVrvaaBIIC2YeHPRK9-KvIXI2-2Vob8WNbFiINxx2CSNAgydWsNpyicOoDqqMYn5WneR9zWqDBI8gtyFEaT4VpgVw6cfj6RILPpfhsUuvpJaA=s4800-w800",
-    youtubers: [
-      {
-        name: "쯔양",
-        videoTitle: null,
-        videoUrl: null,
-        recommendNote: "쯔양이 방문해 리뷰한 돈까스·회 전문점."
-      }
-    ]
-  },
-  {
     id: "jjy-395",
     name: "최우영스시",
     category: "초밥,롤",
@@ -8348,28 +3828,6 @@ const CURATED_FOOD = [
     ]
   },
   {
-    id: "jjy-396",
-    name: "춘선만두",
-    category: "중국요리",
-    address: "서울 광진구 군자로 101",
-    phone: "02-466-4398",
-    lat: 37.5523075877156,
-    lng: 127.071260006248,
-    kakaoUrl: "http://place.map.kakao.com/88370014",
-    naverUrl: "https://map.naver.com/p/search/%EC%B6%98%EC%84%A0%EB%A7%8C%EB%91%90%20%EC%84%9C%EC%9A%B8%20%EA%B4%91%EC%A7%84%EA%B5%AC%20%EA%B5%B0%EC%9E%90%EB%A1%9C%20101",
-    rating: 4.5,
-    reviewCount: 92,
-    photoUrl: "https://lh3.googleusercontent.com/place-photos/AG9NLjCyes-edoDEm8hxn4MRR7H93HqmUwa-xD4rX67vWsrXY3arsjuMSYbsjwznrp2ED14RZJj_VNV1rtsyRPgVuR-YqVznjk21X84I9sCeWI-bUAjv8GRGQ4yqtHPKNyj3WKCuWb8Bwrsoz68H=s4800-w800",
-    youtubers: [
-      {
-        name: "쯔양",
-        videoTitle: null,
-        videoUrl: null,
-        recommendNote: "쯔양이 방문해 리뷰한 중식 맛집."
-      }
-    ]
-  },
-  {
     id: "jjy-397",
     name: "춘천냉면",
     category: "냉면",
@@ -8382,28 +3840,6 @@ const CURATED_FOOD = [
     rating: 4.3,
     reviewCount: 208,
     photoUrl: "https://lh3.googleusercontent.com/place-photos/AG9NLjB8zCvxVd4gwwnRX1sScyPGKYH0_T6JDQTCxu6l2TLLR8r7FA3XRJFQapo0pquSSvfnwTHysXkLph0STOKujBFX9imsrXxp9dQyLfi0LnPP2eWmkBQODBwDdcj5GZftMw3QeZajNzFaPv9YMh4=s4800-w800",
-    youtubers: [
-      {
-        name: "쯔양",
-        videoTitle: null,
-        videoUrl: null,
-        recommendNote: "쯔양이 방문해 리뷰한 한식 맛집."
-      }
-    ]
-  },
-  {
-    id: "jjy-398",
-    name: "춘향전",
-    category: "한식",
-    address: "대전 서구 도화공원길 22",
-    phone: "042-528-8028",
-    lat: 36.3163396021168,
-    lng: 127.381905069897,
-    kakaoUrl: "http://place.map.kakao.com/1958942457",
-    naverUrl: "https://map.naver.com/p/search/%EC%B6%98%ED%96%A5%EC%A0%84%20%EB%8C%80%EC%A0%84%20%EC%84%9C%EA%B5%AC%20%EB%8F%84%ED%99%94%EA%B3%B5%EC%9B%90%EA%B8%B8%2022",
-    rating: null,
-    reviewCount: null,
-    photoUrl: null,
     youtubers: [
       {
         name: "쯔양",
@@ -8432,72 +3868,6 @@ const CURATED_FOOD = [
         videoTitle: null,
         videoUrl: null,
         recommendNote: "쯔양이 방문해 리뷰한 돈까스·회 전문점."
-      }
-    ]
-  },
-  {
-    id: "jjy-400",
-    name: "치킨플러스 일산풍동점",
-    category: "치킨플러스",
-    address: "경기 고양시 일산동구 숲속마을2로 136",
-    phone: "031-907-1777",
-    lat: 37.6731551790241,
-    lng: 126.798447979742,
-    kakaoUrl: "http://place.map.kakao.com/1430064311",
-    naverUrl: "https://map.naver.com/p/search/%EC%B9%98%ED%82%A8%ED%94%8C%EB%9F%AC%EC%8A%A4%20%EC%9D%BC%EC%82%B0%ED%92%8D%EB%8F%99%EC%A0%90%20%EA%B2%BD%EA%B8%B0%20%EA%B3%A0%EC%96%91%EC%8B%9C%20%EC%9D%BC%EC%82%B0%EB%8F%99%EA%B5%AC%20%EC%88%B2%EC%86%8D%EB%A7%88%EC%9D%842%EB%A1%9C%20136",
-    rating: 4,
-    reviewCount: 1,
-    photoUrl: "https://lh3.googleusercontent.com/place-photos/AG9NLjDrPn8wqMJDnuEr9dYZA0ymAYFWRReyI5LZf2TOSzTZW9QdeFR1Xze8lhPltX1fwfOGbxP92FzttAOxWp2zucEqLj2QSH2orOlYuTJ7AkUvQhSJchxuGAQ5xBeeB_41Uao4k0zsiTYCkRF9Sg=s4800-w800",
-    youtubers: [
-      {
-        name: "쯔양",
-        videoTitle: null,
-        videoUrl: null,
-        recommendNote: "쯔양이 방문해 리뷰한 치킨 전문점."
-      }
-    ]
-  },
-  {
-    id: "jjy-401",
-    name: "칙바이칙 선릉역점",
-    category: "햄버거",
-    address: "서울 강남구 선릉로 523",
-    phone: "02-6953-7827",
-    lat: 37.5062025529363,
-    lng: 127.047795626302,
-    kakaoUrl: "http://place.map.kakao.com/373369422",
-    naverUrl: "https://map.naver.com/p/search/%EC%B9%99%EB%B0%94%EC%9D%B4%EC%B9%99%20%EC%84%A0%EB%A6%89%EC%97%AD%EC%A0%90%20%EC%84%9C%EC%9A%B8%20%EA%B0%95%EB%82%A8%EA%B5%AC%20%EC%84%A0%EB%A6%89%EB%A1%9C%20523",
-    rating: 4.6,
-    reviewCount: 90,
-    photoUrl: "https://lh3.googleusercontent.com/place-photos/AG9NLjDR8T5JhYC81sc-xkvZ2KFmur5V5URoJNrlQr-aX4j4eWcUxwNFG3vLgSGFbkt3xSii-hW3Jt-5UYpy1VpQCPbT0_1KQmo0jECoQT3Q7WXxi0y2hHOhug0hRbsXLvdUPJB7qf6Mms3MIH2zt4A=s4800-w700",
-    youtubers: [
-      {
-        name: "쯔양",
-        videoTitle: null,
-        videoUrl: null,
-        recommendNote: "쯔양이 방문해 리뷰한 치킨 전문점."
-      }
-    ]
-  },
-  {
-    id: "jjy-402",
-    name: "친정엄마",
-    category: "분식",
-    address: "충북 청주시 청원구 향군로31번가길 1-17",
-    phone: "043-222-1755",
-    lat: 36.6482895251556,
-    lng: 127.485707511148,
-    kakaoUrl: "http://place.map.kakao.com/606514277",
-    naverUrl: "https://map.naver.com/p/search/%EC%B9%9C%EC%A0%95%EC%97%84%EB%A7%88%20%EC%B6%A9%EB%B6%81%20%EC%B2%AD%EC%A3%BC%EC%8B%9C%20%EC%B2%AD%EC%9B%90%EA%B5%AC%20%ED%96%A5%EA%B5%B0%EB%A1%9C31%EB%B2%88%EA%B0%80%EA%B8%B8%201-17",
-    rating: 4.8,
-    reviewCount: 4,
-    photoUrl: "https://lh3.googleusercontent.com/place-photos/AG9NLjBtXugE6sWAGOfEV0mlNzl3Khu6UFMXjx1ArCOPsIPD2mgJcjCl9i0nKf95BgTlay_271OtK4hi8AAxtN0D6ucBR3eN-iUqlHoH6Gz6p5RgMpAyLtsxqw43T8hUogzrAwYBBzkz821ZqcJX_wL2A6rl=s4800-w800",
-    youtubers: [
-      {
-        name: "쯔양",
-        videoTitle: null,
-        videoUrl: null,
-        recommendNote: "쯔양이 방문해 리뷰한 분식 맛집."
       }
     ]
   },
@@ -8546,94 +3916,6 @@ const CURATED_FOOD = [
     ]
   },
   {
-    id: "jjy-405",
-    name: "쿠우쿠우 골드부천점",
-    category: "쿠우쿠우",
-    address: "경기 부천시 원미구 부흥로315번길 62",
-    phone: "032-326-6274",
-    lat: 37.4974372033154,
-    lng: 126.77722120637,
-    kakaoUrl: "http://place.map.kakao.com/1379297755",
-    naverUrl: "https://map.naver.com/p/search/%EC%BF%A0%EC%9A%B0%EC%BF%A0%EC%9A%B0%20%EA%B3%A8%EB%93%9C%EB%B6%80%EC%B2%9C%EC%A0%90%20%EA%B2%BD%EA%B8%B0%20%EB%B6%80%EC%B2%9C%EC%8B%9C%20%EC%9B%90%EB%AF%B8%EA%B5%AC%20%EB%B6%80%ED%9D%A5%EB%A1%9C315%EB%B2%88%EA%B8%B8%2062",
-    rating: 4.4,
-    reviewCount: 22,
-    photoUrl: "https://lh3.googleusercontent.com/place-photos/AG9NLjCl_z97IDkbQZcAJAtCZ4lCgTfCeN1uUU232RsowAf2TIXjvCe_5JruKUg2LFOgS2eDsUxjSJrHAl08kMG2u6N0kss5y7KI_OJ7frxr7jNJ_ZrfHdfi9dUnGhOlVkPPAu47waKAyFyAH2csHKBjwfUdTA=s4800-w800",
-    youtubers: [
-      {
-        name: "쯔양",
-        videoTitle: null,
-        videoUrl: null,
-        recommendNote: "쯔양이 방문해 리뷰한 돈까스·회 전문점."
-      }
-    ]
-  },
-  {
-    id: "jjy-406",
-    name: "킹왕짱라볶이",
-    category: "떡볶이",
-    address: "서울 마포구 토정로37길 46",
-    phone: "02-719-3392",
-    lat: 37.54260192133946,
-    lng: 126.94743660260588,
-    kakaoUrl: "http://place.map.kakao.com/20849769",
-    naverUrl: "https://map.naver.com/p/search/%ED%82%B9%EC%99%95%EC%A7%B1%EB%9D%BC%EB%B3%B6%EC%9D%B4%20%EC%84%9C%EC%9A%B8%20%EB%A7%88%ED%8F%AC%EA%B5%AC%20%ED%86%A0%EC%A0%95%EB%A1%9C37%EA%B8%B8%2046",
-    rating: 4.1,
-    reviewCount: 10,
-    photoUrl: "https://lh3.googleusercontent.com/place-photos/AG9NLjBj2PugwOmZphYr-17aU_91IbFQTcgSksMAxbDVww_2oMwLw2RCH3HGLQCzu4VJWPLtoaoJS0IHyELtOngascO9H1QxTpZ00JBpWOMIoo844zrMgVm0O2Z4JFJW8UvWRhk9SLWHRd2Oq4_tUQ=s4800-w800",
-    youtubers: [
-      {
-        name: "쯔양",
-        videoTitle: null,
-        videoUrl: null,
-        recommendNote: "쯔양이 방문해 리뷰한 분식 맛집."
-      }
-    ]
-  },
-  {
-    id: "jjy-407",
-    name: "타코냠냠",
-    category: "간식",
-    address: "서울 종로구 지봉로 7",
-    phone: "02-762-7277",
-    lat: 37.5706705488041,
-    lng: 127.01561883778717,
-    kakaoUrl: "http://place.map.kakao.com/1301441791",
-    naverUrl: "https://map.naver.com/p/search/%ED%83%80%EC%BD%94%EB%83%A0%EB%83%A0%20%EC%84%9C%EC%9A%B8%20%EC%A2%85%EB%A1%9C%EA%B5%AC%20%EC%A7%80%EB%B4%89%EB%A1%9C%207",
-    rating: 4.5,
-    reviewCount: 2,
-    photoUrl: "https://lh3.googleusercontent.com/place-photos/AG9NLjAZtAS9c1KpqvxWfv7p420CrYS1W4Aa742L6aPjNqQjCN7T0zhiwcrVyCYzxMgRERmvnRdcIrNZPqkHMFxJo1mCGROkS1CC2tF0W-yp8-cwd9gDoNWm3bCXEtPWsMvs3Nn2Gzc9Nsctfxcmg2uhYp2B5w=s4800-w800",
-    youtubers: [
-      {
-        name: "쯔양",
-        videoTitle: null,
-        videoUrl: null,
-        recommendNote: "쯔양이 방문해 리뷰한 분식 맛집."
-      }
-    ]
-  },
-  {
-    id: "jjy-408",
-    name: "태화원",
-    category: "중국요리",
-    address: "인천 제물포구 차이나타운로59번길 10",
-    phone: "032-766-7688",
-    lat: 37.47402887194698,
-    lng: 126.61856842488434,
-    kakaoUrl: "http://place.map.kakao.com/9433427",
-    naverUrl: "https://map.naver.com/p/search/%ED%83%9C%ED%99%94%EC%9B%90%20%EC%9D%B8%EC%B2%9C%20%EC%A0%9C%EB%AC%BC%ED%8F%AC%EA%B5%AC%20%EC%B0%A8%EC%9D%B4%EB%82%98%ED%83%80%EC%9A%B4%EB%A1%9C59%EB%B2%88%EA%B8%B8%2010",
-    rating: 3.8,
-    reviewCount: 773,
-    photoUrl: "https://lh3.googleusercontent.com/place-photos/AG9NLjBdh5omz4IcPjKQ2HlRUX8k3mOKisQMBD4j4HxR8J6fkw_VHD77ekGyLVAUbVx6ubhlfKy9Ap9IN-ucIcycFzxfLol9BduBvYztWEza4YkOKUM2SIhlMoiMxvu_IA2vYL-mb0_J9g3fVhy8=s4800-w800",
-    youtubers: [
-      {
-        name: "쯔양",
-        videoTitle: null,
-        videoUrl: null,
-        recommendNote: "쯔양이 방문해 리뷰한 중식 맛집."
-      }
-    ]
-  },
-  {
     id: "jjy-409",
     name: "털보감자탕",
     category: "감자탕",
@@ -8678,116 +3960,6 @@ const CURATED_FOOD = [
     ]
   },
   {
-    id: "jjy-411",
-    name: "통큰식당",
-    category: "한식",
-    address: "충북 제천시 덕산면 약초로3길 5-1",
-    phone: "043-645-3005",
-    lat: 36.90929092210367,
-    lng: 128.16610158806395,
-    kakaoUrl: "http://place.map.kakao.com/1142199883",
-    naverUrl: "https://map.naver.com/p/search/%ED%86%B5%ED%81%B0%EC%8B%9D%EB%8B%B9%20%EC%B6%A9%EB%B6%81%20%EC%A0%9C%EC%B2%9C%EC%8B%9C%20%EB%8D%95%EC%82%B0%EB%A9%B4%20%EC%95%BD%EC%B4%88%EB%A1%9C3%EA%B8%B8%205-1",
-    rating: 4.7,
-    reviewCount: 38,
-    photoUrl: "https://lh3.googleusercontent.com/place-photos/AG9NLjDVCMc8ODyN0z2Dbt3eXZ5Pn6rTiiTsC_SF5udUtn7aQ4FLDKq3CuEt-c4lnegfA0-E59SOwKdtSIovrINwxy-zvxw6Txeowz95kX04YNABGWsrdiZopXrU6hu7V-5_a7u66gift0TgcD9tfcXU1R_m=s4800-w800",
-    youtubers: [
-      {
-        name: "쯔양",
-        videoTitle: null,
-        videoUrl: null,
-        recommendNote: "쯔양이 방문해 리뷰한 한식 맛집."
-      }
-    ]
-  },
-  {
-    id: "jjy-413",
-    name: "파이브가이즈 강남",
-    category: "햄버거",
-    address: "서울 서초구 강남대로 435",
-    phone: "070-883-4790",
-    lat: 37.50117734090564,
-    lng: 127.02556091733834,
-    kakaoUrl: "http://place.map.kakao.com/1725176424",
-    naverUrl: "https://map.naver.com/p/search/%ED%8C%8C%EC%9D%B4%EB%B8%8C%EA%B0%80%EC%9D%B4%EC%A6%88%20%EA%B0%95%EB%82%A8%20%EC%84%9C%EC%9A%B8%20%EC%84%9C%EC%B4%88%EA%B5%AC%20%EA%B0%95%EB%82%A8%EB%8C%80%EB%A1%9C%20435",
-    rating: 3.9,
-    reviewCount: 930,
-    photoUrl: "https://lh3.googleusercontent.com/place-photos/AG9NLjBNHIeS-74LtKTij-46r0W2M6dIFwGS-9eq-YMwJ218Iy8hQJ-gXbB2z-tYD-OT0Wi02T1BAUPUYIIacMwTwGocf3hr2nx7pbBtAfgjZouphKArZWXvhb5jb1E6nex3gjuy3fanXSLgsDfmei04lRA6Dg=s4800-w800",
-    youtubers: [
-      {
-        name: "쯔양",
-        videoTitle: null,
-        videoUrl: null,
-        recommendNote: "쯔양이 방문해 리뷰한 패스트푸드 맛집."
-      }
-    ]
-  },
-  {
-    id: "jjy-414",
-    name: "편편집 강남역점",
-    category: "편편집",
-    address: "서울 서초구 서초대로77길 31",
-    phone: "0507-1353-1582",
-    lat: 37.5006196580036,
-    lng: 127.025376389631,
-    kakaoUrl: "http://place.map.kakao.com/1127126120",
-    naverUrl: "https://map.naver.com/p/search/%ED%8E%B8%ED%8E%B8%EC%A7%91%20%EA%B0%95%EB%82%A8%EC%97%AD%EC%A0%90%20%EC%84%9C%EC%9A%B8%20%EC%84%9C%EC%B4%88%EA%B5%AC%20%EC%84%9C%EC%B4%88%EB%8C%80%EB%A1%9C77%EA%B8%B8%2031",
-    rating: 4.2,
-    reviewCount: 15,
-    photoUrl: "https://lh3.googleusercontent.com/place-photos/AG9NLjC3bNxDR4cmMTOSDeXNQ-6rc4XOqxOEdzlciZlTgXRg8ERWI9lDzhdyL47XFwUo7qEcWu68Dmj1rdN9OJssH6REUifGBFpFHmW89V-LvTYns3aTT_-L1b5cvGBlZQx1nsezONRoIdxrVV-MPW8=s4800-w800",
-    youtubers: [
-      {
-        name: "쯔양",
-        videoTitle: null,
-        videoUrl: null,
-        recommendNote: "쯔양이 방문해 리뷰한 고기 맛집."
-      }
-    ]
-  },
-  {
-    id: "jjy-415",
-    name: "평양옥",
-    category: "냉면",
-    address: "대전 서구 도마5길 61",
-    phone: "042-532-9500",
-    lat: 36.31709919116528,
-    lng: 127.38165599673486,
-    kakaoUrl: "http://place.map.kakao.com/115984648",
-    naverUrl: "https://map.naver.com/p/search/%ED%8F%89%EC%96%91%EC%98%A5%20%EB%8C%80%EC%A0%84%20%EC%84%9C%EA%B5%AC%20%EB%8F%84%EB%A7%885%EA%B8%B8%2061",
-    rating: 3.9,
-    reviewCount: 55,
-    photoUrl: "https://lh3.googleusercontent.com/place-photos/AG9NLjCCXfFQy1pN_9ADeCALq75eAJcrtoY6TCST9ijIpzm3JkPFgrLMvXX_WeZayXPfm4V6DmGYgyw9SWOIncVNFGsA2gU-MRQO8PSgtmYf5e1RBEM0Pqn6Bzi4bWvGBM-iDYkqPj6RJduWAGgs=s4800-w800",
-    youtubers: [
-      {
-        name: "쯔양",
-        videoTitle: null,
-        videoUrl: null,
-        recommendNote: "쯔양이 방문해 리뷰한 한식 맛집."
-      }
-    ]
-  },
-  {
-    id: "jjy-416",
-    name: "평화김해뒷고기 건대본점",
-    category: "육류,고기",
-    address: "서울 광진구 아차산로31길 9-1",
-    phone: "02-461-1223",
-    lat: 37.54155079230561,
-    lng: 127.06936238644813,
-    kakaoUrl: "http://place.map.kakao.com/269850048",
-    naverUrl: "https://map.naver.com/p/search/%ED%8F%89%ED%99%94%EA%B9%80%ED%95%B4%EB%92%B7%EA%B3%A0%EA%B8%B0%20%EA%B1%B4%EB%8C%80%EB%B3%B8%EC%A0%90%20%EC%84%9C%EC%9A%B8%20%EA%B4%91%EC%A7%84%EA%B5%AC%20%EC%95%84%EC%B0%A8%EC%82%B0%EB%A1%9C31%EA%B8%B8%209-1",
-    rating: 4.4,
-    reviewCount: 16,
-    photoUrl: "https://lh3.googleusercontent.com/place-photos/AG9NLjDjKkKgEjaYunlsyW3gaTSfcpJpOJSVkypiROwAmR7eO1PoAAD1cBNZrUjMJfwYo0flT88MTTKOGNfAPGrizgd4sGz4jNz4WkcxaPbTEELsToItv-TK196CoizLsMUJREdnkZFrRFDf5wvsEKwJNNFf=s4800-w800",
-    youtubers: [
-      {
-        name: "쯔양",
-        videoTitle: null,
-        videoUrl: null,
-        recommendNote: "쯔양이 방문해 리뷰한 고기 맛집."
-      }
-    ]
-  },
-  {
     id: "jjy-417",
     name: "푸른하늘",
     category: "분식",
@@ -8806,160 +3978,6 @@ const CURATED_FOOD = [
         videoTitle: null,
         videoUrl: null,
         recommendNote: "쯔양이 방문해 리뷰한 분식 맛집."
-      }
-    ]
-  },
-  {
-    id: "jjy-418",
-    name: "풍년기사님식당",
-    category: "기사식당",
-    address: "서울 마포구 대흥로 54",
-    phone: "02-711-0616",
-    lat: 37.5450336694064,
-    lng: 126.939786573075,
-    kakaoUrl: "http://place.map.kakao.com/21410532",
-    naverUrl: "https://map.naver.com/p/search/%ED%92%8D%EB%85%84%EA%B8%B0%EC%82%AC%EB%8B%98%EC%8B%9D%EB%8B%B9%20%EC%84%9C%EC%9A%B8%20%EB%A7%88%ED%8F%AC%EA%B5%AC%20%EB%8C%80%ED%9D%A5%EB%A1%9C%2054",
-    rating: 3.5,
-    reviewCount: 388,
-    photoUrl: "https://lh3.googleusercontent.com/place-photos/AG9NLjDskK3mBeD_JAMHfa5k9tEBrSmyUYRS5ltDFbJl1jXz4JM_G4MUgrDXUAebO8dR4Rap8CddlkqCkx89jtwUlpl0ZFKNzr0_K1m827nDSOPuBKY-A1aNud10qK3MJwM2H0SLkmSMn5Jc17i581Q=s4800-w800",
-    youtubers: [
-      {
-        name: "쯔양",
-        videoTitle: null,
-        videoUrl: null,
-        recommendNote: "쯔양이 방문해 리뷰한 고기 맛집."
-      }
-    ]
-  },
-  {
-    id: "jjy-419",
-    name: "풍년식당",
-    category: "중국요리",
-    address: "충북 충주시 동량면 조동2길 88",
-    phone: "043-851-0181",
-    lat: 37.0287367246934,
-    lng: 127.969006968045,
-    kakaoUrl: "http://place.map.kakao.com/21261719",
-    naverUrl: "https://map.naver.com/p/search/%ED%92%8D%EB%85%84%EC%8B%9D%EB%8B%B9%20%EC%B6%A9%EB%B6%81%20%EC%B6%A9%EC%A3%BC%EC%8B%9C%20%EB%8F%99%EB%9F%89%EB%A9%B4%20%EC%A1%B0%EB%8F%992%EA%B8%B8%2088",
-    rating: 3.5,
-    reviewCount: 38,
-    photoUrl: "https://lh3.googleusercontent.com/place-photos/AG9NLjCBsGuq3G4G_CQ-lDmshknIzcaobdKcQtTx7Xo7Xg948JJ09zmQ0k50mTma9Us2k8x7g_z_6FhbKQoBUCLC0Mbbzy35deIXjePDiaDhXAJvipEvio8gMfOkzRHnxPZqiZfZ-xwqeoXoT2DGbO7jfNxzIQ=s4800-w800",
-    youtubers: [
-      {
-        name: "쯔양",
-        videoTitle: "충주 '너구리'맛 짬뽕으로 유명한 풍년식당 먹방",
-        videoUrl: "https://www.youtube.com/watch?v=wfKSmMuTnQo",
-        recommendNote: "쯔양이 방문해 리뷰한 중식 맛집."
-      }
-    ]
-  },
-  {
-    id: "jjy-420",
-    name: "풍미당",
-    category: "국수",
-    address: "충북 옥천군 옥천읍 중앙로 23-1",
-    phone: "043-732-1827",
-    lat: 36.299686589433385,
-    lng: 127.56776664041031,
-    kakaoUrl: "http://place.map.kakao.com/9536499",
-    naverUrl: "https://map.naver.com/p/search/%ED%92%8D%EB%AF%B8%EB%8B%B9%20%EC%B6%A9%EB%B6%81%20%EC%98%A5%EC%B2%9C%EA%B5%B0%20%EC%98%A5%EC%B2%9C%EC%9D%8D%20%EC%A4%91%EC%95%99%EB%A1%9C%2023-1",
-    rating: 3.5,
-    reviewCount: 1554,
-    photoUrl: "https://lh3.googleusercontent.com/place-photos/AG9NLjB-WtHZNzR1Et3s-DklmW25_VzrWMx8Mz8cFOQguMdQd266-vjdT0cxqc7V7cgpLSADl5i6UY2plU0_R5WZKw9O7a7TkBuaCywdM8J0x9swHnAmoRA9juc51LlludqeRlY5QaI_FeqvZK7cJGx9iyLl=s4800-w800",
-    youtubers: [
-      {
-        name: "쯔양",
-        videoTitle: null,
-        videoUrl: null,
-        recommendNote: "쯔양이 방문해 리뷰한 분식 맛집."
-      }
-    ]
-  },
-  {
-    id: "jjy-421",
-    name: "프랑킨바베큐치킨 분당정자점",
-    category: "프랑킨바베큐치킨",
-    address: "경기 성남시 분당구 성남대로 295",
-    phone: "0507-1350-9166",
-    lat: 37.3624717782538,
-    lng: 127.107764786566,
-    kakaoUrl: "http://place.map.kakao.com/1889857724",
-    naverUrl: "https://map.naver.com/p/search/%ED%94%84%EB%9E%91%ED%82%A8%EB%B0%94%EB%B2%A0%ED%81%90%EC%B9%98%ED%82%A8%20%EB%B6%84%EB%8B%B9%EC%A0%95%EC%9E%90%EC%A0%90%20%EA%B2%BD%EA%B8%B0%20%EC%84%B1%EB%82%A8%EC%8B%9C%20%EB%B6%84%EB%8B%B9%EA%B5%AC%20%EC%84%B1%EB%82%A8%EB%8C%80%EB%A1%9C%20295",
-    rating: 3.5,
-    reviewCount: 2,
-    photoUrl: "https://lh3.googleusercontent.com/place-photos/AG9NLjBC576kpMlWVN283dDw1BkV7UyEt01FoRO1EBpRYhXgrKLGK2vVJY52PzaRMe_I39YrU48hDauD9qdFpG5IPwAU-5q0AVdart5ylupv_zuiDDEZUkCJx73bsWbqHX1DVkeeT5hsQhUWXI43LdUJ-Rr6oA=s4800-w800",
-    youtubers: [
-      {
-        name: "쯔양",
-        videoTitle: null,
-        videoUrl: null,
-        recommendNote: "쯔양이 방문해 리뷰한 치킨 전문점."
-      }
-    ]
-  },
-  {
-    id: "jjy-422",
-    name: "프랭크버거 문정점",
-    category: "프랭크버거",
-    address: "서울 송파구 송파대로 167",
-    phone: "02-2054-8170",
-    lat: 37.48451914055169,
-    lng: 127.12075589750441,
-    kakaoUrl: "http://place.map.kakao.com/1721305124",
-    naverUrl: "https://map.naver.com/p/search/%ED%94%84%EB%9E%AD%ED%81%AC%EB%B2%84%EA%B1%B0%20%EB%AC%B8%EC%A0%95%EC%A0%90%20%EC%84%9C%EC%9A%B8%20%EC%86%A1%ED%8C%8C%EA%B5%AC%20%EC%86%A1%ED%8C%8C%EB%8C%80%EB%A1%9C%20167",
-    rating: 4.8,
-    reviewCount: 5,
-    photoUrl: "https://lh3.googleusercontent.com/place-photos/AG9NLjCfcexLFyZpnfwFm85ILwDS8cdvi98aaIbL0WqC-Wqs9_zZswl0x1N7iJkWZfNH_UdDrDmpsYnzQtSWGoW2LjvwESRBKz228wDdoyp_MA8jm3QMLUk5X1Hrrer5rEff2NL1ONldqwu0hC_O9q0=s4800-w800",
-    youtubers: [
-      {
-        name: "쯔양",
-        videoTitle: null,
-        videoUrl: null,
-        recommendNote: "쯔양이 방문해 리뷰한 패스트푸드 맛집."
-      }
-    ]
-  },
-  {
-    id: "jjy-423",
-    name: "프로간장새우 본점",
-    category: "해물,생선",
-    address: "서울 강남구 강남대로122길 20",
-    phone: "02-547-4924",
-    lat: 37.5080549149643,
-    lng: 127.024619993483,
-    kakaoUrl: "http://place.map.kakao.com/384134146",
-    naverUrl: "https://map.naver.com/p/search/%ED%94%84%EB%A1%9C%EA%B0%84%EC%9E%A5%EC%83%88%EC%9A%B0%20%EB%B3%B8%EC%A0%90%20%EC%84%9C%EC%9A%B8%20%EA%B0%95%EB%82%A8%EA%B5%AC%20%EA%B0%95%EB%82%A8%EB%8C%80%EB%A1%9C122%EA%B8%B8%2020",
-    rating: 4.3,
-    reviewCount: 54,
-    photoUrl: "https://lh3.googleusercontent.com/place-photos/AG9NLjCl0OAkY9O3G6cCnjUNUo7FziFe2pYlMELjg5diHhX0xxIoWwEvQMbBse1JLmR7I-O5IC7uVv45us2jB0E7H7T7ifEIhzieFJYaz1KTSuVh4hji68dTMRT8frFIm9UJd6yCQnGXodj33XVOUw=s4800-w800",
-    youtubers: [
-      {
-        name: "쯔양",
-        videoTitle: null,
-        videoUrl: null,
-        recommendNote: "쯔양이 방문해 리뷰한 야식 맛집."
-      }
-    ]
-  },
-  {
-    id: "jjy-425",
-    name: "피자먹다 광교점",
-    category: "피자먹다",
-    address: "경기 수원시 영통구 센트럴타운로 111",
-    phone: "031-211-9990",
-    lat: 37.2924635343289,
-    lng: 127.049061912492,
-    kakaoUrl: "http://place.map.kakao.com/1292182006",
-    naverUrl: "https://map.naver.com/p/search/%ED%94%BC%EC%9E%90%EB%A8%B9%EB%8B%A4%20%EA%B4%91%EA%B5%90%EC%A0%90%20%EA%B2%BD%EA%B8%B0%20%EC%88%98%EC%9B%90%EC%8B%9C%20%EC%98%81%ED%86%B5%EA%B5%AC%20%EC%84%BC%ED%8A%B8%EB%9F%B4%ED%83%80%EC%9A%B4%EB%A1%9C%20111",
-    rating: 5,
-    reviewCount: 2,
-    photoUrl: "https://lh3.googleusercontent.com/place-photos/AG9NLjAZ0-8ANC1yl35JYooH1eF_8Uh4uA8bekA_rJZ1hkCEtv7Gh4_pJ0V0RyEmSvonaaClGPXw7h57GbYVfb1J7UucoWINpObDj8ih7_X80t6kTlSHS1eQgHrmmsBpsYi8LHCG731a35Ji9W1RWA=s4800-w800",
-    youtubers: [
-      {
-        name: "쯔양",
-        videoTitle: "피자가 총 2M?!😳 살면서 처음으로 2M 피자 도전했습니다 도전먹방",
-        videoUrl: "https://www.youtube.com/watch?v=2-HzvxrREac",
-        recommendNote: "쯔양이 방문해 리뷰한 피자 맛집."
       }
     ]
   },
@@ -9030,50 +4048,6 @@ const CURATED_FOOD = [
     ]
   },
   {
-    id: "jjy-430",
-    name: "하이바오",
-    category: "아시아음식",
-    address: "전북특별자치도 익산시 부송1로 14",
-    phone: "063-916-9533",
-    lat: 35.956787740465884,
-    lng: 126.9838493077153,
-    kakaoUrl: "http://place.map.kakao.com/1030277148",
-    naverUrl: "https://map.naver.com/p/search/%ED%95%98%EC%9D%B4%EB%B0%94%EC%98%A4%20%EC%A0%84%EB%B6%81%ED%8A%B9%EB%B3%84%EC%9E%90%EC%B9%98%EB%8F%84%20%EC%9D%B5%EC%82%B0%EC%8B%9C%20%EB%B6%80%EC%86%A11%EB%A1%9C%2014",
-    rating: 3.8,
-    reviewCount: 9,
-    photoUrl: "https://lh3.googleusercontent.com/place-photos/AG9NLjDdDHwMe2vRre2VW-syePO7HYhv5lBcmBfA7JFf1YRyum-gNp5NdJMJeU31XaWDRTCZSwG_6fJxzqEB2W8jmrp0kJOQwS0-BpmSIaypwLP1FQNeVjFnjD07wukwmHJatzQeQaxOXh1hfZ1-9Q=s4800-w800",
-    youtubers: [
-      {
-        name: "쯔양",
-        videoTitle: null,
-        videoUrl: null,
-        recommendNote: "쯔양이 방문해 리뷰한 고기 맛집."
-      }
-    ]
-  },
-  {
-    id: "jjy-431",
-    name: "한강반점",
-    category: "중국요리",
-    address: "대구 중구 달구벌대로387길 42",
-    phone: "053-253-7518",
-    lat: 35.865009076647,
-    lng: 128.575240281764,
-    kakaoUrl: "http://place.map.kakao.com/1799433072",
-    naverUrl: "https://map.naver.com/p/search/%ED%95%9C%EA%B0%95%EB%B0%98%EC%A0%90%20%EB%8C%80%EA%B5%AC%20%EC%A4%91%EA%B5%AC%20%EB%8B%AC%EA%B5%AC%EB%B2%8C%EB%8C%80%EB%A1%9C387%EA%B8%B8%2042",
-    rating: 3.2,
-    reviewCount: 5,
-    photoUrl: null,
-    youtubers: [
-      {
-        name: "쯔양",
-        videoTitle: null,
-        videoUrl: null,
-        recommendNote: "쯔양이 방문해 리뷰한 중식 맛집."
-      }
-    ]
-  },
-  {
     id: "jjy-432",
     name: "한뭉티기",
     category: "육류,고기",
@@ -9114,28 +4088,6 @@ const CURATED_FOOD = [
         videoTitle: null,
         videoUrl: null,
         recommendNote: "쯔양이 방문해 리뷰한 한식 맛집."
-      }
-    ]
-  },
-  {
-    id: "jjy-434",
-    name: "한양식당",
-    category: "중국요리",
-    address: "경남 통영시 욕지면 서촌윗길 183-3",
-    phone: "055-642-5146",
-    lat: 34.6354088207437,
-    lng: 128.263634975846,
-    kakaoUrl: "http://place.map.kakao.com/10938579",
-    naverUrl: "https://map.naver.com/p/search/%ED%95%9C%EC%96%91%EC%8B%9D%EB%8B%B9%20%EA%B2%BD%EB%82%A8%20%ED%86%B5%EC%98%81%EC%8B%9C%20%EC%9A%95%EC%A7%80%EB%A9%B4%20%EC%84%9C%EC%B4%8C%EC%9C%97%EA%B8%B8%20183-3",
-    rating: 3.9,
-    reviewCount: 611,
-    photoUrl: "https://lh3.googleusercontent.com/place-photos/AG9NLjDO6zvqbF8zoZMb42KAuuY3AlI3G0y7B7Wrt5NgOk8HLCMm1-tMcAOjCjBJXdNTSxWgAQqjcDYF9YyfvyMXNdh-x4iFiRh3BRWFkAfWUlDIBatkt8JRD4BQqhfcQhg8IpLhMrJAlbP360VDQQ=s4800-w800",
-    youtubers: [
-      {
-        name: "쯔양",
-        videoTitle: null,
-        videoUrl: null,
-        recommendNote: "쯔양이 방문해 리뷰한 중식 맛집."
       }
     ]
   },
@@ -9228,94 +4180,6 @@ const CURATED_FOOD = [
     ]
   },
   {
-    id: "jjy-439",
-    name: "해녀촌식당",
-    category: "해물,생선",
-    address: "경남 통영시 욕지면 서촌아랫길 112",
-    phone: "055-644-0277",
-    lat: 34.634454039993315,
-    lng: 128.26452779818325,
-    kakaoUrl: "http://place.map.kakao.com/16251592",
-    naverUrl: "https://map.naver.com/p/search/%ED%95%B4%EB%85%80%EC%B4%8C%EC%8B%9D%EB%8B%B9%20%EA%B2%BD%EB%82%A8%20%ED%86%B5%EC%98%81%EC%8B%9C%20%EC%9A%95%EC%A7%80%EB%A9%B4%20%EC%84%9C%EC%B4%8C%EC%95%84%EB%9E%AB%EA%B8%B8%20112",
-    rating: 3.8,
-    reviewCount: 36,
-    photoUrl: "https://lh3.googleusercontent.com/place-photos/AG9NLjD4Xp8Fg8wl5Eiu7ebpnnxvNWxrQ6DUQtIkpWb1T3DsfESeLcpDmGDJJkbFkzrX_9gRY6Ld4_S2s6K0UYeMXA8Y-L9k72V5yO46eQDTuwS-wcBA_h0UunyM2HYhZlHwsWMPE_D2lK7eJPxYGmQ=s4800-w800",
-    youtubers: [
-      {
-        name: "쯔양",
-        videoTitle: null,
-        videoUrl: null,
-        recommendNote: "쯔양이 방문해 리뷰한 돈까스·회 전문점."
-      }
-    ]
-  },
-  {
-    id: "jjy-440",
-    name: "해녀포차",
-    category: "회",
-    address: "경남 통영시 욕지면 동항리 560-20",
-    phone: "-",
-    lat: 34.635391256904235,
-    lng: 128.26637082842754,
-    kakaoUrl: "http://place.map.kakao.com/1607479434",
-    naverUrl: "https://map.naver.com/p/search/%ED%95%B4%EB%85%80%ED%8F%AC%EC%B0%A8%20%EA%B2%BD%EB%82%A8%20%ED%86%B5%EC%98%81%EC%8B%9C%20%EC%9A%95%EC%A7%80%EB%A9%B4%20%EB%8F%99%ED%95%AD%EB%A6%AC%20560-20",
-    rating: 4.3,
-    reviewCount: 56,
-    photoUrl: "https://lh3.googleusercontent.com/place-photos/AG9NLjDbJr_aands1l78uUlr4nzkOsdqlx27dQsz0gEldxDMd-PCVtHOIn3yXh8RjcvUii9RnPvSpeRWcquAsnsWMOOsWnSKwxMuQZRvN2LN5VFCoHhTWG82Q8GcqaNb6NV50qi-62_Rvgt48ScW=s4800-w800",
-    youtubers: [
-      {
-        name: "쯔양",
-        videoTitle: null,
-        videoUrl: null,
-        recommendNote: "쯔양이 방문해 리뷰한 맛집."
-      }
-    ]
-  },
-  {
-    id: "jjy-443",
-    name: "행복짬뽕",
-    category: "중식",
-    address: "충북 충주시 행정7길 30",
-    phone: "043-856-8060",
-    lat: 37.0131577518942,
-    lng: 127.917532536914,
-    kakaoUrl: "http://place.map.kakao.com/23749811",
-    naverUrl: "https://map.naver.com/p/search/%ED%96%89%EB%B3%B5%EC%A7%AC%EB%BD%95%20%EC%B6%A9%EB%B6%81%20%EC%B6%A9%EC%A3%BC%EC%8B%9C%20%ED%96%89%EC%A0%957%EA%B8%B8%2030",
-    rating: 4.3,
-    reviewCount: 64,
-    photoUrl: "https://lh3.googleusercontent.com/place-photos/AG9NLjAi3G_AQB5Dlb68DXWSliN421lQK9I9GysXvvoaezXFP0Y87zZnKop-pNkxcOmeEgQpoOWWhURco22Wtisnk-YR5VavZohjAVWahs7xOrfkwZaipKA0prqHIwORIrbMdAf3Fy0wn9tHJlJ8eYgdf2-28A=s4800-w800",
-    youtubers: [
-      {
-        name: "쯔양",
-        videoTitle: null,
-        videoUrl: null,
-        recommendNote: "쯔양이 방문해 리뷰한 중식 맛집."
-      }
-    ]
-  },
-  {
-    id: "jjy-444",
-    name: "행복한고기집",
-    category: "육류,고기",
-    address: "경기 수원시 장안구 장안로 274",
-    phone: "031-269-9576",
-    lat: 37.306333120537765,
-    lng: 126.99116784285478,
-    kakaoUrl: "http://place.map.kakao.com/18831131",
-    naverUrl: "https://map.naver.com/p/search/%ED%96%89%EB%B3%B5%ED%95%9C%EA%B3%A0%EA%B8%B0%EC%A7%91%20%EA%B2%BD%EA%B8%B0%20%EC%88%98%EC%9B%90%EC%8B%9C%20%EC%9E%A5%EC%95%88%EA%B5%AC%20%EC%9E%A5%EC%95%88%EB%A1%9C%20274",
-    rating: null,
-    reviewCount: null,
-    photoUrl: null,
-    youtubers: [
-      {
-        name: "쯔양",
-        videoTitle: null,
-        videoUrl: null,
-        recommendNote: "쯔양이 방문해 리뷰한 고기 맛집."
-      }
-    ]
-  },
-  {
     id: "jjy-445",
     name: "현고대닭발 본점",
     category: "닭요리",
@@ -9338,50 +4202,6 @@ const CURATED_FOOD = [
     ]
   },
   {
-    id: "jjy-446",
-    name: "현래장",
-    category: "중식",
-    address: "서울 마포구 마포대로 20",
-    phone: "02-712-0730",
-    lat: 37.53842557160494,
-    lng: 126.9449853625797,
-    kakaoUrl: "http://place.map.kakao.com/8540921",
-    naverUrl: "https://map.naver.com/p/search/%ED%98%84%EB%9E%98%EC%9E%A5%20%EC%84%9C%EC%9A%B8%20%EB%A7%88%ED%8F%AC%EA%B5%AC%20%EB%A7%88%ED%8F%AC%EB%8C%80%EB%A1%9C%2020",
-    rating: 3.7,
-    reviewCount: 724,
-    photoUrl: "https://lh3.googleusercontent.com/place-photos/AG9NLjC55g5bA8gukSRRuhF9n0P61j9YTq5jsLTkdjy1P1cCqIvJ6MqAuusqKVIpXJsakoIA-dFYoBpeG4BaaGYEQXSq5Pnv4F9kYpIEMKnrsyLI0Lg73-ZcL-yvo9M7xQKGycN6tWucy9VjCQH9mwfOZEhZ0A=s4800-w800",
-    youtubers: [
-      {
-        name: "쯔양",
-        videoTitle: "70년만에 이런 손님은 처음이래요🤣 70년 전통 현래장 수타짜장면 중식 먹방",
-        videoUrl: "https://www.youtube.com/watch?v=kF0V4Hrqluo",
-        recommendNote: "쯔양이 방문해 리뷰한 중식 맛집."
-      }
-    ]
-  },
-  {
-    id: "jjy-447",
-    name: "신형제횟집",
-    category: "회",
-    address: "경남 통영시 사량면 상도일주로 1580-8",
-    phone: "055-643-3876",
-    lat: 34.8451809284557,
-    lng: 128.219451372487,
-    kakaoUrl: "http://place.map.kakao.com/1607818083",
-    naverUrl: "https://map.naver.com/p/search/%EC%8B%A0%ED%98%95%EC%A0%9C%ED%9A%9F%EC%A7%91%20%EA%B2%BD%EB%82%A8%20%ED%86%B5%EC%98%81%EC%8B%9C%20%EC%82%AC%EB%9F%89%EB%A9%B4%20%EC%83%81%EB%8F%84%EC%9D%BC%EC%A3%BC%EB%A1%9C%201580-8",
-    rating: null,
-    reviewCount: null,
-    photoUrl: null,
-    youtubers: [
-      {
-        name: "쯔양",
-        videoTitle: null,
-        videoUrl: null,
-        recommendNote: "쯔양이 방문해 리뷰한 돈까스·회 전문점."
-      }
-    ]
-  },
-  {
     id: "jjy-448",
     name: "혜성칼국수",
     category: "칼국수",
@@ -9400,116 +4220,6 @@ const CURATED_FOOD = [
         videoTitle: "1968년 개업 54년전통 칼국수?😲 청량리 줄서서먹는 혜성칼국수 먹방",
         videoUrl: "https://www.youtube.com/watch?v=dcxQA9WRuq8",
         recommendNote: "쯔양이 방문해 리뷰한 한식 맛집."
-      }
-    ]
-  },
-  {
-    id: "jjy-449",
-    name: "호근동",
-    category: "육류,고기",
-    address: "제주특별자치도 제주시 광양10길 17",
-    phone: "064-752-3280",
-    lat: 33.49862062271936,
-    lng: 126.52847706857563,
-    kakaoUrl: "http://place.map.kakao.com/10986589",
-    naverUrl: "https://map.naver.com/p/search/%ED%98%B8%EA%B7%BC%EB%8F%99%20%EC%A0%9C%EC%A3%BC%ED%8A%B9%EB%B3%84%EC%9E%90%EC%B9%98%EB%8F%84%20%EC%A0%9C%EC%A3%BC%EC%8B%9C%20%EA%B4%91%EC%96%9110%EA%B8%B8%2017",
-    rating: null,
-    reviewCount: null,
-    photoUrl: null,
-    youtubers: [
-      {
-        name: "쯔양",
-        videoTitle: "80세 할아버지께서 가게 망하겠대요😂 제주도 돔베고기 다 털었습니다! 30년전통 호근동 먹방",
-        videoUrl: "https://www.youtube.com/watch?v=c0G-lfExt64",
-        recommendNote: "쯔양이 방문해 리뷰한 한식 맛집."
-      }
-    ]
-  },
-  {
-    id: "jjy-450",
-    name: "호랑이쌀국수 경대본점",
-    category: "베트남음식",
-    address: "대구 북구 대학로 103-2",
-    phone: "053-955-5756",
-    lat: 35.8941780169878,
-    lng: 128.610779017631,
-    kakaoUrl: "http://place.map.kakao.com/1864860472",
-    naverUrl: "https://map.naver.com/p/search/%ED%98%B8%EB%9E%91%EC%9D%B4%EC%8C%80%EA%B5%AD%EC%88%98%20%EA%B2%BD%EB%8C%80%EB%B3%B8%EC%A0%90%20%EB%8C%80%EA%B5%AC%20%EB%B6%81%EA%B5%AC%20%EB%8C%80%ED%95%99%EB%A1%9C%20103-2",
-    rating: 3.6,
-    reviewCount: 9,
-    photoUrl: "https://lh3.googleusercontent.com/place-photos/AG9NLjA_E1LTMtFr-Ybi4c5TIs9s0DR2Fseug_XFWnZw9sItLC2dw-V70X8cDJ5R3z3grkFMMtMv0Bd6e-VY8FE3CuihQultdXIPHxaXnvhpkvPiWnupd9iCUISXFY5asg4sxVMXH20SZXAY99Wvp3A=s4800-w800",
-    youtubers: [
-      {
-        name: "쯔양",
-        videoTitle: null,
-        videoUrl: null,
-        recommendNote: "쯔양이 방문해 리뷰한 아시안 맛집."
-      }
-    ]
-  },
-  {
-    id: "jjy-451",
-    name: "호산나의정부부대찌개",
-    category: "찌개,전골",
-    address: "서울 서대문구 충정로4길 8",
-    phone: "02-313-1678",
-    lat: 37.561019992212,
-    lng: 126.963876901294,
-    kakaoUrl: "http://place.map.kakao.com/16418514",
-    naverUrl: "https://map.naver.com/p/search/%ED%98%B8%EC%82%B0%EB%82%98%EC%9D%98%EC%A0%95%EB%B6%80%EB%B6%80%EB%8C%80%EC%B0%8C%EA%B0%9C%20%EC%84%9C%EC%9A%B8%20%EC%84%9C%EB%8C%80%EB%AC%B8%EA%B5%AC%20%EC%B6%A9%EC%A0%95%EB%A1%9C4%EA%B8%B8%208",
-    rating: 3.9,
-    reviewCount: 59,
-    photoUrl: "https://lh3.googleusercontent.com/place-photos/AG9NLjATZCy2KG_TPR1C2ICmlqy9eAyRebvnK3CI4VOEO3e1c-KLG3FpAYJiTU_4JgBg9K5Fo2C1A3PS2W3ndWkF5CNIe4SBhAghVon5HztDU6zxlnD-1qSRvIzu6mZb37AHrzSY_mXNdPFRFkz4QA=s4800-w800",
-    youtubers: [
-      {
-        name: "쯔양",
-        videoTitle: null,
-        videoUrl: null,
-        recommendNote: "쯔양이 방문해 리뷰한 한식 맛집."
-      }
-    ]
-  },
-  {
-    id: "jjy-452",
-    name: "호석촌",
-    category: "한식",
-    address: "서울 송파구 백제고분로39길 36",
-    phone: "02-417-2459",
-    lat: 37.5073328724866,
-    lng: 127.103394367195,
-    kakaoUrl: "http://place.map.kakao.com/2082865911",
-    naverUrl: "https://map.naver.com/p/search/%ED%98%B8%EC%84%9D%EC%B4%8C%20%EC%84%9C%EC%9A%B8%20%EC%86%A1%ED%8C%8C%EA%B5%AC%20%EB%B0%B1%EC%A0%9C%EA%B3%A0%EB%B6%84%EB%A1%9C39%EA%B8%B8%2036",
-    rating: 3.9,
-    reviewCount: 165,
-    photoUrl: "https://lh3.googleusercontent.com/place-photos/AG9NLjCeipYj9S5AX9Oe9viR8xapf9QXmJVw28N_nesyFjb_Z7A2np8n5S6QBOb8iT4Ma8rU-6gc-KhRlww54XQw42qjTswUkp9PI31gwTZwIJf75Uft8iFPmX0UYhwIH5kxP23uFH-EDe8PyE_dh4Y=s4800-w800",
-    youtubers: [
-      {
-        name: "쯔양",
-        videoTitle: null,
-        videoUrl: null,
-        recommendNote: "쯔양이 방문해 리뷰한 한식 맛집."
-      }
-    ]
-  },
-  {
-    id: "jjy-453",
-    name: "호수양곱창구이 일산본점",
-    category: "곱창,막창",
-    address: "경기 고양시 일산동구 무궁화로181번길 8-11",
-    phone: "031-905-2792",
-    lat: 37.67157227583939,
-    lng: 126.78131724944551,
-    kakaoUrl: "http://place.map.kakao.com/8155373",
-    naverUrl: "https://map.naver.com/p/search/%ED%98%B8%EC%88%98%EC%96%91%EA%B3%B1%EC%B0%BD%EA%B5%AC%EC%9D%B4%20%EC%9D%BC%EC%82%B0%EB%B3%B8%EC%A0%90%20%EA%B2%BD%EA%B8%B0%20%EA%B3%A0%EC%96%91%EC%8B%9C%20%EC%9D%BC%EC%82%B0%EB%8F%99%EA%B5%AC%20%EB%AC%B4%EA%B6%81%ED%99%94%EB%A1%9C181%EB%B2%88%EA%B8%B8%208-11",
-    rating: 3.8,
-    reviewCount: 263,
-    photoUrl: "https://lh3.googleusercontent.com/place-photos/AG9NLjCZ5nLv16KlDYs9MVblv5Xvm81MunwAhaQ6tv_LoyzANgHmUlT5wbmEFMf6kSHosPliFJvPRrcHd_xqSkhNfZhWesVRmFL8kGHCpORdigHExrtLwFRqAcJG_cMeC23TAoDMZoQ6WjW8gJGw_FQpkdPUQA=s4800-w800",
-    youtubers: [
-      {
-        name: "쯔양",
-        videoTitle: null,
-        videoUrl: null,
-        recommendNote: "쯔양이 방문해 리뷰한 고기 맛집."
       }
     ]
   },
@@ -9576,50 +4286,6 @@ const CURATED_FOOD = [
         videoTitle: null,
         videoUrl: null,
         recommendNote: "쯔양이 방문해 리뷰한 한식 맛집."
-      }
-    ]
-  },
-  {
-    id: "jjy-457",
-    name: "홍콩중화요리",
-    category: "중국요리",
-    address: "서울 동대문구 정릉천동로 107",
-    phone: "02-966-6779",
-    lat: 37.581807032574574,
-    lng: 127.03552631682928,
-    kakaoUrl: "http://place.map.kakao.com/16271741",
-    naverUrl: "https://map.naver.com/p/search/%ED%99%8D%EC%BD%A9%EC%A4%91%ED%99%94%EC%9A%94%EB%A6%AC%20%EC%84%9C%EC%9A%B8%20%EB%8F%99%EB%8C%80%EB%AC%B8%EA%B5%AC%20%EC%A0%95%EB%A6%89%EC%B2%9C%EB%8F%99%EB%A1%9C%20107",
-    rating: 4.4,
-    reviewCount: 31,
-    photoUrl: "https://lh3.googleusercontent.com/place-photos/AG9NLjBZsXlYikLUFWmcftLK36CrPtUFODPj-x-c4EpWPCdVMrp-F7_rDMg81rmPTHKcHkzMSfxWa2dJk3F8X_T5UnSTw0XnY5xC004VZv92Z9gTq0szPKFMyy2_x7JkmDtCiwomoGvo3Mu3R_E5ZPI=s4800-w800",
-    youtubers: [
-      {
-        name: "쯔양",
-        videoTitle: "여기가 찐 숨은 맛집입니다..👊🏻 제기동 40년 노포 홍콩중화요리 먹방",
-        videoUrl: "https://www.youtube.com/watch?v=GiQlzDcTKj8",
-        recommendNote: "쯔양이 방문해 리뷰한 중식 맛집."
-      }
-    ]
-  },
-  {
-    id: "jjy-458",
-    name: "화동문어",
-    category: "해물,생선",
-    address: "강원특별자치도 강릉시 주문진읍 시장길 38",
-    phone: "033-662-2703",
-    lat: 37.89111205833987,
-    lng: 128.82773266891087,
-    kakaoUrl: "http://place.map.kakao.com/1519521521",
-    naverUrl: "https://map.naver.com/p/search/%ED%99%94%EB%8F%99%EB%AC%B8%EC%96%B4%20%EA%B0%95%EC%9B%90%ED%8A%B9%EB%B3%84%EC%9E%90%EC%B9%98%EB%8F%84%20%EA%B0%95%EB%A6%89%EC%8B%9C%20%EC%A3%BC%EB%AC%B8%EC%A7%84%EC%9D%8D%20%EC%8B%9C%EC%9E%A5%EA%B8%B8%2038",
-    rating: 5,
-    reviewCount: 1,
-    photoUrl: null,
-    youtubers: [
-      {
-        name: "쯔양",
-        videoTitle: null,
-        videoUrl: null,
-        recommendNote: "쯔양이 방문해 리뷰한 돈까스·회 전문점."
       }
     ]
   },
@@ -18815,424 +13481,6 @@ const CURATED_FOOD = [
     certification: "착한가격업소(행정안전부)",
     recommendNote: "착한가격업소로 지정된 곳, 대표메뉴 양념통닭 15,000원",
     youtubers: [
-    ]
-  },
-  {
-    id: "jjy-462",
-    name: "경복 냉삼 선정릉역본점",
-    category: "삼겹살",
-    address: "서울 강남구 언주로108길 12",
-    phone: "02-555-1093",
-    lat: 37.50832624729216,
-    lng: 127.04049397303721,
-    kakaoUrl: "http://place.map.kakao.com/608318822",
-    naverUrl: "https://map.naver.com/p/search/%EA%B2%BD%EB%B3%B5%20%EB%83%89%EC%82%BC%20%EC%84%A0%EC%A0%95%EB%A6%89%EC%97%AD%EB%B3%B8%EC%A0%90%20%EC%84%9C%EC%9A%B8%20%EA%B0%95%EB%82%A8%EA%B5%AC%20%EC%96%B8%EC%A3%BC%EB%A1%9C108%EA%B8%B8%2012",
-    rating: null,
-    reviewCount: null,
-    photoUrl: null,
-    youtubers: [
-      {
-        name: "쯔양",
-        videoTitle: null,
-        videoUrl: null,
-        recommendNote: "냉동 삼겹살과 참치 해체쇼로 알려진 강남 역삼동 고깃집."
-      }
-    ]
-  },
-  {
-    id: "jjy-463",
-    name: "닭다방x종로우성닭갈비",
-    category: "닭요리",
-    address: "서울 종로구 종로8길 15-1",
-    phone: "02-420-0053",
-    lat: 37.5693280260785,
-    lng: 126.98408487334,
-    kakaoUrl: "http://place.map.kakao.com/648945279",
-    naverUrl: "https://map.naver.com/p/search/%EB%8B%AD%EB%8B%A4%EB%B0%A9x%EC%A2%85%EB%A1%9C%EC%9A%B0%EC%84%B1%EB%8B%AD%EA%B0%88%EB%B9%84%20%EC%84%9C%EC%9A%B8%20%EC%A2%85%EB%A1%9C%EA%B5%AC%20%EC%A2%85%EB%A1%9C8%EA%B8%B8%2015-1",
-    rating: null,
-    reviewCount: null,
-    photoUrl: null,
-    youtubers: [
-      {
-        name: "쯔양",
-        videoTitle: null,
-        videoUrl: null,
-        recommendNote: "종로 관철동의 닭갈비 전문점, 마무리 볶음밥까지 알차게 즐길 수 있는 곳."
-      }
-    ]
-  },
-  {
-    id: "jjy-464",
-    name: "데일리픽스 강남본점",
-    category: "햄버거",
-    address: "서울 강남구 논현로85길 70",
-    phone: "070-4222-2022",
-    lat: 37.49775543833608,
-    lng: 127.03241956181776,
-    kakaoUrl: "http://place.map.kakao.com/717158192",
-    naverUrl: "https://map.naver.com/p/search/%EB%8D%B0%EC%9D%BC%EB%A6%AC%ED%94%BD%EC%8A%A4%20%EA%B0%95%EB%82%A8%EB%B3%B8%EC%A0%90%20%EC%84%9C%EC%9A%B8%20%EA%B0%95%EB%82%A8%EA%B5%AC%20%EB%85%BC%ED%98%84%EB%A1%9C85%EA%B8%B8%2070",
-    rating: null,
-    reviewCount: null,
-    photoUrl: null,
-    youtubers: [
-      {
-        name: "쯔양",
-        videoTitle: null,
-        videoUrl: null,
-        recommendNote: "미쉐린 출신 셰프가 만드는 수제버거로 알려진 강남 역삼동 버거 전문점."
-      }
-    ]
-  },
-  {
-    id: "jjy-465",
-    name: "라면타임 본점",
-    category: "분식",
-    address: "대전 중구 계백로1685번길 45",
-    phone: "042-533-3048",
-    lat: 36.3225825516266,
-    lng: 127.405030175109,
-    kakaoUrl: "http://place.map.kakao.com/848713930",
-    naverUrl: "https://map.naver.com/p/search/%EB%9D%BC%EB%A9%B4%ED%83%80%EC%9E%84%20%EB%B3%B8%EC%A0%90%20%EB%8C%80%EC%A0%84%20%EC%A4%91%EA%B5%AC%20%EA%B3%84%EB%B0%B1%EB%A1%9C1685%EB%B2%88%EA%B8%B8%2045",
-    rating: null,
-    reviewCount: null,
-    photoUrl: null,
-    youtubers: [
-      {
-        name: "쯔양",
-        videoTitle: null,
-        videoUrl: null,
-        recommendNote: "37년 전통의 대전 중구 라면 노포, 우유라면·짬뽕라면이 대표 메뉴."
-      }
-    ]
-  },
-  {
-    id: "jjy-466",
-    name: "말고기연구소 제주공항점",
-    category: "호프,요리주점",
-    address: "제주특별자치도 제주시 북성로 43",
-    phone: "064-758-8250",
-    lat: 33.5155346656782,
-    lng: 126.520307377759,
-    kakaoUrl: "http://place.map.kakao.com/1597639792",
-    naverUrl: "https://map.naver.com/p/search/%EB%A7%90%EA%B3%A0%EA%B8%B0%EC%97%B0%EA%B5%AC%EC%86%8C%20%EC%A0%9C%EC%A3%BC%EA%B3%B5%ED%95%AD%EC%A0%90%20%EC%A0%9C%EC%A3%BC%ED%8A%B9%EB%B3%84%EC%9E%90%EC%B9%98%EB%8F%84%20%EC%A0%9C%EC%A3%BC%EC%8B%9C%20%EB%B6%81%EC%84%B1%EB%A1%9C%2043",
-    rating: null,
-    reviewCount: null,
-    photoUrl: null,
-    youtubers: [
-      {
-        name: "쯔양",
-        videoTitle: null,
-        videoUrl: null,
-        recommendNote: "제주공항 인근 말고기 전문점, 마샤브(말고기 샤부샤부)로 알려짐."
-      }
-    ]
-  },
-  {
-    id: "jjy-467",
-    name: "별미분식 사당역 본점",
-    category: "분식",
-    address: "서울 관악구 남현2길 46",
-    phone: "0503-7154-1565",
-    lat: 37.4756221566959,
-    lng: 126.97491582756,
-    kakaoUrl: "http://place.map.kakao.com/18984332",
-    naverUrl: "https://map.naver.com/p/search/%EB%B3%84%EB%AF%B8%EB%B6%84%EC%8B%9D%20%EC%82%AC%EB%8B%B9%EC%97%AD%20%EB%B3%B8%EC%A0%90%20%EC%84%9C%EC%9A%B8%20%EA%B4%80%EC%95%85%EA%B5%AC%20%EB%82%A8%ED%98%842%EA%B8%B8%2046",
-    rating: null,
-    reviewCount: null,
-    photoUrl: null,
-    youtubers: [
-      {
-        name: "쯔양",
-        videoTitle: null,
-        videoUrl: null,
-        recommendNote: "관악구 남현동의 분식집, 차돌박이를 활용한 메뉴들로 유명."
-      }
-    ]
-  },
-  {
-    id: "jjy-468",
-    name: "빨간세상라면학교 의정부본점",
-    category: "분식",
-    address: "경기 의정부시 시민로 83",
-    phone: "031-837-3334",
-    lat: 37.73897568299134,
-    lng: 127.04457308941086,
-    kakaoUrl: "http://place.map.kakao.com/21388744",
-    naverUrl: "https://map.naver.com/p/search/%EB%B9%A8%EA%B0%84%EC%84%B8%EC%83%81%EB%9D%BC%EB%A9%B4%ED%95%99%EA%B5%90%20%EC%9D%98%EC%A0%95%EB%B6%80%EB%B3%B8%EC%A0%90%20%EA%B2%BD%EA%B8%B0%20%EC%9D%98%EC%A0%95%EB%B6%80%EC%8B%9C%20%EC%8B%9C%EB%AF%BC%EB%A1%9C%2083",
-    rating: null,
-    reviewCount: null,
-    photoUrl: null,
-    youtubers: [
-      {
-        name: "쯔양",
-        videoTitle: null,
-        videoUrl: null,
-        recommendNote: "의정부의 매운 라면 전문점, 단골들 사이에서 오래 사랑받은 곳."
-      }
-    ]
-  },
-  {
-    id: "jjy-469",
-    name: "서두산딤섬 2호점",
-    category: "중식",
-    address: "서울 송파구 올림픽로32길 18-23",
-    phone: "02-422-4588",
-    lat: 37.513842867985716,
-    lng: 127.10815624866359,
-    kakaoUrl: "http://place.map.kakao.com/1396116679",
-    naverUrl: "https://map.naver.com/p/search/%EC%84%9C%EB%91%90%EC%82%B0%EB%94%A4%EC%84%AC%202%ED%98%B8%EC%A0%90%20%EC%84%9C%EC%9A%B8%20%EC%86%A1%ED%8C%8C%EA%B5%AC%20%EC%98%AC%EB%A6%BC%ED%94%BD%EB%A1%9C32%EA%B8%B8%2018-23",
-    rating: null,
-    reviewCount: null,
-    photoUrl: null,
-    youtubers: [
-      {
-        name: "쯔양",
-        videoTitle: null,
-        videoUrl: null,
-        recommendNote: "송파구 방이동의 딤섬 전문점, 샤오롱바오와 야끼만두로 알려짐."
-      }
-    ]
-  },
-  {
-    id: "jjy-470",
-    name: "선창횟집 태안본점",
-    category: "회",
-    address: "충남 태안군 남면 마검포길 427-5",
-    phone: "041-674-6270",
-    lat: 36.6199424311079,
-    lng: 126.286913623817,
-    kakaoUrl: "http://place.map.kakao.com/26912018",
-    naverUrl: "https://map.naver.com/p/search/%EC%84%A0%EC%B0%BD%ED%9A%9F%EC%A7%91%20%ED%83%9C%EC%95%88%EB%B3%B8%EC%A0%90%20%EC%B6%A9%EB%82%A8%20%ED%83%9C%EC%95%88%EA%B5%B0%20%EB%82%A8%EB%A9%B4%20%EB%A7%88%EA%B2%80%ED%8F%AC%EA%B8%B8%20427-5",
-    rating: null,
-    reviewCount: null,
-    photoUrl: null,
-    youtubers: [
-      {
-        name: "쯔양",
-        videoTitle: null,
-        videoUrl: null,
-        recommendNote: "태안 남면의 해산물 전문점, 봄철 꽃게찜과 주꾸미 샤부샤부가 대표 메뉴."
-      }
-    ]
-  },
-  {
-    id: "jjy-471",
-    name: "솥뚜껑 충주본점",
-    category: "찌개,전골",
-    address: "충북 충주시 성서7길 6",
-    phone: "043-843-8161",
-    lat: 36.969803651346254,
-    lng: 127.93187878260046,
-    kakaoUrl: "http://place.map.kakao.com/16684164",
-    naverUrl: "https://map.naver.com/p/search/%EC%86%A5%EB%9A%9C%EA%BB%91%20%EC%B6%A9%EC%A3%BC%EB%B3%B8%EC%A0%90%20%EC%B6%A9%EB%B6%81%20%EC%B6%A9%EC%A3%BC%EC%8B%9C%20%EC%84%B1%EC%84%9C7%EA%B8%B8%206",
-    rating: null,
-    reviewCount: null,
-    photoUrl: null,
-    youtubers: [
-      {
-        name: "쯔양",
-        videoTitle: null,
-        videoUrl: null,
-        recommendNote: "1982년부터 이어온 충주 노포, 솥뚜껑에 구운 삼겹살과 닭사리 전골이 특징."
-      }
-    ]
-  },
-  {
-    id: "jjy-472",
-    name: "안성휴게소서울방향 푸드코트",
-    category: "푸드코트",
-    address: "경기 안성시 원곡면 경부고속도로 372",
-    phone: "031-611-5793",
-    lat: 37.0767882437962,
-    lng: 127.132478872185,
-    kakaoUrl: "http://place.map.kakao.com/114303253",
-    naverUrl: "https://map.naver.com/p/search/%EC%95%88%EC%84%B1%ED%9C%B4%EA%B2%8C%EC%86%8C%EC%84%9C%EC%9A%B8%EB%B0%A9%ED%96%A5%20%ED%91%B8%EB%93%9C%EC%BD%94%ED%8A%B8%20%EA%B2%BD%EA%B8%B0%20%EC%95%88%EC%84%B1%EC%8B%9C%20%EC%9B%90%EA%B3%A1%EB%A9%B4%20%EA%B2%BD%EB%B6%80%EA%B3%A0%EC%86%8D%EB%8F%84%EB%A1%9C%20372",
-    rating: null,
-    reviewCount: null,
-    photoUrl: null,
-    youtubers: [
-      {
-        name: "쯔양",
-        videoTitle: null,
-        videoUrl: null,
-        recommendNote: "경부고속도로 안성휴게소(서울방향)의 식당가, 로띠번 등 휴게소 디저트로도 알려짐."
-      }
-    ]
-  },
-  {
-    id: "jjy-473",
-    name: "우정집 9-8호",
-    category: "분식",
-    address: "강원특별자치도 원주시 중앙시장길 11",
-    phone: "033-743-5822",
-    lat: 37.35082536111693,
-    lng: 127.94914418454492,
-    kakaoUrl: "http://place.map.kakao.com/21448694",
-    naverUrl: "https://map.naver.com/p/search/%EC%9A%B0%EC%A0%95%EC%A7%91%209-8%ED%98%B8%20%EA%B0%95%EC%9B%90%ED%8A%B9%EB%B3%84%EC%9E%90%EC%B9%98%EB%8F%84%20%EC%9B%90%EC%A3%BC%EC%8B%9C%20%EC%A4%91%EC%95%99%EC%8B%9C%EC%9E%A5%EA%B8%B8%2011",
-    rating: null,
-    reviewCount: null,
-    photoUrl: null,
-    youtubers: [
-      {
-        name: "쯔양",
-        videoTitle: null,
-        videoUrl: null,
-        recommendNote: "원주 자유시장 내 떡볶이집, 시장 떡볶이거리에서도 손꼽히는 곳."
-      }
-    ]
-  },
-  {
-    id: "jjy-474",
-    name: "장군족발보쌈 본관",
-    category: "족발,보쌈",
-    address: "서울 종로구 삼일대로 434-1",
-    phone: "02-743-3557",
-    lat: 37.5735307493384,
-    lng: 126.988186373024,
-    kakaoUrl: "http://place.map.kakao.com/8054793",
-    naverUrl: "https://map.naver.com/p/search/%EC%9E%A5%EA%B5%B0%EC%A1%B1%EB%B0%9C%EB%B3%B4%EC%8C%88%20%EB%B3%B8%EA%B4%80%20%EC%84%9C%EC%9A%B8%20%EC%A2%85%EB%A1%9C%EA%B5%AC%20%EC%82%BC%EC%9D%BC%EB%8C%80%EB%A1%9C%20434-1",
-    rating: null,
-    reviewCount: null,
-    photoUrl: null,
-    youtubers: [
-      {
-        name: "쯔양",
-        videoTitle: null,
-        videoUrl: null,
-        recommendNote: "종로 낙원동의 족발보쌈 전문점."
-      }
-    ]
-  },
-  {
-    id: "jjy-475",
-    name: "중앙스넥 본점",
-    category: "분식",
-    address: "경기 안성시 시장길 63",
-    phone: "031-671-8757",
-    lat: 37.006405864003604,
-    lng: 127.27140262791418,
-    kakaoUrl: "http://place.map.kakao.com/24164483",
-    naverUrl: "https://map.naver.com/p/search/%EC%A4%91%EC%95%99%EC%8A%A4%EB%84%A5%20%EB%B3%B8%EC%A0%90%20%EA%B2%BD%EA%B8%B0%20%EC%95%88%EC%84%B1%EC%8B%9C%20%EC%8B%9C%EC%9E%A5%EA%B8%B8%2063",
-    rating: null,
-    reviewCount: null,
-    photoUrl: null,
-    youtubers: [
-      {
-        name: "쯔양",
-        videoTitle: null,
-        videoUrl: null,
-        recommendNote: "40년 전통의 안성 분식집, 쫄면과 함박스테이크가 대표 메뉴."
-      }
-    ]
-  },
-  {
-    id: "jjy-476",
-    name: "쭈꾸미도사 천호본점",
-    category: "해물,생선",
-    address: "서울 강동구 천호대로158길 9",
-    phone: "02-488-0523",
-    lat: 37.53707952743723,
-    lng: 127.12647411828341,
-    kakaoUrl: "http://place.map.kakao.com/889697758",
-    naverUrl: "https://map.naver.com/p/search/%EC%AD%88%EA%BE%B8%EB%AF%B8%EB%8F%84%EC%82%AC%20%EC%B2%9C%ED%98%B8%EB%B3%B8%EC%A0%90%20%EC%84%9C%EC%9A%B8%20%EA%B0%95%EB%8F%99%EA%B5%AC%20%EC%B2%9C%ED%98%B8%EB%8C%80%EB%A1%9C158%EA%B8%B8%209",
-    rating: null,
-    reviewCount: null,
-    photoUrl: null,
-    youtubers: [
-      {
-        name: "쯔양",
-        videoTitle: null,
-        videoUrl: null,
-        recommendNote: "강동구 성내동의 쭈꾸미 전문점, 대창과 함께 즐기는 조합으로 알려짐."
-      }
-    ]
-  },
-  {
-    id: "jjy-477",
-    name: "충남집 9-5호",
-    category: "한식",
-    address: "강원특별자치도 원주시 중앙시장길 11",
-    phone: null,
-    lat: 37.35078563531704,
-    lng: 127.94904210921933,
-    kakaoUrl: "http://place.map.kakao.com/1650545003",
-    naverUrl: "https://map.naver.com/p/search/%EC%B6%A9%EB%82%A8%EC%A7%91%209-5%ED%98%B8%20%EA%B0%95%EC%9B%90%ED%8A%B9%EB%B3%84%EC%9E%90%EC%B9%98%EB%8F%84%20%EC%9B%90%EC%A3%BC%EC%8B%9C%20%EC%A4%91%EC%95%99%EC%8B%9C%EC%9E%A5%EA%B8%B8%2011",
-    rating: null,
-    reviewCount: null,
-    photoUrl: null,
-    youtubers: [
-      {
-        name: "쯔양",
-        videoTitle: null,
-        videoUrl: null,
-        recommendNote: "원주 자유시장 내 떡볶이집, 진한 국물맛이 특징."
-      }
-    ]
-  },
-  {
-    id: "jjy-478",
-    name: "친절떡볶이 9-9호",
-    category: "떡볶이",
-    address: "강원특별자치도 원주시 중앙시장길 11",
-    phone: null,
-    lat: 37.350839911423144,
-    lng: 127.94912743853453,
-    kakaoUrl: "http://place.map.kakao.com/25849180",
-    naverUrl: "https://map.naver.com/p/search/%EC%B9%9C%EC%A0%88%EB%96%A1%EB%B3%B6%EC%9D%B4%209-9%ED%98%B8%20%EA%B0%95%EC%9B%90%ED%8A%B9%EB%B3%84%EC%9E%90%EC%B9%98%EB%8F%84%20%EC%9B%90%EC%A3%BC%EC%8B%9C%20%EC%A4%91%EC%95%99%EC%8B%9C%EC%9E%A5%EA%B8%B8%2011",
-    rating: null,
-    reviewCount: null,
-    photoUrl: null,
-    youtubers: [
-      {
-        name: "쯔양",
-        videoTitle: null,
-        videoUrl: null,
-        recommendNote: "37년 전통의 원주 자유시장 떡볶이집, 순대도 함께 판매."
-      }
-    ]
-  },
-  {
-    id: "jjy-479",
-    name: "통굴통굴 시흥본점",
-    category: "굴,전복",
-    address: "경기 시흥시 대골안길 94",
-    phone: "031-318-1542",
-    lat: 37.4418097901624,
-    lng: 126.785987924602,
-    kakaoUrl: "http://place.map.kakao.com/246912337",
-    naverUrl: "https://map.naver.com/p/search/%ED%86%B5%EA%B5%B4%ED%86%B5%EA%B5%B4%20%EC%8B%9C%ED%9D%A5%EB%B3%B8%EC%A0%90%20%EA%B2%BD%EA%B8%B0%20%EC%8B%9C%ED%9D%A5%EC%8B%9C%20%EB%8C%80%EA%B3%A8%EC%95%88%EA%B8%B8%2094",
-    rating: null,
-    reviewCount: null,
-    photoUrl: null,
-    youtubers: [
-      {
-        name: "쯔양",
-        videoTitle: null,
-        videoUrl: null,
-        recommendNote: "시흥의 굴 요리 전문점, 여수산 굴을 사용한 굴찜·굴전으로 알려짐."
-      }
-    ]
-  },
-  {
-    id: "jjy-480",
-    name: "해주냉면 본점",
-    category: "냉면",
-    address: "서울 송파구 백제고분로7길 8-16",
-    phone: "02-424-7192",
-    lat: 37.509652351093166,
-    lng: 127.07977463491474,
-    kakaoUrl: "http://place.map.kakao.com/25049102",
-    naverUrl: "https://map.naver.com/p/search/%ED%95%B4%EC%A3%BC%EB%83%89%EB%A9%B4%20%EB%B3%B8%EC%A0%90%20%EC%84%9C%EC%9A%B8%20%EC%86%A1%ED%8C%8C%EA%B5%AC%20%EB%B0%B1%EC%A0%9C%EA%B3%A0%EB%B6%84%EB%A1%9C7%EA%B8%B8%208-16",
-    rating: null,
-    reviewCount: null,
-    photoUrl: null,
-    youtubers: [
-      {
-        name: "쯔양",
-        videoTitle: null,
-        videoUrl: null,
-        recommendNote: "서울 5대 매운 냉면집으로 꼽히는 잠실의 냉면 노포."
-      }
     ]
   }
 ];
