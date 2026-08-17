@@ -65,7 +65,10 @@ header {
 .search-item-sub { font-size: 11px; color: #9ca3af; margin-top: 2px; }
 .search-empty { padding: 14px; text-align: center; font-size: 13px; color: #9ca3af; }
 
-/* 필터 바 (골프노노/와일드피크스 스타일 — 드롭다운 셀렉트 3개 상시 노출) */
+/* ════════════════════════════════════════════════════════════════
+   [OLD] 필터 바(드롭다운 셀렉트 6개) — 캐치테이블 스타일 아이콘 그리드로
+   교체되어 더 이상 사용하지 않음. 나중에 되돌릴 수도 있어 삭제하지 않고
+   주석 처리만 해 둠 (관련 HTML/JS도 동일하게 주석 처리됨).
 #filter-bar {
   background: #fff; border-bottom: 1px solid #e5e7eb;
   padding: 8px 16px;
@@ -91,8 +94,93 @@ header {
   .filter-select { flex: 1 1 auto; min-width: 100px; max-width: none; }
   .result-count-text { display: none; }
 }
+   ════════════════════════════════════════════════════════════════ */
 
-/* 큐레이션 테마 섹션 (홈=리스트뷰 상단, 필터 드롭다운 위) — 가로 스크롤 카드 캐러셀 */
+/* 필터 아이콘 그리드 (캐치테이블 스타일) — 유튜버/지역/음식종류/인증/정렬 5칩 */
+#filter-chip-grid {
+  display: grid; grid-template-columns: repeat(5, 1fr); gap: 2px;
+  padding: 10px 6px; background: #fff; border-bottom: 1px solid #e5e7eb;
+  flex-shrink: 0; box-shadow: 0 1px 3px rgba(0,0,0,.04);
+}
+.filter-chip-btn {
+  display: flex; flex-direction: column; align-items: center; gap: 5px;
+  padding: 6px 2px; border: none; background: none; cursor: pointer;
+  font-family: inherit; border-radius: 10px; transition: background .15s;
+}
+.filter-chip-btn:hover { background: #f4f6f8; }
+.filter-chip-icon-wrap {
+  width: 42px; height: 42px; border-radius: 50%; background: #f4f6f8;
+  display: flex; align-items: center; justify-content: center; font-size: 19px;
+  border: 1.5px solid transparent; transition: all .15s;
+}
+.filter-chip-btn.active .filter-chip-icon-wrap { background: #f0fdf4; border-color: #16a34a; }
+.filter-chip-text {
+  font-size: 11px; font-weight: 600; color: #6b7280;
+  max-width: 62px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap;
+}
+.filter-chip-btn.active .filter-chip-text { color: #16a34a; font-weight: 700; }
+
+/* 필터 선택 피커 — 모바일: 바텀시트 / PC(≥768px): 좌측 상단 드롭다운 패널 */
+#filter-picker-overlay {
+  display: none; position: fixed; inset: 0; background: rgba(0,0,0,.32); z-index: 1400;
+}
+#filter-picker-overlay.open { display: block; }
+#filter-picker {
+  display: none; position: fixed; bottom: 0; left: 0; right: 0; z-index: 1500;
+  background: #fff; border-radius: 20px 20px 0 0; max-height: 70vh;
+  flex-direction: column; overflow: hidden; box-shadow: 0 -4px 24px rgba(0,0,0,.12);
+}
+#filter-picker.open { display: flex; }
+.filter-picker-handle { width: 44px; height: 5px; background: #d1d5db; border-radius: 3px; margin: 10px auto 0; flex-shrink: 0; }
+.filter-picker-head {
+  display: flex; align-items: center; justify-content: space-between;
+  padding: 12px 16px; border-bottom: 1px solid #f3f4f6; flex-shrink: 0;
+}
+.filter-picker-title { font-size: 15px; font-weight: 700; color: #1a1a1a; }
+.filter-picker-close {
+  background: #f3f4f6; border: none; border-radius: 50%;
+  width: 28px; height: 28px; font-size: 13px; color: #6b7280; cursor: pointer;
+}
+.filter-picker-body { flex: 1; overflow-y: auto; padding: 6px 0 16px; }
+.picker-option {
+  padding: 12px 20px; font-size: 14px; color: #374151; cursor: pointer;
+  display: flex; justify-content: space-between; align-items: center;
+}
+.picker-option:hover { background: #f9fafb; }
+.picker-option.selected { color: #16a34a; font-weight: 700; background: #f0fdf4; }
+.picker-count { font-size: 12px; color: #9ca3af; font-weight: 500; }
+
+@media (min-width: 768px) {
+  #filter-picker {
+    bottom: auto; left: 16px; right: auto; top: 100px; width: 300px;
+    border-radius: 16px; box-shadow: 0 12px 40px rgba(0,0,0,.18); max-height: 60vh;
+  }
+  .filter-picker-handle { display: none; }
+}
+
+/* 필터 결과 리스트 헤더 — 필터 활성화 시에만 노출 */
+#filter-result-header {
+  padding: 12px 16px 4px; font-size: 13px; font-weight: 700; color: #374151; flex-shrink: 0;
+}
+
+/* "이번 주 추천" 히어로 캐러셀 (홈 최상단, 카드 1장이 화면 대부분을 차지하는 스와이프 배너) */
+#hero-carousel { background: #fff; flex-shrink: 0; }
+.hero-header { padding: 14px 16px 10px; }
+.hero-title { font-size: 16px; font-weight: 800; color: #1a1a1a; }
+.hero-subtitle { font-size: 11px; color: #9ca3af; margin-top: 2px; }
+.hero-scroll {
+  display: flex; gap: 12px; overflow-x: auto; overscroll-behavior-x: contain;
+  scroll-snap-type: x mandatory; padding: 0 16px 4px; scrollbar-width: none;
+}
+.hero-scroll::-webkit-scrollbar { display: none; }
+.food-card.food-card-hero {
+  flex: 0 0 85%; max-width: 420px; margin: 0; scroll-snap-align: center;
+}
+.food-card-hero .card-thumb { font-size: 56px; }
+.food-card-hero .card-name { font-size: 17px; }
+.hero-indicator { text-align: center; font-size: 12px; color: #6b7280; font-weight: 700; padding: 2px 0 14px; }
+
+/* 큐레이션 테마 섹션 (히어로 캐러셀 아래, 필터 활성화 시 통째로 숨겨짐) — 가로 스크롤 카드 캐러셀 */
 #curation-sections { background: #fff; flex-shrink: 0; }
 .curation-section { padding: 14px 0 4px; border-bottom: 1px solid #f3f4f6; }
 .curation-header {
@@ -246,6 +334,13 @@ header {
   cursor: pointer; transition: transform .15s ease, box-shadow .15s ease;
 }
 .food-card:hover { transform: translateY(-4px); box-shadow: 0 10px 24px rgba(0,0,0,.14); }
+
+/* 필터 결과 리스트 전용 가로형 컴팩트 카드 — 세로 한 화면에 카드가 1.5~2개 이상 걸쳐 보이도록
+   사진 비율(4:3)은 유지하되 썸네일을 작게 고정하고 카드를 가로 배치로 바꿔 전체 높이를 줄임 */
+.food-card.food-card-compact { flex-direction: row; align-items: stretch; margin: 6px 12px; }
+.food-card-compact .card-thumb { width: 104px; flex: 0 0 104px; border-radius: 12px 0 0 12px; }
+.food-card-compact .card-info { justify-content: center; padding: 8px 12px; }
+.food-card-compact .card-name { font-size: 14px; }
 
 /* 사진(4:3) — 있으면 실사진, 없으면 카테고리 아이콘으로 대체 */
 .card-thumb {
@@ -536,6 +631,10 @@ a.info-text:hover { color: #22c55e; }
   </div>
 </header>
 
+<!-- ════════════════════════════════════════════════════════════════
+     [OLD] 필터 바(드롭다운 셀렉트 6개) — 캐치테이블 스타일 아이콘 그리드로
+     교체되어 더 이상 사용하지 않음. 나중에 되돌릴 수도 있어 삭제하지 않고
+     주석 처리만 해 둠.
 <div id="filter-bar">
   <select id="filter-youtuber" class="filter-select" onchange="onFilterSelectChange()"></select>
   <select id="filter-region" class="filter-select" onchange="onFilterSelectChange()"></select>
@@ -552,6 +651,19 @@ a.info-text:hover { color: #22c55e; }
     <option value="unsaved">안 찜한 곳만</option>
   </select>
   <span class="result-count-text" id="result-count-text"></span>
+</div>
+     ════════════════════════════════════════════════════════════════ -->
+
+<div id="filter-chip-grid"></div>
+
+<div id="filter-picker-overlay" onclick="closeFilterPicker()"></div>
+<div id="filter-picker">
+  <div class="filter-picker-handle"></div>
+  <div class="filter-picker-head">
+    <span class="filter-picker-title" id="filter-picker-title"></span>
+    <button class="filter-picker-close" onclick="closeFilterPicker()">✕</button>
+  </div>
+  <div class="filter-picker-body" id="filter-picker-body"></div>
 </div>
 
 <!-- ════════════════════════════════════════════════════════════════
@@ -592,7 +704,9 @@ a.info-text:hover { color: #22c55e; }
     <div id="list-view">
       <div id="visit-progress"></div>
       <div id="saved-entry"></div>
+      <div id="hero-carousel"></div>
       <div id="curation-sections"></div>
+      <div id="filter-result-header"></div>
       <div id="food-list"></div>
       <div class="list-status" id="list-status"></div>
     </div>
@@ -674,6 +788,26 @@ function extractRegion(address) {
   if (first === '전남광주통합특별시') return GWANGJU_GU.includes(second) ? '광주' : '전남';
   return REGION_ALIAS[first] || first;
 }
+// 카드에 "서울 강동구"처럼 구/군 단위까지 보여주기 위한 파서.
+// 주소는 보통 [시/도] [시/군/구] [읍/면/동/로...] 순서라, 시/도 다음 토큰부터
+// 시/군/구로 끝나는 토큰을 찾음 — "수원시 팔달구"처럼 시 다음에 구가 한 번 더
+// 나오는 경우가 있어 구가 나오면 그걸 우선하고, 없으면 시/군을 그대로 씀.
+function extractDistrict(address) {
+  if (!address) return extractRegion(address);
+  const province = extractRegion(address);
+  const tokens = address.split(' ');
+  let siToken = null;
+  for (let i = 1; i < tokens.length && i < 4; i++) {
+    const t = tokens[i];
+    if (/(시|군|구)$/.test(t)) {
+      if (t.endsWith('구')) return `${province} ${t}`;
+      if (!siToken) siToken = t;
+    } else if (siToken) {
+      break;
+    }
+  }
+  return siToken ? `${province} ${siToken}` : province;
+}
 
 const CATEGORY_MAJOR_MAP = {
   // 한식
@@ -718,7 +852,16 @@ const filterState = {
   certification: '', // '백년가게' | '한국관광공사' — certification 문자열에 부분일치로 판단
   visited: '', // '' | 'visited' | 'unvisited'
   saved: '', // '' | 'saved' | 'unsaved'
+  sort: '', // '' | 'rating' | 'reviewCount'
 };
+
+// 5개 필터 칩(정렬 포함) 중 하나라도 "전체"가 아니면 홈(캐러셀+큐레이션)을 숨기고
+// 필터링된 결과 리스트를 보여줌. visited/saved는 칩 UI는 없지만("내가 찜한 곳"
+// 진입점처럼 프로그램적으로 켜질 수 있어) 같은 원칙으로 홈↔결과 전환에 포함시킴.
+function isAnyFilterActive() {
+  return !!(filterState.youtuber || filterState.region || filterState.categoryMajor ||
+    filterState.certification || filterState.sort || filterState.visited || filterState.saved);
+}
 
 function matchesFilters(food, state) {
   const s = state || filterState;
@@ -758,6 +901,7 @@ function toggleVisited(id) {
 // (진행률 바 / 큐레이션 섹션 / 리스트·필터 / 지금 열려 있는 상세 패널의 버튼 상태)
 function onVisitedChange(id) {
   renderVisitProgress();
+  renderHeroCarousel();
   renderCurationSections();
   applyFilters();
   if (activeFood && activeFood.id === id) {
@@ -799,6 +943,7 @@ function toggleSaved(id) {
 }
 function onSavedChange(id) {
   renderSavedEntry();
+  renderHeroCarousel();
   renderCurationSections();
   applyFilters();
   if (activeFood && activeFood.id === id) {
@@ -822,7 +967,6 @@ function goToSavedList() {
   deselect();
   filterState.youtuber = ''; filterState.region = ''; filterState.categoryMajor = '';
   filterState.certification = ''; filterState.visited = ''; filterState.saved = 'saved';
-  syncFilterSelectsUI();
   applyFilters();
   document.getElementById('list-view').scrollTop = 0;
 }
@@ -936,33 +1080,103 @@ const FILTER_CERTIFICATION_OPTS = (() => {
   return Object.entries(counts).sort((a,b) => b[1]-a[1]).map(([name,count]) => ({ value: name, count }));
 })();
 
-// 골프노노 스타일: <select> 옵션으로 렌더링, "전체" 옵션이 항상 첫 번째
-function renderFilterSelect(selectId, allLabel, options, showCount) {
-  const el = document.getElementById(selectId);
-  el.innerHTML = `<option value="">${esc(allLabel)}</option>` +
-    options.map(opt => `<option value="${esc(opt.value)}">${esc(opt.value)}${showCount ? ' ' + opt.count : ''}</option>`).join('');
-}
-renderFilterSelect('filter-youtuber', '유튜버 전체', FILTER_YOUTUBER_OPTS, true);
-renderFilterSelect('filter-region', '지역 전체', FILTER_REGION_OPTS, false);
-renderFilterSelect('filter-category', '음식종류 전체', FILTER_CATEGORY_MAJOR_OPTS, false);
-renderFilterSelect('filter-certification', '인증 전체', FILTER_CERTIFICATION_OPTS, true);
+// 정렬은 다른 4개 필터와 달리 "옵션 값 = 조건"이 아니라 "옵션 값 = 정렬 기준"이라
+// count가 없음 — 그래도 같은 피커 UI를 그대로 재사용하도록 {value, label} 형태로 맞춤.
+const SORT_OPTS = [
+  { value: 'rating', label: '평점 높은순' },
+  { value: 'reviewCount', label: '리뷰 많은순' },
+];
 
-function onFilterSelectChange() {
-  filterState.youtuber = document.getElementById('filter-youtuber').value;
-  filterState.region = document.getElementById('filter-region').value;
-  filterState.categoryMajor = document.getElementById('filter-category').value;
-  filterState.certification = document.getElementById('filter-certification').value;
-  filterState.visited = document.getElementById('filter-visited').value;
-  filterState.saved = document.getElementById('filter-saved').value;
-  applyFilters();
+// 캐치테이블 스타일 아이콘 그리드 5칩 — key는 filterState의 필드명과 그대로 대응.
+// picker가 공통 컴포넌트라 새 필터를 추가할 때도 이 배열에 항목만 추가하면 됨.
+const FILTER_CHIPS = [
+  { key: 'youtuber', icon: '🎬', label: '유튜버', allLabel: '전체', getOptions: () => FILTER_YOUTUBER_OPTS },
+  { key: 'region', icon: '📍', label: '지역', allLabel: '전체', getOptions: () => FILTER_REGION_OPTS },
+  { key: 'categoryMajor', icon: '🍜', label: '음식종류', allLabel: '전체', getOptions: () => FILTER_CATEGORY_MAJOR_OPTS },
+  { key: 'certification', icon: '🏛️', label: '인증', allLabel: '전체', getOptions: () => FILTER_CERTIFICATION_OPTS },
+  { key: 'sort', icon: '↕️', label: '정렬', allLabel: '기본순', getOptions: () => SORT_OPTS },
+];
+
+function renderFilterChips() {
+  const grid = document.getElementById('filter-chip-grid');
+  grid.innerHTML = FILTER_CHIPS.map(chip => {
+    const val = filterState[chip.key];
+    const active = !!val;
+    let displayText = chip.label;
+    if (active) {
+      const opt = chip.getOptions().find(o => o.value === val);
+      displayText = (opt && opt.label) || val;
+    }
+    return `
+      <button class="filter-chip-btn${active ? ' active' : ''}" data-key="${chip.key}">
+        <span class="filter-chip-icon-wrap">${chip.icon}</span>
+        <span class="filter-chip-text">${esc(displayText)}</span>
+      </button>`;
+  }).join('');
 }
+
+let currentPickerKey = null;
+function openFilterPicker(key) {
+  const chip = FILTER_CHIPS.find(c => c.key === key);
+  if (!chip) return;
+  currentPickerKey = key;
+  document.getElementById('filter-picker-title').textContent = `${chip.label} 선택`;
+  const currentVal = filterState[key];
+  const allRow = `<div class="picker-option${!currentVal ? ' selected' : ''}" data-value="">${esc(chip.allLabel)}</div>`;
+  const optionRows = chip.getOptions().map(o => `
+    <div class="picker-option${currentVal === o.value ? ' selected' : ''}" data-value="${esc(o.value)}">
+      <span>${esc(o.label || o.value)}</span>
+      ${o.count != null ? `<span class="picker-count">${o.count}</span>` : ''}
+    </div>`).join('');
+  document.getElementById('filter-picker-body').innerHTML = allRow + optionRows;
+  document.getElementById('filter-picker-overlay').classList.add('open');
+  document.getElementById('filter-picker').classList.add('open');
+}
+function closeFilterPicker() {
+  document.getElementById('filter-picker-overlay').classList.remove('open');
+  document.getElementById('filter-picker').classList.remove('open');
+  currentPickerKey = null;
+}
+document.getElementById('filter-chip-grid').addEventListener('click', e => {
+  const btn = e.target.closest('.filter-chip-btn');
+  if (!btn) return;
+  openFilterPicker(btn.dataset.key);
+});
+document.getElementById('filter-picker-body').addEventListener('click', e => {
+  const opt = e.target.closest('.picker-option');
+  if (!opt || !currentPickerKey) return;
+  filterState[currentPickerKey] = opt.dataset.value;
+  closeFilterPicker();
+  applyFilters();
+});
 
 function updateCount() {
   const n = CURATED_FOOD.filter(f => matchesFilters(f)).length;
-  const activeCount = [filterState.youtuber, filterState.region, filterState.categoryMajor, filterState.certification, filterState.visited, filterState.saved].filter(Boolean).length;
   document.getElementById('cnt').textContent = n + '곳';
-  document.getElementById('result-count-text').textContent =
-    activeCount > 0 ? `전체 ${CURATED_FOOD.length}곳 중 ${n}곳` : '';
+}
+
+// 정렬 칩 선택에 따라 필터링된 리스트를 재정렬 (기본은 원본 순서 그대로)
+function sortFilteredList(list, sortKey) {
+  if (sortKey === 'rating') return list.slice().sort((a, b) => (b.rating || 0) - (a.rating || 0));
+  if (sortKey === 'reviewCount') return list.slice().sort((a, b) => (b.reviewCount || 0) - (a.reviewCount || 0));
+  return list;
+}
+
+// 5개 필터 칩 중 하나라도 활성화되면 홈(진행률바/찜 진입점/히어로 캐러셀/큐레이션)을
+// 숨기고 필터링된 결과 리스트만 보여줌. 전부 "전체"로 돌아오면 자동으로 홈으로 복귀.
+function updateHomeModeVisibility() {
+  const active = isAnyFilterActive();
+  document.getElementById('visit-progress').style.display = active ? 'none' : '';
+  document.getElementById('saved-entry').style.display = active ? 'none' : (savedSet.size ? '' : 'none');
+  document.getElementById('hero-carousel').style.display = active ? 'none' : '';
+  document.getElementById('curation-sections').style.display = active ? 'none' : '';
+  const header = document.getElementById('filter-result-header');
+  if (active) {
+    header.style.display = '';
+    header.textContent = `필터 결과 ${filteredList.length}곳`;
+  } else {
+    header.style.display = 'none';
+  }
 }
 
 /* ════════════════════════════════════════════════════════════════
@@ -1086,10 +1300,13 @@ function applyFilters() {
   clusterer.addMarkers(visibleMarkers);
   updateCount();
   renderListInitial();
+  renderFilterChips();
+  updateHomeModeVisibility();
   if (activeFood && !matchesFilters(activeFood)) deselect();
 }
 
 updateCount();
+renderFilterChips();
 
 // 리스트 상세 ↔ 목록 전환 시 사용할 상태를 없애고, 목록/상세는 항상 둘 중 하나만 보이도록 함
 function deselect() {
@@ -1189,7 +1406,8 @@ function renderListItem(food, indexInFilteredList) {
   // if (indexInFilteredList > 0 && (indexInFilteredList + 1) % 10 === 0) {
   //   return renderAdCard(indexInFilteredList);
   // }
-  return renderFoodCard(food);
+  // 필터 결과 리스트는 가로형 컴팩트 카드로 렌더 — 한 화면에 여러 개가 걸쳐 보이도록
+  return renderFoodCard(food, 'food-card-compact');
 }
 
 function renderFoodCard(food, extraClass) {
@@ -1205,7 +1423,7 @@ function renderFoodCard(food, extraClass) {
   const ratingHtml = food.rating
     ? `<span class="card-rating">⭐${food.rating}${food.reviewCount ? ` (${food.reviewCount.toLocaleString()})` : ''}</span>`
     : '';
-  const region = extractRegion(food.address);
+  const region = extractDistrict(food.address);
   const icon = CATEGORY_ICON[getMajorCategory(food.category)] || '🍽️';
   // 사진이 있으면 로딩 전엔 스켈레톤을 보여주고, 로드 완료/실패 시 img.onload/onerror로 해제.
   // 사진이 없으면 카테고리 아이콘을 바로 보여줌(스켈레톤 불필요).
@@ -1233,7 +1451,7 @@ function renderFoodCard(food, extraClass) {
 }
 
 function renderListInitial() {
-  filteredList = CURATED_FOOD.filter(f => matchesFilters(f));
+  filteredList = sortFilteredList(CURATED_FOOD.filter(f => matchesFilters(f)), filterState.sort);
   listRenderedCount = 0;
   document.getElementById('food-list').innerHTML = '';
   document.getElementById('list-status').textContent = '';
@@ -1313,13 +1531,37 @@ function getWeeklyPicks(n) {
 }
 function byRatingDesc(a, b) { return (b.rating || 0) - (a.rating || 0); }
 
+// "이번 주 추천 5곳"은 더 이상 다른 큐레이션 섹션들과 같은 가로 스크롤 행이 아니라,
+// 홈 최상단의 큰 스와이프 히어로 캐러셀로 따로 렌더링됨 (renderHeroCarousel 참고).
+function renderHeroCarousel() {
+  const items = getWeeklyPicks(5);
+  const container = document.getElementById('hero-carousel');
+  if (!items.length) { container.innerHTML = ''; return; }
+  const cardsHtml = items.map(food => `<div class="hero-card-wrap">${renderFoodCard(food, 'food-card-hero')}</div>`).join('');
+  container.innerHTML = `
+    <div class="hero-header">
+      <div class="hero-title">이번 주 추천 5곳</div>
+      <div class="hero-subtitle">매주 새롭게 골라드려요</div>
+    </div>
+    <div class="hero-scroll" id="hero-scroll">${cardsHtml}</div>
+    <div class="hero-indicator" id="hero-indicator">1 / ${items.length}</div>`;
+  const scroll = document.getElementById('hero-scroll');
+  scroll.addEventListener('scroll', () => {
+    const cardWidth = scroll.firstElementChild.getBoundingClientRect().width + 12; // gap 포함
+    const idx = Math.round(scroll.scrollLeft / cardWidth);
+    document.getElementById('hero-indicator').textContent = `${Math.min(idx + 1, items.length)} / ${items.length}`;
+  });
+}
+document.getElementById('hero-carousel').addEventListener('click', e => {
+  const saveBtn = e.target.closest('.card-save-btn');
+  if (saveBtn) { toggleSaved(saveBtn.dataset.id); return; }
+  const card = e.target.closest('.food-card');
+  if (!card) return;
+  const food = CURATED_FOOD.find(f => f.id === card.dataset.id);
+  if (food && food.marker) select(food, food.marker);
+});
+
 const CURATION_SECTIONS = [
-  {
-    id: 'weekly-pick',
-    title: '이번 주 추천 5곳',
-    getSubtitle: () => '매주 새롭게 골라드려요',
-    getItems: () => getWeeklyPicks(5),
-  },
   {
     id: 'multi-youtuber',
     title: '여러 유튜버가 공통으로 인정한 곳',
@@ -1363,21 +1605,11 @@ const CURATION_SECTIONS = [
   },
 ];
 
-function syncFilterSelectsUI() {
-  document.getElementById('filter-youtuber').value = filterState.youtuber;
-  document.getElementById('filter-region').value = filterState.region;
-  document.getElementById('filter-category').value = filterState.categoryMajor;
-  document.getElementById('filter-certification').value = filterState.certification;
-  document.getElementById('filter-visited').value = filterState.visited;
-  document.getElementById('filter-saved').value = filterState.saved;
-}
-
 function applySectionFilter(sectionId) {
   const section = CURATION_SECTIONS.find(s => s.id === sectionId);
   if (!section || !section.moreFilter) return;
   deselect();
   section.moreFilter();
-  syncFilterSelectsUI();
   applyFilters();
   document.getElementById('list-view').scrollTop = 0;
 }
@@ -1417,9 +1649,11 @@ document.getElementById('curation-sections').addEventListener('click', e => {
   if (food && food.marker) select(food, food.marker);
 });
 
+renderHeroCarousel();
 renderCurationSections();
 renderVisitProgress();
 renderSavedEntry();
+updateHomeModeVisibility();
 
 function fillPanel(prefix, food) {
   const headId = prefix === 'd' ? 'd-head' : 's-head';
