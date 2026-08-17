@@ -608,7 +608,7 @@ a.info-text:hover { color: #22c55e; }
     <span class="logo-icon">🍽️</span>
     <div>
       <div class="logo-text">FoodMap</div>
-      <div class="logo-sub">유튜버 추천 맛집</div>
+      <div class="logo-sub" id="logo-sub">유튜버 추천 맛집</div>
     </div>
   </div>
   <span class="count-badge" id="cnt">0곳</span>
@@ -1140,6 +1140,7 @@ document.getElementById('filter-picker-body').addEventListener('click', e => {
 function updateCount() {
   const n = CURATED_FOOD.filter(f => matchesFilters(f)).length;
   document.getElementById('cnt').textContent = n + '곳';
+  document.getElementById('logo-sub').textContent = `유튜버 추천 맛집 ${n}곳`;
 }
 
 // 정렬 칩 선택에 따라 필터링된 리스트를 재정렬 (기본은 원본 순서 그대로)
