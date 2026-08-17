@@ -30,11 +30,6 @@ header {
 .logo-icon { font-size: 22px; }
 .logo-text { font-size: 17px; font-weight: 700; color: #1a1a1a; transition: color .2s; }
 .logo-sub { font-size: 10px; color: #9ca3af; }
-.count-badge {
-  background: #f0fdf4; color: #16a34a;
-  border: 1px solid #bbf7d0; border-radius: 99px;
-  padding: 3px 10px; font-size: 12px; font-weight: 600; flex-shrink: 0;
-}
 .search-wrap { margin-left: auto; position: relative; flex-shrink: 0; }
 .search-input-row {
   display: flex; align-items: center;
@@ -565,7 +560,6 @@ a.info-text:hover { color: #22c55e; }
 
 /* 모바일 전용 미세 조정 (구조적 전환은 1024px 기준, 이건 좁은 화면 여유 확보용) */
 @media (max-width: 767px) {
-  .count-badge { display: none; }
   .search-input { width: 130px; }
 }
 
@@ -611,7 +605,6 @@ a.info-text:hover { color: #22c55e; }
       <div class="logo-sub" id="logo-sub">유튜버 추천 맛집</div>
     </div>
   </div>
-  <span class="count-badge" id="cnt">0곳</span>
   <div class="search-wrap">
     <div class="search-input-row">
       <span class="search-icon">🔍</span>
@@ -1138,10 +1131,11 @@ document.getElementById('filter-picker-body').addEventListener('click', e => {
 });
 
 function updateCount() {
-  const n = CURATED_FOOD.filter(f => matchesFilters(f)).length;
-  document.getElementById('cnt').textContent = n + '곳';
-  document.getElementById('logo-sub').textContent = `유튜버 추천 맛집 ${n}곳`;
+  // (필터링된 개수를 쓰던 카운트 뱃지는 제거됨 — 이제 이 함수는 자리만 유지)
 }
+// 부제의 개수는 필터와 무관하게 전체 데이터 건수로 고정 — updateCount()처럼
+// 필터가 바뀔 때마다 재계산하지 않고 페이지 로드 시 한 번만 반영
+document.getElementById('logo-sub').textContent = `유튜버 추천 맛집 ${CURATED_FOOD.length}곳`;
 
 // 정렬 칩 선택에 따라 필터링된 리스트를 재정렬 (기본은 원본 순서 그대로)
 function sortFilteredList(list, sortKey) {
