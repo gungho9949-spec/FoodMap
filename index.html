@@ -169,15 +169,19 @@ header {
 .hero-title { font-size: 16px; font-weight: 800; color: #1a1a1a; }
 .hero-subtitle { font-size: 11px; color: #9ca3af; margin-top: 2px; }
 .hero-scroll {
-  display: flex; gap: 12px; overflow-x: auto; overscroll-behavior-x: contain;
+  display: flex; align-items: stretch; gap: 12px; overflow-x: auto; overscroll-behavior-x: contain;
   scroll-snap-type: x mandatory; padding: 0 16px 4px; scrollbar-width: none;
 }
 .hero-scroll::-webkit-scrollbar { display: none; }
-.food-card.food-card-hero {
-  flex: 0 0 85%; max-width: 420px; margin: 0; scroll-snap-align: center;
+/* 캐러셀 카드들의 높이를 항상 맞추기 위한 래퍼 — align-items:stretch로 늘어난
+   래퍼 높이를 안쪽 food-card-hero가 100% 채우도록 display:flex로 한 번 더 감쌈 */
+.hero-card-wrap {
+  display: flex; flex: 0 0 85%; max-width: 420px; scroll-snap-align: center;
 }
+.food-card.food-card-hero { flex: 1; margin: 0; }
 .food-card-hero .card-thumb { font-size: 56px; }
 .food-card-hero .card-name { font-size: 17px; }
+.food-card-hero .card-info { height: 96px; padding: 12px 14px; }
 .hero-indicator { text-align: center; font-size: 12px; color: #6b7280; font-weight: 700; padding: 2px 0 14px; }
 
 /* 큐레이션 테마 섹션 (히어로 캐러셀 아래, 필터 활성화 시 통째로 숨겨짐) — 가로 스크롤 카드 캐러셀 */
@@ -201,7 +205,7 @@ header {
 }
 .curation-scroll::-webkit-scrollbar { display: none; }
 .food-card.food-card-mini {
-  flex: 0 0 160px; width: 160px; margin: 0; scroll-snap-align: start;
+  flex: 0 0 160px; width: 160px; height: 224px; margin: 0; scroll-snap-align: start;
 }
 .food-card-mini .card-name { font-size: 13px; }
 .food-card-mini .card-info { padding: 8px 10px 10px; }
@@ -337,9 +341,9 @@ header {
 
 /* 필터 결과 리스트 전용 가로형 컴팩트 카드 — 세로 한 화면에 카드가 1.5~2개 이상 걸쳐 보이도록
    사진 비율(4:3)은 유지하되 썸네일을 작게 고정하고 카드를 가로 배치로 바꿔 전체 높이를 줄임 */
-.food-card.food-card-compact { flex-direction: row; align-items: stretch; margin: 6px 12px; }
-.food-card-compact .card-thumb { width: 104px; flex: 0 0 104px; border-radius: 12px 0 0 12px; }
-.food-card-compact .card-info { justify-content: center; padding: 8px 12px; }
+.food-card.food-card-compact { flex-direction: row; align-items: stretch; margin: 6px 12px; height: 80px; }
+.food-card-compact .card-thumb { width: 104px; height: 80px; flex: 0 0 104px; border-radius: 12px 0 0 12px; }
+.food-card-compact .card-info { justify-content: center; padding: 6px 12px; }
 .food-card-compact .card-name { font-size: 14px; }
 
 /* 사진(4:3) — 있으면 실사진, 없으면 카테고리 아이콘으로 대체 */
@@ -378,17 +382,23 @@ header {
   100% { background-position: 0 50%; }
 }
 
-.card-info { flex: 1; min-width: 0; display: flex; flex-direction: column; gap: 4px; padding: 10px 12px 12px; }
+.card-info { flex: 1; min-width: 0; min-height: 0; display: flex; flex-direction: column; justify-content: center; gap: 4px; padding: 10px 12px 12px; overflow: hidden; }
 .card-name {
   font-size: 14px; font-weight: 700; color: #1a1a1a;
   white-space: nowrap; overflow: hidden; text-overflow: ellipsis;
 }
-.card-meta { display: flex; align-items: center; gap: 8px; font-size: 12px; color: #6b7280; }
-.card-rating { color: #b45309; font-weight: 700; white-space: nowrap; }
-.card-badges { display: flex; gap: 5px; flex-wrap: wrap; }
+/* 카드 내부 텍스트 줄(이름/지역/평점/뱃지)은 전부 1줄 고정 — 길어지면 카드가
+   늘어나는 대신 말줄임 처리해서 카드 높이가 항상 일정하게 유지되도록 함 */
+.card-meta { display: flex; flex-wrap: nowrap; align-items: center; gap: 6px; font-size: 12px; color: #6b7280; min-width: 0; }
+.card-region {
+  display: flex; align-items: center; min-width: 0; flex: 1 1 auto;
+  white-space: nowrap; overflow: hidden; text-overflow: ellipsis;
+}
+.card-rating { color: #b45309; font-weight: 700; white-space: nowrap; flex-shrink: 0; }
+.card-badges { display: flex; gap: 5px; flex-wrap: nowrap; overflow: hidden; min-width: 0; }
 .card-badge {
   font-size: 10px; font-weight: 700; padding: 2px 7px; border-radius: 99px;
-  white-space: nowrap; border: 1px solid transparent;
+  white-space: nowrap; border: 1px solid transparent; flex-shrink: 0; overflow: hidden; text-overflow: ellipsis;
 }
 /* 채널별 배지 색상은 CHANNEL_COLORS(JS)에서 인라인 스타일로 적용됨.
    여기 있는 색은 채널 매핑이 없는 경우의 기본값 + 복수추천/인증 배지용. */
@@ -1442,7 +1452,7 @@ function renderFoodCard(food, extraClass) {
       <div class="card-info">
         <div class="card-name">${esc(food.name)}</div>
         <div class="card-meta">
-          <span>📍 ${esc(region)}</span>
+          <span class="card-region">📍 ${esc(region)}</span>
           ${ratingHtml}
         </div>
         <div class="card-badges">${channelBadge}${certBadge}</div>
