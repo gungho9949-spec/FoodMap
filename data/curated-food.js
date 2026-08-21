@@ -1,7 +1,8 @@
 // 유튜버 추천 맛집 데이터 (통합 스키마: youtubers 배열)
 // 여러 유튜버가 같은 곳을 추천한 경우 youtubers 배열에 여러 항목이 들어감
-// certification: 유튜버 추천이 아니라 정부/공공기관 공식 인증(백년가게, 한국관광공사 등록, 착한가격업소,
-//   미쉐린 가이드 빕 구르망 등)으로 등재된 경우 — 복수 인증을 받은 경우 " · "로 이어붙임(필터에서는 부분일치로 판단)
+// certification: 유튜버 추천이 아니라 정부/공공기관/미디어 공식 인증(백년가게, 한국관광공사 등록,
+//   착한가격업소, 미쉐린 가이드 빕 구르망, 블루리본 서베이 등)으로 등재된 경우 —
+//   복수 인증을 받은 경우 " · "로 이어붙임(필터에서는 부분일치로 판단)
 // photoUrl: Google Places 대표 사진(키가 필요 없는 완성된 googleusercontent.com URL). 없으면 null
 
 const CURATED_FOOD = [
@@ -7588,6 +7589,8 @@ const CURATED_FOOD = [
     rating: 3.5,
     reviewCount: 3201,
     photoUrl: "https://lh3.googleusercontent.com/place-photos/AG9NLjB20V7uHX3fzZvpjw9McRV8mZ7Ypq8jLZMB2iKbSpL7iyDnEWt0E5GzisFL6ksRyJ_9glZ0I0iut3QI_zQBVS8CX8aFwsSeB1psrL_pou1FrSkgWYb6Hbezh5BAwVS_evykNrBB9YazT47WyD8=s4800-w800",
+    certification: "블루리본 서베이",
+    recommendNote: "강릉 초당동 순두부 마을의 블루리본 서베이 선정 순두부 전문점.",
     youtubers: [
       {
         name: "전지적 참견 시점(이영자)",
@@ -11134,7 +11137,7 @@ const CURATED_FOOD = [
     rating: null,
     reviewCount: null,
     photoUrl: "https://lh3.googleusercontent.com/place-photos/AG9NLjB3zcl0BcbbjzZVh-swmEPn_v_JbT65P-oOTOwy44vGxVnLI9P31O07Fkh0ZoFd0oSvuYKV39groddy026z9zHDcE5U2zIBZ1PmzO0r1fS1kYCeMhSC6TRaGqXZ1mpylKRtUlFYU93MvlEf3xoZDkPJag=s4800-w800",
-    certification: "한국관광공사 등록 음식점",
+    certification: "한국관광공사 등록 음식점 · 블루리본 서베이",
     recommendNote: "한국관광공사 국문 관광정보 서비스(TourAPI)에 등록된 음식점입니다.",
     youtubers: [
     ]
@@ -14412,6 +14415,366 @@ const CURATED_FOOD = [
     photoUrl: null,
     certification: "미쉐린 가이드 빕 구르망",
     recommendNote: "미쉐린 가이드 빕 구르망에 선정된 곳.",
+    youtubers: [
+    ]
+  },
+  {
+    id: "blr-001",
+    name: "다이닝스푼",
+    category: "이탈리안",
+    address: "전북특별자치도 전주시 완산구 전주객사4길 74-11",
+    phone: "063-255-9636",
+    lat: 35.8212776649613,
+    lng: 127.143504160015,
+    kakaoUrl: "http://place.map.kakao.com/26236019",
+    naverUrl: "https://map.naver.com/p/search/%EB%8B%A4%EC%9D%B4%EB%8B%9D%EC%8A%A4%ED%91%BC%20%EC%A0%84%EB%B6%81%ED%8A%B9%EB%B3%84%EC%9E%90%EC%B9%98%EB%8F%84%20%EC%A0%84%EC%A3%BC%EC%8B%9C%20%EC%99%84%EC%82%B0%EA%B5%AC%20%EC%A0%84%EC%A3%BC%EA%B0%9D%EC%82%AC4%EA%B8%B8%2074-11",
+    rating: null,
+    reviewCount: null,
+    photoUrl: null,
+    certification: "블루리본 서베이",
+    recommendNote: "6년 연속 블루리본 서베이에 선정된 전주 객리단길의 양식 전문점.",
+    youtubers: [
+    ]
+  },
+  {
+    id: "blr-002",
+    name: "성미당",
+    category: "한식",
+    address: "전북특별자치도 전주시 완산구 전라감영5길 19-9",
+    phone: "063-287-8800",
+    lat: 35.817338709177285,
+    lng: 127.14537820060865,
+    kakaoUrl: "http://place.map.kakao.com/8374461",
+    naverUrl: "https://map.naver.com/p/search/%EC%84%B1%EB%AF%B8%EB%8B%B9%20%EC%A0%84%EB%B6%81%ED%8A%B9%EB%B3%84%EC%9E%90%EC%B9%98%EB%8F%84%20%EC%A0%84%EC%A3%BC%EC%8B%9C%20%EC%99%84%EC%82%B0%EA%B5%AC%20%EC%A0%84%EB%9D%BC%EA%B0%90%EC%98%815%EA%B8%B8%2019-9",
+    rating: null,
+    reviewCount: null,
+    photoUrl: null,
+    certification: "블루리본 서베이",
+    recommendNote: "블루리본 서베이와 함께 백년가게로도 선정된 전주의 전통 비빔밥 노포.",
+    youtubers: [
+    ]
+  },
+  {
+    id: "blr-003",
+    name: "대동면옥",
+    category: "한식",
+    address: "강원특별자치도 강릉시 종합운동장길 26-8",
+    phone: "033-644-6008",
+    lat: 37.7737799232941,
+    lng: 128.891103040523,
+    kakaoUrl: "http://place.map.kakao.com/699701008",
+    naverUrl: "https://map.naver.com/p/search/%EB%8C%80%EB%8F%99%EB%A9%B4%EC%98%A5%20%EA%B0%95%EC%9B%90%ED%8A%B9%EB%B3%84%EC%9E%90%EC%B9%98%EB%8F%84%20%EA%B0%95%EB%A6%89%EC%8B%9C%20%EC%A2%85%ED%95%A9%EC%9A%B4%EB%8F%99%EC%9E%A5%EA%B8%B8%2026-8",
+    rating: null,
+    reviewCount: null,
+    photoUrl: null,
+    certification: "블루리본 서베이",
+    recommendNote: "60년 넘는 역사의 주문진 대동면옥 분점으로, 회비빔막국수와 물막국수로 알려진 곳.",
+    youtubers: [
+    ]
+  },
+  {
+    id: "blr-004",
+    name: "쯩라이",
+    category: "중식",
+    address: "강원특별자치도 강릉시 사임당로 131",
+    phone: "033-641-9716",
+    lat: 37.75646173823727,
+    lng: 128.8656455369439,
+    kakaoUrl: "http://place.map.kakao.com/1892890142",
+    naverUrl: "https://map.naver.com/p/search/%EC%AF%A9%EB%9D%BC%EC%9D%B4%20%EA%B0%95%EC%9B%90%ED%8A%B9%EB%B3%84%EC%9E%90%EC%B9%98%EB%8F%84%20%EA%B0%95%EB%A6%89%EC%8B%9C%20%EC%82%AC%EC%9E%84%EB%8B%B9%EB%A1%9C%20131",
+    rating: null,
+    reviewCount: null,
+    photoUrl: null,
+    certification: "블루리본 서베이",
+    recommendNote: "블루리본 서베이에 선정된 강릉의 베트남 음식 전문점.",
+    youtubers: [
+    ]
+  },
+  {
+    id: "blr-005",
+    name: "카페뤼미에르",
+    category: "카페",
+    address: "강원특별자치도 강릉시 창해로14번길 18",
+    phone: "0507-1447-0225",
+    lat: 37.77272713557293,
+    lng: 128.94715274912144,
+    kakaoUrl: "http://place.map.kakao.com/1842226063",
+    naverUrl: "https://map.naver.com/p/search/%EC%B9%B4%ED%8E%98%EB%A4%BC%EB%AF%B8%EC%97%90%EB%A5%B4%20%EA%B0%95%EC%9B%90%ED%8A%B9%EB%B3%84%EC%9E%90%EC%B9%98%EB%8F%84%20%EA%B0%95%EB%A6%89%EC%8B%9C%20%EC%B0%BD%ED%95%B4%EB%A1%9C14%EB%B2%88%EA%B8%B8%2018",
+    rating: null,
+    reviewCount: null,
+    photoUrl: null,
+    certification: "블루리본 서베이",
+    recommendNote: "강릉 안목해변에 위치한 블루리본 서베이 선정 카페.",
+    youtubers: [
+    ]
+  },
+  {
+    id: "blr-006",
+    name: "명승원만두",
+    category: "분식",
+    address: "경북 포항시 북구 중앙상가3길 20",
+    phone: "054-232-5658",
+    lat: 36.0369395723306,
+    lng: 129.364453925904,
+    kakaoUrl: "http://place.map.kakao.com/10340065",
+    naverUrl: "https://map.naver.com/p/search/%EB%AA%85%EC%8A%B9%EC%9B%90%EB%A7%8C%EB%91%90%20%EA%B2%BD%EB%B6%81%20%ED%8F%AC%ED%95%AD%EC%8B%9C%20%EB%B6%81%EA%B5%AC%20%EC%A4%91%EC%95%99%EC%83%81%EA%B0%803%EA%B8%B8%2020",
+    rating: null,
+    reviewCount: null,
+    photoUrl: null,
+    certification: "블루리본 서베이",
+    recommendNote: "오랜 전통의 포항 로컬 만두 맛집으로 블루리본 서베이에 선정됐다.",
+    youtubers: [
+    ]
+  },
+  {
+    id: "blr-007",
+    name: "서부냉면",
+    category: "냉면",
+    address: "경북 영주시 풍기읍 인삼로3번길 26",
+    phone: "054-636-2457",
+    lat: 36.8730143126192,
+    lng: 128.525781249363,
+    kakaoUrl: "http://place.map.kakao.com/7941450",
+    naverUrl: "https://map.naver.com/p/search/%EC%84%9C%EB%B6%80%EB%83%89%EB%A9%B4%20%EA%B2%BD%EB%B6%81%20%EC%98%81%EC%A3%BC%EC%8B%9C%20%ED%92%8D%EA%B8%B0%EC%9D%8D%20%EC%9D%B8%EC%82%BC%EB%A1%9C3%EB%B2%88%EA%B8%B8%2026",
+    rating: null,
+    reviewCount: null,
+    photoUrl: null,
+    certification: "블루리본 서베이",
+    recommendNote: "50여 년 역사의 영주 풍기 냉면집으로 블루리본 서베이에 선정됐다.",
+    youtubers: [
+    ]
+  },
+  {
+    id: "blr-008",
+    name: "화이트크리스마스",
+    category: "양식",
+    address: "충북 청주시 흥덕구 비하로42번길 2",
+    phone: null,
+    lat: 36.6308310903462,
+    lng: 127.424864010481,
+    kakaoUrl: "http://place.map.kakao.com/1815740591",
+    naverUrl: "https://map.naver.com/p/search/%ED%99%94%EC%9D%B4%ED%8A%B8%ED%81%AC%EB%A6%AC%EC%8A%A4%EB%A7%88%EC%8A%A4%20%EC%B6%A9%EB%B6%81%20%EC%B2%AD%EC%A3%BC%EC%8B%9C%20%ED%9D%A5%EB%8D%95%EA%B5%AC%20%EB%B9%84%ED%95%98%EB%A1%9C42%EB%B2%88%EA%B8%B8%202",
+    rating: null,
+    reviewCount: null,
+    photoUrl: null,
+    certification: "블루리본 서베이 (리본 3개)",
+    recommendNote: "2026 블루리본 서베이 최고 등급(리본 3개)을 받은 전국 4곳 중 하나. 정통 프렌치 코스 요리를 선보이는 청주의 파인다이닝.",
+    youtubers: [
+    ]
+  },
+  {
+    id: "blr-009",
+    name: "이와정",
+    category: "제과,베이커리",
+    address: "충북 충주시 연수동산로7길 2",
+    phone: "070-7722-7700",
+    lat: 36.9831773551778,
+    lng: 127.941549419264,
+    kakaoUrl: "http://place.map.kakao.com/495760380",
+    naverUrl: "https://map.naver.com/p/search/%EC%9D%B4%EC%99%80%EC%A0%95%20%EC%B6%A9%EB%B6%81%20%EC%B6%A9%EC%A3%BC%EC%8B%9C%20%EC%97%B0%EC%88%98%EB%8F%99%EC%82%B0%EB%A1%9C7%EA%B8%B8%202",
+    rating: null,
+    reviewCount: null,
+    photoUrl: null,
+    certification: "블루리본 서베이",
+    recommendNote: "충주 연수동에 위치한 블루리본 서베이 선정 카페.",
+    youtubers: [
+    ]
+  },
+  {
+    id: "blr-010",
+    name: "운정식당",
+    category: "한식",
+    address: "충북 충주시 중원대로 3432-1",
+    phone: "043-847-2820",
+    lat: 36.9728238739844,
+    lng: 127.922083674431,
+    kakaoUrl: "http://place.map.kakao.com/10698086",
+    naverUrl: "https://map.naver.com/p/search/%EC%9A%B4%EC%A0%95%EC%8B%9D%EB%8B%B9%20%EC%B6%A9%EB%B6%81%20%EC%B6%A9%EC%A3%BC%EC%8B%9C%20%EC%A4%91%EC%9B%90%EB%8C%80%EB%A1%9C%203432-1",
+    rating: null,
+    reviewCount: null,
+    photoUrl: null,
+    certification: "블루리본 서베이",
+    recommendNote: "50년 넘은 노포로 올갱이해장국·육개장이 알려진 블루리본 서베이 선정 식당.",
+    youtubers: [
+    ]
+  },
+  {
+    id: "blr-011",
+    name: "청운식당",
+    category: "중식",
+    address: "충남 공주시 의당면 의당로 321-8",
+    phone: "041-853-8314",
+    lat: 36.4990204426801,
+    lng: 127.13932007841163,
+    kakaoUrl: "http://place.map.kakao.com/10839827",
+    naverUrl: "https://map.naver.com/p/search/%EC%B2%AD%EC%9A%B4%EC%8B%9D%EB%8B%B9%20%EC%B6%A9%EB%82%A8%20%EA%B3%B5%EC%A3%BC%EC%8B%9C%20%EC%9D%98%EB%8B%B9%EB%A9%B4%20%EC%9D%98%EB%8B%B9%EB%A1%9C%20321-8",
+    rating: null,
+    reviewCount: null,
+    photoUrl: null,
+    certification: "블루리본 서베이",
+    recommendNote: "11년 넘게 연속 블루리본 서베이에 선정된 공주의 짬뽕·짜장면 전문점.",
+    youtubers: [
+    ]
+  },
+  {
+    id: "blr-012",
+    name: "기린더매운갈비찜",
+    category: "갈비",
+    address: "충남 천안시 서북구 불당16길 34-6",
+    phone: "041-523-9498",
+    lat: 36.800989874311185,
+    lng: 127.10706706760573,
+    kakaoUrl: "http://place.map.kakao.com/21559095",
+    naverUrl: "https://map.naver.com/p/search/%EA%B8%B0%EB%A6%B0%EB%8D%94%EB%A7%A4%EC%9A%B4%EA%B0%88%EB%B9%84%EC%B0%9C%20%EC%B6%A9%EB%82%A8%20%EC%B2%9C%EC%95%88%EC%8B%9C%20%EC%84%9C%EB%B6%81%EA%B5%AC%20%EB%B6%88%EB%8B%B916%EA%B8%B8%2034-6",
+    rating: null,
+    reviewCount: null,
+    photoUrl: null,
+    certification: "블루리본 서베이",
+    recommendNote: "블루리본 서베이에 선정된 천안의 매운갈비찜 전문점.",
+    youtubers: [
+    ]
+  },
+  {
+    id: "blr-013",
+    name: "뚜쥬루과자점",
+    category: "제과,베이커리",
+    address: "충남 천안시 서북구 백석로 270",
+    phone: "041-576-0086",
+    lat: 36.81833223713698,
+    lng: 127.13961420542567,
+    kakaoUrl: "http://place.map.kakao.com/21351241",
+    naverUrl: "https://map.naver.com/p/search/%EB%9A%9C%EC%A5%AC%EB%A3%A8%EA%B3%BC%EC%9E%90%EC%A0%90%20%EC%B6%A9%EB%82%A8%20%EC%B2%9C%EC%95%88%EC%8B%9C%20%EC%84%9C%EB%B6%81%EA%B5%AC%20%EB%B0%B1%EC%84%9D%EB%A1%9C%20270",
+    rating: null,
+    reviewCount: null,
+    photoUrl: null,
+    certification: "블루리본 서베이",
+    recommendNote: "블루리본 서베이에 선정된 천안의 베이커리.",
+    youtubers: [
+    ]
+  },
+  {
+    id: "blr-014",
+    name: "아비시니아커피",
+    category: "커피전문점",
+    address: "충남 천안시 서북구 서부대로 471-8",
+    phone: "041-575-6211",
+    lat: 36.81006663041845,
+    lng: 127.12816504028781,
+    kakaoUrl: "http://place.map.kakao.com/16127383",
+    naverUrl: "https://map.naver.com/p/search/%EC%95%84%EB%B9%84%EC%8B%9C%EB%8B%88%EC%95%84%EC%BB%A4%ED%94%BC%20%EC%B6%A9%EB%82%A8%20%EC%B2%9C%EC%95%88%EC%8B%9C%20%EC%84%9C%EB%B6%81%EA%B5%AC%20%EC%84%9C%EB%B6%80%EB%8C%80%EB%A1%9C%20471-8",
+    rating: null,
+    reviewCount: null,
+    photoUrl: null,
+    certification: "블루리본 서베이",
+    recommendNote: "블루리본 서베이에 선정된 천안의 커피 전문점.",
+    youtubers: [
+    ]
+  },
+  {
+    id: "blr-015",
+    name: "충남집순대",
+    category: "순대",
+    address: "충남 천안시 동남구 병천면 충절로 1748",
+    phone: "041-564-1079",
+    lat: 36.76217935698221,
+    lng: 127.29899122714066,
+    kakaoUrl: "http://place.map.kakao.com/11892365",
+    naverUrl: "https://map.naver.com/p/search/%EC%B6%A9%EB%82%A8%EC%A7%91%EC%88%9C%EB%8C%80%20%EC%B6%A9%EB%82%A8%20%EC%B2%9C%EC%95%88%EC%8B%9C%20%EB%8F%99%EB%82%A8%EA%B5%AC%20%EB%B3%91%EC%B2%9C%EB%A9%B4%20%EC%B6%A9%EC%A0%88%EB%A1%9C%201748",
+    rating: null,
+    reviewCount: null,
+    photoUrl: null,
+    certification: "블루리본 서베이",
+    recommendNote: "블루리본 서베이에 선정된 천안의 순대 전문점.",
+    youtubers: [
+    ]
+  },
+  {
+    id: "blr-016",
+    name: "진주회관",
+    category: "한식",
+    address: "충남 천안시 서북구 성환읍 성환11길 15",
+    phone: "041-581-2065",
+    lat: 36.9169267875493,
+    lng: 127.129630825282,
+    kakaoUrl: "http://place.map.kakao.com/9434250",
+    naverUrl: "https://map.naver.com/p/search/%EC%A7%84%EC%A3%BC%ED%9A%8C%EA%B4%80%20%EC%B6%A9%EB%82%A8%20%EC%B2%9C%EC%95%88%EC%8B%9C%20%EC%84%9C%EB%B6%81%EA%B5%AC%20%EC%84%B1%ED%99%98%EC%9D%8D%20%EC%84%B1%ED%99%9811%EA%B8%B8%2015",
+    rating: null,
+    reviewCount: null,
+    photoUrl: null,
+    certification: "블루리본 서베이",
+    recommendNote: "블루리본 서베이에 선정된 천안의 노포 식당.",
+    youtubers: [
+    ]
+  },
+  {
+    id: "blr-017",
+    name: "제스트",
+    category: "양식",
+    address: "충남 천안시 동남구 먹거리11길 43",
+    phone: null,
+    lat: 36.81838851816455,
+    lng: 127.15732722773366,
+    kakaoUrl: "http://place.map.kakao.com/9699425",
+    naverUrl: "https://map.naver.com/p/search/%EC%A0%9C%EC%8A%A4%ED%8A%B8%20%EC%B6%A9%EB%82%A8%20%EC%B2%9C%EC%95%88%EC%8B%9C%20%EB%8F%99%EB%82%A8%EA%B5%AC%20%EB%A8%B9%EA%B1%B0%EB%A6%AC11%EA%B8%B8%2043",
+    rating: null,
+    reviewCount: null,
+    photoUrl: null,
+    certification: "블루리본 서베이",
+    recommendNote: "블루리본 서베이에 선정된 천안의 양식 레스토랑.",
+    youtubers: [
+    ]
+  },
+  {
+    id: "blr-018",
+    name: "용두네해장국",
+    category: "해장국",
+    address: "제주특별자치도 제주시 조천읍 함덕16길 4",
+    phone: "064-784-1021",
+    lat: 33.5408236128028,
+    lng: 126.668489487612,
+    kakaoUrl: "http://place.map.kakao.com/333868933",
+    naverUrl: "https://map.naver.com/p/search/%EC%9A%A9%EB%91%90%EB%84%A4%ED%95%B4%EC%9E%A5%EA%B5%AD%20%EC%A0%9C%EC%A3%BC%ED%8A%B9%EB%B3%84%EC%9E%90%EC%B9%98%EB%8F%84%20%EC%A0%9C%EC%A3%BC%EC%8B%9C%20%EC%A1%B0%EC%B2%9C%EC%9D%8D%20%ED%95%A8%EB%8D%9516%EA%B8%B8%204",
+    rating: null,
+    reviewCount: null,
+    photoUrl: null,
+    certification: "블루리본 서베이",
+    recommendNote: "블루리본 서베이에 선정된 함덕의 해장국 전문점.",
+    youtubers: [
+    ]
+  },
+  {
+    id: "blr-019",
+    name: "아줄레주",
+    category: "카페",
+    address: "제주특별자치도 서귀포시 성산읍 신풍하동로19번길 59",
+    phone: "0507-1411-4052",
+    lat: 33.366831430170805,
+    lng: 126.83929446652259,
+    kakaoUrl: "http://place.map.kakao.com/2003360746",
+    naverUrl: "https://map.naver.com/p/search/%EC%95%84%EC%A4%84%EB%A0%88%EC%A3%BC%20%EC%A0%9C%EC%A3%BC%ED%8A%B9%EB%B3%84%EC%9E%90%EC%B9%98%EB%8F%84%20%EC%84%9C%EA%B7%80%ED%8F%AC%EC%8B%9C%20%EC%84%B1%EC%82%B0%EC%9D%8D%20%EC%8B%A0%ED%92%8D%ED%95%98%EB%8F%99%EB%A1%9C19%EB%B2%88%EA%B8%B8%2059",
+    rating: null,
+    reviewCount: null,
+    photoUrl: null,
+    certification: "블루리본 서베이",
+    recommendNote: "블루리본 서베이에 선정된 성산의 에그타르트 전문 카페.",
+    youtubers: [
+    ]
+  },
+  {
+    id: "blr-020",
+    name: "남양수산",
+    category: "회",
+    address: "제주특별자치도 서귀포시 성산읍 고성동서로56번길 11",
+    phone: "064-782-6618",
+    lat: 33.450125024122,
+    lng: 126.91412820240653,
+    kakaoUrl: "http://place.map.kakao.com/16525091",
+    naverUrl: "https://map.naver.com/p/search/%EB%82%A8%EC%96%91%EC%88%98%EC%82%B0%20%EC%A0%9C%EC%A3%BC%ED%8A%B9%EB%B3%84%EC%9E%90%EC%B9%98%EB%8F%84%20%EC%84%9C%EA%B7%80%ED%8F%AC%EC%8B%9C%20%EC%84%B1%EC%82%B0%EC%9D%8D%20%EA%B3%A0%EC%84%B1%EB%8F%99%EC%84%9C%EB%A1%9C56%EB%B2%88%EA%B8%B8%2011",
+    rating: null,
+    reviewCount: null,
+    photoUrl: null,
+    certification: "블루리본 서베이",
+    recommendNote: "블루리본 서베이에 선정된 성산의 수산물 전문점.",
     youtubers: [
     ]
   }
