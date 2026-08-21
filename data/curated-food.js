@@ -15301,5 +15301,113 @@ const CURATED_FOOD = [
     recommendNote: "블루리본 서베이에 선정된 일산 탄현동의 베이커리.",
     youtubers: [
     ]
+  },
+  {
+    id: "blr-050",
+    name: "하네",
+    category: "초밥,롤",
+    address: "서울 강남구 언주로172길 14",
+    phone: "010-9773-0887",
+    lat: 37.5276365316183,
+    lng: 127.034907802556,
+    kakaoUrl: "http://place.map.kakao.com/1815052432",
+    naverUrl: "https://map.naver.com/p/search/%ED%95%98%EB%84%A4%20%EC%84%9C%EC%9A%B8%20%EA%B0%95%EB%82%A8%EA%B5%AC%20%EC%96%B8%EC%A3%BC%EB%A1%9C172%EA%B8%B8%2014",
+    rating: null,
+    reviewCount: null,
+    photoUrl: null,
+    certification: "블루리본 서베이 (리본 3개)",
+    recommendNote: "자연산 식재료를 고집하는 정통 스시 오마카세 전문점으로, 미쉐린 1스타와 블루리본 서베이 최고 등급(리본 3개)을 함께 받았다.",
+    youtubers: [
+    ]
+  },
+  {
+    id: "blr-051",
+    name: "유성식당",
+    category: "한식",
+    address: "전남광주통합특별시 구례군 구례읍 봉동길 16",
+    phone: "061-782-8562",
+    lat: 35.209335103188,
+    lng: 127.469428420679,
+    kakaoUrl: "http://place.map.kakao.com/9334249",
+    naverUrl: "https://map.naver.com/p/search/%EC%9C%A0%EC%84%B1%EC%8B%9D%EB%8B%B9%20%EC%A0%84%EB%82%A8%EA%B4%91%EC%A3%BC%ED%86%B5%ED%95%A9%ED%8A%B9%EB%B3%84%EC%8B%9C%20%EA%B5%AC%EB%A1%80%EA%B5%B0%20%EA%B5%AC%EB%A1%80%EC%9D%8D%20%EB%B4%89%EB%8F%99%EA%B8%B8%2016",
+    rating: null,
+    reviewCount: null,
+    photoUrl: null,
+    certification: "블루리본 서베이",
+    recommendNote: "토렴식으로 내는 순댓국이 특징인 광주의 노포, 블루리본 서베이에 선정됐다.",
+    youtubers: [
+    ]
+  },
+  {
+    id: "blr-052",
+    name: "모모스커피",
+    category: "커피전문점",
+    address: "부산 금정구 오시게로 20",
+    phone: "051-512-7036",
+    lat: 35.219235522654586,
+    lng: 129.08646573592375,
+    kakaoUrl: "http://place.map.kakao.com/27259030",
+    naverUrl: "https://map.naver.com/p/search/%EB%AA%A8%EB%AA%A8%EC%8A%A4%EC%BB%A4%ED%94%BC%20%EB%B6%80%EC%82%B0%20%EA%B8%88%EC%A0%95%EA%B5%AC%20%EC%98%A4%EC%8B%9C%EA%B2%8C%EB%A1%9C%2020",
+    rating: null,
+    reviewCount: null,
+    photoUrl: null,
+    certification: "블루리본 서베이",
+    recommendNote: "온천장역 인근의 부산 3대 커피 명가로 꼽히는 로스터리, 블루리본 서베이에 여러 차례 선정됐다.",
+    youtubers: [
+    ]
+  },
+  {
+    id: "blr-053",
+    name: "해장국",
+    category: "해장국",
+    address: "인천 제물포구 동산로87번길 6",
+    phone: "032-766-0335",
+    lat: 37.47509314905069,
+    lng: 126.64493792375097,
+    kakaoUrl: "http://place.map.kakao.com/8149598",
+    naverUrl: "https://map.naver.com/p/search/%ED%95%B4%EC%9E%A5%EA%B5%AD%20%EC%9D%B8%EC%B2%9C%20%EC%A0%9C%EB%AC%BC%ED%8F%AC%EA%B5%AC%20%EB%8F%99%EC%82%B0%EB%A1%9C87%EB%B2%88%EA%B8%B8%206",
+    rating: null,
+    reviewCount: null,
+    photoUrl: null,
+    certification: "블루리본 서베이",
+    recommendNote: "뽀얗고 진한 설렁탕을 선보이는 인천 송림동의 노포로, 7년 연속 블루리본 서베이에 선정됐다.",
+    youtubers: [
+    ]
+  },
+  {
+    id: "blr-054",
+    name: "두꺼비식당",
+    category: "갈비",
+    address: "충북 제천시 의림대로20길 21",
+    phone: "043-647-8847",
+    lat: 37.1415375517611,
+    lng: 128.214831118998,
+    kakaoUrl: "http://place.map.kakao.com/8276990",
+    naverUrl: "https://map.naver.com/p/search/%EB%91%90%EA%BA%BC%EB%B9%84%EC%8B%9D%EB%8B%B9%20%EC%B6%A9%EB%B6%81%20%EC%A0%9C%EC%B2%9C%EC%8B%9C%20%EC%9D%98%EB%A6%BC%EB%8C%80%EB%A1%9C20%EA%B8%B8%2021",
+    rating: null,
+    reviewCount: null,
+    photoUrl: null,
+    certification: "블루리본 서베이",
+    recommendNote: "2003년부터 이어온 매운 양푼 등갈비찜 전문점으로, 13년 연속 블루리본 서베이에 선정됐다.",
+    youtubers: [
+    ]
+  },
+  {
+    id: "blr-055",
+    name: "면사무소앞안흥찐빵",
+    category: "간식",
+    address: "강원특별자치도 횡성군 안흥면 안흥로 30",
+    phone: "033-342-4570",
+    lat: 37.4121686461645,
+    lng: 128.156604751271,
+    kakaoUrl: "http://place.map.kakao.com/10342972",
+    naverUrl: "https://map.naver.com/p/search/%EB%A9%B4%EC%82%AC%EB%AC%B4%EC%86%8C%EC%95%9E%EC%95%88%ED%9D%A5%EC%B0%90%EB%B9%B5%20%EA%B0%95%EC%9B%90%ED%8A%B9%EB%B3%84%EC%9E%90%EC%B9%98%EB%8F%84%20%ED%9A%A1%EC%84%B1%EA%B5%B0%20%EC%95%88%ED%9D%A5%EB%A9%B4%20%EC%95%88%ED%9D%A5%EB%A1%9C%2030",
+    rating: null,
+    reviewCount: null,
+    photoUrl: null,
+    certification: "블루리본 서베이",
+    recommendNote: "안흥찐빵 하나로 승부하는 횡성의 찐빵집, 블루리본 서베이에 여러 차례 선정됐다.",
+    youtubers: [
+    ]
   }
 ];
