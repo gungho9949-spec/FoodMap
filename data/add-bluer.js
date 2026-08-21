@@ -10,13 +10,15 @@
  * - certification: "블루리본 서베이 (리본 N개)" — 리본 개수가 확인된 곳만 숫자를
  *   붙이고, 확인 안 된 곳은 "블루리본 서베이"까지만(숫자를 지어내지 않음)
  *
- * 실행: KAKAO_REST_KEY=키 node data/add-bluer.js
+ * 실행: KAKAO_REST_KEY=키 node data/add-bluer.js [candidates-파일명]
+ *   candidates-파일명을 생략하면 data/bluer-candidates.json 사용(도시 커버리지를
+ *   넓힐 때마다 bluer-candidates-N.json으로 새로 만들어서 인자로 넘기면 됨)
  */
 const fs = require('fs');
 const path = require('path');
 
 const DATA_FILE = path.join(__dirname, 'curated-food.js');
-const CANDIDATES_FILE = path.join(__dirname, 'bluer-candidates.json');
+const CANDIDATES_FILE = path.join(__dirname, process.argv[2] || 'bluer-candidates.json');
 const CALL_DELAY_MS = 200;
 const MERGE_RADIUS_M = 50;
 
